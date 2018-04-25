@@ -1,0 +1,116 @@
+package com.tencentcloudapi.vpc.v20170312.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class ServiceTemplate  extends AbstractModel{
+
+
+    /**
+    * 协议端口实例ID，例如：ppm-f5n1f8da。
+    */
+    @SerializedName("ServiceTemplateId")
+    @Expose
+    private String ServiceTemplateId;
+    
+
+    /**
+    * 模板名称。
+    */
+    @SerializedName("ServiceTemplateName")
+    @Expose
+    private String ServiceTemplateName;
+    
+
+    /**
+    * 协议端口信息。
+    */
+    @SerializedName("ServiceSet")
+    @Expose
+    private String [] ServiceSet;
+    
+
+    /**
+    * 创建时间。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+    
+
+    /**
+     * 获取协议端口实例ID，例如：ppm-f5n1f8da。
+     * @return ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
+     */
+    public String getServiceTemplateId() {
+        return this.ServiceTemplateId;
+    }
+
+    /**
+     * 设置协议端口实例ID，例如：ppm-f5n1f8da。
+     * @param ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
+     */
+    public void setServiceTemplateId(String ServiceTemplateId) {
+        this.ServiceTemplateId = ServiceTemplateId;
+    }
+
+    /**
+     * 获取模板名称。
+     * @return ServiceTemplateName 模板名称。
+     */
+    public String getServiceTemplateName() {
+        return this.ServiceTemplateName;
+    }
+
+    /**
+     * 设置模板名称。
+     * @param ServiceTemplateName 模板名称。
+     */
+    public void setServiceTemplateName(String ServiceTemplateName) {
+        this.ServiceTemplateName = ServiceTemplateName;
+    }
+
+    /**
+     * 获取协议端口信息。
+     * @return ServiceSet 协议端口信息。
+     */
+    public String [] getServiceSet() {
+        return this.ServiceSet;
+    }
+
+    /**
+     * 设置协议端口信息。
+     * @param ServiceSet 协议端口信息。
+     */
+    public void setServiceSet(String [] ServiceSet) {
+        this.ServiceSet = ServiceSet;
+    }
+
+    /**
+     * 获取创建时间。
+     * @return CreatedTime 创建时间。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * 设置创建时间。
+     * @param CreatedTime 创建时间。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
+        this.setParamSimple(map, prefix + "ServiceTemplateName", this.ServiceTemplateName);
+        this.setParamArraySimple(map, prefix + "ServiceSet.", this.ServiceSet);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+
+    }
+}
+

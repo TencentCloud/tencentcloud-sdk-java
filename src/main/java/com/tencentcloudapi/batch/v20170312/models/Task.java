@@ -1,0 +1,391 @@
+package com.tencentcloudapi.batch.v20170312.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class Task  extends AbstractModel{
+
+
+    /**
+    * 任务名称，在一个作业内部唯一
+    */
+    @SerializedName("TaskName")
+    @Expose
+    private String TaskName;
+    
+
+    /**
+    * 任务实例运行个数
+    */
+    @SerializedName("TaskInstanceNum")
+    @Expose
+    private Integer TaskInstanceNum;
+    
+
+    /**
+    * 应用程序信息
+    */
+    @SerializedName("Application")
+    @Expose
+    private Application Application;
+    
+
+    /**
+    * 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+    */
+    @SerializedName("ComputeEnv")
+    @Expose
+    private AnonymousComputeEnv ComputeEnv;
+    
+
+    /**
+    * 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+    
+
+    /**
+    * 重定向信息
+    */
+    @SerializedName("RedirectInfo")
+    @Expose
+    private RedirectInfo RedirectInfo;
+    
+
+    /**
+    * 重定向本地信息
+    */
+    @SerializedName("RedirectLocalInfo")
+    @Expose
+    private RedirectLocalInfo RedirectLocalInfo;
+    
+
+    /**
+    * 输入映射
+    */
+    @SerializedName("InputMappings")
+    @Expose
+    private InputMapping [] InputMappings;
+    
+
+    /**
+    * 输出映射
+    */
+    @SerializedName("OutputMappings")
+    @Expose
+    private OutputMapping [] OutputMappings;
+    
+
+    /**
+    * 输出映射配置
+    */
+    @SerializedName("OutputMappingConfigs")
+    @Expose
+    private OutputMappingConfig [] OutputMappingConfigs;
+    
+
+    /**
+    * 自定义环境变量
+    */
+    @SerializedName("EnvVars")
+    @Expose
+    private Authentication [] EnvVars;
+    
+
+    /**
+    * 授权信息
+    */
+    @SerializedName("Authentications")
+    @Expose
+    private EnvVar [] Authentications;
+    
+
+    /**
+    * TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+    */
+    @SerializedName("FailedAction")
+    @Expose
+    private String FailedAction;
+    
+
+    /**
+    * 任务失败后的最大重试次数，默认为0
+    */
+    @SerializedName("MaxRetryCount")
+    @Expose
+    private Integer MaxRetryCount;
+    
+
+    /**
+    * 任务启动后的超时时间，单位秒，默认为3600秒
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Integer Timeout;
+    
+
+    /**
+     * 获取任务名称，在一个作业内部唯一
+     * @return TaskName 任务名称，在一个作业内部唯一
+     */
+    public String getTaskName() {
+        return this.TaskName;
+    }
+
+    /**
+     * 设置任务名称，在一个作业内部唯一
+     * @param TaskName 任务名称，在一个作业内部唯一
+     */
+    public void setTaskName(String TaskName) {
+        this.TaskName = TaskName;
+    }
+
+    /**
+     * 获取任务实例运行个数
+     * @return TaskInstanceNum 任务实例运行个数
+     */
+    public Integer getTaskInstanceNum() {
+        return this.TaskInstanceNum;
+    }
+
+    /**
+     * 设置任务实例运行个数
+     * @param TaskInstanceNum 任务实例运行个数
+     */
+    public void setTaskInstanceNum(Integer TaskInstanceNum) {
+        this.TaskInstanceNum = TaskInstanceNum;
+    }
+
+    /**
+     * 获取应用程序信息
+     * @return Application 应用程序信息
+     */
+    public Application getApplication() {
+        return this.Application;
+    }
+
+    /**
+     * 设置应用程序信息
+     * @param Application 应用程序信息
+     */
+    public void setApplication(Application Application) {
+        this.Application = Application;
+    }
+
+    /**
+     * 获取运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     * @return ComputeEnv 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     */
+    public AnonymousComputeEnv getComputeEnv() {
+        return this.ComputeEnv;
+    }
+
+    /**
+     * 设置运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     * @param ComputeEnv 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     */
+    public void setComputeEnv(AnonymousComputeEnv ComputeEnv) {
+        this.ComputeEnv = ComputeEnv;
+    }
+
+    /**
+     * 获取计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     * @return EnvId 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * 设置计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     * @param EnvId 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
+
+    /**
+     * 获取重定向信息
+     * @return RedirectInfo 重定向信息
+     */
+    public RedirectInfo getRedirectInfo() {
+        return this.RedirectInfo;
+    }
+
+    /**
+     * 设置重定向信息
+     * @param RedirectInfo 重定向信息
+     */
+    public void setRedirectInfo(RedirectInfo RedirectInfo) {
+        this.RedirectInfo = RedirectInfo;
+    }
+
+    /**
+     * 获取重定向本地信息
+     * @return RedirectLocalInfo 重定向本地信息
+     */
+    public RedirectLocalInfo getRedirectLocalInfo() {
+        return this.RedirectLocalInfo;
+    }
+
+    /**
+     * 设置重定向本地信息
+     * @param RedirectLocalInfo 重定向本地信息
+     */
+    public void setRedirectLocalInfo(RedirectLocalInfo RedirectLocalInfo) {
+        this.RedirectLocalInfo = RedirectLocalInfo;
+    }
+
+    /**
+     * 获取输入映射
+     * @return InputMappings 输入映射
+     */
+    public InputMapping [] getInputMappings() {
+        return this.InputMappings;
+    }
+
+    /**
+     * 设置输入映射
+     * @param InputMappings 输入映射
+     */
+    public void setInputMappings(InputMapping [] InputMappings) {
+        this.InputMappings = InputMappings;
+    }
+
+    /**
+     * 获取输出映射
+     * @return OutputMappings 输出映射
+     */
+    public OutputMapping [] getOutputMappings() {
+        return this.OutputMappings;
+    }
+
+    /**
+     * 设置输出映射
+     * @param OutputMappings 输出映射
+     */
+    public void setOutputMappings(OutputMapping [] OutputMappings) {
+        this.OutputMappings = OutputMappings;
+    }
+
+    /**
+     * 获取输出映射配置
+     * @return OutputMappingConfigs 输出映射配置
+     */
+    public OutputMappingConfig [] getOutputMappingConfigs() {
+        return this.OutputMappingConfigs;
+    }
+
+    /**
+     * 设置输出映射配置
+     * @param OutputMappingConfigs 输出映射配置
+     */
+    public void setOutputMappingConfigs(OutputMappingConfig [] OutputMappingConfigs) {
+        this.OutputMappingConfigs = OutputMappingConfigs;
+    }
+
+    /**
+     * 获取自定义环境变量
+     * @return EnvVars 自定义环境变量
+     */
+    public Authentication [] getEnvVars() {
+        return this.EnvVars;
+    }
+
+    /**
+     * 设置自定义环境变量
+     * @param EnvVars 自定义环境变量
+     */
+    public void setEnvVars(Authentication [] EnvVars) {
+        this.EnvVars = EnvVars;
+    }
+
+    /**
+     * 获取授权信息
+     * @return Authentications 授权信息
+     */
+    public EnvVar [] getAuthentications() {
+        return this.Authentications;
+    }
+
+    /**
+     * 设置授权信息
+     * @param Authentications 授权信息
+     */
+    public void setAuthentications(EnvVar [] Authentications) {
+        this.Authentications = Authentications;
+    }
+
+    /**
+     * 获取TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     * @return FailedAction TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     */
+    public String getFailedAction() {
+        return this.FailedAction;
+    }
+
+    /**
+     * 设置TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     * @param FailedAction TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     */
+    public void setFailedAction(String FailedAction) {
+        this.FailedAction = FailedAction;
+    }
+
+    /**
+     * 获取任务失败后的最大重试次数，默认为0
+     * @return MaxRetryCount 任务失败后的最大重试次数，默认为0
+     */
+    public Integer getMaxRetryCount() {
+        return this.MaxRetryCount;
+    }
+
+    /**
+     * 设置任务失败后的最大重试次数，默认为0
+     * @param MaxRetryCount 任务失败后的最大重试次数，默认为0
+     */
+    public void setMaxRetryCount(Integer MaxRetryCount) {
+        this.MaxRetryCount = MaxRetryCount;
+    }
+
+    /**
+     * 获取任务启动后的超时时间，单位秒，默认为3600秒
+     * @return Timeout 任务启动后的超时时间，单位秒，默认为3600秒
+     */
+    public Integer getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * 设置任务启动后的超时时间，单位秒，默认为3600秒
+     * @param Timeout 任务启动后的超时时间，单位秒，默认为3600秒
+     */
+    public void setTimeout(Integer Timeout) {
+        this.Timeout = Timeout;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TaskName", this.TaskName);
+        this.setParamSimple(map, prefix + "TaskInstanceNum", this.TaskInstanceNum);
+        this.setParamObj(map, prefix + "Application.", this.Application);
+        this.setParamObj(map, prefix + "ComputeEnv.", this.ComputeEnv);
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
+        this.setParamObj(map, prefix + "RedirectLocalInfo.", this.RedirectLocalInfo);
+        this.setParamArrayObj(map, prefix + "InputMappings.", this.InputMappings);
+        this.setParamArrayObj(map, prefix + "OutputMappings.", this.OutputMappings);
+        this.setParamArrayObj(map, prefix + "OutputMappingConfigs.", this.OutputMappingConfigs);
+        this.setParamArrayObj(map, prefix + "EnvVars.", this.EnvVars);
+        this.setParamArrayObj(map, prefix + "Authentications.", this.Authentications);
+        this.setParamSimple(map, prefix + "FailedAction", this.FailedAction);
+        this.setParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+
+    }
+}
+

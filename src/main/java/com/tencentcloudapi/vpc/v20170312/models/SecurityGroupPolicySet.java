@@ -1,0 +1,91 @@
+package com.tencentcloudapi.vpc.v20170312.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class SecurityGroupPolicySet  extends AbstractModel{
+
+
+    /**
+    * 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+    
+
+    /**
+    * 出站规则。
+    */
+    @SerializedName("Egress")
+    @Expose
+    private SecurityGroupPolicy [] Egress;
+    
+
+    /**
+    * 入站规则。
+    */
+    @SerializedName("Ingress")
+    @Expose
+    private SecurityGroupPolicy [] Ingress;
+    
+
+    /**
+     * 获取安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+     * @return Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * 设置安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+     * @param Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * 获取出站规则。
+     * @return Egress 出站规则。
+     */
+    public SecurityGroupPolicy [] getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * 设置出站规则。
+     * @param Egress 出站规则。
+     */
+    public void setEgress(SecurityGroupPolicy [] Egress) {
+        this.Egress = Egress;
+    }
+
+    /**
+     * 获取入站规则。
+     * @return Ingress 入站规则。
+     */
+    public SecurityGroupPolicy [] getIngress() {
+        return this.Ingress;
+    }
+
+    /**
+     * 设置入站规则。
+     * @param Ingress 入站规则。
+     */
+    public void setIngress(SecurityGroupPolicy [] Ingress) {
+        this.Ingress = Ingress;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamArrayObj(map, prefix + "Egress.", this.Egress);
+        this.setParamArrayObj(map, prefix + "Ingress.", this.Ingress);
+
+    }
+}
+

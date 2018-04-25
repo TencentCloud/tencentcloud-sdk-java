@@ -1,0 +1,216 @@
+package com.tencentcloudapi.batch.v20170312.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class JobView  extends AbstractModel{
+
+
+    /**
+    * 作业ID
+    */
+    @SerializedName("JobId")
+    @Expose
+    private String JobId;
+    
+
+    /**
+    * 作业名称
+    */
+    @SerializedName("JobName")
+    @Expose
+    private String JobName;
+    
+
+    /**
+    * 作业状态
+    */
+    @SerializedName("JobState")
+    @Expose
+    private String JobState;
+    
+
+    /**
+    * 作业优先级
+    */
+    @SerializedName("Priority")
+    @Expose
+    private Integer Priority;
+    
+
+    /**
+    * 位置信息
+    */
+    @SerializedName("Placement")
+    @Expose
+    private Placement Placement;
+    
+
+    /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+    
+
+    /**
+    * 结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+    
+
+    /**
+    * 任务统计指标
+    */
+    @SerializedName("TaskMetrics")
+    @Expose
+    private TaskMetrics TaskMetrics;
+    
+
+    /**
+     * 获取作业ID
+     * @return JobId 作业ID
+     */
+    public String getJobId() {
+        return this.JobId;
+    }
+
+    /**
+     * 设置作业ID
+     * @param JobId 作业ID
+     */
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
+    }
+
+    /**
+     * 获取作业名称
+     * @return JobName 作业名称
+     */
+    public String getJobName() {
+        return this.JobName;
+    }
+
+    /**
+     * 设置作业名称
+     * @param JobName 作业名称
+     */
+    public void setJobName(String JobName) {
+        this.JobName = JobName;
+    }
+
+    /**
+     * 获取作业状态
+     * @return JobState 作业状态
+     */
+    public String getJobState() {
+        return this.JobState;
+    }
+
+    /**
+     * 设置作业状态
+     * @param JobState 作业状态
+     */
+    public void setJobState(String JobState) {
+        this.JobState = JobState;
+    }
+
+    /**
+     * 获取作业优先级
+     * @return Priority 作业优先级
+     */
+    public Integer getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * 设置作业优先级
+     * @param Priority 作业优先级
+     */
+    public void setPriority(Integer Priority) {
+        this.Priority = Priority;
+    }
+
+    /**
+     * 获取位置信息
+     * @return Placement 位置信息
+     */
+    public Placement getPlacement() {
+        return this.Placement;
+    }
+
+    /**
+     * 设置位置信息
+     * @param Placement 位置信息
+     */
+    public void setPlacement(Placement Placement) {
+        this.Placement = Placement;
+    }
+
+    /**
+     * 获取创建时间
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * 设置创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * 获取结束时间
+     * @return EndTime 结束时间
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * 设置结束时间
+     * @param EndTime 结束时间
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * 获取任务统计指标
+     * @return TaskMetrics 任务统计指标
+     */
+    public TaskMetrics getTaskMetrics() {
+        return this.TaskMetrics;
+    }
+
+    /**
+     * 设置任务统计指标
+     * @param TaskMetrics 任务统计指标
+     */
+    public void setTaskMetrics(TaskMetrics TaskMetrics) {
+        this.TaskMetrics = TaskMetrics;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "JobName", this.JobName);
+        this.setParamSimple(map, prefix + "JobState", this.JobState);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamObj(map, prefix + "Placement.", this.Placement);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamObj(map, prefix + "TaskMetrics.", this.TaskMetrics);
+
+    }
+}
+

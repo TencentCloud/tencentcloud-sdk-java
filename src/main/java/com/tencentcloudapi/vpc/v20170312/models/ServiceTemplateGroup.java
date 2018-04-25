@@ -1,0 +1,116 @@
+package com.tencentcloudapi.vpc.v20170312.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class ServiceTemplateGroup  extends AbstractModel{
+
+
+    /**
+    * 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
+    */
+    @SerializedName("ServiceTemplateGroupId")
+    @Expose
+    private String ServiceTemplateGroupId;
+    
+
+    /**
+    * 协议端口模板集合名称。
+    */
+    @SerializedName("ServiceTemplateGroupName")
+    @Expose
+    private String ServiceTemplateGroupName;
+    
+
+    /**
+    * 协议端口模板实例ID。
+    */
+    @SerializedName("ServiceTemplateIdSet")
+    @Expose
+    private String [] ServiceTemplateIdSet;
+    
+
+    /**
+    * 创建时间。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+    
+
+    /**
+     * 获取协议端口模板集合实例ID，例如：ppmg-2klmrefu。
+     * @return ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
+     */
+    public String getServiceTemplateGroupId() {
+        return this.ServiceTemplateGroupId;
+    }
+
+    /**
+     * 设置协议端口模板集合实例ID，例如：ppmg-2klmrefu。
+     * @param ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
+     */
+    public void setServiceTemplateGroupId(String ServiceTemplateGroupId) {
+        this.ServiceTemplateGroupId = ServiceTemplateGroupId;
+    }
+
+    /**
+     * 获取协议端口模板集合名称。
+     * @return ServiceTemplateGroupName 协议端口模板集合名称。
+     */
+    public String getServiceTemplateGroupName() {
+        return this.ServiceTemplateGroupName;
+    }
+
+    /**
+     * 设置协议端口模板集合名称。
+     * @param ServiceTemplateGroupName 协议端口模板集合名称。
+     */
+    public void setServiceTemplateGroupName(String ServiceTemplateGroupName) {
+        this.ServiceTemplateGroupName = ServiceTemplateGroupName;
+    }
+
+    /**
+     * 获取协议端口模板实例ID。
+     * @return ServiceTemplateIdSet 协议端口模板实例ID。
+     */
+    public String [] getServiceTemplateIdSet() {
+        return this.ServiceTemplateIdSet;
+    }
+
+    /**
+     * 设置协议端口模板实例ID。
+     * @param ServiceTemplateIdSet 协议端口模板实例ID。
+     */
+    public void setServiceTemplateIdSet(String [] ServiceTemplateIdSet) {
+        this.ServiceTemplateIdSet = ServiceTemplateIdSet;
+    }
+
+    /**
+     * 获取创建时间。
+     * @return CreatedTime 创建时间。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * 设置创建时间。
+     * @param CreatedTime 创建时间。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ServiceTemplateGroupId", this.ServiceTemplateGroupId);
+        this.setParamSimple(map, prefix + "ServiceTemplateGroupName", this.ServiceTemplateGroupName);
+        this.setParamArraySimple(map, prefix + "ServiceTemplateIdSet.", this.ServiceTemplateIdSet);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+
+    }
+}
+

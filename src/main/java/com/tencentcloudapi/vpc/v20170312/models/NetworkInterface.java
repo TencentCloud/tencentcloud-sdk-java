@@ -1,0 +1,341 @@
+package com.tencentcloudapi.vpc.v20170312.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class NetworkInterface  extends AbstractModel{
+
+
+    /**
+    * 弹性网卡实例ID，例如：eni-f1xjkw1b。
+    */
+    @SerializedName("NetworkInterfaceId")
+    @Expose
+    private String NetworkInterfaceId;
+    
+
+    /**
+    * 弹性网卡名称。
+    */
+    @SerializedName("NetworkInterfaceName")
+    @Expose
+    private String NetworkInterfaceName;
+    
+
+    /**
+    * 弹性网卡描述。
+    */
+    @SerializedName("NetworkInterfaceDescription")
+    @Expose
+    private String NetworkInterfaceDescription;
+    
+
+    /**
+    * 子网实例ID。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+    
+
+    /**
+    * VPC实例ID。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+    
+
+    /**
+    * 绑定的安全组。
+    */
+    @SerializedName("GroupSet")
+    @Expose
+    private String [] GroupSet;
+    
+
+    /**
+    * 是否是主网卡。
+    */
+    @SerializedName("Primary")
+    @Expose
+    private Boolean Primary;
+    
+
+    /**
+    * MAC地址。
+    */
+    @SerializedName("MacAddress")
+    @Expose
+    private String MacAddress;
+    
+
+    /**
+    * 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+    
+
+    /**
+    * 内网IP信息。
+    */
+    @SerializedName("PrivateIpAddressSet")
+    @Expose
+    private PrivateIpAddressSpecification [] PrivateIpAddressSet;
+    
+
+    /**
+    * 绑定的云服务器对象。
+    */
+    @SerializedName("Attachment")
+    @Expose
+    private InstanceChargePrepaid [] Attachment;
+    
+
+    /**
+    * 可用区。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+    
+
+    /**
+    * 创建时间。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+    
+
+    /**
+     * 获取弹性网卡实例ID，例如：eni-f1xjkw1b。
+     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
+     */
+    public String getNetworkInterfaceId() {
+        return this.NetworkInterfaceId;
+    }
+
+    /**
+     * 设置弹性网卡实例ID，例如：eni-f1xjkw1b。
+     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
+     */
+    public void setNetworkInterfaceId(String NetworkInterfaceId) {
+        this.NetworkInterfaceId = NetworkInterfaceId;
+    }
+
+    /**
+     * 获取弹性网卡名称。
+     * @return NetworkInterfaceName 弹性网卡名称。
+     */
+    public String getNetworkInterfaceName() {
+        return this.NetworkInterfaceName;
+    }
+
+    /**
+     * 设置弹性网卡名称。
+     * @param NetworkInterfaceName 弹性网卡名称。
+     */
+    public void setNetworkInterfaceName(String NetworkInterfaceName) {
+        this.NetworkInterfaceName = NetworkInterfaceName;
+    }
+
+    /**
+     * 获取弹性网卡描述。
+     * @return NetworkInterfaceDescription 弹性网卡描述。
+     */
+    public String getNetworkInterfaceDescription() {
+        return this.NetworkInterfaceDescription;
+    }
+
+    /**
+     * 设置弹性网卡描述。
+     * @param NetworkInterfaceDescription 弹性网卡描述。
+     */
+    public void setNetworkInterfaceDescription(String NetworkInterfaceDescription) {
+        this.NetworkInterfaceDescription = NetworkInterfaceDescription;
+    }
+
+    /**
+     * 获取子网实例ID。
+     * @return SubnetId 子网实例ID。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * 设置子网实例ID。
+     * @param SubnetId 子网实例ID。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * 获取VPC实例ID。
+     * @return VpcId VPC实例ID。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * 设置VPC实例ID。
+     * @param VpcId VPC实例ID。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * 获取绑定的安全组。
+     * @return GroupSet 绑定的安全组。
+     */
+    public String [] getGroupSet() {
+        return this.GroupSet;
+    }
+
+    /**
+     * 设置绑定的安全组。
+     * @param GroupSet 绑定的安全组。
+     */
+    public void setGroupSet(String [] GroupSet) {
+        this.GroupSet = GroupSet;
+    }
+
+    /**
+     * 获取是否是主网卡。
+     * @return Primary 是否是主网卡。
+     */
+    public Boolean getPrimary() {
+        return this.Primary;
+    }
+
+    /**
+     * 设置是否是主网卡。
+     * @param Primary 是否是主网卡。
+     */
+    public void setPrimary(Boolean Primary) {
+        this.Primary = Primary;
+    }
+
+    /**
+     * 获取MAC地址。
+     * @return MacAddress MAC地址。
+     */
+    public String getMacAddress() {
+        return this.MacAddress;
+    }
+
+    /**
+     * 设置MAC地址。
+     * @param MacAddress MAC地址。
+     */
+    public void setMacAddress(String MacAddress) {
+        this.MacAddress = MacAddress;
+    }
+
+    /**
+     * 获取取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+     * @return State 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * 设置取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+     * @param State 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+     */
+    public void setState(String State) {
+        this.State = State;
+    }
+
+    /**
+     * 获取内网IP信息。
+     * @return PrivateIpAddressSet 内网IP信息。
+     */
+    public PrivateIpAddressSpecification [] getPrivateIpAddressSet() {
+        return this.PrivateIpAddressSet;
+    }
+
+    /**
+     * 设置内网IP信息。
+     * @param PrivateIpAddressSet 内网IP信息。
+     */
+    public void setPrivateIpAddressSet(PrivateIpAddressSpecification [] PrivateIpAddressSet) {
+        this.PrivateIpAddressSet = PrivateIpAddressSet;
+    }
+
+    /**
+     * 获取绑定的云服务器对象。
+     * @return Attachment 绑定的云服务器对象。
+     */
+    public InstanceChargePrepaid [] getAttachment() {
+        return this.Attachment;
+    }
+
+    /**
+     * 设置绑定的云服务器对象。
+     * @param Attachment 绑定的云服务器对象。
+     */
+    public void setAttachment(InstanceChargePrepaid [] Attachment) {
+        this.Attachment = Attachment;
+    }
+
+    /**
+     * 获取可用区。
+     * @return Zone 可用区。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * 设置可用区。
+     * @param Zone 可用区。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * 获取创建时间。
+     * @return CreatedTime 创建时间。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * 设置创建时间。
+     * @param CreatedTime 创建时间。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
+        this.setParamSimple(map, prefix + "NetworkInterfaceName", this.NetworkInterfaceName);
+        this.setParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamArraySimple(map, prefix + "GroupSet.", this.GroupSet);
+        this.setParamSimple(map, prefix + "Primary", this.Primary);
+        this.setParamSimple(map, prefix + "MacAddress", this.MacAddress);
+        this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamArrayObj(map, prefix + "PrivateIpAddressSet.", this.PrivateIpAddressSet);
+        this.setParamArrayObj(map, prefix + "Attachment.", this.Attachment);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+
+    }
+}
+

@@ -1,0 +1,154 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+  	<groupId>com.tencentcloudapi</groupId>
+  	<artifactId>tencentcloud-sdk-java</artifactId>
+  	<version>3.0.1</version>
+  	<packaging>jar</packaging>
+  	<name>tencentcloud-sdk-java</name>
+    <url>http://www.qcloud.com</url>
+	<description>Tencent Cloud Open API SDK for Java</description>
+ 	<dependencies>
+    	<dependency>
+			<groupId>com.squareup.okhttp</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<dependency>
+	    	<groupId>com.google.code.gson</groupId>
+	    	<artifactId>gson</artifactId>
+	    	<version>2.2.4</version>
+		</dependency>
+ 	</dependencies>
+ 	<properties>  
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+	</properties>
+ 	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <excludes>
+                    </excludes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.3</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+		  <plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-gpg-plugin</artifactId>
+		    <version>1.6</version>
+		    <executions>
+		      <execution>
+		        <id>sign-artifacts</id>
+		        <phase>verify</phase>
+		        <goals>
+		          <goal>sign</goal>
+		        </goals>
+		      </execution>
+		    </executions>
+		  </plugin>
+		  
+        </plugins>
+	</build> 
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    		<distribution>repo</distribution>
+    		<comments>tencentcloudapi java sdk</comments>
+        </license>
+	</licenses>
+	
+    <scm>
+  		<connection>scm:git:https://github.com/TencentCloud/tencentcloud-sdk-java.git</connection>
+  		<developerConnection>scm:git:https://github.com/TencentCloud/tencentcloud-sdk-java.git</developerConnection>
+        <url>https://github.com/TencentCloud/tencentcloud-sdk-java</url>
+    </scm>
+
+    <profiles>
+        <profile>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.3</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+	</profiles>
+	
+    <developers>
+        <developer>
+            <id>tencentcloudapi</id>
+            <name>tencentcloudapi</name>
+            <email>tencentcloudapi@tencent.com</email>
+        </developer>
+	</developers>
+	
+	<distributionManagement>
+	     <repository>
+	         <id>Releases</id>
+	         <name>Nexus Release Repository</name>
+	         <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+	     </repository>
+	     <snapshotRepository>
+	         <id>Releases</id>
+	         <name>Nexus Snapshot Repository</name>
+	         <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+	     </snapshotRepository>
+ 	</distributionManagement>
+
+</project>
+

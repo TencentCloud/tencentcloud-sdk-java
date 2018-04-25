@@ -1,0 +1,216 @@
+package com.tencentcloudapi.cvm.v20170312.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class ImportImageRequest  extends AbstractModel{
+
+
+    /**
+    * 导入镜像的操作系统架构，`x86_64` 或 `i386`
+    */
+    @SerializedName("Architecture")
+    @Expose
+    private String Architecture;
+    
+
+    /**
+    * 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+    */
+    @SerializedName("OsType")
+    @Expose
+    private String OsType;
+    
+
+    /**
+    * 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+    */
+    @SerializedName("OsVersion")
+    @Expose
+    private String OsVersion;
+    
+
+    /**
+    * 导入镜像存放的cos地址
+    */
+    @SerializedName("ImageUrl")
+    @Expose
+    private String ImageUrl;
+    
+
+    /**
+    * 镜像名称
+    */
+    @SerializedName("ImageName")
+    @Expose
+    private String ImageName;
+    
+
+    /**
+    * 镜像描述
+    */
+    @SerializedName("ImageDescription")
+    @Expose
+    private String ImageDescription;
+    
+
+    /**
+    * 只检查参数，不执行任务
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+    
+
+    /**
+    * 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+    */
+    @SerializedName("Force")
+    @Expose
+    private Boolean Force;
+    
+
+    /**
+     * 获取导入镜像的操作系统架构，`x86_64` 或 `i386`
+     * @return Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
+     */
+    public String getArchitecture() {
+        return this.Architecture;
+    }
+
+    /**
+     * 设置导入镜像的操作系统架构，`x86_64` 或 `i386`
+     * @param Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
+     */
+    public void setArchitecture(String Architecture) {
+        this.Architecture = Architecture;
+    }
+
+    /**
+     * 获取导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+     * @return OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+     */
+    public String getOsType() {
+        return this.OsType;
+    }
+
+    /**
+     * 设置导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+     * @param OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+     */
+    public void setOsType(String OsType) {
+        this.OsType = OsType;
+    }
+
+    /**
+     * 获取导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+     * @return OsVersion 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+     */
+    public String getOsVersion() {
+        return this.OsVersion;
+    }
+
+    /**
+     * 设置导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+     * @param OsVersion 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+     */
+    public void setOsVersion(String OsVersion) {
+        this.OsVersion = OsVersion;
+    }
+
+    /**
+     * 获取导入镜像存放的cos地址
+     * @return ImageUrl 导入镜像存放的cos地址
+     */
+    public String getImageUrl() {
+        return this.ImageUrl;
+    }
+
+    /**
+     * 设置导入镜像存放的cos地址
+     * @param ImageUrl 导入镜像存放的cos地址
+     */
+    public void setImageUrl(String ImageUrl) {
+        this.ImageUrl = ImageUrl;
+    }
+
+    /**
+     * 获取镜像名称
+     * @return ImageName 镜像名称
+     */
+    public String getImageName() {
+        return this.ImageName;
+    }
+
+    /**
+     * 设置镜像名称
+     * @param ImageName 镜像名称
+     */
+    public void setImageName(String ImageName) {
+        this.ImageName = ImageName;
+    }
+
+    /**
+     * 获取镜像描述
+     * @return ImageDescription 镜像描述
+     */
+    public String getImageDescription() {
+        return this.ImageDescription;
+    }
+
+    /**
+     * 设置镜像描述
+     * @param ImageDescription 镜像描述
+     */
+    public void setImageDescription(String ImageDescription) {
+        this.ImageDescription = ImageDescription;
+    }
+
+    /**
+     * 获取只检查参数，不执行任务
+     * @return DryRun 只检查参数，不执行任务
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * 设置只检查参数，不执行任务
+     * @param DryRun 只检查参数，不执行任务
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
+    /**
+     * 获取是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+     * @return Force 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+     */
+    public Boolean getForce() {
+        return this.Force;
+    }
+
+    /**
+     * 设置是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+     * @param Force 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+     */
+    public void setForce(Boolean Force) {
+        this.Force = Force;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Architecture", this.Architecture);
+        this.setParamSimple(map, prefix + "OsType", this.OsType);
+        this.setParamSimple(map, prefix + "OsVersion", this.OsVersion);
+        this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "ImageName", this.ImageName);
+        this.setParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "Force", this.Force);
+
+    }
+}
+

@@ -1,0 +1,141 @@
+package com.tencentcloudapi.mariadb.v20170312.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class RegionInfo  extends AbstractModel{
+
+
+    /**
+    * 地域英文ID
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+    
+
+    /**
+    * 地域数字ID
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Integer RegionId;
+    
+
+    /**
+    * 地域中文名
+    */
+    @SerializedName("RegionName")
+    @Expose
+    private String RegionName;
+    
+
+    /**
+    * 可用区列表
+    */
+    @SerializedName("ZoneList")
+    @Expose
+    private ZonesInfo [] ZoneList;
+    
+
+    /**
+    * 可选择的主可用区和从可用区
+    */
+    @SerializedName("AvailableChoice")
+    @Expose
+    private ZoneChooseInfo [] AvailableChoice;
+    
+
+    /**
+     * 获取地域英文ID
+     * @return Region 地域英文ID
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * 设置地域英文ID
+     * @param Region 地域英文ID
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * 获取地域数字ID
+     * @return RegionId 地域数字ID
+     */
+    public Integer getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * 设置地域数字ID
+     * @param RegionId 地域数字ID
+     */
+    public void setRegionId(Integer RegionId) {
+        this.RegionId = RegionId;
+    }
+
+    /**
+     * 获取地域中文名
+     * @return RegionName 地域中文名
+     */
+    public String getRegionName() {
+        return this.RegionName;
+    }
+
+    /**
+     * 设置地域中文名
+     * @param RegionName 地域中文名
+     */
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
+    }
+
+    /**
+     * 获取可用区列表
+     * @return ZoneList 可用区列表
+     */
+    public ZonesInfo [] getZoneList() {
+        return this.ZoneList;
+    }
+
+    /**
+     * 设置可用区列表
+     * @param ZoneList 可用区列表
+     */
+    public void setZoneList(ZonesInfo [] ZoneList) {
+        this.ZoneList = ZoneList;
+    }
+
+    /**
+     * 获取可选择的主可用区和从可用区
+     * @return AvailableChoice 可选择的主可用区和从可用区
+     */
+    public ZoneChooseInfo [] getAvailableChoice() {
+        return this.AvailableChoice;
+    }
+
+    /**
+     * 设置可选择的主可用区和从可用区
+     * @param AvailableChoice 可选择的主可用区和从可用区
+     */
+    public void setAvailableChoice(ZoneChooseInfo [] AvailableChoice) {
+        this.AvailableChoice = AvailableChoice;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "RegionName", this.RegionName);
+        this.setParamArrayObj(map, prefix + "ZoneList.", this.ZoneList);
+        this.setParamArrayObj(map, prefix + "AvailableChoice.", this.AvailableChoice);
+
+    }
+}
+

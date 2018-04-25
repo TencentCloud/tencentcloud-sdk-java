@@ -1,0 +1,116 @@
+package com.tencentcloudapi.cdb.v20170320.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class ModifyBackupConfigRequest  extends AbstractModel{
+
+
+    /**
+    * 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+    
+
+    /**
+    * 备份过期时间，单位为天，最小值为7天，最大值为732天。
+    */
+    @SerializedName("ExpireDays")
+    @Expose
+    private Integer ExpireDays;
+    
+
+    /**
+    * 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+    
+
+    /**
+    * 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+    */
+    @SerializedName("BackupMethod")
+    @Expose
+    private String BackupMethod;
+    
+
+    /**
+     * 获取实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * 设置实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * 获取备份过期时间，单位为天，最小值为7天，最大值为732天。
+     * @return ExpireDays 备份过期时间，单位为天，最小值为7天，最大值为732天。
+     */
+    public Integer getExpireDays() {
+        return this.ExpireDays;
+    }
+
+    /**
+     * 设置备份过期时间，单位为天，最小值为7天，最大值为732天。
+     * @param ExpireDays 备份过期时间，单位为天，最小值为7天，最大值为732天。
+     */
+    public void setExpireDays(Integer ExpireDays) {
+        this.ExpireDays = ExpireDays;
+    }
+
+    /**
+     * 获取备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+     * @return StartTime 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * 设置备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+     * @param StartTime 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * 获取目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     * @return BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     */
+    public String getBackupMethod() {
+        return this.BackupMethod;
+    }
+
+    /**
+     * 设置目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     * @param BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     */
+    public void setBackupMethod(String BackupMethod) {
+        this.BackupMethod = BackupMethod;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ExpireDays", this.ExpireDays);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+
+    }
+}
+
