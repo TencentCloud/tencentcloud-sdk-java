@@ -11,7 +11,7 @@
 ## 通过 Maven 安装(推荐)
 通过 Maven 获取安装是使用 JAVA SDK 的推荐方法，Maven 是 JAVA 的依赖管理工具，支持您项目所需的依赖项，并将其安装到项目中。关于 Maven 详细可参考 Maven 官网 。
 1. 请访问[Maven官网](https://maven.apache.org/)下载对应系统Maven安装包进行安装。
-2. 为您的项目添加 Maven 依赖项，只需在 Maven pom.xml 添加以下依赖项即可：
+2. 为您的项目添加 Maven 依赖项，只需在 Maven pom.xml 添加以下依赖项即可。**注意这里的版本号只是举例,您可以在Maven仓库上找到最新的版本。**：
 ```xml
 <dependency>
 	<groupId>com.tencentcloudapi</groupId>
