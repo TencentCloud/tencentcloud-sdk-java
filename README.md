@@ -28,7 +28,7 @@
 4. 引用方法可参考示例。
 
 # 示例
-您可以在[github仓库](https://github.com/tencentcloud/tencentcloud-sdk-java)examples目录中找到部分接口的示例。例如查询可用区接口：
+以查询可用区接口为例:
 ```java
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
@@ -64,6 +64,7 @@ public class DescribeZones
     
 } 
 ```
+您可以在[github仓库](https://github.com/tencentcloud/tencentcloud-sdk-java)中examples目录下找到更详细的示例。
 # 旧版SDK
 我们推荐您使用新版SDK， 如果需要旧版SDK，请在您的Maven pom.xml 添加以下依赖项即可：
 ```xml
