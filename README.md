@@ -69,7 +69,7 @@ public class DescribeZones
 我们推荐您使用新版SDK， 如果需要旧版SDK，请在您的Maven pom.xml 添加以下依赖项即可：
 ```xml
 <dependency>
-<groupId>com.tencentcloud</groupId>
+<groupId>com.qcloud</groupId>
 <artifactId>qcloud-java-sdk</artifactId>
 <version>2.0.6</version>
 </dependency>
