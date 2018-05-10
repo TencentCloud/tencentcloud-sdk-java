@@ -64,7 +64,7 @@ public class DescribeZones
     
 } 
 ```
-您可以在[github仓库](https://github.com/tencentcloud/tencentcloud-sdk-java)中examples目录下找到更详细的示例。
+您可以在[github](https://github.com/tencentcloud/tencentcloud-sdk-java)中examples目录下找到更详细的示例。
 # 旧版SDK
 我们推荐您使用新版SDK， 如果需要旧版SDK，请在您的Maven pom.xml 添加以下依赖项即可：
 ```xml
