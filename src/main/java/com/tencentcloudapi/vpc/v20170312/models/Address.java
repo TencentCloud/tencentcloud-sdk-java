@@ -25,7 +25,7 @@ public class Address  extends AbstractModel{
     /**
     * `EIP`状态。
     */
-    @SerializedName("AddressState")
+    @SerializedName("AddressStatus")
     @Expose
     private String AddressState;
     
