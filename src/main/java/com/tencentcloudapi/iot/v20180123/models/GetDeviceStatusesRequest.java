@@ -15,7 +15,7 @@ public class GetDeviceStatusesRequest  extends AbstractModel{
     
 
     /**
-    * 设备名称列表（单次限制1000个）
+    * 设备名称列表（单次限制1000个设备）
     */
     @SerializedName("DeviceNames")
     @Expose
@@ -39,16 +39,16 @@ public class GetDeviceStatusesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称列表（单次限制1000个）
-     * @return DeviceNames 设备名称列表（单次限制1000个）
+     * 获取设备名称列表（单次限制1000个设备）
+     * @return DeviceNames 设备名称列表（单次限制1000个设备）
      */
     public String [] getDeviceNames() {
         return this.DeviceNames;
     }
 
     /**
-     * 设置设备名称列表（单次限制1000个）
-     * @param DeviceNames 设备名称列表（单次限制1000个）
+     * 设置设备名称列表（单次限制1000个设备）
+     * @param DeviceNames 设备名称列表（单次限制1000个设备）
      */
     public void setDeviceNames(String [] DeviceNames) {
         this.DeviceNames = DeviceNames;

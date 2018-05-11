@@ -31,6 +31,22 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     
 
     /**
+    * DNS地址，最多支持4个，第1个默认为主，其余为备
+    */
+    @SerializedName("DnsServers")
+    @Expose
+    private String [] DnsServers;
+    
+
+    /**
+    * 域名
+    */
+    @SerializedName("DomainName")
+    @Expose
+    private String DomainName;
+    
+
+    /**
      * 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @return VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      */
@@ -79,12 +95,46 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
+     * 获取DNS地址，最多支持4个，第1个默认为主，其余为备
+     * @return DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
+     */
+    public String [] getDnsServers() {
+        return this.DnsServers;
+    }
+
+    /**
+     * 设置DNS地址，最多支持4个，第1个默认为主，其余为备
+     * @param DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
+     */
+    public void setDnsServers(String [] DnsServers) {
+        this.DnsServers = DnsServers;
+    }
+
+    /**
+     * 获取域名
+     * @return DomainName 域名
+     */
+    public String getDomainName() {
+        return this.DomainName;
+    }
+
+    /**
+     * 设置域名
+     * @param DomainName 域名
+     */
+    public void setDomainName(String DomainName) {
+        this.DomainName = DomainName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "EnableMulticast", this.EnableMulticast);
+        this.setParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
 
     }
 }

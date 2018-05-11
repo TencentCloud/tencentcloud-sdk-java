@@ -31,6 +31,14 @@ public class UpdateProductRequest  extends AbstractModel{
     
 
     /**
+    * 数据模版（json）
+    */
+    @SerializedName("DataTemplate")
+    @Expose
+    private String DataTemplate;
+    
+
+    /**
      * 获取产品Id
      * @return ProductId 产品Id
      */
@@ -79,12 +87,29 @@ public class UpdateProductRequest  extends AbstractModel{
     }
 
     /**
+     * 获取数据模版（json）
+     * @return DataTemplate 数据模版（json）
+     */
+    public String getDataTemplate() {
+        return this.DataTemplate;
+    }
+
+    /**
+     * 设置数据模版（json）
+     * @param DataTemplate 数据模版（json）
+     */
+    public void setDataTemplate(String DataTemplate) {
+        this.DataTemplate = DataTemplate;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "DataTemplate", this.DataTemplate);
 
     }
 }

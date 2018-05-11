@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
   	<groupId>com.tencentcloudapi</groupId>
   	<artifactId>tencentcloud-sdk-java</artifactId>
-  	<version>3.0.1</version>
+  	<version>3.0.2</version>
   	<packaging>jar</packaging>
   	<name>tencentcloud-sdk-java</name>
-    <url>http://www.qcloud.com</url>
+    <url>https://cloud.tencent.com/</url>
 	<description>Tencent Cloud Open API SDK for Java</description>
  	<dependencies>
     	<dependency>

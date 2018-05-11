@@ -35,7 +35,7 @@ public class InstanceInfo  extends AbstractModel{
     */
     @SerializedName("RoVipInfo")
     @Expose
-    private RoVipInfo RoVipInfo;
+    private RoVipInfo [] RoVipInfo;
     
 
     /**
@@ -263,6 +263,22 @@ public class InstanceInfo  extends AbstractModel{
     
 
     /**
+    * 私有网络描述符
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+    
+
+    /**
+    * 子网描述符
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+    
+
+    /**
      * 获取外网状态
      * @return WanStatus 外网状态
      */
@@ -314,7 +330,7 @@ public class InstanceInfo  extends AbstractModel{
      * 获取只读vip信息
      * @return RoVipInfo 只读vip信息
      */
-    public RoVipInfo getRoVipInfo() {
+    public RoVipInfo [] getRoVipInfo() {
         return this.RoVipInfo;
     }
 
@@ -322,7 +338,7 @@ public class InstanceInfo  extends AbstractModel{
      * 设置只读vip信息
      * @param RoVipInfo 只读vip信息
      */
-    public void setRoVipInfo(RoVipInfo RoVipInfo) {
+    public void setRoVipInfo(RoVipInfo [] RoVipInfo) {
         this.RoVipInfo = RoVipInfo;
     }
 
@@ -775,13 +791,45 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取私有网络描述符
+     * @return UniqVpcId 私有网络描述符
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * 设置私有网络描述符
+     * @param UniqVpcId 私有网络描述符
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * 获取子网描述符
+     * @return UniqSubnetId 子网描述符
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * 设置子网描述符
+     * @param UniqSubnetId 子网描述符
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "InitFlag", this.InitFlag);
-        this.setParamObj(map, prefix + "RoVipInfo.", this.RoVipInfo);
+        this.setParamArrayObj(map, prefix + "RoVipInfo.", this.RoVipInfo);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
@@ -810,6 +858,8 @@ public class InstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Vport", this.Vport);
         this.setParamSimple(map, prefix + "CdbError", this.CdbError);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
 
     }
 }

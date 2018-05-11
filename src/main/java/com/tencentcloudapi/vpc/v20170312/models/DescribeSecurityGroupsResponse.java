@@ -7,12 +7,60 @@ public class DescribeSecurityGroupsResponse  extends AbstractModel{
 
 
     /**
+    * 安全组对象。
+    */
+    @SerializedName("SecurityGroupSet")
+    @Expose
+    private SecurityGroup [] SecurityGroupSet;
+    
+
+    /**
+    * 符合条件的实例数量。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Integer TotalCount;
+    
+
+    /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
     
+
+    /**
+     * 获取安全组对象。
+     * @return SecurityGroupSet 安全组对象。
+     */
+    public SecurityGroup [] getSecurityGroupSet() {
+        return this.SecurityGroupSet;
+    }
+
+    /**
+     * 设置安全组对象。
+     * @param SecurityGroupSet 安全组对象。
+     */
+    public void setSecurityGroupSet(SecurityGroup [] SecurityGroupSet) {
+        this.SecurityGroupSet = SecurityGroupSet;
+    }
+
+    /**
+     * 获取符合条件的实例数量。
+     * @return TotalCount 符合条件的实例数量。
+     */
+    public Integer getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * 设置符合条件的实例数量。
+     * @param TotalCount 符合条件的实例数量。
+     */
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -34,6 +82,8 @@ public class DescribeSecurityGroupsResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

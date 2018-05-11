@@ -17,9 +17,9 @@ public class DescribeSubnetsResponse  extends AbstractModel{
     /**
     * 子网对象。
     */
-    @SerializedName("DescribeSubnets")
+    @SerializedName("SubnetSet")
     @Expose
-    private Subnet [] DescribeSubnets;
+    private Subnet [] SubnetSet;
     
 
     /**
@@ -48,18 +48,18 @@ public class DescribeSubnetsResponse  extends AbstractModel{
 
     /**
      * 获取子网对象。
-     * @return DescribeSubnets 子网对象。
+     * @return SubnetSet 子网对象。
      */
-    public Subnet [] getDescribeSubnets() {
-        return this.DescribeSubnets;
+    public Subnet [] getSubnetSet() {
+        return this.SubnetSet;
     }
 
     /**
      * 设置子网对象。
-     * @param DescribeSubnets 子网对象。
+     * @param SubnetSet 子网对象。
      */
-    public void setDescribeSubnets(Subnet [] DescribeSubnets) {
-        this.DescribeSubnets = DescribeSubnets;
+    public void setSubnetSet(Subnet [] SubnetSet) {
+        this.SubnetSet = SubnetSet;
     }
 
     /**
@@ -83,7 +83,7 @@ public class DescribeSubnetsResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "DescribeSubnets.", this.DescribeSubnets);
+        this.setParamArrayObj(map, prefix + "SubnetSet.", this.SubnetSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

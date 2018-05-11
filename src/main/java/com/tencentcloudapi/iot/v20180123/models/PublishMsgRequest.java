@@ -23,7 +23,7 @@ public class PublishMsgRequest  extends AbstractModel{
     
 
     /**
-    * Qos
+    * Qos(目前QoS支持0与1)
     */
     @SerializedName("Qos")
     @Expose
@@ -63,16 +63,16 @@ public class PublishMsgRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Qos
-     * @return Qos Qos
+     * 获取Qos(目前QoS支持0与1)
+     * @return Qos Qos(目前QoS支持0与1)
      */
     public Integer getQos() {
         return this.Qos;
     }
 
     /**
-     * 设置Qos
-     * @param Qos Qos
+     * 设置Qos(目前QoS支持0与1)
+     * @param Qos Qos(目前QoS支持0与1)
      */
     public void setQos(Integer Qos) {
         this.Qos = Qos;

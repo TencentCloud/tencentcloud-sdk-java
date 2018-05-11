@@ -15,7 +15,7 @@ public class AddDeviceRequest  extends AbstractModel{
     
 
     /**
-    * 设备名称
+    * 设备名称，唯一标识某产品下的一个设备
     */
     @SerializedName("DeviceName")
     @Expose
@@ -39,16 +39,16 @@ public class AddDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
-     * @return DeviceName 设备名称
+     * 获取设备名称，唯一标识某产品下的一个设备
+     * @return DeviceName 设备名称，唯一标识某产品下的一个设备
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * 设置设备名称
-     * @param DeviceName 设备名称
+     * 设置设备名称，唯一标识某产品下的一个设备
+     * @param DeviceName 设备名称，唯一标识某产品下的一个设备
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;

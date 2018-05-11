@@ -15,7 +15,7 @@ public class AddProductRequest  extends AbstractModel{
     
 
     /**
-    * 产品类型
+    * 产品描述
     */
     @SerializedName("Description")
     @Expose
@@ -23,7 +23,7 @@ public class AddProductRequest  extends AbstractModel{
     
 
     /**
-    * 产品鉴权类型（0：直连，1：Token）
+    * 产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
     */
     @SerializedName("AuthType")
     @Expose
@@ -55,32 +55,32 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型
-     * @return Description 产品类型
+     * 获取产品描述
+     * @return Description 产品描述
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * 设置产品类型
-     * @param Description 产品类型
+     * 设置产品描述
+     * @param Description 产品描述
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * 获取产品鉴权类型（0：直连，1：Token）
-     * @return AuthType 产品鉴权类型（0：直连，1：Token）
+     * 获取产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
+     * @return AuthType 产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
      */
     public Integer getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * 设置产品鉴权类型（0：直连，1：Token）
-     * @param AuthType 产品鉴权类型（0：直连，1：Token）
+     * 设置产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
+     * @param AuthType 产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
      */
     public void setAuthType(Integer AuthType) {
         this.AuthType = AuthType;

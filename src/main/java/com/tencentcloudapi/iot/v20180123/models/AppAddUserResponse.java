@@ -1,17 +1,17 @@
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.iot.v20180123.models;
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
-public class CreateSecurityGroupResponse  extends AbstractModel{
+public class AppAddUserResponse  extends AbstractModel{
 
 
     /**
-    * 安全组对象。
+    * 应用用户
     */
-    @SerializedName("SecurityGroup")
+    @SerializedName("AppUser")
     @Expose
-    private SecurityGroup SecurityGroup;
+    private AppUser AppUser;
     
 
     /**
@@ -23,19 +23,19 @@ public class CreateSecurityGroupResponse  extends AbstractModel{
     
 
     /**
-     * 获取安全组对象。
-     * @return SecurityGroup 安全组对象。
+     * 获取应用用户
+     * @return AppUser 应用用户
      */
-    public SecurityGroup getSecurityGroup() {
-        return this.SecurityGroup;
+    public AppUser getAppUser() {
+        return this.AppUser;
     }
 
     /**
-     * 设置安全组对象。
-     * @param SecurityGroup 安全组对象。
+     * 设置应用用户
+     * @param AppUser 应用用户
      */
-    public void setSecurityGroup(SecurityGroup SecurityGroup) {
-        this.SecurityGroup = SecurityGroup;
+    public void setAppUser(AppUser AppUser) {
+        this.AppUser = AppUser;
     }
 
     /**
@@ -58,7 +58,7 @@ public class CreateSecurityGroupResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "SecurityGroup.", this.SecurityGroup);
+        this.setParamObj(map, prefix + "AppUser.", this.AppUser);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
