@@ -31,7 +31,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     
 
     /**
-    * 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+    * 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备；默认备份方法为 逻辑冷备。
     */
     @SerializedName("BackupMethod")
     @Expose
@@ -87,16 +87,16 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
-     * @return BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     * 获取目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备；默认备份方法为 逻辑冷备。
+     * @return BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备；默认备份方法为 逻辑冷备。
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * 设置目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
-     * @param BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     * 设置目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备；默认备份方法为 逻辑冷备。
+     * @param BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备；默认备份方法为 逻辑冷备。
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;

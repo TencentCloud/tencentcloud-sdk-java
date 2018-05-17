@@ -7,7 +7,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
 
 
     /**
-    * 一段完整的语⾳音对应⼀一个sessionUuid
+    * 一段完整的语音对应一个SessionUuid
     */
     @SerializedName("SessionUuid")
     @Expose
@@ -15,7 +15,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     
 
     /**
-    * 音频中的语⾔言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+    * 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
     */
     @SerializedName("Source")
     @Expose
@@ -23,7 +23,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     
 
     /**
-    * 翻译⽬目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+    * 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
     */
     @SerializedName("Target")
     @Expose
@@ -39,7 +39,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     
 
     /**
-    * 语⾳音分⽚片后的第⼏几⽚片
+    * 语音分片后的第几片
     */
     @SerializedName("Seq")
     @Expose
@@ -47,7 +47,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     
 
     /**
-    * 是否最后⼀片
+    * 是否最后一片
     */
     @SerializedName("IsEnd")
     @Expose
@@ -55,7 +55,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     
 
     /**
-    * 语⾳音分⽚片内容的 base64字符串串
+    * 语音分片内容的base64字符串
     */
     @SerializedName("Data")
     @Expose
@@ -63,48 +63,56 @@ public class SpeechTranslateRequest  extends AbstractModel{
     
 
     /**
-     * 获取一段完整的语⾳音对应⼀一个sessionUuid
-     * @return SessionUuid 一段完整的语⾳音对应⼀一个sessionUuid
+    * 项目id
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Integer ProjectId;
+    
+
+    /**
+     * 获取一段完整的语音对应一个SessionUuid
+     * @return SessionUuid 一段完整的语音对应一个SessionUuid
      */
     public String getSessionUuid() {
         return this.SessionUuid;
     }
 
     /**
-     * 设置一段完整的语⾳音对应⼀一个sessionUuid
-     * @param SessionUuid 一段完整的语⾳音对应⼀一个sessionUuid
+     * 设置一段完整的语音对应一个SessionUuid
+     * @param SessionUuid 一段完整的语音对应一个SessionUuid
      */
     public void setSessionUuid(String SessionUuid) {
         this.SessionUuid = SessionUuid;
     }
 
     /**
-     * 获取音频中的语⾔言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @return Source 音频中的语⾔言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * 获取音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @return Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * 设置音频中的语⾔言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param Source 音频中的语⾔言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * 设置音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @param Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * 获取翻译⽬目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @return Target 翻译⽬目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * 获取翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @return Target 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * 设置翻译⽬目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param Target 翻译⽬目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * 设置翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @param Target 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public void setTarget(String Target) {
         this.Target = Target;
@@ -127,51 +135,67 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语⾳音分⽚片后的第⼏几⽚片
-     * @return Seq 语⾳音分⽚片后的第⼏几⽚片
+     * 获取语音分片后的第几片
+     * @return Seq 语音分片后的第几片
      */
     public Integer getSeq() {
         return this.Seq;
     }
 
     /**
-     * 设置语⾳音分⽚片后的第⼏几⽚片
-     * @param Seq 语⾳音分⽚片后的第⼏几⽚片
+     * 设置语音分片后的第几片
+     * @param Seq 语音分片后的第几片
      */
     public void setSeq(Integer Seq) {
         this.Seq = Seq;
     }
 
     /**
-     * 获取是否最后⼀片
-     * @return IsEnd 是否最后⼀片
+     * 获取是否最后一片
+     * @return IsEnd 是否最后一片
      */
     public Integer getIsEnd() {
         return this.IsEnd;
     }
 
     /**
-     * 设置是否最后⼀片
-     * @param IsEnd 是否最后⼀片
+     * 设置是否最后一片
+     * @param IsEnd 是否最后一片
      */
     public void setIsEnd(Integer IsEnd) {
         this.IsEnd = IsEnd;
     }
 
     /**
-     * 获取语⾳音分⽚片内容的 base64字符串串
-     * @return Data 语⾳音分⽚片内容的 base64字符串串
+     * 获取语音分片内容的base64字符串
+     * @return Data 语音分片内容的base64字符串
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * 设置语⾳音分⽚片内容的 base64字符串串
-     * @param Data 语⾳音分⽚片内容的 base64字符串串
+     * 设置语音分片内容的base64字符串
+     * @param Data 语音分片内容的base64字符串
      */
     public void setData(String Data) {
         this.Data = Data;
+    }
+
+    /**
+     * 获取项目id
+     * @return ProjectId 项目id
+     */
+    public Integer getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * 设置项目id
+     * @param ProjectId 项目id
+     */
+    public void setProjectId(Integer ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
@@ -185,6 +209,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Seq", this.Seq);
         this.setParamSimple(map, prefix + "IsEnd", this.IsEnd);
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

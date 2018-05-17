@@ -52,6 +52,24 @@ public class TmtClient extends AbstractClient{
     }
 
     /**
+     *提供中文到英文、英文到中文两种语言的图片翻译服务，可自动识别图片中的文本内容并翻译成目标语言
+     * @param ImageTranslateRequest
+     * @return ImageTranslateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImageTranslateResponse  ImageTranslate(ImageTranslateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImageTranslateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImageTranslateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ImageTranslate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *可自动识别文本内容的语言种类，轻量高效，无需额外实现判断方式，使面向客户的服务体验更佳。
      * @param LanguageDetectRequest
      * @return LanguageDetectResponse

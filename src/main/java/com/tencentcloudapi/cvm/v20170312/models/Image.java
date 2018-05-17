@@ -59,7 +59,7 @@ public class Image  extends AbstractModel{
     */
     @SerializedName("ImageSize")
     @Expose
-    private String ImageSize;
+    private Integer ImageSize;
     
 
     /**
@@ -83,7 +83,7 @@ public class Image  extends AbstractModel{
     */
     @SerializedName("Platform")
     @Expose
-    private String [] Platform;
+    private String Platform;
     
 
     /**
@@ -91,7 +91,7 @@ public class Image  extends AbstractModel{
     */
     @SerializedName("ImageCreator")
     @Expose
-    private String [] ImageCreator;
+    private String ImageCreator;
     
 
     /**
@@ -202,7 +202,7 @@ public class Image  extends AbstractModel{
      * 获取镜像大小
      * @return ImageSize 镜像大小
      */
-    public String getImageSize() {
+    public Integer getImageSize() {
         return this.ImageSize;
     }
 
@@ -210,7 +210,7 @@ public class Image  extends AbstractModel{
      * 设置镜像大小
      * @param ImageSize 镜像大小
      */
-    public void setImageSize(String ImageSize) {
+    public void setImageSize(Integer ImageSize) {
         this.ImageSize = ImageSize;
     }
 
@@ -250,7 +250,7 @@ public class Image  extends AbstractModel{
      * 获取镜像来源平台
      * @return Platform 镜像来源平台
      */
-    public String [] getPlatform() {
+    public String getPlatform() {
         return this.Platform;
     }
 
@@ -258,7 +258,7 @@ public class Image  extends AbstractModel{
      * 设置镜像来源平台
      * @param Platform 镜像来源平台
      */
-    public void setPlatform(String [] Platform) {
+    public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
@@ -266,7 +266,7 @@ public class Image  extends AbstractModel{
      * 获取镜像创建者
      * @return ImageCreator 镜像创建者
      */
-    public String [] getImageCreator() {
+    public String getImageCreator() {
         return this.ImageCreator;
     }
 
@@ -274,7 +274,7 @@ public class Image  extends AbstractModel{
      * 设置镜像创建者
      * @param ImageCreator 镜像创建者
      */
-    public void setImageCreator(String [] ImageCreator) {
+    public void setImageCreator(String ImageCreator) {
         this.ImageCreator = ImageCreator;
     }
 
@@ -307,8 +307,8 @@ public class Image  extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageSize", this.ImageSize);
         this.setParamSimple(map, prefix + "Architecture", this.Architecture);
         this.setParamSimple(map, prefix + "ImageState", this.ImageState);
-        this.setParamArraySimple(map, prefix + "Platform.", this.Platform);
-        this.setParamArraySimple(map, prefix + "ImageCreator.", this.ImageCreator);
+        this.setParamSimple(map, prefix + "Platform", this.Platform);
+        this.setParamSimple(map, prefix + "ImageCreator", this.ImageCreator);
         this.setParamSimple(map, prefix + "ImageSource", this.ImageSource);
 
     }

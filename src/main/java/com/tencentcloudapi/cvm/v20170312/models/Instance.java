@@ -151,6 +151,30 @@ public class Instance  extends AbstractModel{
     
 
     /**
+    * 操作系统名称。
+    */
+    @SerializedName("OsName")
+    @Expose
+    private String OsName;
+    
+
+    /**
+    * 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+    
+
+    /**
+    * 实例登录设置。目前只返回实例所关联的密钥。
+    */
+    @SerializedName("LoginSettings")
+    @Expose
+    private LoginSettings LoginSettings;
+    
+
+    /**
      * 获取实例所在的位置。
      * @return Placement 实例所在的位置。
      */
@@ -439,6 +463,54 @@ public class Instance  extends AbstractModel{
     }
 
     /**
+     * 获取操作系统名称。
+     * @return OsName 操作系统名称。
+     */
+    public String getOsName() {
+        return this.OsName;
+    }
+
+    /**
+     * 设置操作系统名称。
+     * @param OsName 操作系统名称。
+     */
+    public void setOsName(String OsName) {
+        this.OsName = OsName;
+    }
+
+    /**
+     * 获取实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * 设置实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * 获取实例登录设置。目前只返回实例所关联的密钥。
+     * @return LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
+     */
+    public LoginSettings getLoginSettings() {
+        return this.LoginSettings;
+    }
+
+    /**
+     * 设置实例登录设置。目前只返回实例所关联的密钥。
+     * @param LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
+     */
+    public void setLoginSettings(LoginSettings LoginSettings) {
+        this.LoginSettings = LoginSettings;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -460,6 +532,9 @@ public class Instance  extends AbstractModel{
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+        this.setParamSimple(map, prefix + "OsName", this.OsName);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
 
     }
 }
