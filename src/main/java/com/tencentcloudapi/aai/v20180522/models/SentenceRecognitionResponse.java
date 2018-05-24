@@ -1,17 +1,17 @@
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.aai.v20180522.models;
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
-public class QueryMigrateTaskResponse  extends AbstractModel{
+public class SentenceRecognitionResponse  extends AbstractModel{
 
 
     /**
-    * 任务状态
+    * 识别结果。
     */
-    @SerializedName("Status")
+    @SerializedName("Result")
     @Expose
-    private String Status;
+    private String Result;
     
 
     /**
@@ -23,19 +23,19 @@ public class QueryMigrateTaskResponse  extends AbstractModel{
     
 
     /**
-     * 获取任务状态
-     * @return Status 任务状态
+     * 获取识别结果。
+     * @return Result 识别结果。
      */
-    public String getStatus() {
-        return this.Status;
+    public String getResult() {
+        return this.Result;
     }
 
     /**
-     * 设置任务状态
-     * @param Status 任务状态
+     * 设置识别结果。
+     * @param Result 识别结果。
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setResult(String Result) {
+        this.Result = Result;
     }
 
     /**
@@ -58,7 +58,7 @@ public class QueryMigrateTaskResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

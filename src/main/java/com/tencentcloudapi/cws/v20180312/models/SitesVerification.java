@@ -63,6 +63,22 @@ public class SitesVerification  extends AbstractModel{
     
 
     /**
+    * ID。
+    */
+    @SerializedName("Id")
+    @Expose
+    private Integer Id;
+    
+
+    /**
+    * 云用户appid
+    */
+    @SerializedName("Appid")
+    @Expose
+    private Integer Appid;
+    
+
+    /**
      * 获取根域名。
      * @return Domain 根域名。
      */
@@ -175,6 +191,38 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
+     * 获取ID。
+     * @return Id ID。
+     */
+    public Integer getId() {
+        return this.Id;
+    }
+
+    /**
+     * 设置ID。
+     * @param Id ID。
+     */
+    public void setId(Integer Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * 获取云用户appid
+     * @return Appid 云用户appid
+     */
+    public Integer getAppid() {
+        return this.Appid;
+    }
+
+    /**
+     * 设置云用户appid
+     * @param Appid 云用户appid
+     */
+    public void setAppid(Integer Appid) {
+        this.Appid = Appid;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -185,6 +233,8 @@ public class SitesVerification  extends AbstractModel{
         this.setParamSimple(map, prefix + "VerifyStatus", this.VerifyStatus);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Appid", this.Appid);
 
     }
 }

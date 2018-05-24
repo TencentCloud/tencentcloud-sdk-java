@@ -25,9 +25,9 @@ public class Address  extends AbstractModel{
     /**
     * `EIP`状态。
     */
-    @SerializedName("AddressState")
+    @SerializedName("AddressStatus")
     @Expose
-    private String AddressState;
+    private String AddressStatus;
     
 
     /**
@@ -88,18 +88,18 @@ public class Address  extends AbstractModel{
 
     /**
      * 获取`EIP`状态。
-     * @return AddressState `EIP`状态。
+     * @return AddressStatus `EIP`状态。
      */
-    public String getAddressState() {
-        return this.AddressState;
+    public String getAddressStatus() {
+        return this.AddressStatus;
     }
 
     /**
      * 设置`EIP`状态。
-     * @param AddressState `EIP`状态。
+     * @param AddressStatus `EIP`状态。
      */
-    public void setAddressState(String AddressState) {
-        this.AddressState = AddressState;
+    public void setAddressStatus(String AddressStatus) {
+        this.AddressStatus = AddressStatus;
     }
 
     /**
@@ -156,7 +156,7 @@ public class Address  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressId", this.AddressId);
         this.setParamSimple(map, prefix + "AddressName", this.AddressName);
-        this.setParamSimple(map, prefix + "AddressState", this.AddressState);
+        this.setParamSimple(map, prefix + "AddressStatus", this.AddressStatus);
         this.setParamSimple(map, prefix + "AddressIp", this.AddressIp);
         this.setParamSimple(map, prefix + "BindedResourceId", this.BindedResourceId);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);

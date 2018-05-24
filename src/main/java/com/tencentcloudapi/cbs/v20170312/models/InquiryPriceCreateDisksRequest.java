@@ -7,7 +7,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
 
 
     /**
-    * 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高效云盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
+    * 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
     */
     @SerializedName("DiskType")
     @Expose
@@ -15,7 +15,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     
 
     /**
-    * 云硬盘大小，单位为GB。普通云硬盘最小10GB，SSD云硬盘最小100GB，步长均为10GB。
+    * 云盘大小，取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -55,32 +55,32 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     
 
     /**
-     * 获取云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高效云盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
-     * @return DiskType 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高效云盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
+     * 获取云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
+     * @return DiskType 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * 设置云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高效云盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
-     * @param DiskType 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高效云盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
+     * 设置云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
+     * @param DiskType 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * 获取云硬盘大小，单位为GB。普通云硬盘最小10GB，SSD云硬盘最小100GB，步长均为10GB。
-     * @return DiskSize 云硬盘大小，单位为GB。普通云硬盘最小10GB，SSD云硬盘最小100GB，步长均为10GB。
+     * 获取云盘大小，取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
+     * @return DiskSize 云盘大小，取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
      */
     public Integer getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * 设置云硬盘大小，单位为GB。普通云硬盘最小10GB，SSD云硬盘最小100GB，步长均为10GB。
-     * @param DiskSize 云硬盘大小，单位为GB。普通云硬盘最小10GB，SSD云硬盘最小100GB，步长均为10GB。
+     * 设置云盘大小，取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
+     * @param DiskSize 云盘大小，取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
      */
     public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;

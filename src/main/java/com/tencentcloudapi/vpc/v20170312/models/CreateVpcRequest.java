@@ -31,7 +31,7 @@ public class CreateVpcRequest  extends AbstractModel{
     
 
     /**
-    * DNS地址，最多支持4个，第1个默认为主，其余为备
+    * DNS地址，最多支持4个
     */
     @SerializedName("DnsServers")
     @Expose
@@ -95,16 +95,16 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取DNS地址，最多支持4个，第1个默认为主，其余为备
-     * @return DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
+     * 获取DNS地址，最多支持4个
+     * @return DnsServers DNS地址，最多支持4个
      */
     public String [] getDnsServers() {
         return this.DnsServers;
     }
 
     /**
-     * 设置DNS地址，最多支持4个，第1个默认为主，其余为备
-     * @param DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
+     * 设置DNS地址，最多支持4个
+     * @param DnsServers DNS地址，最多支持4个
      */
     public void setDnsServers(String [] DnsServers) {
         this.DnsServers = DnsServers;

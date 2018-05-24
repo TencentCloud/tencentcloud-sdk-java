@@ -87,6 +87,14 @@ public class TaskInstanceView  extends AbstractModel{
     
 
     /**
+    * 任务实例状态原因详情，任务实例失败时，会记录失败原因
+    */
+    @SerializedName("StateDetailedReason")
+    @Expose
+    private String StateDetailedReason;
+    
+
+    /**
      * 获取任务实例索引
      * @return TaskInstanceIndex 任务实例索引
      */
@@ -247,6 +255,22 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
+     * 获取任务实例状态原因详情，任务实例失败时，会记录失败原因
+     * @return StateDetailedReason 任务实例状态原因详情，任务实例失败时，会记录失败原因
+     */
+    public String getStateDetailedReason() {
+        return this.StateDetailedReason;
+    }
+
+    /**
+     * 设置任务实例状态原因详情，任务实例失败时，会记录失败原因
+     * @param StateDetailedReason 任务实例状态原因详情，任务实例失败时，会记录失败原因
+     */
+    public void setStateDetailedReason(String StateDetailedReason) {
+        this.StateDetailedReason = StateDetailedReason;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -260,6 +284,7 @@ public class TaskInstanceView  extends AbstractModel{
         this.setParamSimple(map, prefix + "RunningTime", this.RunningTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
+        this.setParamSimple(map, prefix + "StateDetailedReason", this.StateDetailedReason);
 
     }
 }

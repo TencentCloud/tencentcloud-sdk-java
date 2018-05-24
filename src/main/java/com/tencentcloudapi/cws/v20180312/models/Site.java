@@ -191,6 +191,30 @@ public class Site  extends AbstractModel{
     
 
     /**
+    * 最近一次扫描各个类型风险漏洞数量，存储的是json对象
+    */
+    @SerializedName("LastScanExtsCount")
+    @Expose
+    private String LastScanExtsCount;
+    
+
+    /**
+    * 云用户appid。
+    */
+    @SerializedName("Appid")
+    @Expose
+    private Integer Appid;
+    
+
+    /**
+    * 云用户标识。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+    
+
+    /**
      * 获取站点ID。
      * @return Id 站点ID。
      */
@@ -559,6 +583,54 @@ public class Site  extends AbstractModel{
     }
 
     /**
+     * 获取最近一次扫描各个类型风险漏洞数量，存储的是json对象
+     * @return LastScanExtsCount 最近一次扫描各个类型风险漏洞数量，存储的是json对象
+     */
+    public String getLastScanExtsCount() {
+        return this.LastScanExtsCount;
+    }
+
+    /**
+     * 设置最近一次扫描各个类型风险漏洞数量，存储的是json对象
+     * @param LastScanExtsCount 最近一次扫描各个类型风险漏洞数量，存储的是json对象
+     */
+    public void setLastScanExtsCount(String LastScanExtsCount) {
+        this.LastScanExtsCount = LastScanExtsCount;
+    }
+
+    /**
+     * 获取云用户appid。
+     * @return Appid 云用户appid。
+     */
+    public Integer getAppid() {
+        return this.Appid;
+    }
+
+    /**
+     * 设置云用户appid。
+     * @param Appid 云用户appid。
+     */
+    public void setAppid(Integer Appid) {
+        this.Appid = Appid;
+    }
+
+    /**
+     * 获取云用户标识。
+     * @return Uin 云用户标识。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * 设置云用户标识。
+     * @param Uin 云用户标识。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -585,6 +657,9 @@ public class Site  extends AbstractModel{
         this.setParamSimple(map, prefix + "LastScanVulsNum", this.LastScanVulsNum);
         this.setParamSimple(map, prefix + "LastScanNoticeNum", this.LastScanNoticeNum);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "LastScanExtsCount", this.LastScanExtsCount);
+        this.setParamSimple(map, prefix + "Appid", this.Appid);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
 
     }
 }

@@ -7,7 +7,7 @@ public class DescribeInstancesDiskNumRequest  extends AbstractModel{
 
 
     /**
-    * 云服务器实例ID，通过[DescribeInstances](/document/api/213/9388)接口查询。
+    * 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -15,16 +15,16 @@ public class DescribeInstancesDiskNumRequest  extends AbstractModel{
     
 
     /**
-     * 获取云服务器实例ID，通过[DescribeInstances](/document/api/213/9388)接口查询。
-     * @return InstanceIds 云服务器实例ID，通过[DescribeInstances](/document/api/213/9388)接口查询。
+     * 获取云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
+     * @return InstanceIds 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * 设置云服务器实例ID，通过[DescribeInstances](/document/api/213/9388)接口查询。
-     * @param InstanceIds 云服务器实例ID，通过[DescribeInstances](/document/api/213/9388)接口查询。
+     * 设置云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
+     * @param InstanceIds 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

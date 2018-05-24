@@ -391,7 +391,7 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
-     *查询网络计费的类型
+     *本接口（DescribeInternetChargeTypeConfigs）用于查询网络的计费类型。
      * @param DescribeInternetChargeTypeConfigsRequest
      * @return DescribeInternetChargeTypeConfigsResponse
      * @throws TencentCloudSDKException
@@ -795,24 +795,6 @@ public class CvmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyKeyPairAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyKeyPairAttribute"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查询迁移任务进度。
-     * @param QueryMigrateTaskRequest
-     * @return QueryMigrateTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryMigrateTaskResponse  QueryMigrateTask(QueryMigrateTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryMigrateTaskResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryMigrateTaskResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryMigrateTask"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

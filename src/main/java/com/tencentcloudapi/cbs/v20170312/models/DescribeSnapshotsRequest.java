@@ -23,7 +23,7 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     
 
     /**
-    * 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/362/15633)中的相关小节。
+    * 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
     */
     @SerializedName("Offset")
     @Expose
@@ -31,7 +31,7 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     
 
     /**
-    * 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/362/15633)中的相关小节。
+    * 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/product/362/15633)中的相关小节。
     */
     @SerializedName("Limit")
     @Expose
@@ -47,7 +47,7 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     
 
     /**
-    * 快照列表排序的依据字段。取值范围：<br><li>CREATETIME：依据快照的创建时间排序<br>默认按创建时间排序。
+    * 快照列表排序的依据字段。取值范围：<br><li>CREATE_TIME：依据快照的创建时间排序<br>默认按创建时间排序。
     */
     @SerializedName("OrderField")
     @Expose
@@ -87,32 +87,32 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/362/15633)中的相关小节。
-     * @return Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/362/15633)中的相关小节。
+     * 获取偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
+     * @return Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/362/15633)中的相关小节。
-     * @param Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/362/15633)中的相关小节。
+     * 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
+     * @param Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/362/15633)中的相关小节。
-     * @return Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/362/15633)中的相关小节。
+     * 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/product/362/15633)中的相关小节。
+     * @return Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/product/362/15633)中的相关小节。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/362/15633)中的相关小节。
-     * @param Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/362/15633)中的相关小节。
+     * 设置返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/product/362/15633)中的相关小节。
+     * @param Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/product/362/15633)中的相关小节。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;
@@ -135,16 +135,16 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取快照列表排序的依据字段。取值范围：<br><li>CREATETIME：依据快照的创建时间排序<br>默认按创建时间排序。
-     * @return OrderField 快照列表排序的依据字段。取值范围：<br><li>CREATETIME：依据快照的创建时间排序<br>默认按创建时间排序。
+     * 获取快照列表排序的依据字段。取值范围：<br><li>CREATE_TIME：依据快照的创建时间排序<br>默认按创建时间排序。
+     * @return OrderField 快照列表排序的依据字段。取值范围：<br><li>CREATE_TIME：依据快照的创建时间排序<br>默认按创建时间排序。
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * 设置快照列表排序的依据字段。取值范围：<br><li>CREATETIME：依据快照的创建时间排序<br>默认按创建时间排序。
-     * @param OrderField 快照列表排序的依据字段。取值范围：<br><li>CREATETIME：依据快照的创建时间排序<br>默认按创建时间排序。
+     * 设置快照列表排序的依据字段。取值范围：<br><li>CREATE_TIME：依据快照的创建时间排序<br>默认按创建时间排序。
+     * @param OrderField 快照列表排序的依据字段。取值范围：<br><li>CREATE_TIME：依据快照的创建时间排序<br>默认按创建时间排序。
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;

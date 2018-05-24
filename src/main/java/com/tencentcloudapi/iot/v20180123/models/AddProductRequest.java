@@ -7,7 +7,7 @@ public class AddProductRequest  extends AbstractModel{
 
 
     /**
-    * 产品名称
+    * 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
     */
     @SerializedName("Name")
     @Expose
@@ -23,7 +23,7 @@ public class AddProductRequest  extends AbstractModel{
     
 
     /**
-    * 产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
+    * 鉴权模式（1：动态令牌，推荐使用动态令牌）
     */
     @SerializedName("AuthType")
     @Expose
@@ -39,16 +39,24 @@ public class AddProductRequest  extends AbstractModel{
     
 
     /**
-     * 获取产品名称
-     * @return Name 产品名称
+    * 数据协议（native表示自定义，template表示数据模板，默认值为template）
+    */
+    @SerializedName("DataProtocol")
+    @Expose
+    private String DataProtocol;
+    
+
+    /**
+     * 获取产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
+     * @return Name 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * 设置产品名称
-     * @param Name 产品名称
+     * 设置产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
+     * @param Name 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -71,16 +79,16 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
-     * @return AuthType 产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
+     * 获取鉴权模式（1：动态令牌，推荐使用动态令牌）
+     * @return AuthType 鉴权模式（1：动态令牌，推荐使用动态令牌）
      */
     public Integer getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * 设置产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
-     * @param AuthType 产品鉴权类型（0：直连，1：动态令牌），推荐使用动态令牌
+     * 设置鉴权模式（1：动态令牌，推荐使用动态令牌）
+     * @param AuthType 鉴权模式（1：动态令牌，推荐使用动态令牌）
      */
     public void setAuthType(Integer AuthType) {
         this.AuthType = AuthType;
@@ -103,6 +111,22 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
+     * 获取数据协议（native表示自定义，template表示数据模板，默认值为template）
+     * @return DataProtocol 数据协议（native表示自定义，template表示数据模板，默认值为template）
+     */
+    public String getDataProtocol() {
+        return this.DataProtocol;
+    }
+
+    /**
+     * 设置数据协议（native表示自定义，template表示数据模板，默认值为template）
+     * @param DataProtocol 数据协议（native表示自定义，template表示数据模板，默认值为template）
+     */
+    public void setDataProtocol(String DataProtocol) {
+        this.DataProtocol = DataProtocol;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -110,6 +134,7 @@ public class AddProductRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamArraySimple(map, prefix + "DataTemplate.", this.DataTemplate);
+        this.setParamSimple(map, prefix + "DataProtocol", this.DataProtocol);
 
     }
 }

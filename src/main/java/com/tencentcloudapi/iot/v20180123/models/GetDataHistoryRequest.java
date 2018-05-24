@@ -15,7 +15,7 @@ public class GetDataHistoryRequest  extends AbstractModel{
     
 
     /**
-    * 设备名称列表
+    * 设备名称列表，允许最多一次100台
     */
     @SerializedName("DeviceNames")
     @Expose
@@ -79,16 +79,16 @@ public class GetDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称列表
-     * @return DeviceNames 设备名称列表
+     * 获取设备名称列表，允许最多一次100台
+     * @return DeviceNames 设备名称列表，允许最多一次100台
      */
     public String [] getDeviceNames() {
         return this.DeviceNames;
     }
 
     /**
-     * 设置设备名称列表
-     * @param DeviceNames 设备名称列表
+     * 设置设备名称列表，允许最多一次100台
+     * @param DeviceNames 设备名称列表，允许最多一次100台
      */
     public void setDeviceNames(String [] DeviceNames) {
         this.DeviceNames = DeviceNames;

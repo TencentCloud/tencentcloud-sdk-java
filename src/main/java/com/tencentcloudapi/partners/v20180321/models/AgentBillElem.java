@@ -79,6 +79,14 @@ public class AgentBillElem  extends AbstractModel{
     
 
     /**
+    * agentpay：代付；selfpay：自付
+    */
+    @SerializedName("PayerMode")
+    @Expose
+    private String PayerMode;
+    
+
+    /**
      * 获取代理商账号ID
      * @return Uin 代理商账号ID
      */
@@ -223,6 +231,22 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
+     * 获取agentpay：代付；selfpay：自付
+     * @return PayerMode agentpay：代付；selfpay：自付
+     */
+    public String getPayerMode() {
+        return this.PayerMode;
+    }
+
+    /**
+     * 设置agentpay：代付；selfpay：自付
+     * @param PayerMode agentpay：代付；selfpay：自付
+     */
+    public void setPayerMode(String PayerMode) {
+        this.PayerMode = PayerMode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -235,6 +259,7 @@ public class AgentBillElem  extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "SettleMonth", this.SettleMonth);
         this.setParamSimple(map, prefix + "Amt", this.Amt);
+        this.setParamSimple(map, prefix + "PayerMode", this.PayerMode);
 
     }
 }

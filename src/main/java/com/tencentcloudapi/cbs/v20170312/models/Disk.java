@@ -31,7 +31,7 @@ public class Disk  extends AbstractModel{
     
 
     /**
-    * 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
+    * 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
     */
     @SerializedName("Portable")
     @Expose
@@ -79,7 +79,7 @@ public class Disk  extends AbstractModel{
     
 
     /**
-    * 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高效云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+    * 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
     */
     @SerializedName("DiskType")
     @Expose
@@ -87,7 +87,7 @@ public class Disk  extends AbstractModel{
     
 
     /**
-    * 云盘是否挂载到云主机上。取值范围：<br><li>false表示未挂载<br><li>true表示已挂载。
+    * 云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
     */
     @SerializedName("Attached")
     @Expose
@@ -119,7 +119,7 @@ public class Disk  extends AbstractModel{
     
 
     /**
-    * 云盘是否处于快照回滚状态。取值范围：<br><li>false表示不处于快照回滚状态<br><li>true表示处于快照回滚状态。
+    * 云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态<br><li>true:表示处于快照回滚状态。
     */
     @SerializedName("Rollbacking")
     @Expose
@@ -135,7 +135,7 @@ public class Disk  extends AbstractModel{
     
 
     /**
-    * 云盘是否为加密盘。取值范围：<br><li>false表示非加密盘<br><li>true表示加密盘。
+    * 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
     */
     @SerializedName("Encrypt")
     @Expose
@@ -159,7 +159,7 @@ public class Disk  extends AbstractModel{
     
 
     /**
-    * 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true:云盘到期时间早于子机。false：云盘到期时间晚于子机。
+    * 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
     */
     @SerializedName("DeadlineError")
     @Expose
@@ -239,16 +239,16 @@ public class Disk  extends AbstractModel{
     }
 
     /**
-     * 获取是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
-     * @return Portable 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
+     * 获取是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
+     * @return Portable 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
      */
     public Boolean getPortable() {
         return this.Portable;
     }
 
     /**
-     * 设置是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
-     * @param Portable 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
+     * 设置是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
+     * @param Portable 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
      */
     public void setPortable(Boolean Portable) {
         this.Portable = Portable;
@@ -335,32 +335,32 @@ public class Disk  extends AbstractModel{
     }
 
     /**
-     * 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高效云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
-     * @return DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高效云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * @return DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * 设置云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高效云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
-     * @param DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高效云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * 设置云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * @param DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * 获取云盘是否挂载到云主机上。取值范围：<br><li>false表示未挂载<br><li>true表示已挂载。
-     * @return Attached 云盘是否挂载到云主机上。取值范围：<br><li>false表示未挂载<br><li>true表示已挂载。
+     * 获取云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
+     * @return Attached 云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
      */
     public Boolean getAttached() {
         return this.Attached;
     }
 
     /**
-     * 设置云盘是否挂载到云主机上。取值范围：<br><li>false表示未挂载<br><li>true表示已挂载。
-     * @param Attached 云盘是否挂载到云主机上。取值范围：<br><li>false表示未挂载<br><li>true表示已挂载。
+     * 设置云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
+     * @param Attached 云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
      */
     public void setAttached(Boolean Attached) {
         this.Attached = Attached;
@@ -415,16 +415,16 @@ public class Disk  extends AbstractModel{
     }
 
     /**
-     * 获取云盘是否处于快照回滚状态。取值范围：<br><li>false表示不处于快照回滚状态<br><li>true表示处于快照回滚状态。
-     * @return Rollbacking 云盘是否处于快照回滚状态。取值范围：<br><li>false表示不处于快照回滚状态<br><li>true表示处于快照回滚状态。
+     * 获取云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态<br><li>true:表示处于快照回滚状态。
+     * @return Rollbacking 云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态<br><li>true:表示处于快照回滚状态。
      */
     public Boolean getRollbacking() {
         return this.Rollbacking;
     }
 
     /**
-     * 设置云盘是否处于快照回滚状态。取值范围：<br><li>false表示不处于快照回滚状态<br><li>true表示处于快照回滚状态。
-     * @param Rollbacking 云盘是否处于快照回滚状态。取值范围：<br><li>false表示不处于快照回滚状态<br><li>true表示处于快照回滚状态。
+     * 设置云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态<br><li>true:表示处于快照回滚状态。
+     * @param Rollbacking 云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态<br><li>true:表示处于快照回滚状态。
      */
     public void setRollbacking(Boolean Rollbacking) {
         this.Rollbacking = Rollbacking;
@@ -447,16 +447,16 @@ public class Disk  extends AbstractModel{
     }
 
     /**
-     * 获取云盘是否为加密盘。取值范围：<br><li>false表示非加密盘<br><li>true表示加密盘。
-     * @return Encrypt 云盘是否为加密盘。取值范围：<br><li>false表示非加密盘<br><li>true表示加密盘。
+     * 获取云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
+     * @return Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * 设置云盘是否为加密盘。取值范围：<br><li>false表示非加密盘<br><li>true表示加密盘。
-     * @param Encrypt 云盘是否为加密盘。取值范围：<br><li>false表示非加密盘<br><li>true表示加密盘。
+     * 设置云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
+     * @param Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;
@@ -495,16 +495,16 @@ public class Disk  extends AbstractModel{
     }
 
     /**
-     * 获取云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true:云盘到期时间早于子机。false：云盘到期时间晚于子机。
-     * @return DeadlineError 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true:云盘到期时间早于子机。false：云盘到期时间晚于子机。
+     * 获取在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+     * @return DeadlineError 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
      */
     public Boolean getDeadlineError() {
         return this.DeadlineError;
     }
 
     /**
-     * 设置云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true:云盘到期时间早于子机。false：云盘到期时间晚于子机。
-     * @param DeadlineError 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true:云盘到期时间早于子机。false：云盘到期时间晚于子机。
+     * 设置在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+     * @param DeadlineError 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
      */
     public void setDeadlineError(Boolean DeadlineError) {
         this.DeadlineError = DeadlineError;

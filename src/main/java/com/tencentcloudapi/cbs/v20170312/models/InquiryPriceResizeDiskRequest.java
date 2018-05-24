@@ -15,7 +15,7 @@ public class InquiryPriceResizeDiskRequest  extends AbstractModel{
     
 
     /**
-    * 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。
+    * 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -47,16 +47,16 @@ public class InquiryPriceResizeDiskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。
-     * @return DiskSize 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。
+     * 获取云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
+     * @return DiskSize 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
      */
     public Integer getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * 设置云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。
-     * @param DiskSize 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。
+     * 设置云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
+     * @param DiskSize 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB，步长均为10GB。
      */
     public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;

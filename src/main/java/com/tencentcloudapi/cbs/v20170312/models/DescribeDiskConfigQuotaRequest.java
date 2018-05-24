@@ -33,9 +33,9 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     /**
     * 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
     */
-    @SerializedName("DiskType")
+    @SerializedName("DiskTypes")
     @Expose
-    private String DiskType;
+    private String [] DiskTypes;
     
 
     /**
@@ -55,7 +55,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     
 
     /**
-    * 子机CPU核数。
+    * 实例CPU核数。
     */
     @SerializedName("CPU")
     @Expose
@@ -63,7 +63,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     
 
     /**
-    * 子机内存大小。
+    * 实例内存大小。
     */
     @SerializedName("Memory")
     @Expose
@@ -120,18 +120,18 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
 
     /**
      * 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
-     * @return DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
+     * @return DiskTypes 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      */
-    public String getDiskType() {
-        return this.DiskType;
+    public String [] getDiskTypes() {
+        return this.DiskTypes;
     }
 
     /**
      * 设置硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
-     * @param DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
+     * @param DiskTypes 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      */
-    public void setDiskType(String DiskType) {
-        this.DiskType = DiskType;
+    public void setDiskTypes(String [] DiskTypes) {
+        this.DiskTypes = DiskTypes;
     }
 
     /**
@@ -167,32 +167,32 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子机CPU核数。
-     * @return CPU 子机CPU核数。
+     * 获取实例CPU核数。
+     * @return CPU 实例CPU核数。
      */
     public Integer getCPU() {
         return this.CPU;
     }
 
     /**
-     * 设置子机CPU核数。
-     * @param CPU 子机CPU核数。
+     * 设置实例CPU核数。
+     * @param CPU 实例CPU核数。
      */
     public void setCPU(Integer CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * 获取子机内存大小。
-     * @return Memory 子机内存大小。
+     * 获取实例内存大小。
+     * @return Memory 实例内存大小。
      */
     public Integer getMemory() {
         return this.Memory;
     }
 
     /**
-     * 设置子机内存大小。
-     * @param Memory 子机内存大小。
+     * 设置实例内存大小。
+     * @param Memory 实例内存大小。
      */
     public void setMemory(Integer Memory) {
         this.Memory = Memory;
@@ -205,7 +205,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "InquiryType", this.InquiryType);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
-        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamArraySimple(map, prefix + "DiskTypes.", this.DiskTypes);
         this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         this.setParamArraySimple(map, prefix + "InstanceFamilies.", this.InstanceFamilies);
         this.setParamSimple(map, prefix + "CPU", this.CPU);

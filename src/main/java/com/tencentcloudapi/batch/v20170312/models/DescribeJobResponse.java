@@ -95,6 +95,14 @@ public class DescribeJobResponse  extends AbstractModel{
     
 
     /**
+    * 作业失败原因
+    */
+    @SerializedName("StateReason")
+    @Expose
+    private String StateReason;
+    
+
+    /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
     */
     @SerializedName("RequestId")
@@ -279,6 +287,22 @@ public class DescribeJobResponse  extends AbstractModel{
     }
 
     /**
+     * 获取作业失败原因
+     * @return StateReason 作业失败原因
+     */
+    public String getStateReason() {
+        return this.StateReason;
+    }
+
+    /**
+     * 设置作业失败原因
+     * @param StateReason 作业失败原因
+     */
+    public void setStateReason(String StateReason) {
+        this.StateReason = StateReason;
+    }
+
+    /**
      * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
@@ -309,6 +333,7 @@ public class DescribeJobResponse  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DependenceSet.", this.DependenceSet);
         this.setParamObj(map, prefix + "TaskMetrics.", this.TaskMetrics);
         this.setParamObj(map, prefix + "TaskInstanceMetrics.", this.TaskInstanceMetrics);
+        this.setParamSimple(map, prefix + "StateReason", this.StateReason);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

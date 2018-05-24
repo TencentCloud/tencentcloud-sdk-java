@@ -15,7 +15,7 @@ public class GetDeviceLogRequest  extends AbstractModel{
     
 
     /**
-    * 设备名称列表
+    * 设备名称列表，最大支持100台
     */
     @SerializedName("DeviceNames")
     @Expose
@@ -63,6 +63,14 @@ public class GetDeviceLogRequest  extends AbstractModel{
     
 
     /**
+    * 日志类型（comm/status）
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+    
+
+    /**
      * 获取产品Id
      * @return ProductId 产品Id
      */
@@ -79,16 +87,16 @@ public class GetDeviceLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称列表
-     * @return DeviceNames 设备名称列表
+     * 获取设备名称列表，最大支持100台
+     * @return DeviceNames 设备名称列表，最大支持100台
      */
     public String [] getDeviceNames() {
         return this.DeviceNames;
     }
 
     /**
-     * 设置设备名称列表
-     * @param DeviceNames 设备名称列表
+     * 设置设备名称列表，最大支持100台
+     * @param DeviceNames 设备名称列表，最大支持100台
      */
     public void setDeviceNames(String [] DeviceNames) {
         this.DeviceNames = DeviceNames;
@@ -175,6 +183,22 @@ public class GetDeviceLogRequest  extends AbstractModel{
     }
 
     /**
+     * 获取日志类型（comm/status）
+     * @return Type 日志类型（comm/status）
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * 设置日志类型（comm/status）
+     * @param Type 日志类型（comm/status）
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -185,6 +209,7 @@ public class GetDeviceLogRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "ScrollId", this.ScrollId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

@@ -88,7 +88,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *为用户提供创建某型号物联网产品的能力。
+     *本接口(AddProduct)用于创建、定义某款硬件产品。
      * @param AddProductRequest
      * @return AddProductResponse
      * @throws TencentCloudSDKException
@@ -124,7 +124,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *新增Topic
+     *新增Topic，用于设备或应用发布消息至该Topic或订阅该Topic的消息。
      * @param AddTopicRequest
      * @return AddTopicResponse
      * @throws TencentCloudSDKException
@@ -268,7 +268,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *获取数据历史
+     *批量获取设备某一段时间范围的设备上报数据。该接口只允许使用数据模板类型的产品通过REST API方式同步设备上报数据至用户的应用系统。
      * @param GetDataHistoryRequest
      * @return GetDataHistoryResponse
      * @throws TencentCloudSDKException
@@ -304,7 +304,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *获取设备数据
+     *获取某个设备当前上报到云端的数据，该接口适用于使用数据模板协议的产品。
      * @param GetDeviceDataRequest
      * @return GetDeviceDataResponse
      * @throws TencentCloudSDKException
@@ -322,7 +322,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *获取设备日志
+     *批量获取设备与云端的详细通信日志，该接口适用于使用数据模板类型的产品。
      * @param GetDeviceLogRequest
      * @return GetDeviceLogResponse
      * @throws TencentCloudSDKException
@@ -502,7 +502,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *提供下发控制指令到指定设备的能力。
+     *提供下发控制指令到指定设备的能力，该接口适用于使用数据模板类型的产品。
      * @param IssueDeviceControlRequest
      * @return IssueDeviceControlResponse
      * @throws TencentCloudSDKException
@@ -520,7 +520,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *提供向指定的Topic发布消息的能力。
+     *提供向指定的Topic发布消息的能力，常用于向设备下发控制指令；该接口只适用于数据协议为“自定义”类型的产品，使用数据模板类型的产品需使用IssueDeviceControl接口
      * @param PublishMsgRequest
      * @return PublishMsgResponse
      * @throws TencentCloudSDKException
@@ -538,7 +538,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *重置设备
+     *重置设备操作，将会为设备生成新的证书及清空最新数据，需谨慎操作。
      * @param ResetDeviceRequest
      * @return ResetDeviceResponse
      * @throws TencentCloudSDKException

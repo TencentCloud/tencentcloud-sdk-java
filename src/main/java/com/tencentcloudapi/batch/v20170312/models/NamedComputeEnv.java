@@ -87,6 +87,14 @@ public class NamedComputeEnv  extends AbstractModel{
     
 
     /**
+    * 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+    */
+    @SerializedName("ActionIfComputeNodeInactive")
+    @Expose
+    private String ActionIfComputeNodeInactive;
+    
+
+    /**
      * 获取计算环境名称
      * @return EnvName 计算环境名称
      */
@@ -247,6 +255,22 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
+     * 获取非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+     * @return ActionIfComputeNodeInactive 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+     */
+    public String getActionIfComputeNodeInactive() {
+        return this.ActionIfComputeNodeInactive;
+    }
+
+    /**
+     * 设置非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+     * @param ActionIfComputeNodeInactive 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+     */
+    public void setActionIfComputeNodeInactive(String ActionIfComputeNodeInactive) {
+        this.ActionIfComputeNodeInactive = ActionIfComputeNodeInactive;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -260,6 +284,7 @@ public class NamedComputeEnv  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "InputMappings.", this.InputMappings);
         this.setParamObj(map, prefix + "AgentRunningMode.", this.AgentRunningMode);
         this.setParamObj(map, prefix + "Notifications.", this.Notifications);
+        this.setParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
 
     }
 }

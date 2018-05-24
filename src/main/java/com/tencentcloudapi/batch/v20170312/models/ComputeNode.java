@@ -71,6 +71,22 @@ public class ComputeNode  extends AbstractModel{
     
 
     /**
+    * 实例内网IP
+    */
+    @SerializedName("PrivateIpAddresses")
+    @Expose
+    private String [] PrivateIpAddresses;
+    
+
+    /**
+    * 实例公网IP
+    */
+    @SerializedName("PublicIpAddresses")
+    @Expose
+    private String [] PublicIpAddresses;
+    
+
+    /**
      * 获取计算节点ID
      * @return ComputeNodeId 计算节点ID
      */
@@ -199,6 +215,38 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
+     * 获取实例内网IP
+     * @return PrivateIpAddresses 实例内网IP
+     */
+    public String [] getPrivateIpAddresses() {
+        return this.PrivateIpAddresses;
+    }
+
+    /**
+     * 设置实例内网IP
+     * @param PrivateIpAddresses 实例内网IP
+     */
+    public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
+        this.PrivateIpAddresses = PrivateIpAddresses;
+    }
+
+    /**
+     * 获取实例公网IP
+     * @return PublicIpAddresses 实例公网IP
+     */
+    public String [] getPublicIpAddresses() {
+        return this.PublicIpAddresses;
+    }
+
+    /**
+     * 设置实例公网IP
+     * @param PublicIpAddresses 实例公网IP
+     */
+    public void setPublicIpAddresses(String [] PublicIpAddresses) {
+        this.PublicIpAddresses = PublicIpAddresses;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -210,6 +258,8 @@ public class ComputeNode  extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceCreatedTime", this.ResourceCreatedTime);
         this.setParamSimple(map, prefix + "TaskInstanceNumAvailable", this.TaskInstanceNumAvailable);
         this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
+        this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+        this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
 
     }
 }

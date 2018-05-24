@@ -415,6 +415,24 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
+     *用于批量销毁计算节点，不允许重复销毁同一个节点。
+     * @param TerminateComputeNodesRequest
+     * @return TerminateComputeNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateComputeNodesResponse  TerminateComputeNodes(TerminateComputeNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateComputeNodesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateComputeNodesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TerminateComputeNodes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于终止作业。
 终止作业的效果相当于所含的所有任务实例进行TerminateTaskInstance操作。具体效果和用法可参考TerminateTaskInstance。
      * @param TerminateJobRequest

@@ -15,7 +15,7 @@ public class AttachDisksRequest  extends AbstractModel{
     
 
     /**
-    * 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/api/213/9388)接口查询。
+    * 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/product/213/15728)接口查询。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -39,16 +39,16 @@ public class AttachDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/api/213/9388)接口查询。
-     * @return InstanceId 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/api/213/9388)接口查询。
+     * 获取云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/product/213/15728)接口查询。
+     * @return InstanceId 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/product/213/15728)接口查询。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/api/213/9388)接口查询。
-     * @param InstanceId 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/api/213/9388)接口查询。
+     * 设置云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/product/213/15728)接口查询。
+     * @param InstanceId 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/product/213/15728)接口查询。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

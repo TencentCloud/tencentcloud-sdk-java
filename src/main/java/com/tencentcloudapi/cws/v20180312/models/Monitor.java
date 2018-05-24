@@ -9,9 +9,9 @@ public class Monitor  extends AbstractModel{
     /**
     * 监控任务ID。
     */
-    @SerializedName("ID")
+    @SerializedName("Id")
     @Expose
-    private Integer ID;
+    private Integer Id;
     
 
     /**
@@ -111,19 +111,27 @@ public class Monitor  extends AbstractModel{
     
 
     /**
+    * 云用户appid。
+    */
+    @SerializedName("Appid")
+    @Expose
+    private Integer Appid;
+    
+
+    /**
      * 获取监控任务ID。
-     * @return ID 监控任务ID。
+     * @return Id 监控任务ID。
      */
-    public Integer getID() {
-        return this.ID;
+    public Integer getId() {
+        return this.Id;
     }
 
     /**
      * 设置监控任务ID。
-     * @param ID 监控任务ID。
+     * @param Id 监控任务ID。
      */
-    public void setID(Integer ID) {
-        this.ID = ID;
+    public void setId(Integer Id) {
+        this.Id = Id;
     }
 
     /**
@@ -319,10 +327,26 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
+     * 获取云用户appid。
+     * @return Appid 云用户appid。
+     */
+    public Integer getAppid() {
+        return this.Appid;
+    }
+
+    /**
+     * 设置云用户appid。
+     * @param Appid 云用户appid。
+     */
+    public void setAppid(Integer Appid) {
+        this.Appid = Appid;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
         this.setParamSimple(map, prefix + "ScannerType", this.ScannerType);
@@ -335,6 +359,7 @@ public class Monitor  extends AbstractModel{
         this.setParamSimple(map, prefix + "CurrentScanStartTime", this.CurrentScanStartTime);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "Appid", this.Appid);
 
     }
 }
