@@ -53,7 +53,7 @@ public class PartnersClient extends AbstractClient{
 
     /**
      *代理商可以审核其名下申请中代客
-     * @param AuditApplyClientRequest
+     * @param req AuditApplyClientRequest
      * @return AuditApplyClientResponse
      * @throws TencentCloudSDKException
      */
@@ -71,7 +71,7 @@ public class PartnersClient extends AbstractClient{
 
     /**
      *代理商可查询自己及名下代客所有业务明细
-     * @param DescribeAgentBillsRequest
+     * @param req DescribeAgentBillsRequest
      * @return DescribeAgentBillsResponse
      * @throws TencentCloudSDKException
      */
@@ -89,7 +89,7 @@ public class PartnersClient extends AbstractClient{
 
     /**
      *代理商可查询自己名下待审核客户列表
-     * @param DescribeAgentClientsRequest
+     * @param req DescribeAgentClientsRequest
      * @return DescribeAgentClientsResponse
      * @throws TencentCloudSDKException
      */
@@ -107,7 +107,7 @@ public class PartnersClient extends AbstractClient{
 
     /**
      *代理商可查询自己名下全部返佣信息
-     * @param DescribeRebateInfosRequest
+     * @param req DescribeRebateInfosRequest
      * @return DescribeRebateInfosResponse
      * @throws TencentCloudSDKException
      */
@@ -125,7 +125,7 @@ public class PartnersClient extends AbstractClient{
 
     /**
      *代理商可以对名下客户添加备注、修改备注
-     * @param ModifyClientRemarkRequest
+     * @param req ModifyClientRemarkRequest
      * @return ModifyClientRemarkResponse
      * @throws TencentCloudSDKException
      */

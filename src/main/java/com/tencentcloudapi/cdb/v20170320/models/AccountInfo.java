@@ -1,0 +1,166 @@
+package com.tencentcloudapi.cdb.v20170320.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class AccountInfo  extends AbstractModel{
+
+
+    /**
+    * 账号备注信息
+    */
+    @SerializedName("Notes")
+    @Expose
+    private String Notes;
+    
+
+    /**
+    * 账号的域名
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+    
+
+    /**
+    * 账号的名称
+    */
+    @SerializedName("User")
+    @Expose
+    private String User;
+    
+
+    /**
+    * 账号信息修改时间
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+    
+
+    /**
+    * 修改密码的时间
+    */
+    @SerializedName("ModifyPasswordTime")
+    @Expose
+    private String ModifyPasswordTime;
+    
+
+    /**
+    * 账号的创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+    
+
+    /**
+     * 获取账号备注信息
+     * @return Notes 账号备注信息
+     */
+    public String getNotes() {
+        return this.Notes;
+    }
+
+    /**
+     * 设置账号备注信息
+     * @param Notes 账号备注信息
+     */
+    public void setNotes(String Notes) {
+        this.Notes = Notes;
+    }
+
+    /**
+     * 获取账号的域名
+     * @return Host 账号的域名
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * 设置账号的域名
+     * @param Host 账号的域名
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
+
+    /**
+     * 获取账号的名称
+     * @return User 账号的名称
+     */
+    public String getUser() {
+        return this.User;
+    }
+
+    /**
+     * 设置账号的名称
+     * @param User 账号的名称
+     */
+    public void setUser(String User) {
+        this.User = User;
+    }
+
+    /**
+     * 获取账号信息修改时间
+     * @return ModifyTime 账号信息修改时间
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * 设置账号信息修改时间
+     * @param ModifyTime 账号信息修改时间
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
+    /**
+     * 获取修改密码的时间
+     * @return ModifyPasswordTime 修改密码的时间
+     */
+    public String getModifyPasswordTime() {
+        return this.ModifyPasswordTime;
+    }
+
+    /**
+     * 设置修改密码的时间
+     * @param ModifyPasswordTime 修改密码的时间
+     */
+    public void setModifyPasswordTime(String ModifyPasswordTime) {
+        this.ModifyPasswordTime = ModifyPasswordTime;
+    }
+
+    /**
+     * 获取账号的创建时间
+     * @return CreateTime 账号的创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * 设置账号的创建时间
+     * @param CreateTime 账号的创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Notes", this.Notes);
+        this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamSimple(map, prefix + "User", this.User);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "ModifyPasswordTime", this.ModifyPasswordTime);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+
+    }
+}
+

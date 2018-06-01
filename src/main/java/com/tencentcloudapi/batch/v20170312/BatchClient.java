@@ -53,7 +53,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于创建计算环境
-     * @param CreateComputeEnvRequest
+     * @param req CreateComputeEnvRequest
      * @return CreateComputeEnvResponse
      * @throws TencentCloudSDKException
      */
@@ -71,7 +71,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于创建任务模板
-     * @param CreateTaskTemplateRequest
+     * @param req CreateTaskTemplateRequest
      * @return CreateTaskTemplateResponse
      * @throws TencentCloudSDKException
      */
@@ -89,7 +89,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于删除计算环境
-     * @param DeleteComputeEnvRequest
+     * @param req DeleteComputeEnvRequest
      * @return DeleteComputeEnvResponse
      * @throws TencentCloudSDKException
      */
@@ -109,7 +109,7 @@ public class BatchClient extends AbstractClient{
      *用于删除作业记录。
 删除作业的效果相当于删除作业相关的所有信息。删除成功后，作业相关的所有信息都无法查询。
 待删除的作业必须处于完结状态，且其内部包含的所有任务实例也必须处于完结状态，否则会禁止操作。完结状态，是指处于 SUCCEED 或 FAILED 状态。
-     * @param DeleteJobRequest
+     * @param req DeleteJobRequest
      * @return DeleteJobResponse
      * @throws TencentCloudSDKException
      */
@@ -127,7 +127,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于删除任务模板信息
-     * @param DeleteTaskTemplatesRequest
+     * @param req DeleteTaskTemplatesRequest
      * @return DeleteTaskTemplatesResponse
      * @throws TencentCloudSDKException
      */
@@ -145,7 +145,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *查看可用的CVM机型配置信息
-     * @param DescribeAvailableCvmInstanceTypesRequest
+     * @param req DescribeAvailableCvmInstanceTypesRequest
      * @return DescribeAvailableCvmInstanceTypesResponse
      * @throws TencentCloudSDKException
      */
@@ -163,7 +163,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于查询计算环境的详细信息
-     * @param DescribeComputeEnvRequest
+     * @param req DescribeComputeEnvRequest
      * @return DescribeComputeEnvResponse
      * @throws TencentCloudSDKException
      */
@@ -181,7 +181,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于查询计算环境的活动信息
-     * @param DescribeComputeEnvActivitiesRequest
+     * @param req DescribeComputeEnvActivitiesRequest
      * @return DescribeComputeEnvActivitiesResponse
      * @throws TencentCloudSDKException
      */
@@ -199,7 +199,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *查看计算环境的创建信息。
-     * @param DescribeComputeEnvCreateInfoRequest
+     * @param req DescribeComputeEnvCreateInfoRequest
      * @return DescribeComputeEnvCreateInfoResponse
      * @throws TencentCloudSDKException
      */
@@ -217,7 +217,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于查看计算环境创建信息列表，包括名称、描述、类型、环境参数、通知及期望节点数等。
-     * @param DescribeComputeEnvCreateInfosRequest
+     * @param req DescribeComputeEnvCreateInfosRequest
      * @return DescribeComputeEnvCreateInfosResponse
      * @throws TencentCloudSDKException
      */
@@ -235,7 +235,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于查看计算环境列表
-     * @param DescribeComputeEnvsRequest
+     * @param req DescribeComputeEnvsRequest
      * @return DescribeComputeEnvsResponse
      * @throws TencentCloudSDKException
      */
@@ -253,7 +253,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于查看一个作业的详细信息，包括内部任务（Task）和依赖（Dependence）信息。
-     * @param DescribeJobRequest
+     * @param req DescribeJobRequest
      * @return DescribeJobResponse
      * @throws TencentCloudSDKException
      */
@@ -271,7 +271,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于查询指定作业的提交信息，其返回内容包括 JobId 和 SubmitJob 接口中作为输入参数的作业提交信息
-     * @param DescribeJobSubmitInfoRequest
+     * @param req DescribeJobSubmitInfoRequest
      * @return DescribeJobSubmitInfoResponse
      * @throws TencentCloudSDKException
      */
@@ -289,7 +289,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于查询若干个作业的概览信息
-     * @param DescribeJobsRequest
+     * @param req DescribeJobsRequest
      * @return DescribeJobsResponse
      * @throws TencentCloudSDKException
      */
@@ -307,7 +307,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于查询指定任务的详细信息，包括任务内部的任务实例信息。
-     * @param DescribeTaskRequest
+     * @param req DescribeTaskRequest
      * @return DescribeTaskResponse
      * @throws TencentCloudSDKException
      */
@@ -325,7 +325,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于查询任务模板信息
-     * @param DescribeTaskTemplatesRequest
+     * @param req DescribeTaskTemplatesRequest
      * @return DescribeTaskTemplatesResponse
      * @throws TencentCloudSDKException
      */
@@ -343,7 +343,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于修改计算环境的期望节点数量
-     * @param ModifyComputeEnvRequest
+     * @param req ModifyComputeEnvRequest
      * @return ModifyComputeEnvResponse
      * @throws TencentCloudSDKException
      */
@@ -361,7 +361,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于修改任务模板
-     * @param ModifyTaskTemplateRequest
+     * @param req ModifyTaskTemplateRequest
      * @return ModifyTaskTemplateResponse
      * @throws TencentCloudSDKException
      */
@@ -379,7 +379,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于提交一个作业
-     * @param SubmitJobRequest
+     * @param req SubmitJobRequest
      * @return SubmitJobResponse
      * @throws TencentCloudSDKException
      */
@@ -398,7 +398,7 @@ public class BatchClient extends AbstractClient{
     /**
      *用于销毁计算节点。
 对于状态为CREATED、CREATION_FAILED、RUNNING和ABNORMAL的节点，允许销毁处理。
-     * @param TerminateComputeNodeRequest
+     * @param req TerminateComputeNodeRequest
      * @return TerminateComputeNodeResponse
      * @throws TencentCloudSDKException
      */
@@ -416,7 +416,7 @@ public class BatchClient extends AbstractClient{
 
     /**
      *用于批量销毁计算节点，不允许重复销毁同一个节点。
-     * @param TerminateComputeNodesRequest
+     * @param req TerminateComputeNodesRequest
      * @return TerminateComputeNodesResponse
      * @throws TencentCloudSDKException
      */
@@ -435,7 +435,7 @@ public class BatchClient extends AbstractClient{
     /**
      *用于终止作业。
 终止作业的效果相当于所含的所有任务实例进行TerminateTaskInstance操作。具体效果和用法可参考TerminateTaskInstance。
-     * @param TerminateJobRequest
+     * @param req TerminateJobRequest
      * @return TerminateJobResponse
      * @throws TencentCloudSDKException
      */
@@ -458,7 +458,7 @@ public class BatchClient extends AbstractClient{
 对于状态为STARTING、RUNNING、FAILED_INTERRUPTED的TaskInstance，batch会先终止CVM，然后将状态置为FAILED，因此具有一定耗时。特别是如果CVM正在创建中，此时无法立即销毁CVM，Batch会在旁路注册一个定时销毁操作，在CVM创建好之后异步销毁。
 对于状态为FAILED_INTERRUPTED的TaskInstance，TerminateTaskInstance操作实际成功之后，相关资源和配额才会释放。
 本接口只支持提交到匿名计算环境的作业（SubmitJob指定ComputeEnv，不指定EnvId）。对于提交到具名计算环境的作业（SubmitJob指定EnvId，不指定ComputeEnv），不支持TerminateTaskInstance和TerminateJob操作。
-     * @param TerminateTaskInstanceRequest
+     * @param req TerminateTaskInstanceRequest
      * @return TerminateTaskInstanceResponse
      * @throws TencentCloudSDKException
      */

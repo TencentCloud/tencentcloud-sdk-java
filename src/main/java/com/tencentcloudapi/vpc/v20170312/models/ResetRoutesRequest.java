@@ -27,7 +27,7 @@ public class ResetRoutesRequest  extends AbstractModel{
     */
     @SerializedName("Routes")
     @Expose
-    private String [] Routes;
+    private Route [] Routes;
     
 
     /**
@@ -66,7 +66,7 @@ public class ResetRoutesRequest  extends AbstractModel{
      * 获取路由策略。
      * @return Routes 路由策略。
      */
-    public String [] getRoutes() {
+    public Route [] getRoutes() {
         return this.Routes;
     }
 
@@ -74,7 +74,7 @@ public class ResetRoutesRequest  extends AbstractModel{
      * 设置路由策略。
      * @param Routes 路由策略。
      */
-    public void setRoutes(String [] Routes) {
+    public void setRoutes(Route [] Routes) {
         this.Routes = Routes;
     }
 
@@ -84,7 +84,7 @@ public class ResetRoutesRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
-        this.setParamArraySimple(map, prefix + "Routes.", this.Routes);
+        this.setParamArrayObj(map, prefix + "Routes.", this.Routes);
 
     }
 }

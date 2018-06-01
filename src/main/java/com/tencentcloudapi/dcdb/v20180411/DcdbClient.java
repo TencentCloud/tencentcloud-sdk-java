@@ -53,7 +53,7 @@ public class DcdbClient extends AbstractClient{
 
     /**
      *本接口（CreateDCDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
-     * @param CreateDCDBInstanceRequest
+     * @param req CreateDCDBInstanceRequest
      * @return CreateDCDBInstanceResponse
      * @throws TencentCloudSDKException
      */
@@ -71,7 +71,7 @@ public class DcdbClient extends AbstractClient{
 
     /**
      *本接口(DescribeDBLogFiles)用于获取数据库的各种日志列表，包括冷备、binlog、errlog和slowlog。
-     * @param DescribeDBLogFilesRequest
+     * @param req DescribeDBLogFilesRequest
      * @return DescribeDBLogFilesResponse
      * @throws TencentCloudSDKException
      */
@@ -90,7 +90,7 @@ public class DcdbClient extends AbstractClient{
     /**
      *查询云数据库实例列表，支持通过项目ID、实例ID、内网地址、实例名称等来筛选实例。
 如果不指定任何筛选条件，则默认返回10条实例记录，单次请求最多支持返回100条实例记录。
-     * @param DescribeDCDBInstancesRequest
+     * @param req DescribeDCDBInstancesRequest
      * @return DescribeDCDBInstancesResponse
      * @throws TencentCloudSDKException
      */
@@ -108,7 +108,7 @@ public class DcdbClient extends AbstractClient{
 
     /**
      *本接口（DescribeDCDBPrice）用于在购买实例前，查询实例的价格。
-     * @param DescribeDCDBPriceRequest
+     * @param req DescribeDCDBPriceRequest
      * @return DescribeDCDBPriceResponse
      * @throws TencentCloudSDKException
      */
@@ -126,7 +126,7 @@ public class DcdbClient extends AbstractClient{
 
     /**
      *本接口（DescribeDCDBRenewalPrice）用于在续费分布式数据库实例时，查询续费的价格。
-     * @param DescribeDCDBRenewalPriceRequest
+     * @param req DescribeDCDBRenewalPriceRequest
      * @return DescribeDCDBRenewalPriceResponse
      * @throws TencentCloudSDKException
      */
@@ -144,7 +144,7 @@ public class DcdbClient extends AbstractClient{
 
     /**
      *本接口(DescribeDCDBSaleInfo)用于查询分布式数据库可售卖的地域和可用区信息。
-     * @param DescribeDCDBSaleInfoRequest
+     * @param req DescribeDCDBSaleInfoRequest
      * @return DescribeDCDBSaleInfoResponse
      * @throws TencentCloudSDKException
      */
@@ -162,7 +162,7 @@ public class DcdbClient extends AbstractClient{
 
     /**
      *本接口（DescribeDCDBUpgradePrice）用于查询升级分布式数据库实例价格。
-     * @param DescribeDCDBUpgradePriceRequest
+     * @param req DescribeDCDBUpgradePriceRequest
      * @return DescribeDCDBUpgradePriceResponse
      * @throws TencentCloudSDKException
      */
@@ -180,7 +180,7 @@ public class DcdbClient extends AbstractClient{
 
     /**
      *本接口（DescribeOrders）用于查询分布式数据库订单信息。传入订单Id来查询订单关联的分布式数据库实例，和对应的任务流程ID。
-     * @param DescribeOrdersRequest
+     * @param req DescribeOrdersRequest
      * @return DescribeOrdersResponse
      * @throws TencentCloudSDKException
      */
@@ -198,7 +198,7 @@ public class DcdbClient extends AbstractClient{
 
     /**
      *查询可创建的分布式数据库可售卖的分片规格配置。
-     * @param DescribeShardSpecRequest
+     * @param req DescribeShardSpecRequest
      * @return DescribeShardSpecResponse
      * @throws TencentCloudSDKException
      */
@@ -216,7 +216,7 @@ public class DcdbClient extends AbstractClient{
 
     /**
      *本接口（RenewDCDBInstance）用于续费分布式数据库实例。
-     * @param RenewDCDBInstanceRequest
+     * @param req RenewDCDBInstanceRequest
      * @return RenewDCDBInstanceResponse
      * @throws TencentCloudSDKException
      */
@@ -234,7 +234,7 @@ public class DcdbClient extends AbstractClient{
 
     /**
      *本接口（UpgradeDCDBInstance）用于升级分布式数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
-     * @param UpgradeDCDBInstanceRequest
+     * @param req UpgradeDCDBInstanceRequest
      * @return UpgradeDCDBInstanceResponse
      * @throws TencentCloudSDKException
      */

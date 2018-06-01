@@ -53,7 +53,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *启用规则
-     * @param ActivateRuleRequest
+     * @param req ActivateRuleRequest
      * @return ActivateRuleResponse
      * @throws TencentCloudSDKException
      */
@@ -71,7 +71,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *提供在指定的产品Id下创建一个设备的能力，生成设备名称与设备秘钥。
-     * @param AddDeviceRequest
+     * @param req AddDeviceRequest
      * @return AddDeviceResponse
      * @throws TencentCloudSDKException
      */
@@ -89,7 +89,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *本接口(AddProduct)用于创建、定义某款硬件产品。
-     * @param AddProductRequest
+     * @param req AddProductRequest
      * @return AddProductResponse
      * @throws TencentCloudSDKException
      */
@@ -107,7 +107,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *新增规则
-     * @param AddRuleRequest
+     * @param req AddRuleRequest
      * @return AddRuleResponse
      * @throws TencentCloudSDKException
      */
@@ -125,7 +125,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *新增Topic，用于设备或应用发布消息至该Topic或订阅该Topic的消息。
-     * @param AddTopicRequest
+     * @param req AddTopicRequest
      * @return AddTopicResponse
      * @throws TencentCloudSDKException
      */
@@ -143,7 +143,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *注册用户
-     * @param AddUserRequest
+     * @param req AddUserRequest
      * @return AddUserResponse
      * @throws TencentCloudSDKException
      */
@@ -161,7 +161,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *注册应用用户
-     * @param AppAddUserRequest
+     * @param req AppAddUserRequest
      * @return AppAddUserResponse
      * @throws TencentCloudSDKException
      */
@@ -179,7 +179,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *禁用规则
-     * @param DeactivateRuleRequest
+     * @param req DeactivateRuleRequest
      * @return DeactivateRuleResponse
      * @throws TencentCloudSDKException
      */
@@ -197,7 +197,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *提供在指定的产品Id下删除一个设备的能力。
-     * @param DeleteDeviceRequest
+     * @param req DeleteDeviceRequest
      * @return DeleteDeviceResponse
      * @throws TencentCloudSDKException
      */
@@ -215,7 +215,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *删除用户指定的产品Id对应的信息。
-     * @param DeleteProductRequest
+     * @param req DeleteProductRequest
      * @return DeleteProductResponse
      * @throws TencentCloudSDKException
      */
@@ -233,7 +233,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *删除规则
-     * @param DeleteRuleRequest
+     * @param req DeleteRuleRequest
      * @return DeleteRuleResponse
      * @throws TencentCloudSDKException
      */
@@ -251,7 +251,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *删除Topic
-     * @param DeleteTopicRequest
+     * @param req DeleteTopicRequest
      * @return DeleteTopicResponse
      * @throws TencentCloudSDKException
      */
@@ -269,7 +269,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *批量获取设备某一段时间范围的设备上报数据。该接口只允许使用数据模板类型的产品通过REST API方式同步设备上报数据至用户的应用系统。
-     * @param GetDataHistoryRequest
+     * @param req GetDataHistoryRequest
      * @return GetDataHistoryResponse
      * @throws TencentCloudSDKException
      */
@@ -287,7 +287,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *提供查询某个设备详细信息的能力。
-     * @param GetDeviceRequest
+     * @param req GetDeviceRequest
      * @return GetDeviceResponse
      * @throws TencentCloudSDKException
      */
@@ -305,7 +305,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *获取某个设备当前上报到云端的数据，该接口适用于使用数据模板协议的产品。
-     * @param GetDeviceDataRequest
+     * @param req GetDeviceDataRequest
      * @return GetDeviceDataResponse
      * @throws TencentCloudSDKException
      */
@@ -323,7 +323,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *批量获取设备与云端的详细通信日志，该接口适用于使用数据模板类型的产品。
-     * @param GetDeviceLogRequest
+     * @param req GetDeviceLogRequest
      * @return GetDeviceLogResponse
      * @throws TencentCloudSDKException
      */
@@ -341,7 +341,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *批量获取设备的当前状态，状态包括在线、离线或未激活状态。
-     * @param GetDeviceStatusesRequest
+     * @param req GetDeviceStatusesRequest
      * @return GetDeviceStatusesResponse
      * @throws TencentCloudSDKException
      */
@@ -359,7 +359,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *提供分页查询某个产品Id下设备信息的能力。
-     * @param GetDevicesRequest
+     * @param req GetDevicesRequest
      * @return GetDevicesResponse
      * @throws TencentCloudSDKException
      */
@@ -377,7 +377,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *获取产品定义的详细信息，包括产品名称、产品描述，鉴权模式等信息。
-     * @param GetProductRequest
+     * @param req GetProductRequest
      * @return GetProductResponse
      * @throws TencentCloudSDKException
      */
@@ -395,7 +395,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *获取用户在物联网套件所创建的所有产品信息。
-     * @param GetProductsRequest
+     * @param req GetProductsRequest
      * @return GetProductsResponse
      * @throws TencentCloudSDKException
      */
@@ -413,7 +413,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *获取转发规则信息
-     * @param GetRuleRequest
+     * @param req GetRuleRequest
      * @return GetRuleResponse
      * @throws TencentCloudSDKException
      */
@@ -431,7 +431,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *获取转发规则列表
-     * @param GetRulesRequest
+     * @param req GetRulesRequest
      * @return GetRulesResponse
      * @throws TencentCloudSDKException
      */
@@ -449,7 +449,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *获取Topic信息
-     * @param GetTopicRequest
+     * @param req GetTopicRequest
      * @return GetTopicResponse
      * @throws TencentCloudSDKException
      */
@@ -467,7 +467,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *获取Topic列表
-     * @param GetTopicsRequest
+     * @param req GetTopicsRequest
      * @return GetTopicsResponse
      * @throws TencentCloudSDKException
      */
@@ -485,7 +485,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *获取用户信息
-     * @param GetUserRequest
+     * @param req GetUserRequest
      * @return GetUserResponse
      * @throws TencentCloudSDKException
      */
@@ -503,7 +503,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *提供下发控制指令到指定设备的能力，该接口适用于使用数据模板类型的产品。
-     * @param IssueDeviceControlRequest
+     * @param req IssueDeviceControlRequest
      * @return IssueDeviceControlResponse
      * @throws TencentCloudSDKException
      */
@@ -521,7 +521,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *提供向指定的Topic发布消息的能力，常用于向设备下发控制指令；该接口只适用于数据协议为“自定义”类型的产品，使用数据模板类型的产品需使用IssueDeviceControl接口
-     * @param PublishMsgRequest
+     * @param req PublishMsgRequest
      * @return PublishMsgResponse
      * @throws TencentCloudSDKException
      */
@@ -539,7 +539,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *重置设备操作，将会为设备生成新的证书及清空最新数据，需谨慎操作。
-     * @param ResetDeviceRequest
+     * @param req ResetDeviceRequest
      * @return ResetDeviceResponse
      * @throws TencentCloudSDKException
      */
@@ -557,7 +557,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *提供修改产品信息及数据模板的能力。
-     * @param UpdateProductRequest
+     * @param req UpdateProductRequest
      * @return UpdateProductResponse
      * @throws TencentCloudSDKException
      */
@@ -575,7 +575,7 @@ public class IotClient extends AbstractClient{
 
     /**
      *更新规则
-     * @param UpdateRuleRequest
+     * @param req UpdateRuleRequest
      * @return UpdateRuleResponse
      * @throws TencentCloudSDKException
      */

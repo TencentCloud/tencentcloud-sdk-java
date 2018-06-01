@@ -1,0 +1,116 @@
+package com.tencentcloudapi.vpc.v20170312.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class CustomerGateway  extends AbstractModel{
+
+
+    /**
+    * 用户网关唯一ID
+    */
+    @SerializedName("CustomerGatewayId")
+    @Expose
+    private String CustomerGatewayId;
+    
+
+    /**
+    * 网关名称
+    */
+    @SerializedName("CustomerGatewayName")
+    @Expose
+    private String CustomerGatewayName;
+    
+
+    /**
+    * 公网地址
+    */
+    @SerializedName("IpAddress")
+    @Expose
+    private String IpAddress;
+    
+
+    /**
+    * 创建时间
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+    
+
+    /**
+     * 获取用户网关唯一ID
+     * @return CustomerGatewayId 用户网关唯一ID
+     */
+    public String getCustomerGatewayId() {
+        return this.CustomerGatewayId;
+    }
+
+    /**
+     * 设置用户网关唯一ID
+     * @param CustomerGatewayId 用户网关唯一ID
+     */
+    public void setCustomerGatewayId(String CustomerGatewayId) {
+        this.CustomerGatewayId = CustomerGatewayId;
+    }
+
+    /**
+     * 获取网关名称
+     * @return CustomerGatewayName 网关名称
+     */
+    public String getCustomerGatewayName() {
+        return this.CustomerGatewayName;
+    }
+
+    /**
+     * 设置网关名称
+     * @param CustomerGatewayName 网关名称
+     */
+    public void setCustomerGatewayName(String CustomerGatewayName) {
+        this.CustomerGatewayName = CustomerGatewayName;
+    }
+
+    /**
+     * 获取公网地址
+     * @return IpAddress 公网地址
+     */
+    public String getIpAddress() {
+        return this.IpAddress;
+    }
+
+    /**
+     * 设置公网地址
+     * @param IpAddress 公网地址
+     */
+    public void setIpAddress(String IpAddress) {
+        this.IpAddress = IpAddress;
+    }
+
+    /**
+     * 获取创建时间
+     * @return CreatedTime 创建时间
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * 设置创建时间
+     * @param CreatedTime 创建时间
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
+        this.setParamSimple(map, prefix + "CustomerGatewayName", this.CustomerGatewayName);
+        this.setParamSimple(map, prefix + "IpAddress", this.IpAddress);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+
+    }
+}
+

@@ -7,7 +7,7 @@ public class ReplaceRouteTableAssociationRequest  extends AbstractModel{
 
 
     /**
-    * 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnetEx接口查询。
+    * 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -23,16 +23,16 @@ public class ReplaceRouteTableAssociationRequest  extends AbstractModel{
     
 
     /**
-     * 获取子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnetEx接口查询。
-     * @return SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnetEx接口查询。
+     * 获取子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
+     * @return SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * 设置子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnetEx接口查询。
-     * @param SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnetEx接口查询。
+     * 设置子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
+     * @param SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

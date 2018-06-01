@@ -53,7 +53,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口（CreateMonitors）用于新增一个或多个站点的监测任务。
-     * @param CreateMonitorsRequest
+     * @param req CreateMonitorsRequest
      * @return CreateMonitorsResponse
      * @throws TencentCloudSDKException
      */
@@ -71,7 +71,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口（CreateSites）用于新增一个或多个站点。
-     * @param CreateSitesRequest
+     * @param req CreateSitesRequest
      * @return CreateSitesResponse
      * @throws TencentCloudSDKException
      */
@@ -89,7 +89,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口（CreateSitesScans）用于新增一个或多个站点的单次扫描任务。
-     * @param CreateSitesScansRequest
+     * @param req CreateSitesScansRequest
      * @return CreateSitesScansResponse
      * @throws TencentCloudSDKException
      */
@@ -107,7 +107,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口（CreateVulsMisinformation）用于新增一个或多个漏洞误报信息。
-     * @param CreateVulsMisinformationRequest
+     * @param req CreateVulsMisinformationRequest
      * @return CreateVulsMisinformationResponse
      * @throws TencentCloudSDKException
      */
@@ -125,7 +125,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (DeleteMonitors) 用于删除监控任务。
-     * @param DeleteMonitorsRequest
+     * @param req DeleteMonitorsRequest
      * @return DeleteMonitorsResponse
      * @throws TencentCloudSDKException
      */
@@ -143,7 +143,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (DeleteSites) 用于删除站点。
-     * @param DeleteSitesRequest
+     * @param req DeleteSitesRequest
      * @return DeleteSitesResponse
      * @throws TencentCloudSDKException
      */
@@ -161,7 +161,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (DescribeConfig) 用于查询用户配置的详细信息。
-     * @param DescribeConfigRequest
+     * @param req DescribeConfigRequest
      * @return DescribeConfigResponse
      * @throws TencentCloudSDKException
      */
@@ -179,7 +179,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (DescribeMonitors) 用于查询一个或多个监控任务的详细信息。
-     * @param DescribeMonitorsRequest
+     * @param req DescribeMonitorsRequest
      * @return DescribeMonitorsResponse
      * @throws TencentCloudSDKException
      */
@@ -197,7 +197,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (DescribeSiteQuota) 用于查询用户购买的站点总数和已使用数。
-     * @param DescribeSiteQuotaRequest
+     * @param req DescribeSiteQuotaRequest
      * @return DescribeSiteQuotaResponse
      * @throws TencentCloudSDKException
      */
@@ -215,7 +215,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (DescribeSites) 用于查询一个或多个站点的详细信息。
-     * @param DescribeSitesRequest
+     * @param req DescribeSitesRequest
      * @return DescribeSitesResponse
      * @throws TencentCloudSDKException
      */
@@ -233,7 +233,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (DescribeSitesVerification) 用于查询一个或多个待验证站点的验证信息。
-     * @param DescribeSitesVerificationRequest
+     * @param req DescribeSitesVerificationRequest
      * @return DescribeSitesVerificationResponse
      * @throws TencentCloudSDKException
      */
@@ -251,7 +251,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (DescribeVuls) 用于查询一个或多个漏洞的详细信息。
-     * @param DescribeVulsRequest
+     * @param req DescribeVulsRequest
      * @return DescribeVulsResponse
      * @throws TencentCloudSDKException
      */
@@ -269,7 +269,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (ModifyConfigAttribute) 用于修改用户配置的属性。
-     * @param ModifyConfigAttributeRequest
+     * @param req ModifyConfigAttributeRequest
      * @return ModifyConfigAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -287,7 +287,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (ModifyMonitorAttribute) 用于修改监测任务的属性。
-     * @param ModifyMonitorAttributeRequest
+     * @param req ModifyMonitorAttributeRequest
      * @return ModifyMonitorAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -305,7 +305,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (ModifySiteAttribute) 用于修改站点的属性。
-     * @param ModifySiteAttributeRequest
+     * @param req ModifySiteAttributeRequest
      * @return ModifySiteAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -323,7 +323,7 @@ public class CwsClient extends AbstractClient{
 
     /**
      *本接口 (VerifySites) 用于验证一个或多个待验证站点。
-     * @param VerifySitesRequest
+     * @param req VerifySitesRequest
      * @return VerifySitesResponse
      * @throws TencentCloudSDKException
      */

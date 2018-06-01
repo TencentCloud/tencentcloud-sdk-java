@@ -11,7 +11,7 @@ public class Route  extends AbstractModel{
     */
     @SerializedName("RouteId")
     @Expose
-    private String RouteId;
+    private Integer RouteId;
     
 
     /**
@@ -50,7 +50,7 @@ public class Route  extends AbstractModel{
      * 获取路由策略ID。
      * @return RouteId 路由策略ID。
      */
-    public String getRouteId() {
+    public Integer getRouteId() {
         return this.RouteId;
     }
 
@@ -58,7 +58,7 @@ public class Route  extends AbstractModel{
      * 设置路由策略ID。
      * @param RouteId 路由策略ID。
      */
-    public void setRouteId(String RouteId) {
+    public void setRouteId(Integer RouteId) {
         this.RouteId = RouteId;
     }
 

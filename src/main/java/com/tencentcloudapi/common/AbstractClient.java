@@ -48,7 +48,7 @@ import com.tencentcloudapi.common.Credential;
 abstract public class AbstractClient {
 	
     public static final int HTTP_RSP_OK = 200;    
-    public static final String SDK_VERSION = "SDK_JAVA_3.0.4";  
+    public static final String SDK_VERSION = "SDK_JAVA_3.0.5";  
     
 	private Credential credential;
 	private ClientProfile profile;
@@ -86,7 +86,7 @@ abstract public class AbstractClient {
 	
 	/**
 	 * 返回产品地域
-	 * @return
+	 * @return 地域名称
 	 */
 	public String getRegion() {
 		return this.region;
@@ -102,7 +102,7 @@ abstract public class AbstractClient {
 	
 	/**
 	 * 获取配置实例
-	 * @return
+	 * @return 配置实例
 	 */
 	public ClientProfile getClientProfile() {
 		return this.profile;
@@ -119,7 +119,7 @@ abstract public class AbstractClient {
 	
 	/**
 	 * 获取认证信息实例
-	 * @return
+	 * @return 认证信息实例
 	 */
 	public Credential getCredential() {
 		return this.credential;

@@ -56,7 +56,7 @@ public class VpcClient extends AbstractClient{
 * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
 * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过七天之前，它会一直与您的腾讯云账户保持关联。
 * 平台对用户每地域能申请的 EIP 最大配额有所限制，可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)，上述配额可通过 DescribeAddressQuota 接口获取。
-     * @param AllocateAddressesRequest
+     * @param req AllocateAddressesRequest
      * @return AllocateAddressesResponse
      * @throws TencentCloudSDKException
      */
@@ -77,7 +77,7 @@ public class VpcClient extends AbstractClient{
 * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="https://cloud.tencent.com/document/product/215/6513">弹性网卡使用限制</a>。
 * 可以指定内网IP地址申请，内网IP地址类型不能为主IP，主IP已存在，不能修改，内网IP必须要弹性网卡所在子网内，而且不能被占用。
 * 在弹性网卡上申请一个到多个辅助内网IP，接口会在弹性网卡所在子网网段内返回指定数量的辅助内网IP。
-     * @param AssignPrivateIpAddressesRequest
+     * @param req AssignPrivateIpAddressesRequest
      * @return AssignPrivateIpAddressesResponse
      * @throws TencentCloudSDKException
      */
@@ -100,7 +100,7 @@ public class VpcClient extends AbstractClient{
 * 如果指定网卡的内网 IP 已经绑定了 EIP，则必须先解绑该 EIP，才能再绑定新的。
 * EIP 如果欠费或被封堵，则不能被绑定。
 * 只有状态为 UNBIND 的 EIP 才能够被绑定。
-     * @param AssociateAddressRequest
+     * @param req AssociateAddressRequest
      * @return AssociateAddressResponse
      * @throws TencentCloudSDKException
      */
@@ -120,7 +120,7 @@ public class VpcClient extends AbstractClient{
      *本接口(AttachClassicLinkVpc)用于私有网络和基础网络设备互通。
 * 私有网络和基础网络设备必须在同一个地域。
 * 私有网络和基础网络的区别详见vpc产品文档-<a href="https://cloud.tencent.com/document/product/215/535#2.-.E7.A7.81.E6.9C.89.E7.BD.91.E7.BB.9C.E4.B8.8E.E5.9F.BA.E7.A1.80.E7.BD.91.E7.BB.9C">私有网络与基础网络</a>。
-     * @param AttachClassicLinkVpcRequest
+     * @param req AttachClassicLinkVpcRequest
      * @return AttachClassicLinkVpcResponse
      * @throws TencentCloudSDKException
      */
@@ -142,7 +142,7 @@ public class VpcClient extends AbstractClient{
 * 一个弹性网卡只能同时绑定一个云主机。
 * 只有运行中或者已关机状态的云主机才能绑定弹性网卡，查看云主机状态详见<a href="https://cloud.tencent.com/document/api/213/9452#instance_state">腾讯云主机信息</a>。
 * 弹性网卡绑定的云主机必须是私有网络的，而且云主机所在可用区必须和弹性网卡子网的可用区相同。
-     * @param AttachNetworkInterfaceRequest
+     * @param req AttachNetworkInterfaceRequest
      * @return AttachNetworkInterfaceResponse
      * @throws TencentCloudSDKException
      */
@@ -160,7 +160,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *创建IP地址模版
-     * @param CreateAddressTemplateRequest
+     * @param req CreateAddressTemplateRequest
      * @return CreateAddressTemplateResponse
      * @throws TencentCloudSDKException
      */
@@ -178,7 +178,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *创建IP地址模版集合
-     * @param CreateAddressTemplateGroupRequest
+     * @param req CreateAddressTemplateGroupRequest
      * @return CreateAddressTemplateGroupResponse
      * @throws TencentCloudSDKException
      */
@@ -195,11 +195,29 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateCustomerGateway）用于创建对端网关。
+     * @param req CreateCustomerGatewayRequest
+     * @return CreateCustomerGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomerGatewayResponse  CreateCustomerGateway(CreateCustomerGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomerGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomerGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCustomerGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateNetworkInterface）用于创建弹性网卡。
 * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
 * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
 * 创建弹性网卡同时可以绑定已有安全组。
-     * @param CreateNetworkInterfaceRequest
+     * @param req CreateNetworkInterfaceRequest
      * @return CreateNetworkInterfaceResponse
      * @throws TencentCloudSDKException
      */
@@ -218,7 +236,7 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口(CreateRouteTable)用于创建路由表。
 * 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
-     * @param CreateRouteTableRequest
+     * @param req CreateRouteTableRequest
      * @return CreateRouteTableResponse
      * @throws TencentCloudSDKException
      */
@@ -237,7 +255,7 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口(CreateRoutes)用于创建路由策略。
 * 向指定路由表批量新增路由策略。
-     * @param CreateRoutesRequest
+     * @param req CreateRoutesRequest
      * @return CreateRoutesResponse
      * @throws TencentCloudSDKException
      */
@@ -257,7 +275,7 @@ public class VpcClient extends AbstractClient{
      *本接口（CreateSecurityGroup）用于创建新的安全组（SecurityGroup）。
 * 每个账户下每个地域的每个项目的<a href="https://cloud.tencent.com/document/product/213/500#2.-.E5.AE.89.E5.85.A8.E7.BB.84.E7.9A.84.E9.99.90.E5.88.B6">安全组数量限制</a>。
 * 新建的安全组的入站和出站规则默认都是全部拒绝，在创建后通常您需要再调用CreateSecurityGroupPolicies将安全组的规则设置为需要的规则。
-     * @param CreateSecurityGroupRequest
+     * @param req CreateSecurityGroupRequest
      * @return CreateSecurityGroupResponse
      * @throws TencentCloudSDKException
      */
@@ -284,7 +302,7 @@ public class VpcClient extends AbstractClient{
 * Action字段只允许输入ACCEPT或DROP。
 * CidrBlock, SecurityGroupId, AddressTemplate三者是排他关系，不允许同时输入，Protocol + Port和ServiceTemplate二者是排他关系，不允许同时输入。
 * 一次请求中只能创建单个方向的规则, 如果需要指定索引（PolicyIndex）参数, 多条规则的索引必须一致。
-     * @param CreateSecurityGroupPoliciesRequest
+     * @param req CreateSecurityGroupPoliciesRequest
      * @return CreateSecurityGroupPoliciesResponse
      * @throws TencentCloudSDKException
      */
@@ -302,7 +320,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *创建协议端口模板
-     * @param CreateServiceTemplateRequest
+     * @param req CreateServiceTemplateRequest
      * @return CreateServiceTemplateResponse
      * @throws TencentCloudSDKException
      */
@@ -320,7 +338,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *创建协议端口模板集合
-     * @param CreateServiceTemplateGroupRequest
+     * @param req CreateServiceTemplateGroupRequest
      * @return CreateServiceTemplateGroupResponse
      * @throws TencentCloudSDKException
      */
@@ -343,7 +361,7 @@ public class VpcClient extends AbstractClient{
 * 你可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）。
 * 同一个VPC内，多个子网的网段不能重叠。
 * 子网创建后会自动关联到默认路由表。
-     * @param CreateSubnetRequest
+     * @param req CreateSubnetRequest
      * @return CreateSubnetResponse
      * @throws TencentCloudSDKException
      */
@@ -365,7 +383,7 @@ public class VpcClient extends AbstractClient{
 * 创建VPC时可同时把子网创建好，创建子网也请规划好子网网段及子网所在可用区，同一个VPC内子网网段不能重叠，不同可用区可以做跨可用区容灾，详见VPC可用区说明。
 * 如果您同时创建了子网，系统会创建一个默认路由表，系统会把子网关联到这个默认路由表。
 * 同一个地域能创建的VPC资源个数也是有限制的，详见 <a href="https://cloud.tencent.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>,如果需要扩充请联系在线客服。
-     * @param CreateVpcRequest
+     * @param req CreateVpcRequest
      * @return CreateVpcResponse
      * @throws TencentCloudSDKException
      */
@@ -382,8 +400,44 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateVpnConnection）用于创建VPN通道。
+     * @param req CreateVpnConnectionRequest
+     * @return CreateVpnConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpnConnectionResponse  CreateVpnConnection(CreateVpnConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpnConnectionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpnConnectionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateVpnConnection"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateVpnGateways）用于创建VPN网关。
+     * @param req CreateVpnGatewayRequest
+     * @return CreateVpnGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpnGatewayResponse  CreateVpnGateway(CreateVpnGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpnGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpnGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateVpnGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除IP地址模板
-     * @param DeleteAddressTemplateRequest
+     * @param req DeleteAddressTemplateRequest
      * @return DeleteAddressTemplateResponse
      * @throws TencentCloudSDKException
      */
@@ -401,7 +455,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *删除IP地址模板集合
-     * @param DeleteAddressTemplateGroupRequest
+     * @param req DeleteAddressTemplateGroupRequest
      * @return DeleteAddressTemplateGroupResponse
      * @throws TencentCloudSDKException
      */
@@ -418,10 +472,28 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteCustomerGateway）用于删除对端网关。
+     * @param req DeleteCustomerGatewayRequest
+     * @return DeleteCustomerGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomerGatewayResponse  DeleteCustomerGateway(DeleteCustomerGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCustomerGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCustomerGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteCustomerGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteNetworkInterface）用于创建弹性网卡。
 * 弹性网卡上绑定了云主机时，不能被删除。
 * 删除指定弹性网卡，弹性网卡必须先和子机解绑才能删除。删除之后弹性网卡上所有内网IP都将被退还。
-     * @param DeleteNetworkInterfaceRequest
+     * @param req DeleteNetworkInterfaceRequest
      * @return DeleteNetworkInterfaceResponse
      * @throws TencentCloudSDKException
      */
@@ -439,7 +511,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *删除路由表
-     * @param DeleteRouteTableRequest
+     * @param req DeleteRouteTableRequest
      * @return DeleteRouteTableResponse
      * @throws TencentCloudSDKException
      */
@@ -457,7 +529,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口(DeleteRoutes)用于对某个路由表批量删除路由策略（Route）。
-     * @param DeleteRoutesRequest
+     * @param req DeleteRoutesRequest
      * @return DeleteRoutesResponse
      * @throws TencentCloudSDKException
      */
@@ -478,7 +550,7 @@ public class VpcClient extends AbstractClient{
 * 只有当前账号下的安全组允许被删除。
 * 安全组实例ID如果在其他安全组的规则中被引用，则无法直接删除。这种情况下，需要先进行规则修改，再删除安全组。
 * 删除的安全组无法再找回，请谨慎调用。
-     * @param DeleteSecurityGroupRequest
+     * @param req DeleteSecurityGroupRequest
      * @return DeleteSecurityGroupResponse
      * @throws TencentCloudSDKException
      */
@@ -497,7 +569,7 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口（DeleteSecurityGroupPolicies）用于用于删除安全组规则（SecurityGroupPolicy）。
 * SecurityGroupPolicySet.Version 用于指定要操作的安全组的版本。传入 Version 版本号若不等于当前安全组的最新版本，将返回失败；若不传 Version 则直接删除指定PolicyIndex的规则。
-     * @param DeleteSecurityGroupPoliciesRequest
+     * @param req DeleteSecurityGroupPoliciesRequest
      * @return DeleteSecurityGroupPoliciesResponse
      * @throws TencentCloudSDKException
      */
@@ -515,7 +587,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *删除协议端口模板
-     * @param DeleteServiceTemplateRequest
+     * @param req DeleteServiceTemplateRequest
      * @return DeleteServiceTemplateResponse
      * @throws TencentCloudSDKException
      */
@@ -533,7 +605,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *删除协议端口模板集合
-     * @param DeleteServiceTemplateGroupRequest
+     * @param req DeleteServiceTemplateGroupRequest
      * @return DeleteServiceTemplateGroupResponse
      * @throws TencentCloudSDKException
      */
@@ -552,7 +624,7 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口（DeleteSubnet）用于用于删除子网(Subnet)。
 * 删除子网前，请清理该子网下所有资源，包括云主机、负载均衡、云数据、noSql、弹性网卡等资源。
-     * @param DeleteSubnetRequest
+     * @param req DeleteSubnetRequest
      * @return DeleteSubnetResponse
      * @throws TencentCloudSDKException
      */
@@ -572,7 +644,7 @@ public class VpcClient extends AbstractClient{
      *本接口（DeleteVpc）用于删除私有网络。
 * 删除前请确保 VPC 内已经没有相关资源，例如云主机、云数据库、NoSQL、VPN网关、专线网关、负载均衡、对等连接、与之互通的基础网络设备等。
 * 删除私有网络是不可逆的操作，请谨慎处理。
-     * @param DeleteVpcRequest
+     * @param req DeleteVpcRequest
      * @return DeleteVpcResponse
      * @throws TencentCloudSDKException
      */
@@ -589,8 +661,44 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(DeleteVpnConnection)用于删除VPN通道。
+     * @param req DeleteVpnConnectionRequest
+     * @return DeleteVpnConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpnConnectionResponse  DeleteVpnConnection(DeleteVpnConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpnConnectionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpnConnectionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteVpnConnection"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteVpnGateway）用于删除VPN网关。目前只支持删除运行中的按量计费的IPSEC网关实例。
+     * @param req DeleteVpnGatewayRequest
+     * @return DeleteVpnGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpnGatewayResponse  DeleteVpnGateway(DeleteVpnGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpnGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteVpnGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
-     * @param DescribeAddressQuotaRequest
+     * @param req DescribeAddressQuotaRequest
      * @return DescribeAddressQuotaResponse
      * @throws TencentCloudSDKException
      */
@@ -608,7 +716,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *查询IP地址模板集合
-     * @param DescribeAddressTemplateGroupsRequest
+     * @param req DescribeAddressTemplateGroupsRequest
      * @return DescribeAddressTemplateGroupsResponse
      * @throws TencentCloudSDKException
      */
@@ -626,7 +734,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *查询IP地址模板
-     * @param DescribeAddressTemplatesRequest
+     * @param req DescribeAddressTemplatesRequest
      * @return DescribeAddressTemplatesResponse
      * @throws TencentCloudSDKException
      */
@@ -645,7 +753,7 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口 (DescribeAddresses) 用于查询一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）的详细信息。
 * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIP。
-     * @param DescribeAddressesRequest
+     * @param req DescribeAddressesRequest
      * @return DescribeAddressesResponse
      * @throws TencentCloudSDKException
      */
@@ -663,7 +771,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口(DescribeClassicLinkInstances)用于私有网络和基础网络设备互通。
-     * @param DescribeClassicLinkInstancesRequest
+     * @param req DescribeClassicLinkInstancesRequest
      * @return DescribeClassicLinkInstancesResponse
      * @throws TencentCloudSDKException
      */
@@ -680,8 +788,44 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeCustomerGatewayVendors）用于查询可支持的对端网关厂商信息。
+     * @param req DescribeCustomerGatewayVendorsRequest
+     * @return DescribeCustomerGatewayVendorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerGatewayVendorsResponse  DescribeCustomerGatewayVendors(DescribeCustomerGatewayVendorsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomerGatewayVendorsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomerGatewayVendorsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCustomerGatewayVendors"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeCustomerGateways）用于查询对端网关列表。
+     * @param req DescribeCustomerGatewaysRequest
+     * @return DescribeCustomerGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerGatewaysResponse  DescribeCustomerGateways(DescribeCustomerGatewaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomerGatewaysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomerGatewaysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCustomerGateways"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
-     * @param DescribeNetworkInterfacesRequest
+     * @param req DescribeNetworkInterfacesRequest
      * @return DescribeNetworkInterfacesResponse
      * @throws TencentCloudSDKException
      */
@@ -699,7 +843,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      * 本接口（DescribeRouteTables）用于查询路由表。
-     * @param DescribeRouteTablesRequest
+     * @param req DescribeRouteTablesRequest
      * @return DescribeRouteTablesResponse
      * @throws TencentCloudSDKException
      */
@@ -717,7 +861,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（DescribeSecurityGroupPolicies）用于查询安全组规则。
-     * @param DescribeSecurityGroupPoliciesRequest
+     * @param req DescribeSecurityGroupPoliciesRequest
      * @return DescribeSecurityGroupPoliciesResponse
      * @throws TencentCloudSDKException
      */
@@ -735,7 +879,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（DescribeSecurityGroups）用于查询安全组。
-     * @param DescribeSecurityGroupsRequest
+     * @param req DescribeSecurityGroupsRequest
      * @return DescribeSecurityGroupsResponse
      * @throws TencentCloudSDKException
      */
@@ -753,7 +897,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *查询协议端口模板集合
-     * @param DescribeServiceTemplateGroupsRequest
+     * @param req DescribeServiceTemplateGroupsRequest
      * @return DescribeServiceTemplateGroupsResponse
      * @throws TencentCloudSDKException
      */
@@ -771,7 +915,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *查询协议端口模板
-     * @param DescribeServiceTemplatesRequest
+     * @param req DescribeServiceTemplatesRequest
      * @return DescribeServiceTemplatesResponse
      * @throws TencentCloudSDKException
      */
@@ -789,7 +933,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（DescribeSubnets）用于查询子网列表。
-     * @param DescribeSubnetsRequest
+     * @param req DescribeSubnetsRequest
      * @return DescribeSubnetsResponse
      * @throws TencentCloudSDKException
      */
@@ -807,7 +951,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（DescribeVpcs）用于查询私有网络列表。
-     * @param DescribeVpcsRequest
+     * @param req DescribeVpcsRequest
      * @return DescribeVpcsResponse
      * @throws TencentCloudSDKException
      */
@@ -824,8 +968,44 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     * 本接口（DescribeVpnConnections）查询VPN通道列表。
+     * @param req DescribeVpnConnectionsRequest
+     * @return DescribeVpnConnectionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpnConnectionsResponse  DescribeVpnConnections(DescribeVpnConnectionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpnConnectionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpnConnectionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVpnConnections"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeVpnGateways）用于查询VPN网关列表。
+     * @param req DescribeVpnGatewaysRequest
+     * @return DescribeVpnGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpnGatewaysResponse  DescribeVpnGateways(DescribeVpnGatewaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpnGatewaysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewaysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVpnGateways"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DetachClassicLinkVpc)用于删除私有网络和基础网络设备互通。
-     * @param DetachClassicLinkVpcRequest
+     * @param req DetachClassicLinkVpcRequest
      * @return DetachClassicLinkVpcResponse
      * @throws TencentCloudSDKException
      */
@@ -843,7 +1023,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（DetachNetworkInterface）用于弹性网卡解绑云主机。
-     * @param DetachNetworkInterfaceRequest
+     * @param req DetachNetworkInterfaceRequest
      * @return DetachNetworkInterfaceResponse
      * @throws TencentCloudSDKException
      */
@@ -863,7 +1043,7 @@ public class VpcClient extends AbstractClient{
      *本接口 (DisassociateAddress) 用于解绑[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * 只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
 * EIP 如果被封堵，则不能进行解绑定操作。
-     * @param DisassociateAddressRequest
+     * @param req DisassociateAddressRequest
      * @return DisassociateAddressResponse
      * @throws TencentCloudSDKException
      */
@@ -880,8 +1060,80 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
+     * @param req DownloadCustomerGatewayConfigurationRequest
+     * @return DownloadCustomerGatewayConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadCustomerGatewayConfigurationResponse  DownloadCustomerGatewayConfiguration(DownloadCustomerGatewayConfigurationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadCustomerGatewayConfigurationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadCustomerGatewayConfigurationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DownloadCustomerGatewayConfiguration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
+     * @param req InquiryPriceCreateVpnGatewayRequest
+     * @return InquiryPriceCreateVpnGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceCreateVpnGatewayResponse  InquiryPriceCreateVpnGateway(InquiryPriceCreateVpnGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceCreateVpnGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateVpnGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceCreateVpnGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（InquiryPriceRenewVpnGateway）用于续费VPN网关询价。目前仅支持IPSEC类型网关的询价。
+     * @param req InquiryPriceRenewVpnGatewayRequest
+     * @return InquiryPriceRenewVpnGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewVpnGatewayResponse  InquiryPriceRenewVpnGateway(InquiryPriceRenewVpnGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceRenewVpnGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewVpnGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceRenewVpnGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（InquiryPriceResetVpnGatewayInternetMaxBandwidth）调整VPN网关带宽上限询价。
+     * @param req InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest
+     * @return InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse  InquiryPriceResetVpnGatewayInternetMaxBandwidth(InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceResetVpnGatewayInternetMaxBandwidth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（MigrateNetworkInterface）用于弹性网卡迁移。
-     * @param MigrateNetworkInterfaceRequest
+     * @param req MigrateNetworkInterfaceRequest
      * @return MigrateNetworkInterfaceResponse
      * @throws TencentCloudSDKException
      */
@@ -902,7 +1154,7 @@ public class VpcClient extends AbstractClient{
 
 * 该接口用于将一个内网IP从一个弹性网卡上迁移到另外一个弹性网卡，主IP地址不支持迁移。
 * 迁移前后的弹性网卡必须在同一个子网内。
-     * @param MigratePrivateIpAddressRequest
+     * @param req MigratePrivateIpAddressRequest
      * @return MigratePrivateIpAddressResponse
      * @throws TencentCloudSDKException
      */
@@ -920,7 +1172,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口 (ModifyAddressAttribute) 用于修改[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）的名称。
-     * @param ModifyAddressAttributeRequest
+     * @param req ModifyAddressAttributeRequest
      * @return ModifyAddressAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -938,7 +1190,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *修改IP地址模板
-     * @param ModifyAddressTemplateAttributeRequest
+     * @param req ModifyAddressTemplateAttributeRequest
      * @return ModifyAddressTemplateAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -956,7 +1208,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *修改IP地址模板集合
-     * @param ModifyAddressTemplateGroupAttributeRequest
+     * @param req ModifyAddressTemplateGroupAttributeRequest
      * @return ModifyAddressTemplateGroupAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -973,8 +1225,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyCustomerGatewayAttribute）用于修改对端网关信息。
+     * @param req ModifyCustomerGatewayAttributeRequest
+     * @return ModifyCustomerGatewayAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomerGatewayAttributeResponse  ModifyCustomerGatewayAttribute(ModifyCustomerGatewayAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomerGatewayAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomerGatewayAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyCustomerGatewayAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyNetworkInterfaceAttribute）用于修改弹性网卡属性。
-     * @param ModifyNetworkInterfaceAttributeRequest
+     * @param req ModifyNetworkInterfaceAttributeRequest
      * @return ModifyNetworkInterfaceAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -992,7 +1262,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（ModifyPrivateIpAddressesAttribute）用于修改弹性网卡内网IP属性。
-     * @param ModifyPrivateIpAddressesAttributeRequest
+     * @param req ModifyPrivateIpAddressesAttributeRequest
      * @return ModifyPrivateIpAddressesAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -1010,7 +1280,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（ModifyRouteTableAttribute）用于修改路由表（RouteTable）属性。
-     * @param ModifyRouteTableAttributeRequest
+     * @param req ModifyRouteTableAttributeRequest
      * @return ModifyRouteTableAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -1028,7 +1298,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（ModifySecurityGroupAttribute）用于修改安全组（SecurityGroupPolicy）属性。
-     * @param ModifySecurityGroupAttributeRequest
+     * @param req ModifySecurityGroupAttributeRequest
      * @return ModifySecurityGroupAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -1055,7 +1325,7 @@ public class VpcClient extends AbstractClient{
 * Port字段允许输入一个单独端口号，或者用减号分隔的两个端口号代表端口范围，例如80或8000-8010。只有当Protocol字段是TCP或UDP时，Port字段才被接受。
 * Action字段只允许输入ACCEPT或DROP。
 * CidrBlock, SecurityGroupId, AddressTemplate三者是排他关系，不允许同时输入，Protocol + Port和ServiceTemplate二者是排他关系，不允许同时输入。
-     * @param ModifySecurityGroupPoliciesRequest
+     * @param req ModifySecurityGroupPoliciesRequest
      * @return ModifySecurityGroupPoliciesResponse
      * @throws TencentCloudSDKException
      */
@@ -1073,7 +1343,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *修改协议端口模板
-     * @param ModifyServiceTemplateAttributeRequest
+     * @param req ModifyServiceTemplateAttributeRequest
      * @return ModifyServiceTemplateAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -1091,7 +1361,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（ModifyServiceTemplateGroupAttribute）用于修改协议端口模板集合。
-     * @param ModifyServiceTemplateGroupAttributeRequest
+     * @param req ModifyServiceTemplateGroupAttributeRequest
      * @return ModifyServiceTemplateGroupAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -1109,7 +1379,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（ModifySubnetAttribute）用于修改子网属性。
-     * @param ModifySubnetAttributeRequest
+     * @param req ModifySubnetAttributeRequest
      * @return ModifySubnetAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -1127,7 +1397,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（ModifyVpcAttribute）用于修改私有网络（VPC）的相关属性。
-     * @param ModifyVpcAttributeRequest
+     * @param req ModifyVpcAttributeRequest
      * @return ModifyVpcAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -1144,10 +1414,46 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyVpnConnectionAttribute）用于修改VPN通道。
+     * @param req ModifyVpnConnectionAttributeRequest
+     * @return ModifyVpnConnectionAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpnConnectionAttributeResponse  ModifyVpnConnectionAttribute(ModifyVpnConnectionAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpnConnectionAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpnConnectionAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyVpnConnectionAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyVpnGatewayAttribute）用于修改VPN网关属性。
+     * @param req ModifyVpnGatewayAttributeRequest
+     * @return ModifyVpnGatewayAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpnGatewayAttributeResponse  ModifyVpnGatewayAttribute(ModifyVpnGatewayAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpnGatewayAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyVpnGatewayAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (ReleaseAddresses) 用于释放一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * 该操作不可逆，释放后 EIP 关联的 IP 地址将不再属于您的名下。
 * 只有状态为 UNBIND 的 EIP 才能进行释放操作。
-     * @param ReleaseAddressesRequest
+     * @param req ReleaseAddressesRequest
      * @return ReleaseAddressesResponse
      * @throws TencentCloudSDKException
      */
@@ -1164,9 +1470,27 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（RenewVpnGateway）用于预付费（包年包月）VPN网关续费。目前只支持IPSEC网关。
+     * @param req RenewVpnGatewayRequest
+     * @return RenewVpnGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewVpnGatewayResponse  RenewVpnGateway(RenewVpnGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewVpnGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewVpnGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RenewVpnGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ReplaceRouteTableAssociation)用于修改子网（Subnet）关联的路由表（RouteTable）。
 * 一个子网只能关联一个路由表。
-     * @param ReplaceRouteTableAssociationRequest
+     * @param req ReplaceRouteTableAssociationRequest
      * @return ReplaceRouteTableAssociationResponse
      * @throws TencentCloudSDKException
      */
@@ -1184,7 +1508,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（ReplaceRoutes）根据路由策略ID（RouteId）修改指定的路由策略（Route），支持批量修改。
-     * @param ReplaceRoutesRequest
+     * @param req ReplaceRoutesRequest
      * @return ReplaceRoutesResponse
      * @throws TencentCloudSDKException
      */
@@ -1203,7 +1527,7 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口（ReplaceSecurityGroupPolicy）用于替换单条安全组规则（SecurityGroupPolicy）。
 单个请求中只能替换单个方向的一条规则, 必须要指定索引（PolicyIndex）。
-     * @param ReplaceSecurityGroupPolicyRequest
+     * @param req ReplaceSecurityGroupPolicyRequest
      * @return ReplaceSecurityGroupPolicyResponse
      * @throws TencentCloudSDKException
      */
@@ -1222,7 +1546,7 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。
 注意: 调用本接口是先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
-     * @param ResetRoutesRequest
+     * @param req ResetRoutesRequest
      * @return ResetRoutesResponse
      * @throws TencentCloudSDKException
      */
@@ -1239,9 +1563,45 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(ResetVpnConnection)用于重置VPN通道。
+     * @param req ResetVpnConnectionRequest
+     * @return ResetVpnConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetVpnConnectionResponse  ResetVpnConnection(ResetVpnConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetVpnConnectionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetVpnConnectionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ResetVpnConnection"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ResetVpnGatewayInternetMaxBandwidth）调整VPN网关带宽上限。目前支持升级配置，如果是包年包月VPN网关需要在有效期内。
+     * @param req ResetVpnGatewayInternetMaxBandwidthRequest
+     * @return ResetVpnGatewayInternetMaxBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetVpnGatewayInternetMaxBandwidthResponse  ResetVpnGatewayInternetMaxBandwidth(ResetVpnGatewayInternetMaxBandwidthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetVpnGatewayInternetMaxBandwidthResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetVpnGatewayInternetMaxBandwidthResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ResetVpnGatewayInternetMaxBandwidth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (TransformAddress) 用于将实例的普通公网 IP 转换为[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * 平台对用户每地域每日解绑 EIP 重新分配普通公网 IP 次数有所限制（可参见 [EIP 产品简介](/document/product/213/1941)）。上述配额可通过 [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) 接口获取。
-     * @param TransformAddressRequest
+     * @param req TransformAddressRequest
      * @return TransformAddressResponse
      * @throws TencentCloudSDKException
      */
@@ -1260,7 +1620,7 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口（UnassignPrivateIpAddresses）用于弹性网卡退还内网 IP。
 * 退还弹性网卡上的辅助内网IP，接口自动解关联弹性公网 IP。不能退还弹性网卡的主内网IP。
-     * @param UnassignPrivateIpAddressesRequest
+     * @param req UnassignPrivateIpAddressesRequest
      * @return UnassignPrivateIpAddressesResponse
      * @throws TencentCloudSDKException
      */

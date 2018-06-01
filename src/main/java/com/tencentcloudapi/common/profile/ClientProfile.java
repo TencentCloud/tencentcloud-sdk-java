@@ -81,7 +81,7 @@ public class ClientProfile {
 	
 	/**
 	 * 获取签名方法
-	 * @return
+	 * @return 签名方法
 	 */
 	public String getSignMethod() {
 		return this.signMethod;
@@ -89,7 +89,7 @@ public class ClientProfile {
 	
 	/**
 	 * 获取HttpProfile实例
-	 * @return
+	 * @return HttpProfile实例
 	 */
 	public HttpProfile getHttpProfile() {
 		return this.httpProfile;

@@ -7,7 +7,7 @@ public class ActionTimer  extends AbstractModel{
 
 
     /**
-    * 定时器
+    * 定时器名称，目前仅支持销毁一个值：TerminateInstances。
     */
     @SerializedName("TimerAction")
     @Expose
@@ -15,7 +15,7 @@ public class ActionTimer  extends AbstractModel{
     
 
     /**
-    * 执行时间
+    * 执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
     */
     @SerializedName("ActionTime")
     @Expose
@@ -31,32 +31,32 @@ public class ActionTimer  extends AbstractModel{
     
 
     /**
-     * 获取定时器
-     * @return TimerAction 定时器
+     * 获取定时器名称，目前仅支持销毁一个值：TerminateInstances。
+     * @return TimerAction 定时器名称，目前仅支持销毁一个值：TerminateInstances。
      */
     public String getTimerAction() {
         return this.TimerAction;
     }
 
     /**
-     * 设置定时器
-     * @param TimerAction 定时器
+     * 设置定时器名称，目前仅支持销毁一个值：TerminateInstances。
+     * @param TimerAction 定时器名称，目前仅支持销毁一个值：TerminateInstances。
      */
     public void setTimerAction(String TimerAction) {
         this.TimerAction = TimerAction;
     }
 
     /**
-     * 获取执行时间
-     * @return ActionTime 执行时间
+     * 获取执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
+     * @return ActionTime 执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
      */
     public String getActionTime() {
         return this.ActionTime;
     }
 
     /**
-     * 设置执行时间
-     * @param ActionTime 执行时间
+     * 设置执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
+     * @param ActionTime 执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
      */
     public void setActionTime(String ActionTime) {
         this.ActionTime = ActionTime;

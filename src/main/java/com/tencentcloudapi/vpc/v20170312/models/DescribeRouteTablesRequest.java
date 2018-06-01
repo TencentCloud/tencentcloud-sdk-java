@@ -19,7 +19,7 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - Boolean - （过滤条件）是否主路由表。</li>
+<li>association.main - String - （过滤条件）是否主路由表。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -63,12 +63,12 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - Boolean - （过滤条件）是否主路由表。</li>
+<li>association.main - String - （过滤条件）是否主路由表。</li>
      * @return Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - Boolean - （过滤条件）是否主路由表。</li>
+<li>association.main - String - （过滤条件）是否主路由表。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -79,12 +79,12 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - Boolean - （过滤条件）是否主路由表。</li>
+<li>association.main - String - （过滤条件）是否主路由表。</li>
      * @param Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - Boolean - （过滤条件）是否主路由表。</li>
+<li>association.main - String - （过滤条件）是否主路由表。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

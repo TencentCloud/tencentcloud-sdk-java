@@ -53,7 +53,7 @@ public class PostgresClient extends AbstractClient{
 
     /**
      *本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
-     * @param CreateDBInstancesRequest
+     * @param req CreateDBInstancesRequest
      * @return CreateDBInstancesResponse
      * @throws TencentCloudSDKException
      */
@@ -71,7 +71,7 @@ public class PostgresClient extends AbstractClient{
 
     /**
      *本接口 (DescribeDBInstanceAttribute) 用于查询某个实例的详情信息。
-     * @param DescribeDBInstanceAttributeRequest
+     * @param req DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
      * @throws TencentCloudSDKException
      */
@@ -89,7 +89,7 @@ public class PostgresClient extends AbstractClient{
 
     /**
      *本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
-     * @param DescribeDBInstancesRequest
+     * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
      * @throws TencentCloudSDKException
      */
@@ -107,7 +107,7 @@ public class PostgresClient extends AbstractClient{
 
     /**
      *本接口 (DescribeProductConfig) 用于查询售卖规格配置。
-     * @param DescribeProductConfigRequest
+     * @param req DescribeProductConfigRequest
      * @return DescribeProductConfigResponse
      * @throws TencentCloudSDKException
      */
@@ -125,7 +125,7 @@ public class PostgresClient extends AbstractClient{
 
     /**
      *本接口 (DescribeRegions) 用于查询售卖地域信息。
-     * @param DescribeRegionsRequest
+     * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
      * @throws TencentCloudSDKException
      */
@@ -143,7 +143,7 @@ public class PostgresClient extends AbstractClient{
 
     /**
      *本接口 (DescribeZones) 用于查询支持的可用区信息。
-     * @param DescribeZonesRequest
+     * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException
      */
@@ -161,7 +161,7 @@ public class PostgresClient extends AbstractClient{
 
     /**
      *本接口 (InitDBInstances) 用于初始化云数据库PostgreSQL实例。
-     * @param InitDBInstancesRequest
+     * @param req InitDBInstancesRequest
      * @return InitDBInstancesResponse
      * @throws TencentCloudSDKException
      */
@@ -179,7 +179,7 @@ public class PostgresClient extends AbstractClient{
 
     /**
      *本接口 (InquiryPriceCreateDBInstances) 用于查询购买一个或多个实例的价格信息。
-     * @param InquiryPriceCreateDBInstancesRequest
+     * @param req InquiryPriceCreateDBInstancesRequest
      * @return InquiryPriceCreateDBInstancesResponse
      * @throws TencentCloudSDKException
      */

@@ -79,6 +79,14 @@ public class Subnet  extends AbstractModel{
     
 
     /**
+    * 可用IP数。
+    */
+    @SerializedName("AvailableIpAddressCount")
+    @Expose
+    private Integer AvailableIpAddressCount;
+    
+
+    /**
      * 获取VPC实例ID。
      * @return VpcId VPC实例ID。
      */
@@ -223,6 +231,22 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
+     * 获取可用IP数。
+     * @return AvailableIpAddressCount 可用IP数。
+     */
+    public Integer getAvailableIpAddressCount() {
+        return this.AvailableIpAddressCount;
+    }
+
+    /**
+     * 设置可用IP数。
+     * @param AvailableIpAddressCount 可用IP数。
+     */
+    public void setAvailableIpAddressCount(Integer AvailableIpAddressCount) {
+        this.AvailableIpAddressCount = AvailableIpAddressCount;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -235,6 +259,7 @@ public class Subnet  extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "AvailableIpAddressCount", this.AvailableIpAddressCount);
 
     }
 }

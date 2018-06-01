@@ -53,7 +53,7 @@ public class ScfClient extends AbstractClient{
 
     /**
      *Invoke用于运行函数
-     * @param InvokeRequest
+     * @param req InvokeRequest
      * @return InvokeResponse
      * @throws TencentCloudSDKException
      */

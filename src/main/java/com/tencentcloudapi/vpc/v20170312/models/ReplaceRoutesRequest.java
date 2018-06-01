@@ -19,7 +19,7 @@ public class ReplaceRoutesRequest  extends AbstractModel{
     */
     @SerializedName("Routes")
     @Expose
-    private String [] Routes;
+    private Route [] Routes;
     
 
     /**
@@ -42,7 +42,7 @@ public class ReplaceRoutesRequest  extends AbstractModel{
      * 获取路由策略对象。只需要指定路由策略ID（RouteId）。
      * @return Routes 路由策略对象。只需要指定路由策略ID（RouteId）。
      */
-    public String [] getRoutes() {
+    public Route [] getRoutes() {
         return this.Routes;
     }
 
@@ -50,7 +50,7 @@ public class ReplaceRoutesRequest  extends AbstractModel{
      * 设置路由策略对象。只需要指定路由策略ID（RouteId）。
      * @param Routes 路由策略对象。只需要指定路由策略ID（RouteId）。
      */
-    public void setRoutes(String [] Routes) {
+    public void setRoutes(Route [] Routes) {
         this.Routes = Routes;
     }
 
@@ -59,7 +59,7 @@ public class ReplaceRoutesRequest  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
-        this.setParamArraySimple(map, prefix + "Routes.", this.Routes);
+        this.setParamArrayObj(map, prefix + "Routes.", this.Routes);
 
     }
 }

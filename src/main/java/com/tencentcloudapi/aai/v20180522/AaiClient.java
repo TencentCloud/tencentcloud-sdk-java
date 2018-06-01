@@ -53,7 +53,7 @@ public class AaiClient extends AbstractClient{
 
     /**
      *识别60s内的短语音。
-     * @param SentenceRecognitionRequest
+     * @param req SentenceRecognitionRequest
      * @return SentenceRecognitionResponse
      * @throws TencentCloudSDKException
      */
