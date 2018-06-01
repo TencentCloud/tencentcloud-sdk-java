@@ -76,11 +76,6 @@
                 </executions>
                 <configuration>
                     <encoding>UTF-8</encoding>
-					<!--
-					<additionalOptions>
-						<additionalOption>-Xdoclint:none</additionalOption>
-					</additionalOptions>
-					-->
                 </configuration>
             </plugin>
 
