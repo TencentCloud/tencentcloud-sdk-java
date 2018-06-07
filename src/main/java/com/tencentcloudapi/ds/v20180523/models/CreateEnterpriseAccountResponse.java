@@ -1,0 +1,66 @@
+package com.tencentcloudapi.ds.v20180523.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class CreateEnterpriseAccountResponse  extends AbstractModel{
+
+
+    /**
+    * 帐号ID
+    */
+    @SerializedName("AccountResId")
+    @Expose
+    private String AccountResId;
+    
+
+    /**
+    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+    
+
+    /**
+     * 获取帐号ID
+     * @return AccountResId 帐号ID
+     */
+    public String getAccountResId() {
+        return this.AccountResId;
+    }
+
+    /**
+     * 设置帐号ID
+     * @param AccountResId 帐号ID
+     */
+    public void setAccountResId(String AccountResId) {
+        this.AccountResId = AccountResId;
+    }
+
+    /**
+     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AccountResId", this.AccountResId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

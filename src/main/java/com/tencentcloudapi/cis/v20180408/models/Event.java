@@ -1,0 +1,166 @@
+package com.tencentcloudapi.cis.v20180408.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class Event  extends AbstractModel{
+
+
+    /**
+    * 事件首次出现时间
+    */
+    @SerializedName("FirstSeen")
+    @Expose
+    private String FirstSeen;
+    
+
+    /**
+    * 事件上次出现时间
+    */
+    @SerializedName("LastSeen")
+    @Expose
+    private String LastSeen;
+    
+
+    /**
+    * 事件等级
+    */
+    @SerializedName("Level")
+    @Expose
+    private String Level;
+    
+
+    /**
+    * 事件出现次数
+    */
+    @SerializedName("Count")
+    @Expose
+    private String Count;
+    
+
+    /**
+    * 事件出现原因
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+    
+
+    /**
+    * 事件消息
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+    
+
+    /**
+     * 获取事件首次出现时间
+     * @return FirstSeen 事件首次出现时间
+     */
+    public String getFirstSeen() {
+        return this.FirstSeen;
+    }
+
+    /**
+     * 设置事件首次出现时间
+     * @param FirstSeen 事件首次出现时间
+     */
+    public void setFirstSeen(String FirstSeen) {
+        this.FirstSeen = FirstSeen;
+    }
+
+    /**
+     * 获取事件上次出现时间
+     * @return LastSeen 事件上次出现时间
+     */
+    public String getLastSeen() {
+        return this.LastSeen;
+    }
+
+    /**
+     * 设置事件上次出现时间
+     * @param LastSeen 事件上次出现时间
+     */
+    public void setLastSeen(String LastSeen) {
+        this.LastSeen = LastSeen;
+    }
+
+    /**
+     * 获取事件等级
+     * @return Level 事件等级
+     */
+    public String getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * 设置事件等级
+     * @param Level 事件等级
+     */
+    public void setLevel(String Level) {
+        this.Level = Level;
+    }
+
+    /**
+     * 获取事件出现次数
+     * @return Count 事件出现次数
+     */
+    public String getCount() {
+        return this.Count;
+    }
+
+    /**
+     * 设置事件出现次数
+     * @param Count 事件出现次数
+     */
+    public void setCount(String Count) {
+        this.Count = Count;
+    }
+
+    /**
+     * 获取事件出现原因
+     * @return Reason 事件出现原因
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * 设置事件出现原因
+     * @param Reason 事件出现原因
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
+     * 获取事件消息
+     * @return Message 事件消息
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * 设置事件消息
+     * @param Message 事件消息
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FirstSeen", this.FirstSeen);
+        this.setParamSimple(map, prefix + "LastSeen", this.LastSeen);
+        this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "Message", this.Message);
+
+    }
+}
+

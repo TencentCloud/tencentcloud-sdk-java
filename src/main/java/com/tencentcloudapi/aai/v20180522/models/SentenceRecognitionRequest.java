@@ -39,7 +39,7 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     
 
     /**
-    * 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048。
+    * 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
     */
     @SerializedName("Url")
     @Expose
@@ -63,7 +63,7 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     
 
     /**
-    * 语音数据，当SourceType 值为1时必须填写，为0可不写。
+    * 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
     */
     @SerializedName("Data")
     @Expose
@@ -143,16 +143,16 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048。
-     * @return Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048。
+     * 获取语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
+     * @return Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * 设置语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048。
-     * @param Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048。
+     * 设置语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
+     * @param Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -191,16 +191,16 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音数据，当SourceType 值为1时必须填写，为0可不写。
-     * @return Data 语音数据，当SourceType 值为1时必须填写，为0可不写。
+     * 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
+     * @return Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * 设置语音数据，当SourceType 值为1时必须填写，为0可不写。
-     * @param Data 语音数据，当SourceType 值为1时必须填写，为0可不写。
+     * 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
+     * @param Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
      */
     public void setData(String Data) {
         this.Data = Data;

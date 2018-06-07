@@ -152,6 +152,23 @@ public class RunInstancesRequest  extends AbstractModel{
     
 
     /**
+    * 实例的市场相关选项，如竞价实例相关参数
+    */
+    @SerializedName("InstanceMarketOptions")
+    @Expose
+    private InstanceMarketOptionsRequest InstanceMarketOptions;
+    
+
+    /**
+    * 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526
+)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+    
+
+    /**
      * 获取实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDHPAID：独享母机付费（基于专用宿主机创建，宿主机部分的资源不收费）<br>默认值：POSTPAID_BY_HOUR。
      * @return InstanceChargeType 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDHPAID：独享母机付费（基于专用宿主机创建，宿主机部分的资源不收费）<br>默认值：POSTPAID_BY_HOUR。
      */
@@ -444,6 +461,42 @@ public class RunInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例的市场相关选项，如竞价实例相关参数
+     * @return InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
+     */
+    public InstanceMarketOptionsRequest getInstanceMarketOptions() {
+        return this.InstanceMarketOptions;
+    }
+
+    /**
+     * 设置实例的市场相关选项，如竞价实例相关参数
+     * @param InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
+     */
+    public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
+        this.InstanceMarketOptions = InstanceMarketOptions;
+    }
+
+    /**
+     * 获取提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526
+)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+     * @return UserData 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526
+)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * 设置提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526
+)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+     * @param UserData 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526
+)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -465,6 +518,8 @@ public class RunInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamObj(map, prefix + "ActionTimer.", this.ActionTimer);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
 
     }
 }

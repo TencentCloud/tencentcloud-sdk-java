@@ -23,6 +23,14 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     
 
     /**
+    * 指定实例的安全组Id列表。
+    */
+    @SerializedName("SecurityGroups")
+    @Expose
+    private String [] SecurityGroups;
+    
+
+    /**
      * 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
      * @return InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
      */
@@ -55,11 +63,28 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     }
 
     /**
+     * 获取指定实例的安全组Id列表。
+     * @return SecurityGroups 指定实例的安全组Id列表。
+     */
+    public String [] getSecurityGroups() {
+        return this.SecurityGroups;
+    }
+
+    /**
+     * 设置指定实例的安全组Id列表。
+     * @param SecurityGroups 指定实例的安全组Id列表。
+     */
+    public void setSecurityGroups(String [] SecurityGroups) {
+        this.SecurityGroups = SecurityGroups;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
 
     }
 }

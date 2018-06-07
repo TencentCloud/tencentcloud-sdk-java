@@ -310,24 +310,6 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeInstanceOperationLogs）查询指定实例操作记录。
-     * @param req DescribeInstanceOperationLogsRequest
-     * @return DescribeInstanceOperationLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInstanceOperationLogsResponse  DescribeInstanceOperationLogs(DescribeInstanceOperationLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceOperationLogsResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceOperationLogsResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceOperationLogs"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口 (DescribeInstanceTypeConfigs) 用于查询实例机型配置。
 
 * 可以根据`zone`、`instance-family`来查询实例机型配置。过滤条件详见过滤器`Filter`。
@@ -1104,26 +1086,6 @@ public class CvmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<TerminateInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "TerminateInstances"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口(UpdateInstanceVpcConfig)用于修改实例vpc属性，如私有网络ip。
-* 此操作默认会关闭实例，完成后再启动。
-* 不支持跨VpcId操作。
-     * @param req UpdateInstanceVpcConfigRequest
-     * @return UpdateInstanceVpcConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateInstanceVpcConfigResponse  UpdateInstanceVpcConfig(UpdateInstanceVpcConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateInstanceVpcConfigResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateInstanceVpcConfigResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "UpdateInstanceVpcConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

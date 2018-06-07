@@ -860,6 +860,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSecurityGroupAssociationStatistics）用于查询安全组关联的实例统计。
+     * @param req DescribeSecurityGroupAssociationStatisticsRequest
+     * @return DescribeSecurityGroupAssociationStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupAssociationStatisticsResponse  DescribeSecurityGroupAssociationStatistics(DescribeSecurityGroupAssociationStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityGroupAssociationStatisticsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityGroupAssociationStatisticsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSecurityGroupAssociationStatistics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeSecurityGroupPolicies）用于查询安全组规则。
      * @param req DescribeSecurityGroupPoliciesRequest
      * @return DescribeSecurityGroupPoliciesResponse

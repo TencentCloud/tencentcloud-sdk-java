@@ -1,0 +1,91 @@
+package com.tencentcloudapi.ms.v20180408.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class PluginInfo  extends AbstractModel{
+
+
+    /**
+    * 插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
+    */
+    @SerializedName("PluginType")
+    @Expose
+    private Integer PluginType;
+    
+
+    /**
+    * 插件名称
+    */
+    @SerializedName("PluginName")
+    @Expose
+    private String PluginName;
+    
+
+    /**
+    * 插件描述
+    */
+    @SerializedName("PluginDesc")
+    @Expose
+    private String PluginDesc;
+    
+
+    /**
+     * 获取插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
+     * @return PluginType 插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
+     */
+    public Integer getPluginType() {
+        return this.PluginType;
+    }
+
+    /**
+     * 设置插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
+     * @param PluginType 插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
+     */
+    public void setPluginType(Integer PluginType) {
+        this.PluginType = PluginType;
+    }
+
+    /**
+     * 获取插件名称
+     * @return PluginName 插件名称
+     */
+    public String getPluginName() {
+        return this.PluginName;
+    }
+
+    /**
+     * 设置插件名称
+     * @param PluginName 插件名称
+     */
+    public void setPluginName(String PluginName) {
+        this.PluginName = PluginName;
+    }
+
+    /**
+     * 获取插件描述
+     * @return PluginDesc 插件描述
+     */
+    public String getPluginDesc() {
+        return this.PluginDesc;
+    }
+
+    /**
+     * 设置插件描述
+     * @param PluginDesc 插件描述
+     */
+    public void setPluginDesc(String PluginDesc) {
+        this.PluginDesc = PluginDesc;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PluginType", this.PluginType);
+        this.setParamSimple(map, prefix + "PluginName", this.PluginName);
+        this.setParamSimple(map, prefix + "PluginDesc", this.PluginDesc);
+
+    }
+}
+
