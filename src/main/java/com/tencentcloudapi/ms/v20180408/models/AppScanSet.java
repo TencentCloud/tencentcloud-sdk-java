@@ -12,7 +12,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
-    
 
     /**
     * app的名称
@@ -20,7 +19,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("AppName")
     @Expose
     private String AppName;
-    
 
     /**
     * app的包名
@@ -28,7 +26,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("AppPkgName")
     @Expose
     private String AppPkgName;
-    
 
     /**
     * app的版本号
@@ -36,7 +33,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
-    
 
     /**
     * app的md5
@@ -44,7 +40,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("AppMd5")
     @Expose
     private String AppMd5;
-    
 
     /**
     * app的大小
@@ -52,7 +47,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("AppSize")
     @Expose
     private Integer AppSize;
-    
 
     /**
     * 扫描结果返回码
@@ -60,7 +54,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("ScanCode")
     @Expose
     private Integer ScanCode;
-    
 
     /**
     * 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
@@ -68,7 +61,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("TaskStatus")
     @Expose
     private Integer TaskStatus;
-    
 
     /**
     * 提交扫描时间
@@ -76,7 +68,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("TaskTime")
     @Expose
     private Integer TaskTime;
-    
 
     /**
     * app的图标url
@@ -84,7 +75,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("AppIconUrl")
     @Expose
     private String AppIconUrl;
-    
 
     /**
     * 标识唯一该app，主要用于删除
@@ -92,7 +82,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("AppSid")
     @Expose
     private String AppSid;
-    
 
     /**
     * 安全类型:1-安全软件，2-风险软件，3病毒软件
@@ -100,7 +89,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("SafeType")
     @Expose
     private Integer SafeType;
-    
 
     /**
     * 漏洞个数
@@ -108,7 +96,6 @@ public class AppScanSet  extends AbstractModel{
     @SerializedName("VulCount")
     @Expose
     private Integer VulCount;
-    
 
     /**
      * 获取任务唯一标识

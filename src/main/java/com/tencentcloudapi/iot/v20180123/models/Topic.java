@@ -12,7 +12,6 @@ public class Topic  extends AbstractModel{
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
-    
 
     /**
     * Topic名称
@@ -20,7 +19,6 @@ public class Topic  extends AbstractModel{
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
-    
 
     /**
     * 产品Id
@@ -28,7 +26,6 @@ public class Topic  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * 消息最大生命周期
@@ -36,7 +33,6 @@ public class Topic  extends AbstractModel{
     @SerializedName("MsgLife")
     @Expose
     private Integer MsgLife;
-    
 
     /**
     * 消息最大大小
@@ -44,7 +40,6 @@ public class Topic  extends AbstractModel{
     @SerializedName("MsgSize")
     @Expose
     private Integer MsgSize;
-    
 
     /**
     * 消息最大数量
@@ -52,7 +47,6 @@ public class Topic  extends AbstractModel{
     @SerializedName("MsgCount")
     @Expose
     private Integer MsgCount;
-    
 
     /**
     * 已删除
@@ -60,7 +54,6 @@ public class Topic  extends AbstractModel{
     @SerializedName("Deleted")
     @Expose
     private Integer Deleted;
-    
 
     /**
     * Topic完整路径
@@ -68,7 +61,6 @@ public class Topic  extends AbstractModel{
     @SerializedName("Path")
     @Expose
     private String Path;
-    
 
     /**
     * 创建时间
@@ -76,7 +68,6 @@ public class Topic  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 更新时间
@@ -84,7 +75,6 @@ public class Topic  extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
-    
 
     /**
      * 获取TopicId

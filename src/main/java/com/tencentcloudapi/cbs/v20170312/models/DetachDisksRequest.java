@@ -12,7 +12,6 @@ public class DetachDisksRequest  extends AbstractModel{
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
-    
 
     /**
      * 获取将要解挂的云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询，单次请求最多可解挂10块弹性云盘。

@@ -12,7 +12,6 @@ public class SellType  extends AbstractModel{
     @SerializedName("TypeName")
     @Expose
     private String TypeName;
-    
 
     /**
     * 内核版本号
@@ -20,7 +19,6 @@ public class SellType  extends AbstractModel{
     @SerializedName("EngineVersion")
     @Expose
     private String [] EngineVersion;
-    
 
     /**
     * 售卖规格详细配置
@@ -28,7 +26,6 @@ public class SellType  extends AbstractModel{
     @SerializedName("Configs")
     @Expose
     private SellConfig [] Configs;
-    
 
     /**
      * 获取售卖实例名称

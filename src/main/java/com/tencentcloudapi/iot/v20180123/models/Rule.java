@@ -12,7 +12,6 @@ public class Rule  extends AbstractModel{
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
-    
 
     /**
     * AppId
@@ -20,7 +19,6 @@ public class Rule  extends AbstractModel{
     @SerializedName("AppId")
     @Expose
     private Integer AppId;
-    
 
     /**
     * 名称
@@ -28,7 +26,6 @@ public class Rule  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 描述
@@ -36,7 +33,6 @@ public class Rule  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
     * 查询
@@ -44,7 +40,6 @@ public class Rule  extends AbstractModel{
     @SerializedName("Query")
     @Expose
     private RuleQuery Query;
-    
 
     /**
     * 转发
@@ -52,7 +47,6 @@ public class Rule  extends AbstractModel{
     @SerializedName("Actions")
     @Expose
     private Object [] Actions;
-    
 
     /**
     * 已启动
@@ -60,7 +54,6 @@ public class Rule  extends AbstractModel{
     @SerializedName("Active")
     @Expose
     private Integer Active;
-    
 
     /**
     * 已删除
@@ -68,7 +61,6 @@ public class Rule  extends AbstractModel{
     @SerializedName("Deleted")
     @Expose
     private Integer Deleted;
-    
 
     /**
     * 创建时间
@@ -76,7 +68,6 @@ public class Rule  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 更新时间
@@ -84,7 +75,6 @@ public class Rule  extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
-    
 
     /**
      * 获取规则Id

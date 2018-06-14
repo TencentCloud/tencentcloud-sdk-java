@@ -12,7 +12,6 @@ public class TransformAddressRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
      * 获取待操作有普通公网 IP 的实例 ID。实例 ID 形如：`ins-11112222`。可通过登录[控制台](https://console.cloud.tencent.com/cvm)查询，也可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/9389) 接口返回值中的`InstanceId`获取。

@@ -12,7 +12,6 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 登录用户名。
@@ -20,7 +19,6 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 用户允许的访问 host，用户名+host唯一确定一个账号。
@@ -28,7 +26,6 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
     * 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
@@ -36,7 +33,6 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     @SerializedName("Password")
     @Expose
     private String Password;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

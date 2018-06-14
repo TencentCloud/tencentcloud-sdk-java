@@ -12,7 +12,6 @@ public class CloseDBExtranetAccessResponse  extends AbstractModel{
     @SerializedName("FlowId")
     @Expose
     private Integer FlowId;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class CloseDBExtranetAccessResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取异步任务Id，可通过 DescribeFlow 查询任务状态。

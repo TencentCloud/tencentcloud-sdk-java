@@ -12,7 +12,6 @@ public class DescribeOrdersRequest  extends AbstractModel{
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
-    
 
     /**
      * 获取待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。

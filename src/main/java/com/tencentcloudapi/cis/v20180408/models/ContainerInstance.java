@@ -12,7 +12,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 容器实例名称
@@ -20,7 +19,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 容器实例所属VpcId
@@ -28,7 +26,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 容器实例所属SubnetId
@@ -36,7 +33,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * 容器实例状态
@@ -44,7 +40,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("State")
     @Expose
     private String State;
-    
 
     /**
     * 容器列表
@@ -52,7 +47,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("Containers")
     @Expose
     private Container [] Containers;
-    
 
     /**
     * 重启策略
@@ -60,7 +54,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("RestartPolicy")
     @Expose
     private String RestartPolicy;
-    
 
     /**
     * 创建时间
@@ -68,7 +61,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 启动时间
@@ -76,7 +68,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 可用区
@@ -84,7 +75,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * Vpc名称
@@ -92,7 +82,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
-    
 
     /**
     * VpcCidr
@@ -100,7 +89,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("VpcCidr")
     @Expose
     private String VpcCidr;
-    
 
     /**
     * SubnetName
@@ -108,7 +96,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
-    
 
     /**
     * 子网Cidr
@@ -116,7 +103,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("SubnetCidr")
     @Expose
     private String SubnetCidr;
-    
 
     /**
     * 内网IP
@@ -124,7 +110,6 @@ public class ContainerInstance  extends AbstractModel{
     @SerializedName("LanIp")
     @Expose
     private String LanIp;
-    
 
     /**
      * 获取容器实例ID

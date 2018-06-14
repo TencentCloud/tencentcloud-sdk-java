@@ -12,7 +12,6 @@ public class DescribeDBInstanceSpecsResponse  extends AbstractModel{
     @SerializedName("Specs")
     @Expose
     private InstanceSpec [] Specs;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class DescribeDBInstanceSpecsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取按机型分类的可售卖规格列表

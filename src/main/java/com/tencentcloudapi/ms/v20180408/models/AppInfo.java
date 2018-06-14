@@ -12,7 +12,6 @@ public class AppInfo  extends AbstractModel{
     @SerializedName("AppUrl")
     @Expose
     private String AppUrl;
-    
 
     /**
     * app的md5
@@ -20,7 +19,6 @@ public class AppInfo  extends AbstractModel{
     @SerializedName("AppMd5")
     @Expose
     private String AppMd5;
-    
 
     /**
     * app的大小
@@ -28,7 +26,6 @@ public class AppInfo  extends AbstractModel{
     @SerializedName("AppSize")
     @Expose
     private Integer AppSize;
-    
 
     /**
     * app的文件名，指定后加固后的文件名是{FileName}_legu.apk
@@ -36,7 +33,6 @@ public class AppInfo  extends AbstractModel{
     @SerializedName("FileName")
     @Expose
     private String FileName;
-    
 
     /**
     * app的包名
@@ -44,7 +40,6 @@ public class AppInfo  extends AbstractModel{
     @SerializedName("AppPkgName")
     @Expose
     private String AppPkgName;
-    
 
     /**
     * app的版本号
@@ -52,7 +47,6 @@ public class AppInfo  extends AbstractModel{
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
-    
 
     /**
     * app的图标url
@@ -60,7 +54,6 @@ public class AppInfo  extends AbstractModel{
     @SerializedName("AppIconUrl")
     @Expose
     private String AppIconUrl;
-    
 
     /**
     * app的名称
@@ -68,7 +61,6 @@ public class AppInfo  extends AbstractModel{
     @SerializedName("AppName")
     @Expose
     private String AppName;
-    
 
     /**
      * 获取app的url，必须保证不用权限校验就可以下载

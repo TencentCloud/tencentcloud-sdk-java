@@ -12,7 +12,6 @@ public class DescribeInstancesDiskNumRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
      * 获取云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。

@@ -12,7 +12,6 @@ public class Placement  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
@@ -20,7 +19,6 @@ public class Placement  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 实例所属的专用宿主机ID列表。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。当前暂不支持。
@@ -28,7 +26,6 @@ public class Placement  extends AbstractModel{
     @SerializedName("HostIds")
     @Expose
     private String [] HostIds;
-    
 
     /**
      * 获取实例所属的[可用区](/document/product/213/9452#zone)ID。该参数也可以通过调用  [DescribeZones](/document/api/213/9455) 的返回值中的Zone字段来获取。

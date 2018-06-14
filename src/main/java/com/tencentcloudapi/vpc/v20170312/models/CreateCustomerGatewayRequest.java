@@ -12,7 +12,6 @@ public class CreateCustomerGatewayRequest  extends AbstractModel{
     @SerializedName("CustomerGatewayName")
     @Expose
     private String CustomerGatewayName;
-    
 
     /**
     * 对端网关公网IP。
@@ -20,7 +19,6 @@ public class CreateCustomerGatewayRequest  extends AbstractModel{
     @SerializedName("IpAddress")
     @Expose
     private String IpAddress;
-    
 
     /**
      * 获取对端网关名称，可任意命名，但不得超过60个字符。

@@ -12,7 +12,6 @@ public class DescribeInstancesDiskNumResponse  extends AbstractModel{
     @SerializedName("AttachedDiskCount")
     @Expose
     private Integer AttachedDiskCount;
-    
 
     /**
     * 当前云服务器最大可挂载弹性云盘数量。
@@ -20,7 +19,6 @@ public class DescribeInstancesDiskNumResponse  extends AbstractModel{
     @SerializedName("MaxAttachCount")
     @Expose
     private Integer MaxAttachCount;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeInstancesDiskNumResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取当前云服务器已挂载弹性云盘数量。

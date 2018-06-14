@@ -12,7 +12,6 @@ public class DescribeVpcsRequest  extends AbstractModel{
     @SerializedName("VpcIds")
     @Expose
     private String [] VpcIds;
-    
 
     /**
     * 过滤条件，参数不支持同时指定VpcIds和Filters。
@@ -24,7 +23,6 @@ public class DescribeVpcsRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量
@@ -32,7 +30,6 @@ public class DescribeVpcsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private String Offset;
-    
 
     /**
     * 返回数量
@@ -40,7 +37,6 @@ public class DescribeVpcsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private String Limit;
-    
 
     /**
      * 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。

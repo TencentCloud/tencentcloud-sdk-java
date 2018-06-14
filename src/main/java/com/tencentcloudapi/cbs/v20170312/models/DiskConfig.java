@@ -12,7 +12,6 @@ public class DiskConfig  extends AbstractModel{
     @SerializedName("Available")
     @Expose
     private Boolean Available;
-    
 
     /**
     * 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
@@ -20,7 +19,6 @@ public class DiskConfig  extends AbstractModel{
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
-    
 
     /**
     * 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
@@ -28,7 +26,6 @@ public class DiskConfig  extends AbstractModel{
     @SerializedName("DiskUsage")
     @Expose
     private String DiskUsage;
-    
 
     /**
     * 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
@@ -36,7 +33,6 @@ public class DiskConfig  extends AbstractModel{
     @SerializedName("DiskChargeType")
     @Expose
     private String DiskChargeType;
-    
 
     /**
     * 最大可配置云盘大小。
@@ -44,7 +40,6 @@ public class DiskConfig  extends AbstractModel{
     @SerializedName("MaxDiskSize")
     @Expose
     private Integer MaxDiskSize;
-    
 
     /**
     * 最小可配置云盘大小。
@@ -52,7 +47,6 @@ public class DiskConfig  extends AbstractModel{
     @SerializedName("MinDiskSize")
     @Expose
     private Integer MinDiskSize;
-    
 
     /**
     * 所在[可用区](/document/api/213/9452#zone)。
@@ -60,7 +54,6 @@ public class DiskConfig  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 实例机型。
@@ -68,7 +61,6 @@ public class DiskConfig  extends AbstractModel{
     @SerializedName("DeviceClass")
     @Expose
     private String DeviceClass;
-    
 
     /**
     * 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
@@ -76,7 +68,6 @@ public class DiskConfig  extends AbstractModel{
     @SerializedName("InstanceFamily")
     @Expose
     private String InstanceFamily;
-    
 
     /**
      * 获取配置是否可用。

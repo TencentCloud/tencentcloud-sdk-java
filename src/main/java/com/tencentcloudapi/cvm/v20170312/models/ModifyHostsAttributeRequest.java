@@ -12,7 +12,6 @@ public class ModifyHostsAttributeRequest  extends AbstractModel{
     @SerializedName("HostIds")
     @Expose
     private String [] HostIds;
-    
 
     /**
     * CDH实例显示名称。可任意命名，但不得超过60个字符。
@@ -20,7 +19,6 @@ public class ModifyHostsAttributeRequest  extends AbstractModel{
     @SerializedName("HostName")
     @Expose
     private String HostName;
-    
 
     /**
     * 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费<br><br>若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
@@ -28,7 +26,6 @@ public class ModifyHostsAttributeRequest  extends AbstractModel{
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
-    
 
     /**
      * 获取一个或多个待操作的CDH实例ID。

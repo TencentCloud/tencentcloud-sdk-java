@@ -12,7 +12,6 @@ public class TerminateTaskInstanceRequest  extends AbstractModel{
     @SerializedName("JobId")
     @Expose
     private String JobId;
-    
 
     /**
     * 任务名称
@@ -20,7 +19,6 @@ public class TerminateTaskInstanceRequest  extends AbstractModel{
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
-    
 
     /**
     * 任务实例索引
@@ -28,7 +26,6 @@ public class TerminateTaskInstanceRequest  extends AbstractModel{
     @SerializedName("TaskInstanceIndex")
     @Expose
     private Integer TaskInstanceIndex;
-    
 
     /**
      * 获取作业ID

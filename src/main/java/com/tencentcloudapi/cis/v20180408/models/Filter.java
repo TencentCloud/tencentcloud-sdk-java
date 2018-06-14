@@ -12,7 +12,6 @@ public class Filter  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 过滤值列表
@@ -20,7 +19,6 @@ public class Filter  extends AbstractModel{
     @SerializedName("ValueList")
     @Expose
     private String [] ValueList;
-    
 
     /**
      * 获取过滤字段，可选值 - Zone，VpcId，InstanceName

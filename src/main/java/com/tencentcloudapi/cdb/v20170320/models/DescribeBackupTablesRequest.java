@@ -12,7 +12,6 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 开始时间，格式为：2017-07-12 10:29:20。
@@ -20,7 +19,6 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 指定的数据库名。
@@ -28,15 +26,13 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
-    
 
     /**
     * 要查询的数据表名前缀。
     */
     @SerializedName("SearchTable")
     @Expose
-    private String [] SearchTable;
-    
+    private String SearchTable;
 
     /**
     * 分页偏移。
@@ -44,7 +40,6 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 分页大小，最大值为2000。
@@ -52,7 +47,6 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
@@ -106,7 +100,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
      * 获取要查询的数据表名前缀。
      * @return SearchTable 要查询的数据表名前缀。
      */
-    public String [] getSearchTable() {
+    public String getSearchTable() {
         return this.SearchTable;
     }
 
@@ -114,7 +108,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
      * 设置要查询的数据表名前缀。
      * @param SearchTable 要查询的数据表名前缀。
      */
-    public void setSearchTable(String [] SearchTable) {
+    public void setSearchTable(String SearchTable) {
         this.SearchTable = SearchTable;
     }
 
@@ -157,7 +151,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
-        this.setParamArraySimple(map, prefix + "SearchTable.", this.SearchTable);
+        this.setParamSimple(map, prefix + "SearchTable", this.SearchTable);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

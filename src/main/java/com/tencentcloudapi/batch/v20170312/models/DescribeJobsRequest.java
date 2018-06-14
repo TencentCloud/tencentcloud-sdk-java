@@ -12,7 +12,6 @@ public class DescribeJobsRequest  extends AbstractModel{
     @SerializedName("JobIds")
     @Expose
     private String [] JobIds;
-    
 
     /**
     * 过滤条件
@@ -20,7 +19,6 @@ public class DescribeJobsRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量
@@ -28,7 +26,6 @@ public class DescribeJobsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回数量
@@ -36,7 +33,6 @@ public class DescribeJobsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取作业ID

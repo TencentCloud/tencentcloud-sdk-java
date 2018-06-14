@@ -12,7 +12,6 @@ public class DescribeComputeEnvCreateInfoRequest  extends AbstractModel{
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
-    
 
     /**
      * 获取计算环境ID

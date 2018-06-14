@@ -12,7 +12,6 @@ public class GetDataHistoryRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * 设备名称列表，允许最多一次100台
@@ -20,7 +19,6 @@ public class GetDataHistoryRequest  extends AbstractModel{
     @SerializedName("DeviceNames")
     @Expose
     private String [] DeviceNames;
-    
 
     /**
     * 查询开始时间
@@ -28,7 +26,6 @@ public class GetDataHistoryRequest  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 查询结束时间
@@ -36,7 +33,6 @@ public class GetDataHistoryRequest  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
     * 查询数据量
@@ -44,7 +40,6 @@ public class GetDataHistoryRequest  extends AbstractModel{
     @SerializedName("Size")
     @Expose
     private Integer [] Size;
-    
 
     /**
     * 时间排序（desc/asc）
@@ -52,7 +47,6 @@ public class GetDataHistoryRequest  extends AbstractModel{
     @SerializedName("Order")
     @Expose
     private String Order;
-    
 
     /**
     * 查询游标
@@ -60,7 +54,6 @@ public class GetDataHistoryRequest  extends AbstractModel{
     @SerializedName("ScrollId")
     @Expose
     private String ScrollId;
-    
 
     /**
      * 获取产品Id

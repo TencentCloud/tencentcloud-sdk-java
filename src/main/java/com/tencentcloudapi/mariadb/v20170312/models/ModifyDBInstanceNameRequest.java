@@ -12,7 +12,6 @@ public class ModifyDBInstanceNameRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。
@@ -20,7 +19,6 @@ public class ModifyDBInstanceNameRequest  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
      * 获取待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

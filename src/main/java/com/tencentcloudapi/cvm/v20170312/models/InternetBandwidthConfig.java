@@ -12,7 +12,6 @@ public class InternetBandwidthConfig  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
@@ -20,7 +19,6 @@ public class InternetBandwidthConfig  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
     * 实例带宽信息。
@@ -28,7 +26,6 @@ public class InternetBandwidthConfig  extends AbstractModel{
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
-    
 
     /**
      * 获取开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。

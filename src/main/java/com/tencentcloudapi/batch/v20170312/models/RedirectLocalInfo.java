@@ -12,7 +12,6 @@ public class RedirectLocalInfo  extends AbstractModel{
     @SerializedName("StdoutLocalPath")
     @Expose
     private String StdoutLocalPath;
-    
 
     /**
     * 标准错误重定向本地路径
@@ -20,7 +19,6 @@ public class RedirectLocalInfo  extends AbstractModel{
     @SerializedName("StderrLocalPath")
     @Expose
     private String StderrLocalPath;
-    
 
     /**
     * 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
@@ -28,7 +26,6 @@ public class RedirectLocalInfo  extends AbstractModel{
     @SerializedName("StdoutLocalFileName")
     @Expose
     private String StdoutLocalFileName;
-    
 
     /**
     * 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
@@ -36,7 +33,6 @@ public class RedirectLocalInfo  extends AbstractModel{
     @SerializedName("StderrLocalFileName")
     @Expose
     private String StderrLocalFileName;
-    
 
     /**
      * 获取标准输出重定向本地路径

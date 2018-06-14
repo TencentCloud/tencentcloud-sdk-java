@@ -12,7 +12,6 @@ public class Price  extends AbstractModel{
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
-    
 
     /**
     * 折扣价，单位：元
@@ -20,7 +19,6 @@ public class Price  extends AbstractModel{
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
-    
 
     /**
      * 获取原价，单位：元

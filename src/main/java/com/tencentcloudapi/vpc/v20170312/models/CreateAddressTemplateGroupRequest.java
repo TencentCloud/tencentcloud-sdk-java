@@ -12,7 +12,6 @@ public class CreateAddressTemplateGroupRequest  extends AbstractModel{
     @SerializedName("AddressTemplateGroupName")
     @Expose
     private String AddressTemplateGroupName;
-    
 
     /**
     * IP地址模版实例ID，例如：ipm-mdunqeb6。
@@ -20,7 +19,6 @@ public class CreateAddressTemplateGroupRequest  extends AbstractModel{
     @SerializedName("AddressTemplateIds")
     @Expose
     private String [] AddressTemplateIds;
-    
 
     /**
      * 获取IP地址模版集合名称。

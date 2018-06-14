@@ -12,7 +12,6 @@ public class CreateImageRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 镜像名称
@@ -20,7 +19,6 @@ public class CreateImageRequest  extends AbstractModel{
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
-    
 
     /**
     * 镜像描述
@@ -28,7 +26,6 @@ public class CreateImageRequest  extends AbstractModel{
     @SerializedName("ImageDescription")
     @Expose
     private String ImageDescription;
-    
 
     /**
     * 软关机失败时是否执行强制关机以制作镜像
@@ -36,7 +33,6 @@ public class CreateImageRequest  extends AbstractModel{
     @SerializedName("ForcePoweroff")
     @Expose
     private String ForcePoweroff;
-    
 
     /**
     * 创建Windows镜像时是否启用Sysprep
@@ -44,7 +40,6 @@ public class CreateImageRequest  extends AbstractModel{
     @SerializedName("Sysprep")
     @Expose
     private String Sysprep;
-    
 
     /**
     * 实例处于运行中时，是否允许关机执行制作镜像任务。
@@ -52,7 +47,6 @@ public class CreateImageRequest  extends AbstractModel{
     @SerializedName("Reboot")
     @Expose
     private String Reboot;
-    
 
     /**
      * 获取需要制作镜像的实例ID

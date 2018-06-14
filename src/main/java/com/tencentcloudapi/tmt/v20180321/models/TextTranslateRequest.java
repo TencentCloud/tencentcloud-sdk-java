@@ -12,7 +12,6 @@ public class TextTranslateRequest  extends AbstractModel{
     @SerializedName("SourceText")
     @Expose
     private String SourceText;
-    
 
     /**
     * 源语言，参照Target支持语言列表
@@ -20,7 +19,6 @@ public class TextTranslateRequest  extends AbstractModel{
     @SerializedName("Source")
     @Expose
     private String Source;
-    
 
     /**
     * 目标语言，参照支持语言列表
@@ -29,7 +27,6 @@ public class TextTranslateRequest  extends AbstractModel{
     @SerializedName("Target")
     @Expose
     private String Target;
-    
 
     /**
     * 项目id
@@ -37,7 +34,6 @@ public class TextTranslateRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
      * 获取待翻译的文本

@@ -12,7 +12,6 @@ public class MonitorMiniSite  extends AbstractModel{
     @SerializedName("SiteId")
     @Expose
     private Integer SiteId;
-    
 
     /**
     * 站点Url。
@@ -20,7 +19,6 @@ public class MonitorMiniSite  extends AbstractModel{
     @SerializedName("Url")
     @Expose
     private String Url;
-    
 
     /**
      * 获取站点ID。

@@ -12,7 +12,6 @@ public class ModifyMonitorAttributeRequest  extends AbstractModel{
     @SerializedName("MonitorId")
     @Expose
     private Integer MonitorId;
-    
 
     /**
     * 站点的url列表
@@ -20,7 +19,6 @@ public class ModifyMonitorAttributeRequest  extends AbstractModel{
     @SerializedName("Urls")
     @Expose
     private String [] Urls;
-    
 
     /**
     * 任务名称
@@ -28,7 +26,6 @@ public class ModifyMonitorAttributeRequest  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 扫描模式，normal-正常扫描；deep-深度扫描
@@ -36,7 +33,6 @@ public class ModifyMonitorAttributeRequest  extends AbstractModel{
     @SerializedName("ScannerType")
     @Expose
     private String ScannerType;
-    
 
     /**
     * 扫描周期，单位小时，每X小时执行一次
@@ -44,7 +40,6 @@ public class ModifyMonitorAttributeRequest  extends AbstractModel{
     @SerializedName("Crontab")
     @Expose
     private Integer Crontab;
-    
 
     /**
     * 扫描速率限制，每秒发送X个HTTP请求
@@ -52,7 +47,6 @@ public class ModifyMonitorAttributeRequest  extends AbstractModel{
     @SerializedName("RateLimit")
     @Expose
     private Integer RateLimit;
-    
 
     /**
     * 首次扫描开始时间
@@ -60,7 +54,6 @@ public class ModifyMonitorAttributeRequest  extends AbstractModel{
     @SerializedName("FirstScanStartTime")
     @Expose
     private String FirstScanStartTime;
-    
 
     /**
     * 监测状态：1-监测中；2-暂停监测
@@ -68,7 +61,6 @@ public class ModifyMonitorAttributeRequest  extends AbstractModel{
     @SerializedName("MonitorStatus")
     @Expose
     private Integer MonitorStatus;
-    
 
     /**
      * 获取监测任务ID

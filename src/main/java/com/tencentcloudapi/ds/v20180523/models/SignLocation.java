@@ -12,7 +12,6 @@ public class SignLocation  extends AbstractModel{
     @SerializedName("SignOnPage")
     @Expose
     private String SignOnPage;
-    
 
     /**
     * 签名域左下角X轴坐标轴
@@ -20,7 +19,6 @@ public class SignLocation  extends AbstractModel{
     @SerializedName("SignLocationLBX")
     @Expose
     private String SignLocationLBX;
-    
 
     /**
     * 签名域左下角Y轴坐标轴
@@ -28,7 +26,6 @@ public class SignLocation  extends AbstractModel{
     @SerializedName("SignLocationLBY")
     @Expose
     private String SignLocationLBY;
-    
 
     /**
     * 签名域右上角X轴坐标轴
@@ -36,7 +33,6 @@ public class SignLocation  extends AbstractModel{
     @SerializedName("SignLocationRUX")
     @Expose
     private String SignLocationRUX;
-    
 
     /**
     * 签名域右上角Y轴坐标轴
@@ -44,7 +40,6 @@ public class SignLocation  extends AbstractModel{
     @SerializedName("SignLocationRUY")
     @Expose
     private String SignLocationRUY;
-    
 
     /**
      * 获取签名域页数

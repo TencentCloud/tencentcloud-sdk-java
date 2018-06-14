@@ -12,7 +12,6 @@ public class InquiryPriceResetInstancesInternetMaxBandwidthResponse  extends Abs
     @SerializedName("Price")
     @Expose
     private Price Price;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class InquiryPriceResetInstancesInternetMaxBandwidthResponse  extends Abs
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取该参数表示带宽调整为对应大小之后的价格。

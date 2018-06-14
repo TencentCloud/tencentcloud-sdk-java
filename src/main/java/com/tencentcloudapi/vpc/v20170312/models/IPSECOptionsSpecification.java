@@ -12,7 +12,6 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     @SerializedName("EncryptAlgorithm")
     @Expose
     private String EncryptAlgorithm;
-    
 
     /**
     * 认证算法：可选值：'MD5', 'SHA1'，默认为
@@ -20,7 +19,6 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     @SerializedName("IntegrityAlgorith")
     @Expose
     private String IntegrityAlgorith;
-    
 
     /**
     * IPsec SA lifetime(s)：单位秒，取值范围：180-604800
@@ -28,7 +26,6 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     @SerializedName("IPSECSaLifetimeSeconds")
     @Expose
     private Integer IPSECSaLifetimeSeconds;
-    
 
     /**
     * PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
@@ -36,7 +33,6 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     @SerializedName("PfsDhGroup")
     @Expose
     private String PfsDhGroup;
-    
 
     /**
     * IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
@@ -44,7 +40,6 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     @SerializedName("IPSECSaLifetimeTraffic")
     @Expose
     private Integer IPSECSaLifetimeTraffic;
-    
 
     /**
      * 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'NULL'， 默认为AES-CBC-128

@@ -12,7 +12,6 @@ public class Route  extends AbstractModel{
     @SerializedName("RouteId")
     @Expose
     private Integer RouteId;
-    
 
     /**
     * 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
@@ -20,7 +19,6 @@ public class Route  extends AbstractModel{
     @SerializedName("DestinationCidrBlock")
     @Expose
     private String DestinationCidrBlock;
-    
 
     /**
     * 下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
@@ -28,7 +26,6 @@ public class Route  extends AbstractModel{
     @SerializedName("GatewayType")
     @Expose
     private String GatewayType;
-    
 
     /**
     * 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
@@ -36,7 +33,6 @@ public class Route  extends AbstractModel{
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
-    
 
     /**
     * 路由策略描述。
@@ -44,7 +40,6 @@ public class Route  extends AbstractModel{
     @SerializedName("RouteDescription")
     @Expose
     private String RouteDescription;
-    
 
     /**
      * 获取路由策略ID。

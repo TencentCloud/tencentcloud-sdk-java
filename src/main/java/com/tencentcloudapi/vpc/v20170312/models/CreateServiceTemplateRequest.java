@@ -12,7 +12,6 @@ public class CreateServiceTemplateRequest  extends AbstractModel{
     @SerializedName("ServiceTemplateName")
     @Expose
     private String ServiceTemplateName;
-    
 
     /**
     * 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
@@ -20,7 +19,6 @@ public class CreateServiceTemplateRequest  extends AbstractModel{
     @SerializedName("Services")
     @Expose
     private String [] Services;
-    
 
     /**
      * 获取协议端口模板名称

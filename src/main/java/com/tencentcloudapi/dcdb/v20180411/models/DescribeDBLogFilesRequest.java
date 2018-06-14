@@ -12,7 +12,6 @@ public class DescribeDBLogFilesRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 分片 ID，形如：shard-7noic7tv
@@ -20,7 +19,6 @@ public class DescribeDBLogFilesRequest  extends AbstractModel{
     @SerializedName("ShardId")
     @Expose
     private String ShardId;
-    
 
     /**
     * 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
@@ -28,7 +26,6 @@ public class DescribeDBLogFilesRequest  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private Integer Type;
-    
 
     /**
      * 获取实例 ID，形如：dcdbt-ow7t8lmc。

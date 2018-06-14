@@ -12,7 +12,6 @@ public class GetTopicsRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * 偏移
@@ -20,7 +19,6 @@ public class GetTopicsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 长度
@@ -28,7 +26,6 @@ public class GetTopicsRequest  extends AbstractModel{
     @SerializedName("Length")
     @Expose
     private Integer Length;
-    
 
     /**
      * 获取产品Id

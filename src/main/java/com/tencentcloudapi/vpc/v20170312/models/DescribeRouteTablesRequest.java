@@ -12,7 +12,6 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     @SerializedName("RouteTableIds")
     @Expose
     private String [] RouteTableIds;
-    
 
     /**
     * 过滤条件，参数不支持同时指定RouteTableIds和Filters。
@@ -24,7 +23,6 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量。
@@ -32,7 +30,6 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private String Offset;
-    
 
     /**
     * 请求对象个数。
@@ -40,7 +37,6 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private String Limit;
-    
 
     /**
      * 获取路由表实例ID，例如：rtb-azd4dt1c。

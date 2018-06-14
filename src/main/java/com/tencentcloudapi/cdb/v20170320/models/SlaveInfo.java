@@ -12,7 +12,6 @@ public class SlaveInfo  extends AbstractModel{
     @SerializedName("First")
     @Expose
     private First First;
-    
 
     /**
     * 第二备机信息
@@ -20,7 +19,6 @@ public class SlaveInfo  extends AbstractModel{
     @SerializedName("Second")
     @Expose
     private First Second;
-    
 
     /**
      * 获取第一备机信息

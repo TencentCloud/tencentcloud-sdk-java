@@ -12,7 +12,6 @@ public class ItemValue  extends AbstractModel{
     @SerializedName("SourceText")
     @Expose
     private String SourceText;
-    
 
     /**
     * 翻译后的译文
@@ -20,7 +19,6 @@ public class ItemValue  extends AbstractModel{
     @SerializedName("TargetText")
     @Expose
     private String TargetText;
-    
 
     /**
     * X坐标
@@ -28,7 +26,6 @@ public class ItemValue  extends AbstractModel{
     @SerializedName("X")
     @Expose
     private Integer X;
-    
 
     /**
     * Y坐标
@@ -36,7 +33,6 @@ public class ItemValue  extends AbstractModel{
     @SerializedName("Y")
     @Expose
     private Integer Y;
-    
 
     /**
     * 宽度
@@ -44,7 +40,6 @@ public class ItemValue  extends AbstractModel{
     @SerializedName("W")
     @Expose
     private Integer W;
-    
 
     /**
     * 高度
@@ -52,7 +47,6 @@ public class ItemValue  extends AbstractModel{
     @SerializedName("H")
     @Expose
     private Integer H;
-    
 
     /**
      * 获取识别出的源文

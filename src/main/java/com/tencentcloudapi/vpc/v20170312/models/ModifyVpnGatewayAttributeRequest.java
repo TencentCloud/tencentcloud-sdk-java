@@ -12,7 +12,6 @@ public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
-    
 
     /**
     * VPN网关名称，最大长度不能超过60个字节。
@@ -20,7 +19,6 @@ public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
     @SerializedName("VpnGatewayName")
     @Expose
     private String VpnGatewayName;
-    
 
     /**
     * VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
@@ -28,7 +26,6 @@ public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
-    
 
     /**
      * 获取VPN网关实例ID。

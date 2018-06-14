@@ -12,7 +12,6 @@ public class CreateScanInstancesResponse  extends AbstractModel{
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
-    
 
     /**
     * 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
@@ -20,7 +19,6 @@ public class CreateScanInstancesResponse  extends AbstractModel{
     @SerializedName("Progress")
     @Expose
     private Integer Progress;
-    
 
     /**
     * 提交成功的app的md5集合
@@ -28,7 +26,6 @@ public class CreateScanInstancesResponse  extends AbstractModel{
     @SerializedName("AppMd5s")
     @Expose
     private String [] AppMd5s;
-    
 
     /**
     * 剩余可用次数
@@ -36,7 +33,6 @@ public class CreateScanInstancesResponse  extends AbstractModel{
     @SerializedName("LimitCount")
     @Expose
     private Integer LimitCount;
-    
 
     /**
     * 到期时间
@@ -44,7 +40,6 @@ public class CreateScanInstancesResponse  extends AbstractModel{
     @SerializedName("LimitTime")
     @Expose
     private Integer LimitTime;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -52,7 +47,6 @@ public class CreateScanInstancesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取任务唯一标识

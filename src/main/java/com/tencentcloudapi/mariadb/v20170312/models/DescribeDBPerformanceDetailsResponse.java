@@ -12,7 +12,6 @@ public class DescribeDBPerformanceDetailsResponse  extends AbstractModel{
     @SerializedName("Master")
     @Expose
     private PerformanceMonitorSet Master;
-    
 
     /**
     * 备机1性能监控数据
@@ -20,7 +19,6 @@ public class DescribeDBPerformanceDetailsResponse  extends AbstractModel{
     @SerializedName("Slave1")
     @Expose
     private PerformanceMonitorSet Slave1;
-    
 
     /**
     * 备机2性能监控数据，如果实例是一主一从，则没有该字段
@@ -28,7 +26,6 @@ public class DescribeDBPerformanceDetailsResponse  extends AbstractModel{
     @SerializedName("Slave2")
     @Expose
     private PerformanceMonitorSet Slave2;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -36,7 +33,6 @@ public class DescribeDBPerformanceDetailsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取主节点性能监控数据

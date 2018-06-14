@@ -12,7 +12,6 @@ public class DescribeNetworkInterfacesResponse  extends AbstractModel{
     @SerializedName("NetworkInterfaceSet")
     @Expose
     private NetworkInterface [] NetworkInterfaceSet;
-    
 
     /**
     * 符合条件的实例数量。
@@ -20,7 +19,6 @@ public class DescribeNetworkInterfacesResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeNetworkInterfacesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取实例详细信息列表。

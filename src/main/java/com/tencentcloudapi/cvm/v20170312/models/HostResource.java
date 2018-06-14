@@ -12,7 +12,6 @@ public class HostResource  extends AbstractModel{
     @SerializedName("CpuTotal")
     @Expose
     private Integer CpuTotal;
-    
 
     /**
     * cdh实例可用cpu核数
@@ -20,7 +19,6 @@ public class HostResource  extends AbstractModel{
     @SerializedName("CpuAvailable")
     @Expose
     private Integer CpuAvailable;
-    
 
     /**
     * cdh实例总内存大小（单位为:GiB）
@@ -28,7 +26,6 @@ public class HostResource  extends AbstractModel{
     @SerializedName("MemTotal")
     @Expose
     private Float MemTotal;
-    
 
     /**
     * cdh实例可用内存大小（单位为:GiB）
@@ -36,7 +33,6 @@ public class HostResource  extends AbstractModel{
     @SerializedName("MemAvailable")
     @Expose
     private Float MemAvailable;
-    
 
     /**
     * cdh实例总磁盘大小（单位为:GiB）
@@ -44,7 +40,6 @@ public class HostResource  extends AbstractModel{
     @SerializedName("DiskTotal")
     @Expose
     private Integer DiskTotal;
-    
 
     /**
     * cdh实例可用磁盘大小（单位为:GiB）
@@ -52,7 +47,6 @@ public class HostResource  extends AbstractModel{
     @SerializedName("DiskAvailable")
     @Expose
     private Integer DiskAvailable;
-    
 
     /**
      * 获取cdh实例总cpu核数

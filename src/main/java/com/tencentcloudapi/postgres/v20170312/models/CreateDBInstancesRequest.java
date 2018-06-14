@@ -12,7 +12,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
@@ -20,7 +19,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
-    
 
     /**
     * PostgreSQL内核版本，目前只支持：9.3.5、9.5.4两种版本。
@@ -28,7 +26,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
-    
 
     /**
     * 实例容量大小，单位：GB。
@@ -36,7 +33,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("Storage")
     @Expose
     private Integer Storage;
-    
 
     /**
     * 一次性购买的实例数量。
@@ -44,7 +40,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceCount")
     @Expose
     private Integer InstanceCount;
-    
 
     /**
     * 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
@@ -52,7 +47,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Integer Period;
-    
 
     /**
     * 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
@@ -60,7 +54,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
-    
 
     /**
     * 是否自动使用代金券。1（是），0（否），默认不使用。
@@ -68,7 +61,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("AutoVoucher")
     @Expose
     private Integer AutoVoucher;
-    
 
     /**
     * 代金券ID列表，目前仅支持指定一张代金券。
@@ -76,7 +68,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
-    
 
     /**
     * 私有网络ID。
@@ -84,7 +75,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 私有网络子网ID。
@@ -92,7 +82,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
@@ -100,7 +89,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
      * 获取项目ID。

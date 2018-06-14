@@ -14,7 +14,6 @@ public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private FilterObject [] Filters;
-    
 
     /**
     * 偏移量
@@ -22,7 +21,6 @@ public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private String Offset;
-    
 
     /**
     * 返回数量
@@ -30,7 +28,6 @@ public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private String Limit;
-    
 
     /**
      * 获取过滤条件。

@@ -12,7 +12,6 @@ public class ShardZoneChooseInfo  extends AbstractModel{
     @SerializedName("MasterZone")
     @Expose
     private ZonesInfo MasterZone;
-    
 
     /**
     * 可选的从可用区
@@ -20,7 +19,6 @@ public class ShardZoneChooseInfo  extends AbstractModel{
     @SerializedName("SlaveZones")
     @Expose
     private ZonesInfo [] SlaveZones;
-    
 
     /**
      * 获取主可用区

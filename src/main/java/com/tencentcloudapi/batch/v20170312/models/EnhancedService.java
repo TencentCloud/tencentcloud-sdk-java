@@ -12,7 +12,6 @@ public class EnhancedService  extends AbstractModel{
     @SerializedName("SecurityService")
     @Expose
     private RunSecurityServiceEnabled SecurityService;
-    
 
     /**
     * 开启云安全服务。若不指定该参数，则默认开启云监控服务。
@@ -20,7 +19,6 @@ public class EnhancedService  extends AbstractModel{
     @SerializedName("MonitorService")
     @Expose
     private RunMonitorServiceEnabled MonitorService;
-    
 
     /**
      * 获取开启云安全服务。若不指定该参数，则默认开启云安全服务。

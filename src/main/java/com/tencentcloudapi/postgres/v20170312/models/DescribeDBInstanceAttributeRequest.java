@@ -12,7 +12,6 @@ public class DescribeDBInstanceAttributeRequest  extends AbstractModel{
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
-    
 
     /**
      * 获取实例ID。

@@ -12,7 +12,6 @@ public class BinlogInfo  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 备份文件大小，单位：Byte
@@ -20,7 +19,6 @@ public class BinlogInfo  extends AbstractModel{
     @SerializedName("Size")
     @Expose
     private Integer Size;
-    
 
     /**
     * 备份快照时间，时间格式：2016-03-17 02:10:37
@@ -28,7 +26,6 @@ public class BinlogInfo  extends AbstractModel{
     @SerializedName("Date")
     @Expose
     private String Date;
-    
 
     /**
     * 内网下载地址
@@ -36,7 +33,6 @@ public class BinlogInfo  extends AbstractModel{
     @SerializedName("IntranetUrl")
     @Expose
     private String IntranetUrl;
-    
 
     /**
     * 外网下载地址
@@ -44,7 +40,6 @@ public class BinlogInfo  extends AbstractModel{
     @SerializedName("InternetUrl")
     @Expose
     private String InternetUrl;
-    
 
     /**
     * 日志具体类型，可能的值有：binlog - 二进制日志
@@ -52,7 +47,6 @@ public class BinlogInfo  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
-    
 
     /**
      * 获取备份文件名

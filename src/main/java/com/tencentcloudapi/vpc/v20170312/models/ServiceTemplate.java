@@ -12,7 +12,6 @@ public class ServiceTemplate  extends AbstractModel{
     @SerializedName("ServiceTemplateId")
     @Expose
     private String ServiceTemplateId;
-    
 
     /**
     * 模板名称。
@@ -20,7 +19,6 @@ public class ServiceTemplate  extends AbstractModel{
     @SerializedName("ServiceTemplateName")
     @Expose
     private String ServiceTemplateName;
-    
 
     /**
     * 协议端口信息。
@@ -28,7 +26,6 @@ public class ServiceTemplate  extends AbstractModel{
     @SerializedName("ServiceSet")
     @Expose
     private String [] ServiceSet;
-    
 
     /**
     * 创建时间。
@@ -36,7 +33,6 @@ public class ServiceTemplate  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取协议端口实例ID，例如：ppm-f5n1f8da。

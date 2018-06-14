@@ -12,7 +12,6 @@ public class EventVar  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 自定义值
@@ -20,7 +19,6 @@ public class EventVar  extends AbstractModel{
     @SerializedName("Value")
     @Expose
     private String Value;
-    
 
     /**
      * 获取自定义键

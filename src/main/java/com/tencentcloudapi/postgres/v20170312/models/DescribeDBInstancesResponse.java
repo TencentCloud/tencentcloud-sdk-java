@@ -12,7 +12,6 @@ public class DescribeDBInstancesResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 实例详细信息集合。
@@ -20,7 +19,6 @@ public class DescribeDBInstancesResponse  extends AbstractModel{
     @SerializedName("DBInstanceSet")
     @Expose
     private DBInstance [] DBInstanceSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeDBInstancesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取查询到的实例数量。

@@ -12,7 +12,6 @@ public class CreateShieldInstanceRequest  extends AbstractModel{
     @SerializedName("AppInfo")
     @Expose
     private AppInfo AppInfo;
-    
 
     /**
     * 加固服务信息
@@ -20,7 +19,6 @@ public class CreateShieldInstanceRequest  extends AbstractModel{
     @SerializedName("ServiceInfo")
     @Expose
     private ServiceInfo ServiceInfo;
-    
 
     /**
      * 获取待加固的应用信息

@@ -12,7 +12,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
-    
 
     /**
     * 欲购买实例的数量，目前只支持购买1个实例
@@ -20,7 +19,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("Count")
     @Expose
     private Integer Count;
-    
 
     /**
     * 欲购买的时长，单位：月。
@@ -28,7 +26,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Integer Period;
-    
 
     /**
     * 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
@@ -36,7 +33,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 虚拟私有网络 ID，不传或传空表示创建为基础网络
@@ -44,7 +40,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 虚拟私有网络子网 ID，VpcId不为空时必填
@@ -52,7 +47,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * 分片内存大小，单位：GB，可以通过 DescribeShardSpec
@@ -61,7 +55,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("ShardMemory")
     @Expose
     private Integer ShardMemory;
-    
 
     /**
     * 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
@@ -70,7 +63,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("ShardStorage")
     @Expose
     private Integer ShardStorage;
-    
 
     /**
     * 单个分片节点个数，可以通过 DescribeShardSpec
@@ -79,7 +71,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("ShardNodeCount")
     @Expose
     private Integer ShardNodeCount;
-    
 
     /**
     * 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
@@ -87,7 +78,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("ShardCount")
     @Expose
     private Integer ShardCount;
-    
 
     /**
     * 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
@@ -95,7 +85,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("DbVersionId")
     @Expose
     private String DbVersionId;
-    
 
     /**
     * 是否自动使用代金券进行支付，默认不使用。
@@ -103,7 +92,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("AutoVoucher")
     @Expose
     private Boolean AutoVoucher;
-    
 
     /**
     * 代金券ID列表，目前仅支持指定一张代金券。
@@ -111,7 +99,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
-    
 
     /**
      * 获取分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。

@@ -12,7 +12,6 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     @SerializedName("Module")
     @Expose
     private String Module;
-    
 
     /**
     * 操作名
@@ -20,7 +19,6 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     @SerializedName("Operation")
     @Expose
     private String Operation;
-    
 
     /**
     * 任务ID
@@ -28,7 +26,6 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     @SerializedName("TaskId")
     @Expose
     private Integer TaskId;
-    
 
     /**
      * 获取模块名

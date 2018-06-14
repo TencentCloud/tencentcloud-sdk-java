@@ -12,7 +12,6 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
@@ -20,7 +19,6 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
-    
 
     /**
     * 存储容量大小，单位：GB。
@@ -28,7 +26,6 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("Storage")
     @Expose
     private Integer Storage;
-    
 
     /**
     * 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
@@ -36,7 +33,6 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceCount")
     @Expose
     private Integer InstanceCount;
-    
 
     /**
     * 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
@@ -44,7 +40,6 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Integer Period;
-    
 
     /**
     * 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
@@ -52,7 +47,6 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("Pid")
     @Expose
     private Integer Pid;
-    
 
     /**
     * 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
@@ -60,7 +54,6 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
-    
 
     /**
      * 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。

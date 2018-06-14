@@ -12,7 +12,6 @@ public class CreateScanInstancesRequest  extends AbstractModel{
     @SerializedName("AppInfos")
     @Expose
     private AppInfo [] AppInfos;
-    
 
     /**
     * 扫描信息
@@ -20,7 +19,6 @@ public class CreateScanInstancesRequest  extends AbstractModel{
     @SerializedName("ScanInfo")
     @Expose
     private ScanInfo ScanInfo;
-    
 
     /**
      * 获取待扫描的app信息列表，一次最多提交20个

@@ -12,7 +12,6 @@ public class DetachNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
-    
 
     /**
     * CVM实例ID。形如：ins-r8hr2upy。
@@ -20,7 +19,6 @@ public class DetachNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
      * 获取弹性网卡实例ID，例如：eni-m6dyj72l。

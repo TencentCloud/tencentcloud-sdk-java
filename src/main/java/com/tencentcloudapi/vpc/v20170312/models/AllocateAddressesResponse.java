@@ -12,7 +12,6 @@ public class AllocateAddressesResponse  extends AbstractModel{
     @SerializedName("AddressSet")
     @Expose
     private String [] AddressSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class AllocateAddressesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取申请到的 EIP 的唯一 ID 列表。

@@ -12,7 +12,6 @@ public class CreateServiceTemplateGroupRequest  extends AbstractModel{
     @SerializedName("ServiceTemplateGroupName")
     @Expose
     private String ServiceTemplateGroupName;
-    
 
     /**
     * 协议端口模板实例ID，例如：ppm-4dw6agho。
@@ -20,7 +19,6 @@ public class CreateServiceTemplateGroupRequest  extends AbstractModel{
     @SerializedName("ServiceTemplateIds")
     @Expose
     private String [] ServiceTemplateIds;
-    
 
     /**
      * 获取协议端口模板集合名称

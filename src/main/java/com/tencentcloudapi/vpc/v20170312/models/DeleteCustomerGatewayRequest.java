@@ -12,7 +12,6 @@ public class DeleteCustomerGatewayRequest  extends AbstractModel{
     @SerializedName("CustomerGatewayId")
     @Expose
     private String CustomerGatewayId;
-    
 
     /**
      * 获取对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。

@@ -12,7 +12,6 @@ public class DrInfo  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer Status;
-    
 
     /**
     * 可用区信息
@@ -20,7 +19,6 @@ public class DrInfo  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 实例ID
@@ -28,7 +26,6 @@ public class DrInfo  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 地域信息
@@ -36,7 +33,6 @@ public class DrInfo  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 实例同步状态
@@ -44,7 +40,6 @@ public class DrInfo  extends AbstractModel{
     @SerializedName("SyncStatus")
     @Expose
     private Integer SyncStatus;
-    
 
     /**
     * 实例名称
@@ -52,7 +47,6 @@ public class DrInfo  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 实例类型
@@ -60,7 +54,6 @@ public class DrInfo  extends AbstractModel{
     @SerializedName("InstanceType")
     @Expose
     private Integer InstanceType;
-    
 
     /**
      * 获取灾备实例状态

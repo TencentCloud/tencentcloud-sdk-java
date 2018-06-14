@@ -12,7 +12,6 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -21,7 +20,6 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -30,7 +28,6 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     @SerializedName("Storage")
     @Expose
     private Integer Storage;
-    
 
     /**
     * 是否自动使用代金券进行支付，默认不使用。
@@ -38,7 +35,6 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     @SerializedName("AutoVoucher")
     @Expose
     private Boolean AutoVoucher;
-    
 
     /**
     * 代金券ID列表，目前仅支持指定一张代金券。
@@ -46,7 +42,6 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     @SerializedName("VoucherIds")
     @Expose
     private String VoucherIds;
-    
 
     /**
      * 获取待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

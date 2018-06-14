@@ -12,7 +12,6 @@ public class ServiceTemplateGroup  extends AbstractModel{
     @SerializedName("ServiceTemplateGroupId")
     @Expose
     private String ServiceTemplateGroupId;
-    
 
     /**
     * 协议端口模板集合名称。
@@ -20,7 +19,6 @@ public class ServiceTemplateGroup  extends AbstractModel{
     @SerializedName("ServiceTemplateGroupName")
     @Expose
     private String ServiceTemplateGroupName;
-    
 
     /**
     * 协议端口模板实例ID。
@@ -28,7 +26,6 @@ public class ServiceTemplateGroup  extends AbstractModel{
     @SerializedName("ServiceTemplateIdSet")
     @Expose
     private String [] ServiceTemplateIdSet;
-    
 
     /**
     * 创建时间。
@@ -36,7 +33,6 @@ public class ServiceTemplateGroup  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取协议端口模板集合实例ID，例如：ppmg-2klmrefu。

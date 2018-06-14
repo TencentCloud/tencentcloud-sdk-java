@@ -12,7 +12,6 @@ public class DescribeTaskResponse  extends AbstractModel{
     @SerializedName("JobId")
     @Expose
     private String JobId;
-    
 
     /**
     * 任务名称
@@ -20,7 +19,6 @@ public class DescribeTaskResponse  extends AbstractModel{
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
-    
 
     /**
     * 任务状态
@@ -28,7 +26,6 @@ public class DescribeTaskResponse  extends AbstractModel{
     @SerializedName("TaskState")
     @Expose
     private String TaskState;
-    
 
     /**
     * 创建时间
@@ -36,7 +33,6 @@ public class DescribeTaskResponse  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 结束时间
@@ -44,7 +40,6 @@ public class DescribeTaskResponse  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
     * 任务实例总数
@@ -52,7 +47,6 @@ public class DescribeTaskResponse  extends AbstractModel{
     @SerializedName("TaskInstanceTotalCount")
     @Expose
     private Integer TaskInstanceTotalCount;
-    
 
     /**
     * 任务实例信息
@@ -60,7 +54,6 @@ public class DescribeTaskResponse  extends AbstractModel{
     @SerializedName("TaskInstanceSet")
     @Expose
     private TaskInstanceView [] TaskInstanceSet;
-    
 
     /**
     * 任务实例统计指标
@@ -68,7 +61,6 @@ public class DescribeTaskResponse  extends AbstractModel{
     @SerializedName("TaskInstanceMetrics")
     @Expose
     private TaskInstanceMetrics TaskInstanceMetrics;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -76,7 +68,6 @@ public class DescribeTaskResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取作业ID

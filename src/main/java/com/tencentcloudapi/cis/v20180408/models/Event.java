@@ -12,7 +12,6 @@ public class Event  extends AbstractModel{
     @SerializedName("FirstSeen")
     @Expose
     private String FirstSeen;
-    
 
     /**
     * 事件上次出现时间
@@ -20,7 +19,6 @@ public class Event  extends AbstractModel{
     @SerializedName("LastSeen")
     @Expose
     private String LastSeen;
-    
 
     /**
     * 事件等级
@@ -28,7 +26,6 @@ public class Event  extends AbstractModel{
     @SerializedName("Level")
     @Expose
     private String Level;
-    
 
     /**
     * 事件出现次数
@@ -36,7 +33,6 @@ public class Event  extends AbstractModel{
     @SerializedName("Count")
     @Expose
     private String Count;
-    
 
     /**
     * 事件出现原因
@@ -44,7 +40,6 @@ public class Event  extends AbstractModel{
     @SerializedName("Reason")
     @Expose
     private String Reason;
-    
 
     /**
     * 事件消息
@@ -52,7 +47,6 @@ public class Event  extends AbstractModel{
     @SerializedName("Message")
     @Expose
     private String Message;
-    
 
     /**
      * 获取事件首次出现时间

@@ -12,7 +12,6 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 私有网络名称，可任意命名，但不得超过60个字符。
@@ -20,7 +19,6 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
-    
 
     /**
     * 是否开启组播。true: 开启, false: 关闭。
@@ -28,7 +26,6 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     @SerializedName("EnableMulticast")
     @Expose
     private String EnableMulticast;
-    
 
     /**
     * DNS地址，最多支持4个，第1个默认为主，其余为备
@@ -36,7 +33,6 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     @SerializedName("DnsServers")
     @Expose
     private String [] DnsServers;
-    
 
     /**
     * 域名
@@ -44,7 +40,6 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
-    
 
     /**
      * 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。

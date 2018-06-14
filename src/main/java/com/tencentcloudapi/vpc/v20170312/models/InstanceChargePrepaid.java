@@ -12,7 +12,6 @@ public class InstanceChargePrepaid  extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Integer Period;
-    
 
     /**
     * 自动续费标识。取值范围： NOTIFY_AND_AUTO_RENEW：通知过期且自动续费， NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费。默认：NOTIFY_AND_MANUAL_RENEW
@@ -20,7 +19,6 @@ public class InstanceChargePrepaid  extends AbstractModel{
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
-    
 
     /**
      * 获取购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。

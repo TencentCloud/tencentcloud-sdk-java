@@ -12,7 +12,6 @@ public class CreateAddressTemplateGroupResponse  extends AbstractModel{
     @SerializedName("AddressTemplateGroup")
     @Expose
     private AddressTemplateGroup AddressTemplateGroup;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class CreateAddressTemplateGroupResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取IP地址模板集合对象。

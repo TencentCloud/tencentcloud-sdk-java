@@ -12,7 +12,6 @@ public class RedirectInfo  extends AbstractModel{
     @SerializedName("StdoutRedirectPath")
     @Expose
     private String StdoutRedirectPath;
-    
 
     /**
     * 标准错误重定向路径
@@ -20,7 +19,6 @@ public class RedirectInfo  extends AbstractModel{
     @SerializedName("StderrRedirectPath")
     @Expose
     private String StderrRedirectPath;
-    
 
     /**
     * 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
@@ -28,7 +26,6 @@ public class RedirectInfo  extends AbstractModel{
     @SerializedName("StdoutRedirectFileName")
     @Expose
     private String StdoutRedirectFileName;
-    
 
     /**
     * 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
@@ -36,7 +33,6 @@ public class RedirectInfo  extends AbstractModel{
     @SerializedName("StderrRedirectFileName")
     @Expose
     private String StderrRedirectFileName;
-    
 
     /**
      * 获取标准输出重定向路径

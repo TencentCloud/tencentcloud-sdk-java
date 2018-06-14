@@ -12,7 +12,6 @@ public class SpeechTranslateRequest  extends AbstractModel{
     @SerializedName("SessionUuid")
     @Expose
     private String SessionUuid;
-    
 
     /**
     * 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
@@ -20,7 +19,6 @@ public class SpeechTranslateRequest  extends AbstractModel{
     @SerializedName("Source")
     @Expose
     private String Source;
-    
 
     /**
     * 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
@@ -28,7 +26,6 @@ public class SpeechTranslateRequest  extends AbstractModel{
     @SerializedName("Target")
     @Expose
     private String Target;
-    
 
     /**
     * pcm : 146   amr : 33554432   mp3 : 83886080
@@ -36,7 +33,6 @@ public class SpeechTranslateRequest  extends AbstractModel{
     @SerializedName("AudioFormat")
     @Expose
     private Integer AudioFormat;
-    
 
     /**
     * 语音分片后的第几片
@@ -44,7 +40,6 @@ public class SpeechTranslateRequest  extends AbstractModel{
     @SerializedName("Seq")
     @Expose
     private Integer Seq;
-    
 
     /**
     * 是否最后一片
@@ -52,7 +47,6 @@ public class SpeechTranslateRequest  extends AbstractModel{
     @SerializedName("IsEnd")
     @Expose
     private Integer IsEnd;
-    
 
     /**
     * 语音分片内容的base64字符串
@@ -60,7 +54,6 @@ public class SpeechTranslateRequest  extends AbstractModel{
     @SerializedName("Data")
     @Expose
     private String Data;
-    
 
     /**
     * 项目id
@@ -68,7 +61,6 @@ public class SpeechTranslateRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
      * 获取一段完整的语音对应一个SessionUuid

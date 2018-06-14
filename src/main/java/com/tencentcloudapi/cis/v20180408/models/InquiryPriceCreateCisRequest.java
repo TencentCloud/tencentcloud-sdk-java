@@ -12,7 +12,6 @@ public class InquiryPriceCreateCisRequest  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * CPU，单位：核
@@ -20,7 +19,6 @@ public class InquiryPriceCreateCisRequest  extends AbstractModel{
     @SerializedName("Cpu")
     @Expose
     private Float Cpu;
-    
 
     /**
     * 内存，单位：Gi
@@ -28,7 +26,6 @@ public class InquiryPriceCreateCisRequest  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Float Memory;
-    
 
     /**
      * 获取可用区

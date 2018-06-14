@@ -12,7 +12,6 @@ public class DescribeConfigResponse  extends AbstractModel{
     @SerializedName("NoticeLevel")
     @Expose
     private String NoticeLevel;
-    
 
     /**
     * 配置ID。
@@ -20,7 +19,6 @@ public class DescribeConfigResponse  extends AbstractModel{
     @SerializedName("Id")
     @Expose
     private Integer Id;
-    
 
     /**
     * 记录创建时间。
@@ -28,7 +26,6 @@ public class DescribeConfigResponse  extends AbstractModel{
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
-    
 
     /**
     * 记录更新新建。
@@ -36,7 +33,13 @@ public class DescribeConfigResponse  extends AbstractModel{
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
-    
+
+    /**
+    * 云用户appid。
+    */
+    @SerializedName("Appid")
+    @Expose
+    private Integer Appid;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -44,7 +47,6 @@ public class DescribeConfigResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
@@ -111,6 +113,22 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
+     * 获取云用户appid。
+     * @return Appid 云用户appid。
+     */
+    public Integer getAppid() {
+        return this.Appid;
+    }
+
+    /**
+     * 设置云用户appid。
+     * @param Appid 云用户appid。
+     */
+    public void setAppid(Integer Appid) {
+        this.Appid = Appid;
+    }
+
+    /**
      * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
@@ -134,6 +152,7 @@ public class DescribeConfigResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "Appid", this.Appid);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -12,7 +12,6 @@ public class DescribeProductConfigRequest  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
      * 获取可用区名称

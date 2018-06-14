@@ -12,7 +12,6 @@ public class ModifyKeyPairAttributeRequest  extends AbstractModel{
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
-    
 
     /**
     * 修改后的密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
@@ -20,7 +19,6 @@ public class ModifyKeyPairAttributeRequest  extends AbstractModel{
     @SerializedName("KeyName")
     @Expose
     private String KeyName;
-    
 
     /**
     * 修改后的密钥对描述信息。可任意命名，但不得超过60个字符。
@@ -28,7 +26,6 @@ public class ModifyKeyPairAttributeRequest  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
      * 获取密钥对ID，密钥对ID形如：`skey-xxxxxxxx`。<br><br>可以通过以下方式获取可用的密钥 ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥 ID。<br><li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回信息中的 `KeyId` 获取密钥对 ID。

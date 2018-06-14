@@ -12,7 +12,6 @@ public class LogFileInfo  extends AbstractModel{
     @SerializedName("Mtime")
     @Expose
     private Integer Mtime;
-    
 
     /**
     * 文件长度
@@ -20,7 +19,6 @@ public class LogFileInfo  extends AbstractModel{
     @SerializedName("Length")
     @Expose
     private Integer Length;
-    
 
     /**
     * 下载Log时用到的统一资源标识符
@@ -28,7 +26,6 @@ public class LogFileInfo  extends AbstractModel{
     @SerializedName("Uri")
     @Expose
     private Integer Uri;
-    
 
     /**
      * 获取Log最后修改时间

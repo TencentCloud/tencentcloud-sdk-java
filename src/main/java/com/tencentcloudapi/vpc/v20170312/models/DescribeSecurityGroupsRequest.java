@@ -12,7 +12,6 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
-    
 
     /**
     * 过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
@@ -22,7 +21,6 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量。
@@ -30,7 +28,6 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private String Offset;
-    
 
     /**
     * 返回数量。
@@ -38,7 +35,6 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private String Limit;
-    
 
     /**
      * 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。

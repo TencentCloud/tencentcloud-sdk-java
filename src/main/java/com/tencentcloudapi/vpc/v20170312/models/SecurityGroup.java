@@ -12,7 +12,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
-    
 
     /**
     * 安全组实例ID，例如：sg-ohuuioma。
@@ -20,7 +19,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
-    
 
     /**
     * 安全组名称，可任意命名，但不得超过60个字符。
@@ -28,7 +26,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("SecurityGroupName")
     @Expose
     private String SecurityGroupName;
-    
 
     /**
     * 安全组备注，最多100个字符。
@@ -36,7 +33,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("SecurityGroupDesc")
     @Expose
     private String SecurityGroupDesc;
-    
 
     /**
     * 是否是默认安全组，默认安全组不支持删除。
@@ -44,7 +40,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
-    
 
     /**
     * 安全组创建时间。
@@ -52,7 +47,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。

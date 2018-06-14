@@ -12,7 +12,6 @@ public class DBParamValue  extends AbstractModel{
     @SerializedName("Param")
     @Expose
     private String Param;
-    
 
     /**
     * 参数值
@@ -20,7 +19,6 @@ public class DBParamValue  extends AbstractModel{
     @SerializedName("Value")
     @Expose
     private String Value;
-    
 
     /**
      * 获取参数名称

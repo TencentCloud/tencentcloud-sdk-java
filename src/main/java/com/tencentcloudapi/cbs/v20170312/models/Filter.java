@@ -12,7 +12,6 @@ public class Filter  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 一个或者多个过滤值。
@@ -20,7 +19,6 @@ public class Filter  extends AbstractModel{
     @SerializedName("Values")
     @Expose
     private String [] Values;
-    
 
     /**
      * 获取过滤键的名称。

@@ -12,7 +12,6 @@ public class DescribeImagesResponse  extends AbstractModel{
     @SerializedName("ImageSet")
     @Expose
     private Image [] ImageSet;
-    
 
     /**
     * 符合要求的镜像数量。
@@ -20,7 +19,6 @@ public class DescribeImagesResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeImagesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。

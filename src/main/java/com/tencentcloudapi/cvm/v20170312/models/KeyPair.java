@@ -12,7 +12,6 @@ public class KeyPair  extends AbstractModel{
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
-    
 
     /**
     * 密钥对名称。
@@ -20,7 +19,6 @@ public class KeyPair  extends AbstractModel{
     @SerializedName("KeyName")
     @Expose
     private String KeyName;
-    
 
     /**
     * 密钥对所属的项目`ID`。
@@ -28,7 +26,6 @@ public class KeyPair  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
-    
 
     /**
     * 密钥对描述信息。
@@ -36,7 +33,6 @@ public class KeyPair  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
     * 密钥对的纯文本公钥。
@@ -44,7 +40,6 @@ public class KeyPair  extends AbstractModel{
     @SerializedName("PublicKey")
     @Expose
     private String PublicKey;
-    
 
     /**
     * 密钥对的纯文本私钥。腾讯云不会保管私钥，请用户自行妥善保存。
@@ -52,7 +47,6 @@ public class KeyPair  extends AbstractModel{
     @SerializedName("PrivateKey")
     @Expose
     private String PrivateKey;
-    
 
     /**
     * 密钥关联的实例`ID`列表。
@@ -60,7 +54,6 @@ public class KeyPair  extends AbstractModel{
     @SerializedName("AssociatedInstanceIds")
     @Expose
     private String [] AssociatedInstanceIds;
-    
 
     /**
     * 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
@@ -68,7 +61,6 @@ public class KeyPair  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取密钥对的`ID`，是密钥对的唯一标识。

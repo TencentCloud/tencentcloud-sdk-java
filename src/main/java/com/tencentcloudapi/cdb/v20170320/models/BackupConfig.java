@@ -12,7 +12,6 @@ public class BackupConfig  extends AbstractModel{
     @SerializedName("ReplicationMode")
     @Expose
     private String ReplicationMode;
-    
 
     /**
     * 第二个从库可用区的正式名称，如ap-shanghai-1
@@ -20,7 +19,6 @@ public class BackupConfig  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 第二个从库内网IP地址
@@ -28,7 +26,6 @@ public class BackupConfig  extends AbstractModel{
     @SerializedName("Vip")
     @Expose
     private String Vip;
-    
 
     /**
     * 第二个从库访问端口
@@ -36,7 +33,6 @@ public class BackupConfig  extends AbstractModel{
     @SerializedName("Vport")
     @Expose
     private String Vport;
-    
 
     /**
      * 获取第二个从库复制方式，可能的返回值：aysnc-异步，semisync-半同步

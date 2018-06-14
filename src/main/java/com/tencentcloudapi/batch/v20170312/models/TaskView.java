@@ -12,7 +12,6 @@ public class TaskView  extends AbstractModel{
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
-    
 
     /**
     * 任务状态
@@ -20,7 +19,6 @@ public class TaskView  extends AbstractModel{
     @SerializedName("TaskState")
     @Expose
     private String TaskState;
-    
 
     /**
     * 开始时间
@@ -28,7 +26,6 @@ public class TaskView  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 结束时间
@@ -36,7 +33,6 @@ public class TaskView  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
      * 获取任务名称

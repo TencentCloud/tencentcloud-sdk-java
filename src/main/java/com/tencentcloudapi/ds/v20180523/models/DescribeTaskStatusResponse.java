@@ -12,7 +12,6 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     @SerializedName("TaskResult")
     @Expose
     private String TaskResult;
-    
 
     /**
     * 任务类型，010代表合同上传结果，020代表合同下载结果
@@ -20,7 +19,6 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取任务结果

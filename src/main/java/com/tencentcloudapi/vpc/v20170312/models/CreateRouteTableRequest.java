@@ -12,7 +12,6 @@ public class CreateRouteTableRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 路由表名称，最大长度不能超过60个字节。
@@ -20,7 +19,6 @@ public class CreateRouteTableRequest  extends AbstractModel{
     @SerializedName("RouteTableName")
     @Expose
     private String RouteTableName;
-    
 
     /**
      * 获取待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。

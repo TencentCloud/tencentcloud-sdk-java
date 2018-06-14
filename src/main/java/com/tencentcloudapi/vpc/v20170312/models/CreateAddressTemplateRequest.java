@@ -12,7 +12,6 @@ public class CreateAddressTemplateRequest  extends AbstractModel{
     @SerializedName("AddressTemplateName")
     @Expose
     private String AddressTemplateName;
-    
 
     /**
     * 地址信息，支持 IP、CIDR、IP 范围。
@@ -20,7 +19,6 @@ public class CreateAddressTemplateRequest  extends AbstractModel{
     @SerializedName("Addresses")
     @Expose
     private String [] Addresses;
-    
 
     /**
      * 获取IP地址模版名称

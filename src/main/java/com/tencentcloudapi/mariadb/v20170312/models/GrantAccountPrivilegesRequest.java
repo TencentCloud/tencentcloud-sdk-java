@@ -12,7 +12,6 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 登录用户名。
@@ -20,7 +19,6 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 用户允许的访问 host，用户名+host唯一确定一个账号。
@@ -28,7 +26,6 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
     * 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
@@ -36,7 +33,6 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("DbName")
     @Expose
     private String DbName;
-    
 
     /**
     * 类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示设置该数据库权限（即db.\*），此时忽略 Object 参数
@@ -44,7 +40,6 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
-    
 
     /**
     * 具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
@@ -52,7 +47,6 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("Object")
     @Expose
     private String Object;
-    
 
     /**
     * 当 Type=table 时，ColName 为 \* 表示对表授权，如果为具体字段名，表示对字段授权
@@ -60,7 +54,6 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("ColName")
     @Expose
     private String ColName;
-    
 
     /**
     * 全局权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER，SHOW DATABASES 
@@ -72,7 +65,6 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("Privileges")
     @Expose
     private String [] Privileges;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

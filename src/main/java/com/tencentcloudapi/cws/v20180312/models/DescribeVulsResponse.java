@@ -12,7 +12,6 @@ public class DescribeVulsResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 漏洞信息列表。
@@ -20,7 +19,6 @@ public class DescribeVulsResponse  extends AbstractModel{
     @SerializedName("Vuls")
     @Expose
     private Vul [] Vuls;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeVulsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取漏洞数量。

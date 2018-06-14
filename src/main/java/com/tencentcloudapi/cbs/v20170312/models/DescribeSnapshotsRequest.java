@@ -12,7 +12,6 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     @SerializedName("SnapshotIds")
     @Expose
     private String [] SnapshotIds;
-    
 
     /**
     * 过滤条件。参数不支持同时指定`SnapshotIds`和`Filters`。<br><li>snapshot-id - Array of String - 是否必填：否 -（过滤条件）按照快照的ID过滤。快照ID形如：`snap-11112222`。<br><li>snapshot-name - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。<br><li>snapshot-state - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤。 (NORMAL：正常 | CREATING：创建中 | ROLLBACKING：回滚中。)<br><li>disk-usage - Array of String - 是否必填：否 -（过滤条件）按创建快照的云盘类型过滤。 (SYSTEM_DISK：代表系统盘 | DATA_DISK：代表数据盘。)<br><li>project-id  - Array of String - 是否必填：否 -（过滤条件）按云硬盘所属项目ID过滤。<br><li>disk-id  - Array of String - 是否必填：否 -（过滤条件）按照创建快照的云硬盘ID过滤。<br><li>zone - Array of String - 是否必填：否 -（过滤条件）按照[可用区](/document/api/213/9452#zone)过滤。<br><li>encrypt - Array of String - 是否必填：否 -（过滤条件）按是否加密盘快照过滤。 (TRUE：表示加密盘快照 | FALSE：表示非加密盘快照。)
@@ -20,7 +19,6 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
@@ -28,7 +26,6 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/product/362/15633)中的相关小节。
@@ -36,7 +33,6 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
     * 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。
@@ -44,7 +40,6 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     @SerializedName("Order")
     @Expose
     private String Order;
-    
 
     /**
     * 快照列表排序的依据字段。取值范围：<br><li>CREATE_TIME：依据快照的创建时间排序<br>默认按创建时间排序。
@@ -52,7 +47,6 @@ public class DescribeSnapshotsRequest  extends AbstractModel{
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
-    
 
     /**
      * 获取要查询快照的ID列表。参数不支持同时指定`SnapshotIds`和`Filters`。

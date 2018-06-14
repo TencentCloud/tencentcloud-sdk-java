@@ -12,7 +12,6 @@ public class ParamInfo  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 参数值
@@ -20,7 +19,6 @@ public class ParamInfo  extends AbstractModel{
     @SerializedName("Value")
     @Expose
     private String Value;
-    
 
     /**
      * 获取参数名

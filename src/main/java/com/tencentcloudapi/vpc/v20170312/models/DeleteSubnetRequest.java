@@ -12,7 +12,6 @@ public class DeleteSubnetRequest  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
      * 获取子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。

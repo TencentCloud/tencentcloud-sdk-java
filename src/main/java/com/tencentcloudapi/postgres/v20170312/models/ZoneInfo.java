@@ -12,7 +12,6 @@ public class ZoneInfo  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 该可用区的中文名称
@@ -20,7 +19,6 @@ public class ZoneInfo  extends AbstractModel{
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
-    
 
     /**
     * 该可用区对应的数字编号
@@ -28,7 +26,6 @@ public class ZoneInfo  extends AbstractModel{
     @SerializedName("ZoneId")
     @Expose
     private Integer ZoneId;
-    
 
     /**
     * 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
@@ -36,7 +33,6 @@ public class ZoneInfo  extends AbstractModel{
     @SerializedName("ZoneState")
     @Expose
     private String ZoneState;
-    
 
     /**
      * 获取该可用区的英文名称

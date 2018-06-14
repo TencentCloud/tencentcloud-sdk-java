@@ -12,7 +12,6 @@ public class DownloadCustomerGatewayConfigurationRequest  extends AbstractModel{
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
-    
 
     /**
     * VPN通道实例ID。形如：vpnx-f49l6u0z。
@@ -20,7 +19,6 @@ public class DownloadCustomerGatewayConfigurationRequest  extends AbstractModel{
     @SerializedName("VpnConnectionId")
     @Expose
     private String VpnConnectionId;
-    
 
     /**
     * 对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。
@@ -28,7 +26,6 @@ public class DownloadCustomerGatewayConfigurationRequest  extends AbstractModel{
     @SerializedName("CustomerGatewayVendor")
     @Expose
     private CustomerGatewayVendor CustomerGatewayVendor;
-    
 
     /**
     * 通道接入设备物理接口名称。
@@ -36,7 +33,6 @@ public class DownloadCustomerGatewayConfigurationRequest  extends AbstractModel{
     @SerializedName("InterfaceName")
     @Expose
     private String InterfaceName;
-    
 
     /**
      * 获取VPN网关实例ID。

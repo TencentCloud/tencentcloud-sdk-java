@@ -12,7 +12,6 @@ public class DeleteAccountResponse  extends AbstractModel{
     @SerializedName("DelSuccessList")
     @Expose
     private String [] DelSuccessList;
-    
 
     /**
     * 删除失败帐号ID列表
@@ -20,7 +19,6 @@ public class DeleteAccountResponse  extends AbstractModel{
     @SerializedName("DelFailedList")
     @Expose
     private String [] DelFailedList;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DeleteAccountResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取删除成功帐号ID列表

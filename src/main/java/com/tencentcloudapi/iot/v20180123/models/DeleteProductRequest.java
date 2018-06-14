@@ -12,7 +12,6 @@ public class DeleteProductRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
      * 获取产品Id

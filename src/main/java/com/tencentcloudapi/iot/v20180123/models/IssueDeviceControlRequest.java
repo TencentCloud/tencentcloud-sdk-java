@@ -12,7 +12,6 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * 设备名称
@@ -20,7 +19,6 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
-    
 
     /**
     * 控制数据（json）
@@ -28,7 +26,6 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     @SerializedName("ControlData")
     @Expose
     private String ControlData;
-    
 
     /**
      * 获取产品Id

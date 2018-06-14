@@ -12,15 +12,13 @@ public class DescribeSitesVerificationResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 验证信息列表。
     */
     @SerializedName("SitesVerification")
     @Expose
-    private SitesVerification SitesVerification;
-    
+    private SitesVerification [] SitesVerification;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeSitesVerificationResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取验证信息数量。
@@ -50,7 +47,7 @@ public class DescribeSitesVerificationResponse  extends AbstractModel{
      * 获取验证信息列表。
      * @return SitesVerification 验证信息列表。
      */
-    public SitesVerification getSitesVerification() {
+    public SitesVerification [] getSitesVerification() {
         return this.SitesVerification;
     }
 
@@ -58,7 +55,7 @@ public class DescribeSitesVerificationResponse  extends AbstractModel{
      * 设置验证信息列表。
      * @param SitesVerification 验证信息列表。
      */
-    public void setSitesVerification(SitesVerification SitesVerification) {
+    public void setSitesVerification(SitesVerification [] SitesVerification) {
         this.SitesVerification = SitesVerification;
     }
 
@@ -83,7 +80,7 @@ public class DescribeSitesVerificationResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamObj(map, prefix + "SitesVerification.", this.SitesVerification);
+        this.setParamArrayObj(map, prefix + "SitesVerification.", this.SitesVerification);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

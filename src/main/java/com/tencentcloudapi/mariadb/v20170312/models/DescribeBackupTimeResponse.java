@@ -12,7 +12,6 @@ public class DescribeBackupTimeResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 实例备份时间配置信息
@@ -20,7 +19,6 @@ public class DescribeBackupTimeResponse  extends AbstractModel{
     @SerializedName("Items")
     @Expose
     private DBBackupTimeConfig Items;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeBackupTimeResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取返回的配置数量

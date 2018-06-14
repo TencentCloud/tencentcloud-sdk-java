@@ -12,7 +12,6 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     @SerializedName("JobId")
     @Expose
     private String JobId;
-    
 
     /**
     * 作业名称
@@ -20,7 +19,6 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     @SerializedName("JobName")
     @Expose
     private String JobName;
-    
 
     /**
     * 作业描述
@@ -28,7 +26,6 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     @SerializedName("JobDescription")
     @Expose
     private String JobDescription;
-    
 
     /**
     * 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
@@ -36,7 +33,6 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     @SerializedName("Priority")
     @Expose
     private Integer Priority;
-    
 
     /**
     * 任务信息
@@ -44,7 +40,6 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     @SerializedName("Tasks")
     @Expose
     private Task [] Tasks;
-    
 
     /**
     * 依赖信息
@@ -52,7 +47,6 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     @SerializedName("Dependences")
     @Expose
     private Dependence [] Dependences;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -60,7 +54,6 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取作业ID

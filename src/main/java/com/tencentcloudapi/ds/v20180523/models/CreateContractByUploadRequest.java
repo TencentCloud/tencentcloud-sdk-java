@@ -12,7 +12,6 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     @SerializedName("Module")
     @Expose
     private String Module;
-    
 
     /**
     * 操作名
@@ -20,7 +19,6 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     @SerializedName("Operation")
     @Expose
     private String Operation;
-    
 
     /**
     * 签署人信息
@@ -28,7 +26,6 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     @SerializedName("SignInfos")
     @Expose
     private SignInfo [] SignInfos;
-    
 
     /**
     * 合同上传链接地址
@@ -36,7 +33,6 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     @SerializedName("ContractFile")
     @Expose
     private String ContractFile;
-    
 
     /**
     * 合同名称
@@ -44,7 +40,6 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     @SerializedName("ContractName")
     @Expose
     private String ContractName;
-    
 
     /**
     * 备注
@@ -52,7 +47,6 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     @SerializedName("Remarks")
     @Expose
     private String Remarks;
-    
 
     /**
     * 合同发起方帐号ID
@@ -60,7 +54,6 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     @SerializedName("Initiator")
     @Expose
     private String Initiator;
-    
 
     /**
      * 获取模块名

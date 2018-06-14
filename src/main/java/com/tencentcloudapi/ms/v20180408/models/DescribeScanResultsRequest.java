@@ -12,7 +12,6 @@ public class DescribeScanResultsRequest  extends AbstractModel{
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
-    
 
     /**
     * 批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
@@ -20,7 +19,6 @@ public class DescribeScanResultsRequest  extends AbstractModel{
     @SerializedName("AppMd5s")
     @Expose
     private String [] AppMd5s;
-    
 
     /**
      * 获取任务唯一标识

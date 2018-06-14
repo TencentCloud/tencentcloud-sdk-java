@@ -12,7 +12,6 @@ public class SlaveConfig  extends AbstractModel{
     @SerializedName("ReplicationMode")
     @Expose
     private String ReplicationMode;
-    
 
     /**
     * 从库可用区的正式名称，如ap-shanghai-1
@@ -20,7 +19,6 @@ public class SlaveConfig  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
      * 获取从库复制方式，可能的返回值：aysnc-异步，semisync-半同步

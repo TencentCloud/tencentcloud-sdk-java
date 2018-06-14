@@ -12,7 +12,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("VpnConnectionId")
     @Expose
     private String VpnConnectionId;
-    
 
     /**
     * 通道名称。
@@ -20,7 +19,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("VpnConnectionName")
     @Expose
     private String VpnConnectionName;
-    
 
     /**
     * VPC实例ID。
@@ -28,7 +26,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * VPN网关实例ID。
@@ -36,7 +33,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
-    
 
     /**
     * 对端网关实例ID。
@@ -44,7 +40,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("CustomerGatewayId")
     @Expose
     private String CustomerGatewayId;
-    
 
     /**
     * 预共享密钥。
@@ -52,7 +47,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("PreShareKey")
     @Expose
     private String PreShareKey;
-    
 
     /**
     * 通道传输协议。
@@ -60,7 +54,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("VpnProto")
     @Expose
     private String VpnProto;
-    
 
     /**
     * 通道加密协议。
@@ -68,7 +61,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("EncryptProto")
     @Expose
     private String EncryptProto;
-    
 
     /**
     * 路由类型。
@@ -76,7 +68,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("RouteType")
     @Expose
     private String RouteType;
-    
 
     /**
     * 创建时间。
@@ -84,7 +75,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
     * 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
@@ -92,7 +82,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("State")
     @Expose
     private String State;
-    
 
     /**
     * 通道连接状态，AVAILABLE：已连接。
@@ -100,7 +89,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("NetStatus")
     @Expose
     private String NetStatus;
-    
 
     /**
     * SPD。
@@ -108,7 +96,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("SecurityPolicyDatabaseSet")
     @Expose
     private SecurityPolicyDatabase [] SecurityPolicyDatabaseSet;
-    
 
     /**
     * IKE选项。
@@ -116,7 +103,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("IKEOptionsSpecification")
     @Expose
     private IKEOptionsSpecification IKEOptionsSpecification;
-    
 
     /**
     * IPSEC选择。
@@ -124,7 +110,6 @@ public class VpnConnection  extends AbstractModel{
     @SerializedName("IPSECOptionsSpecification")
     @Expose
     private IPSECOptionsSpecification IPSECOptionsSpecification;
-    
 
     /**
      * 获取通道实例ID。

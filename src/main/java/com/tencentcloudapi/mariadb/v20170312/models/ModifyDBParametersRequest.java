@@ -12,7 +12,6 @@ public class ModifyDBParametersRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 参数列表，每一个元素是Param和Value的组合
@@ -20,7 +19,6 @@ public class ModifyDBParametersRequest  extends AbstractModel{
     @SerializedName("Params")
     @Expose
     private DBParamValue [] Params;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc。

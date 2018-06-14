@@ -12,7 +12,6 @@ public class DescribeScanInstancesResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 一个关于app详细信息的结构体，主要包括app的基本信息和扫描状态信息。
@@ -20,7 +19,6 @@ public class DescribeScanInstancesResponse  extends AbstractModel{
     @SerializedName("ScanSet")
     @Expose
     private AppScanSet [] ScanSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeScanInstancesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取符合要求的app数量

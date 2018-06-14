@@ -12,7 +12,6 @@ public class Task  extends AbstractModel{
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
-    
 
     /**
     * 任务实例运行个数
@@ -20,7 +19,6 @@ public class Task  extends AbstractModel{
     @SerializedName("TaskInstanceNum")
     @Expose
     private Integer TaskInstanceNum;
-    
 
     /**
     * 应用程序信息
@@ -28,7 +26,6 @@ public class Task  extends AbstractModel{
     @SerializedName("Application")
     @Expose
     private Application Application;
-    
 
     /**
     * 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
@@ -36,7 +33,6 @@ public class Task  extends AbstractModel{
     @SerializedName("ComputeEnv")
     @Expose
     private AnonymousComputeEnv ComputeEnv;
-    
 
     /**
     * 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
@@ -44,7 +40,6 @@ public class Task  extends AbstractModel{
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
-    
 
     /**
     * 重定向信息
@@ -52,7 +47,6 @@ public class Task  extends AbstractModel{
     @SerializedName("RedirectInfo")
     @Expose
     private RedirectInfo RedirectInfo;
-    
 
     /**
     * 重定向本地信息
@@ -60,7 +54,6 @@ public class Task  extends AbstractModel{
     @SerializedName("RedirectLocalInfo")
     @Expose
     private RedirectLocalInfo RedirectLocalInfo;
-    
 
     /**
     * 输入映射
@@ -68,7 +61,6 @@ public class Task  extends AbstractModel{
     @SerializedName("InputMappings")
     @Expose
     private InputMapping [] InputMappings;
-    
 
     /**
     * 输出映射
@@ -76,7 +68,6 @@ public class Task  extends AbstractModel{
     @SerializedName("OutputMappings")
     @Expose
     private OutputMapping [] OutputMappings;
-    
 
     /**
     * 输出映射配置
@@ -84,7 +75,6 @@ public class Task  extends AbstractModel{
     @SerializedName("OutputMappingConfigs")
     @Expose
     private OutputMappingConfig [] OutputMappingConfigs;
-    
 
     /**
     * 自定义环境变量
@@ -92,7 +82,6 @@ public class Task  extends AbstractModel{
     @SerializedName("EnvVars")
     @Expose
     private Authentication [] EnvVars;
-    
 
     /**
     * 授权信息
@@ -100,7 +89,6 @@ public class Task  extends AbstractModel{
     @SerializedName("Authentications")
     @Expose
     private EnvVar [] Authentications;
-    
 
     /**
     * TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
@@ -108,7 +96,6 @@ public class Task  extends AbstractModel{
     @SerializedName("FailedAction")
     @Expose
     private String FailedAction;
-    
 
     /**
     * 任务失败后的最大重试次数，默认为0
@@ -116,7 +103,6 @@ public class Task  extends AbstractModel{
     @SerializedName("MaxRetryCount")
     @Expose
     private Integer MaxRetryCount;
-    
 
     /**
     * 任务启动后的超时时间，单位秒，默认为3600秒
@@ -124,7 +110,6 @@ public class Task  extends AbstractModel{
     @SerializedName("Timeout")
     @Expose
     private Integer Timeout;
-    
 
     /**
      * 获取任务名称，在一个作业内部唯一

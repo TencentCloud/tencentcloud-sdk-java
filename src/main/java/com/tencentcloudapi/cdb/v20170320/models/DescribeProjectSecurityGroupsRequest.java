@@ -12,7 +12,6 @@ public class DescribeProjectSecurityGroupsRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
      * 获取项目ID。

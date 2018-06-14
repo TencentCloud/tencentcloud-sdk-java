@@ -12,7 +12,6 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
-    
 
     /**
     * 偏移量
@@ -20,7 +19,6 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回数量
@@ -28,7 +26,6 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
     * 过滤条件
@@ -36,7 +33,6 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter Filters;
-    
 
     /**
      * 获取u8ba1u7b97u73afu5883ID

@@ -12,7 +12,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
@@ -20,7 +19,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 项目ID
@@ -28,7 +26,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 私有网络ID
@@ -36,7 +33,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * SubnetId
@@ -44,7 +40,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * 实例ID
@@ -52,7 +47,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
-    
 
     /**
     * 实例名称
@@ -60,7 +54,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBInstanceName")
     @Expose
     private String DBInstanceName;
-    
 
     /**
     * 实例状态
@@ -68,7 +61,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBInstanceStatus")
     @Expose
     private String DBInstanceStatus;
-    
 
     /**
     * 实例分配的内存大小，单位：GB
@@ -76,7 +68,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBInstanceMemory")
     @Expose
     private Integer DBInstanceMemory;
-    
 
     /**
     * 实例分配的存储空间大小，单位：GB
@@ -84,7 +75,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBInstanceStorage")
     @Expose
     private Integer DBInstanceStorage;
-    
 
     /**
     * 实例分配的CPU数量，单位：个
@@ -92,7 +82,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBInstanceCpu")
     @Expose
     private Integer DBInstanceCpu;
-    
 
     /**
     * 售卖规格ID
@@ -100,7 +89,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBInstanceClass")
     @Expose
     private String DBInstanceClass;
-    
 
     /**
     * 实例类型，类型有：1、primary（主实例）；2、readonly（只读实例）；3、guard（灾备实例）；4、temp（临时实例）
@@ -108,7 +96,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBInstanceType")
     @Expose
     private String DBInstanceType;
-    
 
     /**
     * 实例版本，目前只支持standard（双机高可用版, 一主一从）
@@ -116,7 +103,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBInstanceVersion")
     @Expose
     private String DBInstanceVersion;
-    
 
     /**
     * 实例DB字符集
@@ -124,7 +110,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBCharset")
     @Expose
     private String DBCharset;
-    
 
     /**
     * PostgreSQL内核版本
@@ -132,7 +117,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
-    
 
     /**
     * 实例创建时间
@@ -140,7 +124,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 实例执行最后一次更新的时间
@@ -148,7 +131,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
-    
 
     /**
     * 实例到期时间
@@ -156,7 +138,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
-    
 
     /**
     * 实例隔离时间
@@ -164,7 +145,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("IsolatedTime")
     @Expose
     private String IsolatedTime;
-    
 
     /**
     * 计费模式，1、prepaid（包年包月,预付费）；2、postpaid（按量计费，后付费）
@@ -172,7 +152,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("PayType")
     @Expose
     private String PayType;
-    
 
     /**
     * 是否自动续费，1：自动续费，0：不自动续费
@@ -180,7 +159,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("AutoRenew")
     @Expose
     private Integer AutoRenew;
-    
 
     /**
     * 实例网络连接信息
@@ -188,7 +166,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("DBInstanceNetInfo")
     @Expose
     private DBInstanceNetInfo [] DBInstanceNetInfo;
-    
 
     /**
      * 获取实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段

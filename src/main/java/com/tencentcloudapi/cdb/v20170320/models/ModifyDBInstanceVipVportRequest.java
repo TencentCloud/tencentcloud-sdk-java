@@ -12,23 +12,20 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
-    * 目标IP。
+    * 目标IP。该参数和DstPort参数，两者必传一个。
     */
     @SerializedName("DstIp")
     @Expose
     private String DstIp;
-    
 
     /**
-    * 目标端口，支持范围为：[1024-65535]。
+    * 目标端口，支持范围为：[1024-65535]。该参数和DstIp参数，两者必传一个。
     */
     @SerializedName("DstPort")
     @Expose
     private Integer DstPort;
-    
 
     /**
     * 私有网络统一ID。
@@ -36,7 +33,6 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
-    
 
     /**
     * 子网统一ID。
@@ -44,7 +40,6 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
@@ -63,32 +58,32 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标IP。
-     * @return DstIp 目标IP。
+     * 获取目标IP。该参数和DstPort参数，两者必传一个。
+     * @return DstIp 目标IP。该参数和DstPort参数，两者必传一个。
      */
     public String getDstIp() {
         return this.DstIp;
     }
 
     /**
-     * 设置目标IP。
-     * @param DstIp 目标IP。
+     * 设置目标IP。该参数和DstPort参数，两者必传一个。
+     * @param DstIp 目标IP。该参数和DstPort参数，两者必传一个。
      */
     public void setDstIp(String DstIp) {
         this.DstIp = DstIp;
     }
 
     /**
-     * 获取目标端口，支持范围为：[1024-65535]。
-     * @return DstPort 目标端口，支持范围为：[1024-65535]。
+     * 获取目标端口，支持范围为：[1024-65535]。该参数和DstIp参数，两者必传一个。
+     * @return DstPort 目标端口，支持范围为：[1024-65535]。该参数和DstIp参数，两者必传一个。
      */
     public Integer getDstPort() {
         return this.DstPort;
     }
 
     /**
-     * 设置目标端口，支持范围为：[1024-65535]。
-     * @param DstPort 目标端口，支持范围为：[1024-65535]。
+     * 设置目标端口，支持范围为：[1024-65535]。该参数和DstIp参数，两者必传一个。
+     * @param DstPort 目标端口，支持范围为：[1024-65535]。该参数和DstIp参数，两者必传一个。
      */
     public void setDstPort(Integer DstPort) {
         this.DstPort = DstPort;

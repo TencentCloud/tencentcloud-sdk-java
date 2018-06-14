@@ -12,7 +12,6 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
-    
 
     /**
     * 计算环境名称
@@ -20,7 +19,6 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     @SerializedName("EnvName")
     @Expose
     private String EnvName;
-    
 
     /**
     * 位置信息
@@ -28,7 +26,6 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * 计算环境创建时间
@@ -36,7 +33,6 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 计算节点列表信息
@@ -44,7 +40,6 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     @SerializedName("ComputeNodeSet")
     @Expose
     private ComputeNode [] ComputeNodeSet;
-    
 
     /**
     * 计算节点统计指标
@@ -52,7 +47,6 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     @SerializedName("ComputeNodeMetrics")
     @Expose
     private ComputeNodeMetrics ComputeNodeMetrics;
-    
 
     /**
     * 计算节点期望个数
@@ -60,7 +54,6 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     @SerializedName("DesiredComputeNodeCount")
     @Expose
     private Integer DesiredComputeNodeCount;
-    
 
     /**
     * 计算环境类型
@@ -68,7 +61,6 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     @SerializedName("EnvType")
     @Expose
     private String EnvType;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -76,7 +68,6 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取计算环境ID

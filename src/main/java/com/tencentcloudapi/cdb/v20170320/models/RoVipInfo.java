@@ -12,7 +12,6 @@ public class RoVipInfo  extends AbstractModel{
     @SerializedName("RoVipStatus")
     @Expose
     private Integer RoVipStatus;
-    
 
     /**
     * 只读vip的子网
@@ -20,7 +19,6 @@ public class RoVipInfo  extends AbstractModel{
     @SerializedName("RoSubnetId")
     @Expose
     private Integer RoSubnetId;
-    
 
     /**
     * 只读vip的私有网络
@@ -28,7 +26,6 @@ public class RoVipInfo  extends AbstractModel{
     @SerializedName("RoVpcId")
     @Expose
     private Integer RoVpcId;
-    
 
     /**
     * 只读vip的端口号
@@ -36,7 +33,6 @@ public class RoVipInfo  extends AbstractModel{
     @SerializedName("RoVport")
     @Expose
     private Integer RoVport;
-    
 
     /**
     * 只读vip
@@ -44,7 +40,6 @@ public class RoVipInfo  extends AbstractModel{
     @SerializedName("RoVip")
     @Expose
     private String RoVip;
-    
 
     /**
      * 获取只读vip状态

@@ -17,7 +17,6 @@ public class DescribeHostsRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量，默认为0。
@@ -25,7 +24,6 @@ public class DescribeHostsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回数量，默认为20，最大值为100。
@@ -33,7 +31,6 @@ public class DescribeHostsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取过滤条件。

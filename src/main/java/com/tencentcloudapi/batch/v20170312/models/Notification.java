@@ -12,7 +12,6 @@ public class Notification  extends AbstractModel{
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
-    
 
     /**
     * 事件配置
@@ -20,7 +19,6 @@ public class Notification  extends AbstractModel{
     @SerializedName("EventConfigs")
     @Expose
     private EventConfig [] EventConfigs;
-    
 
     /**
      * 获取CMQ主题名字，要求主题名有效且关联订阅

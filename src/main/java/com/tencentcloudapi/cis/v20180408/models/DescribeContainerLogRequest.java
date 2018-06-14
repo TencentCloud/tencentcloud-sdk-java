@@ -12,7 +12,6 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 容器名称
@@ -20,7 +19,6 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     @SerializedName("ContainerName")
     @Expose
     private String ContainerName;
-    
 
     /**
     * 日志显示尾部行数
@@ -28,7 +26,6 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     @SerializedName("Tail")
     @Expose
     private Integer Tail;
-    
 
     /**
     * 日志起始时间
@@ -36,7 +33,6 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     @SerializedName("SinceTime")
     @Expose
     private String SinceTime;
-    
 
     /**
      * 获取容器实例名称

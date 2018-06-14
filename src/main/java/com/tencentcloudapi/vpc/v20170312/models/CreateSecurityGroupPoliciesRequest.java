@@ -12,7 +12,6 @@ public class CreateSecurityGroupPoliciesRequest  extends AbstractModel{
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
-    
 
     /**
     * 安全组规则集合。
@@ -20,7 +19,6 @@ public class CreateSecurityGroupPoliciesRequest  extends AbstractModel{
     @SerializedName("SecurityGroupPolicySet")
     @Expose
     private SecurityGroupPolicySet SecurityGroupPolicySet;
-    
 
     /**
      * 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。

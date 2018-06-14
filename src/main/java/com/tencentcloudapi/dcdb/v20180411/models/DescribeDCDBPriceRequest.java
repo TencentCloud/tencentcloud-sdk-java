@@ -12,7 +12,6 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 欲购买实例的数量，目前只支持购买1个实例
@@ -20,7 +19,6 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     @SerializedName("Count")
     @Expose
     private Integer Count;
-    
 
     /**
     * 欲购买的时长，单位：月。
@@ -28,7 +26,6 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Integer Period;
-    
 
     /**
     * 单个分片节点个数大小，可以通过 DescribeShardSpec
@@ -37,7 +34,6 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     @SerializedName("ShardNodeCount")
     @Expose
     private Integer ShardNodeCount;
-    
 
     /**
     * 分片内存大小，单位：GB，可以通过 DescribeShardSpec
@@ -46,7 +42,6 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     @SerializedName("ShardMemory")
     @Expose
     private Integer ShardMemory;
-    
 
     /**
     * 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
@@ -55,7 +50,6 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     @SerializedName("ShardStorage")
     @Expose
     private Integer ShardStorage;
-    
 
     /**
     * 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
@@ -63,7 +57,6 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     @SerializedName("ShardCount")
     @Expose
     private Integer ShardCount;
-    
 
     /**
      * 获取欲新购实例的可用区ID。

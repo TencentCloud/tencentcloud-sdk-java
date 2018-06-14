@@ -12,7 +12,6 @@ public class TableName  extends AbstractModel{
     @SerializedName("TableName")
     @Expose
     private String TableName;
-    
 
     /**
      * 获取表名

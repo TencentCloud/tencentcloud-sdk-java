@@ -12,7 +12,6 @@ public class DescribeDiskConfigQuotaResponse  extends AbstractModel{
     @SerializedName("DiskConfigSet")
     @Expose
     private DiskConfig [] DiskConfigSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class DescribeDiskConfigQuotaResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取云盘配置列表。

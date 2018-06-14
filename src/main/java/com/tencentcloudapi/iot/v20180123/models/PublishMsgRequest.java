@@ -12,7 +12,6 @@ public class PublishMsgRequest  extends AbstractModel{
     @SerializedName("Topic")
     @Expose
     private String Topic;
-    
 
     /**
     * 消息内容
@@ -20,7 +19,6 @@ public class PublishMsgRequest  extends AbstractModel{
     @SerializedName("Message")
     @Expose
     private String Message;
-    
 
     /**
     * Qos(目前QoS支持0与1)
@@ -28,7 +26,6 @@ public class PublishMsgRequest  extends AbstractModel{
     @SerializedName("Qos")
     @Expose
     private Integer Qos;
-    
 
     /**
      * 获取Topic

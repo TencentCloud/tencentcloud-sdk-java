@@ -12,7 +12,6 @@ public class EnvironmentVar  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 环境变量值
@@ -20,7 +19,6 @@ public class EnvironmentVar  extends AbstractModel{
     @SerializedName("Value")
     @Expose
     private String Value;
-    
 
     /**
      * 获取环境变量名

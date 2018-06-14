@@ -12,7 +12,6 @@ public class DescribeDBPerformanceDetailsRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 开始日期，格式yyyy-mm-dd
@@ -20,7 +19,6 @@ public class DescribeDBPerformanceDetailsRequest  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 结束日期，格式yyyy-mm-dd
@@ -28,7 +26,6 @@ public class DescribeDBPerformanceDetailsRequest  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc。

@@ -12,7 +12,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 实例类型，可取值：1-主实例，2-灾备实例，3-只读实例
@@ -20,7 +19,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceTypes")
     @Expose
     private Integer [] InstanceTypes;
-    
 
     /**
     * 实例的内网IP地址
@@ -28,7 +26,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("Vips")
     @Expose
     private String [] Vips;
-    
 
     /**
     * 实例状态，可取值：0-创建中，1-运行中，4-删除中，5-隔离中
@@ -36,7 +33,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer [] Status;
-    
 
     /**
     * 记录偏移量，默认值为0
@@ -44,7 +40,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 单次请求返回的数量，默认值为20，最大值为100
@@ -52,7 +47,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
     * 安全组ID
@@ -60,7 +54,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
-    
 
     /**
     * 付费类型，可取值：0-包年包月，1-小时计费
@@ -68,7 +61,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("PayTypes")
     @Expose
     private Integer [] PayTypes;
-    
 
     /**
     * 实例名称
@@ -76,7 +68,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceNames")
     @Expose
     private String [] InstanceNames;
-    
 
     /**
     * 实例任务状态，可能取值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中
@@ -84,7 +75,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("TaskStatus")
     @Expose
     private Integer [] TaskStatus;
-    
 
     /**
     * 实例数据库引擎版本，可能取值：5.1、5.5、5.6和5.7
@@ -92,7 +82,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("EngineVersions")
     @Expose
     private String [] EngineVersions;
-    
 
     /**
     * 私有网络的ID
@@ -100,7 +89,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("VpcIds")
     @Expose
     private Integer [] VpcIds;
-    
 
     /**
     * 可用区的ID
@@ -108,7 +96,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("ZoneIds")
     @Expose
     private Integer [] ZoneIds;
-    
 
     /**
     * 子网ID
@@ -116,7 +103,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("SubnetIds")
     @Expose
     private Integer [] SubnetIds;
-    
 
     /**
     * 是否锁定标记
@@ -124,7 +110,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("CdbErrors")
     @Expose
     private Integer [] CdbErrors;
-    
 
     /**
     * 排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
@@ -132,7 +117,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
-    
 
     /**
     * 排序方式，目前支持："ASC"或者"DESC"
@@ -140,7 +124,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
-    
 
     /**
     * 是否包含安全组信息
@@ -148,7 +131,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("WithSecurityGroup")
     @Expose
     private Integer WithSecurityGroup;
-    
 
     /**
     * 是否包含独享集群信息
@@ -156,7 +138,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("WithExCluster")
     @Expose
     private Integer WithExCluster;
-    
 
     /**
     * 独享集群ID
@@ -164,7 +145,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("ExClusterId")
     @Expose
     private String ExClusterId;
-    
 
     /**
     * 实例ID
@@ -172,7 +152,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
     * 初始化标记，可取值：0-未初始化，1-初始化
@@ -180,7 +159,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("InitFlag")
     @Expose
     private Integer InitFlag;
-    
 
     /**
     * 是否包含灾备实例
@@ -188,7 +166,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("WithDr")
     @Expose
     private Integer WithDr;
-    
 
     /**
     * 是否包含只读实例
@@ -196,7 +173,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("WithRo")
     @Expose
     private Integer WithRo;
-    
 
     /**
     * 是否包含主实例
@@ -204,7 +180,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("WithMaster")
     @Expose
     private Integer WithMaster;
-    
 
     /**
      * 获取项目ID，可使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口查询项目ID

@@ -12,7 +12,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
-    
 
     /**
     * 私有网络ID，如果不传则默认选择基础网络，请使用[查询私有网络列表](/document/api/215/15778)
@@ -20,7 +19,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
-    
 
     /**
     * 私有网络下的子网ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)
@@ -28,7 +26,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
-    
 
     /**
     * 项目ID，不填为默认项目。请使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口获取项目ID
@@ -36,7 +33,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 实例数量，默认值为1, 最小值1，最大值为100
@@ -44,7 +40,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("GoodsNum")
     @Expose
     private Integer GoodsNum;
-    
 
     /**
     * 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
@@ -52,7 +47,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
@@ -60,7 +54,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("Volume")
     @Expose
     private Integer Volume;
-    
 
     /**
     * 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
@@ -68,7 +61,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 实例ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例ID，请使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询云数据库实例ID
@@ -76,7 +68,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("MasterInstanceId")
     @Expose
     private String MasterInstanceId;
-    
 
     /**
     * 实例类型，默认为 master，支持值包括：master-表示主实例，dr-表示灾备实例，ro-表示只读实例
@@ -84,7 +75,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("InstanceRole")
     @Expose
     private String InstanceRole;
-    
 
     /**
     * 主实例的可用区信息，购买灾备实例时必填
@@ -92,7 +82,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("MasterRegion")
     @Expose
     private String MasterRegion;
-    
 
     /**
     * 自定义端口，端口支持范围：[ 1024-65535 ]
@@ -100,7 +89,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("Port")
     @Expose
     private Integer Port;
-    
 
     /**
     * 设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
@@ -108,7 +96,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("Password")
     @Expose
     private String Password;
-    
 
     /**
     * 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
@@ -116,7 +103,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("ParamList")
     @Expose
     private ParamInfo [] ParamList;
-    
 
     /**
     * 数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
@@ -124,7 +110,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("ProtectMode")
     @Expose
     private Integer ProtectMode;
-    
 
     /**
     * 多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
@@ -132,7 +117,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("DeployMode")
     @Expose
     private Integer DeployMode;
-    
 
     /**
     * 备库1的可用区ID，默认为zoneId的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
@@ -140,7 +124,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
-    
 
     /**
     * 备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
@@ -148,7 +131,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("BackupZone")
     @Expose
     private String BackupZone;
-    
 
     /**
     * 安全组参数
@@ -156,7 +138,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("SecurityGroup")
     @Expose
     private String [] SecurityGroup;
-    
 
     /**
     * 只读实例信息
@@ -164,7 +145,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("RoGroup")
     @Expose
     private RoGroup RoGroup;
-    
 
     /**
     * 自动续费标记，值为0或1
@@ -172,7 +152,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("AutoRenewFlag")
     @Expose
     private Integer AutoRenewFlag;
-    
 
     /**
     * 实例名称
@@ -180,7 +159,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
      * 获取MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本

@@ -12,7 +12,6 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * 子网名称，最大长度不能超过60个字节。
@@ -20,7 +19,6 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
-    
 
     /**
     * 子网是否开启广播。
@@ -28,7 +26,6 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     @SerializedName("EnableBroadcast")
     @Expose
     private String EnableBroadcast;
-    
 
     /**
      * 获取子网实例ID。形如：subnet-pxir56ns。

@@ -12,7 +12,6 @@ public class DescribeFlowRequest  extends AbstractModel{
     @SerializedName("FlowId")
     @Expose
     private Integer FlowId;
-    
 
     /**
      * 获取异步请求接口返回的任务流程号。

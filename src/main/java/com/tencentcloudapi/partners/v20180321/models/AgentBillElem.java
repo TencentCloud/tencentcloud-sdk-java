@@ -12,7 +12,6 @@ public class AgentBillElem  extends AbstractModel{
     @SerializedName("Uin")
     @Expose
     private String Uin;
-    
 
     /**
     * 订单号，仅对预付费账单有意义
@@ -20,7 +19,6 @@ public class AgentBillElem  extends AbstractModel{
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
-    
 
     /**
     * 代客账号ID
@@ -28,7 +26,6 @@ public class AgentBillElem  extends AbstractModel{
     @SerializedName("ClientUin")
     @Expose
     private String ClientUin;
-    
 
     /**
     * 代客备注名称
@@ -36,7 +33,6 @@ public class AgentBillElem  extends AbstractModel{
     @SerializedName("ClientRemark")
     @Expose
     private String ClientRemark;
-    
 
     /**
     * 支付时间
@@ -44,7 +40,6 @@ public class AgentBillElem  extends AbstractModel{
     @SerializedName("PayTime")
     @Expose
     private String PayTime;
-    
 
     /**
     * 云产品名称
@@ -52,7 +47,6 @@ public class AgentBillElem  extends AbstractModel{
     @SerializedName("GoodsType")
     @Expose
     private String GoodsType;
-    
 
     /**
     * 预付费/后付费
@@ -60,7 +54,6 @@ public class AgentBillElem  extends AbstractModel{
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
-    
 
     /**
     * 支付月份
@@ -68,7 +61,6 @@ public class AgentBillElem  extends AbstractModel{
     @SerializedName("SettleMonth")
     @Expose
     private String SettleMonth;
-    
 
     /**
     * 支付金额，单位分
@@ -76,7 +68,6 @@ public class AgentBillElem  extends AbstractModel{
     @SerializedName("Amt")
     @Expose
     private Integer Amt;
-    
 
     /**
     * agentpay：代付；selfpay：自付
@@ -84,7 +75,6 @@ public class AgentBillElem  extends AbstractModel{
     @SerializedName("PayerMode")
     @Expose
     private String PayerMode;
-    
 
     /**
      * 获取代理商账号ID

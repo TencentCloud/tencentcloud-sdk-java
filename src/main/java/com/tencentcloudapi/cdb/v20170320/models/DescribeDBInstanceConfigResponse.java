@@ -12,7 +12,6 @@ public class DescribeDBInstanceConfigResponse  extends AbstractModel{
     @SerializedName("ProtectMode")
     @Expose
     private Integer ProtectMode;
-    
 
     /**
     * 主库部署方式，主实例属性，可能的返回值：0-单可用部署，1-多可用区部署。
@@ -20,7 +19,6 @@ public class DescribeDBInstanceConfigResponse  extends AbstractModel{
     @SerializedName("DeployMode")
     @Expose
     private Integer DeployMode;
-    
 
     /**
     * 主库可用区的正式名称，如ap-shanghai-1。
@@ -28,7 +26,6 @@ public class DescribeDBInstanceConfigResponse  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 从库的配置信息。
@@ -36,7 +33,6 @@ public class DescribeDBInstanceConfigResponse  extends AbstractModel{
     @SerializedName("SlaveConfig")
     @Expose
     private SlaveConfig SlaveConfig;
-    
 
     /**
     * ECDB第二个从库的配置信息，只有ECDB实例才有这个字段。
@@ -44,7 +40,6 @@ public class DescribeDBInstanceConfigResponse  extends AbstractModel{
     @SerializedName("BackupConfig")
     @Expose
     private BackupConfig BackupConfig;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -52,7 +47,6 @@ public class DescribeDBInstanceConfigResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取主库数据保护方式，主实例属性，可能的返回值：0-异步复制方式，1-半同步复制方式，2-强同步复制方式。

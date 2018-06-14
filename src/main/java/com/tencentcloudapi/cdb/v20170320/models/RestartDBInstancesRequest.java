@@ -12,7 +12,6 @@ public class RestartDBInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
      * 获取实例ID数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。

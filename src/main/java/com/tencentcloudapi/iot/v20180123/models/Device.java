@@ -12,7 +12,6 @@ public class Device  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * 设备名称
@@ -20,7 +19,6 @@ public class Device  extends AbstractModel{
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
-    
 
     /**
     * 设备密钥
@@ -28,7 +26,6 @@ public class Device  extends AbstractModel{
     @SerializedName("DeviceSecret")
     @Expose
     private String DeviceSecret;
-    
 
     /**
     * 更新时间
@@ -36,7 +33,6 @@ public class Device  extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
-    
 
     /**
     * 创建时间
@@ -44,7 +40,6 @@ public class Device  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 设备信息
@@ -52,7 +47,6 @@ public class Device  extends AbstractModel{
     @SerializedName("DeviceInfo")
     @Expose
     private Object DeviceInfo;
-    
 
     /**
      * 获取产品Id

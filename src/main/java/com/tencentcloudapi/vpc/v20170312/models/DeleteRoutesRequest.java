@@ -12,7 +12,6 @@ public class DeleteRoutesRequest  extends AbstractModel{
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
-    
 
     /**
     * 路由策略对象。
@@ -20,7 +19,6 @@ public class DeleteRoutesRequest  extends AbstractModel{
     @SerializedName("Routes")
     @Expose
     private String [] Routes;
-    
 
     /**
      * 获取路由表实例ID。

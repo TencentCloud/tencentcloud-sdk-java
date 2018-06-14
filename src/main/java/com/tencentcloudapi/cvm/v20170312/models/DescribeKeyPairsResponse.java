@@ -12,7 +12,6 @@ public class DescribeKeyPairsResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 密钥对详细信息列表。
@@ -20,7 +19,6 @@ public class DescribeKeyPairsResponse  extends AbstractModel{
     @SerializedName("KeyPairSet")
     @Expose
     private KeyPair [] KeyPairSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeKeyPairsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取符合条件的密钥对数量。

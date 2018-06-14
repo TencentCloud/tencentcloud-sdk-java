@@ -12,7 +12,6 @@ public class ContainerLog  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 日志
@@ -20,7 +19,6 @@ public class ContainerLog  extends AbstractModel{
     @SerializedName("Log")
     @Expose
     private String Log;
-    
 
     /**
     * 日志记录时间
@@ -28,7 +26,6 @@ public class ContainerLog  extends AbstractModel{
     @SerializedName("Time")
     @Expose
     private String Time;
-    
 
     /**
      * 获取容器名称

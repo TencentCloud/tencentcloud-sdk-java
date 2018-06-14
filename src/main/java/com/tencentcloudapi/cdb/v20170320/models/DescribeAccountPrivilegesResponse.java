@@ -12,7 +12,6 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     @SerializedName("GlobalPrivileges")
     @Expose
     private String [] GlobalPrivileges;
-    
 
     /**
     * 数据库权限数组。
@@ -20,7 +19,6 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     @SerializedName("DatabasePrivileges")
     @Expose
     private DatabasePrivilege [] DatabasePrivileges;
-    
 
     /**
     * 数据库中的表权限数组。
@@ -28,7 +26,6 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     @SerializedName("TablePrivileges")
     @Expose
     private TablePrivilege [] TablePrivileges;
-    
 
     /**
     * 数据库表中的列权限数组。
@@ -36,7 +33,6 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     @SerializedName("ColumnPrivileges")
     @Expose
     private ColumnPrivilege [] ColumnPrivileges;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -44,7 +40,6 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取全局权限数组。

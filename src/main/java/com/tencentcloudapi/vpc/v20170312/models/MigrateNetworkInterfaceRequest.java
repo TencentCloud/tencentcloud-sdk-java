@@ -12,7 +12,6 @@ public class MigrateNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
-    
 
     /**
     * 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
@@ -20,7 +19,6 @@ public class MigrateNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("SourceInstanceId")
     @Expose
     private String SourceInstanceId;
-    
 
     /**
     * 待迁移的目的CVM实例ID。
@@ -28,7 +26,6 @@ public class MigrateNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("DestinationInstanceId")
     @Expose
     private String DestinationInstanceId;
-    
 
     /**
      * 获取弹性网卡实例ID，例如：eni-m6dyj72l。

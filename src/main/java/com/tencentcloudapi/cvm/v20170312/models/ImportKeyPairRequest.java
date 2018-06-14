@@ -12,7 +12,6 @@ public class ImportKeyPairRequest  extends AbstractModel{
     @SerializedName("KeyName")
     @Expose
     private String KeyName;
-    
 
     /**
     * 密钥对创建后所属的[项目](/document/product/378/10863)ID。<br><br>可以通过以下方式获取项目ID：<br><li>通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID。<br><li>通过调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的 `projectId ` 获取项目ID。
@@ -22,7 +21,6 @@ public class ImportKeyPairRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 密钥对的公钥内容，`OpenSSH RSA` 格式。
@@ -30,7 +28,6 @@ public class ImportKeyPairRequest  extends AbstractModel{
     @SerializedName("PublicKey")
     @Expose
     private String PublicKey;
-    
 
     /**
      * 获取密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。

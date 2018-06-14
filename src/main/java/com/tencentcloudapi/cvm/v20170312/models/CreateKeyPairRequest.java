@@ -12,7 +12,6 @@ public class CreateKeyPairRequest  extends AbstractModel{
     @SerializedName("KeyName")
     @Expose
     private String KeyName;
-    
 
     /**
     * 密钥对创建后所属的项目ID。
@@ -23,7 +22,6 @@ public class CreateKeyPairRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
      * 获取密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。

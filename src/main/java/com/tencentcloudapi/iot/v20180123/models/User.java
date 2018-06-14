@@ -12,7 +12,6 @@ public class User  extends AbstractModel{
     @SerializedName("AppId")
     @Expose
     private Integer AppId;
-    
 
     /**
     * 用户类型（1：国内，2：国际）
@@ -20,7 +19,6 @@ public class User  extends AbstractModel{
     @SerializedName("Area")
     @Expose
     private Integer Area;
-    
 
     /**
     * 计费类型（日结、月结）
@@ -28,7 +26,6 @@ public class User  extends AbstractModel{
     @SerializedName("BillingType")
     @Expose
     private String BillingType;
-    
 
     /**
     * 用户状态（0：正常，1：欠费，2：恶意）
@@ -36,7 +33,6 @@ public class User  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer Status;
-    
 
     /**
     * 备注信息
@@ -44,7 +40,6 @@ public class User  extends AbstractModel{
     @SerializedName("Message")
     @Expose
     private String Message;
-    
 
     /**
     * 创建时间
@@ -52,7 +47,6 @@ public class User  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 修改时间
@@ -60,7 +54,6 @@ public class User  extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
-    
 
     /**
      * 获取app_id

@@ -12,7 +12,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer Status;
-    
 
     /**
     * 可用区中文名称
@@ -20,7 +19,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
-    
 
     /**
     * 实例类型是否为自定义类型
@@ -28,7 +26,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("IsCustom")
     @Expose
     private Boolean IsCustom;
-    
 
     /**
     * 是否支持灾备
@@ -36,7 +33,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("IsSupportDr")
     @Expose
     private Boolean IsSupportDr;
-    
 
     /**
     * 是否支持私有网络
@@ -44,7 +40,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("IsSupportVpc")
     @Expose
     private Boolean IsSupportVpc;
-    
 
     /**
     * 小时计费实例最大售卖数量
@@ -52,7 +47,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("HourInstanceSaleMaxNum")
     @Expose
     private Integer HourInstanceSaleMaxNum;
-    
 
     /**
     * 是否为默认可用区
@@ -60,7 +54,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("IsDefaultZone")
     @Expose
     private Boolean IsDefaultZone;
-    
 
     /**
     * 是否为黑石区
@@ -68,7 +61,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("IsBm")
     @Expose
     private Boolean IsBm;
-    
 
     /**
     * 支持的付费类型。可能的返回值为：0-包年包月；1-小时计费；2-后付费
@@ -76,7 +68,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("PayType")
     @Expose
     private String [] PayType;
-    
 
     /**
     * 数据复制类型。0-异步复制；1-半同步复制；2-强同步复制
@@ -84,7 +75,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("ProtectMode")
     @Expose
     private String [] ProtectMode;
-    
 
     /**
     * 可用区名称
@@ -92,7 +82,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 售卖实例类型数组
@@ -100,7 +89,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("SellType")
     @Expose
     private SellType [] SellType;
-    
 
     /**
     * 多可用区信息
@@ -108,7 +96,6 @@ public class ZoneSellConf  extends AbstractModel{
     @SerializedName("ZoneConf")
     @Expose
     private ZoneConf ZoneConf;
-    
 
     /**
      * 获取可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示

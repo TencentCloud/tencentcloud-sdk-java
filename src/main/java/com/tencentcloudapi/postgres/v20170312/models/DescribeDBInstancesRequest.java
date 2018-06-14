@@ -12,7 +12,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("PageSize")
     @Expose
     private Integer PageSize;
-    
 
     /**
     * 分页序号，从1开始。
@@ -20,7 +19,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("PageNumber")
     @Expose
     private Integer PageNumber;
-    
 
     /**
     * 过滤条件，目前支持：db-instance-id、db-instance-name两种。
@@ -28,7 +26,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
      * 获取每页显示数量，默认返回10条。

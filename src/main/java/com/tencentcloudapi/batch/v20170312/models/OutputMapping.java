@@ -12,7 +12,6 @@ public class OutputMapping  extends AbstractModel{
     @SerializedName("SourcePath")
     @Expose
     private String SourcePath;
-    
 
     /**
     * 目的端路径
@@ -20,7 +19,6 @@ public class OutputMapping  extends AbstractModel{
     @SerializedName("DestinationPath")
     @Expose
     private String DestinationPath;
-    
 
     /**
      * 获取源端路径

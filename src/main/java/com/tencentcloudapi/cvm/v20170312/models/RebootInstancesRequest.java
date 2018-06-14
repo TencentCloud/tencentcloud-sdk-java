@@ -12,7 +12,6 @@ public class RebootInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
     * 是否在正常重启失败后选择强制重启实例。取值范围：<br><li>TRUE：表示在正常重启失败后进行强制重启<br><li>FALSE：表示在正常重启失败后不进行强制重启<br><br>默认取值：FALSE。
@@ -20,7 +19,6 @@ public class RebootInstancesRequest  extends AbstractModel{
     @SerializedName("ForceReboot")
     @Expose
     private Boolean ForceReboot;
-    
 
     /**
      * 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。

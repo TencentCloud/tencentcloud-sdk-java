@@ -12,7 +12,6 @@ public class ComputeEnvView  extends AbstractModel{
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
-    
 
     /**
     * 计算环境名称
@@ -20,7 +19,6 @@ public class ComputeEnvView  extends AbstractModel{
     @SerializedName("EnvName")
     @Expose
     private String EnvName;
-    
 
     /**
     * 位置信息
@@ -28,7 +26,6 @@ public class ComputeEnvView  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * 创建时间
@@ -36,7 +33,6 @@ public class ComputeEnvView  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 计算节点统计指标
@@ -44,7 +40,6 @@ public class ComputeEnvView  extends AbstractModel{
     @SerializedName("ComputeNodeMetrics")
     @Expose
     private ComputeNodeMetrics ComputeNodeMetrics;
-    
 
     /**
     * 计算环境类型
@@ -52,7 +47,6 @@ public class ComputeEnvView  extends AbstractModel{
     @SerializedName("EnvType")
     @Expose
     private String EnvType;
-    
 
     /**
     * 计算节点期望个数
@@ -60,7 +54,6 @@ public class ComputeEnvView  extends AbstractModel{
     @SerializedName("DesiredComputeNodeCount")
     @Expose
     private Integer DesiredComputeNodeCount;
-    
 
     /**
      * 获取计算环境ID

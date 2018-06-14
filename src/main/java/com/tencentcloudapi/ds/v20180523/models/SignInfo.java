@@ -12,7 +12,6 @@ public class SignInfo  extends AbstractModel{
     @SerializedName("AccountResId")
     @Expose
     private String AccountResId;
-    
 
     /**
      * 获取账户ID

@@ -12,7 +12,6 @@ public class AppAddUserRequest  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 密码
@@ -20,7 +19,6 @@ public class AppAddUserRequest  extends AbstractModel{
     @SerializedName("Password")
     @Expose
     private String Password;
-    
 
     /**
      * 获取用户名

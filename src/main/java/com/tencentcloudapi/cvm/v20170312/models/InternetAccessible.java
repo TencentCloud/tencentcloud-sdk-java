@@ -12,7 +12,6 @@ public class InternetAccessible  extends AbstractModel{
     @SerializedName("InternetChargeType")
     @Expose
     private String InternetChargeType;
-    
 
     /**
     * 公网出带宽上限，单位：Mbps。默认值：0Mbps。不同机型带宽上限范围不一致，具体限制详见[购买网络带宽](/document/product/213/509)。
@@ -20,7 +19,6 @@ public class InternetAccessible  extends AbstractModel{
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Integer InternetMaxBandwidthOut;
-    
 
     /**
     * 是否分配公网IP。取值范围：<br><li>TRUE：表示分配公网IP<br><li>FALSE：表示不分配公网IP<br><br>当公网带宽大于0Mbps时，可自由选择开通与否，默认开通公网IP；当公网带宽为0，则不允许分配公网IP。
@@ -28,7 +26,6 @@ public class InternetAccessible  extends AbstractModel{
     @SerializedName("PublicIpAssigned")
     @Expose
     private Boolean PublicIpAssigned;
-    
 
     /**
      * 获取网络计费类型。取值范围：<br><li>BANDWIDTH_PREPAID：预付费按带宽结算<br><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费<br><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费<br><li>BANDWIDTH_PACKAGE：带宽包用户<br>默认取值：TRAFFIC_POSTPAID_BY_HOUR。

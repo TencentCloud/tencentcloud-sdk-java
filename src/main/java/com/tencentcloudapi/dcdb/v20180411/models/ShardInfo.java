@@ -12,7 +12,6 @@ public class ShardInfo  extends AbstractModel{
     @SerializedName("ShardInstanceId")
     @Expose
     private String ShardInstanceId;
-    
 
     /**
     * 分片Set ID
@@ -20,7 +19,6 @@ public class ShardInfo  extends AbstractModel{
     @SerializedName("ShardSerialId")
     @Expose
     private String ShardSerialId;
-    
 
     /**
     * 状态
@@ -28,7 +26,6 @@ public class ShardInfo  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer Status;
-    
 
     /**
     * 创建时间
@@ -36,7 +33,6 @@ public class ShardInfo  extends AbstractModel{
     @SerializedName("Createtime")
     @Expose
     private String Createtime;
-    
 
     /**
     * 内存大小，单位 GB
@@ -44,7 +40,6 @@ public class ShardInfo  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 存储大小，单位 GB
@@ -52,7 +47,6 @@ public class ShardInfo  extends AbstractModel{
     @SerializedName("Storage")
     @Expose
     private Integer Storage;
-    
 
     /**
     * 分片数字ID
@@ -60,7 +54,6 @@ public class ShardInfo  extends AbstractModel{
     @SerializedName("ShardId")
     @Expose
     private Integer ShardId;
-    
 
     /**
      * 获取分片ID

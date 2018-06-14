@@ -12,7 +12,6 @@ public class VirusInfo  extends AbstractModel{
     @SerializedName("SafeType")
     @Expose
     private Integer SafeType;
-    
 
     /**
     * 病毒名称， utf8编码，非病毒时值为空
@@ -20,7 +19,6 @@ public class VirusInfo  extends AbstractModel{
     @SerializedName("VirusName")
     @Expose
     private String VirusName;
-    
 
     /**
     * 病毒描述，utf8编码，非病毒时值为空
@@ -28,7 +26,6 @@ public class VirusInfo  extends AbstractModel{
     @SerializedName("VirusDesc")
     @Expose
     private String VirusDesc;
-    
 
     /**
      * 获取软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件

@@ -12,7 +12,6 @@ public class BackupInfo  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 备份文件大小，单位：Byte
@@ -20,7 +19,6 @@ public class BackupInfo  extends AbstractModel{
     @SerializedName("Size")
     @Expose
     private Integer Size;
-    
 
     /**
     * 备份快照时间，时间格式：2016-03-17 02:10:37
@@ -28,7 +26,6 @@ public class BackupInfo  extends AbstractModel{
     @SerializedName("Date")
     @Expose
     private String Date;
-    
 
     /**
     * 内网下载地址
@@ -36,7 +33,6 @@ public class BackupInfo  extends AbstractModel{
     @SerializedName("IntranetUrl")
     @Expose
     private String IntranetUrl;
-    
 
     /**
     * 外网下载地址
@@ -44,7 +40,6 @@ public class BackupInfo  extends AbstractModel{
     @SerializedName("InternetUrl")
     @Expose
     private String InternetUrl;
-    
 
     /**
     * 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
@@ -52,7 +47,6 @@ public class BackupInfo  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
-    
 
     /**
     * 备份子任务的ID，删除备份文件时使用
@@ -60,7 +54,6 @@ public class BackupInfo  extends AbstractModel{
     @SerializedName("BackupId")
     @Expose
     private Integer BackupId;
-    
 
     /**
     * 备份任务状态
@@ -68,7 +61,6 @@ public class BackupInfo  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private String Status;
-    
 
     /**
     * 备份任务的完成时间
@@ -76,7 +68,6 @@ public class BackupInfo  extends AbstractModel{
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
-    
 
     /**
     * 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
@@ -84,7 +75,6 @@ public class BackupInfo  extends AbstractModel{
     @SerializedName("Creator")
     @Expose
     private String Creator;
-    
 
     /**
      * 获取备份文件名

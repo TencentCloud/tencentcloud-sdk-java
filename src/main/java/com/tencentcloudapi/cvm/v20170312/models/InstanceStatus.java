@@ -12,7 +12,6 @@ public class InstanceStatus  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * [实例状态](/document/api/213/9452#INSTANCE_STATE)。
@@ -20,7 +19,6 @@ public class InstanceStatus  extends AbstractModel{
     @SerializedName("InstanceState")
     @Expose
     private String InstanceState;
-    
 
     /**
      * 获取实例`ID`。

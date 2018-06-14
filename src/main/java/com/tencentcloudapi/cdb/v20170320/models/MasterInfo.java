@@ -12,7 +12,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 地域ID
@@ -20,7 +19,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("RegionId")
     @Expose
     private Integer RegionId;
-    
 
     /**
     * 可用区ID
@@ -28,7 +26,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("ZoneId")
     @Expose
     private Integer ZoneId;
-    
 
     /**
     * 可用区信息
@@ -36,7 +33,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 实例ID
@@ -44,7 +40,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 实例长ID
@@ -52,7 +47,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
-    
 
     /**
     * 实例状态
@@ -60,7 +54,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer Status;
-    
 
     /**
     * 实例名称
@@ -68,7 +61,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 实例类型
@@ -76,7 +68,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("InstanceType")
     @Expose
     private Integer InstanceType;
-    
 
     /**
     * 任务状态
@@ -84,7 +75,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("TaskStatus")
     @Expose
     private Integer TaskStatus;
-    
 
     /**
     * 内存容量
@@ -92,7 +82,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 硬盘容量
@@ -100,7 +89,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("Volume")
     @Expose
     private Integer Volume;
-    
 
     /**
     * 实例机型
@@ -108,7 +96,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
-    
 
     /**
     * 每秒查询数
@@ -116,7 +103,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("Qps")
     @Expose
     private Integer Qps;
-    
 
     /**
     * 私有网络ID
@@ -124,7 +110,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private Integer VpcId;
-    
 
     /**
     * 子网ID
@@ -132,7 +117,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private Integer SubnetId;
-    
 
     /**
     * 独享集群ID
@@ -140,7 +124,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("ExClusterId")
     @Expose
     private String ExClusterId;
-    
 
     /**
     * 独享集群名称
@@ -148,7 +131,6 @@ public class MasterInfo  extends AbstractModel{
     @SerializedName("ExClusterName")
     @Expose
     private String ExClusterName;
-    
 
     /**
      * 获取地域信息

@@ -12,7 +12,6 @@ public class CreateSitesScansRequest  extends AbstractModel{
     @SerializedName("SiteIds")
     @Expose
     private Integer [] SiteIds;
-    
 
     /**
     * 扫描模式，normal-正常扫描；deep-深度扫描
@@ -20,7 +19,6 @@ public class CreateSitesScansRequest  extends AbstractModel{
     @SerializedName("ScannerType")
     @Expose
     private String ScannerType;
-    
 
     /**
     * 扫描速率限制，每秒发送X个HTTP请求
@@ -28,7 +26,6 @@ public class CreateSitesScansRequest  extends AbstractModel{
     @SerializedName("RateLimit")
     @Expose
     private Integer RateLimit;
-    
 
     /**
      * 获取站点的ID列表

@@ -12,7 +12,6 @@ public class PrivateIpAddressSpecification  extends AbstractModel{
     @SerializedName("PrivateIpAddress")
     @Expose
     private String PrivateIpAddress;
-    
 
     /**
     * 是否是主IP。
@@ -20,7 +19,6 @@ public class PrivateIpAddressSpecification  extends AbstractModel{
     @SerializedName("Primary")
     @Expose
     private Boolean Primary;
-    
 
     /**
     * 公网IP地址。
@@ -28,7 +26,6 @@ public class PrivateIpAddressSpecification  extends AbstractModel{
     @SerializedName("PublicIpAddress")
     @Expose
     private String PublicIpAddress;
-    
 
     /**
     * EIP实例ID，例如：eip-11112222。
@@ -36,7 +33,6 @@ public class PrivateIpAddressSpecification  extends AbstractModel{
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
-    
 
     /**
     * 内网IP描述信息。
@@ -44,7 +40,6 @@ public class PrivateIpAddressSpecification  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
     * 公网IP是否被封堵。
@@ -52,7 +47,6 @@ public class PrivateIpAddressSpecification  extends AbstractModel{
     @SerializedName("IsWanIpBlocked")
     @Expose
     private Boolean IsWanIpBlocked;
-    
 
     /**
      * 获取内网IP地址。

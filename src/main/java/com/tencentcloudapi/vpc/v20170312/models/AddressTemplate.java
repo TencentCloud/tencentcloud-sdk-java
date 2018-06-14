@@ -12,7 +12,6 @@ public class AddressTemplate  extends AbstractModel{
     @SerializedName("AddressTemplateName")
     @Expose
     private String AddressTemplateName;
-    
 
     /**
     * IP地址模板实例唯一ID。
@@ -20,7 +19,6 @@ public class AddressTemplate  extends AbstractModel{
     @SerializedName("AddressTemplateId")
     @Expose
     private String AddressTemplateId;
-    
 
     /**
     * IP地址信息。
@@ -28,7 +26,6 @@ public class AddressTemplate  extends AbstractModel{
     @SerializedName("AddressSet")
     @Expose
     private String [] AddressSet;
-    
 
     /**
     * 创建时间。
@@ -36,7 +33,6 @@ public class AddressTemplate  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取IP地址模板名称。

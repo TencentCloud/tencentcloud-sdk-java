@@ -12,15 +12,13 @@ public class ActionTimer  extends AbstractModel{
     @SerializedName("TimerAction")
     @Expose
     private String TimerAction;
-    
 
     /**
-    * 执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
+    * 执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
     */
     @SerializedName("ActionTime")
     @Expose
     private String ActionTime;
-    
 
     /**
     * 扩展数据
@@ -28,7 +26,6 @@ public class ActionTimer  extends AbstractModel{
     @SerializedName("Externals")
     @Expose
     private Externals Externals;
-    
 
     /**
      * 获取定时器名称，目前仅支持销毁一个值：TerminateInstances。
@@ -47,16 +44,16 @@ public class ActionTimer  extends AbstractModel{
     }
 
     /**
-     * 获取执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
-     * @return ActionTime 执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
+     * 获取执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
+     * @return ActionTime 执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
      */
     public String getActionTime() {
         return this.ActionTime;
     }
 
     /**
-     * 设置执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
-     * @param ActionTime 执行时间，格式形如：2018/5/29 11:26:40,执行时间必须大于当前时间5分钟。
+     * 设置执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
+     * @param ActionTime 执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
      */
     public void setActionTime(String ActionTime) {
         this.ActionTime = ActionTime;

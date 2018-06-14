@@ -12,7 +12,6 @@ public class RouteTable  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 路由表实例ID，例如：rtb-azd4dt1c。
@@ -20,7 +19,6 @@ public class RouteTable  extends AbstractModel{
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
-    
 
     /**
     * 路由表名称。
@@ -28,7 +26,6 @@ public class RouteTable  extends AbstractModel{
     @SerializedName("RouteTableName")
     @Expose
     private String RouteTableName;
-    
 
     /**
     * 路由表关联关系。
@@ -36,7 +33,6 @@ public class RouteTable  extends AbstractModel{
     @SerializedName("AssociationSet")
     @Expose
     private RouteTableAssociation [] AssociationSet;
-    
 
     /**
     * 路由表策略集合。
@@ -44,7 +40,6 @@ public class RouteTable  extends AbstractModel{
     @SerializedName("RouteSet")
     @Expose
     private Route [] RouteSet;
-    
 
     /**
     * 是否默认路由表。
@@ -52,7 +47,6 @@ public class RouteTable  extends AbstractModel{
     @SerializedName("Main")
     @Expose
     private Boolean Main;
-    
 
     /**
     * 创建时间。
@@ -60,7 +54,6 @@ public class RouteTable  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取VPC实例ID。

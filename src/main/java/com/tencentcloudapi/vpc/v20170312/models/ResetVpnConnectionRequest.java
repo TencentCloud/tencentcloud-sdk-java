@@ -12,7 +12,6 @@ public class ResetVpnConnectionRequest  extends AbstractModel{
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
-    
 
     /**
     * VPN通道实例ID。形如：vpnx-f49l6u0z。
@@ -20,7 +19,6 @@ public class ResetVpnConnectionRequest  extends AbstractModel{
     @SerializedName("VpnConnectionId")
     @Expose
     private String VpnConnectionId;
-    
 
     /**
      * 获取VPN网关实例ID。

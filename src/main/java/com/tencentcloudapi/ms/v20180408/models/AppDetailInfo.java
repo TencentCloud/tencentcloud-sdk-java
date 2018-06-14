@@ -12,7 +12,6 @@ public class AppDetailInfo  extends AbstractModel{
     @SerializedName("AppName")
     @Expose
     private String AppName;
-    
 
     /**
     * app的包名
@@ -20,7 +19,6 @@ public class AppDetailInfo  extends AbstractModel{
     @SerializedName("AppPkgName")
     @Expose
     private String AppPkgName;
-    
 
     /**
     * app的版本号
@@ -28,7 +26,6 @@ public class AppDetailInfo  extends AbstractModel{
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
-    
 
     /**
     * app的大小
@@ -36,7 +33,6 @@ public class AppDetailInfo  extends AbstractModel{
     @SerializedName("AppSize")
     @Expose
     private Integer AppSize;
-    
 
     /**
     * app的md5
@@ -44,7 +40,6 @@ public class AppDetailInfo  extends AbstractModel{
     @SerializedName("AppMd5")
     @Expose
     private String AppMd5;
-    
 
     /**
     * app的图标url
@@ -52,7 +47,6 @@ public class AppDetailInfo  extends AbstractModel{
     @SerializedName("AppIconUrl")
     @Expose
     private String AppIconUrl;
-    
 
     /**
     * app的文件名称
@@ -60,7 +54,6 @@ public class AppDetailInfo  extends AbstractModel{
     @SerializedName("FileName")
     @Expose
     private String FileName;
-    
 
     /**
      * 获取app的名称

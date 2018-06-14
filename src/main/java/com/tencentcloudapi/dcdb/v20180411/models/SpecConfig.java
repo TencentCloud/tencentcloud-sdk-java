@@ -12,7 +12,6 @@ public class SpecConfig  extends AbstractModel{
     @SerializedName("Machine")
     @Expose
     private String Machine;
-    
 
     /**
     * 规格列表
@@ -20,7 +19,6 @@ public class SpecConfig  extends AbstractModel{
     @SerializedName("SpecConfigInfos")
     @Expose
     private SpecConfigInfo [] SpecConfigInfos;
-    
 
     /**
      * 获取规格机型

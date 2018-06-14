@@ -12,7 +12,6 @@ public class Outbound  extends AbstractModel{
     @SerializedName("Action")
     @Expose
     private String Action;
-    
 
     /**
     * 目的Ip或Ip段，例如172.16.0.0/12
@@ -20,7 +19,6 @@ public class Outbound  extends AbstractModel{
     @SerializedName("CidrIp")
     @Expose
     private String CidrIp;
-    
 
     /**
     * 端口或者端口范围
@@ -28,7 +26,6 @@ public class Outbound  extends AbstractModel{
     @SerializedName("PortRange")
     @Expose
     private String PortRange;
-    
 
     /**
     * 网络协议，支持udp、tcp等
@@ -36,7 +33,6 @@ public class Outbound  extends AbstractModel{
     @SerializedName("IpProtocol")
     @Expose
     private String IpProtocol;
-    
 
     /**
     * 规则限定的方向，进站规则为OUTPUT
@@ -44,7 +40,6 @@ public class Outbound  extends AbstractModel{
     @SerializedName("Dir")
     @Expose
     private String Dir;
-    
 
     /**
      * 获取策略，ACCEPT或者DROP

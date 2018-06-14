@@ -12,7 +12,6 @@ public class DescribeInstanceInternetBandwidthConfigsResponse  extends AbstractM
     @SerializedName("InternetBandwidthConfigSet")
     @Expose
     private InternetBandwidthConfig [] InternetBandwidthConfigSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class DescribeInstanceInternetBandwidthConfigsResponse  extends AbstractM
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取带宽配置信息列表。

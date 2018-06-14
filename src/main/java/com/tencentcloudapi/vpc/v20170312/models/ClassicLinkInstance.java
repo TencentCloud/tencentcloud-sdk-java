@@ -12,7 +12,6 @@ public class ClassicLinkInstance  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 云服务器实例唯一ID
@@ -20,7 +19,6 @@ public class ClassicLinkInstance  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
      * 获取VPC实例ID

@@ -12,7 +12,6 @@ public class DescribePriceRequest  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 实例节点个数，可以通过 DescribeDBInstanceSpecs
@@ -21,7 +20,6 @@ public class DescribePriceRequest  extends AbstractModel{
     @SerializedName("NodeCount")
     @Expose
     private Integer NodeCount;
-    
 
     /**
     * 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -30,7 +28,6 @@ public class DescribePriceRequest  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -39,7 +36,6 @@ public class DescribePriceRequest  extends AbstractModel{
     @SerializedName("Storage")
     @Expose
     private Integer Storage;
-    
 
     /**
     * 欲购买的时长，单位：月。
@@ -47,7 +43,6 @@ public class DescribePriceRequest  extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Integer Period;
-    
 
     /**
     * 欲购买的数量，默认查询购买1个实例的价格。
@@ -55,7 +50,6 @@ public class DescribePriceRequest  extends AbstractModel{
     @SerializedName("Count")
     @Expose
     private Integer Count;
-    
 
     /**
      * 获取欲新购实例的可用区ID。

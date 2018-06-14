@@ -14,7 +14,6 @@ public class DescribeAddressTemplatesRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量，默认为0。
@@ -22,7 +21,6 @@ public class DescribeAddressTemplatesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private String Offset;
-    
 
     /**
     * 返回数量，默认为20，最大值为100。
@@ -30,7 +28,6 @@ public class DescribeAddressTemplatesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private String Limit;
-    
 
     /**
      * 获取过滤条件。

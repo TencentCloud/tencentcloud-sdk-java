@@ -12,7 +12,6 @@ public class ParamDesc  extends AbstractModel{
     @SerializedName("Param")
     @Expose
     private String Param;
-    
 
     /**
     * 当前参数值
@@ -20,7 +19,6 @@ public class ParamDesc  extends AbstractModel{
     @SerializedName("Value")
     @Expose
     private String Value;
-    
 
     /**
     * 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
@@ -28,7 +26,6 @@ public class ParamDesc  extends AbstractModel{
     @SerializedName("SetValue")
     @Expose
     private String SetValue;
-    
 
     /**
     * 系统默认值
@@ -36,7 +33,6 @@ public class ParamDesc  extends AbstractModel{
     @SerializedName("Default")
     @Expose
     private String Default;
-    
 
     /**
     * 参数限制
@@ -44,7 +40,6 @@ public class ParamDesc  extends AbstractModel{
     @SerializedName("Constraint")
     @Expose
     private ParamConstraint Constraint;
-    
 
     /**
      * 获取参数名字

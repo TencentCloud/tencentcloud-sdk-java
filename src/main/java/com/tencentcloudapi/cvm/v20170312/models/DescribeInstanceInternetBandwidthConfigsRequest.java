@@ -12,7 +12,6 @@ public class DescribeInstanceInternetBandwidthConfigsRequest  extends AbstractMo
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
      * 获取待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。

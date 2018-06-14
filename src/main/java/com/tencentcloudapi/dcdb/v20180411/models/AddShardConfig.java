@@ -12,7 +12,6 @@ public class AddShardConfig  extends AbstractModel{
     @SerializedName("ShardCount")
     @Expose
     private Integer ShardCount;
-    
 
     /**
     * 分片内存大小，单位 GB
@@ -20,7 +19,6 @@ public class AddShardConfig  extends AbstractModel{
     @SerializedName("ShardMemory")
     @Expose
     private Integer ShardMemory;
-    
 
     /**
     * 分片存储大小，单位 GB
@@ -28,7 +26,6 @@ public class AddShardConfig  extends AbstractModel{
     @SerializedName("ShardStorage")
     @Expose
     private Integer ShardStorage;
-    
 
     /**
      * 获取新增分片的数量

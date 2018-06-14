@@ -12,7 +12,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
-    
 
     /**
     * app的名称
@@ -20,7 +19,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("AppName")
     @Expose
     private String AppName;
-    
 
     /**
     * app的包名
@@ -28,7 +26,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("AppPkgName")
     @Expose
     private String AppPkgName;
-    
 
     /**
     * app的版本号
@@ -36,7 +33,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
-    
 
     /**
     * app的md5
@@ -44,7 +40,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("AppMd5")
     @Expose
     private String AppMd5;
-    
 
     /**
     * app的大小
@@ -52,7 +47,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("AppSize")
     @Expose
     private Integer AppSize;
-    
 
     /**
     * 加固服务版本
@@ -60,7 +54,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("ServiceEdition")
     @Expose
     private String ServiceEdition;
-    
 
     /**
     * 加固结果返回码
@@ -68,7 +61,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("ShieldCode")
     @Expose
     private Integer ShieldCode;
-    
 
     /**
     * 加固后的APP下载地址
@@ -76,7 +68,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("AppUrl")
     @Expose
     private String AppUrl;
-    
 
     /**
     * 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
@@ -84,7 +75,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("TaskStatus")
     @Expose
     private Integer TaskStatus;
-    
 
     /**
     * 请求的客户端ip
@@ -92,7 +82,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
-    
 
     /**
     * 提交加固时间
@@ -100,7 +89,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("TaskTime")
     @Expose
     private Integer TaskTime;
-    
 
     /**
     * app的图标url
@@ -108,7 +96,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("AppIconUrl")
     @Expose
     private String AppIconUrl;
-    
 
     /**
     * 加固后app的md5
@@ -116,7 +103,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("ShieldMd5")
     @Expose
     private String ShieldMd5;
-    
 
     /**
     * 加固后app的大小
@@ -124,7 +110,6 @@ public class AppSetInfo  extends AbstractModel{
     @SerializedName("ShieldSize")
     @Expose
     private Integer ShieldSize;
-    
 
     /**
      * 获取任务唯一标识

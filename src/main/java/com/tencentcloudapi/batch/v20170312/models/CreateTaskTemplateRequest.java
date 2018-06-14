@@ -12,7 +12,6 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     @SerializedName("TaskTemplateName")
     @Expose
     private String TaskTemplateName;
-    
 
     /**
     * 任务模板描述
@@ -20,7 +19,6 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     @SerializedName("TaskTemplateDescription")
     @Expose
     private String TaskTemplateDescription;
-    
 
     /**
     * 任务模板内容，参数要求与任务一致
@@ -28,7 +26,6 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     @SerializedName("TaskTemplateInfo")
     @Expose
     private Task TaskTemplateInfo;
-    
 
     /**
      * 获取任务模板名称

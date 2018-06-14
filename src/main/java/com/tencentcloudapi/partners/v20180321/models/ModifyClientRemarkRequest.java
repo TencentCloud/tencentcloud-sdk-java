@@ -12,7 +12,6 @@ public class ModifyClientRemarkRequest  extends AbstractModel{
     @SerializedName("ClientRemark")
     @Expose
     private String ClientRemark;
-    
 
     /**
     * 客户账号ID
@@ -20,7 +19,6 @@ public class ModifyClientRemarkRequest  extends AbstractModel{
     @SerializedName("ClientUin")
     @Expose
     private String ClientUin;
-    
 
     /**
      * 获取客户备注名称

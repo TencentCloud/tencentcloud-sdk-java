@@ -12,7 +12,6 @@ public class GetProductsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 长度
@@ -20,7 +19,6 @@ public class GetProductsRequest  extends AbstractModel{
     @SerializedName("Length")
     @Expose
     private Integer Length;
-    
 
     /**
      * 获取偏移

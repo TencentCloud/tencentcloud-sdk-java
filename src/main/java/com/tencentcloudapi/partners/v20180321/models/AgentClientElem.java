@@ -12,7 +12,6 @@ public class AgentClientElem  extends AbstractModel{
     @SerializedName("Uin")
     @Expose
     private String Uin;
-    
 
     /**
     * 代客账号ID
@@ -20,7 +19,6 @@ public class AgentClientElem  extends AbstractModel{
     @SerializedName("ClientUin")
     @Expose
     private String ClientUin;
-    
 
     /**
     * 代客申请时间戳
@@ -28,7 +26,6 @@ public class AgentClientElem  extends AbstractModel{
     @SerializedName("ApplyTime")
     @Expose
     private Integer ApplyTime;
-    
 
     /**
     * 代客类型，可能值为a/b
@@ -36,7 +33,6 @@ public class AgentClientElem  extends AbstractModel{
     @SerializedName("ClientFlag")
     @Expose
     private String ClientFlag;
-    
 
     /**
     * 代客邮箱，打码显示
@@ -44,7 +40,6 @@ public class AgentClientElem  extends AbstractModel{
     @SerializedName("Mail")
     @Expose
     private String Mail;
-    
 
     /**
     * 代客手机，打码显示
@@ -52,7 +47,6 @@ public class AgentClientElem  extends AbstractModel{
     @SerializedName("Phone")
     @Expose
     private String Phone;
-    
 
     /**
     * 0表示不欠费，1表示欠费
@@ -60,7 +54,6 @@ public class AgentClientElem  extends AbstractModel{
     @SerializedName("HasOverdueBill")
     @Expose
     private Integer HasOverdueBill;
-    
 
     /**
      * 获取代理商账号ID

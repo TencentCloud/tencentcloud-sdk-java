@@ -12,7 +12,6 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
-    
 
     /**
     * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。
@@ -20,7 +19,6 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     @SerializedName("DiskChargePrepaids")
     @Expose
     private DiskChargePrepaid [] DiskChargePrepaids;
-    
 
     /**
     * 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
@@ -28,7 +26,6 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     @SerializedName("NewDeadline")
     @Expose
     private String NewDeadline;
-    
 
     /**
     * 云盘所属项目ID。 如传入则仅用于鉴权。
@@ -36,7 +33,6 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
      * 获取云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。

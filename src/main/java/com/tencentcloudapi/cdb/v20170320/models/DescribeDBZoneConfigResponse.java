@@ -12,7 +12,6 @@ public class DescribeDBZoneConfigResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 可售卖地域配置详情
@@ -20,7 +19,6 @@ public class DescribeDBZoneConfigResponse  extends AbstractModel{
     @SerializedName("Items")
     @Expose
     private RegionSellConf [] Items;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeDBZoneConfigResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取可售卖地域配置数量

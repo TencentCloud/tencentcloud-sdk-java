@@ -12,7 +12,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("Device")
     @Expose
     private String Device;
-    
 
     /**
     * 售卖规格描述
@@ -20,7 +19,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
-    
 
     /**
     * 实例类型
@@ -28,7 +26,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("CdbType")
     @Expose
     private String CdbType;
-    
 
     /**
     * 内存大小，单位为MB
@@ -36,7 +33,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * CPU核心数
@@ -44,7 +40,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("Cpu")
     @Expose
     private Integer Cpu;
-    
 
     /**
     * 磁盘最小规格，单位为GB
@@ -52,7 +47,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("VolumeMin")
     @Expose
     private Integer VolumeMin;
-    
 
     /**
     * 磁盘最大规格，单位为GB
@@ -60,7 +54,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("VolumeMax")
     @Expose
     private Integer VolumeMax;
-    
 
     /**
     * 磁盘步长，单位为GB
@@ -68,7 +61,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("VolumeStep")
     @Expose
     private Integer VolumeStep;
-    
 
     /**
     * 链接数
@@ -76,7 +68,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("Connection")
     @Expose
     private Integer Connection;
-    
 
     /**
     * 每秒查询数量
@@ -84,7 +75,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("Qps")
     @Expose
     private Integer Qps;
-    
 
     /**
     * 每秒IO数量
@@ -92,7 +82,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("Iops")
     @Expose
     private Integer Iops;
-    
 
     /**
     * 应用场景描述
@@ -100,7 +89,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("Info")
     @Expose
     private String Info;
-    
 
     /**
     * 状态值
@@ -108,7 +96,6 @@ public class SellConfig  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer Status;
-    
 
     /**
      * 获取设备类型

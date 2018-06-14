@@ -12,7 +12,6 @@ public class CreateSealRequest  extends AbstractModel{
     @SerializedName("Module")
     @Expose
     private String Module;
-    
 
     /**
     * 操作名
@@ -20,7 +19,6 @@ public class CreateSealRequest  extends AbstractModel{
     @SerializedName("Operation")
     @Expose
     private String Operation;
-    
 
     /**
     * 帐号ID
@@ -28,7 +26,6 @@ public class CreateSealRequest  extends AbstractModel{
     @SerializedName("AccountResId")
     @Expose
     private String AccountResId;
-    
 
     /**
     * 签章链接
@@ -36,7 +33,6 @@ public class CreateSealRequest  extends AbstractModel{
     @SerializedName("ImgUrl")
     @Expose
     private String ImgUrl;
-    
 
     /**
      * 获取模块名

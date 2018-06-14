@@ -12,7 +12,6 @@ public class JobView  extends AbstractModel{
     @SerializedName("JobId")
     @Expose
     private String JobId;
-    
 
     /**
     * 作业名称
@@ -20,7 +19,6 @@ public class JobView  extends AbstractModel{
     @SerializedName("JobName")
     @Expose
     private String JobName;
-    
 
     /**
     * 作业状态
@@ -28,7 +26,6 @@ public class JobView  extends AbstractModel{
     @SerializedName("JobState")
     @Expose
     private String JobState;
-    
 
     /**
     * 作业优先级
@@ -36,7 +33,6 @@ public class JobView  extends AbstractModel{
     @SerializedName("Priority")
     @Expose
     private Integer Priority;
-    
 
     /**
     * 位置信息
@@ -44,7 +40,6 @@ public class JobView  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * 创建时间
@@ -52,7 +47,6 @@ public class JobView  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 结束时间
@@ -60,7 +54,6 @@ public class JobView  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
     * 任务统计指标
@@ -68,7 +61,6 @@ public class JobView  extends AbstractModel{
     @SerializedName("TaskMetrics")
     @Expose
     private TaskMetrics TaskMetrics;
-    
 
     /**
      * 获取作业ID

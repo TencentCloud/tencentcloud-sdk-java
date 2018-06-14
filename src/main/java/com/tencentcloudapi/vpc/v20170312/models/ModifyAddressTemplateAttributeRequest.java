@@ -12,7 +12,6 @@ public class ModifyAddressTemplateAttributeRequest  extends AbstractModel{
     @SerializedName("AddressTemplateId")
     @Expose
     private String AddressTemplateId;
-    
 
     /**
     * IP地址模板名称。
@@ -20,7 +19,6 @@ public class ModifyAddressTemplateAttributeRequest  extends AbstractModel{
     @SerializedName("AddressTemplateName")
     @Expose
     private String AddressTemplateName;
-    
 
     /**
     * 地址信息，支持 IP、CIDR、IP 范围。
@@ -28,7 +26,6 @@ public class ModifyAddressTemplateAttributeRequest  extends AbstractModel{
     @SerializedName("Addresses")
     @Expose
     private String [] Addresses;
-    
 
     /**
      * 获取IP地址模板实例ID，例如：ipm-mdunqeb6。

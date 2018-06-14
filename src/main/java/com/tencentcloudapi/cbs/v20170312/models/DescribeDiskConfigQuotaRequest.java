@@ -12,7 +12,6 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     @SerializedName("InquiryType")
     @Expose
     private String InquiryType;
-    
 
     /**
     * 查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
@@ -20,7 +19,6 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
-    
 
     /**
     * 付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
@@ -28,7 +26,6 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     @SerializedName("DiskChargeType")
     @Expose
     private String DiskChargeType;
-    
 
     /**
     * 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
@@ -36,7 +33,6 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     @SerializedName("DiskTypes")
     @Expose
     private String [] DiskTypes;
-    
 
     /**
     * 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
@@ -44,7 +40,6 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     @SerializedName("DiskUsage")
     @Expose
     private String DiskUsage;
-    
 
     /**
     * 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
@@ -52,7 +47,6 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     @SerializedName("InstanceFamilies")
     @Expose
     private String [] InstanceFamilies;
-    
 
     /**
     * 实例CPU核数。
@@ -60,7 +54,6 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     @SerializedName("CPU")
     @Expose
     private Integer CPU;
-    
 
     /**
     * 实例内存大小。
@@ -68,7 +61,6 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
      * 获取查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。

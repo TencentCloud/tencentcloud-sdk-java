@@ -12,7 +12,6 @@ public class DeleteSecurityGroupRequest  extends AbstractModel{
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
-    
 
     /**
      * 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。

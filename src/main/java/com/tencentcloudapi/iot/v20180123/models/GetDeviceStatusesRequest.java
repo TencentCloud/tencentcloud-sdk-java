@@ -12,7 +12,6 @@ public class GetDeviceStatusesRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * 设备名称列表（单次限制1000个设备）
@@ -20,7 +19,6 @@ public class GetDeviceStatusesRequest  extends AbstractModel{
     @SerializedName("DeviceNames")
     @Expose
     private String [] DeviceNames;
-    
 
     /**
      * 获取产品ID

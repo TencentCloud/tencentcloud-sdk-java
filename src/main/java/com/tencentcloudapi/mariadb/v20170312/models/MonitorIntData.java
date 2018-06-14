@@ -12,7 +12,6 @@ public class MonitorIntData  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 结束时间
@@ -20,7 +19,6 @@ public class MonitorIntData  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
     * 监控数据
@@ -28,7 +26,6 @@ public class MonitorIntData  extends AbstractModel{
     @SerializedName("Data")
     @Expose
     private Integer Data;
-    
 
     /**
      * 获取起始时间

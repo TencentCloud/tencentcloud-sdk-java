@@ -12,7 +12,6 @@ public class DeleteNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
-    
 
     /**
      * 获取弹性网卡实例ID，例如：eni-m6dyj72l。

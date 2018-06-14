@@ -12,7 +12,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("TaskInstanceIndex")
     @Expose
     private Integer TaskInstanceIndex;
-    
 
     /**
     * 任务实例状态
@@ -20,7 +19,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("TaskInstanceState")
     @Expose
     private String TaskInstanceState;
-    
 
     /**
     * 应用程序执行结束的exit code
@@ -28,7 +26,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("ExitCode")
     @Expose
     private Integer ExitCode;
-    
 
     /**
     * 任务实例状态原因，任务实例失败时，会记录失败原因
@@ -36,7 +33,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("StateReason")
     @Expose
     private String StateReason;
-    
 
     /**
     * 任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
@@ -44,7 +40,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("ComputeNodeInstanceId")
     @Expose
     private String ComputeNodeInstanceId;
-    
 
     /**
     * 创建时间
@@ -52,7 +47,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 启动时间
@@ -60,7 +54,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("LaunchTime")
     @Expose
     private String LaunchTime;
-    
 
     /**
     * 开始运行时间
@@ -68,7 +61,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("RunningTime")
     @Expose
     private String RunningTime;
-    
 
     /**
     * 结束时间
@@ -76,7 +68,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
     * 重定向信息
@@ -84,7 +75,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("RedirectInfo")
     @Expose
     private RedirectInfo RedirectInfo;
-    
 
     /**
     * 任务实例状态原因详情，任务实例失败时，会记录失败原因
@@ -92,7 +82,6 @@ public class TaskInstanceView  extends AbstractModel{
     @SerializedName("StateDetailedReason")
     @Expose
     private String StateDetailedReason;
-    
 
     /**
      * 获取任务实例索引

@@ -12,7 +12,6 @@ public class DBSwitchInfo  extends AbstractModel{
     @SerializedName("SwitchTime")
     @Expose
     private String SwitchTime;
-    
 
     /**
     * 切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
@@ -20,7 +19,6 @@ public class DBSwitchInfo  extends AbstractModel{
     @SerializedName("SwitchType")
     @Expose
     private String SwitchType;
-    
 
     /**
      * 获取切换时间，格式为：2017-09-03 01:34:31

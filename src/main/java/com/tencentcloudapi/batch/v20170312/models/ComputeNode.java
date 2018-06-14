@@ -12,7 +12,6 @@ public class ComputeNode  extends AbstractModel{
     @SerializedName("ComputeNodeId")
     @Expose
     private String ComputeNodeId;
-    
 
     /**
     * 计算节点实例ID，对于CVM场景，即为CVM的InstanceId
@@ -20,7 +19,6 @@ public class ComputeNode  extends AbstractModel{
     @SerializedName("ComputeNodeInstanceId")
     @Expose
     private String ComputeNodeInstanceId;
-    
 
     /**
     * 计算节点状态
@@ -28,7 +26,6 @@ public class ComputeNode  extends AbstractModel{
     @SerializedName("ComputeNodeState")
     @Expose
     private String ComputeNodeState;
-    
 
     /**
     * CPU核数
@@ -36,7 +33,6 @@ public class ComputeNode  extends AbstractModel{
     @SerializedName("Cpu")
     @Expose
     private Integer Cpu;
-    
 
     /**
     * 内存容量，单位GiB
@@ -44,7 +40,6 @@ public class ComputeNode  extends AbstractModel{
     @SerializedName("Mem")
     @Expose
     private Integer Mem;
-    
 
     /**
     * 资源创建完成时间
@@ -52,7 +47,6 @@ public class ComputeNode  extends AbstractModel{
     @SerializedName("ResourceCreatedTime")
     @Expose
     private String ResourceCreatedTime;
-    
 
     /**
     * 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
@@ -60,7 +54,6 @@ public class ComputeNode  extends AbstractModel{
     @SerializedName("TaskInstanceNumAvailable")
     @Expose
     private Integer TaskInstanceNumAvailable;
-    
 
     /**
     * Batch Agent 版本
@@ -68,7 +61,6 @@ public class ComputeNode  extends AbstractModel{
     @SerializedName("AgentVersion")
     @Expose
     private String AgentVersion;
-    
 
     /**
     * 实例内网IP
@@ -76,7 +68,6 @@ public class ComputeNode  extends AbstractModel{
     @SerializedName("PrivateIpAddresses")
     @Expose
     private String [] PrivateIpAddresses;
-    
 
     /**
     * 实例公网IP
@@ -84,7 +75,6 @@ public class ComputeNode  extends AbstractModel{
     @SerializedName("PublicIpAddresses")
     @Expose
     private String [] PublicIpAddresses;
-    
 
     /**
      * 获取计算节点ID

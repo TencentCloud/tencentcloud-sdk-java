@@ -12,7 +12,6 @@ public class Site  extends AbstractModel{
     @SerializedName("Id")
     @Expose
     private Integer Id;
-    
 
     /**
     * 监控任务ID，为0时表示未加入监控任务。
@@ -20,7 +19,6 @@ public class Site  extends AbstractModel{
     @SerializedName("MonitorId")
     @Expose
     private Integer MonitorId;
-    
 
     /**
     * 站点url。
@@ -28,7 +26,6 @@ public class Site  extends AbstractModel{
     @SerializedName("Url")
     @Expose
     private String Url;
-    
 
     /**
     * 站点名称。
@@ -36,7 +33,6 @@ public class Site  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
@@ -44,7 +40,6 @@ public class Site  extends AbstractModel{
     @SerializedName("VerifyStatus")
     @Expose
     private Integer VerifyStatus;
-    
 
     /**
     * 监测状态：0-未监测；1-监测中；2-暂停监测。
@@ -52,7 +47,6 @@ public class Site  extends AbstractModel{
     @SerializedName("MonitorStatus")
     @Expose
     private Integer MonitorStatus;
-    
 
     /**
     * 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
@@ -60,7 +54,6 @@ public class Site  extends AbstractModel{
     @SerializedName("ScanStatus")
     @Expose
     private Integer ScanStatus;
-    
 
     /**
     * 最近一次的AIScanner的扫描任务id，注意取消的情况。
@@ -68,7 +61,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanTaskId")
     @Expose
     private Integer LastScanTaskId;
-    
 
     /**
     * 最近一次扫描开始时间。
@@ -76,7 +68,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanStartTime")
     @Expose
     private String LastScanStartTime;
-    
 
     /**
     * 最近一次扫描完成时间。
@@ -84,7 +75,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanFinishTime")
     @Expose
     private String LastScanFinishTime;
-    
 
     /**
     * 最近一次取消时间，取消即使用上一次扫描结果。
@@ -92,7 +82,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanCancelTime")
     @Expose
     private String LastScanCancelTime;
-    
 
     /**
     * 最近一次扫描扫描的页面数。
@@ -100,7 +89,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanPageCount")
     @Expose
     private Integer LastScanPageCount;
-    
 
     /**
     * normal-正常扫描；deep-深度扫描。
@@ -108,7 +96,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanScannerType")
     @Expose
     private String LastScanScannerType;
-    
 
     /**
     * 最近一次扫描高风险漏洞数量。
@@ -116,7 +103,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanVulsHighNum")
     @Expose
     private Integer LastScanVulsHighNum;
-    
 
     /**
     * 最近一次扫描中风险漏洞数量。
@@ -124,7 +110,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanVulsMiddleNum")
     @Expose
     private Integer LastScanVulsMiddleNum;
-    
 
     /**
     * 最近一次扫描低风险漏洞数量。
@@ -132,7 +117,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanVulsLowNum")
     @Expose
     private Integer LastScanVulsLowNum;
-    
 
     /**
     * 最近一次扫描提示信息数量。
@@ -140,7 +124,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanVulsNoticeNum")
     @Expose
     private Integer LastScanVulsNoticeNum;
-    
 
     /**
     * 记录添加时间。
@@ -148,7 +131,6 @@ public class Site  extends AbstractModel{
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
-    
 
     /**
     * 记录最近修改时间。
@@ -156,7 +138,6 @@ public class Site  extends AbstractModel{
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
-    
 
     /**
     * 速率限制，每秒发送X个HTTP请求。
@@ -164,7 +145,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanRateLimit")
     @Expose
     private Integer LastScanRateLimit;
-    
 
     /**
     * 最近一次扫描漏洞总数量。
@@ -172,7 +152,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanVulsNum")
     @Expose
     private Integer LastScanVulsNum;
-    
 
     /**
     * 最近一次扫描提示总数量
@@ -180,7 +159,6 @@ public class Site  extends AbstractModel{
     @SerializedName("LastScanNoticeNum")
     @Expose
     private Integer LastScanNoticeNum;
-    
 
     /**
     * 扫描进度，百分比整数
@@ -188,15 +166,6 @@ public class Site  extends AbstractModel{
     @SerializedName("Progress")
     @Expose
     private Integer Progress;
-    
-
-    /**
-    * 最近一次扫描各个类型风险漏洞数量，存储的是json对象
-    */
-    @SerializedName("LastScanExtsCount")
-    @Expose
-    private String LastScanExtsCount;
-    
 
     /**
     * 云用户appid。
@@ -204,7 +173,6 @@ public class Site  extends AbstractModel{
     @SerializedName("Appid")
     @Expose
     private Integer Appid;
-    
 
     /**
     * 云用户标识。
@@ -212,7 +180,55 @@ public class Site  extends AbstractModel{
     @SerializedName("Uin")
     @Expose
     private String Uin;
-    
+
+    /**
+    * 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+    */
+    @SerializedName("NeedLogin")
+    @Expose
+    private Integer NeedLogin;
+
+    /**
+    * 登录后的cookie。
+    */
+    @SerializedName("LoginCookie")
+    @Expose
+    private String LoginCookie;
+
+    /**
+    * 登录后的cookie是否有效：0-无效；1-有效。
+    */
+    @SerializedName("LoginCookieValid")
+    @Expose
+    private Integer LoginCookieValid;
+
+    /**
+    * 用于测试cookie是否有效的URL。
+    */
+    @SerializedName("LoginCheckUrl")
+    @Expose
+    private String LoginCheckUrl;
+
+    /**
+    * 用于测试cookie是否有效的关键字。
+    */
+    @SerializedName("LoginCheckKw")
+    @Expose
+    private String LoginCheckKw;
+
+    /**
+    * 禁止扫描器扫描的目录关键字。
+    */
+    @SerializedName("ScanDisallow")
+    @Expose
+    private String ScanDisallow;
+
+    /**
+    * 访问网站的客户端标识。
+    */
+    @SerializedName("UserAgent")
+    @Expose
+    private String UserAgent;
 
     /**
      * 获取站点ID。
@@ -583,22 +599,6 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描各个类型风险漏洞数量，存储的是json对象
-     * @return LastScanExtsCount 最近一次扫描各个类型风险漏洞数量，存储的是json对象
-     */
-    public String getLastScanExtsCount() {
-        return this.LastScanExtsCount;
-    }
-
-    /**
-     * 设置最近一次扫描各个类型风险漏洞数量，存储的是json对象
-     * @param LastScanExtsCount 最近一次扫描各个类型风险漏洞数量，存储的是json对象
-     */
-    public void setLastScanExtsCount(String LastScanExtsCount) {
-        this.LastScanExtsCount = LastScanExtsCount;
-    }
-
-    /**
      * 获取云用户appid。
      * @return Appid 云用户appid。
      */
@@ -631,6 +631,118 @@ public class Site  extends AbstractModel{
     }
 
     /**
+     * 获取网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     * @return NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     */
+    public Integer getNeedLogin() {
+        return this.NeedLogin;
+    }
+
+    /**
+     * 设置网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     * @param NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     */
+    public void setNeedLogin(Integer NeedLogin) {
+        this.NeedLogin = NeedLogin;
+    }
+
+    /**
+     * 获取登录后的cookie。
+     * @return LoginCookie 登录后的cookie。
+     */
+    public String getLoginCookie() {
+        return this.LoginCookie;
+    }
+
+    /**
+     * 设置登录后的cookie。
+     * @param LoginCookie 登录后的cookie。
+     */
+    public void setLoginCookie(String LoginCookie) {
+        this.LoginCookie = LoginCookie;
+    }
+
+    /**
+     * 获取登录后的cookie是否有效：0-无效；1-有效。
+     * @return LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
+     */
+    public Integer getLoginCookieValid() {
+        return this.LoginCookieValid;
+    }
+
+    /**
+     * 设置登录后的cookie是否有效：0-无效；1-有效。
+     * @param LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
+     */
+    public void setLoginCookieValid(Integer LoginCookieValid) {
+        this.LoginCookieValid = LoginCookieValid;
+    }
+
+    /**
+     * 获取用于测试cookie是否有效的URL。
+     * @return LoginCheckUrl 用于测试cookie是否有效的URL。
+     */
+    public String getLoginCheckUrl() {
+        return this.LoginCheckUrl;
+    }
+
+    /**
+     * 设置用于测试cookie是否有效的URL。
+     * @param LoginCheckUrl 用于测试cookie是否有效的URL。
+     */
+    public void setLoginCheckUrl(String LoginCheckUrl) {
+        this.LoginCheckUrl = LoginCheckUrl;
+    }
+
+    /**
+     * 获取用于测试cookie是否有效的关键字。
+     * @return LoginCheckKw 用于测试cookie是否有效的关键字。
+     */
+    public String getLoginCheckKw() {
+        return this.LoginCheckKw;
+    }
+
+    /**
+     * 设置用于测试cookie是否有效的关键字。
+     * @param LoginCheckKw 用于测试cookie是否有效的关键字。
+     */
+    public void setLoginCheckKw(String LoginCheckKw) {
+        this.LoginCheckKw = LoginCheckKw;
+    }
+
+    /**
+     * 获取禁止扫描器扫描的目录关键字。
+     * @return ScanDisallow 禁止扫描器扫描的目录关键字。
+     */
+    public String getScanDisallow() {
+        return this.ScanDisallow;
+    }
+
+    /**
+     * 设置禁止扫描器扫描的目录关键字。
+     * @param ScanDisallow 禁止扫描器扫描的目录关键字。
+     */
+    public void setScanDisallow(String ScanDisallow) {
+        this.ScanDisallow = ScanDisallow;
+    }
+
+    /**
+     * 获取访问网站的客户端标识。
+     * @return UserAgent 访问网站的客户端标识。
+     */
+    public String getUserAgent() {
+        return this.UserAgent;
+    }
+
+    /**
+     * 设置访问网站的客户端标识。
+     * @param UserAgent 访问网站的客户端标识。
+     */
+    public void setUserAgent(String UserAgent) {
+        this.UserAgent = UserAgent;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -657,9 +769,15 @@ public class Site  extends AbstractModel{
         this.setParamSimple(map, prefix + "LastScanVulsNum", this.LastScanVulsNum);
         this.setParamSimple(map, prefix + "LastScanNoticeNum", this.LastScanNoticeNum);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
-        this.setParamSimple(map, prefix + "LastScanExtsCount", this.LastScanExtsCount);
         this.setParamSimple(map, prefix + "Appid", this.Appid);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "NeedLogin", this.NeedLogin);
+        this.setParamSimple(map, prefix + "LoginCookie", this.LoginCookie);
+        this.setParamSimple(map, prefix + "LoginCookieValid", this.LoginCookieValid);
+        this.setParamSimple(map, prefix + "LoginCheckUrl", this.LoginCheckUrl);
+        this.setParamSimple(map, prefix + "LoginCheckKw", this.LoginCheckKw);
+        this.setParamSimple(map, prefix + "ScanDisallow", this.ScanDisallow);
+        this.setParamSimple(map, prefix + "UserAgent", this.UserAgent);
 
     }
 }

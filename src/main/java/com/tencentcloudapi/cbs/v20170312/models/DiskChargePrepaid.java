@@ -12,7 +12,6 @@ public class DiskChargePrepaid  extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Integer Period;
-    
 
     /**
     * 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费<br><br>默认取值：NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费。
@@ -20,7 +19,6 @@ public class DiskChargePrepaid  extends AbstractModel{
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
-    
 
     /**
     * 需要将云盘的到期时间与挂载的子机对齐时，可传入该参数。该参数表示子机当前的到期时间，此时Period如果传入，则表示子机需要续费的时长，云盘会自动按对齐到子机续费后的到期时间续费。
@@ -28,7 +26,6 @@ public class DiskChargePrepaid  extends AbstractModel{
     @SerializedName("CurInstanceDeadline")
     @Expose
     private String CurInstanceDeadline;
-    
 
     /**
      * 获取购买云盘的时长，默认单位为月，此时，取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。

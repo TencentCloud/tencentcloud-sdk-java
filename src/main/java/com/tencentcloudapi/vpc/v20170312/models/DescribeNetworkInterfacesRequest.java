@@ -12,7 +12,6 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     @SerializedName("NetworkInterfaceIds")
     @Expose
     private String [] NetworkInterfaceIds;
-    
 
     /**
     * 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
@@ -27,7 +26,6 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量，默认为0。
@@ -35,7 +33,6 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回数量，默认为20，最大值为100。
@@ -43,7 +40,6 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。

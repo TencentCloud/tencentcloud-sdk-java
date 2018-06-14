@@ -7,20 +7,18 @@ public class DescribeImportImageOsResponse  extends AbstractModel{
 
 
     /**
-    * 支持的导入镜像的操作系统类型
+    * 支持的导入镜像的操作系统类型。
     */
     @SerializedName("ImportImageOsListSupported")
     @Expose
-    private String [] ImportImageOsListSupported;
-    
+    private ImageOsList ImportImageOsListSupported;
 
     /**
-    * 支持的导入镜像的操作系统版本
+    * 支持的导入镜像的操作系统版本。
     */
-    @SerializedName("ImportImageOsVersionSupported")
+    @SerializedName("ImportImageOsVersionSet")
     @Expose
-    private String [] ImportImageOsVersionSupported;
-    
+    private OsVersion [] ImportImageOsVersionSet;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,38 +26,37 @@ public class DescribeImportImageOsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
-     * 获取支持的导入镜像的操作系统类型
-     * @return ImportImageOsListSupported 支持的导入镜像的操作系统类型
+     * 获取支持的导入镜像的操作系统类型。
+     * @return ImportImageOsListSupported 支持的导入镜像的操作系统类型。
      */
-    public String [] getImportImageOsListSupported() {
+    public ImageOsList getImportImageOsListSupported() {
         return this.ImportImageOsListSupported;
     }
 
     /**
-     * 设置支持的导入镜像的操作系统类型
-     * @param ImportImageOsListSupported 支持的导入镜像的操作系统类型
+     * 设置支持的导入镜像的操作系统类型。
+     * @param ImportImageOsListSupported 支持的导入镜像的操作系统类型。
      */
-    public void setImportImageOsListSupported(String [] ImportImageOsListSupported) {
+    public void setImportImageOsListSupported(ImageOsList ImportImageOsListSupported) {
         this.ImportImageOsListSupported = ImportImageOsListSupported;
     }
 
     /**
-     * 获取支持的导入镜像的操作系统版本
-     * @return ImportImageOsVersionSupported 支持的导入镜像的操作系统版本
+     * 获取支持的导入镜像的操作系统版本。
+     * @return ImportImageOsVersionSet 支持的导入镜像的操作系统版本。
      */
-    public String [] getImportImageOsVersionSupported() {
-        return this.ImportImageOsVersionSupported;
+    public OsVersion [] getImportImageOsVersionSet() {
+        return this.ImportImageOsVersionSet;
     }
 
     /**
-     * 设置支持的导入镜像的操作系统版本
-     * @param ImportImageOsVersionSupported 支持的导入镜像的操作系统版本
+     * 设置支持的导入镜像的操作系统版本。
+     * @param ImportImageOsVersionSet 支持的导入镜像的操作系统版本。
      */
-    public void setImportImageOsVersionSupported(String [] ImportImageOsVersionSupported) {
-        this.ImportImageOsVersionSupported = ImportImageOsVersionSupported;
+    public void setImportImageOsVersionSet(OsVersion [] ImportImageOsVersionSet) {
+        this.ImportImageOsVersionSet = ImportImageOsVersionSet;
     }
 
     /**
@@ -82,8 +79,8 @@ public class DescribeImportImageOsResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ImportImageOsListSupported.", this.ImportImageOsListSupported);
-        this.setParamArraySimple(map, prefix + "ImportImageOsVersionSupported.", this.ImportImageOsVersionSupported);
+        this.setParamObj(map, prefix + "ImportImageOsListSupported.", this.ImportImageOsListSupported);
+        this.setParamArrayObj(map, prefix + "ImportImageOsVersionSet.", this.ImportImageOsVersionSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

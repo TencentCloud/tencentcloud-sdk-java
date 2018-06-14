@@ -12,7 +12,6 @@ public class ShieldInfo  extends AbstractModel{
     @SerializedName("ShieldCode")
     @Expose
     private Integer ShieldCode;
-    
 
     /**
     * 加固后app的大小
@@ -20,7 +19,6 @@ public class ShieldInfo  extends AbstractModel{
     @SerializedName("ShieldSize")
     @Expose
     private Integer ShieldSize;
-    
 
     /**
     * 加固后app的md5
@@ -28,7 +26,6 @@ public class ShieldInfo  extends AbstractModel{
     @SerializedName("ShieldMd5")
     @Expose
     private String ShieldMd5;
-    
 
     /**
     * 加固后的APP下载地址
@@ -36,7 +33,6 @@ public class ShieldInfo  extends AbstractModel{
     @SerializedName("AppUrl")
     @Expose
     private String AppUrl;
-    
 
     /**
     * 加固的提交时间
@@ -44,7 +40,6 @@ public class ShieldInfo  extends AbstractModel{
     @SerializedName("TaskTime")
     @Expose
     private Integer TaskTime;
-    
 
     /**
     * 任务唯一标识
@@ -52,7 +47,6 @@ public class ShieldInfo  extends AbstractModel{
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
-    
 
     /**
      * 获取加固结果的返回码

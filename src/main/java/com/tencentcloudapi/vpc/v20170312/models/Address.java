@@ -12,7 +12,6 @@ public class Address  extends AbstractModel{
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
-    
 
     /**
     * `EIP`名称。
@@ -20,7 +19,6 @@ public class Address  extends AbstractModel{
     @SerializedName("AddressName")
     @Expose
     private String AddressName;
-    
 
     /**
     * `EIP`状态。
@@ -28,7 +26,6 @@ public class Address  extends AbstractModel{
     @SerializedName("AddressStatus")
     @Expose
     private String AddressStatus;
-    
 
     /**
     * 弹性外网IP
@@ -36,7 +33,6 @@ public class Address  extends AbstractModel{
     @SerializedName("AddressIp")
     @Expose
     private String AddressIp;
-    
 
     /**
     * 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
@@ -44,7 +40,6 @@ public class Address  extends AbstractModel{
     @SerializedName("BindedResourceId")
     @Expose
     private String BindedResourceId;
-    
 
     /**
     * 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
@@ -52,7 +47,6 @@ public class Address  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取`EIP`的`ID`，是`EIP`的唯一标识。

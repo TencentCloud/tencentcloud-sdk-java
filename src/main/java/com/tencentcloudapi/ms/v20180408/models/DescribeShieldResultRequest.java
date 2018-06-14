@@ -12,7 +12,6 @@ public class DescribeShieldResultRequest  extends AbstractModel{
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
-    
 
     /**
      * 获取任务唯一标识

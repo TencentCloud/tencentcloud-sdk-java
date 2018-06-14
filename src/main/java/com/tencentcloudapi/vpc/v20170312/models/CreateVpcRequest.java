@@ -12,7 +12,6 @@ public class CreateVpcRequest  extends AbstractModel{
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
-    
 
     /**
     * vpc的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
@@ -20,7 +19,6 @@ public class CreateVpcRequest  extends AbstractModel{
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
-    
 
     /**
     * 是否开启组播。true: 开启, false: 不开启。
@@ -28,7 +26,6 @@ public class CreateVpcRequest  extends AbstractModel{
     @SerializedName("EnableMulticast")
     @Expose
     private String EnableMulticast;
-    
 
     /**
     * DNS地址，最多支持4个
@@ -36,7 +33,6 @@ public class CreateVpcRequest  extends AbstractModel{
     @SerializedName("DnsServers")
     @Expose
     private String [] DnsServers;
-    
 
     /**
     * 域名
@@ -44,7 +40,6 @@ public class CreateVpcRequest  extends AbstractModel{
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
-    
 
     /**
      * 获取vpc名称，最大长度不能超过60个字节。

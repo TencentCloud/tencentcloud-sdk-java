@@ -12,7 +12,6 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     @SerializedName("TaskStatus")
     @Expose
     private Integer TaskStatus;
-    
 
     /**
     * app加固前的详细信息
@@ -20,7 +19,6 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     @SerializedName("AppDetailInfo")
     @Expose
     private AppDetailInfo AppDetailInfo;
-    
 
     /**
     * app加固后的详细信息
@@ -28,7 +26,6 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     @SerializedName("ShieldInfo")
     @Expose
     private ShieldInfo ShieldInfo;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -36,7 +33,6 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时

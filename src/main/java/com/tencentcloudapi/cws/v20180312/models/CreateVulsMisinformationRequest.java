@@ -12,7 +12,6 @@ public class CreateVulsMisinformationRequest  extends AbstractModel{
     @SerializedName("VulIds")
     @Expose
     private Integer [] VulIds;
-    
 
     /**
      * 获取漏洞ID列表

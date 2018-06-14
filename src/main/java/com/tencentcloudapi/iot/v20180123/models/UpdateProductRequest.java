@@ -12,7 +12,6 @@ public class UpdateProductRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * 产品名称
@@ -20,7 +19,6 @@ public class UpdateProductRequest  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 产品描述
@@ -28,7 +26,6 @@ public class UpdateProductRequest  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
     * 数据模版（json）
@@ -36,7 +33,6 @@ public class UpdateProductRequest  extends AbstractModel{
     @SerializedName("DataTemplate")
     @Expose
     private String DataTemplate;
-    
 
     /**
      * 获取产品Id

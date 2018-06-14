@@ -12,7 +12,6 @@ public class DeleteSnapshotsRequest  extends AbstractModel{
     @SerializedName("SnapshotIds")
     @Expose
     private String [] SnapshotIds;
-    
 
     /**
      * 获取要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。

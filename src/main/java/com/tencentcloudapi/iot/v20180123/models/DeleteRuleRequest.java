@@ -12,7 +12,6 @@ public class DeleteRuleRequest  extends AbstractModel{
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
-    
 
     /**
      * 获取规则Id

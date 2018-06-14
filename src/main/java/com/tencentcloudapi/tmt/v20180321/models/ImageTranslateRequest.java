@@ -12,7 +12,6 @@ public class ImageTranslateRequest  extends AbstractModel{
     @SerializedName("SessionUuid")
     @Expose
     private String SessionUuid;
-    
 
     /**
     * doc:文档扫描
@@ -20,7 +19,6 @@ public class ImageTranslateRequest  extends AbstractModel{
     @SerializedName("Scene")
     @Expose
     private String Scene;
-    
 
     /**
     * 图片数据的Base64字符串
@@ -28,7 +26,6 @@ public class ImageTranslateRequest  extends AbstractModel{
     @SerializedName("Data")
     @Expose
     private String Data;
-    
 
     /**
     * 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
@@ -36,7 +33,6 @@ public class ImageTranslateRequest  extends AbstractModel{
     @SerializedName("Source")
     @Expose
     private String Source;
-    
 
     /**
     * 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
@@ -44,7 +40,6 @@ public class ImageTranslateRequest  extends AbstractModel{
     @SerializedName("Target")
     @Expose
     private String Target;
-    
 
     /**
     * 项目id
@@ -52,7 +47,6 @@ public class ImageTranslateRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
      * 获取唯一id，返回时原样返回

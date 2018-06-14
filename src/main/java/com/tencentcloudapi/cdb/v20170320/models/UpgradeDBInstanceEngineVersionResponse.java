@@ -12,7 +12,6 @@ public class UpgradeDBInstanceEngineVersionResponse  extends AbstractModel{
     @SerializedName("AsyncRequestId")
     @Expose
     private String AsyncRequestId;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class UpgradeDBInstanceEngineVersionResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取异步任务ID，可使用[查询任务列表](https://cloud.tencent.com/document/api/236/8010)获取其执行情况

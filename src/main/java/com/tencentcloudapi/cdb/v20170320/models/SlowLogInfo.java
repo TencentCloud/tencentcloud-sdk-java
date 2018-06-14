@@ -12,15 +12,13 @@ public class SlowLogInfo  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 备份文件大小，单位：Byte
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
-    
+    private Long Size;
 
     /**
     * 备份快照时间，时间格式：2016-03-17 02:10:37
@@ -28,7 +26,6 @@ public class SlowLogInfo  extends AbstractModel{
     @SerializedName("Date")
     @Expose
     private String Date;
-    
 
     /**
     * 内网下载地址
@@ -36,7 +33,6 @@ public class SlowLogInfo  extends AbstractModel{
     @SerializedName("IntranetUrl")
     @Expose
     private String IntranetUrl;
-    
 
     /**
     * 外网下载地址
@@ -44,7 +40,6 @@ public class SlowLogInfo  extends AbstractModel{
     @SerializedName("InternetUrl")
     @Expose
     private String InternetUrl;
-    
 
     /**
     * 日志具体类型，可能的值：slowlog - 慢日志
@@ -52,7 +47,6 @@ public class SlowLogInfo  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
-    
 
     /**
      * 获取备份文件名
@@ -74,7 +68,7 @@ public class SlowLogInfo  extends AbstractModel{
      * 获取备份文件大小，单位：Byte
      * @return Size 备份文件大小，单位：Byte
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -82,7 +76,7 @@ public class SlowLogInfo  extends AbstractModel{
      * 设置备份文件大小，单位：Byte
      * @param Size 备份文件大小，单位：Byte
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 

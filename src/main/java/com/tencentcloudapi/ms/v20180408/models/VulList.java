@@ -12,7 +12,6 @@ public class VulList  extends AbstractModel{
     @SerializedName("VulId")
     @Expose
     private String VulId;
-    
 
     /**
     * 漏洞名称
@@ -20,7 +19,6 @@ public class VulList  extends AbstractModel{
     @SerializedName("VulName")
     @Expose
     private String VulName;
-    
 
     /**
     * 漏洞代码
@@ -28,7 +26,6 @@ public class VulList  extends AbstractModel{
     @SerializedName("VulCode")
     @Expose
     private String VulCode;
-    
 
     /**
     * 漏洞描述
@@ -36,7 +33,6 @@ public class VulList  extends AbstractModel{
     @SerializedName("VulDesc")
     @Expose
     private String VulDesc;
-    
 
     /**
     * 漏洞解决方案
@@ -44,7 +40,6 @@ public class VulList  extends AbstractModel{
     @SerializedName("VulSolution")
     @Expose
     private String VulSolution;
-    
 
     /**
     * 漏洞来源类别，0默认自身，1第三方插件
@@ -52,7 +47,6 @@ public class VulList  extends AbstractModel{
     @SerializedName("VulSrcType")
     @Expose
     private Integer VulSrcType;
-    
 
     /**
     * 漏洞位置
@@ -60,7 +54,6 @@ public class VulList  extends AbstractModel{
     @SerializedName("VulFilepath")
     @Expose
     private String VulFilepath;
-    
 
     /**
     * 风险级别：1 低风险 ；2中等风险；3 高风险
@@ -68,7 +61,6 @@ public class VulList  extends AbstractModel{
     @SerializedName("RiskLevel")
     @Expose
     private Integer RiskLevel;
-    
 
     /**
      * 获取漏洞id

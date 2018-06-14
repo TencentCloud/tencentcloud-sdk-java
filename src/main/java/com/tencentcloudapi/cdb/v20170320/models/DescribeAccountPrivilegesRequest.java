@@ -12,7 +12,6 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 数据库的账号名称。
@@ -20,7 +19,6 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("User")
     @Expose
     private String User;
-    
 
     /**
     * 数据库的账号域名。
@@ -28,7 +26,6 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。

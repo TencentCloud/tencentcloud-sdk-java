@@ -12,7 +12,6 @@ public class DescribeJobsResponse  extends AbstractModel{
     @SerializedName("JobSet")
     @Expose
     private JobView JobSet;
-    
 
     /**
     * 符合条件的作业数量
@@ -20,7 +19,6 @@ public class DescribeJobsResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeJobsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取作业列表

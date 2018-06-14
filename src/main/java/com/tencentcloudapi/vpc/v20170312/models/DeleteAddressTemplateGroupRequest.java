@@ -12,7 +12,6 @@ public class DeleteAddressTemplateGroupRequest  extends AbstractModel{
     @SerializedName("AddressTemplateGroupId")
     @Expose
     private String AddressTemplateGroupId;
-    
 
     /**
      * 获取IP地址模板集合实例ID，例如：ipmg-90cex8mq。

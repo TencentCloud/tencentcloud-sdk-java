@@ -12,7 +12,6 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     @SerializedName("Data")
     @Expose
     private SlowLogData [] Data;
-    
 
     /**
     * 所有语句锁时间总和
@@ -20,7 +19,6 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     @SerializedName("LockTimeSum")
     @Expose
     private String LockTimeSum;
-    
 
     /**
     * 所有语句查询总次数
@@ -28,7 +26,6 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     @SerializedName("QueryCount")
     @Expose
     private String QueryCount;
-    
 
     /**
     * 总记录数
@@ -36,7 +33,6 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     @SerializedName("Total")
     @Expose
     private String Total;
-    
 
     /**
     * 所有语句查询时间总和
@@ -44,7 +40,6 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     @SerializedName("QueryTimeSum")
     @Expose
     private String QueryTimeSum;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -52,7 +47,6 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取慢查询日志数据

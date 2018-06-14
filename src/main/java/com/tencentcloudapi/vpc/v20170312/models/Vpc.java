@@ -12,7 +12,6 @@ public class Vpc  extends AbstractModel{
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
-    
 
     /**
     * VPC实例ID，例如：vpc-azd4dt1c。
@@ -20,7 +19,6 @@ public class Vpc  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
@@ -28,7 +26,6 @@ public class Vpc  extends AbstractModel{
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
-    
 
     /**
     * 是否默认VPC。
@@ -36,7 +33,6 @@ public class Vpc  extends AbstractModel{
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
-    
 
     /**
     * 是否开启组播。
@@ -44,7 +40,6 @@ public class Vpc  extends AbstractModel{
     @SerializedName("EnableMulticast")
     @Expose
     private Boolean EnableMulticast;
-    
 
     /**
     * 创建时间。
@@ -52,7 +47,6 @@ public class Vpc  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取Vpc名称。

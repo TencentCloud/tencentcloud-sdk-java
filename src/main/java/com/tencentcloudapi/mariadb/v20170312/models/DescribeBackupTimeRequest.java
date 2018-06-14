@@ -12,7 +12,6 @@ public class DescribeBackupTimeRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
      * 获取实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

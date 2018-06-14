@@ -12,7 +12,6 @@ public class ImportImageRequest  extends AbstractModel{
     @SerializedName("Architecture")
     @Expose
     private String Architecture;
-    
 
     /**
     * 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
@@ -20,7 +19,6 @@ public class ImportImageRequest  extends AbstractModel{
     @SerializedName("OsType")
     @Expose
     private String OsType;
-    
 
     /**
     * 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
@@ -28,7 +26,6 @@ public class ImportImageRequest  extends AbstractModel{
     @SerializedName("OsVersion")
     @Expose
     private String OsVersion;
-    
 
     /**
     * 导入镜像存放的cos地址
@@ -36,7 +33,6 @@ public class ImportImageRequest  extends AbstractModel{
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
-    
 
     /**
     * 镜像名称
@@ -44,7 +40,6 @@ public class ImportImageRequest  extends AbstractModel{
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
-    
 
     /**
     * 镜像描述
@@ -52,7 +47,6 @@ public class ImportImageRequest  extends AbstractModel{
     @SerializedName("ImageDescription")
     @Expose
     private String ImageDescription;
-    
 
     /**
     * 只检查参数，不执行任务
@@ -60,7 +54,6 @@ public class ImportImageRequest  extends AbstractModel{
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
-    
 
     /**
     * 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
@@ -68,7 +61,6 @@ public class ImportImageRequest  extends AbstractModel{
     @SerializedName("Force")
     @Expose
     private Boolean Force;
-    
 
     /**
      * 获取导入镜像的操作系统架构，`x86_64` 或 `i386`

@@ -12,7 +12,6 @@ public class DeleteRouteTableRequest  extends AbstractModel{
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
-    
 
     /**
      * 获取路由表实例ID，例如：rtb-azd4dt1c。

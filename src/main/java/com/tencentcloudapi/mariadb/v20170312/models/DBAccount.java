@@ -12,7 +12,6 @@ public class DBAccount  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
@@ -20,7 +19,6 @@ public class DBAccount  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
     * 用户备注信息
@@ -28,7 +26,6 @@ public class DBAccount  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
     * 创建时间
@@ -36,7 +33,6 @@ public class DBAccount  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 最后更新时间
@@ -44,7 +40,6 @@ public class DBAccount  extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
-    
 
     /**
     * 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
@@ -52,7 +47,6 @@ public class DBAccount  extends AbstractModel{
     @SerializedName("ReadOnly")
     @Expose
     private Integer ReadOnly;
-    
 
     /**
      * 获取用户名

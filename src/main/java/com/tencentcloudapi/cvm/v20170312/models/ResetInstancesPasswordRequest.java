@@ -12,7 +12,6 @@ public class ResetInstancesPasswordRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
     * 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：<br><li>`Linux`实例密码必须8到16位，至少包括两项`[a-z，A-Z]、[0-9]`和`[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]`中的符号。密码不允许以`/`符号开头。<br><li>`Windows`实例密码必须12到16位，至少包括三项`[a-z]，[A-Z]，[0-9]`和`[( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /]`中的符号。密码不允许以`/`符号开头。<br><li>如果实例即包含`Linux`实例又包含`Windows`实例，则密码复杂度限制按照`Windows`实例的限制。
@@ -20,7 +19,6 @@ public class ResetInstancesPasswordRequest  extends AbstractModel{
     @SerializedName("Password")
     @Expose
     private String Password;
-    
 
     /**
     * 待重置密码的实例操作系统用户名。不得超过64个字符。
@@ -28,7 +26,6 @@ public class ResetInstancesPasswordRequest  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再重置用户密码。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机<br><li>FALSE：表示在正常关机失败后不进行强制关机<br><br>默认取值：FALSE。<br><br>强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
@@ -36,7 +33,6 @@ public class ResetInstancesPasswordRequest  extends AbstractModel{
     @SerializedName("ForceStop")
     @Expose
     private Boolean ForceStop;
-    
 
     /**
      * 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。

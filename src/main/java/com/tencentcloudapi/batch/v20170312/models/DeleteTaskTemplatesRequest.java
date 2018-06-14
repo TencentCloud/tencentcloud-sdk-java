@@ -12,7 +12,6 @@ public class DeleteTaskTemplatesRequest  extends AbstractModel{
     @SerializedName("TaskTemplateIds")
     @Expose
     private String [] TaskTemplateIds;
-    
 
     /**
      * 获取用于删除任务模板信息

@@ -12,7 +12,6 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 备份过期时间，单位为天，最小值为7天，最大值为732天。
@@ -20,7 +19,6 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     @SerializedName("ExpireDays")
     @Expose
     private Integer ExpireDays;
-    
 
     /**
     * 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
@@ -28,7 +26,6 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备；默认备份方法为 逻辑冷备。
@@ -36,7 +33,6 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。

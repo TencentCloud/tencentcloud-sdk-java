@@ -12,7 +12,6 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
-    
 
     /**
     * 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
@@ -20,7 +19,6 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 新的云硬盘名称。
@@ -28,7 +26,6 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     @SerializedName("DiskName")
     @Expose
     private String DiskName;
-    
 
     /**
     * 是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
@@ -36,7 +33,6 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     @SerializedName("Portable")
     @Expose
     private Boolean Portable;
-    
 
     /**
      * 获取一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。

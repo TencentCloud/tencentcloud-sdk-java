@@ -12,7 +12,6 @@ public class Price  extends AbstractModel{
     @SerializedName("InstancePrice")
     @Expose
     private ItemPrice InstancePrice;
-    
 
     /**
     * 描述了网络价格。
@@ -20,7 +19,6 @@ public class Price  extends AbstractModel{
     @SerializedName("BandwidthPrice")
     @Expose
     private ItemPrice BandwidthPrice;
-    
 
     /**
      * 获取描述了实例价格。

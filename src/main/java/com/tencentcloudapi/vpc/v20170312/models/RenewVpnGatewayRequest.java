@@ -12,7 +12,6 @@ public class RenewVpnGatewayRequest  extends AbstractModel{
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
-    
 
     /**
     * 预付费计费模式。
@@ -20,7 +19,6 @@ public class RenewVpnGatewayRequest  extends AbstractModel{
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
-    
 
     /**
      * 获取VPN网关实例ID。

@@ -12,7 +12,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("Id")
     @Expose
     private Integer Id;
-    
 
     /**
     * 监控名称。
@@ -20,7 +19,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 监测状态：1-监测中；2-暂停监测。
@@ -28,7 +26,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("MonitorStatus")
     @Expose
     private Integer MonitorStatus;
-    
 
     /**
     * 监测模式，normal-正常扫描；deep-深度扫描。
@@ -36,7 +33,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("ScannerType")
     @Expose
     private String ScannerType;
-    
 
     /**
     * 扫描周期，单位小时，每X小时执行一次。
@@ -44,7 +40,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("Crontab")
     @Expose
     private Integer Crontab;
-    
 
     /**
     * 指定扫描类型，3位数每位依次表示：扫描Web漏洞、扫描系统漏洞、扫描系统端口。
@@ -52,7 +47,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("IncludedVulsTypes")
     @Expose
     private String IncludedVulsTypes;
-    
 
     /**
     * 速率限制，每秒发送X个HTTP请求。
@@ -60,7 +54,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("RateLimit")
     @Expose
     private Integer RateLimit;
-    
 
     /**
     * 首次扫描开始时间。
@@ -68,7 +61,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("FirstScanStartTime")
     @Expose
     private String FirstScanStartTime;
-    
 
     /**
     * 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
@@ -76,7 +68,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("ScanStatus")
     @Expose
     private Integer ScanStatus;
-    
 
     /**
     * 上一次扫描完成时间。
@@ -84,7 +75,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("LastScanFinishTime")
     @Expose
     private String LastScanFinishTime;
-    
 
     /**
     * 当前扫描开始时间，如扫描完成则为上一次扫描的开始时间。
@@ -92,7 +82,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("CurrentScanStartTime")
     @Expose
     private String CurrentScanStartTime;
-    
 
     /**
     * CreatedAt。
@@ -100,7 +89,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
-    
 
     /**
     * UpdatedAt。
@@ -108,7 +96,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
-    
 
     /**
     * 云用户appid。
@@ -116,7 +103,6 @@ public class Monitor  extends AbstractModel{
     @SerializedName("Appid")
     @Expose
     private Integer Appid;
-    
 
     /**
      * 获取监控任务ID。

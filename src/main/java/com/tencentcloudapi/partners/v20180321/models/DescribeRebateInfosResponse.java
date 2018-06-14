@@ -12,7 +12,6 @@ public class DescribeRebateInfosResponse  extends AbstractModel{
     @SerializedName("RebateInfoSet")
     @Expose
     private RebateInfoElem [] RebateInfoSet;
-    
 
     /**
     * 符合查询条件返佣信息数目
@@ -20,7 +19,6 @@ public class DescribeRebateInfosResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeRebateInfosResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取返佣信息列表

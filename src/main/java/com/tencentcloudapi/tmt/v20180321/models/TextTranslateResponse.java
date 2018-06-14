@@ -12,7 +12,6 @@ public class TextTranslateResponse  extends AbstractModel{
     @SerializedName("TargetText")
     @Expose
     private String TargetText;
-    
 
     /**
     * 源语言，详见入参Target
@@ -20,7 +19,6 @@ public class TextTranslateResponse  extends AbstractModel{
     @SerializedName("Source")
     @Expose
     private String Source;
-    
 
     /**
     * 目标语言，详见入参Target
@@ -28,7 +26,6 @@ public class TextTranslateResponse  extends AbstractModel{
     @SerializedName("Target")
     @Expose
     private String Target;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -36,7 +33,6 @@ public class TextTranslateResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取翻译后的文本

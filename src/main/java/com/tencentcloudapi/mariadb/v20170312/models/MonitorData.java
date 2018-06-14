@@ -12,7 +12,6 @@ public class MonitorData  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 结束时间，形如 2018-03-24 23:59:59
@@ -20,7 +19,6 @@ public class MonitorData  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
     * 监控数据
@@ -28,7 +26,6 @@ public class MonitorData  extends AbstractModel{
     @SerializedName("Data")
     @Expose
     private Float [] Data;
-    
 
     /**
      * 获取起始时间，形如 2018-03-24 23:59:59

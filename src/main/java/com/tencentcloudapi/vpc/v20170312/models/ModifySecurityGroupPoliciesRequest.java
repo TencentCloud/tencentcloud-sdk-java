@@ -12,7 +12,6 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
-    
 
     /**
     * 安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
@@ -20,7 +19,6 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     @SerializedName("SecurityGroupPolicySet")
     @Expose
     private SecurityGroupPolicySet SecurityGroupPolicySet;
-    
 
     /**
      * 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。

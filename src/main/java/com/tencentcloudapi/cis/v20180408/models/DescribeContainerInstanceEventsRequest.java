@@ -12,7 +12,6 @@ public class DescribeContainerInstanceEventsRequest  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
      * 获取容器实例名称

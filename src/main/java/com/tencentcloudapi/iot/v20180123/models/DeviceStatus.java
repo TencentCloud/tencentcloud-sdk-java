@@ -12,7 +12,6 @@ public class DeviceStatus  extends AbstractModel{
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
-    
 
     /**
     * 设备状态（inactive, online, offline）
@@ -20,7 +19,6 @@ public class DeviceStatus  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private String Status;
-    
 
     /**
      * 获取设备名称

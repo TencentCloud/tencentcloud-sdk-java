@@ -12,7 +12,6 @@ public class AdInfo  extends AbstractModel{
     @SerializedName("Spots")
     @Expose
     private PluginInfo [] Spots;
-    
 
     /**
     * 精品推荐广告列表
@@ -20,7 +19,6 @@ public class AdInfo  extends AbstractModel{
     @SerializedName("BoutiqueRecommands")
     @Expose
     private PluginInfo [] BoutiqueRecommands;
-    
 
     /**
     * 悬浮窗广告列表
@@ -28,7 +26,6 @@ public class AdInfo  extends AbstractModel{
     @SerializedName("FloatWindowses")
     @Expose
     private PluginInfo [] FloatWindowses;
-    
 
     /**
     * banner广告列表
@@ -36,7 +33,6 @@ public class AdInfo  extends AbstractModel{
     @SerializedName("Banners")
     @Expose
     private PluginInfo [] Banners;
-    
 
     /**
     * 积分墙广告列表
@@ -44,7 +40,6 @@ public class AdInfo  extends AbstractModel{
     @SerializedName("IntegralWalls")
     @Expose
     private PluginInfo [] IntegralWalls;
-    
 
     /**
     * 通知栏广告列表
@@ -52,7 +47,6 @@ public class AdInfo  extends AbstractModel{
     @SerializedName("NotifyBars")
     @Expose
     private PluginInfo [] NotifyBars;
-    
 
     /**
      * 获取插播广告列表

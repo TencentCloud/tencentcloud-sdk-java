@@ -12,7 +12,6 @@ public class SecurityPolicyDatabase  extends AbstractModel{
     @SerializedName("LocalCidrBlock")
     @Expose
     private String LocalCidrBlock;
-    
 
     /**
     * 对端网段
@@ -20,7 +19,6 @@ public class SecurityPolicyDatabase  extends AbstractModel{
     @SerializedName("RemoteCidrBlock")
     @Expose
     private String [] RemoteCidrBlock;
-    
 
     /**
      * 获取本端网段

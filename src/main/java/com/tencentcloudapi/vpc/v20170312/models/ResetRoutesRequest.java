@@ -12,7 +12,6 @@ public class ResetRoutesRequest  extends AbstractModel{
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
-    
 
     /**
     * 路由表名称，最大长度不能超过60个字节。
@@ -20,7 +19,6 @@ public class ResetRoutesRequest  extends AbstractModel{
     @SerializedName("RouteTableName")
     @Expose
     private String RouteTableName;
-    
 
     /**
     * 路由策略。
@@ -28,7 +26,6 @@ public class ResetRoutesRequest  extends AbstractModel{
     @SerializedName("Routes")
     @Expose
     private Route [] Routes;
-    
 
     /**
      * 获取路由表实例ID，例如：rtb-azd4dt1c。

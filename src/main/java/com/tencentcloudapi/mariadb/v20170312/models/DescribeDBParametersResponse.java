@@ -12,7 +12,6 @@ public class DescribeDBParametersResponse  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 请求DB的当前参数值
@@ -20,7 +19,6 @@ public class DescribeDBParametersResponse  extends AbstractModel{
     @SerializedName("Params")
     @Expose
     private ParamDesc [] Params;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeDBParametersResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc。

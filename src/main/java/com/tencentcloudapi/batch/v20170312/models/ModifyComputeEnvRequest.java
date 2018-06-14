@@ -12,7 +12,6 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
-    
 
     /**
     * 计算节点期望个数
@@ -20,7 +19,6 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     @SerializedName("DesiredComputeNodeCount")
     @Expose
     private Integer DesiredComputeNodeCount;
-    
 
     /**
      * 获取计算环境ID

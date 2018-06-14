@@ -12,7 +12,6 @@ public class Job  extends AbstractModel{
     @SerializedName("JobName")
     @Expose
     private String JobName;
-    
 
     /**
     * 作业描述
@@ -20,7 +19,6 @@ public class Job  extends AbstractModel{
     @SerializedName("JobDescription")
     @Expose
     private String JobDescription;
-    
 
     /**
     * 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
@@ -28,7 +26,6 @@ public class Job  extends AbstractModel{
     @SerializedName("Priority")
     @Expose
     private Integer Priority;
-    
 
     /**
     * 任务信息
@@ -36,7 +33,6 @@ public class Job  extends AbstractModel{
     @SerializedName("Tasks")
     @Expose
     private Task [] Tasks;
-    
 
     /**
     * 依赖信息
@@ -44,7 +40,6 @@ public class Job  extends AbstractModel{
     @SerializedName("Dependences")
     @Expose
     private Dependence [] Dependences;
-    
 
     /**
     * 通知信息
@@ -52,7 +47,6 @@ public class Job  extends AbstractModel{
     @SerializedName("Notifications")
     @Expose
     private Notification [] Notifications;
-    
 
     /**
     * 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
@@ -60,7 +54,6 @@ public class Job  extends AbstractModel{
     @SerializedName("TaskExecutionDependOn")
     @Expose
     private String TaskExecutionDependOn;
-    
 
     /**
     * 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
@@ -68,7 +61,6 @@ public class Job  extends AbstractModel{
     @SerializedName("StateIfCreateCvmFailed")
     @Expose
     private String StateIfCreateCvmFailed;
-    
 
     /**
      * 获取作业名称

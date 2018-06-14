@@ -12,7 +12,6 @@ public class ModifyAddressAttributeRequest  extends AbstractModel{
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
-    
 
     /**
     * 修改后的 EIP 名称。长度上限为20个字符。
@@ -20,7 +19,6 @@ public class ModifyAddressAttributeRequest  extends AbstractModel{
     @SerializedName("AddressName")
     @Expose
     private String AddressName;
-    
 
     /**
      * 获取标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。

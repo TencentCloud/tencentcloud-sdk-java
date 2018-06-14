@@ -12,7 +12,6 @@ public class AssignPrivateIpAddressesRequest  extends AbstractModel{
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
-    
 
     /**
     * 指定的内网IP信息。
@@ -20,7 +19,6 @@ public class AssignPrivateIpAddressesRequest  extends AbstractModel{
     @SerializedName("PrivateIpAddresses")
     @Expose
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
-    
 
     /**
     * 新申请的内网IP地址个数。
@@ -28,7 +26,6 @@ public class AssignPrivateIpAddressesRequest  extends AbstractModel{
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
     private Integer SecondaryPrivateIpAddressCount;
-    
 
     /**
      * 获取弹性网卡实例ID，例如：eni-m6dyj72l。

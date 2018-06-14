@@ -12,7 +12,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("LongQuery")
     @Expose
     private MonitorData LongQuery;
-    
 
     /**
     * 查询操作数SELECT
@@ -20,7 +19,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("SelectTotal")
     @Expose
     private MonitorData SelectTotal;
-    
 
     /**
     * 更新操作数UPDATE
@@ -28,7 +26,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("UpdateTotal")
     @Expose
     private MonitorData UpdateTotal;
-    
 
     /**
     * 插入操作数INSERT
@@ -36,7 +33,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("InsertTotal")
     @Expose
     private MonitorData InsertTotal;
-    
 
     /**
     * 删除操作数DELETE
@@ -44,7 +40,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("DeleteTotal")
     @Expose
     private MonitorData DeleteTotal;
-    
 
     /**
     * 缓存命中率
@@ -52,7 +47,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("MemHitRate")
     @Expose
     private MonitorData MemHitRate;
-    
 
     /**
     * 磁盘每秒IO次数
@@ -60,7 +54,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("DiskIops")
     @Expose
     private MonitorData DiskIops;
-    
 
     /**
     * 活跃连接数
@@ -68,7 +61,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("ConnActive")
     @Expose
     private MonitorData ConnActive;
-    
 
     /**
     * 是否发生主备切换，1为发生，0否
@@ -76,7 +68,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("IsMasterSwitched")
     @Expose
     private MonitorData IsMasterSwitched;
-    
 
     /**
     * 主备延迟
@@ -84,7 +75,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("SlaveDelay")
     @Expose
     private MonitorData SlaveDelay;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -92,7 +82,6 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取慢查询数

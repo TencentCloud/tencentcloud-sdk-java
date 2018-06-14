@@ -12,7 +12,6 @@ public class ItemPrice  extends AbstractModel{
     @SerializedName("UnitPrice")
     @Expose
     private Float UnitPrice;
-    
 
     /**
     * 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
@@ -20,7 +19,6 @@ public class ItemPrice  extends AbstractModel{
     @SerializedName("ChargeUnit")
     @Expose
     private String ChargeUnit;
-    
 
     /**
     * 预付费商品的原价，单位：元。
@@ -28,7 +26,6 @@ public class ItemPrice  extends AbstractModel{
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
-    
 
     /**
     * 预付费商品的折扣价，单位：元。
@@ -36,7 +33,6 @@ public class ItemPrice  extends AbstractModel{
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
-    
 
     /**
      * 获取按量计费后付费单价，单位：元。

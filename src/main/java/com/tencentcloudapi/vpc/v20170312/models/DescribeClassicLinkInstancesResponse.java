@@ -12,7 +12,6 @@ public class DescribeClassicLinkInstancesResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 私有网络和基础网络互通设备。
@@ -20,7 +19,6 @@ public class DescribeClassicLinkInstancesResponse  extends AbstractModel{
     @SerializedName("ClassicLinkInstanceSet")
     @Expose
     private ClassicLinkInstance [] ClassicLinkInstanceSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeClassicLinkInstancesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取符合条件的实例数量。

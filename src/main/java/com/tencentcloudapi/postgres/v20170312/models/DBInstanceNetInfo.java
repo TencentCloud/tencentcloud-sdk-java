@@ -12,7 +12,6 @@ public class DBInstanceNetInfo  extends AbstractModel{
     @SerializedName("Address")
     @Expose
     private String Address;
-    
 
     /**
     * Ip
@@ -20,7 +19,6 @@ public class DBInstanceNetInfo  extends AbstractModel{
     @SerializedName("Ip")
     @Expose
     private String Ip;
-    
 
     /**
     * 连接Port地址
@@ -28,7 +26,6 @@ public class DBInstanceNetInfo  extends AbstractModel{
     @SerializedName("Port")
     @Expose
     private Integer Port;
-    
 
     /**
     * 网络类型，1、inner（内网地址）；2、public（外网地址）
@@ -36,7 +33,6 @@ public class DBInstanceNetInfo  extends AbstractModel{
     @SerializedName("NetType")
     @Expose
     private String NetType;
-    
 
     /**
     * 网络连接状态
@@ -44,7 +40,6 @@ public class DBInstanceNetInfo  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private String Status;
-    
 
     /**
      * 获取DNS域名

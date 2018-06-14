@@ -12,7 +12,6 @@ public class First  extends AbstractModel{
     @SerializedName("Vport")
     @Expose
     private Integer Vport;
-    
 
     /**
     * 地域信息
@@ -20,7 +19,6 @@ public class First  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 虚拟Ip信息
@@ -28,7 +26,6 @@ public class First  extends AbstractModel{
     @SerializedName("Vip")
     @Expose
     private String Vip;
-    
 
     /**
     * 可用区信息
@@ -36,7 +33,6 @@ public class First  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
      * 获取端口号

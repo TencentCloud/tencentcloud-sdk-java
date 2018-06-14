@@ -12,7 +12,6 @@ public class TerminateDisksRequest  extends AbstractModel{
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
-    
 
     /**
      * 获取需退还的云盘ID列表。

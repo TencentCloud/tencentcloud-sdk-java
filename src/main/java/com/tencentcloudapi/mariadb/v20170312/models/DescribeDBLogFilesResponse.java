@@ -12,7 +12,6 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
@@ -20,7 +19,6 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private Integer Type;
-    
 
     /**
     * 请求日志总数
@@ -28,7 +26,6 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     @SerializedName("Total")
     @Expose
     private Integer Total;
-    
 
     /**
     * 包含uri、length、mtime（修改时间）等信息
@@ -36,7 +33,6 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     @SerializedName("Files")
     @Expose
     private LogFileInfo [] Files;
-    
 
     /**
     * 如果是VPC网络的实例，做用本前缀加上URI为下载地址
@@ -44,7 +40,6 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     @SerializedName("Vpcprefix")
     @Expose
     private String Vpcprefix;
-    
 
     /**
     * 如果是普通网络的实例，做用本前缀加上URI为下载地址
@@ -52,7 +47,6 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     @SerializedName("Normalprefix")
     @Expose
     private String Normalprefix;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -60,7 +54,6 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc。

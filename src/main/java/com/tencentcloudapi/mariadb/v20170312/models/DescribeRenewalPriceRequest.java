@@ -12,7 +12,6 @@ public class DescribeRenewalPriceRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 续费时长，单位：月。不传则默认为1个月。
@@ -20,7 +19,6 @@ public class DescribeRenewalPriceRequest  extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Integer Period;
-    
 
     /**
      * 获取待续费的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

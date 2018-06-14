@@ -12,7 +12,6 @@ public class RenewDiskRequest  extends AbstractModel{
     @SerializedName("DiskChargePrepaid")
     @Expose
     private DiskChargePrepaid DiskChargePrepaid;
-    
 
     /**
     * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
@@ -20,7 +19,6 @@ public class RenewDiskRequest  extends AbstractModel{
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
-    
 
     /**
      * 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的续费时长。在云盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云盘会按对齐到实例续费后的到期时间来续费。

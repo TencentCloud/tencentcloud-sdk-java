@@ -12,7 +12,6 @@ public class CreateComputeEnvRequest  extends AbstractModel{
     @SerializedName("ComputeEnv")
     @Expose
     private NamedComputeEnv ComputeEnv;
-    
 
     /**
     * 位置信息
@@ -20,7 +19,6 @@ public class CreateComputeEnvRequest  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
@@ -28,7 +26,6 @@ public class CreateComputeEnvRequest  extends AbstractModel{
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
-    
 
     /**
      * 获取计算环境信息

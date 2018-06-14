@@ -12,7 +12,6 @@ public class RoGroup  extends AbstractModel{
     @SerializedName("RoGroupId")
     @Expose
     private String RoGroupId;
-    
 
     /**
     * 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
@@ -20,7 +19,6 @@ public class RoGroup  extends AbstractModel{
     @SerializedName("RoGroupMode")
     @Expose
     private String RoGroupMode;
-    
 
     /**
     * 只读组名称
@@ -28,7 +26,6 @@ public class RoGroup  extends AbstractModel{
     @SerializedName("RoGroupName")
     @Expose
     private String RoGroupName;
-    
 
     /**
     * 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值值，只读实例将被隔离。可选值：1-启用；0-不启用
@@ -36,7 +33,6 @@ public class RoGroup  extends AbstractModel{
     @SerializedName("RoOfflineDelay")
     @Expose
     private Integer RoOfflineDelay;
-    
 
     /**
     * 延迟阀值
@@ -44,7 +40,6 @@ public class RoGroup  extends AbstractModel{
     @SerializedName("RoMaxDelayTime")
     @Expose
     private Integer RoMaxDelayTime;
-    
 
     /**
     * 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除
@@ -52,7 +47,6 @@ public class RoGroup  extends AbstractModel{
     @SerializedName("MinRoInGroup")
     @Expose
     private Integer MinRoInGroup;
-    
 
     /**
     * 读写权重分配模式，可选值：system-系统自动分配；custom-自定义
@@ -60,7 +54,6 @@ public class RoGroup  extends AbstractModel{
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
-    
 
     /**
     * 权重值
@@ -68,7 +61,6 @@ public class RoGroup  extends AbstractModel{
     @SerializedName("Weight")
     @Expose
     private Integer Weight;
-    
 
     /**
      * 获取只读组ID

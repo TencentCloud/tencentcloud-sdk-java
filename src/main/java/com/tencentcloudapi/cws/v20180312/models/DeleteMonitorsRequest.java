@@ -12,7 +12,6 @@ public class DeleteMonitorsRequest  extends AbstractModel{
     @SerializedName("MonitorIds")
     @Expose
     private Integer [] MonitorIds;
-    
 
     /**
      * 获取监控任务ID列表

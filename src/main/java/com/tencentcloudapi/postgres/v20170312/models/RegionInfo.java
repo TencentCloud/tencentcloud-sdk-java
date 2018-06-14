@@ -12,7 +12,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 该地域对应的中文名称
@@ -20,7 +19,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
-    
 
     /**
     * 该地域对应的数字编号
@@ -28,7 +26,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("RegionId")
     @Expose
     private Integer RegionId;
-    
 
     /**
     * 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
@@ -36,7 +33,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("RegionState")
     @Expose
     private String RegionState;
-    
 
     /**
      * 获取该地域对应的英文名称

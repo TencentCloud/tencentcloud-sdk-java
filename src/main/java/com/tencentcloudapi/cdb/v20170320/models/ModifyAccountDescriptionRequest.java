@@ -12,7 +12,6 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 数据库账号的备注信息。
@@ -20,7 +19,6 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
     * 云数据库账号。
@@ -28,7 +26,6 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。

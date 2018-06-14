@@ -12,7 +12,6 @@ public class SyncImagesRequest  extends AbstractModel{
     @SerializedName("ImageIds")
     @Expose
     private String [] ImageIds;
-    
 
     /**
     * 目的同步地域列表；必须满足限制：<br><li>不能为源地域，<br><li>必须是一个合法的Region。<br><li>暂不支持部分地域同步。<br>具体地域参数请参考[Region](https://cloud.tencent.com/document/product/213/6091)。
@@ -20,7 +19,6 @@ public class SyncImagesRequest  extends AbstractModel{
     @SerializedName("DestinationRegions")
     @Expose
     private String [] DestinationRegions;
-    
 
     /**
      * 获取镜像ID列表 ，镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。<br>镜像ID必须满足限制：<br><li>镜像ID对应的镜像状态必须为`NORMAL`。<br><li>镜像大小小于50GB。<br>镜像状态请参考[镜像数据表](/document/api/213/9452#image_state)。

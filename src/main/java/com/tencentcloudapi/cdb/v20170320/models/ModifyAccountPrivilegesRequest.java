@@ -12,7 +12,6 @@ public class ModifyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 数据库的账号，包括用户名和域名。
@@ -20,7 +19,6 @@ public class ModifyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
-    
 
     /**
     * 全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
@@ -28,7 +26,6 @@ public class ModifyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("GlobalPrivileges")
     @Expose
     private String [] GlobalPrivileges;
-    
 
     /**
     * 数据库的权限。Privileges权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
@@ -36,7 +33,6 @@ public class ModifyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("DatabasePrivileges")
     @Expose
     private DatabasePrivilege [] DatabasePrivileges;
-    
 
     /**
     * 数据库中表的权限。Privileges权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
@@ -44,7 +40,6 @@ public class ModifyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("TablePrivileges")
     @Expose
     private TablePrivilege [] TablePrivileges;
-    
 
     /**
     * 数据库表中列的权限。Privileges权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
@@ -52,7 +47,6 @@ public class ModifyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("ColumnPrivileges")
     @Expose
     private ColumnPrivilege [] ColumnPrivileges;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。

@@ -12,7 +12,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 地域数字ID
@@ -20,7 +19,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("RegionId")
     @Expose
     private Integer RegionId;
-    
 
     /**
     * 地域中文名
@@ -28,7 +26,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
-    
 
     /**
     * 可用区列表
@@ -36,7 +33,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("ZoneList")
     @Expose
     private ZonesInfo [] ZoneList;
-    
 
     /**
     * 可选择的主可用区和从可用区
@@ -44,7 +40,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("AvailableChoice")
     @Expose
     private ShardZoneChooseInfo [] AvailableChoice;
-    
 
     /**
      * 获取地域英文ID

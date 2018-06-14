@@ -12,7 +12,6 @@ public class AgentRunningMode  extends AbstractModel{
     @SerializedName("Scene")
     @Expose
     private String Scene;
-    
 
     /**
     * 运行Agent的User
@@ -20,7 +19,6 @@ public class AgentRunningMode  extends AbstractModel{
     @SerializedName("User")
     @Expose
     private String User;
-    
 
     /**
     * 运行Agent的Session
@@ -28,7 +26,6 @@ public class AgentRunningMode  extends AbstractModel{
     @SerializedName("Session")
     @Expose
     private String Session;
-    
 
     /**
      * 获取场景类型，支持WINDOWS

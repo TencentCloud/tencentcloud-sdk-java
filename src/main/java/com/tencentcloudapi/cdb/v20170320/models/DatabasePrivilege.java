@@ -12,7 +12,6 @@ public class DatabasePrivilege  extends AbstractModel{
     @SerializedName("Privileges")
     @Expose
     private String [] Privileges;
-    
 
     /**
     * 数据库名
@@ -20,7 +19,6 @@ public class DatabasePrivilege  extends AbstractModel{
     @SerializedName("Database")
     @Expose
     private String Database;
-    
 
     /**
      * 获取权限信息

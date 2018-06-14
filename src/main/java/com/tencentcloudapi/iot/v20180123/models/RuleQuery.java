@@ -12,7 +12,6 @@ public class RuleQuery  extends AbstractModel{
     @SerializedName("Field")
     @Expose
     private String Field;
-    
 
     /**
     * Topic
@@ -20,7 +19,6 @@ public class RuleQuery  extends AbstractModel{
     @SerializedName("Topic")
     @Expose
     private String Topic;
-    
 
     /**
     * 过滤规则
@@ -28,7 +26,6 @@ public class RuleQuery  extends AbstractModel{
     @SerializedName("Condition")
     @Expose
     private String Condition;
-    
 
     /**
      * 获取字段

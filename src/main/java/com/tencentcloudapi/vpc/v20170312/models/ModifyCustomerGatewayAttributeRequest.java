@@ -12,7 +12,6 @@ public class ModifyCustomerGatewayAttributeRequest  extends AbstractModel{
     @SerializedName("CustomerGatewayId")
     @Expose
     private String CustomerGatewayId;
-    
 
     /**
     * 对端网关名称，可任意命名，但不得超过60个字符。
@@ -20,7 +19,6 @@ public class ModifyCustomerGatewayAttributeRequest  extends AbstractModel{
     @SerializedName("CustomerGatewayName")
     @Expose
     private String CustomerGatewayName;
-    
 
     /**
      * 获取对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。

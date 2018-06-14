@@ -12,7 +12,6 @@ public class DescribeSecurityGroupAssociationStatisticsRequest  extends Abstract
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
-    
 
     /**
      * 获取安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。

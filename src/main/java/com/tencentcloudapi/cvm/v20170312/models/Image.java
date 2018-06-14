@@ -12,7 +12,6 @@ public class Image  extends AbstractModel{
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
-    
 
     /**
     * 镜像操作系统
@@ -20,7 +19,6 @@ public class Image  extends AbstractModel{
     @SerializedName("OsName")
     @Expose
     private String OsName;
-    
 
     /**
     * 镜像类型
@@ -28,7 +26,6 @@ public class Image  extends AbstractModel{
     @SerializedName("ImageType")
     @Expose
     private String ImageType;
-    
 
     /**
     * 镜像创建时间
@@ -36,7 +33,6 @@ public class Image  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
     * 镜像名称
@@ -44,7 +40,6 @@ public class Image  extends AbstractModel{
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
-    
 
     /**
     * 镜像描述
@@ -52,7 +47,6 @@ public class Image  extends AbstractModel{
     @SerializedName("ImageDescription")
     @Expose
     private String ImageDescription;
-    
 
     /**
     * 镜像大小
@@ -60,7 +54,6 @@ public class Image  extends AbstractModel{
     @SerializedName("ImageSize")
     @Expose
     private Integer ImageSize;
-    
 
     /**
     * 镜像架构
@@ -68,7 +61,6 @@ public class Image  extends AbstractModel{
     @SerializedName("Architecture")
     @Expose
     private String Architecture;
-    
 
     /**
     * 镜像状态
@@ -76,7 +68,6 @@ public class Image  extends AbstractModel{
     @SerializedName("ImageState")
     @Expose
     private String ImageState;
-    
 
     /**
     * 镜像来源平台
@@ -84,7 +75,6 @@ public class Image  extends AbstractModel{
     @SerializedName("Platform")
     @Expose
     private String Platform;
-    
 
     /**
     * 镜像创建者
@@ -92,7 +82,6 @@ public class Image  extends AbstractModel{
     @SerializedName("ImageCreator")
     @Expose
     private String ImageCreator;
-    
 
     /**
     * 镜像来源
@@ -100,7 +89,6 @@ public class Image  extends AbstractModel{
     @SerializedName("ImageSource")
     @Expose
     private String ImageSource;
-    
 
     /**
      * 获取镜像ID

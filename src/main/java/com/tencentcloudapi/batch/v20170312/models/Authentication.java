@@ -12,7 +12,6 @@ public class Authentication  extends AbstractModel{
     @SerializedName("Scene")
     @Expose
     private String Scene;
-    
 
     /**
     * SecretId
@@ -20,7 +19,6 @@ public class Authentication  extends AbstractModel{
     @SerializedName("SecretId")
     @Expose
     private String SecretId;
-    
 
     /**
     * SecretKey
@@ -28,7 +26,6 @@ public class Authentication  extends AbstractModel{
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
-    
 
     /**
      * 获取授权场景，例如COS

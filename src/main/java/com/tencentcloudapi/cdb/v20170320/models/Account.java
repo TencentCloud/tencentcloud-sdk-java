@@ -12,7 +12,6 @@ public class Account  extends AbstractModel{
     @SerializedName("User")
     @Expose
     private String User;
-    
 
     /**
     * 新账户的域名
@@ -20,7 +19,6 @@ public class Account  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
      * 获取新账户的名称

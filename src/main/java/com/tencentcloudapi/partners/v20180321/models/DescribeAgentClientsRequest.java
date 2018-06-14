@@ -12,7 +12,6 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     @SerializedName("ClientUin")
     @Expose
     private String ClientUin;
-    
 
     /**
     * 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
@@ -20,7 +19,6 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     @SerializedName("ClientName")
     @Expose
     private String ClientName;
-    
 
     /**
     * 客户类型，a/b，类型定义参考代理商相关政策文档
@@ -28,7 +26,6 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     @SerializedName("ClientFlag")
     @Expose
     private String ClientFlag;
-    
 
     /**
     * ASC/DESC， 不区分大小写，按申请时间排序
@@ -36,7 +33,6 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
-    
 
     /**
     * 偏移量
@@ -44,7 +40,6 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 限制数目
@@ -52,7 +47,6 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取客户账号ID

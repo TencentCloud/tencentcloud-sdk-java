@@ -12,7 +12,6 @@ public class ZoneConf  extends AbstractModel{
     @SerializedName("DeployMode")
     @Expose
     private Integer [] DeployMode;
-    
 
     /**
     * 主实例所在的可用区
@@ -20,7 +19,6 @@ public class ZoneConf  extends AbstractModel{
     @SerializedName("MasterZone")
     @Expose
     private String [] MasterZone;
-    
 
     /**
     * 实例为多可用区部署时，备库1所在的可用区
@@ -28,7 +26,6 @@ public class ZoneConf  extends AbstractModel{
     @SerializedName("SlaveZone")
     @Expose
     private String [] SlaveZone;
-    
 
     /**
     * 实例为多可用区部署时，备库2所在的可用区
@@ -36,7 +33,6 @@ public class ZoneConf  extends AbstractModel{
     @SerializedName("BackupZone")
     @Expose
     private String [] BackupZone;
-    
 
     /**
      * 获取可用区部署方式，可能的值为：0-单可用区；1-多可用区

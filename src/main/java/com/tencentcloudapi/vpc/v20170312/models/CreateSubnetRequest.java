@@ -12,7 +12,6 @@ public class CreateSubnetRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 子网名称，最大长度不能超过60个字节。
@@ -20,7 +19,6 @@ public class CreateSubnetRequest  extends AbstractModel{
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
-    
 
     /**
     * 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
@@ -28,7 +26,6 @@ public class CreateSubnetRequest  extends AbstractModel{
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
-    
 
     /**
     * 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
@@ -36,7 +33,6 @@ public class CreateSubnetRequest  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
      * 获取待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。

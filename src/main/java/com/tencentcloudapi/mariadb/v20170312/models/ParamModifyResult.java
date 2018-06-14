@@ -12,7 +12,6 @@ public class ParamModifyResult  extends AbstractModel{
     @SerializedName("Param")
     @Expose
     private String Param;
-    
 
     /**
     * 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
@@ -20,7 +19,6 @@ public class ParamModifyResult  extends AbstractModel{
     @SerializedName("Code")
     @Expose
     private Integer Code;
-    
 
     /**
      * 获取修改参数名字

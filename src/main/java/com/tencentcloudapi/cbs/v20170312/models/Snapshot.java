@@ -12,7 +12,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
-    
 
     /**
     * 快照所在的位置。
@@ -20,7 +19,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
@@ -28,7 +26,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("DiskUsage")
     @Expose
     private String DiskUsage;
-    
 
     /**
     * 创建此快照的云硬盘ID。
@@ -36,7 +33,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
-    
 
     /**
     * 创建此快照的云硬盘大小。
@@ -44,7 +40,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("DiskSize")
     @Expose
     private Integer DiskSize;
-    
 
     /**
     * 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
@@ -52,7 +47,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("SnapshotState")
     @Expose
     private String SnapshotState;
-    
 
     /**
     * 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
@@ -60,7 +54,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
-    
 
     /**
     * 快照创建进度百分比，快照创建成功后此字段恒为100。
@@ -68,7 +61,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("Percent")
     @Expose
     private Integer Percent;
-    
 
     /**
     * 快照的创建时间。
@@ -76,7 +68,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 快照到期时间。如果快照为永久保留，此字段为空。
@@ -84,7 +75,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("DeadlineTime")
     @Expose
     private String DeadlineTime;
-    
 
     /**
     * 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
@@ -92,7 +82,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("Encrypt")
     @Expose
     private Boolean Encrypt;
-    
 
     /**
     * 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
@@ -100,7 +89,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("IsPermanent")
     @Expose
     private Boolean IsPermanent;
-    
 
     /**
     * 快照正在跨地域复制的目的地域，默认取值为[]。
@@ -108,7 +96,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("CopyingToRegions")
     @Expose
     private String [] CopyingToRegions;
-    
 
     /**
     * 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
@@ -116,7 +103,6 @@ public class Snapshot  extends AbstractModel{
     @SerializedName("CopyFromRemote")
     @Expose
     private Boolean CopyFromRemote;
-    
 
     /**
      * 获取快照ID。

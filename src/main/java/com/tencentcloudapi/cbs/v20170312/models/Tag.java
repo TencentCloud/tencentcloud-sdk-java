@@ -12,7 +12,6 @@ public class Tag  extends AbstractModel{
     @SerializedName("Key")
     @Expose
     private String Key;
-    
 
     /**
     * 标签值。
@@ -20,7 +19,6 @@ public class Tag  extends AbstractModel{
     @SerializedName("Value")
     @Expose
     private String Value;
-    
 
     /**
      * 获取标签健。

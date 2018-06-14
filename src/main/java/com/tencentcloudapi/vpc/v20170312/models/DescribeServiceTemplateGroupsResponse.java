@@ -12,7 +12,6 @@ public class DescribeServiceTemplateGroupsResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 协议端口模板集合。
@@ -20,7 +19,6 @@ public class DescribeServiceTemplateGroupsResponse  extends AbstractModel{
     @SerializedName("ServiceTemplateGroupSet")
     @Expose
     private ServiceTemplateGroup [] ServiceTemplateGroupSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeServiceTemplateGroupsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取符合条件的实例数量。

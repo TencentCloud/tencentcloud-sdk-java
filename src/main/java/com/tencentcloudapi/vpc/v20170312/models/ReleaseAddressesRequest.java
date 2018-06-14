@@ -12,7 +12,6 @@ public class ReleaseAddressesRequest  extends AbstractModel{
     @SerializedName("AddressIds")
     @Expose
     private String [] AddressIds;
-    
 
     /**
      * 获取标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。

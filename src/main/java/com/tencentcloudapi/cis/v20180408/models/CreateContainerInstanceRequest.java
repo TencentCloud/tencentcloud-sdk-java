@@ -12,7 +12,6 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * vpcId
@@ -20,7 +19,6 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * subnetId
@@ -28,7 +26,6 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * 容器实例名称，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 40个字符
@@ -36,7 +33,6 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 重启策略（Always,OnFailure,Never）
@@ -44,7 +40,6 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     @SerializedName("RestartPolicy")
     @Expose
     private String RestartPolicy;
-    
 
     /**
     * 容器列表
@@ -52,7 +47,6 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     @SerializedName("Containers")
     @Expose
     private Container [] Containers;
-    
 
     /**
      * 获取可用区

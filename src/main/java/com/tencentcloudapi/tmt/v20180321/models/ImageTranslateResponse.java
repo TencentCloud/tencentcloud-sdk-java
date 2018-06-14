@@ -12,7 +12,6 @@ public class ImageTranslateResponse  extends AbstractModel{
     @SerializedName("SessionUuid")
     @Expose
     private String SessionUuid;
-    
 
     /**
     * 源语言
@@ -20,7 +19,6 @@ public class ImageTranslateResponse  extends AbstractModel{
     @SerializedName("Source")
     @Expose
     private String Source;
-    
 
     /**
     * 目标语言
@@ -28,7 +26,6 @@ public class ImageTranslateResponse  extends AbstractModel{
     @SerializedName("Target")
     @Expose
     private String Target;
-    
 
     /**
     * 图片翻译结果
@@ -36,7 +33,6 @@ public class ImageTranslateResponse  extends AbstractModel{
     @SerializedName("ImageRecord")
     @Expose
     private ImageRecord ImageRecord;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -44,7 +40,6 @@ public class ImageTranslateResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取请求的SessionUuid返回

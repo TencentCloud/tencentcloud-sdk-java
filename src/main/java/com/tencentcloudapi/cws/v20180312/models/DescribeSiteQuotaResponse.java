@@ -7,28 +7,25 @@ public class DescribeSiteQuotaResponse  extends AbstractModel{
 
 
     /**
-    * 已购买的站点数。
+    * 已购买的扫描次数。
     */
     @SerializedName("Total")
     @Expose
     private Integer Total;
-    
 
     /**
-    * 已使用的站点数。
+    * 已使用的扫描次数。
     */
     @SerializedName("Used")
     @Expose
     private Integer Used;
-    
 
     /**
-    * 剩余可用的站点数。
+    * 剩余可用的扫描次数。
     */
     @SerializedName("Available")
     @Expose
     private Integer Available;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -36,51 +33,50 @@ public class DescribeSiteQuotaResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
-     * 获取已购买的站点数。
-     * @return Total 已购买的站点数。
+     * 获取已购买的扫描次数。
+     * @return Total 已购买的扫描次数。
      */
     public Integer getTotal() {
         return this.Total;
     }
 
     /**
-     * 设置已购买的站点数。
-     * @param Total 已购买的站点数。
+     * 设置已购买的扫描次数。
+     * @param Total 已购买的扫描次数。
      */
     public void setTotal(Integer Total) {
         this.Total = Total;
     }
 
     /**
-     * 获取已使用的站点数。
-     * @return Used 已使用的站点数。
+     * 获取已使用的扫描次数。
+     * @return Used 已使用的扫描次数。
      */
     public Integer getUsed() {
         return this.Used;
     }
 
     /**
-     * 设置已使用的站点数。
-     * @param Used 已使用的站点数。
+     * 设置已使用的扫描次数。
+     * @param Used 已使用的扫描次数。
      */
     public void setUsed(Integer Used) {
         this.Used = Used;
     }
 
     /**
-     * 获取剩余可用的站点数。
-     * @return Available 剩余可用的站点数。
+     * 获取剩余可用的扫描次数。
+     * @return Available 剩余可用的扫描次数。
      */
     public Integer getAvailable() {
         return this.Available;
     }
 
     /**
-     * 设置剩余可用的站点数。
-     * @param Available 剩余可用的站点数。
+     * 设置剩余可用的扫描次数。
+     * @param Available 剩余可用的扫描次数。
      */
     public void setAvailable(Integer Available) {
         this.Available = Available;

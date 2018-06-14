@@ -12,7 +12,6 @@ public class SpecInfo  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 区域英文编码，对应ZoneSet的Zone字段
@@ -20,7 +19,6 @@ public class SpecInfo  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 规格详细信息列表
@@ -28,7 +26,6 @@ public class SpecInfo  extends AbstractModel{
     @SerializedName("SpecItemInfoList")
     @Expose
     private SpecItemInfo [] SpecItemInfoList;
-    
 
     /**
      * 获取地域英文编码，对应RegionSet的Region字段

@@ -12,7 +12,6 @@ public class DescribeScanInstancesRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
-    
 
     /**
     * 偏移量，默认为0
@@ -20,7 +19,6 @@ public class DescribeScanInstancesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 数量限制，默认为20，最大值为100。
@@ -28,7 +26,6 @@ public class DescribeScanInstancesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
     * 可以提供ItemId数组来查询一个或者多个结果。注意不可以同时指定ItemIds和Filters。
@@ -36,7 +33,6 @@ public class DescribeScanInstancesRequest  extends AbstractModel{
     @SerializedName("ItemIds")
     @Expose
     private String [] ItemIds;
-    
 
     /**
     * 按某个字段排序，目前仅支持TaskTime排序。
@@ -44,7 +40,6 @@ public class DescribeScanInstancesRequest  extends AbstractModel{
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
-    
 
     /**
     * 升序（asc）还是降序（desc），默认：desc。
@@ -52,7 +47,6 @@ public class DescribeScanInstancesRequest  extends AbstractModel{
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
-    
 
     /**
      * 获取支持通过app名称，app包名进行筛选

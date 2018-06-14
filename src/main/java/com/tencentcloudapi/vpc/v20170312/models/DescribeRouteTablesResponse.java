@@ -12,7 +12,6 @@ public class DescribeRouteTablesResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 路由表对象。
@@ -20,7 +19,6 @@ public class DescribeRouteTablesResponse  extends AbstractModel{
     @SerializedName("RouteTableSet")
     @Expose
     private RouteTable [] RouteTableSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeRouteTablesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取符合条件的实例数量。

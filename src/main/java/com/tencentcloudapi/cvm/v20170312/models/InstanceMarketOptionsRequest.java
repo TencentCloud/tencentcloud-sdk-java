@@ -12,7 +12,6 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
     @SerializedName("MarketType")
     @Expose
     private String MarketType;
-    
 
     /**
     * 竞价相关选项
@@ -20,7 +19,6 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
     @SerializedName("SpotOptions")
     @Expose
     private SpotMarketOptions SpotOptions;
-    
 
     /**
      * 获取市场选项类型，当前只支持取值：spot

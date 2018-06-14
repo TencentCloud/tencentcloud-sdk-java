@@ -12,7 +12,6 @@ public class DescribeProjectSecurityGroupsResponse  extends AbstractModel{
     @SerializedName("Groups")
     @Expose
     private SecurityGroup [] Groups;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class DescribeProjectSecurityGroupsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取安全组详情。

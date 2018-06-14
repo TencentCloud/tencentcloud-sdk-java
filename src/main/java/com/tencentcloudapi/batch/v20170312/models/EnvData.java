@@ -12,7 +12,6 @@ public class EnvData  extends AbstractModel{
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
-    
 
     /**
     * CVM镜像ID
@@ -20,7 +19,6 @@ public class EnvData  extends AbstractModel{
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
-    
 
     /**
     * 实例系统盘配置信息
@@ -28,7 +26,6 @@ public class EnvData  extends AbstractModel{
     @SerializedName("SystemDisk")
     @Expose
     private SystemDisk SystemDisk;
-    
 
     /**
     * 实例数据盘配置信息
@@ -36,7 +33,6 @@ public class EnvData  extends AbstractModel{
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
-    
 
     /**
     * 私有网络相关信息配置
@@ -44,7 +40,6 @@ public class EnvData  extends AbstractModel{
     @SerializedName("VirtualPrivateCloud")
     @Expose
     private VirtualPrivateCloud VirtualPrivateCloud;
-    
 
     /**
     * 公网带宽相关信息设置
@@ -52,7 +47,6 @@ public class EnvData  extends AbstractModel{
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
-    
 
     /**
     * CVM实例显示名称
@@ -60,7 +54,6 @@ public class EnvData  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 实例登录设置
@@ -68,7 +61,6 @@ public class EnvData  extends AbstractModel{
     @SerializedName("LoginSettings")
     @Expose
     private LoginSettings LoginSettings;
-    
 
     /**
     * 实例所属安全组
@@ -76,7 +68,6 @@ public class EnvData  extends AbstractModel{
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
-    
 
     /**
     * 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
@@ -84,7 +75,6 @@ public class EnvData  extends AbstractModel{
     @SerializedName("EnhancedService")
     @Expose
     private EnhancedService EnhancedService;
-    
 
     /**
      * 获取CVM实例类型

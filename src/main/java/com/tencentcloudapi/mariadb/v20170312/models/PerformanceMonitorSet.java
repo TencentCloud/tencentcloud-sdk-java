@@ -12,7 +12,6 @@ public class PerformanceMonitorSet  extends AbstractModel{
     @SerializedName("UpdateTotal")
     @Expose
     private MonitorData UpdateTotal;
-    
 
     /**
     * 磁盘每秒IO次数
@@ -20,7 +19,6 @@ public class PerformanceMonitorSet  extends AbstractModel{
     @SerializedName("DiskIops")
     @Expose
     private MonitorData DiskIops;
-    
 
     /**
     * 活跃连接数
@@ -28,7 +26,6 @@ public class PerformanceMonitorSet  extends AbstractModel{
     @SerializedName("ConnActive")
     @Expose
     private MonitorData ConnActive;
-    
 
     /**
     * 缓存命中率
@@ -36,7 +33,6 @@ public class PerformanceMonitorSet  extends AbstractModel{
     @SerializedName("MemHitRate")
     @Expose
     private MonitorData MemHitRate;
-    
 
     /**
     * 主备延迟
@@ -44,7 +40,6 @@ public class PerformanceMonitorSet  extends AbstractModel{
     @SerializedName("SlaveDelay")
     @Expose
     private MonitorData SlaveDelay;
-    
 
     /**
     * 查询操作数SELECT
@@ -52,7 +47,6 @@ public class PerformanceMonitorSet  extends AbstractModel{
     @SerializedName("SelectTotal")
     @Expose
     private MonitorData SelectTotal;
-    
 
     /**
     * 慢查询数
@@ -60,7 +54,6 @@ public class PerformanceMonitorSet  extends AbstractModel{
     @SerializedName("LongQuery")
     @Expose
     private MonitorData LongQuery;
-    
 
     /**
     * 删除操作数DELETE
@@ -68,7 +61,6 @@ public class PerformanceMonitorSet  extends AbstractModel{
     @SerializedName("DeleteTotal")
     @Expose
     private MonitorData DeleteTotal;
-    
 
     /**
     * 插入操作数INSERT
@@ -76,7 +68,6 @@ public class PerformanceMonitorSet  extends AbstractModel{
     @SerializedName("InsertTotal")
     @Expose
     private MonitorData InsertTotal;
-    
 
     /**
     * 是否发生主备切换，1为发生，0否
@@ -84,7 +75,6 @@ public class PerformanceMonitorSet  extends AbstractModel{
     @SerializedName("IsMasterSwitched")
     @Expose
     private MonitorData IsMasterSwitched;
-    
 
     /**
      * 获取更新操作数UPDATE

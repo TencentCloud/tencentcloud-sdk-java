@@ -12,7 +12,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 地域描述，例如，华南地区(广州)
@@ -20,7 +19,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
-    
 
     /**
     * 地域是否可用状态
@@ -28,7 +26,6 @@ public class RegionInfo  extends AbstractModel{
     @SerializedName("RegionState")
     @Expose
     private String RegionState;
-    
 
     /**
      * 获取地域名称，例如，ap-guangzhou

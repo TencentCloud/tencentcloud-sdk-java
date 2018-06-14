@@ -12,7 +12,6 @@ public class CreateDisksRequest  extends AbstractModel{
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
-    
 
     /**
     * 云盘显示名称。不传则默认为“未命名”。最大长度不能超60个字节。
@@ -20,7 +19,6 @@ public class CreateDisksRequest  extends AbstractModel{
     @SerializedName("DiskName")
     @Expose
     private String DiskName;
-    
 
     /**
     * 创建云硬盘数量，不传则默认为1。单次请求最多可创建的云盘数有限制，具体参见[云硬盘使用限制](https://cloud.tencent.com/doc/product/362/5145)。
@@ -28,7 +26,6 @@ public class CreateDisksRequest  extends AbstractModel{
     @SerializedName("DiskCount")
     @Expose
     private Integer DiskCount;
-    
 
     /**
     * 付费模式，目前只有预付费，即只能取值为PREPAID。
@@ -36,7 +33,6 @@ public class CreateDisksRequest  extends AbstractModel{
     @SerializedName("DiskChargeType")
     @Expose
     private String DiskChargeType;
-    
 
     /**
     * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长、是否设置自动续费等属性，创建预付费云盘该参数必传。
@@ -44,7 +40,6 @@ public class CreateDisksRequest  extends AbstractModel{
     @SerializedName("DiskChargePrepaid")
     @Expose
     private DiskChargePrepaid DiskChargePrepaid;
-    
 
     /**
     * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
@@ -52,7 +47,6 @@ public class CreateDisksRequest  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * 云硬盘大小，单位为GB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小<br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小<br><li>云盘大小取值范围： 普通云硬盘:10GB ~ 4000G；高性能云硬盘:50GB ~ 4000GB；SSD云硬盘:100GB ~ 4000GB。步长均为10GB
@@ -60,7 +54,6 @@ public class CreateDisksRequest  extends AbstractModel{
     @SerializedName("DiskSize")
     @Expose
     private Integer DiskSize;
-    
 
     /**
     * 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照，可通过[DescribeSnapshots](/document/product/362/15647)接口查询快照，见输出参数DiskUsage解释。
@@ -68,7 +61,6 @@ public class CreateDisksRequest  extends AbstractModel{
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
-    
 
     /**
     * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
@@ -76,7 +68,6 @@ public class CreateDisksRequest  extends AbstractModel{
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
-    
 
     /**
     * 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
@@ -84,7 +75,6 @@ public class CreateDisksRequest  extends AbstractModel{
     @SerializedName("Encrypt")
     @Expose
     private String Encrypt;
-    
 
     /**
      * 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。

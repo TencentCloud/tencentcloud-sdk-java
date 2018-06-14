@@ -12,7 +12,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer Status;
-    
 
     /**
     * 状态值
@@ -20,7 +19,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("Code")
     @Expose
     private Integer Code;
-    
 
     /**
     * 执行时间
@@ -28,7 +26,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("CostTime")
     @Expose
     private Integer CostTime;
-    
 
     /**
     * 实例ID
@@ -36,7 +33,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 后端任务ID
@@ -44,7 +40,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("WorkId")
     @Expose
     private String WorkId;
-    
 
     /**
     * 导入文件名
@@ -52,7 +47,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("FileName")
     @Expose
     private String FileName;
-    
 
     /**
     * 执行进度
@@ -60,7 +54,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("Process")
     @Expose
     private Integer Process;
-    
 
     /**
     * 任务创建时间
@@ -68,7 +61,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 文件大小
@@ -76,7 +68,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("FileSize")
     @Expose
     private String FileSize;
-    
 
     /**
     * 任务执行信息
@@ -84,7 +75,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("Message")
     @Expose
     private String Message;
-    
 
     /**
     * 任务ID
@@ -92,7 +82,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("JobId")
     @Expose
     private Integer JobId;
-    
 
     /**
     * 导入库表名
@@ -100,7 +89,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("DbName")
     @Expose
     private String DbName;
-    
 
     /**
     * 异步任务的请求ID
@@ -108,7 +96,6 @@ public class ImportRecord  extends AbstractModel{
     @SerializedName("AsyncRequestId")
     @Expose
     private String AsyncRequestId;
-    
 
     /**
      * 获取状态值

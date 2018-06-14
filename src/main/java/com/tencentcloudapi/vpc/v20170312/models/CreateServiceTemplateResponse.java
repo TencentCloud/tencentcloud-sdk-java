@@ -12,7 +12,6 @@ public class CreateServiceTemplateResponse  extends AbstractModel{
     @SerializedName("ServiceTemplate")
     @Expose
     private ServiceTemplate ServiceTemplate;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class CreateServiceTemplateResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取协议端口模板对象。

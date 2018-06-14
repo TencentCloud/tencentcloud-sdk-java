@@ -12,7 +12,6 @@ public class CustomerGateway  extends AbstractModel{
     @SerializedName("CustomerGatewayId")
     @Expose
     private String CustomerGatewayId;
-    
 
     /**
     * 网关名称
@@ -20,7 +19,6 @@ public class CustomerGateway  extends AbstractModel{
     @SerializedName("CustomerGatewayName")
     @Expose
     private String CustomerGatewayName;
-    
 
     /**
     * 公网地址
@@ -28,7 +26,6 @@ public class CustomerGateway  extends AbstractModel{
     @SerializedName("IpAddress")
     @Expose
     private String IpAddress;
-    
 
     /**
     * 创建时间
@@ -36,7 +33,6 @@ public class CustomerGateway  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取用户网关唯一ID

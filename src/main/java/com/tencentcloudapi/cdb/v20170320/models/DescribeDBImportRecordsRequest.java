@@ -12,7 +12,6 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 开始时间，时间格式如：2016-01-01 00:00:01。
@@ -20,7 +19,6 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 结束时间，时间格式如：2016-01-01 23:59:59。
@@ -28,7 +26,6 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
     * 分页参数 , 偏移量 , 默认值为0。
@@ -36,7 +33,6 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 分页参数 , 单次请求返回的数量 , 默认值为20。
@@ -44,7 +40,6 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。

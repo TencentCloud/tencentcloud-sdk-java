@@ -12,7 +12,6 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     @SerializedName("Module")
     @Expose
     private String Module;
-    
 
     /**
     * 操作名
@@ -20,7 +19,6 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     @SerializedName("Operation")
     @Expose
     private String Operation;
-    
 
     /**
     * 企业用户名称
@@ -28,7 +26,6 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 企业用户证件类型，8代表营业执照
@@ -36,7 +33,6 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     @SerializedName("IdentType")
     @Expose
     private Integer IdentType;
-    
 
     /**
     * 企业用户营业执照号码
@@ -44,7 +40,6 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     @SerializedName("IdentNo")
     @Expose
     private String IdentNo;
-    
 
     /**
     * 企业联系电话
@@ -52,7 +47,6 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     @SerializedName("MobilePhone")
     @Expose
     private String MobilePhone;
-    
 
     /**
     * 经办人姓名
@@ -60,7 +54,6 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     @SerializedName("TransactorName")
     @Expose
     private String TransactorName;
-    
 
     /**
     * 经办人证件类型，0代表身份证
@@ -68,7 +61,6 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     @SerializedName("TransactorIdentType")
     @Expose
     private Integer TransactorIdentType;
-    
 
     /**
     * 经办人证件号码
@@ -76,7 +68,6 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     @SerializedName("TransactorIdentNo")
     @Expose
     private String TransactorIdentNo;
-    
 
     /**
     * 经办人手机号
@@ -84,7 +75,6 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     @SerializedName("TransactorPhone")
     @Expose
     private String TransactorPhone;
-    
 
     /**
      * 获取模块名

@@ -12,7 +12,6 @@ public class AttachDisksRequest  extends AbstractModel{
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
-    
 
     /**
     * 云服务器实例ID。云盘将被挂载到此云服务器上，通过[DescribeInstances](/document/product/213/15728)接口查询。
@@ -20,7 +19,6 @@ public class AttachDisksRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
      * 获取将要被挂载的弹性云盘ID。通过[DescribeDisks](/document/product/362/16315)接口查询。单次最多可挂载10块弹性云盘。

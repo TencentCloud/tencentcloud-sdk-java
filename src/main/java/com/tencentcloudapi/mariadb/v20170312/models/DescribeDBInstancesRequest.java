@@ -12,7 +12,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
     * 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
@@ -20,7 +19,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("SearchName")
     @Expose
     private String SearchName;
-    
 
     /**
     * 搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
@@ -28,7 +26,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
-    
 
     /**
     * 按项目 ID 查询
@@ -36,7 +33,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("ProjectIds")
     @Expose
     private Integer [] ProjectIds;
-    
 
     /**
     * 是否根据 VPC 网络来搜索，0 为否，1 为是
@@ -44,7 +40,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("IsFilterVpc")
     @Expose
     private Integer IsFilterVpc;
-    
 
     /**
     * 私有网络 ID， IsFilterVpc 为 1 时有效
@@ -52,7 +47,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private Integer VpcId;
-    
 
     /**
     * 私有网络的子网 ID， IsFilterVpc 为 1 时有效
@@ -60,7 +54,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private Integer SubnetId;
-    
 
     /**
     * 排序字段， projectId， createtime， instancename 三者之一
@@ -68,7 +61,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
-    
 
     /**
     * 排序类型， desc 或者 asc
@@ -76,7 +68,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
-    
 
     /**
     * 偏移量，默认为 0
@@ -84,7 +75,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回数量，默认为 20，最大值为 100。
@@ -92,7 +82,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
     * 按 OriginSerialId 查询
@@ -100,7 +89,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("OriginSerialIds")
     @Expose
     private String [] OriginSerialIds;
-    
 
     /**
      * 获取按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。

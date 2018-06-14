@@ -12,7 +12,6 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 文件名称。
@@ -20,7 +19,6 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     @SerializedName("FileName")
     @Expose
     private String FileName;
-    
 
     /**
     * 云数据库的用户名。
@@ -28,7 +26,6 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     @SerializedName("User")
     @Expose
     private String User;
-    
 
     /**
     * 云数据库实例User账号的密码。
@@ -36,7 +33,6 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     @SerializedName("Password")
     @Expose
     private String Password;
-    
 
     /**
     * 导入的目标数据库名，不传表示不指定数据库。
@@ -44,7 +40,6 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     @SerializedName("DbName")
     @Expose
     private String DbName;
-    
 
     /**
      * 获取实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。

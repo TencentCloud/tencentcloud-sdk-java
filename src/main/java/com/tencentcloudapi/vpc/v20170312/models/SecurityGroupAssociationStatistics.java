@@ -12,7 +12,6 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
-    
 
     /**
     * 云主机实例数。
@@ -20,7 +19,6 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     @SerializedName("CVM")
     @Expose
     private Integer CVM;
-    
 
     /**
     * 数据库实例数。
@@ -28,7 +26,6 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     @SerializedName("CDB")
     @Expose
     private Integer CDB;
-    
 
     /**
     * 弹性网卡实例数。
@@ -36,7 +33,6 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     @SerializedName("ENI")
     @Expose
     private Integer ENI;
-    
 
     /**
     * 被安全组引用数。
@@ -44,7 +40,13 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     @SerializedName("SG")
     @Expose
     private Integer SG;
-    
+
+    /**
+    * 负载均衡实例数。
+    */
+    @SerializedName("CLB")
+    @Expose
+    private Integer CLB;
 
     /**
      * 获取安全组实例ID。
@@ -127,6 +129,22 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
+     * 获取负载均衡实例数。
+     * @return CLB 负载均衡实例数。
+     */
+    public Integer getCLB() {
+        return this.CLB;
+    }
+
+    /**
+     * 设置负载均衡实例数。
+     * @param CLB 负载均衡实例数。
+     */
+    public void setCLB(Integer CLB) {
+        this.CLB = CLB;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -135,6 +153,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
         this.setParamSimple(map, prefix + "CDB", this.CDB);
         this.setParamSimple(map, prefix + "ENI", this.ENI);
         this.setParamSimple(map, prefix + "SG", this.SG);
+        this.setParamSimple(map, prefix + "CLB", this.CLB);
 
     }
 }

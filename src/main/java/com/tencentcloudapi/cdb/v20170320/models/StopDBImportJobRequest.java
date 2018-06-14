@@ -12,7 +12,6 @@ public class StopDBImportJobRequest  extends AbstractModel{
     @SerializedName("AsyncRequestId")
     @Expose
     private String AsyncRequestId;
-    
 
     /**
      * 获取异步任务的请求ID。

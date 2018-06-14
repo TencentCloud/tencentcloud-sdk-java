@@ -12,7 +12,6 @@ public class AppUser  extends AbstractModel{
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
-    
 
     /**
     * 用户名
@@ -20,7 +19,6 @@ public class AppUser  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 昵称
@@ -28,7 +26,6 @@ public class AppUser  extends AbstractModel{
     @SerializedName("NickName")
     @Expose
     private String NickName;
-    
 
     /**
     * 绑定设备列表
@@ -36,7 +33,6 @@ public class AppUser  extends AbstractModel{
     @SerializedName("Devices")
     @Expose
     private Object [] Devices;
-    
 
     /**
     * 创建时间
@@ -44,7 +40,6 @@ public class AppUser  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 修改时间
@@ -52,7 +47,6 @@ public class AppUser  extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
-    
 
     /**
      * 获取应用Id

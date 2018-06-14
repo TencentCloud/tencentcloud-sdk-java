@@ -12,7 +12,6 @@ public class CreateAccountResponse  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 用户名，透传入参。
@@ -20,7 +19,6 @@ public class CreateAccountResponse  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 允许访问的 host，透传入参。
@@ -28,7 +26,6 @@ public class CreateAccountResponse  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
     * 透传入参。
@@ -36,7 +33,6 @@ public class CreateAccountResponse  extends AbstractModel{
     @SerializedName("ReadOnly")
     @Expose
     private Integer ReadOnly;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -44,7 +40,6 @@ public class CreateAccountResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取实例Id，透传入参。

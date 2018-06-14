@@ -12,7 +12,6 @@ public class Docker  extends AbstractModel{
     @SerializedName("User")
     @Expose
     private String User;
-    
 
     /**
     * Docker Hub 密码或 Tencent Registry 密码
@@ -20,7 +19,6 @@ public class Docker  extends AbstractModel{
     @SerializedName("Password")
     @Expose
     private String Password;
-    
 
     /**
     * Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
@@ -28,7 +26,6 @@ public class Docker  extends AbstractModel{
     @SerializedName("Server")
     @Expose
     private String Server;
-    
 
     /**
     * Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
@@ -36,7 +33,6 @@ public class Docker  extends AbstractModel{
     @SerializedName("Image")
     @Expose
     private String Image;
-    
 
     /**
      * 获取Docker Hub 用户名或 Tencent Registry 用户名

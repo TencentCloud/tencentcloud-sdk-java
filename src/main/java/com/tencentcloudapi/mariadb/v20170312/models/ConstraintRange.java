@@ -12,7 +12,6 @@ public class ConstraintRange  extends AbstractModel{
     @SerializedName("Min")
     @Expose
     private String Min;
-    
 
     /**
     * 约束类型为section时的最大值
@@ -20,7 +19,6 @@ public class ConstraintRange  extends AbstractModel{
     @SerializedName("Max")
     @Expose
     private String Max;
-    
 
     /**
      * 获取约束类型为section时的最小值

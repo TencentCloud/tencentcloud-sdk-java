@@ -12,7 +12,6 @@ public class InputMapping  extends AbstractModel{
     @SerializedName("SourcePath")
     @Expose
     private String SourcePath;
-    
 
     /**
     * 目的端路径
@@ -20,7 +19,6 @@ public class InputMapping  extends AbstractModel{
     @SerializedName("DestinationPath")
     @Expose
     private String DestinationPath;
-    
 
     /**
     * 挂载配置项参数
@@ -28,7 +26,6 @@ public class InputMapping  extends AbstractModel{
     @SerializedName("MountOptionParameter")
     @Expose
     private String MountOptionParameter;
-    
 
     /**
      * 获取源端路径

@@ -12,7 +12,6 @@ public class DescribeImageSharePermissionRequest  extends AbstractModel{
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
-    
 
     /**
      * 获取需要共享的镜像Id

@@ -12,7 +12,6 @@ public class RenewHostsRequest  extends AbstractModel{
     @SerializedName("HostIds")
     @Expose
     private String [] HostIds;
-    
 
     /**
     * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
@@ -20,7 +19,6 @@ public class RenewHostsRequest  extends AbstractModel{
     @SerializedName("HostChargePrepaid")
     @Expose
     private ChargePrepaid HostChargePrepaid;
-    
 
     /**
      * 获取一个或多个待操作的CDH实例ID。

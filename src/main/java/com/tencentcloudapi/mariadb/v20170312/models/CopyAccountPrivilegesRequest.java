@@ -12,7 +12,6 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 源用户名
@@ -20,7 +19,6 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("SrcUserName")
     @Expose
     private String SrcUserName;
-    
 
     /**
     * 源用户允许的访问 host
@@ -28,7 +26,6 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("SrcHost")
     @Expose
     private String SrcHost;
-    
 
     /**
     * 源账号的 ReadOnly 属性
@@ -36,7 +33,6 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("SrcReadOnly")
     @Expose
     private String SrcReadOnly;
-    
 
     /**
     * 目的用户名
@@ -44,7 +40,6 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("DstUserName")
     @Expose
     private String DstUserName;
-    
 
     /**
     * 目的用户允许的访问 host
@@ -52,7 +47,6 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("DstHost")
     @Expose
     private String DstHost;
-    
 
     /**
     * 目的账号的 ReadOnly 属性
@@ -60,7 +54,6 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("DstReadOnly")
     @Expose
     private String DstReadOnly;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

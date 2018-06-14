@@ -12,7 +12,6 @@ public class DescribeDBImportRecordsResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 返回的导入操作记录列表。
@@ -20,7 +19,6 @@ public class DescribeDBImportRecordsResponse  extends AbstractModel{
     @SerializedName("Items")
     @Expose
     private ImportRecord [] Items;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeDBImportRecordsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取符合查询条件的导入任务操作日志总数。

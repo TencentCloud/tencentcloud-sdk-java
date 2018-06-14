@@ -12,7 +12,6 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
     * 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
@@ -20,7 +19,6 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
      * 获取待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

@@ -12,7 +12,6 @@ public class SecurityGroupPolicySet  extends AbstractModel{
     @SerializedName("Version")
     @Expose
     private String Version;
-    
 
     /**
     * 出站规则。
@@ -20,7 +19,6 @@ public class SecurityGroupPolicySet  extends AbstractModel{
     @SerializedName("Egress")
     @Expose
     private SecurityGroupPolicy [] Egress;
-    
 
     /**
     * 入站规则。
@@ -28,7 +26,6 @@ public class SecurityGroupPolicySet  extends AbstractModel{
     @SerializedName("Ingress")
     @Expose
     private SecurityGroupPolicy [] Ingress;
-    
 
     /**
      * 获取安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。

@@ -12,7 +12,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
-    
 
     /**
     * 弹性网卡名称。
@@ -20,7 +19,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("NetworkInterfaceName")
     @Expose
     private String NetworkInterfaceName;
-    
 
     /**
     * 弹性网卡描述。
@@ -28,7 +26,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("NetworkInterfaceDescription")
     @Expose
     private String NetworkInterfaceDescription;
-    
 
     /**
     * 子网实例ID。
@@ -36,7 +33,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * VPC实例ID。
@@ -44,7 +40,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 绑定的安全组。
@@ -52,7 +47,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("GroupSet")
     @Expose
     private String [] GroupSet;
-    
 
     /**
     * 是否是主网卡。
@@ -60,7 +54,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("Primary")
     @Expose
     private Boolean Primary;
-    
 
     /**
     * MAC地址。
@@ -68,7 +61,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("MacAddress")
     @Expose
     private String MacAddress;
-    
 
     /**
     * 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
@@ -76,7 +68,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("State")
     @Expose
     private String State;
-    
 
     /**
     * 内网IP信息。
@@ -84,15 +75,13 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("PrivateIpAddressSet")
     @Expose
     private PrivateIpAddressSpecification [] PrivateIpAddressSet;
-    
 
     /**
     * 绑定的云服务器对象。
     */
     @SerializedName("Attachment")
     @Expose
-    private InstanceChargePrepaid [] Attachment;
-    
+    private NetworkInterfaceAttachment Attachment;
 
     /**
     * 可用区。
@@ -100,7 +89,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 创建时间。
@@ -108,7 +96,6 @@ public class NetworkInterface  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取弹性网卡实例ID，例如：eni-f1xjkw1b。
@@ -274,7 +261,7 @@ public class NetworkInterface  extends AbstractModel{
      * 获取绑定的云服务器对象。
      * @return Attachment 绑定的云服务器对象。
      */
-    public InstanceChargePrepaid [] getAttachment() {
+    public NetworkInterfaceAttachment getAttachment() {
         return this.Attachment;
     }
 
@@ -282,7 +269,7 @@ public class NetworkInterface  extends AbstractModel{
      * 设置绑定的云服务器对象。
      * @param Attachment 绑定的云服务器对象。
      */
-    public void setAttachment(InstanceChargePrepaid [] Attachment) {
+    public void setAttachment(NetworkInterfaceAttachment Attachment) {
         this.Attachment = Attachment;
     }
 
@@ -332,7 +319,7 @@ public class NetworkInterface  extends AbstractModel{
         this.setParamSimple(map, prefix + "MacAddress", this.MacAddress);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamArrayObj(map, prefix + "PrivateIpAddressSet.", this.PrivateIpAddressSet);
-        this.setParamArrayObj(map, prefix + "Attachment.", this.Attachment);
+        this.setParamObj(map, prefix + "Attachment.", this.Attachment);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
 

@@ -213,6 +213,32 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateDefaultVpc)用于创建默认私有网络(VPC)。
+
+默认VPC适用于快速入门和启动公共实例，您可以像使用任何其他VPC一样使用默认VPC。如果你想创建标准VPC，即指定VPC名称、VPC网段、子网网段、子网可用区，请使用常规创建VPC接口(CreateVpc)
+
+正常情况，本接口并不一定生产默认VPC，而是根据用户账号的网络属性(DescribeAccountVpcAttributes)来决定的
+* 支持基础网络（classic），返回VpcId为0
+* 只支持VPC（only-vpc），生产默认VPC，并返回VPC信息
+
+你也可以通过 Force 参数，强制生产默认VPC
+     * @param req CreateDefaultVpcRequest
+     * @return CreateDefaultVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDefaultVpcResponse  CreateDefaultVpc(CreateDefaultVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDefaultVpcResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDefaultVpcResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDefaultVpc"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateNetworkInterface）用于创建弹性网卡。
 * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
 * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
@@ -690,6 +716,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewayResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteVpnGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeAccountAttributes)用于查询用户账号私有属性。
+     * @param req DescribeAccountAttributesRequest
+     * @return DescribeAccountAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountAttributesResponse  DescribeAccountAttributes(DescribeAccountAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountAttributesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountAttributesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAccountAttributes"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

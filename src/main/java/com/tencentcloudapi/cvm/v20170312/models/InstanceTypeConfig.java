@@ -12,7 +12,6 @@ public class InstanceTypeConfig  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 实例机型。
@@ -20,7 +19,6 @@ public class InstanceTypeConfig  extends AbstractModel{
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
-    
 
     /**
     * 实例机型系列。
@@ -28,7 +26,6 @@ public class InstanceTypeConfig  extends AbstractModel{
     @SerializedName("InstanceFamily")
     @Expose
     private String InstanceFamily;
-    
 
     /**
     * GPU核数，单位：核。
@@ -36,7 +33,6 @@ public class InstanceTypeConfig  extends AbstractModel{
     @SerializedName("GPU")
     @Expose
     private Integer GPU;
-    
 
     /**
     * CPU核数，单位：核。
@@ -44,7 +40,6 @@ public class InstanceTypeConfig  extends AbstractModel{
     @SerializedName("CPU")
     @Expose
     private Integer CPU;
-    
 
     /**
     * 内存容量，单位：`GB`。
@@ -52,7 +47,6 @@ public class InstanceTypeConfig  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
@@ -60,7 +54,6 @@ public class InstanceTypeConfig  extends AbstractModel{
     @SerializedName("CbsSupport")
     @Expose
     private String CbsSupport;
-    
 
     /**
     * 机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
@@ -68,7 +61,6 @@ public class InstanceTypeConfig  extends AbstractModel{
     @SerializedName("InstanceTypeState")
     @Expose
     private String InstanceTypeState;
-    
 
     /**
      * 获取可用区。

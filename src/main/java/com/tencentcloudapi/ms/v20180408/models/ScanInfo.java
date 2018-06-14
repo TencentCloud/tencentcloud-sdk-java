@@ -12,7 +12,6 @@ public class ScanInfo  extends AbstractModel{
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
-    
 
     /**
     * VULSCAN-漏洞扫描信息，VIRUSSCAN-返回病毒扫描信息， ADSCAN-广告扫描信息，PLUGINSCAN-插件扫描信息，可以自由组合
@@ -20,7 +19,6 @@ public class ScanInfo  extends AbstractModel{
     @SerializedName("ScanTypes")
     @Expose
     private String [] ScanTypes;
-    
 
     /**
      * 获取任务处理完成后的反向通知回调地址,批量提交app每扫描完成一个会通知一次,通知为POST请求，post信息{ItemId:

@@ -12,7 +12,6 @@ public class Deal  extends AbstractModel{
     @SerializedName("DealName")
     @Expose
     private String DealName;
-    
 
     /**
     * 所属账号
@@ -20,7 +19,6 @@ public class Deal  extends AbstractModel{
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
-    
 
     /**
     * 商品数量
@@ -28,7 +26,6 @@ public class Deal  extends AbstractModel{
     @SerializedName("Count")
     @Expose
     private Integer Count;
-    
 
     /**
     * 关联的流程 Id，可用于查询流程执行状态
@@ -36,7 +33,6 @@ public class Deal  extends AbstractModel{
     @SerializedName("FlowId")
     @Expose
     private Integer FlowId;
-    
 
     /**
     * 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
@@ -44,7 +40,6 @@ public class Deal  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
      * 获取订单号

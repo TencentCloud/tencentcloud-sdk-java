@@ -12,7 +12,6 @@ public class InitDBInstancesRequest  extends AbstractModel{
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
-    
 
     /**
     * 实例根账号用户名。
@@ -20,7 +19,6 @@ public class InitDBInstancesRequest  extends AbstractModel{
     @SerializedName("AdminName")
     @Expose
     private String AdminName;
-    
 
     /**
     * 实例根账号用户名对应的密码。
@@ -28,7 +26,6 @@ public class InitDBInstancesRequest  extends AbstractModel{
     @SerializedName("AdminPassword")
     @Expose
     private String AdminPassword;
-    
 
     /**
     * 实例字符集，目前只支持：UTF8、LATIN1。
@@ -36,7 +33,6 @@ public class InitDBInstancesRequest  extends AbstractModel{
     @SerializedName("Charset")
     @Expose
     private String Charset;
-    
 
     /**
      * 获取实例ID集合。

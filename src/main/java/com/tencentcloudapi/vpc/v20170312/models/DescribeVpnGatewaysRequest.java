@@ -12,7 +12,6 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     @SerializedName("VpnGatewayIds")
     @Expose
     private String [] VpnGatewayIds;
-    
 
     /**
     * 过滤器对象属性
@@ -20,7 +19,6 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private FilterObject [] Filters;
-    
 
     /**
     * 偏移量
@@ -28,7 +26,6 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 请求对象个数
@@ -36,7 +33,6 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。

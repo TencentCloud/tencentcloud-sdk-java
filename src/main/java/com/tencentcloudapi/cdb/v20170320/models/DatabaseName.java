@@ -12,7 +12,6 @@ public class DatabaseName  extends AbstractModel{
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
-    
 
     /**
      * 获取数据库表名

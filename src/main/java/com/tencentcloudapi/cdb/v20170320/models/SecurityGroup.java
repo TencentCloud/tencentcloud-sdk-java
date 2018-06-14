@@ -12,7 +12,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 创建时间，时间格式：yyyy-mm-dd hh:mm:ss
@@ -20,7 +19,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 入站规则
@@ -28,7 +26,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("Inbound")
     @Expose
     private Inbound [] Inbound;
-    
 
     /**
     * 出站规则
@@ -36,7 +33,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("Outbound")
     @Expose
     private Outbound [] Outbound;
-    
 
     /**
     * 安全组ID
@@ -44,7 +40,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
-    
 
     /**
     * 安全组名称
@@ -52,7 +47,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("SecurityGroupName")
     @Expose
     private String SecurityGroupName;
-    
 
     /**
     * 安全组备注
@@ -60,7 +54,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("SecurityGroupRemark")
     @Expose
     private String SecurityGroupRemark;
-    
 
     /**
      * 获取项目ID

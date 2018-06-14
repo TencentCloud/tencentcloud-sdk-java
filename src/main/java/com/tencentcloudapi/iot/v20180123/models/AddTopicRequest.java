@@ -12,7 +12,6 @@ public class AddTopicRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * Topic名称
@@ -20,7 +19,6 @@ public class AddTopicRequest  extends AbstractModel{
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
-    
 
     /**
      * 获取产品Id

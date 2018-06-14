@@ -12,7 +12,6 @@ public class MigratePrivateIpAddressRequest  extends AbstractModel{
     @SerializedName("SourceNetworkInterfaceId")
     @Expose
     private String SourceNetworkInterfaceId;
-    
 
     /**
     * 待迁移的目的弹性网卡实例ID。
@@ -20,7 +19,6 @@ public class MigratePrivateIpAddressRequest  extends AbstractModel{
     @SerializedName("DestinationNetworkInterfaceId")
     @Expose
     private String DestinationNetworkInterfaceId;
-    
 
     /**
     * 迁移的内网IP地址，例如：10.0.0.6。
@@ -28,7 +26,6 @@ public class MigratePrivateIpAddressRequest  extends AbstractModel{
     @SerializedName("PrivateIpAddress")
     @Expose
     private String PrivateIpAddress;
-    
 
     /**
      * 获取当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。

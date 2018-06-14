@@ -12,7 +12,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。
@@ -20,7 +19,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     @SerializedName("SubServiceType")
     @Expose
     private Integer SubServiceType;
-    
 
     /**
     * 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。
@@ -28,7 +26,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     @SerializedName("EngSerViceType")
     @Expose
     private String EngSerViceType;
-    
 
     /**
     * 语音数据来源。0：语音 URL；1：语音数据（post body）。
@@ -36,7 +33,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     @SerializedName("SourceType")
     @Expose
     private Integer SourceType;
-    
 
     /**
     * 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
@@ -44,7 +40,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     @SerializedName("Url")
     @Expose
     private String Url;
-    
 
     /**
     * 识别音频的音频格式（支持mp3,wav）。
@@ -52,7 +47,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     @SerializedName("VoiceFormat")
     @Expose
     private String VoiceFormat;
-    
 
     /**
     * 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
@@ -60,7 +54,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     @SerializedName("UsrAudioKey")
     @Expose
     private String UsrAudioKey;
-    
 
     /**
     * 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
@@ -68,7 +61,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     @SerializedName("Data")
     @Expose
     private String Data;
-    
 
     /**
     * 数据长度，当 SourceType 值为1时必须填写，为0可不写。
@@ -76,7 +68,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     @SerializedName("DataLen")
     @Expose
     private Integer DataLen;
-    
 
     /**
      * 获取腾讯云项目 ID，可填 0，总长度不超过 1024 字节。

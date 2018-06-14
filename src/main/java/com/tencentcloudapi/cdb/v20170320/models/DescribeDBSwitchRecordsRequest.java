@@ -12,7 +12,6 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 分页参数，偏移量。
@@ -20,7 +19,6 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 分页参数，单次请求数量限制。
@@ -28,7 +26,6 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。

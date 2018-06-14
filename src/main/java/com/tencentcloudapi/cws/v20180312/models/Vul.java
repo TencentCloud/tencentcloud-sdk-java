@@ -12,7 +12,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("Id")
     @Expose
     private Integer Id;
-    
 
     /**
     * 站点ID。
@@ -20,7 +19,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("SiteId")
     @Expose
     private Integer SiteId;
-    
 
     /**
     * 扫描引擎的扫描任务ID。
@@ -28,7 +26,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("TaskId")
     @Expose
     private Integer TaskId;
-    
 
     /**
     * 漏洞级别：high、middle、low、notice。
@@ -36,7 +33,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("Level")
     @Expose
     private String Level;
-    
 
     /**
     * 漏洞名称。
@@ -44,7 +40,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 出现漏洞的url。
@@ -52,7 +47,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("Url")
     @Expose
     private String Url;
-    
 
     /**
     * 网址/细节。
@@ -60,7 +54,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("Html")
     @Expose
     private String Html;
-    
 
     /**
     * 漏洞类型。
@@ -68,7 +61,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
-    
 
     /**
     * 危害说明。
@@ -76,7 +68,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("Harm")
     @Expose
     private String Harm;
-    
 
     /**
     * 漏洞描述。
@@ -84,7 +75,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("Describe")
     @Expose
     private String Describe;
-    
 
     /**
     * 解决方案。
@@ -92,7 +82,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("Solution")
     @Expose
     private String Solution;
-    
 
     /**
     * 漏洞参考。
@@ -100,7 +89,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("From")
     @Expose
     private String From;
-    
 
     /**
     * 漏洞通过该参数攻击。
@@ -108,7 +96,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("Parameter")
     @Expose
     private String Parameter;
-    
 
     /**
     * CreatedAt。
@@ -116,7 +103,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
-    
 
     /**
     * UpdatedAt。
@@ -124,7 +110,6 @@ public class Vul  extends AbstractModel{
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
-    
 
     /**
     * 是否已经添加误报，0-否，1-是。
@@ -132,7 +117,20 @@ public class Vul  extends AbstractModel{
     @SerializedName("IsReported")
     @Expose
     private Integer IsReported;
-    
+
+    /**
+    * 云用户appid。
+    */
+    @SerializedName("Appid")
+    @Expose
+    private Integer Appid;
+
+    /**
+    * 云用户标识。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
 
     /**
      * 获取漏洞ID。
@@ -391,6 +389,38 @@ public class Vul  extends AbstractModel{
     }
 
     /**
+     * 获取云用户appid。
+     * @return Appid 云用户appid。
+     */
+    public Integer getAppid() {
+        return this.Appid;
+    }
+
+    /**
+     * 设置云用户appid。
+     * @param Appid 云用户appid。
+     */
+    public void setAppid(Integer Appid) {
+        this.Appid = Appid;
+    }
+
+    /**
+     * 获取云用户标识。
+     * @return Uin 云用户标识。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * 设置云用户标识。
+     * @param Uin 云用户标识。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +440,8 @@ public class Vul  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamSimple(map, prefix + "IsReported", this.IsReported);
+        this.setParamSimple(map, prefix + "Appid", this.Appid);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
 
     }
 }

@@ -12,7 +12,6 @@ public class CreateDBInstancesResponse  extends AbstractModel{
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class CreateDBInstancesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取订单号列表。每个实例对应一个订单号。

@@ -12,7 +12,6 @@ public class InquiryPriceCreateVpnGatewayRequest  extends AbstractModel{
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
-    
 
     /**
     * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
@@ -20,7 +19,6 @@ public class InquiryPriceCreateVpnGatewayRequest  extends AbstractModel{
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
-    
 
     /**
     * 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
@@ -28,7 +26,6 @@ public class InquiryPriceCreateVpnGatewayRequest  extends AbstractModel{
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Integer InternetMaxBandwidthOut;
-    
 
     /**
      * 获取VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。

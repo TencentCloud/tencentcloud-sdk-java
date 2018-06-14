@@ -12,7 +12,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("WanStatus")
     @Expose
     private Integer WanStatus;
-    
 
     /**
     * 可用区信息
@@ -20,7 +19,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 初始化标志
@@ -28,7 +26,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("InitFlag")
     @Expose
     private Integer InitFlag;
-    
 
     /**
     * 只读vip信息
@@ -36,7 +33,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("RoVipInfo")
     @Expose
     private RoVipInfo [] RoVipInfo;
-    
 
     /**
     * 内存容量
@@ -44,7 +40,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 实例状态
@@ -52,7 +47,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer Status;
-    
 
     /**
     * 私有网络ID
@@ -60,7 +54,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private Integer VpcId;
-    
 
     /**
     * 备机信息
@@ -68,7 +61,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("SlaveInfo")
     @Expose
     private SlaveInfo SlaveInfo;
-    
 
     /**
     * 实例ID
@@ -76,7 +68,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 硬盘容量
@@ -84,7 +75,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("Volume")
     @Expose
     private Integer Volume;
-    
 
     /**
     * 自动续费标志
@@ -92,7 +82,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("AutoRenew")
     @Expose
     private Integer AutoRenew;
-    
 
     /**
     * 数据复制方式
@@ -100,7 +89,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("ProtectMode")
     @Expose
     private Integer ProtectMode;
-    
 
     /**
     * 只读组信息
@@ -108,7 +96,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("RoGroups")
     @Expose
     private RoGroup [] RoGroups;
-    
 
     /**
     * 子网ID
@@ -116,7 +103,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private Integer SubnetId;
-    
 
     /**
     * 实例类型
@@ -124,7 +110,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("InstanceType")
     @Expose
     private Integer InstanceType;
-    
 
     /**
     * 项目ID
@@ -132,7 +117,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 地域信息
@@ -140,7 +124,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 到期时间
@@ -148,7 +131,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("DeadlineTime")
     @Expose
     private String DeadlineTime;
-    
 
     /**
     * 可用区部署方式
@@ -156,7 +138,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("DeployMode")
     @Expose
     private Integer DeployMode;
-    
 
     /**
     * 实例任务状态
@@ -164,7 +145,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("TaskStatus")
     @Expose
     private Integer TaskStatus;
-    
 
     /**
     * 主实例信息
@@ -172,7 +152,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("MasterInfo")
     @Expose
     private MasterInfo MasterInfo;
-    
 
     /**
     * 实例售卖机型
@@ -180,7 +159,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
-    
 
     /**
     * 内核版本
@@ -188,7 +166,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
-    
 
     /**
     * 实例名称
@@ -196,7 +173,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 灾备实例信息
@@ -204,7 +180,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("DrInfo")
     @Expose
     private DrInfo [] DrInfo;
-    
 
     /**
     * 外网域名
@@ -212,7 +187,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
-    
 
     /**
     * 外网端口号
@@ -220,7 +194,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("WanPort")
     @Expose
     private Integer WanPort;
-    
 
     /**
     * 付费类型
@@ -228,7 +201,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("PayType")
     @Expose
     private Integer PayType;
-    
 
     /**
     * 创建时间
@@ -236,7 +208,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 实例IP
@@ -244,7 +215,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("Vip")
     @Expose
     private String Vip;
-    
 
     /**
     * 端口号
@@ -252,7 +222,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("Vport")
     @Expose
     private Integer Vport;
-    
 
     /**
     * 实例状态
@@ -260,7 +229,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("CdbError")
     @Expose
     private Integer CdbError;
-    
 
     /**
     * 私有网络描述符
@@ -268,7 +236,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
-    
 
     /**
     * 子网描述符
@@ -276,7 +243,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
-    
 
     /**
      * 获取外网状态

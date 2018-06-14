@@ -12,7 +12,6 @@ public class DescribeComputeEnvCreateInfosResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 计算环境创建信息列表
@@ -20,7 +19,6 @@ public class DescribeComputeEnvCreateInfosResponse  extends AbstractModel{
     @SerializedName("ComputeEnvCreateInfoSet")
     @Expose
     private ComputeEnvCreateInfo [] ComputeEnvCreateInfoSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeComputeEnvCreateInfosResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取计算环境数量

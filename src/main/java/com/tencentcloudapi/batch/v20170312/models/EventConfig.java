@@ -12,7 +12,6 @@ public class EventConfig  extends AbstractModel{
     @SerializedName("EventName")
     @Expose
     private String EventName;
-    
 
     /**
     * 自定义键值对
@@ -20,7 +19,6 @@ public class EventConfig  extends AbstractModel{
     @SerializedName("EventVars")
     @Expose
     private EventVar [] EventVars;
-    
 
     /**
      * 获取事件类型

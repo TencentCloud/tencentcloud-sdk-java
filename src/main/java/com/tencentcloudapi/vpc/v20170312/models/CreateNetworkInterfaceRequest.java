@@ -12,7 +12,6 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 弹性网卡名称，最大长度不能超过60个字节。
@@ -20,7 +19,6 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("NetworkInterfaceName")
     @Expose
     private String NetworkInterfaceName;
-    
 
     /**
     * 弹性网卡描述，可任意命名，但不得超过60个字符。
@@ -28,7 +26,6 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("NetworkInterfaceDescription")
     @Expose
     private String NetworkInterfaceDescription;
-    
 
     /**
     * 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
@@ -36,7 +33,6 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * 新申请的内网IP地址个数。
@@ -44,7 +40,6 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
     private Integer SecondaryPrivateIpAddressCount;
-    
 
     /**
     * 指定绑定的安全组，例如：['sg-1dd51d']。
@@ -52,7 +47,6 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
-    
 
     /**
     * 指定内网IP信息。
@@ -60,7 +54,6 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     @SerializedName("PrivateIpAddresses")
     @Expose
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
-    
 
     /**
      * 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。

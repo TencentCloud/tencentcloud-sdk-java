@@ -12,7 +12,6 @@ public class ModifyDBInstanceSecurityGroupsRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
@@ -20,7 +19,6 @@ public class ModifyDBInstanceSecurityGroupsRequest  extends AbstractModel{
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。

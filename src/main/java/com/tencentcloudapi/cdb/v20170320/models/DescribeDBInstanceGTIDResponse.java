@@ -12,7 +12,6 @@ public class DescribeDBInstanceGTIDResponse  extends AbstractModel{
     @SerializedName("IsGTIDOpen")
     @Expose
     private Integer IsGTIDOpen;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class DescribeDBInstanceGTIDResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取GTID是否开通的标记：0-未开通，1-已开通。

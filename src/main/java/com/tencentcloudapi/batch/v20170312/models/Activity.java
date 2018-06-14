@@ -12,7 +12,6 @@ public class Activity  extends AbstractModel{
     @SerializedName("ActivityId")
     @Expose
     private String ActivityId;
-    
 
     /**
     * 计算节点ID
@@ -20,7 +19,6 @@ public class Activity  extends AbstractModel{
     @SerializedName("ComputeNodeId")
     @Expose
     private String ComputeNodeId;
-    
 
     /**
     * 计算节点活动类型，创建或者销毁
@@ -28,7 +26,6 @@ public class Activity  extends AbstractModel{
     @SerializedName("ComputeNodeActivityType")
     @Expose
     private String ComputeNodeActivityType;
-    
 
     /**
     * 计算环境ID
@@ -36,7 +33,6 @@ public class Activity  extends AbstractModel{
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
-    
 
     /**
     * 起因
@@ -44,7 +40,6 @@ public class Activity  extends AbstractModel{
     @SerializedName("Cause")
     @Expose
     private String Cause;
-    
 
     /**
     * 活动状态
@@ -52,7 +47,6 @@ public class Activity  extends AbstractModel{
     @SerializedName("ActivityState")
     @Expose
     private String ActivityState;
-    
 
     /**
     * 状态原因
@@ -60,7 +54,6 @@ public class Activity  extends AbstractModel{
     @SerializedName("StateReason")
     @Expose
     private String StateReason;
-    
 
     /**
     * 活动开始时间
@@ -68,7 +61,6 @@ public class Activity  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 活动结束时间
@@ -76,7 +68,6 @@ public class Activity  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
      * 获取活动ID

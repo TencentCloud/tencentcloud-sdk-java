@@ -12,7 +12,6 @@ public class OutputMappingConfig  extends AbstractModel{
     @SerializedName("Scene")
     @Expose
     private String Scene;
-    
 
     /**
     * 并行worker数量
@@ -20,7 +19,6 @@ public class OutputMappingConfig  extends AbstractModel{
     @SerializedName("WorkerNum")
     @Expose
     private Integer WorkerNum;
-    
 
     /**
     * worker分块大小
@@ -28,7 +26,6 @@ public class OutputMappingConfig  extends AbstractModel{
     @SerializedName("WorkerPartSize")
     @Expose
     private Integer WorkerPartSize;
-    
 
     /**
      * 获取存储类型，仅支持COS

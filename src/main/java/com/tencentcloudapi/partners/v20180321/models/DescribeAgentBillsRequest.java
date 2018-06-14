@@ -12,7 +12,6 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     @SerializedName("SettleMonth")
     @Expose
     private String SettleMonth;
-    
 
     /**
     * 客户账号ID
@@ -20,7 +19,6 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     @SerializedName("ClientUin")
     @Expose
     private String ClientUin;
-    
 
     /**
     * 支付方式，prepay/postpay
@@ -28,7 +26,6 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
-    
 
     /**
     * 预付费订单号
@@ -36,7 +33,6 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
-    
 
     /**
     * 客户备注名称
@@ -44,7 +40,6 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     @SerializedName("ClientRemark")
     @Expose
     private String ClientRemark;
-    
 
     /**
     * 偏移量
@@ -52,7 +47,6 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 限制数目
@@ -60,7 +54,6 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取支付月份，如2018-02

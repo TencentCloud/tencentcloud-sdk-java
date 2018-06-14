@@ -12,7 +12,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 实例名称，用户可修改
@@ -20,7 +19,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 实例所属应用 Id
@@ -28,7 +26,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("AppId")
     @Expose
     private Integer AppId;
-    
 
     /**
     * 实例所属项目 Id
@@ -36,7 +33,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 实例所在地域名称，如 ap-shanghai
@@ -44,7 +40,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 实例所在可用区名称，如 ap-shanghai-1
@@ -52,7 +47,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 私有网络 Id，基础网络时为 0
@@ -60,7 +54,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private Integer VpcId;
-    
 
     /**
     * 子网 Id，基础网络时为 0
@@ -68,7 +61,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private Integer SubnetId;
-    
 
     /**
     * 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
@@ -76,7 +68,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer Status;
-    
 
     /**
     * 内网 IP 地址
@@ -84,7 +75,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Vip")
     @Expose
     private String Vip;
-    
 
     /**
     * 内网端口
@@ -92,7 +82,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Vport")
     @Expose
     private Integer Vport;
-    
 
     /**
     * 外网访问的域名，公网可解析
@@ -100,7 +89,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
-    
 
     /**
     * 外网 IP 地址，公网可访问
@@ -108,7 +96,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("WanVip")
     @Expose
     private String WanVip;
-    
 
     /**
     * 外网端口
@@ -116,7 +103,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("WanPort")
     @Expose
     private Integer WanPort;
-    
 
     /**
     * 实例创建时间，格式为 2006-01-02 15:04:05
@@ -124,7 +110,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 实例最后更新时间，格式为 2006-01-02 15:04:05
@@ -132,7 +117,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
-    
 
     /**
     * 自动续费标志：0 否，1 是
@@ -140,7 +124,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("AutoRenewFlag")
     @Expose
     private Integer AutoRenewFlag;
-    
 
     /**
     * 产品类型 Id
@@ -148,7 +131,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Pid")
     @Expose
     private Integer Pid;
-    
 
     /**
     * 实例到期时间，格式为 2006-01-02 15:04:05
@@ -156,7 +138,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("PeriodEndTime")
     @Expose
     private String PeriodEndTime;
-    
 
     /**
     * 实例所属账号
@@ -164,7 +145,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Uin")
     @Expose
     private String Uin;
-    
 
     /**
     * TDSQL 版本信息，如 10.1.9
@@ -172,7 +152,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("TdsqlVersion")
     @Expose
     private String TdsqlVersion;
-    
 
     /**
     * 实例内存大小，单位 GB
@@ -180,7 +159,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 实例存储大小，单位 GB
@@ -188,7 +166,6 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Storage")
     @Expose
     private Integer Storage;
-    
 
     /**
      * 获取实例 Id，唯一标识一个 TDSQL 实例

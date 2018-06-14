@@ -12,7 +12,6 @@ public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
     @SerializedName("ActivitySet")
     @Expose
     private Activity [] ActivitySet;
-    
 
     /**
     * 活动数量
@@ -20,7 +19,6 @@ public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取计算环境中的活动列表

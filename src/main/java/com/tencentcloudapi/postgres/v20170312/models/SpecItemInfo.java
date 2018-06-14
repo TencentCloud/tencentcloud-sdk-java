@@ -12,7 +12,6 @@ public class SpecItemInfo  extends AbstractModel{
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
-    
 
     /**
     * PostgreSQL的内核版本编号
@@ -20,7 +19,6 @@ public class SpecItemInfo  extends AbstractModel{
     @SerializedName("Version")
     @Expose
     private String Version;
-    
 
     /**
     * 内核编号对应的完整版本名称
@@ -28,7 +26,6 @@ public class SpecItemInfo  extends AbstractModel{
     @SerializedName("VersionName")
     @Expose
     private String VersionName;
-    
 
     /**
     * CPU核数
@@ -36,7 +33,6 @@ public class SpecItemInfo  extends AbstractModel{
     @SerializedName("Cpu")
     @Expose
     private Integer [] Cpu;
-    
 
     /**
     * 内存大小，单位：MB
@@ -44,7 +40,6 @@ public class SpecItemInfo  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer [] Memory;
-    
 
     /**
     * 该规格所支持最大存储容量，单位：GB
@@ -52,7 +47,6 @@ public class SpecItemInfo  extends AbstractModel{
     @SerializedName("MaxStorage")
     @Expose
     private Integer MaxStorage;
-    
 
     /**
     * 该规格所支持最小存储容量，单位：GB
@@ -60,7 +54,6 @@ public class SpecItemInfo  extends AbstractModel{
     @SerializedName("MinStorage")
     @Expose
     private Integer MinStorage;
-    
 
     /**
     * 该规格的预估QPS
@@ -68,7 +61,6 @@ public class SpecItemInfo  extends AbstractModel{
     @SerializedName("Qps")
     @Expose
     private Integer Qps;
-    
 
     /**
     * 该规格对应的计费ID
@@ -76,7 +68,6 @@ public class SpecItemInfo  extends AbstractModel{
     @SerializedName("Pid")
     @Expose
     private Integer Pid;
-    
 
     /**
      * 获取规格ID

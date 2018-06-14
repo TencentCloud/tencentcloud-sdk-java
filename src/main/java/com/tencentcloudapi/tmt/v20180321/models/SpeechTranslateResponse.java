@@ -12,7 +12,6 @@ public class SpeechTranslateResponse  extends AbstractModel{
     @SerializedName("SessionUuid")
     @Expose
     private String SessionUuid;
-    
 
     /**
     * 语音识别状态 1-进行中 0-完成
@@ -20,7 +19,6 @@ public class SpeechTranslateResponse  extends AbstractModel{
     @SerializedName("RecognizeStatus")
     @Expose
     private Integer RecognizeStatus;
-    
 
     /**
     * 识别出的源文
@@ -28,7 +26,6 @@ public class SpeechTranslateResponse  extends AbstractModel{
     @SerializedName("SourceText")
     @Expose
     private String SourceText;
-    
 
     /**
     * 翻译出的译文
@@ -36,7 +33,6 @@ public class SpeechTranslateResponse  extends AbstractModel{
     @SerializedName("TargetText")
     @Expose
     private String TargetText;
-    
 
     /**
     * 第几个语音分片
@@ -44,7 +40,6 @@ public class SpeechTranslateResponse  extends AbstractModel{
     @SerializedName("Seq")
     @Expose
     private Integer Seq;
-    
 
     /**
     * 源语言
@@ -52,7 +47,6 @@ public class SpeechTranslateResponse  extends AbstractModel{
     @SerializedName("Source")
     @Expose
     private String Source;
-    
 
     /**
     * 目标语言
@@ -60,7 +54,6 @@ public class SpeechTranslateResponse  extends AbstractModel{
     @SerializedName("Target")
     @Expose
     private String Target;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -68,7 +61,6 @@ public class SpeechTranslateResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取请求的SessionUuid直接返回

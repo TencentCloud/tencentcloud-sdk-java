@@ -12,7 +12,6 @@ public class CustomerGatewayVendor  extends AbstractModel{
     @SerializedName("Platform")
     @Expose
     private String Platform;
-    
 
     /**
     * 软件版本。
@@ -20,7 +19,6 @@ public class CustomerGatewayVendor  extends AbstractModel{
     @SerializedName("SoftwareVersion")
     @Expose
     private String SoftwareVersion;
-    
 
     /**
     * 供应商名称。
@@ -28,7 +26,6 @@ public class CustomerGatewayVendor  extends AbstractModel{
     @SerializedName("VendorName")
     @Expose
     private String VendorName;
-    
 
     /**
      * 获取平台。

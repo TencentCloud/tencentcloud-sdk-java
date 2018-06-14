@@ -12,7 +12,6 @@ public class AuditApplyClientResponse  extends AbstractModel{
     @SerializedName("Uin")
     @Expose
     private String Uin;
-    
 
     /**
     * 客户账号ID
@@ -20,7 +19,6 @@ public class AuditApplyClientResponse  extends AbstractModel{
     @SerializedName("ClientUin")
     @Expose
     private String ClientUin;
-    
 
     /**
     * 审核结果，包括accept/reject/qcloudaudit（腾讯云审核）
@@ -28,7 +26,6 @@ public class AuditApplyClientResponse  extends AbstractModel{
     @SerializedName("AuditResult")
     @Expose
     private String AuditResult;
-    
 
     /**
     * 关联时间对应的时间戳
@@ -36,7 +33,6 @@ public class AuditApplyClientResponse  extends AbstractModel{
     @SerializedName("AgentTime")
     @Expose
     private Integer AgentTime;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -44,7 +40,6 @@ public class AuditApplyClientResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取代理商账号ID

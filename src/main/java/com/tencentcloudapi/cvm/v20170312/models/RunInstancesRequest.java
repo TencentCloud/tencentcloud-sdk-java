@@ -12,7 +12,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
-    
 
     /**
     * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
@@ -20,7 +19,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
-    
 
     /**
     * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，专用宿主机（对于独享母机付费模式的子机创建）等属性。
@@ -28,7 +26,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * 实例机型。不同实例机型指定了不同的资源规格。
@@ -37,7 +34,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
-    
 
     /**
     * 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
@@ -45,7 +41,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
-    
 
     /**
     * 实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
@@ -53,7 +48,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("SystemDisk")
     @Expose
     private SystemDisk SystemDisk;
-    
 
     /**
     * 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，当前仅支持购买的时候指定一个数据盘。
@@ -61,7 +55,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
-    
 
     /**
     * 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若不指定该参数，则默认使用基础网络。若在此参数中指定了私有网络ip，表示每个实例的主网卡ip，而且InstanceCount参数必须与私有网络ip的个数一致。
@@ -69,7 +62,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("VirtualPrivateCloud")
     @Expose
     private VirtualPrivateCloud VirtualPrivateCloud;
-    
 
     /**
     * 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
@@ -77,7 +69,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
-    
 
     /**
     * 购买实例数量。取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
@@ -85,7 +76,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceCount")
     @Expose
     private Integer InstanceCount;
-    
 
     /**
     * 实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>购买多台实例，如果指定模式串`{R:x}`，表示生成数字`[x, x+n-1]`，其中`n`表示购买实例的数量，例如`server_{R:3}`，购买1台时，实例显示名称为`server_3`；购买2台时，实例显示名称分别为`server_3`，`server_4`。支持指定多个模式串`{R:x}`。</li><li>购买多台实例，如果不指定模式串，则在实例显示名称添加后缀`1、2...n`，其中`n`表示购买实例的数量，例如`server_`，购买2台时，实例显示名称分别为`server_1`，`server_2`。
@@ -93,7 +83,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。
@@ -101,7 +90,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("LoginSettings")
     @Expose
     private LoginSettings LoginSettings;
-    
 
     /**
     * 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则默认不绑定安全组。
@@ -109,7 +97,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
-    
 
     /**
     * 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
@@ -117,7 +104,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("EnhancedService")
     @Expose
     private EnhancedService EnhancedService;
-    
 
     /**
     * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
@@ -125,7 +111,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
-    
 
     /**
     * 云服务器的主机名。<br><li>点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。<br><li>Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。<br><li>其他类型（Linux 等）实例：字符长度为[2, 30]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。
@@ -133,7 +118,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("HostName")
     @Expose
     private String HostName;
-    
 
     /**
     * 定时任务。通过该参数可以为实例指定定时任务，目前仅支持定时销毁。
@@ -141,7 +125,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("ActionTimer")
     @Expose
     private ActionTimer ActionTimer;
-    
 
     /**
     * 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云主机实例。
@@ -149,7 +132,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("TagSpecification")
     @Expose
     private TagSpecification [] TagSpecification;
-    
 
     /**
     * 实例的市场相关选项，如竞价实例相关参数
@@ -157,7 +139,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceMarketOptions")
     @Expose
     private InstanceMarketOptionsRequest InstanceMarketOptions;
-    
 
     /**
     * 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526
@@ -166,7 +147,6 @@ public class RunInstancesRequest  extends AbstractModel{
     @SerializedName("UserData")
     @Expose
     private String UserData;
-    
 
     /**
      * 获取实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDHPAID：独享母机付费（基于专用宿主机创建，宿主机部分的资源不收费）<br>默认值：POSTPAID_BY_HOUR。

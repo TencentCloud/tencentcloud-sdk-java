@@ -12,7 +12,6 @@ public class Result  extends AbstractModel{
     @SerializedName("Log")
     @Expose
     private String Log;
-    
 
     /**
     * 表示执行函数的返回，异步调用返回为空
@@ -20,7 +19,6 @@ public class Result  extends AbstractModel{
     @SerializedName("RetMsg")
     @Expose
     private String RetMsg;
-    
 
     /**
     * 表示执行函数的错误返回信息，异步调用返回为空
@@ -28,7 +26,6 @@ public class Result  extends AbstractModel{
     @SerializedName("ErrMsg")
     @Expose
     private String ErrMsg;
-    
 
     /**
     * 执行函数时的内存大小，单位为Byte，异步调用返回为空
@@ -36,7 +33,6 @@ public class Result  extends AbstractModel{
     @SerializedName("MemUsage")
     @Expose
     private Integer MemUsage;
-    
 
     /**
     * 表示执行函数的耗时，单位是毫秒，异步调用返回为空
@@ -44,7 +40,6 @@ public class Result  extends AbstractModel{
     @SerializedName("Duration")
     @Expose
     private Float Duration;
-    
 
     /**
     * 表示函数的计费耗时，单位是毫秒，异步调用返回为空
@@ -52,7 +47,6 @@ public class Result  extends AbstractModel{
     @SerializedName("BillDuration")
     @Expose
     private Integer BillDuration;
-    
 
     /**
     * 此次函数执行的Id
@@ -60,7 +54,6 @@ public class Result  extends AbstractModel{
     @SerializedName("FunctionRequestId")
     @Expose
     private String FunctionRequestId;
-    
 
     /**
     * 0为正确，异步调用返回为空
@@ -68,7 +61,6 @@ public class Result  extends AbstractModel{
     @SerializedName("InvokeResult")
     @Expose
     private Integer InvokeResult;
-    
 
     /**
      * 获取表示执行过程中的日志输出，异步调用返回为空

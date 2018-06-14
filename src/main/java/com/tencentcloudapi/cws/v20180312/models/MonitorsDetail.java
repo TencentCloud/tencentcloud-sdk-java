@@ -12,7 +12,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("Basic")
     @Expose
     private Monitor Basic;
-    
 
     /**
     * 监控任务包含的站点列表。
@@ -20,7 +19,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("Sites")
     @Expose
     private MonitorMiniSite [] Sites;
-    
 
     /**
     * 监控任务包含的站点列表数量。
@@ -28,7 +26,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("SiteNumber")
     @Expose
     private Integer SiteNumber;
-    
 
     /**
     * 监控任务包含的受漏洞威胁的站点列表。
@@ -36,7 +33,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("ImpactSites")
     @Expose
     private MonitorMiniSite [] ImpactSites;
-    
 
     /**
     * 监控任务包含的受漏洞威胁的站点列表数量。
@@ -44,7 +40,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("ImpactSiteNumber")
     @Expose
     private Integer ImpactSiteNumber;
-    
 
     /**
     * 高风险漏洞数量。
@@ -52,7 +47,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("VulsHighNumber")
     @Expose
     private Integer VulsHighNumber;
-    
 
     /**
     * 中风险漏洞数量。
@@ -60,7 +54,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("VulsMiddleNumber")
     @Expose
     private Integer VulsMiddleNumber;
-    
 
     /**
     * 低风险漏洞数量。
@@ -68,7 +61,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("VulsLowNumber")
     @Expose
     private Integer VulsLowNumber;
-    
 
     /**
     * 提示数量。
@@ -76,7 +68,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("VulsNoticeNumber")
     @Expose
     private Integer VulsNoticeNumber;
-    
 
     /**
     * 监控任务包含的站点列表的平均扫描进度。
@@ -84,7 +75,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("Progress")
     @Expose
     private Integer Progress;
-    
 
     /**
     * 扫描页面总数。
@@ -92,7 +82,6 @@ public class MonitorsDetail  extends AbstractModel{
     @SerializedName("PageCount")
     @Expose
     private Integer PageCount;
-    
 
     /**
      * 获取监控任务基础信息。

@@ -12,7 +12,6 @@ public class ModifySnapshotAttributeRequest  extends AbstractModel{
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
-    
 
     /**
     * 新的快照名称。最长为60个字符。
@@ -20,7 +19,6 @@ public class ModifySnapshotAttributeRequest  extends AbstractModel{
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
-    
 
     /**
     * 快照的保留时间，FALSE表示非永久保留，TRUE表示永久保留。仅支持将非永久快照修改为永久快照。
@@ -28,7 +26,6 @@ public class ModifySnapshotAttributeRequest  extends AbstractModel{
     @SerializedName("IsPermanent")
     @Expose
     private Boolean IsPermanent;
-    
 
     /**
      * 获取快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。

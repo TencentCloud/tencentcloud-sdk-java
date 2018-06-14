@@ -12,7 +12,6 @@ public class ApplySnapshotRequest  extends AbstractModel{
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
-    
 
     /**
     * 快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
@@ -20,7 +19,6 @@ public class ApplySnapshotRequest  extends AbstractModel{
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
-    
 
     /**
      * 获取快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。

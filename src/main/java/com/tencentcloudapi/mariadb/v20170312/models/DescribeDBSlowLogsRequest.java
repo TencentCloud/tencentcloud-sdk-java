@@ -12,7 +12,6 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 从结果的第几条数据开始返回
@@ -20,7 +19,6 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回的结果条数
@@ -28,7 +26,6 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
     * 查询的起始时间，形如2016-07-23 14:55:20
@@ -36,7 +33,6 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 查询的结束时间，形如2016-08-22 14:55:20
@@ -44,7 +40,6 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
     * 要查询的具体数据库名称
@@ -52,7 +47,6 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     @SerializedName("Db")
     @Expose
     private String Db;
-    
 
     /**
     * 排序指标，取值为query_time_sum或者query_count
@@ -60,7 +54,6 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
-    
 
     /**
     * 排序类型，desc或者asc
@@ -68,7 +61,6 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc。

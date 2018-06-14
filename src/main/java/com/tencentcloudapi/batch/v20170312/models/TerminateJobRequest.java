@@ -12,7 +12,6 @@ public class TerminateJobRequest  extends AbstractModel{
     @SerializedName("JobId")
     @Expose
     private String JobId;
-    
 
     /**
      * 获取作业ID

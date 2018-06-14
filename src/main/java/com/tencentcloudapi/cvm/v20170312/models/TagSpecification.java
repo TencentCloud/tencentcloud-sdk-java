@@ -12,7 +12,6 @@ public class TagSpecification  extends AbstractModel{
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
-    
 
     /**
     * 标签对列表
@@ -20,7 +19,6 @@ public class TagSpecification  extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
-    
 
     /**
      * 获取标签绑定的资源类型

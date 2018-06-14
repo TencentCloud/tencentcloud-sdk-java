@@ -12,7 +12,6 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 登录用户名。
@@ -20,7 +19,6 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 用户允许的访问 host，用户名+host唯一确定一个账号。
@@ -28,7 +26,6 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
     * 新的账号备注，长度 0~256。
@@ -36,7 +33,6 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

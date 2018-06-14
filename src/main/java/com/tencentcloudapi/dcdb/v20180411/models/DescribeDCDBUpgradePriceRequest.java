@@ -12,7 +12,6 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 升级类型，取值范围: 
@@ -23,7 +22,6 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
-    
 
     /**
     * 新增分片配置，当UpgradeType为ADD时生效。
@@ -31,7 +29,6 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     @SerializedName("AddShardConfig")
     @Expose
     private AddShardConfig AddShardConfig;
-    
 
     /**
     * 扩容分片配置，当UpgradeType为EXPAND时生效。
@@ -39,7 +36,6 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     @SerializedName("ExpandShardConfig")
     @Expose
     private ExpandShardConfig ExpandShardConfig;
-    
 
     /**
     * 切分分片配置，当UpgradeType为SPLIT时生效。
@@ -47,7 +43,6 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     @SerializedName("SplitShardConfig")
     @Expose
     private SplitShardConfig SplitShardConfig;
-    
 
     /**
      * 获取待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。

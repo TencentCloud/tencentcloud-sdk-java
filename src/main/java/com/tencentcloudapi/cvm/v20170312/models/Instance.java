@@ -12,7 +12,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * 实例`ID`。
@@ -20,7 +19,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 实例机型。
@@ -28,7 +26,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
-    
 
     /**
     * 实例的CPU核数，单位：核。
@@ -36,7 +33,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("CPU")
     @Expose
     private Integer CPU;
-    
 
     /**
     * 实例内存容量，单位：`GB`。
@@ -44,7 +40,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例<br><li>EXPIRED：表示过期的实例<br><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
@@ -52,7 +47,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("RestrictState")
     @Expose
     private String RestrictState;
-    
 
     /**
     * 实例名称。
@@ -60,7 +54,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。
@@ -68,7 +61,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
-    
 
     /**
     * 实例系统盘信息。
@@ -76,7 +68,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("SystemDisk")
     @Expose
     private SystemDisk SystemDisk;
-    
 
     /**
     * 实例数据盘信息。只包含随实例购买的数据盘。
@@ -84,7 +75,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
-    
 
     /**
     * 实例主网卡的内网`IP`列表。
@@ -92,7 +82,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("PrivateIpAddresses")
     @Expose
     private String [] PrivateIpAddresses;
-    
 
     /**
     * 实例主网卡的公网`IP`列表。
@@ -100,7 +89,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("PublicIpAddresses")
     @Expose
     private String [] PublicIpAddresses;
-    
 
     /**
     * 实例带宽信息。
@@ -108,7 +96,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
-    
 
     /**
     * 实例所属虚拟私有网络信息。
@@ -116,7 +103,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("VirtualPrivateCloud")
     @Expose
     private VirtualPrivateCloud VirtualPrivateCloud;
-    
 
     /**
     * 生产实例所使用的镜像`ID`。
@@ -124,7 +110,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
-    
 
     /**
     * 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
@@ -132,7 +117,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
-    
 
     /**
     * 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
@@ -140,7 +124,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
     * 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
@@ -148,7 +131,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
-    
 
     /**
     * 操作系统名称。
@@ -156,7 +138,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("OsName")
     @Expose
     private String OsName;
-    
 
     /**
     * 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
@@ -164,7 +145,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
-    
 
     /**
     * 实例登录设置。目前只返回实例所关联的密钥。
@@ -172,7 +152,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("LoginSettings")
     @Expose
     private LoginSettings LoginSettings;
-    
 
     /**
     * 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
@@ -180,7 +159,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("InstanceState")
     @Expose
     private String InstanceState;
-    
 
     /**
      * 获取实例所在的位置。

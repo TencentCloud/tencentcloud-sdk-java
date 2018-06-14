@@ -12,7 +12,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("CheckSum")
     @Expose
     private String CheckSum;
-    
 
     /**
     * 数据库名称
@@ -20,7 +19,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("Db")
     @Expose
     private String Db;
-    
 
     /**
     * 抽象的SQL语句
@@ -28,7 +26,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("FingerPrint")
     @Expose
     private String FingerPrint;
-    
 
     /**
     * 平均的锁时间
@@ -36,7 +33,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("LockTimeAvg")
     @Expose
     private String LockTimeAvg;
-    
 
     /**
     * 最大锁时间
@@ -44,7 +40,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("LockTimeMax")
     @Expose
     private String LockTimeMax;
-    
 
     /**
     * 最小锁时间
@@ -52,7 +47,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("LockTimeMin")
     @Expose
     private String LockTimeMin;
-    
 
     /**
     * 锁时间总和
@@ -60,7 +54,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("LockTimeSum")
     @Expose
     private String LockTimeSum;
-    
 
     /**
     * 查询次数
@@ -68,7 +61,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("QueryCount")
     @Expose
     private String QueryCount;
-    
 
     /**
     * 平均查询时间
@@ -76,7 +68,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("QueryTimeAvg")
     @Expose
     private String QueryTimeAvg;
-    
 
     /**
     * 最大查询时间
@@ -84,7 +75,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("QueryTimeMax")
     @Expose
     private String QueryTimeMax;
-    
 
     /**
     * 最小查询时间
@@ -92,7 +82,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("QueryTimeMin")
     @Expose
     private String QueryTimeMin;
-    
 
     /**
     * 查询时间总和
@@ -100,7 +89,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("QueryTimeSum")
     @Expose
     private String QueryTimeSum;
-    
 
     /**
     * 扫描行数
@@ -108,7 +96,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("RowsExaminedSum")
     @Expose
     private String RowsExaminedSum;
-    
 
     /**
     * 发送行数
@@ -116,7 +103,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("RowsSentSum")
     @Expose
     private String RowsSentSum;
-    
 
     /**
     * 首次执行时间
@@ -124,7 +110,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("TsMax")
     @Expose
     private String TsMax;
-    
 
     /**
     * 最后执行时间
@@ -132,7 +117,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("TsMin")
     @Expose
     private String TsMin;
-    
 
     /**
     * 帐号
@@ -140,7 +124,6 @@ public class SlowLogData  extends AbstractModel{
     @SerializedName("User")
     @Expose
     private String User;
-    
 
     /**
      * 获取语句校验和，用于查询详情

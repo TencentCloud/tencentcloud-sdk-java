@@ -12,7 +12,6 @@ public class ModifyLogFileRetentionPeriodRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 保存的天数,不能超过30
@@ -20,7 +19,6 @@ public class ModifyLogFileRetentionPeriodRequest  extends AbstractModel{
     @SerializedName("Days")
     @Expose
     private Integer Days;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc。

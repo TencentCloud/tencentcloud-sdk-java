@@ -12,7 +12,6 @@ public class InquiryPriceRenewInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
     * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。
@@ -20,7 +19,6 @@ public class InquiryPriceRenewInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
-    
 
     /**
     * 试运行。
@@ -28,7 +26,6 @@ public class InquiryPriceRenewInstancesRequest  extends AbstractModel{
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
-    
 
     /**
      * 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。

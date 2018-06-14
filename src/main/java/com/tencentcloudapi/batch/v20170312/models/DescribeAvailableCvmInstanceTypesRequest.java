@@ -12,7 +12,6 @@ public class DescribeAvailableCvmInstanceTypesRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
      * 获取过滤条件

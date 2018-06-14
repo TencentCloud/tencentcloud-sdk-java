@@ -13,7 +13,6 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     @SerializedName("DealName")
     @Expose
     private String DealName;
-    
 
     /**
     * 订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
@@ -21,7 +20,6 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -29,7 +27,6 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取长订单号。可以据此调用 DescribeOrders

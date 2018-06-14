@@ -12,7 +12,6 @@ public class DeleteVpcRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
      * 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。

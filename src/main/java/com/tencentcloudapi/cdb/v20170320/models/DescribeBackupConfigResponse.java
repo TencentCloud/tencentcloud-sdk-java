@@ -12,7 +12,6 @@ public class DescribeBackupConfigResponse  extends AbstractModel{
     @SerializedName("StartTimeMin")
     @Expose
     private Integer StartTimeMin;
-    
 
     /**
     * 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨6:00
@@ -20,7 +19,6 @@ public class DescribeBackupConfigResponse  extends AbstractModel{
     @SerializedName("StartTimeMax")
     @Expose
     private Integer StartTimeMax;
-    
 
     /**
     * 备份过期时间，单位为天
@@ -28,7 +26,6 @@ public class DescribeBackupConfigResponse  extends AbstractModel{
     @SerializedName("BackupExpireDays")
     @Expose
     private Integer BackupExpireDays;
-    
 
     /**
     * 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份
@@ -36,7 +33,6 @@ public class DescribeBackupConfigResponse  extends AbstractModel{
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
-    
 
     /**
     * Binlog过期时间，单位为天
@@ -44,7 +40,6 @@ public class DescribeBackupConfigResponse  extends AbstractModel{
     @SerializedName("BinlogExpireDays")
     @Expose
     private Integer BinlogExpireDays;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -52,7 +47,6 @@ public class DescribeBackupConfigResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取备份开始的最早时间点，单位为时刻。例如，2 - 凌晨2:00

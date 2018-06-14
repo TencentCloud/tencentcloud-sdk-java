@@ -12,7 +12,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 实例名称
@@ -20,7 +19,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * APPID
@@ -28,7 +26,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("AppId")
     @Expose
     private Integer AppId;
-    
 
     /**
     * 项目ID
@@ -36,7 +33,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 地域
@@ -44,7 +40,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 可用区
@@ -52,7 +47,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * VPC数字ID
@@ -60,7 +54,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private Integer VpcId;
-    
 
     /**
     * Subnet数字ID
@@ -68,7 +61,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private Integer SubnetId;
-    
 
     /**
     * 状态中文描述
@@ -76,7 +68,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
-    
 
     /**
     * 状态
@@ -84,7 +75,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Integer Status;
-    
 
     /**
     * 内网IP
@@ -92,7 +82,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("Vip")
     @Expose
     private String Vip;
-    
 
     /**
     * 内网端口
@@ -100,7 +89,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("Vport")
     @Expose
     private Integer Vport;
-    
 
     /**
     * 创建时间
@@ -108,7 +96,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 自动续费标志
@@ -116,7 +103,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("AutoRenewFlag")
     @Expose
     private Integer AutoRenewFlag;
-    
 
     /**
     * 内存大小，单位 GB
@@ -124,7 +110,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 存储大小，单位 GB
@@ -132,7 +117,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("Storage")
     @Expose
     private Integer Storage;
-    
 
     /**
     * 分片个数
@@ -140,7 +124,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("ShardCount")
     @Expose
     private Integer ShardCount;
-    
 
     /**
     * 到期时间
@@ -148,7 +131,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("PeriodEndTime")
     @Expose
     private String PeriodEndTime;
-    
 
     /**
     * 隔离时间
@@ -156,7 +138,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("IsolatedTimestamp")
     @Expose
     private String IsolatedTimestamp;
-    
 
     /**
     * UIN
@@ -164,7 +145,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("Uin")
     @Expose
     private String Uin;
-    
 
     /**
     * 分片详情
@@ -172,7 +152,6 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("ShardDetail")
     @Expose
     private ShardInfo [] ShardDetail;
-    
 
     /**
      * 获取实例ID

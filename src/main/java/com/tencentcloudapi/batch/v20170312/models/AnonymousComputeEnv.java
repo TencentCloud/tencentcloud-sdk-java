@@ -12,7 +12,6 @@ public class AnonymousComputeEnv  extends AbstractModel{
     @SerializedName("EnvType")
     @Expose
     private String EnvType;
-    
 
     /**
     * 计算环境具体参数
@@ -20,7 +19,6 @@ public class AnonymousComputeEnv  extends AbstractModel{
     @SerializedName("EnvData")
     @Expose
     private EnvData EnvData;
-    
 
     /**
     * 数据盘挂载选项
@@ -28,7 +26,6 @@ public class AnonymousComputeEnv  extends AbstractModel{
     @SerializedName("MountDataDisks")
     @Expose
     private MountDataDisk [] MountDataDisks;
-    
 
     /**
     * agent运行模式，适用于Windows系统
@@ -36,7 +33,6 @@ public class AnonymousComputeEnv  extends AbstractModel{
     @SerializedName("AgentRunningMode")
     @Expose
     private AgentRunningMode AgentRunningMode;
-    
 
     /**
      * 获取计算环境管理类型

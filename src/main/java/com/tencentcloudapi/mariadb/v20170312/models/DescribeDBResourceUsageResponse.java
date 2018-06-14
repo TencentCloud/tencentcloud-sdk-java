@@ -12,7 +12,6 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     @SerializedName("BinlogDiskAvailable")
     @Expose
     private MonitorData BinlogDiskAvailable;
-    
 
     /**
     * 磁盘可用空间,单位GB
@@ -20,7 +19,6 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     @SerializedName("DataDiskAvailable")
     @Expose
     private MonitorData DataDiskAvailable;
-    
 
     /**
     * CPU利用率
@@ -28,7 +26,6 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     @SerializedName("CpuUsageRate")
     @Expose
     private MonitorData CpuUsageRate;
-    
 
     /**
     * 内存可用空间,单位GB
@@ -36,7 +33,6 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     @SerializedName("MemAvailable")
     @Expose
     private MonitorData MemAvailable;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -44,7 +40,6 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取binlog日志磁盘可用空间,单位GB

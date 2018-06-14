@@ -12,7 +12,6 @@ public class CheckVcodeRequest  extends AbstractModel{
     @SerializedName("Module")
     @Expose
     private String Module;
-    
 
     /**
     * 操作名
@@ -20,7 +19,6 @@ public class CheckVcodeRequest  extends AbstractModel{
     @SerializedName("Operation")
     @Expose
     private String Operation;
-    
 
     /**
     * 帐号ID
@@ -28,7 +26,6 @@ public class CheckVcodeRequest  extends AbstractModel{
     @SerializedName("AccountResId")
     @Expose
     private String AccountResId;
-    
 
     /**
     * 合同ID
@@ -36,7 +33,6 @@ public class CheckVcodeRequest  extends AbstractModel{
     @SerializedName("ContractResId")
     @Expose
     private String ContractResId;
-    
 
     /**
     * 验证码
@@ -44,7 +40,6 @@ public class CheckVcodeRequest  extends AbstractModel{
     @SerializedName("VerifyCode")
     @Expose
     private String VerifyCode;
-    
 
     /**
      * 获取模块名

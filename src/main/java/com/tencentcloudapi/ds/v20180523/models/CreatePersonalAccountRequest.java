@@ -12,7 +12,6 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     @SerializedName("Module")
     @Expose
     private String Module;
-    
 
     /**
     * 操作名
@@ -20,7 +19,6 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     @SerializedName("Operation")
     @Expose
     private String Operation;
-    
 
     /**
     * 个人用户姓名
@@ -28,7 +26,6 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 个人用户证件类型。0代表身份证
@@ -36,7 +33,6 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     @SerializedName("IdentType")
     @Expose
     private Integer IdentType;
-    
 
     /**
     * 个人用户证件号码
@@ -44,7 +40,6 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     @SerializedName("IdentNo")
     @Expose
     private String IdentNo;
-    
 
     /**
     * 个人用户手机号
@@ -52,7 +47,6 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     @SerializedName("MobilePhone")
     @Expose
     private String MobilePhone;
-    
 
     /**
      * 获取模块名

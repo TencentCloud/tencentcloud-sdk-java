@@ -12,7 +12,6 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
-    
 
     /**
     * 安全组名称，可任意命名，但不得超过60个字符。
@@ -20,7 +19,6 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
-    
 
     /**
     * 安全组备注，最多100个字符。
@@ -28,7 +26,6 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     @SerializedName("GroupDescription")
     @Expose
     private String GroupDescription;
-    
 
     /**
      * 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。

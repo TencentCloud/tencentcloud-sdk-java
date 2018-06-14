@@ -12,7 +12,6 @@ public class DescribeAgentBillsResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 业务明细列表
@@ -20,7 +19,6 @@ public class DescribeAgentBillsResponse  extends AbstractModel{
     @SerializedName("AgentBillSet")
     @Expose
     private AgentBillElem [] AgentBillSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeAgentBillsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取符合查询条件列表总数量

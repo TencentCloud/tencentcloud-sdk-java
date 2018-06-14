@@ -94,6 +94,24 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *本接口 (CreateDisasterRecoverGroup)用于创建[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。创建好的置放群组，可在[创建实例](https://cloud.tencent.com/document/api/213/15730)时指定。
+     * @param req CreateDisasterRecoverGroupRequest
+     * @return CreateDisasterRecoverGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDisasterRecoverGroupResponse  CreateDisasterRecoverGroup(CreateDisasterRecoverGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDisasterRecoverGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDisasterRecoverGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDisasterRecoverGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
      * @param req CreateImageRequest
      * @return CreateImageResponse
@@ -128,6 +146,24 @@ public class CvmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateKeyPairResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateKeyPair"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DeleteDisasterRecoverGroups)用于删除[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。只有空的置放群组才能被删除，非空的群组需要先销毁组内所有云主机，才能执行删除操作，不然会产生删除置放群组失败的错误。
+     * @param req DeleteDisasterRecoverGroupsRequest
+     * @return DeleteDisasterRecoverGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDisasterRecoverGroupsResponse  DeleteDisasterRecoverGroups(DeleteDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDisasterRecoverGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDisasterRecoverGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDisasterRecoverGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -171,6 +207,42 @@ public class CvmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteKeyPairsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteKeyPairs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeDisasterRecoverGroupQuota)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)配额。
+     * @param req DescribeDisasterRecoverGroupQuotaRequest
+     * @return DescribeDisasterRecoverGroupQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDisasterRecoverGroupQuotaResponse  DescribeDisasterRecoverGroupQuota(DescribeDisasterRecoverGroupQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDisasterRecoverGroupQuotaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDisasterRecoverGroupQuotaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDisasterRecoverGroupQuota"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeDisasterRecoverGroups)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)信息。
+     * @param req DescribeDisasterRecoverGroupsRequest
+     * @return DescribeDisasterRecoverGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDisasterRecoverGroupsResponse  DescribeDisasterRecoverGroups(DescribeDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDisasterRecoverGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDisasterRecoverGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDisasterRecoverGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -646,6 +718,24 @@ public class CvmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRunInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceRunInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (ModifyDisasterRecoverGroupAttribute)用于修改[分散置放群组](https://cloud.tencent.com/document/product/213/15486)属性。
+     * @param req ModifyDisasterRecoverGroupAttributeRequest
+     * @return ModifyDisasterRecoverGroupAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDisasterRecoverGroupAttributeResponse  ModifyDisasterRecoverGroupAttribute(ModifyDisasterRecoverGroupAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDisasterRecoverGroupAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDisasterRecoverGroupAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDisasterRecoverGroupAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

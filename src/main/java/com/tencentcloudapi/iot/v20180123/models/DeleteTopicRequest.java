@@ -12,7 +12,6 @@ public class DeleteTopicRequest  extends AbstractModel{
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
-    
 
     /**
     * 产品Id
@@ -20,7 +19,6 @@ public class DeleteTopicRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
      * 获取TopicId

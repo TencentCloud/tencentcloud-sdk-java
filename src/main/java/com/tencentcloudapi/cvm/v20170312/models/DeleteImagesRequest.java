@@ -12,7 +12,6 @@ public class DeleteImagesRequest  extends AbstractModel{
     @SerializedName("ImageIds")
     @Expose
     private String [] ImageIds;
-    
 
     /**
      * 获取准备删除的镜像Id列表

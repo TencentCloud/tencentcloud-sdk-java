@@ -12,7 +12,6 @@ public class PluginInfo  extends AbstractModel{
     @SerializedName("PluginType")
     @Expose
     private Integer PluginType;
-    
 
     /**
     * 插件名称
@@ -20,7 +19,6 @@ public class PluginInfo  extends AbstractModel{
     @SerializedName("PluginName")
     @Expose
     private String PluginName;
-    
 
     /**
     * 插件描述
@@ -28,7 +26,6 @@ public class PluginInfo  extends AbstractModel{
     @SerializedName("PluginDesc")
     @Expose
     private String PluginDesc;
-    
 
     /**
      * 获取插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告

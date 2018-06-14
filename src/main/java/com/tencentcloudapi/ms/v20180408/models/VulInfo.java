@@ -12,7 +12,6 @@ public class VulInfo  extends AbstractModel{
     @SerializedName("VulList")
     @Expose
     private VulList [] VulList;
-    
 
     /**
     * 漏洞文件评分
@@ -20,7 +19,6 @@ public class VulInfo  extends AbstractModel{
     @SerializedName("VulFileScore")
     @Expose
     private Integer VulFileScore;
-    
 
     /**
      * 获取漏洞列表

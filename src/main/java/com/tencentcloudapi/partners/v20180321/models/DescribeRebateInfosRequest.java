@@ -12,7 +12,6 @@ public class DescribeRebateInfosRequest  extends AbstractModel{
     @SerializedName("RebateMonth")
     @Expose
     private String RebateMonth;
-    
 
     /**
     * 偏移量
@@ -20,7 +19,6 @@ public class DescribeRebateInfosRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 限制数目
@@ -28,7 +26,6 @@ public class DescribeRebateInfosRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取返佣月份，如2018-02

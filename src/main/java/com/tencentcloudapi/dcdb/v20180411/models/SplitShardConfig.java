@@ -12,7 +12,6 @@ public class SplitShardConfig  extends AbstractModel{
     @SerializedName("ShardInstanceIds")
     @Expose
     private String [] ShardInstanceIds;
-    
 
     /**
     * 数据切分比例
@@ -20,7 +19,6 @@ public class SplitShardConfig  extends AbstractModel{
     @SerializedName("SplitRate")
     @Expose
     private Integer SplitRate;
-    
 
     /**
     * 分片内存大小，单位 GB
@@ -28,7 +26,6 @@ public class SplitShardConfig  extends AbstractModel{
     @SerializedName("ShardMemory")
     @Expose
     private Integer ShardMemory;
-    
 
     /**
     * 分片存储大小，单位 GB
@@ -36,7 +33,6 @@ public class SplitShardConfig  extends AbstractModel{
     @SerializedName("ShardStorage")
     @Expose
     private Integer ShardStorage;
-    
 
     /**
      * 获取分片ID数组

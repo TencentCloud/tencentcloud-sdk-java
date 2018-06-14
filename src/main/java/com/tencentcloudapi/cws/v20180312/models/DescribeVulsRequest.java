@@ -12,7 +12,6 @@ public class DescribeVulsRequest  extends AbstractModel{
     @SerializedName("SiteId")
     @Expose
     private Integer SiteId;
-    
 
     /**
     * 监控任务ID
@@ -20,7 +19,6 @@ public class DescribeVulsRequest  extends AbstractModel{
     @SerializedName("MonitorId")
     @Expose
     private Integer MonitorId;
-    
 
     /**
     * 过滤条件
@@ -28,7 +26,6 @@ public class DescribeVulsRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量，默认为0
@@ -36,7 +33,6 @@ public class DescribeVulsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回数量，默认为10，最大值为100
@@ -44,7 +40,6 @@ public class DescribeVulsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取站点ID

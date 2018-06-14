@@ -12,7 +12,6 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     @SerializedName("Master")
     @Expose
     private ResourceUsageMonitorSet Master;
-    
 
     /**
     * 备机1资源使用情况监控数据
@@ -20,7 +19,6 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     @SerializedName("Slave1")
     @Expose
     private ResourceUsageMonitorSet Slave1;
-    
 
     /**
     * 备机2资源使用情况监控数据
@@ -28,7 +26,6 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     @SerializedName("Slave2")
     @Expose
     private ResourceUsageMonitorSet Slave2;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -36,7 +33,6 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取主节点资源使用情况监控数据

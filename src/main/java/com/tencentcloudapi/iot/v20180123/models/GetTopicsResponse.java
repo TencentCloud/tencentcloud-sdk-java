@@ -12,7 +12,6 @@ public class GetTopicsResponse  extends AbstractModel{
     @SerializedName("Topics")
     @Expose
     private Topic [] Topics;
-    
 
     /**
     * Topic总数
@@ -20,7 +19,6 @@ public class GetTopicsResponse  extends AbstractModel{
     @SerializedName("Total")
     @Expose
     private Integer Total;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class GetTopicsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取Topic列表

@@ -12,7 +12,6 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
-    
 
     /**
     * 计算环境名称
@@ -20,7 +19,6 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     @SerializedName("EnvName")
     @Expose
     private String EnvName;
-    
 
     /**
     * 计算环境描述
@@ -28,7 +26,6 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     @SerializedName("EnvDescription")
     @Expose
     private String EnvDescription;
-    
 
     /**
     * 计算环境类型，仅支持“MANAGED”类型
@@ -36,7 +33,6 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     @SerializedName("EnvType")
     @Expose
     private String EnvType;
-    
 
     /**
     * 计算环境参数
@@ -44,7 +40,6 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     @SerializedName("EnvData")
     @Expose
     private EnvData EnvData;
-    
 
     /**
     * 数据盘挂载选项
@@ -52,7 +47,6 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     @SerializedName("MountDataDisks")
     @Expose
     private MountDataDisk [] MountDataDisks;
-    
 
     /**
     * 输入映射
@@ -60,7 +54,6 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     @SerializedName("InputMappings")
     @Expose
     private InputMapping [] InputMappings;
-    
 
     /**
     * 授权信息
@@ -68,7 +61,6 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     @SerializedName("Authentications")
     @Expose
     private Authentication [] Authentications;
-    
 
     /**
     * 通知信息
@@ -76,7 +68,6 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     @SerializedName("Notifications")
     @Expose
     private Notification [] Notifications;
-    
 
     /**
     * 计算节点期望个数
@@ -84,7 +75,6 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     @SerializedName("DesiredComputeNodeCount")
     @Expose
     private Integer DesiredComputeNodeCount;
-    
 
     /**
      * 获取计算环境 ID

@@ -12,7 +12,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("PropoEncryAlgorithm")
     @Expose
     private String PropoEncryAlgorithm;
-    
 
     /**
     * 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
@@ -20,7 +19,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("PropoAuthenAlgorithm")
     @Expose
     private String PropoAuthenAlgorithm;
-    
 
     /**
     * 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
@@ -28,7 +26,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("ExchangeMode")
     @Expose
     private String ExchangeMode;
-    
 
     /**
     * 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
@@ -36,7 +33,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("LocalIdentity")
     @Expose
     private String LocalIdentity;
-    
 
     /**
     * 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
@@ -44,7 +40,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("RemoteIdentity")
     @Expose
     private String RemoteIdentity;
-    
 
     /**
     * 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
@@ -52,7 +47,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("LocalAddress")
     @Expose
     private String LocalAddress;
-    
 
     /**
     * 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
@@ -60,7 +54,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("RemoteAddress")
     @Expose
     private String RemoteAddress;
-    
 
     /**
     * 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
@@ -68,7 +61,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("LocalFqdnName")
     @Expose
     private String LocalFqdnName;
-    
 
     /**
     * 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
@@ -76,7 +68,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("RemoteFqdnName")
     @Expose
     private String RemoteFqdnName;
-    
 
     /**
     * DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
@@ -84,7 +75,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("DhGroupName")
     @Expose
     private String DhGroupName;
-    
 
     /**
     * IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
@@ -92,7 +82,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("IKESaLifetimeSeconds")
     @Expose
     private Integer IKESaLifetimeSeconds;
-    
 
     /**
     * IKE版本
@@ -100,7 +89,6 @@ public class IKEOptionsSpecification  extends AbstractModel{
     @SerializedName("IKEVersion")
     @Expose
     private String IKEVersion;
-    
 
     /**
      * 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC

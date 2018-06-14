@@ -12,7 +12,6 @@ public class InvokeRequest  extends AbstractModel{
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
-    
 
     /**
     * RequestResponse(同步) 和 Event(异步)，默认为同步。
@@ -20,7 +19,6 @@ public class InvokeRequest  extends AbstractModel{
     @SerializedName("InvocationType")
     @Expose
     private String InvocationType;
-    
 
     /**
     * 触发函数的版本号。
@@ -28,7 +26,6 @@ public class InvokeRequest  extends AbstractModel{
     @SerializedName("Qualifier")
     @Expose
     private String Qualifier;
-    
 
     /**
     * 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M。
@@ -36,7 +33,6 @@ public class InvokeRequest  extends AbstractModel{
     @SerializedName("ClientContext")
     @Expose
     private String ClientContext;
-    
 
     /**
     * 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志。
@@ -44,7 +40,6 @@ public class InvokeRequest  extends AbstractModel{
     @SerializedName("LogType")
     @Expose
     private String LogType;
-    
 
     /**
      * 获取函数名称。

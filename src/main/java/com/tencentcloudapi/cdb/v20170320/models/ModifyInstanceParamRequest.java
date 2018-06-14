@@ -12,7 +12,6 @@ public class ModifyInstanceParamRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
     * 要修改的参数列表。每一个元素是name和currentValue的组合。name是参数名，currentValue是要修改成的值。
@@ -20,7 +19,6 @@ public class ModifyInstanceParamRequest  extends AbstractModel{
     @SerializedName("ParamList")
     @Expose
     private Parameter [] ParamList;
-    
 
     /**
      * 获取实例短Id列表。

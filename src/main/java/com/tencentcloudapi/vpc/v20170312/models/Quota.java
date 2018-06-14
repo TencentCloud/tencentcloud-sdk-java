@@ -12,7 +12,6 @@ public class Quota  extends AbstractModel{
     @SerializedName("QuotaId")
     @Expose
     private String QuotaId;
-    
 
     /**
     * 当前数量
@@ -20,7 +19,6 @@ public class Quota  extends AbstractModel{
     @SerializedName("QuotaCurrent")
     @Expose
     private Integer QuotaCurrent;
-    
 
     /**
     * 配额数量
@@ -28,7 +26,6 @@ public class Quota  extends AbstractModel{
     @SerializedName("QuotaLimit")
     @Expose
     private Integer QuotaLimit;
-    
 
     /**
      * 获取配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。

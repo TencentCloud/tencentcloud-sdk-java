@@ -12,7 +12,6 @@ public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
-    
 
     /**
     * 安全组名称，可任意命名，但不得超过60个字符。
@@ -20,7 +19,6 @@ public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
-    
 
     /**
     * 安全组备注，最多100个字符。
@@ -28,7 +26,6 @@ public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
     @SerializedName("GroupDescription")
     @Expose
     private String GroupDescription;
-    
 
     /**
      * 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。

@@ -12,7 +12,6 @@ public class VerifySitesRequest  extends AbstractModel{
     @SerializedName("Urls")
     @Expose
     private String [] Urls;
-    
 
     /**
      * 获取站点的url列表

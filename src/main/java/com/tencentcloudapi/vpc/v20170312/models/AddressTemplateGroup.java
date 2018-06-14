@@ -12,7 +12,6 @@ public class AddressTemplateGroup  extends AbstractModel{
     @SerializedName("AddressTemplateGroupName")
     @Expose
     private String AddressTemplateGroupName;
-    
 
     /**
     * IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
@@ -20,7 +19,6 @@ public class AddressTemplateGroup  extends AbstractModel{
     @SerializedName("AddressTemplateGroupId")
     @Expose
     private String AddressTemplateGroupId;
-    
 
     /**
     * IP地址模板ID。
@@ -28,7 +26,6 @@ public class AddressTemplateGroup  extends AbstractModel{
     @SerializedName("AddressTemplateIdSet")
     @Expose
     private String [] AddressTemplateIdSet;
-    
 
     /**
     * 创建时间。
@@ -36,7 +33,6 @@ public class AddressTemplateGroup  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
      * 获取IP地址模板集合名称。

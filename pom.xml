@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
   	<groupId>com.tencentcloudapi</groupId>
   	<artifactId>tencentcloud-sdk-java</artifactId>
-  	<version>3.0.6</version>
+  	<version>3.0.7</version>
   	<packaging>jar</packaging>
   	<name>tencentcloud-sdk-java</name>
-    <url>https://cloud.tencent.com/</url>
+  	<url>https://cloud.tencent.com/</url>
 	<description>Tencent Cloud Open API SDK for Java</description>
  	<dependencies>
     	<dependency>
@@ -27,6 +27,17 @@
 	</properties>
  	<build>
         <plugins>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+               <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

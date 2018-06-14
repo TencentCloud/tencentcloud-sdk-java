@@ -12,7 +12,6 @@ public class AddRuleRequest  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 描述
@@ -20,7 +19,6 @@ public class AddRuleRequest  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
     * 查询
@@ -28,7 +26,6 @@ public class AddRuleRequest  extends AbstractModel{
     @SerializedName("Query")
     @Expose
     private RuleQuery Query;
-    
 
     /**
     * 转发
@@ -36,7 +33,6 @@ public class AddRuleRequest  extends AbstractModel{
     @SerializedName("Actions")
     @Expose
     private Object [] Actions;
-    
 
     /**
      * 获取名称

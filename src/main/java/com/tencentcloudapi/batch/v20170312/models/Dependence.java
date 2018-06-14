@@ -12,7 +12,6 @@ public class Dependence  extends AbstractModel{
     @SerializedName("StartTask")
     @Expose
     private String StartTask;
-    
 
     /**
     * 依赖关系的终点任务名称
@@ -20,7 +19,6 @@ public class Dependence  extends AbstractModel{
     @SerializedName("EndTask")
     @Expose
     private String EndTask;
-    
 
     /**
      * 获取依赖关系的起点任务名称

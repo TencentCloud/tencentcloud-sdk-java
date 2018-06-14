@@ -12,7 +12,6 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     @SerializedName("BinlogDiskAvailable")
     @Expose
     private MonitorData BinlogDiskAvailable;
-    
 
     /**
     * CPU利用率
@@ -20,7 +19,6 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     @SerializedName("CpuUsageRate")
     @Expose
     private MonitorData CpuUsageRate;
-    
 
     /**
     * 内存可用空间,单位GB
@@ -28,7 +26,6 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     @SerializedName("MemAvailable")
     @Expose
     private MonitorData MemAvailable;
-    
 
     /**
     * 磁盘可用空间,单位GB
@@ -36,7 +33,6 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     @SerializedName("DataDiskAvailable")
     @Expose
     private MonitorIntData DataDiskAvailable;
-    
 
     /**
      * 获取binlog日志磁盘可用空间,单位GB

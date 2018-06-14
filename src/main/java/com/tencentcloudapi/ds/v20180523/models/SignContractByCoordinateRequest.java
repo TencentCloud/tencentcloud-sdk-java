@@ -12,7 +12,6 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     @SerializedName("Module")
     @Expose
     private String Module;
-    
 
     /**
     * 操作名
@@ -20,7 +19,6 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     @SerializedName("Operation")
     @Expose
     private String Operation;
-    
 
     /**
     * 合同ID
@@ -28,7 +26,6 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     @SerializedName("ContractResId")
     @Expose
     private String ContractResId;
-    
 
     /**
     * 帐户ID
@@ -36,7 +33,6 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     @SerializedName("AccountResId")
     @Expose
     private String AccountResId;
-    
 
     /**
     * 授权时间，格式20160801095509
@@ -44,7 +40,6 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     @SerializedName("AuthorizationTime")
     @Expose
     private String AuthorizationTime;
-    
 
     /**
     * 授权IP地址
@@ -52,7 +47,6 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     @SerializedName("Position")
     @Expose
     private String Position;
-    
 
     /**
     * 签署坐标，坐标不得超过合同文件边界
@@ -60,7 +54,6 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     @SerializedName("SignLocations")
     @Expose
     private SignLocation [] SignLocations;
-    
 
     /**
     * 印章ID
@@ -68,7 +61,6 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     @SerializedName("SealResId")
     @Expose
     private String SealResId;
-    
 
     /**
      * 获取模块名

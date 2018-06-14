@@ -12,7 +12,6 @@ public class DescribeBackupDatabasesRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 开始时间，格式为：2017-07-12 10:29:20。
@@ -20,7 +19,6 @@ public class DescribeBackupDatabasesRequest  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 要查询的数据库名前缀。
@@ -28,7 +26,6 @@ public class DescribeBackupDatabasesRequest  extends AbstractModel{
     @SerializedName("SearchDatabase")
     @Expose
     private String SearchDatabase;
-    
 
     /**
     * 分页偏移量。
@@ -36,7 +33,6 @@ public class DescribeBackupDatabasesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 分页大小，最大值为2000。
@@ -44,7 +40,6 @@ public class DescribeBackupDatabasesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。

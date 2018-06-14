@@ -12,7 +12,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 实例机型。
@@ -20,7 +19,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
-    
 
     /**
     * 实例计费模式。取值范围： <br>*`PREPAID`：表示预付费，即包年包月 <br>* `POSTPAID_BY_HOUR`：表示后付费，即按量计费 * `CDHPAID`：[CDH](/document/product/416)付费，即只对[CDH(/document/product/416)]计费，不对[CDH](/document/product/416)上的实例计费。
@@ -28,7 +26,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
-    
 
     /**
     * 网卡类型，例如：25代表25G网卡
@@ -36,7 +33,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("NetworkCard")
     @Expose
     private Integer NetworkCard;
-    
 
     /**
     * 扩展属性。
@@ -44,7 +40,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("Externals")
     @Expose
     private Externals Externals;
-    
 
     /**
     * 实例的CPU核数，单位：核。
@@ -52,7 +47,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("Cpu")
     @Expose
     private Integer Cpu;
-    
 
     /**
     * 实例内存容量，单位：`GB`。
@@ -60,7 +54,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 实例机型系列。
@@ -68,7 +61,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("InstanceFamily")
     @Expose
     private String InstanceFamily;
-    
 
     /**
     * 机型名称。
@@ -76,7 +68,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("TypeName")
     @Expose
     private String TypeName;
-    
 
     /**
     * 本地磁盘规格列表。
@@ -84,7 +75,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("LocalDiskTypeList")
     @Expose
     private LocalDiskType [] LocalDiskTypeList;
-    
 
     /**
     * 实例是否售卖。
@@ -92,7 +82,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private String Status;
-    
 
     /**
     * 实例的售卖价格。
@@ -100,7 +89,6 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     @SerializedName("Price")
     @Expose
     private ItemPrice Price;
-    
 
     /**
      * 获取可用区。

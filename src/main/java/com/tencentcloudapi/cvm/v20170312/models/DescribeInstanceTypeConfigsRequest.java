@@ -15,7 +15,6 @@ public class DescribeInstanceTypeConfigsRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
      * 获取过滤条件。

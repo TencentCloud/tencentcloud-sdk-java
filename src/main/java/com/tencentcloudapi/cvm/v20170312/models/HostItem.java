@@ -12,7 +12,6 @@ public class HostItem  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * cdh实例id
@@ -20,7 +19,6 @@ public class HostItem  extends AbstractModel{
     @SerializedName("HostId")
     @Expose
     private String HostId;
-    
 
     /**
     * cdh实例类型
@@ -28,7 +26,6 @@ public class HostItem  extends AbstractModel{
     @SerializedName("HostType")
     @Expose
     private String HostType;
-    
 
     /**
     * cdh实例名称
@@ -36,7 +33,6 @@ public class HostItem  extends AbstractModel{
     @SerializedName("HostName")
     @Expose
     private String HostName;
-    
 
     /**
     * cdh实例付费模式
@@ -44,7 +40,6 @@ public class HostItem  extends AbstractModel{
     @SerializedName("HostChargeType")
     @Expose
     private String HostChargeType;
-    
 
     /**
     * cdh实例自动续费标记
@@ -52,7 +47,6 @@ public class HostItem  extends AbstractModel{
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
-    
 
     /**
     * cdh实例创建时间
@@ -60,7 +54,6 @@ public class HostItem  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
     * cdh实例过期时间
@@ -68,15 +61,13 @@ public class HostItem  extends AbstractModel{
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
-    
 
     /**
     * cdh实例上已创建云子机的实例id列表
     */
     @SerializedName("InstanceIds")
     @Expose
-    private String InstanceIds;
-    
+    private String [] InstanceIds;
 
     /**
     * cdh实例状态
@@ -84,7 +75,6 @@ public class HostItem  extends AbstractModel{
     @SerializedName("HostState")
     @Expose
     private String HostState;
-    
 
     /**
     * cdh实例ip
@@ -92,7 +82,6 @@ public class HostItem  extends AbstractModel{
     @SerializedName("HostIp")
     @Expose
     private String HostIp;
-    
 
     /**
     * cdh实例资源信息
@@ -100,7 +89,6 @@ public class HostItem  extends AbstractModel{
     @SerializedName("HostResource")
     @Expose
     private HostResource HostResource;
-    
 
     /**
      * 获取cdh实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
@@ -234,7 +222,7 @@ public class HostItem  extends AbstractModel{
      * 获取cdh实例上已创建云子机的实例id列表
      * @return InstanceIds cdh实例上已创建云子机的实例id列表
      */
-    public String getInstanceIds() {
+    public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
@@ -242,7 +230,7 @@ public class HostItem  extends AbstractModel{
      * 设置cdh实例上已创建云子机的实例id列表
      * @param InstanceIds cdh实例上已创建云子机的实例id列表
      */
-    public void setInstanceIds(String InstanceIds) {
+    public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
@@ -306,7 +294,7 @@ public class HostItem  extends AbstractModel{
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
-        this.setParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "HostState", this.HostState);
         this.setParamSimple(map, prefix + "HostIp", this.HostIp);
         this.setParamObj(map, prefix + "HostResource.", this.HostResource);

@@ -12,7 +12,6 @@ public class ServiceInfo  extends AbstractModel{
     @SerializedName("ServiceEdition")
     @Expose
     private String ServiceEdition;
-    
 
     /**
     * 任务处理完成后的反向通知回调地址,通知为POST请求，post信息{ItemId:"xxxduuyt-ugusg"}
@@ -20,7 +19,6 @@ public class ServiceInfo  extends AbstractModel{
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
-    
 
     /**
     * 提交来源 YYB-应用宝 RDM-rdm MC-控制台 MAC_TOOL-mac工具 WIN_TOOL-window工具
@@ -28,7 +26,6 @@ public class ServiceInfo  extends AbstractModel{
     @SerializedName("SubmitSource")
     @Expose
     private String SubmitSource;
-    
 
     /**
      * 获取服务版本，基础版basic,专业版Professional

@@ -12,7 +12,6 @@ public class GetDeviceRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * 设备名称
@@ -20,7 +19,6 @@ public class GetDeviceRequest  extends AbstractModel{
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
-    
 
     /**
      * 获取产品Id

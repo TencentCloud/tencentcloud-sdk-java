@@ -12,7 +12,6 @@ public class AccountInfo  extends AbstractModel{
     @SerializedName("Notes")
     @Expose
     private String Notes;
-    
 
     /**
     * 账号的域名
@@ -20,7 +19,6 @@ public class AccountInfo  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
     * 账号的名称
@@ -28,7 +26,6 @@ public class AccountInfo  extends AbstractModel{
     @SerializedName("User")
     @Expose
     private String User;
-    
 
     /**
     * 账号信息修改时间
@@ -36,7 +33,6 @@ public class AccountInfo  extends AbstractModel{
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
-    
 
     /**
     * 修改密码的时间
@@ -44,7 +40,6 @@ public class AccountInfo  extends AbstractModel{
     @SerializedName("ModifyPasswordTime")
     @Expose
     private String ModifyPasswordTime;
-    
 
     /**
     * 账号的创建时间
@@ -52,7 +47,6 @@ public class AccountInfo  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
      * 获取账号备注信息

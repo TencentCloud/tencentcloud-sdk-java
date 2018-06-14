@@ -12,7 +12,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
-    
 
     /**
     * 节点个数大小，可以通过 DescribeDBInstanceSpecs
@@ -21,7 +20,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("NodeCount")
     @Expose
     private Integer NodeCount;
-    
 
     /**
     * 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -30,7 +28,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -39,7 +36,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("Storage")
     @Expose
     private Integer Storage;
-    
 
     /**
     * 欲购买的时长，单位：月。
@@ -47,7 +43,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Integer Period;
-    
 
     /**
     * 欲购买的数量，默认查询购买1个实例的价格。
@@ -55,7 +50,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("Count")
     @Expose
     private Integer Count;
-    
 
     /**
     * 是否自动使用代金券进行支付，默认不使用。
@@ -63,7 +57,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("AutoVoucher")
     @Expose
     private Boolean AutoVoucher;
-    
 
     /**
     * 代金券ID列表，目前仅支持指定一张代金券。
@@ -71,7 +64,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
-    
 
     /**
     * 虚拟私有网络 ID，不传或传 0 表示创建为基础网络
@@ -79,7 +71,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 虚拟私有网络子网 ID，VpcId 不为0时必填
@@ -87,7 +78,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
@@ -95,7 +85,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
     * 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
@@ -103,7 +92,6 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     @SerializedName("DbVersionId")
     @Expose
     private String DbVersionId;
-    
 
     /**
      * 获取实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。

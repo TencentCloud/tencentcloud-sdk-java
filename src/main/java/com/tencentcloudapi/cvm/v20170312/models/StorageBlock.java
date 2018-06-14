@@ -12,7 +12,6 @@ public class StorageBlock  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
-    
 
     /**
     * HDD本地存储的最小容量
@@ -20,7 +19,6 @@ public class StorageBlock  extends AbstractModel{
     @SerializedName("MinSize")
     @Expose
     private Integer MinSize;
-    
 
     /**
     * HDD本地存储的最大容量
@@ -28,7 +26,6 @@ public class StorageBlock  extends AbstractModel{
     @SerializedName("MaxSize")
     @Expose
     private Integer MaxSize;
-    
 
     /**
      * 获取HDD本地存储类型，值为：LOCAL_PRO.

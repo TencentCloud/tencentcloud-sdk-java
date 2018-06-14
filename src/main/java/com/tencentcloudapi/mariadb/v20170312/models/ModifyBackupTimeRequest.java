@@ -12,7 +12,6 @@ public class ModifyBackupTimeRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
@@ -20,7 +19,6 @@ public class ModifyBackupTimeRequest  extends AbstractModel{
     @SerializedName("StartBackupTime")
     @Expose
     private String StartBackupTime;
-    
 
     /**
     * 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:59
@@ -28,7 +26,6 @@ public class ModifyBackupTimeRequest  extends AbstractModel{
     @SerializedName("EndBackupTime")
     @Expose
     private String EndBackupTime;
-    
 
     /**
      * 获取实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

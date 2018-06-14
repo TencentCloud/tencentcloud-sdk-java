@@ -12,7 +12,6 @@ public class DescribeZonesResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 可用区列表信息
@@ -20,7 +19,6 @@ public class DescribeZonesResponse  extends AbstractModel{
     @SerializedName("ZoneSet")
     @Expose
     private ZoneInfo [] ZoneSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeZonesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取可用区数量

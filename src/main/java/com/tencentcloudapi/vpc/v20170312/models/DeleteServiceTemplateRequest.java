@@ -12,7 +12,6 @@ public class DeleteServiceTemplateRequest  extends AbstractModel{
     @SerializedName("ServiceTemplateId")
     @Expose
     private String ServiceTemplateId;
-    
 
     /**
      * 获取协议端口模板实例ID，例如：ppm-e6dy460g。

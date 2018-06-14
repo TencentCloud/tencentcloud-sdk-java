@@ -12,7 +12,6 @@ public class ZoneInfo  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 可用区描述，例如，广州三区
@@ -20,7 +19,6 @@ public class ZoneInfo  extends AbstractModel{
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
-    
 
     /**
     * 可用区ID
@@ -28,7 +26,6 @@ public class ZoneInfo  extends AbstractModel{
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
-    
 
     /**
     * 可用区状态
@@ -36,7 +33,6 @@ public class ZoneInfo  extends AbstractModel{
     @SerializedName("ZoneState")
     @Expose
     private String ZoneState;
-    
 
     /**
      * 获取可用区名称，例如，ap-guangzhou-3

@@ -12,7 +12,6 @@ public class RebateInfoElem  extends AbstractModel{
     @SerializedName("Uin")
     @Expose
     private String Uin;
-    
 
     /**
     * 返佣月份，如2018-02
@@ -20,7 +19,6 @@ public class RebateInfoElem  extends AbstractModel{
     @SerializedName("RebateMonth")
     @Expose
     private String RebateMonth;
-    
 
     /**
     * 返佣金额，单位分
@@ -28,7 +26,6 @@ public class RebateInfoElem  extends AbstractModel{
     @SerializedName("Amt")
     @Expose
     private Integer Amt;
-    
 
     /**
     * 月度业绩，单位分
@@ -36,7 +33,6 @@ public class RebateInfoElem  extends AbstractModel{
     @SerializedName("MonthSales")
     @Expose
     private Integer MonthSales;
-    
 
     /**
     * 季度业绩，单位分
@@ -44,7 +40,6 @@ public class RebateInfoElem  extends AbstractModel{
     @SerializedName("QuarterSales")
     @Expose
     private Integer QuarterSales;
-    
 
     /**
     * NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
@@ -52,7 +47,6 @@ public class RebateInfoElem  extends AbstractModel{
     @SerializedName("ExceptionFlag")
     @Expose
     private String ExceptionFlag;
-    
 
     /**
      * 获取代理商账号ID

@@ -12,7 +12,6 @@ public class AddProductRequest  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 产品描述
@@ -20,7 +19,6 @@ public class AddProductRequest  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
     * 鉴权模式（1：动态令牌，推荐使用动态令牌）
@@ -28,7 +26,6 @@ public class AddProductRequest  extends AbstractModel{
     @SerializedName("AuthType")
     @Expose
     private Integer AuthType;
-    
 
     /**
     * 数据模版（json数组）
@@ -36,7 +33,6 @@ public class AddProductRequest  extends AbstractModel{
     @SerializedName("DataTemplate")
     @Expose
     private String [] DataTemplate;
-    
 
     /**
     * 数据协议（native表示自定义，template表示数据模板，默认值为template）
@@ -44,7 +40,6 @@ public class AddProductRequest  extends AbstractModel{
     @SerializedName("DataProtocol")
     @Expose
     private String DataProtocol;
-    
 
     /**
      * 获取产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符

@@ -12,7 +12,6 @@ public class AllocateAddressesRequest  extends AbstractModel{
     @SerializedName("AddressCount")
     @Expose
     private Integer AddressCount;
-    
 
     /**
      * 获取申请 EIP 数量，默认值为1。

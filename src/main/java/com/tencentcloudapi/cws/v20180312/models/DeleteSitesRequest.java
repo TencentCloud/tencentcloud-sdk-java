@@ -12,7 +12,6 @@ public class DeleteSitesRequest  extends AbstractModel{
     @SerializedName("SiteIds")
     @Expose
     private Integer [] SiteIds;
-    
 
     /**
      * 获取站点ID列表

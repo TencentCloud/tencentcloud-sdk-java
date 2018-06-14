@@ -12,7 +12,6 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
-    
 
     /**
     * 弹性网卡名称，最大长度不能超过60个字节。
@@ -20,7 +19,6 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     @SerializedName("NetworkInterfaceName")
     @Expose
     private String NetworkInterfaceName;
-    
 
     /**
     * 弹性网卡描述，可任意命名，但不得超过60个字符。
@@ -28,7 +26,6 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     @SerializedName("NetworkInterfaceDescription")
     @Expose
     private String NetworkInterfaceDescription;
-    
 
     /**
     * 指定绑定的安全组，例如:['sg-1dd51d']。
@@ -36,7 +33,6 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
-    
 
     /**
      * 获取弹性网卡实例ID，例如：eni-pxir56ns。

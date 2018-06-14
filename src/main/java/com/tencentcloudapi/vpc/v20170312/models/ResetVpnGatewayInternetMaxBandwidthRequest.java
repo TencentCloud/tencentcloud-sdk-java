@@ -12,7 +12,6 @@ public class ResetVpnGatewayInternetMaxBandwidthRequest  extends AbstractModel{
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
-    
 
     /**
     * 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
@@ -20,7 +19,6 @@ public class ResetVpnGatewayInternetMaxBandwidthRequest  extends AbstractModel{
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Integer InternetMaxBandwidthOut;
-    
 
     /**
      * 获取VPN网关实例ID。

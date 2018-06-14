@@ -12,7 +12,6 @@ public class Product  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * 产品Key
@@ -20,7 +19,6 @@ public class Product  extends AbstractModel{
     @SerializedName("ProductKey")
     @Expose
     private String ProductKey;
-    
 
     /**
     * 产品直连密钥
@@ -28,7 +26,6 @@ public class Product  extends AbstractModel{
     @SerializedName("ProductSecret")
     @Expose
     private String ProductSecret;
-    
 
     /**
     * AppId
@@ -36,7 +33,6 @@ public class Product  extends AbstractModel{
     @SerializedName("AppId")
     @Expose
     private Integer AppId;
-    
 
     /**
     * 产品名称
@@ -44,7 +40,6 @@ public class Product  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 产品描述
@@ -52,7 +47,6 @@ public class Product  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
     * 连接域名
@@ -60,7 +54,6 @@ public class Product  extends AbstractModel{
     @SerializedName("Domain")
     @Expose
     private String Domain;
-    
 
     /**
     * 产品规格
@@ -68,7 +61,6 @@ public class Product  extends AbstractModel{
     @SerializedName("Standard")
     @Expose
     private Integer Standard;
-    
 
     /**
     * 鉴权类型（0：直连，1：Token）
@@ -76,7 +68,6 @@ public class Product  extends AbstractModel{
     @SerializedName("AuthType")
     @Expose
     private Integer AuthType;
-    
 
     /**
     * 删除（0未删除）
@@ -84,7 +75,6 @@ public class Product  extends AbstractModel{
     @SerializedName("Deleted")
     @Expose
     private Integer Deleted;
-    
 
     /**
     * 备注
@@ -92,7 +82,6 @@ public class Product  extends AbstractModel{
     @SerializedName("Message")
     @Expose
     private String Message;
-    
 
     /**
     * 创建时间
@@ -100,7 +89,6 @@ public class Product  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 更新时间
@@ -108,7 +96,6 @@ public class Product  extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
-    
 
     /**
     * 数据模版
@@ -116,7 +103,6 @@ public class Product  extends AbstractModel{
     @SerializedName("DataTemplate")
     @Expose
     private Object DataTemplate;
-    
 
     /**
      * 获取产品Id

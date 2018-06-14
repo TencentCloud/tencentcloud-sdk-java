@@ -12,7 +12,6 @@ public class AuditApplyClientRequest  extends AbstractModel{
     @SerializedName("ClientUin")
     @Expose
     private String ClientUin;
-    
 
     /**
     * 审核结果，可能的取值：accept/reject
@@ -20,7 +19,6 @@ public class AuditApplyClientRequest  extends AbstractModel{
     @SerializedName("AuditResult")
     @Expose
     private String AuditResult;
-    
 
     /**
     * 申请理由，B类客户审核通过时必须填写申请理由
@@ -28,7 +26,6 @@ public class AuditApplyClientRequest  extends AbstractModel{
     @SerializedName("Note")
     @Expose
     private String Note;
-    
 
     /**
      * 获取待审核客户账号ID

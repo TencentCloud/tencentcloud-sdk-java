@@ -12,7 +12,6 @@ public class InstanceFamilyConfig  extends AbstractModel{
     @SerializedName("InstanceFamilyName")
     @Expose
     private String InstanceFamilyName;
-    
 
     /**
     * 机型族名称的英文简称。
@@ -20,7 +19,6 @@ public class InstanceFamilyConfig  extends AbstractModel{
     @SerializedName("InstanceFamily")
     @Expose
     private String InstanceFamily;
-    
 
     /**
      * 获取机型族名称的中文全称。

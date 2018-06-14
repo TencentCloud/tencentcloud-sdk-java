@@ -12,7 +12,6 @@ public class LocalDiskType  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
-    
 
     /**
     * 本地磁盘属性。
@@ -20,7 +19,6 @@ public class LocalDiskType  extends AbstractModel{
     @SerializedName("PartitionType")
     @Expose
     private String PartitionType;
-    
 
     /**
     * 本地磁盘最小值。
@@ -28,7 +26,6 @@ public class LocalDiskType  extends AbstractModel{
     @SerializedName("MinSize")
     @Expose
     private Integer MinSize;
-    
 
     /**
     * 本地磁盘最大值。
@@ -36,7 +33,6 @@ public class LocalDiskType  extends AbstractModel{
     @SerializedName("MaxSize")
     @Expose
     private Integer MaxSize;
-    
 
     /**
      * 获取本地磁盘类型。

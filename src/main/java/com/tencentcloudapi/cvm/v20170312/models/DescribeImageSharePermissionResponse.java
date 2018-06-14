@@ -12,7 +12,6 @@ public class DescribeImageSharePermissionResponse  extends AbstractModel{
     @SerializedName("SharePermissionSet")
     @Expose
     private SharePermission [] SharePermissionSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class DescribeImageSharePermissionResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取镜像共享信息

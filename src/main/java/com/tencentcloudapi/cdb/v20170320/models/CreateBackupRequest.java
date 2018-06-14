@@ -12,7 +12,6 @@ public class CreateBackupRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
@@ -20,7 +19,6 @@ public class CreateBackupRequest  extends AbstractModel{
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。

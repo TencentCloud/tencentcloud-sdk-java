@@ -12,7 +12,6 @@ public class SpecConfigInfo  extends AbstractModel{
     @SerializedName("NodeCount")
     @Expose
     private Integer NodeCount;
-    
 
     /**
     * 内存大小，单位 GB
@@ -20,7 +19,6 @@ public class SpecConfigInfo  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
-    
 
     /**
     * 数据盘规格最小值，单位 GB
@@ -28,7 +26,6 @@ public class SpecConfigInfo  extends AbstractModel{
     @SerializedName("MinStorage")
     @Expose
     private Integer MinStorage;
-    
 
     /**
     * 数据盘规格最大值，单位 GB
@@ -36,7 +33,6 @@ public class SpecConfigInfo  extends AbstractModel{
     @SerializedName("MaxStorage")
     @Expose
     private Integer MaxStorage;
-    
 
     /**
     * 推荐的使用场景
@@ -44,7 +40,6 @@ public class SpecConfigInfo  extends AbstractModel{
     @SerializedName("SuitInfo")
     @Expose
     private String SuitInfo;
-    
 
     /**
     * 产品类型 Id
@@ -52,7 +47,6 @@ public class SpecConfigInfo  extends AbstractModel{
     @SerializedName("Pid")
     @Expose
     private Integer Pid;
-    
 
     /**
     * 最大 Qps 值
@@ -60,7 +54,6 @@ public class SpecConfigInfo  extends AbstractModel{
     @SerializedName("Qps")
     @Expose
     private Integer Qps;
-    
 
     /**
      * 获取节点个数，2 表示一主一从，3 表示一主二从

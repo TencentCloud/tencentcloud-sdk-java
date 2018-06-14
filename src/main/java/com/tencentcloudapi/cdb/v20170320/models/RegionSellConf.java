@@ -12,7 +12,6 @@ public class RegionSellConf  extends AbstractModel{
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
-    
 
     /**
     * 所属大区
@@ -20,7 +19,6 @@ public class RegionSellConf  extends AbstractModel{
     @SerializedName("Area")
     @Expose
     private String Area;
-    
 
     /**
     * 是否为默认地域
@@ -28,7 +26,6 @@ public class RegionSellConf  extends AbstractModel{
     @SerializedName("IsDefaultRegion")
     @Expose
     private Integer IsDefaultRegion;
-    
 
     /**
     * 地域名称
@@ -36,7 +33,6 @@ public class RegionSellConf  extends AbstractModel{
     @SerializedName("Region")
     @Expose
     private String Region;
-    
 
     /**
     * 可用区售卖配置
@@ -44,7 +40,6 @@ public class RegionSellConf  extends AbstractModel{
     @SerializedName("ZonesConf")
     @Expose
     private ZoneSellConf [] ZonesConf;
-    
 
     /**
      * 获取地域中文名称

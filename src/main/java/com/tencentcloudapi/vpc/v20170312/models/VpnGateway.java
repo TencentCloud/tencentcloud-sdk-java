@@ -12,7 +12,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
-    
 
     /**
     * VPC实例ID。
@@ -20,7 +19,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 网关实例名称。
@@ -28,7 +26,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("VpnGatewayName")
     @Expose
     private String VpnGatewayName;
-    
 
     /**
     * 网关实例类型：'IPSEC', 'SSL'。
@@ -36,7 +33,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
-    
 
     /**
     * 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
@@ -44,7 +40,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("State")
     @Expose
     private String State;
-    
 
     /**
     * 网关公网IP。
@@ -52,7 +47,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("PublicIpAddress")
     @Expose
     private String PublicIpAddress;
-    
 
     /**
     * 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费
@@ -60,7 +54,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
-    
 
     /**
     * 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
@@ -68,7 +61,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
-    
 
     /**
     * 网关出带宽。
@@ -76,7 +68,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Integer InternetMaxBandwidthOut;
-    
 
     /**
     * 创建时间。
@@ -84,7 +75,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
     * 预付费网关过期时间。
@@ -92,7 +82,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
-    
 
     /**
     * 公网IP是否被封堵。
@@ -100,7 +89,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("IsAddressBlocked")
     @Expose
     private Boolean IsAddressBlocked;
-    
 
     /**
     * 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
@@ -108,7 +96,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("NewPurchasePlan")
     @Expose
     private String NewPurchasePlan;
-    
 
     /**
     * 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
@@ -116,7 +103,6 @@ public class VpnGateway  extends AbstractModel{
     @SerializedName("RestrictState")
     @Expose
     private String RestrictState;
-    
 
     /**
      * 获取网关实例ID。

@@ -12,7 +12,6 @@ public class DeleteAccountRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 用户名
@@ -20,7 +19,6 @@ public class DeleteAccountRequest  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 用户允许的访问 host
@@ -28,7 +26,6 @@ public class DeleteAccountRequest  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
      * 获取实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

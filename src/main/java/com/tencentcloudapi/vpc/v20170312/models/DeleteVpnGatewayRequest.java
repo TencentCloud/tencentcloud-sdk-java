@@ -12,7 +12,6 @@ public class DeleteVpnGatewayRequest  extends AbstractModel{
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
-    
 
     /**
      * 获取VPN网关实例ID。

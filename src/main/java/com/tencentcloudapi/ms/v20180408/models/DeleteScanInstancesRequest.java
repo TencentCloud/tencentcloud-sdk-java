@@ -12,7 +12,6 @@ public class DeleteScanInstancesRequest  extends AbstractModel{
     @SerializedName("AppSids")
     @Expose
     private String [] AppSids;
-    
 
     /**
      * 获取删除一个或多个扫描的app，最大支持20个

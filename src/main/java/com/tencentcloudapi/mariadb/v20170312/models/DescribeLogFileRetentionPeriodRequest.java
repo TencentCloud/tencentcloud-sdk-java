@@ -12,7 +12,6 @@ public class DescribeLogFileRetentionPeriodRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc。

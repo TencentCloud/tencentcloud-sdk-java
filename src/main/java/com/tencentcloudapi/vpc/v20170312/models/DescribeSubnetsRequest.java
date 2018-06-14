@@ -12,7 +12,6 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
-    
 
     /**
     * 过滤条件，参数不支持同时指定SubnetIds和Filters。
@@ -26,7 +25,6 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量
@@ -34,7 +32,6 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private String Offset;
-    
 
     /**
     * 返回数量
@@ -42,7 +39,6 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private String Limit;
-    
 
     /**
      * 获取子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。

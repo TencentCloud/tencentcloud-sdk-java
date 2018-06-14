@@ -12,7 +12,6 @@ public class Container  extends AbstractModel{
     @SerializedName("Command")
     @Expose
     private String Command;
-    
 
     /**
     * 容器启动参数
@@ -20,7 +19,6 @@ public class Container  extends AbstractModel{
     @SerializedName("Args")
     @Expose
     private String [] Args;
-    
 
     /**
     * 容器环境变量
@@ -28,7 +26,6 @@ public class Container  extends AbstractModel{
     @SerializedName("EnvironmentVars")
     @Expose
     private EnvironmentVar [] EnvironmentVars;
-    
 
     /**
     * 镜像
@@ -36,7 +33,6 @@ public class Container  extends AbstractModel{
     @SerializedName("Image")
     @Expose
     private String Image;
-    
 
     /**
     * 容器名，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 63个字符
@@ -44,7 +40,6 @@ public class Container  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * CPU，单位：核
@@ -52,7 +47,6 @@ public class Container  extends AbstractModel{
     @SerializedName("Cpu")
     @Expose
     private Float Cpu;
-    
 
     /**
     * 内存，单位：Gi
@@ -60,7 +54,6 @@ public class Container  extends AbstractModel{
     @SerializedName("Memory")
     @Expose
     private Float Memory;
-    
 
     /**
     * 重启次数
@@ -68,7 +61,6 @@ public class Container  extends AbstractModel{
     @SerializedName("RestartCount")
     @Expose
     private Integer RestartCount;
-    
 
     /**
     * 当前状态
@@ -76,7 +68,6 @@ public class Container  extends AbstractModel{
     @SerializedName("CurrentState")
     @Expose
     private ContainerState CurrentState;
-    
 
     /**
     * 上一次状态
@@ -84,7 +75,6 @@ public class Container  extends AbstractModel{
     @SerializedName("PreviousState")
     @Expose
     private ContainerState PreviousState;
-    
 
     /**
     * 容器工作目录
@@ -92,7 +82,6 @@ public class Container  extends AbstractModel{
     @SerializedName("WorkingDir")
     @Expose
     private String WorkingDir;
-    
 
     /**
     * 容器ID
@@ -100,7 +89,6 @@ public class Container  extends AbstractModel{
     @SerializedName("ContainerId")
     @Expose
     private String ContainerId;
-    
 
     /**
      * 获取容器启动命令

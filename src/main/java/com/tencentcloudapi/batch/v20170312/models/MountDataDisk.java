@@ -12,7 +12,6 @@ public class MountDataDisk  extends AbstractModel{
     @SerializedName("FileSystemType")
     @Expose
     private String FileSystemType;
-    
 
     /**
     * 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
@@ -20,7 +19,6 @@ public class MountDataDisk  extends AbstractModel{
     @SerializedName("LocalPath")
     @Expose
     private String LocalPath;
-    
 
     /**
      * 获取文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"

@@ -12,7 +12,6 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     @SerializedName("TaskTemplateId")
     @Expose
     private String TaskTemplateId;
-    
 
     /**
     * 任务模板名称
@@ -20,7 +19,6 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     @SerializedName("TaskTemplateName")
     @Expose
     private String TaskTemplateName;
-    
 
     /**
     * 任务模板描述
@@ -28,7 +26,6 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     @SerializedName("TaskTemplateDescription")
     @Expose
     private String TaskTemplateDescription;
-    
 
     /**
     * 任务模板信息
@@ -36,7 +33,6 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     @SerializedName("TaskTemplateInfo")
     @Expose
     private Task TaskTemplateInfo;
-    
 
     /**
      * 获取任务模板ID

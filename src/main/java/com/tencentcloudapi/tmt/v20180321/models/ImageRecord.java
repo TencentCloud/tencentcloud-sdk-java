@@ -12,7 +12,6 @@ public class ImageRecord  extends AbstractModel{
     @SerializedName("Value")
     @Expose
     private ItemValue [] Value;
-    
 
     /**
      * 获取图片翻译结果

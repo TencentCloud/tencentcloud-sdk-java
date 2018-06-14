@@ -12,7 +12,6 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     @SerializedName("VpnConnectionId")
     @Expose
     private String VpnConnectionId;
-    
 
     /**
     * VPN通道名称，可任意命名，但不得超过60个字符。
@@ -20,7 +19,6 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     @SerializedName("VpnConnectionName")
     @Expose
     private String VpnConnectionName;
-    
 
     /**
     * 预共享密钥。
@@ -28,7 +26,6 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     @SerializedName("PreShareKey")
     @Expose
     private String PreShareKey;
-    
 
     /**
     * SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
@@ -36,7 +33,6 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     @SerializedName("SecurityPolicyDatabases")
     @Expose
     private SecurityPolicyDatabase [] SecurityPolicyDatabases;
-    
 
     /**
     * IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自保护机制，用户配置网络安全协议。
@@ -44,7 +40,6 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     @SerializedName("IKEOptionsSpecification")
     @Expose
     private IKEOptionsSpecification IKEOptionsSpecification;
-    
 
     /**
     * IPSec配置，腾讯云提供IPSec安全会话设置。
@@ -52,7 +47,6 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     @SerializedName("IPSECOptionsSpecification")
     @Expose
     private IPSECOptionsSpecification IPSECOptionsSpecification;
-    
 
     /**
      * 获取VPN通道实例ID。形如：vpnx-f49l6u0z。

@@ -12,7 +12,6 @@ public class TerminateComputeNodeRequest  extends AbstractModel{
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
-    
 
     /**
     * 计算节点ID
@@ -20,7 +19,6 @@ public class TerminateComputeNodeRequest  extends AbstractModel{
     @SerializedName("ComputeNodeId")
     @Expose
     private String ComputeNodeId;
-    
 
     /**
      * 获取计算环境ID

@@ -12,7 +12,6 @@ public class GetProductRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
      * 获取产品Id

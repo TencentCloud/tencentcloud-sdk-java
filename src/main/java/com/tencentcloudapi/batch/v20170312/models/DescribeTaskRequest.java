@@ -12,7 +12,6 @@ public class DescribeTaskRequest  extends AbstractModel{
     @SerializedName("JobId")
     @Expose
     private String JobId;
-    
 
     /**
     * 任务名称
@@ -20,7 +19,6 @@ public class DescribeTaskRequest  extends AbstractModel{
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
-    
 
     /**
      * 获取作业ID

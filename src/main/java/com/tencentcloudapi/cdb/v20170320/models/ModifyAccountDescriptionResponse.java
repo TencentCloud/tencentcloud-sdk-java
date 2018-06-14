@@ -12,7 +12,6 @@ public class ModifyAccountDescriptionResponse  extends AbstractModel{
     @SerializedName("AsyncRequestId")
     @Expose
     private String AsyncRequestId;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -20,7 +19,6 @@ public class ModifyAccountDescriptionResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取异步任务的请求ID，可使用此ID查询异步任务的执行结果。

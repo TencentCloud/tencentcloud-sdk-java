@@ -12,7 +12,6 @@ public class CreateAccountRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
@@ -20,7 +19,6 @@ public class CreateAccountRequest  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
@@ -28,7 +26,6 @@ public class CreateAccountRequest  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
     * 账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
@@ -36,7 +33,6 @@ public class CreateAccountRequest  extends AbstractModel{
     @SerializedName("Password")
     @Expose
     private String Password;
-    
 
     /**
     * 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
@@ -44,7 +40,6 @@ public class CreateAccountRequest  extends AbstractModel{
     @SerializedName("ReadOnly")
     @Expose
     private Integer ReadOnly;
-    
 
     /**
     * 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
@@ -52,7 +47,6 @@ public class CreateAccountRequest  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
      * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。

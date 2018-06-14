@@ -12,7 +12,6 @@ public class SharePermission  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 镜像分享的账户ID
@@ -20,7 +19,6 @@ public class SharePermission  extends AbstractModel{
     @SerializedName("Account")
     @Expose
     private String Account;
-    
 
     /**
      * 获取镜像分享时间

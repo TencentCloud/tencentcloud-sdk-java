@@ -12,7 +12,6 @@ public class DescribeHostsResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * cdh实例详细信息列表
@@ -20,7 +19,6 @@ public class DescribeHostsResponse  extends AbstractModel{
     @SerializedName("HostSet")
     @Expose
     private HostItem [] HostSet;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeHostsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取符合查询条件的cdh实例总数

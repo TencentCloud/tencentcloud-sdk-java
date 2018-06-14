@@ -12,7 +12,6 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 权限列表。
@@ -20,7 +19,6 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     @SerializedName("Privileges")
     @Expose
     private String [] Privileges;
-    
 
     /**
     * 数据库账号用户名
@@ -28,7 +26,6 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     @SerializedName("UserName")
     @Expose
     private String UserName;
-    
 
     /**
     * 数据库账号Host
@@ -36,7 +33,6 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -44,7 +40,6 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取实例Id

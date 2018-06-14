@@ -12,7 +12,6 @@ public class InternetChargeTypeConfig  extends AbstractModel{
     @SerializedName("InternetChargeType")
     @Expose
     private String InternetChargeType;
-    
 
     /**
     * 网络计费模式描述信息。
@@ -20,7 +19,6 @@ public class InternetChargeTypeConfig  extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
-    
 
     /**
      * 获取网络计费模式。

@@ -12,7 +12,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
-    
 
     /**
     * 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
@@ -20,7 +19,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("DiskUsage")
     @Expose
     private String DiskUsage;
-    
 
     /**
     * 付费模式。取值范围：<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：后付费，即按量计费。
@@ -28,7 +26,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("DiskChargeType")
     @Expose
     private String DiskChargeType;
-    
 
     /**
     * 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
@@ -36,7 +33,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("Portable")
     @Expose
     private Boolean Portable;
-    
 
     /**
     * 云硬盘所在的位置。
@@ -44,7 +40,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * 云盘是否具备创建快照的能力。取值范围：<br><li>false表示不具备<br><li>true表示具备。
@@ -52,7 +47,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("SnapshotAbility")
     @Expose
     private Boolean SnapshotAbility;
-    
 
     /**
     * 云硬盘名称。
@@ -60,7 +54,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("DiskName")
     @Expose
     private String DiskName;
-    
 
     /**
     * 云硬盘大小。
@@ -68,7 +61,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("DiskSize")
     @Expose
     private Integer DiskSize;
-    
 
     /**
     * 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
@@ -76,7 +68,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("DiskState")
     @Expose
     private String DiskState;
-    
 
     /**
     * 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
@@ -84,7 +75,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
-    
 
     /**
     * 云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
@@ -92,7 +82,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("Attached")
     @Expose
     private Boolean Attached;
-    
 
     /**
     * 云硬盘挂载的云主机ID。
@@ -100,7 +89,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 云硬盘的创建时间。
@@ -108,7 +96,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 云硬盘的到期时间。
@@ -116,7 +103,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("DeadlineTime")
     @Expose
     private String DeadlineTime;
-    
 
     /**
     * 云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态<br><li>true:表示处于快照回滚状态。
@@ -124,7 +110,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("Rollbacking")
     @Expose
     private Boolean Rollbacking;
-    
 
     /**
     * 云盘快照回滚的进度。
@@ -132,7 +117,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("RollbackPercent")
     @Expose
     private Integer RollbackPercent;
-    
 
     /**
     * 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
@@ -140,7 +124,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("Encrypt")
     @Expose
     private Boolean Encrypt;
-    
 
     /**
     * 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
@@ -148,7 +131,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("AutoRenewFlagError")
     @Expose
     private Boolean AutoRenewFlagError;
-    
 
     /**
     * 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
@@ -156,7 +138,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
-    
 
     /**
     * 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
@@ -164,7 +145,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("DeadlineError")
     @Expose
     private Boolean DeadlineError;
-    
 
     /**
     * 判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
@@ -172,7 +152,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("IsReturnable")
     @Expose
     private Boolean IsReturnable;
-    
 
     /**
     * 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
@@ -180,7 +159,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("ReturnFailCode")
     @Expose
     private Integer ReturnFailCode;
-    
 
     /**
     * 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
@@ -188,7 +166,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("AutoSnapshotPolicyIds")
     @Expose
     private String [] AutoSnapshotPolicyIds;
-    
 
     /**
     * 与云盘绑定的标签，云盘未绑定标签则取值为空。
@@ -196,7 +173,6 @@ public class Disk  extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
-    
 
     /**
      * 获取云硬盘ID。

@@ -12,7 +12,6 @@ public class SendVcodeRequest  extends AbstractModel{
     @SerializedName("Module")
     @Expose
     private String Module;
-    
 
     /**
     * 操作名
@@ -20,7 +19,6 @@ public class SendVcodeRequest  extends AbstractModel{
     @SerializedName("Operation")
     @Expose
     private String Operation;
-    
 
     /**
     * 合同ID
@@ -28,7 +26,6 @@ public class SendVcodeRequest  extends AbstractModel{
     @SerializedName("ContractResId")
     @Expose
     private String ContractResId;
-    
 
     /**
     * 帐号ID
@@ -36,7 +33,6 @@ public class SendVcodeRequest  extends AbstractModel{
     @SerializedName("AccountResId")
     @Expose
     private String AccountResId;
-    
 
     /**
      * 获取模块名

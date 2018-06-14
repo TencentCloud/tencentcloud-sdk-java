@@ -12,7 +12,6 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
     * 实例名称。可任意命名，但不得超过60个字符。
@@ -20,7 +19,6 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-    
 
     /**
     * 指定实例的安全组Id列表。
@@ -28,7 +26,6 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     @SerializedName("SecurityGroups")
     @Expose
     private String [] SecurityGroups;
-    
 
     /**
      * 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。

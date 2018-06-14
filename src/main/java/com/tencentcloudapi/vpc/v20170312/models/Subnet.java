@@ -12,7 +12,6 @@ public class Subnet  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * 子网实例ID，例如：subnet-bthucmmy。
@@ -20,7 +19,6 @@ public class Subnet  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * 子网名称。
@@ -28,7 +26,6 @@ public class Subnet  extends AbstractModel{
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
-    
 
     /**
     * 子网的CIDR。
@@ -36,7 +33,6 @@ public class Subnet  extends AbstractModel{
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
-    
 
     /**
     * 是否默认子网。
@@ -44,7 +40,6 @@ public class Subnet  extends AbstractModel{
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
-    
 
     /**
     * 是否开启广播。
@@ -52,7 +47,6 @@ public class Subnet  extends AbstractModel{
     @SerializedName("EnableBroadcast")
     @Expose
     private Boolean EnableBroadcast;
-    
 
     /**
     * 可用区。
@@ -60,7 +54,6 @@ public class Subnet  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 路由表实例ID，例如：rtb-l2h8d7c2。
@@ -68,7 +61,6 @@ public class Subnet  extends AbstractModel{
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
-    
 
     /**
     * 创建时间。
@@ -76,7 +68,6 @@ public class Subnet  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-    
 
     /**
     * 可用IP数。
@@ -84,7 +75,6 @@ public class Subnet  extends AbstractModel{
     @SerializedName("AvailableIpAddressCount")
     @Expose
     private Integer AvailableIpAddressCount;
-    
 
     /**
      * 获取VPC实例ID。

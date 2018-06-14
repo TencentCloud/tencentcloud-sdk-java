@@ -12,7 +12,6 @@ public class DescribeSitesRequest  extends AbstractModel{
     @SerializedName("SiteIds")
     @Expose
     private Integer [] SiteIds;
-    
 
     /**
     * 过滤条件
@@ -20,7 +19,6 @@ public class DescribeSitesRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量，默认为0
@@ -28,7 +26,6 @@ public class DescribeSitesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回数量，默认为10，最大值为100
@@ -36,7 +33,6 @@ public class DescribeSitesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取站点ID列表

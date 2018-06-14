@@ -12,7 +12,6 @@ public class InstanceSpec  extends AbstractModel{
     @SerializedName("Machine")
     @Expose
     private String Machine;
-    
 
     /**
     * 该机型对应的可售卖规格列表
@@ -20,7 +19,6 @@ public class InstanceSpec  extends AbstractModel{
     @SerializedName("SpecInfos")
     @Expose
     private SpecConfigInfo [] SpecInfos;
-    
 
     /**
      * 获取设备型号

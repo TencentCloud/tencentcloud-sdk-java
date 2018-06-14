@@ -12,7 +12,6 @@ public class DatabaseTableList  extends AbstractModel{
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
-    
 
     /**
     * 数据表数组
@@ -20,7 +19,6 @@ public class DatabaseTableList  extends AbstractModel{
     @SerializedName("TableList")
     @Expose
     private String [] TableList;
-    
 
     /**
      * 获取数据库名

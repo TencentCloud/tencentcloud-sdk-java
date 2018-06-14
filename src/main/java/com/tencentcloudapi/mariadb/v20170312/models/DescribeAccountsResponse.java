@@ -12,7 +12,6 @@ public class DescribeAccountsResponse  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 实例用户列表。
@@ -20,7 +19,6 @@ public class DescribeAccountsResponse  extends AbstractModel{
     @SerializedName("Users")
     @Expose
     private DBAccount [] Users;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeAccountsResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取实例ID，透传入参。

@@ -12,7 +12,6 @@ public class TaskInstanceMetrics  extends AbstractModel{
     @SerializedName("SubmittedCount")
     @Expose
     private Integer SubmittedCount;
-    
 
     /**
     * Pending个数
@@ -20,7 +19,6 @@ public class TaskInstanceMetrics  extends AbstractModel{
     @SerializedName("PendingCount")
     @Expose
     private Integer PendingCount;
-    
 
     /**
     * Runnable个数
@@ -28,7 +26,6 @@ public class TaskInstanceMetrics  extends AbstractModel{
     @SerializedName("RunnableCount")
     @Expose
     private Integer RunnableCount;
-    
 
     /**
     * Starting个数
@@ -36,7 +33,6 @@ public class TaskInstanceMetrics  extends AbstractModel{
     @SerializedName("StartingCount")
     @Expose
     private Integer StartingCount;
-    
 
     /**
     * Running个数
@@ -44,7 +40,6 @@ public class TaskInstanceMetrics  extends AbstractModel{
     @SerializedName("RunningCount")
     @Expose
     private Integer RunningCount;
-    
 
     /**
     * Succeed个数
@@ -52,7 +47,6 @@ public class TaskInstanceMetrics  extends AbstractModel{
     @SerializedName("SucceedCount")
     @Expose
     private Integer SucceedCount;
-    
 
     /**
     * FailedInterrupted个数
@@ -60,7 +54,6 @@ public class TaskInstanceMetrics  extends AbstractModel{
     @SerializedName("FailedInterruptedCount")
     @Expose
     private Integer FailedInterruptedCount;
-    
 
     /**
     * Failed个数
@@ -68,7 +61,6 @@ public class TaskInstanceMetrics  extends AbstractModel{
     @SerializedName("FailedCount")
     @Expose
     private Integer FailedCount;
-    
 
     /**
      * 获取Submitted个数

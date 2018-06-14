@@ -12,7 +12,6 @@ public class Externals  extends AbstractModel{
     @SerializedName("ReleaseAddress")
     @Expose
     private Boolean ReleaseAddress;
-    
 
     /**
     * 不支持的网络类型
@@ -20,7 +19,6 @@ public class Externals  extends AbstractModel{
     @SerializedName("UnsupportNetworks")
     @Expose
     private String [] UnsupportNetworks;
-    
 
     /**
     * HDD本地存储属性
@@ -28,7 +26,6 @@ public class Externals  extends AbstractModel{
     @SerializedName("StorageBlockAttr")
     @Expose
     private StorageBlock StorageBlockAttr;
-    
 
     /**
      * 获取释放地址

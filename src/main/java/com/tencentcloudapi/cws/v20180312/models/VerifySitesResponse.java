@@ -12,7 +12,6 @@ public class VerifySitesResponse  extends AbstractModel{
     @SerializedName("SuccessNumber")
     @Expose
     private Integer SuccessNumber;
-    
 
     /**
     * 验证失败的根域名数量。
@@ -20,7 +19,6 @@ public class VerifySitesResponse  extends AbstractModel{
     @SerializedName("FailNumber")
     @Expose
     private Integer FailNumber;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class VerifySitesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取验证成功的根域名数量。

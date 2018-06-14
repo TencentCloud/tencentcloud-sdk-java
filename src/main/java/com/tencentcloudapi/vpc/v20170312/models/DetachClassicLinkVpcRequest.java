@@ -12,7 +12,6 @@ public class DetachClassicLinkVpcRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * CVM实例ID查询。形如：ins-r8hr2upy。
@@ -20,7 +19,6 @@ public class DetachClassicLinkVpcRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
      * 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。

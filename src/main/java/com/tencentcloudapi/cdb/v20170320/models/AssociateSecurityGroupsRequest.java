@@ -12,7 +12,6 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
-    
 
     /**
     * 实例ID列表，一个或者多个实例Id组成的数组。
@@ -20,7 +19,6 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
      * 获取安全组Id。

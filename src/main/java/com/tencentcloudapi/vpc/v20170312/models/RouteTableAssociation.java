@@ -12,7 +12,6 @@ public class RouteTableAssociation  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-    
 
     /**
     * 路由表实例ID。
@@ -20,7 +19,6 @@ public class RouteTableAssociation  extends AbstractModel{
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
-    
 
     /**
      * 获取子网实例ID。

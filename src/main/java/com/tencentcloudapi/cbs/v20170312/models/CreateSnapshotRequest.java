@@ -12,7 +12,6 @@ public class CreateSnapshotRequest  extends AbstractModel{
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
-    
 
     /**
     * 快照名称，不传则新快照名称默认为“未命名”。
@@ -20,7 +19,6 @@ public class CreateSnapshotRequest  extends AbstractModel{
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
-    
 
     /**
      * 获取需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。

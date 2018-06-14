@@ -12,7 +12,6 @@ public class SitesVerification  extends AbstractModel{
     @SerializedName("Domain")
     @Expose
     private String Domain;
-    
 
     /**
     * txt解析域名验证的name。
@@ -20,7 +19,6 @@ public class SitesVerification  extends AbstractModel{
     @SerializedName("TxtName")
     @Expose
     private String TxtName;
-    
 
     /**
     * txt解析域名验证的text。
@@ -28,7 +26,6 @@ public class SitesVerification  extends AbstractModel{
     @SerializedName("TxtText")
     @Expose
     private String TxtText;
-    
 
     /**
     * 验证有效期，在此之前有效。
@@ -36,7 +33,6 @@ public class SitesVerification  extends AbstractModel{
     @SerializedName("ValidTo")
     @Expose
     private String ValidTo;
-    
 
     /**
     * 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
@@ -44,7 +40,6 @@ public class SitesVerification  extends AbstractModel{
     @SerializedName("VerifyStatus")
     @Expose
     private Integer VerifyStatus;
-    
 
     /**
     * CreatedAt。
@@ -52,7 +47,6 @@ public class SitesVerification  extends AbstractModel{
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
-    
 
     /**
     * UpdatedAt。
@@ -60,7 +54,6 @@ public class SitesVerification  extends AbstractModel{
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
-    
 
     /**
     * ID。
@@ -68,7 +61,6 @@ public class SitesVerification  extends AbstractModel{
     @SerializedName("Id")
     @Expose
     private Integer Id;
-    
 
     /**
     * 云用户appid
@@ -76,7 +68,20 @@ public class SitesVerification  extends AbstractModel{
     @SerializedName("Appid")
     @Expose
     private Integer Appid;
-    
+
+    /**
+    * 用于验证站点的url，即访问该url获取验证数据。
+    */
+    @SerializedName("VerifyUrl")
+    @Expose
+    private String VerifyUrl;
+
+    /**
+    * 获取验证验证文件的url。
+    */
+    @SerializedName("VerifyFileUrl")
+    @Expose
+    private String VerifyFileUrl;
 
     /**
      * 获取根域名。
@@ -223,6 +228,38 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
+     * 获取用于验证站点的url，即访问该url获取验证数据。
+     * @return VerifyUrl 用于验证站点的url，即访问该url获取验证数据。
+     */
+    public String getVerifyUrl() {
+        return this.VerifyUrl;
+    }
+
+    /**
+     * 设置用于验证站点的url，即访问该url获取验证数据。
+     * @param VerifyUrl 用于验证站点的url，即访问该url获取验证数据。
+     */
+    public void setVerifyUrl(String VerifyUrl) {
+        this.VerifyUrl = VerifyUrl;
+    }
+
+    /**
+     * 获取获取验证验证文件的url。
+     * @return VerifyFileUrl 获取验证验证文件的url。
+     */
+    public String getVerifyFileUrl() {
+        return this.VerifyFileUrl;
+    }
+
+    /**
+     * 设置获取验证验证文件的url。
+     * @param VerifyFileUrl 获取验证验证文件的url。
+     */
+    public void setVerifyFileUrl(String VerifyFileUrl) {
+        this.VerifyFileUrl = VerifyFileUrl;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -235,6 +272,8 @@ public class SitesVerification  extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Appid", this.Appid);
+        this.setParamSimple(map, prefix + "VerifyUrl", this.VerifyUrl);
+        this.setParamSimple(map, prefix + "VerifyFileUrl", this.VerifyFileUrl);
 
     }
 }

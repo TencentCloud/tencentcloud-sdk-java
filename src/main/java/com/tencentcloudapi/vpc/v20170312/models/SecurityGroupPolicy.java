@@ -12,7 +12,6 @@ public class SecurityGroupPolicy  extends AbstractModel{
     @SerializedName("PolicyIndex")
     @Expose
     private Integer PolicyIndex;
-    
 
     /**
     * 协议, 取值: TCP,UDP, ICMP。
@@ -20,7 +19,6 @@ public class SecurityGroupPolicy  extends AbstractModel{
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
-    
 
     /**
     * 端口(all, 离散port,  range)。
@@ -28,7 +26,6 @@ public class SecurityGroupPolicy  extends AbstractModel{
     @SerializedName("Port")
     @Expose
     private String Port;
-    
 
     /**
     * 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
@@ -36,7 +33,6 @@ public class SecurityGroupPolicy  extends AbstractModel{
     @SerializedName("ServiceTemplate")
     @Expose
     private String [] ServiceTemplate;
-    
 
     /**
     * 网段或IP(互斥)。
@@ -44,7 +40,6 @@ public class SecurityGroupPolicy  extends AbstractModel{
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
-    
 
     /**
     * 已绑定安全组的网段或IP。
@@ -52,7 +47,6 @@ public class SecurityGroupPolicy  extends AbstractModel{
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
-    
 
     /**
     * IP地址ID或者ID地址组ID。
@@ -60,7 +54,6 @@ public class SecurityGroupPolicy  extends AbstractModel{
     @SerializedName("AddressTemplate")
     @Expose
     private String AddressTemplate;
-    
 
     /**
     * ACCEPT 或 DROP。
@@ -68,7 +61,6 @@ public class SecurityGroupPolicy  extends AbstractModel{
     @SerializedName("Action")
     @Expose
     private String Action;
-    
 
     /**
     * 安全组规则描述。
@@ -76,7 +68,6 @@ public class SecurityGroupPolicy  extends AbstractModel{
     @SerializedName("PolicyDescription")
     @Expose
     private String PolicyDescription;
-    
 
     /**
      * 获取安全组规则索引号。

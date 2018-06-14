@@ -12,7 +12,6 @@ public class DescribeSitesResponse  extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
-    
 
     /**
     * 站点信息列表。
@@ -20,7 +19,6 @@ public class DescribeSitesResponse  extends AbstractModel{
     @SerializedName("Sites")
     @Expose
     private Site [] Sites;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class DescribeSitesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取站点数量。

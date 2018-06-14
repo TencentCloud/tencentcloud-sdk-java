@@ -12,7 +12,6 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     @SerializedName("CustomerGatewayIds")
     @Expose
     private String [] CustomerGatewayIds;
-    
 
     /**
     * 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
@@ -20,7 +19,6 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
     * 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
@@ -28,7 +26,6 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回数量，默认为20，最大值为100。
@@ -36,7 +33,6 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取对端网关ID，例如：cgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。

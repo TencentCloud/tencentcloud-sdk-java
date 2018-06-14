@@ -12,7 +12,6 @@ public class DescribeAccountsRequest  extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-    
 
     /**
     * 记录偏移量，默认值为0。
@@ -20,7 +19,6 @@ public class DescribeAccountsRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 单次请求返回的数量，默认值为20，最大值为100。
@@ -28,7 +26,6 @@ public class DescribeAccountsRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
      * 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。

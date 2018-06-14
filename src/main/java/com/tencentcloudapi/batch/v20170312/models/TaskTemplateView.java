@@ -12,7 +12,6 @@ public class TaskTemplateView  extends AbstractModel{
     @SerializedName("TaskTemplateId")
     @Expose
     private String TaskTemplateId;
-    
 
     /**
     * 任务模板名称
@@ -20,7 +19,6 @@ public class TaskTemplateView  extends AbstractModel{
     @SerializedName("TaskTemplateName")
     @Expose
     private String TaskTemplateName;
-    
 
     /**
     * 任务模板描述
@@ -28,7 +26,6 @@ public class TaskTemplateView  extends AbstractModel{
     @SerializedName("TaskTemplateDescription")
     @Expose
     private String TaskTemplateDescription;
-    
 
     /**
     * 任务模板信息
@@ -36,7 +33,6 @@ public class TaskTemplateView  extends AbstractModel{
     @SerializedName("TaskTemplateInfo")
     @Expose
     private Task TaskTemplateInfo;
-    
 
     /**
     * 创建时间
@@ -44,7 +40,6 @@ public class TaskTemplateView  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
      * 获取任务模板ID

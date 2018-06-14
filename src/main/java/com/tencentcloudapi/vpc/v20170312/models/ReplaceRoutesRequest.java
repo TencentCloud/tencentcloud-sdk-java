@@ -12,7 +12,6 @@ public class ReplaceRoutesRequest  extends AbstractModel{
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
-    
 
     /**
     * 路由策略对象。只需要指定路由策略ID（RouteId）。
@@ -20,7 +19,6 @@ public class ReplaceRoutesRequest  extends AbstractModel{
     @SerializedName("Routes")
     @Expose
     private Route [] Routes;
-    
 
     /**
      * 获取路由表实例ID，例如：rtb-azd4dt1c。

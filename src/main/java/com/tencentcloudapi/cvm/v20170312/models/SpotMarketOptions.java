@@ -12,7 +12,6 @@ public class SpotMarketOptions  extends AbstractModel{
     @SerializedName("MaxPrice")
     @Expose
     private String MaxPrice;
-    
 
     /**
     * 竞价请求类型
@@ -20,7 +19,6 @@ public class SpotMarketOptions  extends AbstractModel{
     @SerializedName("SpotInstanceType")
     @Expose
     private String SpotInstanceType;
-    
 
     /**
      * 获取竞价出价

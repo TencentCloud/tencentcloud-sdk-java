@@ -12,7 +12,6 @@ public class AllocateHostsRequest  extends AbstractModel{
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
-    
 
     /**
     * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
@@ -20,7 +19,6 @@ public class AllocateHostsRequest  extends AbstractModel{
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
-    
 
     /**
     * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
@@ -28,7 +26,6 @@ public class AllocateHostsRequest  extends AbstractModel{
     @SerializedName("HostChargePrepaid")
     @Expose
     private ChargePrepaid HostChargePrepaid;
-    
 
     /**
     * 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
@@ -36,7 +33,6 @@ public class AllocateHostsRequest  extends AbstractModel{
     @SerializedName("HostChargeType")
     @Expose
     private String HostChargeType;
-    
 
     /**
     * CDH实例机型，默认为：'HS1'。
@@ -44,7 +40,6 @@ public class AllocateHostsRequest  extends AbstractModel{
     @SerializedName("HostType")
     @Expose
     private String HostType;
-    
 
     /**
     * 购买CDH实例数量。
@@ -52,7 +47,6 @@ public class AllocateHostsRequest  extends AbstractModel{
     @SerializedName("HostCount")
     @Expose
     private Integer HostCount;
-    
 
     /**
      * 获取用于保证请求幂等性的字符串。

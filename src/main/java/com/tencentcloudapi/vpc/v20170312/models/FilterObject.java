@@ -12,7 +12,6 @@ public class FilterObject  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
@@ -20,7 +19,6 @@ public class FilterObject  extends AbstractModel{
     @SerializedName("Values")
     @Expose
     private String [] Values;
-    
 
     /**
      * 获取属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。

@@ -12,7 +12,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("JobId")
     @Expose
     private String JobId;
-    
 
     /**
     * 作业名称
@@ -20,7 +19,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("JobName")
     @Expose
     private String JobName;
-    
 
     /**
     * 可用区信息
@@ -28,7 +26,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 作业优先级
@@ -36,7 +33,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("Priority")
     @Expose
     private Integer Priority;
-    
 
     /**
     * 作业状态
@@ -44,7 +40,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("JobState")
     @Expose
     private String JobState;
-    
 
     /**
     * 创建时间
@@ -52,7 +47,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
-    
 
     /**
     * 结束时间
@@ -60,7 +54,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-    
 
     /**
     * 任务视图信息
@@ -68,7 +61,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("TaskSet")
     @Expose
     private TaskView [] TaskSet;
-    
 
     /**
     * 任务间依赖信息
@@ -76,7 +68,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("DependenceSet")
     @Expose
     private Dependence [] DependenceSet;
-    
 
     /**
     * 任务统计指标
@@ -84,7 +75,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("TaskMetrics")
     @Expose
     private TaskMetrics TaskMetrics;
-    
 
     /**
     * 任务实例统计指标
@@ -92,7 +82,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("TaskInstanceMetrics")
     @Expose
     private TaskInstanceView TaskInstanceMetrics;
-    
 
     /**
     * 作业失败原因
@@ -100,7 +89,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("StateReason")
     @Expose
     private String StateReason;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -108,7 +96,6 @@ public class DescribeJobResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取作业ID

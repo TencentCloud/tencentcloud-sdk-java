@@ -12,7 +12,6 @@ public class DescribeContainerInstancesRequest  extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
-    
 
     /**
     * 返回数量，默认为10
@@ -20,7 +19,6 @@ public class DescribeContainerInstancesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
-    
 
     /**
     * 过滤条件。
@@ -31,7 +29,6 @@ public class DescribeContainerInstancesRequest  extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-    
 
     /**
      * 获取偏移量，默认为0

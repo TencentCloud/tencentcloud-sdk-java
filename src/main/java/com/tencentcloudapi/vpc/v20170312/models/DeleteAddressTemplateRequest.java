@@ -12,7 +12,6 @@ public class DeleteAddressTemplateRequest  extends AbstractModel{
     @SerializedName("AddressTemplateId")
     @Expose
     private String AddressTemplateId;
-    
 
     /**
      * 获取IP地址模板实例ID，例如：ipm-09o5m8kc。

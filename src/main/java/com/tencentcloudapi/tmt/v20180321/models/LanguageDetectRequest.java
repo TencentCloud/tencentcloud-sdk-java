@@ -12,7 +12,6 @@ public class LanguageDetectRequest  extends AbstractModel{
     @SerializedName("Text")
     @Expose
     private String Text;
-    
 
     /**
     * 项目id
@@ -20,7 +19,6 @@ public class LanguageDetectRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-    
 
     /**
      * 获取待识别的文本

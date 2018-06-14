@@ -12,7 +12,6 @@ public class DeleteShieldInstancesRequest  extends AbstractModel{
     @SerializedName("ItemIds")
     @Expose
     private String [] ItemIds;
-    
 
     /**
      * 获取任务唯一标识ItemId的列表

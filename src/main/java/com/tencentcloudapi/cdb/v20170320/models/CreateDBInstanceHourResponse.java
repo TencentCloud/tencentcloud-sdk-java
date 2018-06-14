@@ -11,8 +11,7 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
     */
     @SerializedName("DealIds")
     @Expose
-    private String DealIds;
-    
+    private String [] DealIds;
 
     /**
     * 实例ID列表
@@ -20,7 +19,6 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,13 +26,12 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
      * @return DealIds 短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
      */
-    public String getDealIds() {
+    public String [] getDealIds() {
         return this.DealIds;
     }
 
@@ -42,7 +39,7 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
      * 设置短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
      * @param DealIds 短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
      */
-    public void setDealIds(String DealIds) {
+    public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;
     }
 
@@ -82,7 +79,7 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DealIds", this.DealIds);
+        this.setParamArraySimple(map, prefix + "DealIds.", this.DealIds);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

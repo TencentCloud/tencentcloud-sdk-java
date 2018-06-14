@@ -12,7 +12,6 @@ public class ModifyRouteTableAttributeRequest  extends AbstractModel{
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
-    
 
     /**
     * 路由表名称。
@@ -20,7 +19,6 @@ public class ModifyRouteTableAttributeRequest  extends AbstractModel{
     @SerializedName("RouteTableName")
     @Expose
     private String RouteTableName;
-    
 
     /**
      * 获取路由表实例ID，例如：rtb-azd4dt1c。

@@ -12,7 +12,6 @@ public class ParamConstraint  extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
-    
 
     /**
     * 约束类型为enum时的可选值列表
@@ -20,7 +19,6 @@ public class ParamConstraint  extends AbstractModel{
     @SerializedName("Enum")
     @Expose
     private String Enum;
-    
 
     /**
     * 约束类型为section时的范围
@@ -28,7 +26,6 @@ public class ParamConstraint  extends AbstractModel{
     @SerializedName("Range")
     @Expose
     private ConstraintRange Range;
-    
 
     /**
      * 获取约束类型,如枚举enum，区间section

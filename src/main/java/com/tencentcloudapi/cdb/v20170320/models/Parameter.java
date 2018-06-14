@@ -12,7 +12,6 @@ public class Parameter  extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
-    
 
     /**
     * 参数值
@@ -20,7 +19,6 @@ public class Parameter  extends AbstractModel{
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
-    
 
     /**
      * 获取参数名称

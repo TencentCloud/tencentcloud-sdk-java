@@ -12,7 +12,6 @@ public class ScanSetInfo  extends AbstractModel{
     @SerializedName("TaskStatus")
     @Expose
     private Integer TaskStatus;
-    
 
     /**
     * app信息
@@ -20,7 +19,6 @@ public class ScanSetInfo  extends AbstractModel{
     @SerializedName("AppDetailInfo")
     @Expose
     private AppDetailInfo AppDetailInfo;
-    
 
     /**
     * 病毒信息
@@ -28,7 +26,6 @@ public class ScanSetInfo  extends AbstractModel{
     @SerializedName("VirusInfo")
     @Expose
     private VirusInfo VirusInfo;
-    
 
     /**
     * 漏洞信息
@@ -36,7 +33,6 @@ public class ScanSetInfo  extends AbstractModel{
     @SerializedName("VulInfo")
     @Expose
     private VulInfo VulInfo;
-    
 
     /**
     * 广告插件信息
@@ -44,7 +40,6 @@ public class ScanSetInfo  extends AbstractModel{
     @SerializedName("AdInfo")
     @Expose
     private AdInfo AdInfo;
-    
 
     /**
     * 提交扫描的时间
@@ -52,7 +47,6 @@ public class ScanSetInfo  extends AbstractModel{
     @SerializedName("TaskTime")
     @Expose
     private Integer TaskTime;
-    
 
     /**
      * 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时

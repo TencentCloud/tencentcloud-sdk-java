@@ -12,7 +12,6 @@ public class AddDeviceRequest  extends AbstractModel{
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
-    
 
     /**
     * 设备名称，唯一标识某产品下的一个设备
@@ -20,7 +19,6 @@ public class AddDeviceRequest  extends AbstractModel{
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
-    
 
     /**
      * 获取产品Id

@@ -12,7 +12,6 @@ public class DeleteAccountRequest  extends AbstractModel{
     @SerializedName("Module")
     @Expose
     private String Module;
-    
 
     /**
     * 操作名
@@ -20,7 +19,6 @@ public class DeleteAccountRequest  extends AbstractModel{
     @SerializedName("Operation")
     @Expose
     private String Operation;
-    
 
     /**
     * 帐号ID列表
@@ -28,7 +26,6 @@ public class DeleteAccountRequest  extends AbstractModel{
     @SerializedName("AccountList")
     @Expose
     private String [] AccountList;
-    
 
     /**
      * 获取模块名

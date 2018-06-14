@@ -12,7 +12,6 @@ public class ModifyConfigAttributeRequest  extends AbstractModel{
     @SerializedName("NoticeLevel")
     @Expose
     private String NoticeLevel;
-    
 
     /**
      * 获取漏洞告警通知等级，4位分别代表：高危、中危、低危、提示

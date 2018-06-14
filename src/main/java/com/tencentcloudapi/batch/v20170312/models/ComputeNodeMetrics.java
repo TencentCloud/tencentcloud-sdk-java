@@ -12,7 +12,6 @@ public class ComputeNodeMetrics  extends AbstractModel{
     @SerializedName("SubmittedCount")
     @Expose
     private String SubmittedCount;
-    
 
     /**
     * 创建中的计算节点数量
@@ -20,7 +19,6 @@ public class ComputeNodeMetrics  extends AbstractModel{
     @SerializedName("CreatingCount")
     @Expose
     private String CreatingCount;
-    
 
     /**
     * 创建失败的计算节点数量
@@ -28,7 +26,6 @@ public class ComputeNodeMetrics  extends AbstractModel{
     @SerializedName("CreationFailedCount")
     @Expose
     private String CreationFailedCount;
-    
 
     /**
     * 完成创建的计算节点数量
@@ -36,7 +33,6 @@ public class ComputeNodeMetrics  extends AbstractModel{
     @SerializedName("CreatedCount")
     @Expose
     private String CreatedCount;
-    
 
     /**
     * 运行中的计算节点数量
@@ -44,7 +40,6 @@ public class ComputeNodeMetrics  extends AbstractModel{
     @SerializedName("RunningCount")
     @Expose
     private String RunningCount;
-    
 
     /**
     * 销毁中的计算节点数量
@@ -52,7 +47,6 @@ public class ComputeNodeMetrics  extends AbstractModel{
     @SerializedName("DeletingCount")
     @Expose
     private String DeletingCount;
-    
 
     /**
     * 异常的计算节点数量
@@ -60,7 +54,6 @@ public class ComputeNodeMetrics  extends AbstractModel{
     @SerializedName("AbnormalCount")
     @Expose
     private String AbnormalCount;
-    
 
     /**
      * 获取已经完成提交的计算节点数量

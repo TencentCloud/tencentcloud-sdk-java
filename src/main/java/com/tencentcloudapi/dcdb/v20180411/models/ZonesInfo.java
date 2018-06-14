@@ -12,7 +12,6 @@ public class ZonesInfo  extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
-    
 
     /**
     * 可用区数字ID
@@ -20,7 +19,6 @@ public class ZonesInfo  extends AbstractModel{
     @SerializedName("ZoneId")
     @Expose
     private Integer ZoneId;
-    
 
     /**
     * 可用区中文名
@@ -28,7 +26,6 @@ public class ZonesInfo  extends AbstractModel{
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
-    
 
     /**
      * 获取可用区英文ID

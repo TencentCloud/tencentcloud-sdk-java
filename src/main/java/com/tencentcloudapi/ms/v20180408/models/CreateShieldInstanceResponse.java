@@ -12,7 +12,6 @@ public class CreateShieldInstanceResponse  extends AbstractModel{
     @SerializedName("Progress")
     @Expose
     private Integer Progress;
-    
 
     /**
     * 任务唯一标识
@@ -20,7 +19,6 @@ public class CreateShieldInstanceResponse  extends AbstractModel{
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
-    
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -28,7 +26,6 @@ public class CreateShieldInstanceResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-    
 
     /**
      * 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时

@@ -12,7 +12,6 @@ public class DeleteServiceTemplateGroupRequest  extends AbstractModel{
     @SerializedName("ServiceTemplateGroupId")
     @Expose
     private String ServiceTemplateGroupId;
-    
 
     /**
      * 获取协议端口模板集合实例ID，例如：ppmg-n17uxvve。

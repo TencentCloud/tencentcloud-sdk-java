@@ -12,7 +12,6 @@ public class AttachClassicLinkVpcRequest  extends AbstractModel{
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-    
 
     /**
     * CVM实例ID
@@ -20,7 +19,6 @@ public class AttachClassicLinkVpcRequest  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
-    
 
     /**
      * 获取VPC实例ID

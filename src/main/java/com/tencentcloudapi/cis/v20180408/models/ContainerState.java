@@ -12,7 +12,6 @@ public class ContainerState  extends AbstractModel{
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-    
 
     /**
     * 容器状态
@@ -20,7 +19,6 @@ public class ContainerState  extends AbstractModel{
     @SerializedName("State")
     @Expose
     private String State;
-    
 
     /**
     * 状态详情
@@ -28,7 +26,6 @@ public class ContainerState  extends AbstractModel{
     @SerializedName("Reason")
     @Expose
     private String Reason;
-    
 
     /**
     * 容器运行结束时间
@@ -36,7 +33,6 @@ public class ContainerState  extends AbstractModel{
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
-    
 
     /**
     * 容器运行退出码
@@ -44,7 +40,6 @@ public class ContainerState  extends AbstractModel{
     @SerializedName("ExitCode")
     @Expose
     private Integer ExitCode;
-    
 
     /**
      * 获取容器运行开始时间

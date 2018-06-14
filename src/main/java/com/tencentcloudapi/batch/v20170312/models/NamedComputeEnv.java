@@ -12,7 +12,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("EnvName")
     @Expose
     private String EnvName;
-    
 
     /**
     * 计算环境描述
@@ -20,7 +19,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("EnvDescription")
     @Expose
     private String EnvDescription;
-    
 
     /**
     * 计算环境管理类型
@@ -28,7 +26,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("EnvType")
     @Expose
     private String EnvType;
-    
 
     /**
     * 计算环境具体参数
@@ -36,7 +33,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("EnvData")
     @Expose
     private EnvData EnvData;
-    
 
     /**
     * 计算节点期望个数
@@ -44,7 +40,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("DesiredComputeNodeCount")
     @Expose
     private Integer DesiredComputeNodeCount;
-    
 
     /**
     * 数据盘挂载选项
@@ -52,7 +47,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("MountDataDisks")
     @Expose
     private MountDataDisk [] MountDataDisks;
-    
 
     /**
     * 授权信息
@@ -60,7 +54,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("Authentications")
     @Expose
     private Authentication [] Authentications;
-    
 
     /**
     * 输入映射信息
@@ -68,7 +61,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("InputMappings")
     @Expose
     private InputMapping [] InputMappings;
-    
 
     /**
     * agent运行模式，适用于Windows系统
@@ -76,7 +68,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("AgentRunningMode")
     @Expose
     private AgentRunningMode AgentRunningMode;
-    
 
     /**
     * 通知信息
@@ -84,7 +75,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("Notifications")
     @Expose
     private Notification Notifications;
-    
 
     /**
     * 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
@@ -92,7 +82,6 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("ActionIfComputeNodeInactive")
     @Expose
     private String ActionIfComputeNodeInactive;
-    
 
     /**
      * 获取计算环境名称
