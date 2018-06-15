@@ -122,26 +122,6 @@
         <url>https://github.com/TencentCloud/tencentcloud-sdk-java</url>
     </scm>
 
-    <profiles>
-        <profile>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.3</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <serverId>ossrh</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-	</profiles>
-	
     <developers>
         <developer>
             <id>tencentcloudapi</id>
