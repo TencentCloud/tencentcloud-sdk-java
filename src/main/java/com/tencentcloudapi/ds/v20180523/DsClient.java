@@ -251,4 +251,22 @@ public class DsClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *此接口适用于：客户平台在创建好合同后，由合同签署方对创建的合同内容进行确认，无误后再进行签署。客户平台使用该接口对PDF合同文档按照关键字和坐标进行签署。
+     * @param req SignContractByKeywordRequest
+     * @return SignContractByKeywordResponse
+     * @throws TencentCloudSDKException
+     */
+    public SignContractByKeywordResponse  SignContractByKeyword(SignContractByKeywordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SignContractByKeywordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SignContractByKeywordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SignContractByKeyword"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

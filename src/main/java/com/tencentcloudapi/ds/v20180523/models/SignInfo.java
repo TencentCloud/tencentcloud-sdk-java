@@ -14,6 +14,41 @@ public class SignInfo  extends AbstractModel{
     private String AccountResId;
 
     /**
+    * 授权时间，格式为年月日时分秒，例20160801095509
+    */
+    @SerializedName("AuthorizationTime")
+    @Expose
+    private String AuthorizationTime;
+
+    /**
+    * 授权IP地址
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
+    * 签章ID
+    */
+    @SerializedName("SealId")
+    @Expose
+    private String SealId;
+
+    /**
+    * 签名图片，优先级比SealId高
+    */
+    @SerializedName("ImageData")
+    @Expose
+    private String ImageData;
+
+    /**
+    * 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+    */
+    @SerializedName("CertType")
+    @Expose
+    private Integer CertType;
+
+    /**
      * 获取账户ID
      * @return AccountResId 账户ID
      */
@@ -30,10 +65,95 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
+     * 获取授权时间，格式为年月日时分秒，例20160801095509
+     * @return AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
+     */
+    public String getAuthorizationTime() {
+        return this.AuthorizationTime;
+    }
+
+    /**
+     * 设置授权时间，格式为年月日时分秒，例20160801095509
+     * @param AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
+     */
+    public void setAuthorizationTime(String AuthorizationTime) {
+        this.AuthorizationTime = AuthorizationTime;
+    }
+
+    /**
+     * 获取授权IP地址
+     * @return Location 授权IP地址
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * 设置授权IP地址
+     * @param Location 授权IP地址
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    /**
+     * 获取签章ID
+     * @return SealId 签章ID
+     */
+    public String getSealId() {
+        return this.SealId;
+    }
+
+    /**
+     * 设置签章ID
+     * @param SealId 签章ID
+     */
+    public void setSealId(String SealId) {
+        this.SealId = SealId;
+    }
+
+    /**
+     * 获取签名图片，优先级比SealId高
+     * @return ImageData 签名图片，优先级比SealId高
+     */
+    public String getImageData() {
+        return this.ImageData;
+    }
+
+    /**
+     * 设置签名图片，优先级比SealId高
+     * @param ImageData 签名图片，优先级比SealId高
+     */
+    public void setImageData(String ImageData) {
+        this.ImageData = ImageData;
+    }
+
+    /**
+     * 获取默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * @return CertType 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     */
+    public Integer getCertType() {
+        return this.CertType;
+    }
+
+    /**
+     * 设置默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * @param CertType 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     */
+    public void setCertType(Integer CertType) {
+        this.CertType = CertType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccountResId", this.AccountResId);
+        this.setParamSimple(map, prefix + "AuthorizationTime", this.AuthorizationTime);
+        this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamSimple(map, prefix + "SealId", this.SealId);
+        this.setParamSimple(map, prefix + "ImageData", this.ImageData);
+        this.setParamSimple(map, prefix + "CertType", this.CertType);
 
     }
 }

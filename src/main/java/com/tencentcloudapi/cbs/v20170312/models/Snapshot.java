@@ -35,7 +35,7 @@ public class Snapshot  extends AbstractModel{
     private String DiskId;
 
     /**
-    * 创建此快照的云硬盘大小。
+    * 创建此快照的云硬盘大小，单位GB。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -169,16 +169,16 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取创建此快照的云硬盘大小。
-     * @return DiskSize 创建此快照的云硬盘大小。
+     * 获取创建此快照的云硬盘大小，单位GB。
+     * @return DiskSize 创建此快照的云硬盘大小，单位GB。
      */
     public Integer getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * 设置创建此快照的云硬盘大小。
-     * @param DiskSize 创建此快照的云硬盘大小。
+     * 设置创建此快照的云硬盘大小，单位GB。
+     * @param DiskSize 创建此快照的云硬盘大小，单位GB。
      */
     public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;

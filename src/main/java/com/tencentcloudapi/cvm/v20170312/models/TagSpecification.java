@@ -7,7 +7,7 @@ public class TagSpecification  extends AbstractModel{
 
 
     /**
-    * 标签绑定的资源类型
+    * 标签绑定的资源类型，当前仅支持类型："instance"
     */
     @SerializedName("ResourceType")
     @Expose
@@ -21,16 +21,16 @@ public class TagSpecification  extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * 获取标签绑定的资源类型
-     * @return ResourceType 标签绑定的资源类型
+     * 获取标签绑定的资源类型，当前仅支持类型："instance"
+     * @return ResourceType 标签绑定的资源类型，当前仅支持类型："instance"
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * 设置标签绑定的资源类型
-     * @param ResourceType 标签绑定的资源类型
+     * 设置标签绑定的资源类型，当前仅支持类型："instance"
+     * @param ResourceType 标签绑定的资源类型，当前仅支持类型："instance"
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

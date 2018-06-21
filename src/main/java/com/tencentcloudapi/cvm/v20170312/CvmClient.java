@@ -286,7 +286,7 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
-     *本接口（ModifyImageSharePermission）用于修改镜像分享信息。
+     *本接口（DescribeImageSharePermission）用于查询镜像分享信息。
      * @param req DescribeImageSharePermissionRequest
      * @return DescribeImageSharePermissionResponse
      * @throws TencentCloudSDKException
@@ -600,6 +600,27 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *本接口 (InquiryPriceModifyInstancesChargeType) 用于切换实例的计费模式询价。
+
+* 只支持从 `POSTPAID_BY_HOUR` 计费模式切换为`PREPAID`计费模式。
+* 关机不收费的实例、`BC1`和`BS1`机型族的实例、设置定时销毁的实例不支持该操作。
+     * @param req InquiryPriceModifyInstancesChargeTypeRequest
+     * @return InquiryPriceModifyInstancesChargeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceModifyInstancesChargeTypeResponse  InquiryPriceModifyInstancesChargeType(InquiryPriceModifyInstancesChargeTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceModifyInstancesChargeTypeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceModifyInstancesChargeTypeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceModifyInstancesChargeType"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (InquiryPriceRenewInstances) 用于续费包年包月实例询价。
 
 * 只支持查询包年包月实例的续费价格。
@@ -819,6 +840,27 @@ public class CvmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancesAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyInstancesAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (ModifyInstancesChargeType) 用于切换实例的计费模式。
+
+* 只支持从 `POSTPAID_BY_HOUR` 计费模式切换为`PREPAID`计费模式。
+* 关机不收费的实例、`BC1`和`BS1`机型族的实例、设置定时销毁的实例不支持该操作。
+     * @param req ModifyInstancesChargeTypeRequest
+     * @return ModifyInstancesChargeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancesChargeTypeResponse  ModifyInstancesChargeType(ModifyInstancesChargeTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstancesChargeTypeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstancesChargeTypeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyInstancesChargeType"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

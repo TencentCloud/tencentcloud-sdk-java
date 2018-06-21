@@ -3,7 +3,7 @@ import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
-public class SignContractByCoordinateRequest  extends AbstractModel{
+public class SignContractByKeywordRequest  extends AbstractModel{
 
 
     /**
@@ -28,7 +28,7 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     private String ContractResId;
 
     /**
-    * 帐户ID
+    * 账户ID
     */
     @SerializedName("AccountResId")
     @Expose
@@ -49,18 +49,18 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     private String Position;
 
     /**
-    * 签署坐标，坐标不得超过合同文件边界
-    */
-    @SerializedName("SignLocations")
-    @Expose
-    private SignLocation [] SignLocations;
-
-    /**
-    * 印章ID
+    * 签章ID
     */
     @SerializedName("SealResId")
     @Expose
     private String SealResId;
+
+    /**
+    * 签署关键字，坐标和范围不得超过合同文件边界
+    */
+    @SerializedName("SignKeyword")
+    @Expose
+    private SignKeyword SignKeyword;
 
     /**
      * 获取模块名
@@ -111,16 +111,16 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取帐户ID
-     * @return AccountResId 帐户ID
+     * 获取账户ID
+     * @return AccountResId 账户ID
      */
     public String getAccountResId() {
         return this.AccountResId;
     }
 
     /**
-     * 设置帐户ID
-     * @param AccountResId 帐户ID
+     * 设置账户ID
+     * @param AccountResId 账户ID
      */
     public void setAccountResId(String AccountResId) {
         this.AccountResId = AccountResId;
@@ -159,35 +159,35 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取签署坐标，坐标不得超过合同文件边界
-     * @return SignLocations 签署坐标，坐标不得超过合同文件边界
-     */
-    public SignLocation [] getSignLocations() {
-        return this.SignLocations;
-    }
-
-    /**
-     * 设置签署坐标，坐标不得超过合同文件边界
-     * @param SignLocations 签署坐标，坐标不得超过合同文件边界
-     */
-    public void setSignLocations(SignLocation [] SignLocations) {
-        this.SignLocations = SignLocations;
-    }
-
-    /**
-     * 获取印章ID
-     * @return SealResId 印章ID
+     * 获取签章ID
+     * @return SealResId 签章ID
      */
     public String getSealResId() {
         return this.SealResId;
     }
 
     /**
-     * 设置印章ID
-     * @param SealResId 印章ID
+     * 设置签章ID
+     * @param SealResId 签章ID
      */
     public void setSealResId(String SealResId) {
         this.SealResId = SealResId;
+    }
+
+    /**
+     * 获取签署关键字，坐标和范围不得超过合同文件边界
+     * @return SignKeyword 签署关键字，坐标和范围不得超过合同文件边界
+     */
+    public SignKeyword getSignKeyword() {
+        return this.SignKeyword;
+    }
+
+    /**
+     * 设置签署关键字，坐标和范围不得超过合同文件边界
+     * @param SignKeyword 签署关键字，坐标和范围不得超过合同文件边界
+     */
+    public void setSignKeyword(SignKeyword SignKeyword) {
+        this.SignKeyword = SignKeyword;
     }
 
     /**
@@ -200,8 +200,8 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "AccountResId", this.AccountResId);
         this.setParamSimple(map, prefix + "AuthorizationTime", this.AuthorizationTime);
         this.setParamSimple(map, prefix + "Position", this.Position);
-        this.setParamArrayObj(map, prefix + "SignLocations.", this.SignLocations);
         this.setParamSimple(map, prefix + "SealResId", this.SealResId);
+        this.setParamObj(map, prefix + "SignKeyword.", this.SignKeyword);
 
     }
 }

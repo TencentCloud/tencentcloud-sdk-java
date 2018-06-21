@@ -56,7 +56,7 @@ public class Disk  extends AbstractModel{
     private String DiskName;
 
     /**
-    * 云硬盘大小。
+    * 云硬盘大小，单位GB。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -287,16 +287,16 @@ public class Disk  extends AbstractModel{
     }
 
     /**
-     * 获取云硬盘大小。
-     * @return DiskSize 云硬盘大小。
+     * 获取云硬盘大小，单位GB。
+     * @return DiskSize 云硬盘大小，单位GB。
      */
     public Integer getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * 设置云硬盘大小。
-     * @param DiskSize 云硬盘大小。
+     * 设置云硬盘大小，单位GB。
+     * @param DiskSize 云硬盘大小，单位GB。
      */
     public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;

@@ -28,7 +28,7 @@ public class CreateSealRequest  extends AbstractModel{
     private String AccountResId;
 
     /**
-    * 签章链接
+    * 签章链接，图片必须为png格式
     */
     @SerializedName("ImgUrl")
     @Expose
@@ -83,16 +83,16 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 获取签章链接
-     * @return ImgUrl 签章链接
+     * 获取签章链接，图片必须为png格式
+     * @return ImgUrl 签章链接，图片必须为png格式
      */
     public String getImgUrl() {
         return this.ImgUrl;
     }
 
     /**
-     * 设置签章链接
-     * @param ImgUrl 签章链接
+     * 设置签章链接，图片必须为png格式
+     * @param ImgUrl 签章链接，图片必须为png格式
      */
     public void setImgUrl(String ImgUrl) {
         this.ImgUrl = ImgUrl;
