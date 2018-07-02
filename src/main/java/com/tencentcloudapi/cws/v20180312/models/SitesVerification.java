@@ -7,6 +7,34 @@ public class SitesVerification  extends AbstractModel{
 
 
     /**
+    * ID。
+    */
+    @SerializedName("Id")
+    @Expose
+    private Integer Id;
+
+    /**
+    * 云用户appid
+    */
+    @SerializedName("Appid")
+    @Expose
+    private Integer Appid;
+
+    /**
+    * 用于验证站点的url，即访问该url获取验证数据。
+    */
+    @SerializedName("VerifyUrl")
+    @Expose
+    private String VerifyUrl;
+
+    /**
+    * 获取验证验证文件的url。
+    */
+    @SerializedName("VerifyFileUrl")
+    @Expose
+    private String VerifyFileUrl;
+
+    /**
     * 根域名。
     */
     @SerializedName("Domain")
@@ -56,32 +84,68 @@ public class SitesVerification  extends AbstractModel{
     private String UpdatedAt;
 
     /**
-    * ID。
-    */
-    @SerializedName("Id")
-    @Expose
-    private Integer Id;
+     * 获取ID。
+     * @return Id ID。
+     */
+    public Integer getId() {
+        return this.Id;
+    }
 
     /**
-    * 云用户appid
-    */
-    @SerializedName("Appid")
-    @Expose
-    private Integer Appid;
+     * 设置ID。
+     * @param Id ID。
+     */
+    public void setId(Integer Id) {
+        this.Id = Id;
+    }
 
     /**
-    * 用于验证站点的url，即访问该url获取验证数据。
-    */
-    @SerializedName("VerifyUrl")
-    @Expose
-    private String VerifyUrl;
+     * 获取云用户appid
+     * @return Appid 云用户appid
+     */
+    public Integer getAppid() {
+        return this.Appid;
+    }
 
     /**
-    * 获取验证验证文件的url。
-    */
-    @SerializedName("VerifyFileUrl")
-    @Expose
-    private String VerifyFileUrl;
+     * 设置云用户appid
+     * @param Appid 云用户appid
+     */
+    public void setAppid(Integer Appid) {
+        this.Appid = Appid;
+    }
+
+    /**
+     * 获取用于验证站点的url，即访问该url获取验证数据。
+     * @return VerifyUrl 用于验证站点的url，即访问该url获取验证数据。
+     */
+    public String getVerifyUrl() {
+        return this.VerifyUrl;
+    }
+
+    /**
+     * 设置用于验证站点的url，即访问该url获取验证数据。
+     * @param VerifyUrl 用于验证站点的url，即访问该url获取验证数据。
+     */
+    public void setVerifyUrl(String VerifyUrl) {
+        this.VerifyUrl = VerifyUrl;
+    }
+
+    /**
+     * 获取获取验证验证文件的url。
+     * @return VerifyFileUrl 获取验证验证文件的url。
+     */
+    public String getVerifyFileUrl() {
+        return this.VerifyFileUrl;
+    }
+
+    /**
+     * 设置获取验证验证文件的url。
+     * @param VerifyFileUrl 获取验证验证文件的url。
+     */
+    public void setVerifyFileUrl(String VerifyFileUrl) {
+        this.VerifyFileUrl = VerifyFileUrl;
+    }
 
     /**
      * 获取根域名。
@@ -196,73 +260,13 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取ID。
-     * @return Id ID。
-     */
-    public Integer getId() {
-        return this.Id;
-    }
-
-    /**
-     * 设置ID。
-     * @param Id ID。
-     */
-    public void setId(Integer Id) {
-        this.Id = Id;
-    }
-
-    /**
-     * 获取云用户appid
-     * @return Appid 云用户appid
-     */
-    public Integer getAppid() {
-        return this.Appid;
-    }
-
-    /**
-     * 设置云用户appid
-     * @param Appid 云用户appid
-     */
-    public void setAppid(Integer Appid) {
-        this.Appid = Appid;
-    }
-
-    /**
-     * 获取用于验证站点的url，即访问该url获取验证数据。
-     * @return VerifyUrl 用于验证站点的url，即访问该url获取验证数据。
-     */
-    public String getVerifyUrl() {
-        return this.VerifyUrl;
-    }
-
-    /**
-     * 设置用于验证站点的url，即访问该url获取验证数据。
-     * @param VerifyUrl 用于验证站点的url，即访问该url获取验证数据。
-     */
-    public void setVerifyUrl(String VerifyUrl) {
-        this.VerifyUrl = VerifyUrl;
-    }
-
-    /**
-     * 获取获取验证验证文件的url。
-     * @return VerifyFileUrl 获取验证验证文件的url。
-     */
-    public String getVerifyFileUrl() {
-        return this.VerifyFileUrl;
-    }
-
-    /**
-     * 设置获取验证验证文件的url。
-     * @param VerifyFileUrl 获取验证验证文件的url。
-     */
-    public void setVerifyFileUrl(String VerifyFileUrl) {
-        this.VerifyFileUrl = VerifyFileUrl;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Appid", this.Appid);
+        this.setParamSimple(map, prefix + "VerifyUrl", this.VerifyUrl);
+        this.setParamSimple(map, prefix + "VerifyFileUrl", this.VerifyFileUrl);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "TxtName", this.TxtName);
         this.setParamSimple(map, prefix + "TxtText", this.TxtText);
@@ -270,10 +274,6 @@ public class SitesVerification  extends AbstractModel{
         this.setParamSimple(map, prefix + "VerifyStatus", this.VerifyStatus);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
-        this.setParamSimple(map, prefix + "Id", this.Id);
-        this.setParamSimple(map, prefix + "Appid", this.Appid);
-        this.setParamSimple(map, prefix + "VerifyUrl", this.VerifyUrl);
-        this.setParamSimple(map, prefix + "VerifyFileUrl", this.VerifyFileUrl);
 
     }
 }

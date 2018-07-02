@@ -7,20 +7,6 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
 
 
     /**
-    * 每页显示数量，默认返回10条。
-    */
-    @SerializedName("PageSize")
-    @Expose
-    private Integer PageSize;
-
-    /**
-    * 分页序号，从1开始。
-    */
-    @SerializedName("PageNumber")
-    @Expose
-    private Integer PageNumber;
-
-    /**
     * 过滤条件，目前支持：db-instance-id、db-instance-name两种。
     */
     @SerializedName("Filters")
@@ -28,36 +14,18 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取每页显示数量，默认返回10条。
-     * @return PageSize 每页显示数量，默认返回10条。
-     */
-    public Integer getPageSize() {
-        return this.PageSize;
-    }
+    * 每页显示数量，默认返回10条。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Integer Limit;
 
     /**
-     * 设置每页显示数量，默认返回10条。
-     * @param PageSize 每页显示数量，默认返回10条。
-     */
-    public void setPageSize(Integer PageSize) {
-        this.PageSize = PageSize;
-    }
-
-    /**
-     * 获取分页序号，从1开始。
-     * @return PageNumber 分页序号，从1开始。
-     */
-    public Integer getPageNumber() {
-        return this.PageNumber;
-    }
-
-    /**
-     * 设置分页序号，从1开始。
-     * @param PageNumber 分页序号，从1开始。
-     */
-    public void setPageNumber(Integer PageNumber) {
-        this.PageNumber = PageNumber;
-    }
+    * 分页序号，从0开始。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Integer Offset;
 
     /**
      * 获取过滤条件，目前支持：db-instance-id、db-instance-name两种。
@@ -76,12 +44,44 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取每页显示数量，默认返回10条。
+     * @return Limit 每页显示数量，默认返回10条。
+     */
+    public Integer getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * 设置每页显示数量，默认返回10条。
+     * @param Limit 每页显示数量，默认返回10条。
+     */
+    public void setLimit(Integer Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * 获取分页序号，从0开始。
+     * @return Offset 分页序号，从0开始。
+     */
+    public Integer getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * 设置分页序号，从0开始。
+     * @param Offset 分页序号，从0开始。
+     */
+    public void setOffset(Integer Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
-        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

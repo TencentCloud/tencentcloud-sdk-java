@@ -7,6 +7,20 @@ public class Snapshot  extends AbstractModel{
 
 
     /**
+    * 快照正在跨地域复制的目的地域，默认取值为[]。
+    */
+    @SerializedName("CopyingToRegions")
+    @Expose
+    private String [] CopyingToRegions;
+
+    /**
+    * 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+    */
+    @SerializedName("CopyFromRemote")
+    @Expose
+    private Boolean CopyFromRemote;
+
+    /**
     * 快照ID。
     */
     @SerializedName("SnapshotId")
@@ -91,18 +105,36 @@ public class Snapshot  extends AbstractModel{
     private Boolean IsPermanent;
 
     /**
-    * 快照正在跨地域复制的目的地域，默认取值为[]。
-    */
-    @SerializedName("CopyingToRegions")
-    @Expose
-    private String [] CopyingToRegions;
+     * 获取快照正在跨地域复制的目的地域，默认取值为[]。
+     * @return CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
+     */
+    public String [] getCopyingToRegions() {
+        return this.CopyingToRegions;
+    }
 
     /**
-    * 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
-    */
-    @SerializedName("CopyFromRemote")
-    @Expose
-    private Boolean CopyFromRemote;
+     * 设置快照正在跨地域复制的目的地域，默认取值为[]。
+     * @param CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
+     */
+    public void setCopyingToRegions(String [] CopyingToRegions) {
+        this.CopyingToRegions = CopyingToRegions;
+    }
+
+    /**
+     * 获取是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     * @return CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     */
+    public Boolean getCopyFromRemote() {
+        return this.CopyFromRemote;
+    }
+
+    /**
+     * 设置是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     * @param CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     */
+    public void setCopyFromRemote(Boolean CopyFromRemote) {
+        this.CopyFromRemote = CopyFromRemote;
+    }
 
     /**
      * 获取快照ID。
@@ -297,41 +329,11 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照正在跨地域复制的目的地域，默认取值为[]。
-     * @return CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
-     */
-    public String [] getCopyingToRegions() {
-        return this.CopyingToRegions;
-    }
-
-    /**
-     * 设置快照正在跨地域复制的目的地域，默认取值为[]。
-     * @param CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
-     */
-    public void setCopyingToRegions(String [] CopyingToRegions) {
-        this.CopyingToRegions = CopyingToRegions;
-    }
-
-    /**
-     * 获取是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
-     * @return CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
-     */
-    public Boolean getCopyFromRemote() {
-        return this.CopyFromRemote;
-    }
-
-    /**
-     * 设置是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
-     * @param CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
-     */
-    public void setCopyFromRemote(Boolean CopyFromRemote) {
-        this.CopyFromRemote = CopyFromRemote;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "CopyingToRegions.", this.CopyingToRegions);
+        this.setParamSimple(map, prefix + "CopyFromRemote", this.CopyFromRemote);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
@@ -344,8 +346,6 @@ public class Snapshot  extends AbstractModel{
         this.setParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
         this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
-        this.setParamArraySimple(map, prefix + "CopyingToRegions.", this.CopyingToRegions);
-        this.setParamSimple(map, prefix + "CopyFromRemote", this.CopyFromRemote);
 
     }
 }

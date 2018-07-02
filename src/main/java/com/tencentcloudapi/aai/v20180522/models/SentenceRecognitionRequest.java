@@ -35,13 +35,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     private Integer SourceType;
 
     /**
-    * 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
-    */
-    @SerializedName("Url")
-    @Expose
-    private String Url;
-
-    /**
     * 识别音频的音频格式（支持mp3,wav）。
     */
     @SerializedName("VoiceFormat")
@@ -56,7 +49,14 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     private String UsrAudioKey;
 
     /**
-    * 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
+    * 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
     */
     @SerializedName("Data")
     @Expose
@@ -134,22 +134,6 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
-     * @return Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * 设置语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
-     * @param Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
-    }
-
-    /**
      * 获取识别音频的音频格式（支持mp3,wav）。
      * @return VoiceFormat 识别音频的音频格式（支持mp3,wav）。
      */
@@ -182,16 +166,32 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
-     * @return Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
+     * 获取语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+     * @return Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * 设置语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+     * @param Url 语音 URL，公网可下载。当 SourceType 值为 0 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时间长度要小于60s。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
+     * @return Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
-     * @param Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码
+     * 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
+     * @param Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
      */
     public void setData(String Data) {
         this.Data = Data;
@@ -221,9 +221,9 @@ public class SentenceRecognitionRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "SubServiceType", this.SubServiceType);
         this.setParamSimple(map, prefix + "EngSerViceType", this.EngSerViceType);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
-        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "VoiceFormat", this.VoiceFormat);
         this.setParamSimple(map, prefix + "UsrAudioKey", this.UsrAudioKey);
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "DataLen", this.DataLen);
 

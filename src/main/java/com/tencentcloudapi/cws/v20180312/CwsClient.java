@@ -124,6 +124,24 @@ public class CwsClient extends AbstractClient{
     }
 
     /**
+     *本接口 (CreateVulsReport) 用于生成漏洞报告并返回下载链接。
+     * @param req CreateVulsReportRequest
+     * @return CreateVulsReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulsReportResponse  CreateVulsReport(CreateVulsReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVulsReportResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVulsReportResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateVulsReport"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DeleteMonitors) 用于删除监控任务。
      * @param req DeleteMonitorsRequest
      * @return DeleteMonitorsResponse
@@ -261,6 +279,42 @@ public class CwsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeVulsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeVuls"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeVulsNumber) 用于查询用户网站的漏洞总计数量。
+     * @param req DescribeVulsNumberRequest
+     * @return DescribeVulsNumberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulsNumberResponse  DescribeVulsNumber(DescribeVulsNumberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVulsNumberResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVulsNumberResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVulsNumber"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeVulsNumberTimeline) 用于查询漏洞数随时间变化统计信息。
+     * @param req DescribeVulsNumberTimelineRequest
+     * @return DescribeVulsNumberTimelineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulsNumberTimelineResponse  DescribeVulsNumberTimeline(DescribeVulsNumberTimelineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVulsNumberTimelineResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVulsNumberTimelineResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVulsNumberTimeline"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

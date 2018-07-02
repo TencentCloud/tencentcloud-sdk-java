@@ -52,7 +52,7 @@ public class AaiClient extends AbstractClient{
     }
 
     /**
-     *识别60s内的短语音。
+     *识别60s内的短语音，当音频放在请求body中传输时整个请求大小不能超过1M，当音频以url方式传输时，音频时长不可超过60s。
      * @param req SentenceRecognitionRequest
      * @return SentenceRecognitionResponse
      * @throws TencentCloudSDKException
@@ -63,6 +63,26 @@ public class AaiClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SentenceRecognitionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SentenceRecognition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *腾讯云语音合成技术（TTS）可以将任意文本转化为语音，实现让机器和应用张口说话。
+腾讯TTS技术可以应用到很多场景，比如，移动APP语音播报新闻；智能设备语音提醒；依靠网上现有节目或少量录音，快速合成明星语音，降低邀约成本；支持车载导航语音合成的个性化语音播报。
+内测期间免费使用。
+     * @param req TextToVoiceRequest
+     * @return TextToVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToVoiceResponse  TextToVoice(TextToVoiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TextToVoiceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TextToVoiceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TextToVoice"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

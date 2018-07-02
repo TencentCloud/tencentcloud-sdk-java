@@ -7,23 +7,23 @@ public class DescribeDBInstanceAttributeRequest  extends AbstractModel{
 
 
     /**
-    * 实例ID。
+    * 实例ID
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-     * 获取实例ID。
-     * @return DBInstanceId 实例ID。
+     * 获取实例ID
+     * @return DBInstanceId 实例ID
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * 设置实例ID。
-     * @param DBInstanceId 实例ID。
+     * 设置实例ID
+     * @param DBInstanceId 实例ID
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

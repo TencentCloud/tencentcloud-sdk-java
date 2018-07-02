@@ -32,14 +32,14 @@ public class SpecItemInfo  extends AbstractModel{
     */
     @SerializedName("Cpu")
     @Expose
-    private Integer [] Cpu;
+    private Integer Cpu;
 
     /**
     * 内存大小，单位：MB
     */
     @SerializedName("Memory")
     @Expose
-    private Integer [] Memory;
+    private Integer Memory;
 
     /**
     * 该规格所支持最大存储容量，单位：GB
@@ -121,7 +121,7 @@ public class SpecItemInfo  extends AbstractModel{
      * 获取CPU核数
      * @return Cpu CPU核数
      */
-    public Integer [] getCpu() {
+    public Integer getCpu() {
         return this.Cpu;
     }
 
@@ -129,7 +129,7 @@ public class SpecItemInfo  extends AbstractModel{
      * 设置CPU核数
      * @param Cpu CPU核数
      */
-    public void setCpu(Integer [] Cpu) {
+    public void setCpu(Integer Cpu) {
         this.Cpu = Cpu;
     }
 
@@ -137,7 +137,7 @@ public class SpecItemInfo  extends AbstractModel{
      * 获取内存大小，单位：MB
      * @return Memory 内存大小，单位：MB
      */
-    public Integer [] getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -145,7 +145,7 @@ public class SpecItemInfo  extends AbstractModel{
      * 设置内存大小，单位：MB
      * @param Memory 内存大小，单位：MB
      */
-    public void setMemory(Integer [] Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -220,8 +220,8 @@ public class SpecItemInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "VersionName", this.VersionName);
-        this.setParamArraySimple(map, prefix + "Cpu.", this.Cpu);
-        this.setParamArraySimple(map, prefix + "Memory.", this.Memory);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
         this.setParamSimple(map, prefix + "MinStorage", this.MinStorage);
         this.setParamSimple(map, prefix + "Qps", this.Qps);

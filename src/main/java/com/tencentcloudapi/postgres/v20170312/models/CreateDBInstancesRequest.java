@@ -7,13 +7,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
 
 
     /**
-    * 项目ID。
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private Integer ProjectId;
-
-    /**
     * 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
     */
     @SerializedName("SpecCode")
@@ -35,7 +28,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     private Integer Storage;
 
     /**
-    * 一次性购买的实例数量。
+    * 一次性购买的实例数量。取值1-100
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -47,6 +40,20 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("Period")
     @Expose
     private Integer Period;
+
+    /**
+    * 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 项目ID。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Integer ProjectId;
 
     /**
     * 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
@@ -82,29 +89,6 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-
-    /**
-    * 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-    */
-    @SerializedName("Zone")
-    @Expose
-    private String Zone;
-
-    /**
-     * 获取项目ID。
-     * @return ProjectId 项目ID。
-     */
-    public Integer getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * 设置项目ID。
-     * @param ProjectId 项目ID。
-     */
-    public void setProjectId(Integer ProjectId) {
-        this.ProjectId = ProjectId;
-    }
 
     /**
      * 获取售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
@@ -155,16 +139,16 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一次性购买的实例数量。
-     * @return InstanceCount 一次性购买的实例数量。
+     * 获取一次性购买的实例数量。取值1-100
+     * @return InstanceCount 一次性购买的实例数量。取值1-100
      */
     public Integer getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * 设置一次性购买的实例数量。
-     * @param InstanceCount 一次性购买的实例数量。
+     * 设置一次性购买的实例数量。取值1-100
+     * @param InstanceCount 一次性购买的实例数量。取值1-100
      */
     public void setInstanceCount(Integer InstanceCount) {
         this.InstanceCount = InstanceCount;
@@ -184,6 +168,38 @@ public class CreateDBInstancesRequest  extends AbstractModel{
      */
     public void setPeriod(Integer Period) {
         this.Period = Period;
+    }
+
+    /**
+     * 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * @return Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * @param Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * 获取项目ID。
+     * @return ProjectId 项目ID。
+     */
+    public Integer getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * 设置项目ID。
+     * @param ProjectId 项目ID。
+     */
+    public void setProjectId(Integer ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
@@ -267,37 +283,21 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-     * @return Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-     */
-    public String getZone() {
-        return this.Zone;
-    }
-
-    /**
-     * 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-     * @param Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-     */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

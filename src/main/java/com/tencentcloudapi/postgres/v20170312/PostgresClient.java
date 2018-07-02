@@ -52,6 +52,24 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（CloseDBExtranetAccess）用于关闭实例外网链接。
+     * @param req CloseDBExtranetAccessRequest
+     * @return CloseDBExtranetAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseDBExtranetAccessResponse  CloseDBExtranetAccess(CloseDBExtranetAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseDBExtranetAccessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CloseDBExtranetAccess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
      * @param req CreateDBInstancesRequest
      * @return CreateDBInstancesResponse
@@ -63,6 +81,60 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeAccounts）用于获取实例用户列表。
+     * @param req DescribeAccountsRequest
+     * @return DescribeAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountsResponse  DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAccounts"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDBBackups）用于查询实例备份列表。
+     * @param req DescribeDBBackupsRequest
+     * @return DescribeDBBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBBackupsResponse  DescribeDBBackups(DescribeDBBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBBackupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBBackupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBBackups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDBErrlogs）用于获取错误日志。
+     * @param req DescribeDBErrlogsRequest
+     * @return DescribeDBErrlogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBErrlogsResponse  DescribeDBErrlogs(DescribeDBErrlogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBErrlogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBErrlogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBErrlogs"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -99,6 +171,60 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDBSlowlogs）用于获取慢查询日志。
+     * @param req DescribeDBSlowlogsRequest
+     * @return DescribeDBSlowlogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSlowlogsResponse  DescribeDBSlowlogs(DescribeDBSlowlogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSlowlogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSlowlogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBSlowlogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDBXlogs）用于获取实例Xlog列表。
+     * @param req DescribeDBXlogsRequest
+     * @return DescribeDBXlogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBXlogsResponse  DescribeDBXlogs(DescribeDBXlogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBXlogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBXlogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBXlogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeOrders）用于获取订单信息。
+     * @param req DescribeOrdersRequest
+     * @return DescribeOrdersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrdersResponse  DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrdersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeOrders"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -189,6 +315,204 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateDBInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceCreateDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（InquiryPriceRenewDBInstance）用于查询续费实例的价格。
+     * @param req InquiryPriceRenewDBInstanceRequest
+     * @return InquiryPriceRenewDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewDBInstanceResponse  InquiryPriceRenewDBInstance(InquiryPriceRenewDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceRenewDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceRenewDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。
+     * @param req InquiryPriceUpgradeDBInstanceRequest
+     * @return InquiryPriceUpgradeDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceUpgradeDBInstanceResponse  InquiryPriceUpgradeDBInstance(InquiryPriceUpgradeDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceUpgradeDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyAccountRemark）用于修改帐号备注。
+     * @param req ModifyAccountRemarkRequest
+     * @return ModifyAccountRemarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountRemarkResponse  ModifyAccountRemark(ModifyAccountRemarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccountRemarkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccountRemarkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAccountRemark"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyDBInstanceName）用于修改postgresql实例名字。
+     * @param req ModifyDBInstanceNameRequest
+     * @return ModifyDBInstanceNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceNameResponse  ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNameResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDBInstanceName"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
+     * @param req ModifyDBInstancesProjectRequest
+     * @return ModifyDBInstancesProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstancesProjectResponse  ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDBInstancesProject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（OpenDBExtranetAccess）用于开通外网。
+     * @param req OpenDBExtranetAccessRequest
+     * @return OpenDBExtranetAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenDBExtranetAccessResponse  OpenDBExtranetAccess(OpenDBExtranetAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenDBExtranetAccessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenDBExtranetAccessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OpenDBExtranetAccess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（RenewInstance）用于续费实例。
+     * @param req RenewInstanceRequest
+     * @return RenewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewInstanceResponse  RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RenewInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ResetAccountPassword）用于重置实例的账户密码。
+     * @param req ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetAccountPasswordResponse  ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ResetAccountPassword"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（RestartDBInstance）用于重启实例。
+     * @param req RestartDBInstanceRequest
+     * @return RestartDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartDBInstanceResponse  RestartDBInstance(RestartDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RestartDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（SetAutoRenewFlag）用于设置自动续费。
+     * @param req SetAutoRenewFlagRequest
+     * @return SetAutoRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAutoRenewFlagResponse  SetAutoRenewFlag(SetAutoRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetAutoRenewFlagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetAutoRenewFlagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetAutoRenewFlag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UpgradeDBInstance）用于升级实例。
+     * @param req UpgradeDBInstanceRequest
+     * @return UpgradeDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDBInstanceResponse  UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeDBInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

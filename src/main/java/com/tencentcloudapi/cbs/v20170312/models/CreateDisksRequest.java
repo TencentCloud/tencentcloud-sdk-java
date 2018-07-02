@@ -14,6 +14,20 @@ public class CreateDisksRequest  extends AbstractModel{
     private String DiskType;
 
     /**
+    * 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+    */
+    @SerializedName("DiskChargeType")
+    @Expose
+    private String DiskChargeType;
+
+    /**
+    * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
+    */
+    @SerializedName("Placement")
+    @Expose
+    private Placement Placement;
+
+    /**
     * 云盘显示名称。不传则默认为“未命名”。最大长度不能超60个字节。
     */
     @SerializedName("DiskName")
@@ -28,25 +42,11 @@ public class CreateDisksRequest  extends AbstractModel{
     private Integer DiskCount;
 
     /**
-    * 付费模式，目前只有预付费，即只能取值为PREPAID。
-    */
-    @SerializedName("DiskChargeType")
-    @Expose
-    private String DiskChargeType;
-
-    /**
-    * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长、是否设置自动续费等属性，创建预付费云盘该参数必传。
+    * 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
     */
     @SerializedName("DiskChargePrepaid")
     @Expose
     private DiskChargePrepaid DiskChargePrepaid;
-
-    /**
-    * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
-    */
-    @SerializedName("Placement")
-    @Expose
-    private Placement Placement;
 
     /**
     * 云硬盘大小，单位为GB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小<br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小<br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
@@ -100,6 +100,38 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
+     * 获取云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+     * @return DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+     */
+    public String getDiskChargeType() {
+        return this.DiskChargeType;
+    }
+
+    /**
+     * 设置云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+     * @param DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+     */
+    public void setDiskChargeType(String DiskChargeType) {
+        this.DiskChargeType = DiskChargeType;
+    }
+
+    /**
+     * 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
+     * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
+     */
+    public Placement getPlacement() {
+        return this.Placement;
+    }
+
+    /**
+     * 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
+     * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
+     */
+    public void setPlacement(Placement Placement) {
+        this.Placement = Placement;
+    }
+
+    /**
      * 获取云盘显示名称。不传则默认为“未命名”。最大长度不能超60个字节。
      * @return DiskName 云盘显示名称。不传则默认为“未命名”。最大长度不能超60个字节。
      */
@@ -132,51 +164,19 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式，目前只有预付费，即只能取值为PREPAID。
-     * @return DiskChargeType 付费模式，目前只有预付费，即只能取值为PREPAID。
-     */
-    public String getDiskChargeType() {
-        return this.DiskChargeType;
-    }
-
-    /**
-     * 设置付费模式，目前只有预付费，即只能取值为PREPAID。
-     * @param DiskChargeType 付费模式，目前只有预付费，即只能取值为PREPAID。
-     */
-    public void setDiskChargeType(String DiskChargeType) {
-        this.DiskChargeType = DiskChargeType;
-    }
-
-    /**
-     * 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长、是否设置自动续费等属性，创建预付费云盘该参数必传。
-     * @return DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长、是否设置自动续费等属性，创建预付费云盘该参数必传。
+     * 获取预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+     * @return DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
      */
     public DiskChargePrepaid getDiskChargePrepaid() {
         return this.DiskChargePrepaid;
     }
 
     /**
-     * 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长、是否设置自动续费等属性，创建预付费云盘该参数必传。
-     * @param DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长、是否设置自动续费等属性，创建预付费云盘该参数必传。
+     * 设置预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+     * @param DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
      */
     public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
         this.DiskChargePrepaid = DiskChargePrepaid;
-    }
-
-    /**
-     * 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
-     * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
-     */
-    public Placement getPlacement() {
-        return this.Placement;
-    }
-
-    /**
-     * 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
-     * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
-     */
-    public void setPlacement(Placement Placement) {
-        this.Placement = Placement;
     }
 
     /**
@@ -264,11 +264,11 @@ public class CreateDisksRequest  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
+        this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "DiskName", this.DiskName);
         this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
-        this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
         this.setParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
-        this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);

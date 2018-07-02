@@ -7,6 +7,13 @@ public class Disk  extends AbstractModel{
 
 
     /**
+    * 与云盘绑定的标签，云盘未绑定标签则取值为空。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
     * 云硬盘ID。
     */
     @SerializedName("DiskId")
@@ -168,11 +175,20 @@ public class Disk  extends AbstractModel{
     private String [] AutoSnapshotPolicyIds;
 
     /**
-    * 与云盘绑定的标签，云盘未绑定标签则取值为空。
-    */
-    @SerializedName("Tags")
-    @Expose
-    private Tag [] Tags;
+     * 获取与云盘绑定的标签，云盘未绑定标签则取值为空。
+     * @return Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置与云盘绑定的标签，云盘未绑定标签则取值为空。
+     * @param Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
 
     /**
      * 获取云硬盘ID。
@@ -543,25 +559,10 @@ public class Disk  extends AbstractModel{
     }
 
     /**
-     * 获取与云盘绑定的标签，云盘未绑定标签则取值为空。
-     * @return Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
-     */
-    public Tag [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * 设置与云盘绑定的标签，云盘未绑定标签则取值为空。
-     * @param Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
-     */
-    public void setTags(Tag [] Tags) {
-        this.Tags = Tags;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
@@ -585,7 +586,6 @@ public class Disk  extends AbstractModel{
         this.setParamSimple(map, prefix + "IsReturnable", this.IsReturnable);
         this.setParamSimple(map, prefix + "ReturnFailCode", this.ReturnFailCode);
         this.setParamArraySimple(map, prefix + "AutoSnapshotPolicyIds.", this.AutoSnapshotPolicyIds);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

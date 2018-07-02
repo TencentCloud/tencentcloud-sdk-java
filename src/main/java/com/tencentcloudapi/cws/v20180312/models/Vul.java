@@ -7,6 +7,27 @@ public class Vul  extends AbstractModel{
 
 
     /**
+    * 是否已经添加误报，0-否，1-是。
+    */
+    @SerializedName("IsReported")
+    @Expose
+    private Integer IsReported;
+
+    /**
+    * 云用户appid。
+    */
+    @SerializedName("Appid")
+    @Expose
+    private Integer Appid;
+
+    /**
+    * 云用户标识。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
     * 漏洞ID。
     */
     @SerializedName("Id")
@@ -112,25 +133,52 @@ public class Vul  extends AbstractModel{
     private String UpdatedAt;
 
     /**
-    * 是否已经添加误报，0-否，1-是。
-    */
-    @SerializedName("IsReported")
-    @Expose
-    private Integer IsReported;
+     * 获取是否已经添加误报，0-否，1-是。
+     * @return IsReported 是否已经添加误报，0-否，1-是。
+     */
+    public Integer getIsReported() {
+        return this.IsReported;
+    }
 
     /**
-    * 云用户appid。
-    */
-    @SerializedName("Appid")
-    @Expose
-    private Integer Appid;
+     * 设置是否已经添加误报，0-否，1-是。
+     * @param IsReported 是否已经添加误报，0-否，1-是。
+     */
+    public void setIsReported(Integer IsReported) {
+        this.IsReported = IsReported;
+    }
 
     /**
-    * 云用户标识。
-    */
-    @SerializedName("Uin")
-    @Expose
-    private String Uin;
+     * 获取云用户appid。
+     * @return Appid 云用户appid。
+     */
+    public Integer getAppid() {
+        return this.Appid;
+    }
+
+    /**
+     * 设置云用户appid。
+     * @param Appid 云用户appid。
+     */
+    public void setAppid(Integer Appid) {
+        this.Appid = Appid;
+    }
+
+    /**
+     * 获取云用户标识。
+     * @return Uin 云用户标识。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * 设置云用户标识。
+     * @param Uin 云用户标识。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
 
     /**
      * 获取漏洞ID。
@@ -373,57 +421,12 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取是否已经添加误报，0-否，1-是。
-     * @return IsReported 是否已经添加误报，0-否，1-是。
-     */
-    public Integer getIsReported() {
-        return this.IsReported;
-    }
-
-    /**
-     * 设置是否已经添加误报，0-否，1-是。
-     * @param IsReported 是否已经添加误报，0-否，1-是。
-     */
-    public void setIsReported(Integer IsReported) {
-        this.IsReported = IsReported;
-    }
-
-    /**
-     * 获取云用户appid。
-     * @return Appid 云用户appid。
-     */
-    public Integer getAppid() {
-        return this.Appid;
-    }
-
-    /**
-     * 设置云用户appid。
-     * @param Appid 云用户appid。
-     */
-    public void setAppid(Integer Appid) {
-        this.Appid = Appid;
-    }
-
-    /**
-     * 获取云用户标识。
-     * @return Uin 云用户标识。
-     */
-    public String getUin() {
-        return this.Uin;
-    }
-
-    /**
-     * 设置云用户标识。
-     * @param Uin 云用户标识。
-     */
-    public void setUin(String Uin) {
-        this.Uin = Uin;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "IsReported", this.IsReported);
+        this.setParamSimple(map, prefix + "Appid", this.Appid);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "SiteId", this.SiteId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
@@ -439,9 +442,6 @@ public class Vul  extends AbstractModel{
         this.setParamSimple(map, prefix + "Parameter", this.Parameter);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
-        this.setParamSimple(map, prefix + "IsReported", this.IsReported);
-        this.setParamSimple(map, prefix + "Appid", this.Appid);
-        this.setParamSimple(map, prefix + "Uin", this.Uin);
 
     }
 }

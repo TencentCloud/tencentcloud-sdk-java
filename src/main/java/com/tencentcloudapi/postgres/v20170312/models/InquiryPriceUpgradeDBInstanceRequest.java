@@ -1,0 +1,112 @@
+package com.tencentcloudapi.postgres.v20170312.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
+
+
+    /**
+    * 实例的磁盘大小，单位GB
+    */
+    @SerializedName("Storage")
+    @Expose
+    private Integer Storage;
+
+    /**
+    * 实例的内存大小，单位GB
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Integer Memory;
+
+    /**
+    * 实例ID，形如postgres-hez4fh0v
+    */
+    @SerializedName("DBInstanceId")
+    @Expose
+    private String DBInstanceId;
+
+    /**
+    * 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
+     * 获取实例的磁盘大小，单位GB
+     * @return Storage 实例的磁盘大小，单位GB
+     */
+    public Integer getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * 设置实例的磁盘大小，单位GB
+     * @param Storage 实例的磁盘大小，单位GB
+     */
+    public void setStorage(Integer Storage) {
+        this.Storage = Storage;
+    }
+
+    /**
+     * 获取实例的内存大小，单位GB
+     * @return Memory 实例的内存大小，单位GB
+     */
+    public Integer getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * 设置实例的内存大小，单位GB
+     * @param Memory 实例的内存大小，单位GB
+     */
+    public void setMemory(Integer Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * 获取实例ID，形如postgres-hez4fh0v
+     * @return DBInstanceId 实例ID，形如postgres-hez4fh0v
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    /**
+     * 设置实例ID，形如postgres-hez4fh0v
+     * @param DBInstanceId 实例ID，形如postgres-hez4fh0v
+     */
+    public void setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+    }
+
+    /**
+     * 获取实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+     * @return InstanceChargeType 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * 设置实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+     * @param InstanceChargeType 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+
+    }
+}
+
