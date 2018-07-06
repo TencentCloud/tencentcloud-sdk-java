@@ -32,7 +32,7 @@ public class InstanceInfo  extends AbstractModel{
     */
     @SerializedName("RoVipInfo")
     @Expose
-    private RoVipInfo [] RoVipInfo;
+    private RoVipInfo RoVipInfo;
 
     /**
     * 内存容量
@@ -147,13 +147,6 @@ public class InstanceInfo  extends AbstractModel{
     private Integer TaskStatus;
 
     /**
-    * 主实例信息
-    */
-    @SerializedName("MasterInfo")
-    @Expose
-    private MasterInfo MasterInfo;
-
-    /**
     * 实例售卖机型
     */
     @SerializedName("DeviceType")
@@ -245,6 +238,13 @@ public class InstanceInfo  extends AbstractModel{
     private String UniqSubnetId;
 
     /**
+    * 主实例信息
+    */
+    @SerializedName("MasterInfo")
+    @Expose
+    private MasterInfo MasterInfo;
+
+    /**
      * 获取外网状态
      * @return WanStatus 外网状态
      */
@@ -296,7 +296,7 @@ public class InstanceInfo  extends AbstractModel{
      * 获取只读vip信息
      * @return RoVipInfo 只读vip信息
      */
-    public RoVipInfo [] getRoVipInfo() {
+    public RoVipInfo getRoVipInfo() {
         return this.RoVipInfo;
     }
 
@@ -304,7 +304,7 @@ public class InstanceInfo  extends AbstractModel{
      * 设置只读vip信息
      * @param RoVipInfo 只读vip信息
      */
-    public void setRoVipInfo(RoVipInfo [] RoVipInfo) {
+    public void setRoVipInfo(RoVipInfo RoVipInfo) {
         this.RoVipInfo = RoVipInfo;
     }
 
@@ -565,22 +565,6 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取主实例信息
-     * @return MasterInfo 主实例信息
-     */
-    public MasterInfo getMasterInfo() {
-        return this.MasterInfo;
-    }
-
-    /**
-     * 设置主实例信息
-     * @param MasterInfo 主实例信息
-     */
-    public void setMasterInfo(MasterInfo MasterInfo) {
-        this.MasterInfo = MasterInfo;
-    }
-
-    /**
      * 获取实例售卖机型
      * @return DeviceType 实例售卖机型
      */
@@ -789,13 +773,29 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取主实例信息
+     * @return MasterInfo 主实例信息
+     */
+    public MasterInfo getMasterInfo() {
+        return this.MasterInfo;
+    }
+
+    /**
+     * 设置主实例信息
+     * @param MasterInfo 主实例信息
+     */
+    public void setMasterInfo(MasterInfo MasterInfo) {
+        this.MasterInfo = MasterInfo;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "InitFlag", this.InitFlag);
-        this.setParamArrayObj(map, prefix + "RoVipInfo.", this.RoVipInfo);
+        this.setParamObj(map, prefix + "RoVipInfo.", this.RoVipInfo);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
@@ -812,7 +812,6 @@ public class InstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
         this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
-        this.setParamObj(map, prefix + "MasterInfo.", this.MasterInfo);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
@@ -826,6 +825,7 @@ public class InstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "CdbError", this.CdbError);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamObj(map, prefix + "MasterInfo.", this.MasterInfo);
 
     }
 }

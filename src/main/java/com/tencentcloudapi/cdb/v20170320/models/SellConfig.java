@@ -7,13 +7,6 @@ public class SellConfig  extends AbstractModel{
 
 
     /**
-    * 设备类型
-    */
-    @SerializedName("Device")
-    @Expose
-    private String Device;
-
-    /**
     * 售卖规格描述
     */
     @SerializedName("Type")
@@ -98,20 +91,11 @@ public class SellConfig  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取设备类型
-     * @return Device 设备类型
-     */
-    public String getDevice() {
-        return this.Device;
-    }
-
-    /**
-     * 设置设备类型
-     * @param Device 设备类型
-     */
-    public void setDevice(String Device) {
-        this.Device = Device;
-    }
+    * 设备类型
+    */
+    @SerializedName("Device")
+    @Expose
+    private String Device;
 
     /**
      * 获取售卖规格描述
@@ -306,10 +290,25 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
+     * 获取设备类型
+     * @return Device 设备类型
+     */
+    public String getDevice() {
+        return this.Device;
+    }
+
+    /**
+     * 设置设备类型
+     * @param Device 设备类型
+     */
+    public void setDevice(String Device) {
+        this.Device = Device;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Device", this.Device);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CdbType", this.CdbType);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
@@ -322,6 +321,7 @@ public class SellConfig  extends AbstractModel{
         this.setParamSimple(map, prefix + "Iops", this.Iops);
         this.setParamSimple(map, prefix + "Info", this.Info);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Device", this.Device);
 
     }
 }

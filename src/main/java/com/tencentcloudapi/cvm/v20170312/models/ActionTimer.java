@@ -7,6 +7,13 @@ public class ActionTimer  extends AbstractModel{
 
 
     /**
+    * 扩展数据
+    */
+    @SerializedName("Externals")
+    @Expose
+    private Externals Externals;
+
+    /**
     * 定时器名称，目前仅支持销毁一个值：TerminateInstances。
     */
     @SerializedName("TimerAction")
@@ -21,11 +28,20 @@ public class ActionTimer  extends AbstractModel{
     private String ActionTime;
 
     /**
-    * 扩展数据
-    */
-    @SerializedName("Externals")
-    @Expose
-    private Externals Externals;
+     * 获取扩展数据
+     * @return Externals 扩展数据
+     */
+    public Externals getExternals() {
+        return this.Externals;
+    }
+
+    /**
+     * 设置扩展数据
+     * @param Externals 扩展数据
+     */
+    public void setExternals(Externals Externals) {
+        this.Externals = Externals;
+    }
 
     /**
      * 获取定时器名称，目前仅支持销毁一个值：TerminateInstances。
@@ -60,28 +76,12 @@ public class ActionTimer  extends AbstractModel{
     }
 
     /**
-     * 获取扩展数据
-     * @return Externals 扩展数据
-     */
-    public Externals getExternals() {
-        return this.Externals;
-    }
-
-    /**
-     * 设置扩展数据
-     * @param Externals 扩展数据
-     */
-    public void setExternals(Externals Externals) {
-        this.Externals = Externals;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Externals.", this.Externals);
         this.setParamSimple(map, prefix + "TimerAction", this.TimerAction);
         this.setParamSimple(map, prefix + "ActionTime", this.ActionTime);
-        this.setParamObj(map, prefix + "Externals.", this.Externals);
 
     }
 }

@@ -21,13 +21,6 @@ public class TextToVoiceRequest  extends AbstractModel{
     private String SessionId;
 
     /**
-    * 项目id
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private Integer ProjectId;
-
-    /**
     * 模型类型，1-默认模型
     */
     @SerializedName("ModelType")
@@ -35,18 +28,25 @@ public class TextToVoiceRequest  extends AbstractModel{
     private Integer ModelType;
 
     /**
-    * 音量大小，暂仅支持默认值1.0
+    * 音量大小，暂仅支持默认值1
     */
     @SerializedName("Volume")
     @Expose
     private Float Volume;
 
     /**
-    * 语速，暂仅支持默认值1.0
+    * 语速，暂仅支持默认值1
     */
     @SerializedName("Speed")
     @Expose
     private Float Speed;
+
+    /**
+    * 用户自定义项目id，默认为0
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Integer ProjectId;
 
     /**
     * 音色，1-默认音色
@@ -102,22 +102,6 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目id
-     * @return ProjectId 项目id
-     */
-    public Integer getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * 设置项目id
-     * @param ProjectId 项目id
-     */
-    public void setProjectId(Integer ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
      * 获取模型类型，1-默认模型
      * @return ModelType 模型类型，1-默认模型
      */
@@ -134,35 +118,51 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音量大小，暂仅支持默认值1.0
-     * @return Volume 音量大小，暂仅支持默认值1.0
+     * 获取音量大小，暂仅支持默认值1
+     * @return Volume 音量大小，暂仅支持默认值1
      */
     public Float getVolume() {
         return this.Volume;
     }
 
     /**
-     * 设置音量大小，暂仅支持默认值1.0
-     * @param Volume 音量大小，暂仅支持默认值1.0
+     * 设置音量大小，暂仅支持默认值1
+     * @param Volume 音量大小，暂仅支持默认值1
      */
     public void setVolume(Float Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * 获取语速，暂仅支持默认值1.0
-     * @return Speed 语速，暂仅支持默认值1.0
+     * 获取语速，暂仅支持默认值1
+     * @return Speed 语速，暂仅支持默认值1
      */
     public Float getSpeed() {
         return this.Speed;
     }
 
     /**
-     * 设置语速，暂仅支持默认值1.0
-     * @param Speed 语速，暂仅支持默认值1.0
+     * 设置语速，暂仅支持默认值1
+     * @param Speed 语速，暂仅支持默认值1
      */
     public void setSpeed(Float Speed) {
         this.Speed = Speed;
+    }
+
+    /**
+     * 获取用户自定义项目id，默认为0
+     * @return ProjectId 用户自定义项目id，默认为0
+     */
+    public Integer getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * 设置用户自定义项目id，默认为0
+     * @param ProjectId 用户自定义项目id，默认为0
+     */
+    public void setProjectId(Integer ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
@@ -219,10 +219,10 @@ public class TextToVoiceRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ModelType", this.ModelType);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
         this.setParamSimple(map, prefix + "Speed", this.Speed);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
         this.setParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);

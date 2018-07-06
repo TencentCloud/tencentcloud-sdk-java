@@ -7,18 +7,18 @@ public class AllocateHostsRequest  extends AbstractModel{
 
 
     /**
-    * 用于保证请求幂等性的字符串。
-    */
-    @SerializedName("ClientToken")
-    @Expose
-    private String ClientToken;
-
-    /**
     * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
+
+    /**
+    * 用于保证请求幂等性的字符串。
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
 
     /**
     * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
@@ -49,22 +49,6 @@ public class AllocateHostsRequest  extends AbstractModel{
     private Integer HostCount;
 
     /**
-     * 获取用于保证请求幂等性的字符串。
-     * @return ClientToken 用于保证请求幂等性的字符串。
-     */
-    public String getClientToken() {
-        return this.ClientToken;
-    }
-
-    /**
-     * 设置用于保证请求幂等性的字符串。
-     * @param ClientToken 用于保证请求幂等性的字符串。
-     */
-    public void setClientToken(String ClientToken) {
-        this.ClientToken = ClientToken;
-    }
-
-    /**
      * 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
@@ -78,6 +62,22 @@ public class AllocateHostsRequest  extends AbstractModel{
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
+    }
+
+    /**
+     * 获取用于保证请求幂等性的字符串。
+     * @return ClientToken 用于保证请求幂等性的字符串。
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * 设置用于保证请求幂等性的字符串。
+     * @param ClientToken 用于保证请求幂等性的字符串。
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
     }
 
     /**
@@ -148,8 +148,8 @@ public class AllocateHostsRequest  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamObj(map, prefix + "HostChargePrepaid.", this.HostChargePrepaid);
         this.setParamSimple(map, prefix + "HostChargeType", this.HostChargeType);
         this.setParamSimple(map, prefix + "HostType", this.HostType);

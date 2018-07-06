@@ -7,6 +7,27 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
 
 
     /**
+    * 实例数量，默认值为1, 最小值1，最大值为100
+    */
+    @SerializedName("GoodsNum")
+    @Expose
+    private Integer GoodsNum;
+
+    /**
+    * 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Integer Memory;
+
+    /**
+    * 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Integer Volume;
+
+    /**
     * MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
     */
     @SerializedName("EngineVersion")
@@ -33,27 +54,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
-
-    /**
-    * 实例数量，默认值为1, 最小值1，最大值为100
-    */
-    @SerializedName("GoodsNum")
-    @Expose
-    private Integer GoodsNum;
-
-    /**
-    * 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
-    */
-    @SerializedName("Memory")
-    @Expose
-    private Integer Memory;
-
-    /**
-    * 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
-    */
-    @SerializedName("Volume")
-    @Expose
-    private Integer Volume;
 
     /**
     * 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
@@ -161,6 +161,54 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     private String InstanceName;
 
     /**
+     * 获取实例数量，默认值为1, 最小值1，最大值为100
+     * @return GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
+     */
+    public Integer getGoodsNum() {
+        return this.GoodsNum;
+    }
+
+    /**
+     * 设置实例数量，默认值为1, 最小值1，最大值为100
+     * @param GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
+     */
+    public void setGoodsNum(Integer GoodsNum) {
+        this.GoodsNum = GoodsNum;
+    }
+
+    /**
+     * 获取实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+     * @return Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+     */
+    public Integer getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * 设置实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+     * @param Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+     */
+    public void setMemory(Integer Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * 获取实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
+     * @return Volume 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
+     */
+    public Integer getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * 设置实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
+     * @param Volume 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
+     */
+    public void setVolume(Integer Volume) {
+        this.Volume = Volume;
+    }
+
+    /**
      * 获取MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
      * @return EngineVersion MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
      */
@@ -222,54 +270,6 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
      */
     public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
-    }
-
-    /**
-     * 获取实例数量，默认值为1, 最小值1，最大值为100
-     * @return GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
-     */
-    public Integer getGoodsNum() {
-        return this.GoodsNum;
-    }
-
-    /**
-     * 设置实例数量，默认值为1, 最小值1，最大值为100
-     * @param GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
-     */
-    public void setGoodsNum(Integer GoodsNum) {
-        this.GoodsNum = GoodsNum;
-    }
-
-    /**
-     * 获取实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
-     * @return Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
-     */
-    public Integer getMemory() {
-        return this.Memory;
-    }
-
-    /**
-     * 设置实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
-     * @param Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
-     */
-    public void setMemory(Integer Memory) {
-        this.Memory = Memory;
-    }
-
-    /**
-     * 获取实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
-     * @return Volume 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
-     */
-    public Integer getVolume() {
-        return this.Volume;
-    }
-
-    /**
-     * 设置实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
-     * @param Volume 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
-     */
-    public void setVolume(Integer Volume) {
-        this.Volume = Volume;
     }
 
     /**
@@ -516,13 +516,13 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
-        this.setParamSimple(map, prefix + "Memory", this.Memory);
-        this.setParamSimple(map, prefix + "Volume", this.Volume);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "MasterInstanceId", this.MasterInstanceId);
         this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);

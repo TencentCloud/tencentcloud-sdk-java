@@ -7,18 +7,18 @@ public class RoGroup  extends AbstractModel{
 
 
     /**
-    * 只读组ID
-    */
-    @SerializedName("RoGroupId")
-    @Expose
-    private String RoGroupId;
-
-    /**
     * 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
     */
     @SerializedName("RoGroupMode")
     @Expose
     private String RoGroupMode;
+
+    /**
+    * 只读组ID
+    */
+    @SerializedName("RoGroupId")
+    @Expose
+    private String RoGroupId;
 
     /**
     * 只读组名称
@@ -63,20 +63,25 @@ public class RoGroup  extends AbstractModel{
     private Integer Weight;
 
     /**
-     * 获取只读组ID
-     * @return RoGroupId 只读组ID
-     */
-    public String getRoGroupId() {
-        return this.RoGroupId;
-    }
+    * 只读组中的只读实例详情
+    */
+    @SerializedName("RoInstances")
+    @Expose
+    private RoInstanceInfo [] RoInstances;
 
     /**
-     * 设置只读组ID
-     * @param RoGroupId 只读组ID
-     */
-    public void setRoGroupId(String RoGroupId) {
-        this.RoGroupId = RoGroupId;
-    }
+    * 只读组的内网IP
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
+    * 只读组的内网端口号
+    */
+    @SerializedName("Vport")
+    @Expose
+    private Integer Vport;
 
     /**
      * 获取只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
@@ -92,6 +97,22 @@ public class RoGroup  extends AbstractModel{
      */
     public void setRoGroupMode(String RoGroupMode) {
         this.RoGroupMode = RoGroupMode;
+    }
+
+    /**
+     * 获取只读组ID
+     * @return RoGroupId 只读组ID
+     */
+    public String getRoGroupId() {
+        return this.RoGroupId;
+    }
+
+    /**
+     * 设置只读组ID
+     * @param RoGroupId 只读组ID
+     */
+    public void setRoGroupId(String RoGroupId) {
+        this.RoGroupId = RoGroupId;
     }
 
     /**
@@ -191,17 +212,68 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
+     * 获取只读组中的只读实例详情
+     * @return RoInstances 只读组中的只读实例详情
+     */
+    public RoInstanceInfo [] getRoInstances() {
+        return this.RoInstances;
+    }
+
+    /**
+     * 设置只读组中的只读实例详情
+     * @param RoInstances 只读组中的只读实例详情
+     */
+    public void setRoInstances(RoInstanceInfo [] RoInstances) {
+        this.RoInstances = RoInstances;
+    }
+
+    /**
+     * 获取只读组的内网IP
+     * @return Vip 只读组的内网IP
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * 设置只读组的内网IP
+     * @param Vip 只读组的内网IP
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
+     * 获取只读组的内网端口号
+     * @return Vport 只读组的内网端口号
+     */
+    public Integer getVport() {
+        return this.Vport;
+    }
+
+    /**
+     * 设置只读组的内网端口号
+     * @param Vport 只读组的内网端口号
+     */
+    public void setVport(Integer Vport) {
+        this.Vport = Vport;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RoGroupId", this.RoGroupId);
         this.setParamSimple(map, prefix + "RoGroupMode", this.RoGroupMode);
+        this.setParamSimple(map, prefix + "RoGroupId", this.RoGroupId);
         this.setParamSimple(map, prefix + "RoGroupName", this.RoGroupName);
         this.setParamSimple(map, prefix + "RoOfflineDelay", this.RoOfflineDelay);
         this.setParamSimple(map, prefix + "RoMaxDelayTime", this.RoMaxDelayTime);
         this.setParamSimple(map, prefix + "MinRoInGroup", this.MinRoInGroup);
         this.setParamSimple(map, prefix + "WeightMode", this.WeightMode);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamArrayObj(map, prefix + "RoInstances.", this.RoInstances);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "Vport", this.Vport);
 
     }
 }
