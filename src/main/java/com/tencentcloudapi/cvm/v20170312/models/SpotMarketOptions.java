@@ -14,7 +14,7 @@ public class SpotMarketOptions  extends AbstractModel{
     private String MaxPrice;
 
     /**
-    * 竞价请求类型
+    * 竞价请求类型，当前仅支持类型：one-time
     */
     @SerializedName("SpotInstanceType")
     @Expose
@@ -37,16 +37,16 @@ public class SpotMarketOptions  extends AbstractModel{
     }
 
     /**
-     * 获取竞价请求类型
-     * @return SpotInstanceType 竞价请求类型
+     * 获取竞价请求类型，当前仅支持类型：one-time
+     * @return SpotInstanceType 竞价请求类型，当前仅支持类型：one-time
      */
     public String getSpotInstanceType() {
         return this.SpotInstanceType;
     }
 
     /**
-     * 设置竞价请求类型
-     * @param SpotInstanceType 竞价请求类型
+     * 设置竞价请求类型，当前仅支持类型：one-time
+     * @param SpotInstanceType 竞价请求类型，当前仅支持类型：one-time
      */
     public void setSpotInstanceType(String SpotInstanceType) {
         this.SpotInstanceType = SpotInstanceType;

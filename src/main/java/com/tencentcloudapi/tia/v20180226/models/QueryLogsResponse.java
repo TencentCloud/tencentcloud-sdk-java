@@ -1,0 +1,112 @@
+package com.tencentcloudapi.tia.v20180226.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class QueryLogsResponse  extends AbstractModel{
+
+
+    /**
+    * 日志查询上下文，用于加载更多日志
+    */
+    @SerializedName("Context")
+    @Expose
+    private String Context;
+
+    /**
+    * 日志内容列表
+    */
+    @SerializedName("Logs")
+    @Expose
+    private Log [] Logs;
+
+    /**
+    * 是否已经返回所有符合条件的日志
+    */
+    @SerializedName("Listover")
+    @Expose
+    private Boolean Listover;
+
+    /**
+    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * 获取日志查询上下文，用于加载更多日志
+     * @return Context 日志查询上下文，用于加载更多日志
+     */
+    public String getContext() {
+        return this.Context;
+    }
+
+    /**
+     * 设置日志查询上下文，用于加载更多日志
+     * @param Context 日志查询上下文，用于加载更多日志
+     */
+    public void setContext(String Context) {
+        this.Context = Context;
+    }
+
+    /**
+     * 获取日志内容列表
+     * @return Logs 日志内容列表
+     */
+    public Log [] getLogs() {
+        return this.Logs;
+    }
+
+    /**
+     * 设置日志内容列表
+     * @param Logs 日志内容列表
+     */
+    public void setLogs(Log [] Logs) {
+        this.Logs = Logs;
+    }
+
+    /**
+     * 获取是否已经返回所有符合条件的日志
+     * @return Listover 是否已经返回所有符合条件的日志
+     */
+    public Boolean getListover() {
+        return this.Listover;
+    }
+
+    /**
+     * 设置是否已经返回所有符合条件的日志
+     * @param Listover 是否已经返回所有符合条件的日志
+     */
+    public void setListover(Boolean Listover) {
+        this.Listover = Listover;
+    }
+
+    /**
+     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Context", this.Context);
+        this.setParamArrayObj(map, prefix + "Logs.", this.Logs);
+        this.setParamSimple(map, prefix + "Listover", this.Listover);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

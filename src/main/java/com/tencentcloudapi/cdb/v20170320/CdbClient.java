@@ -303,24 +303,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeBackupDownloadDbTableCode)用于查询备份数据分库分表下载位点。
-     * @param req DescribeBackupDownloadDbTableCodeRequest
-     * @return DescribeBackupDownloadDbTableCodeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBackupDownloadDbTableCodeResponse  DescribeBackupDownloadDbTableCode(DescribeBackupDownloadDbTableCodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupDownloadDbTableCodeResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadDbTableCodeResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackupDownloadDbTableCode"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口(DescribeBackupTables)用于查询指定的数据库的备份数据表名。
      * @param req DescribeBackupTablesRequest
      * @return DescribeBackupTablesResponse

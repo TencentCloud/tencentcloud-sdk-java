@@ -14,7 +14,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     private String Text;
 
     /**
-    * 一次请求对应一个SessionId，会原样返回
+    * 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
     */
     @SerializedName("SessionId")
     @Expose
@@ -86,16 +86,16 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一次请求对应一个SessionId，会原样返回
-     * @return SessionId 一次请求对应一个SessionId，会原样返回
+     * 获取一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
+     * @return SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * 设置一次请求对应一个SessionId，会原样返回
-     * @param SessionId 一次请求对应一个SessionId，会原样返回
+     * 设置一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
+     * @param SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

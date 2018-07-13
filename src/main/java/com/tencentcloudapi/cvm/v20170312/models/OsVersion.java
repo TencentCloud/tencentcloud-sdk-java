@@ -21,6 +21,13 @@ public class OsVersion  extends AbstractModel{
     private String [] OsVersions;
 
     /**
+    * 支持的操作系统架构
+    */
+    @SerializedName("Architecture")
+    @Expose
+    private String [] Architecture;
+
+    /**
      * 获取操作系统类型
      * @return OsName 操作系统类型
      */
@@ -53,11 +60,28 @@ public class OsVersion  extends AbstractModel{
     }
 
     /**
+     * 获取支持的操作系统架构
+     * @return Architecture 支持的操作系统架构
+     */
+    public String [] getArchitecture() {
+        return this.Architecture;
+    }
+
+    /**
+     * 设置支持的操作系统架构
+     * @param Architecture 支持的操作系统架构
+     */
+    public void setArchitecture(String [] Architecture) {
+        this.Architecture = Architecture;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamArraySimple(map, prefix + "OsVersions.", this.OsVersions);
+        this.setParamArraySimple(map, prefix + "Architecture.", this.Architecture);
 
     }
 }
