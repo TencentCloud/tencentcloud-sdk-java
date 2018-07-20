@@ -1,0 +1,64 @@
+package com.tencentcloudapi.tbm.v20180129.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class AgePortrait  extends AbstractModel{
+
+
+    /**
+    * 年龄区间
+    */
+    @SerializedName("AgeRange")
+    @Expose
+    private String AgeRange;
+
+    /**
+    * 百分比
+    */
+    @SerializedName("Percent")
+    @Expose
+    private Float Percent;
+
+    /**
+     * 获取年龄区间
+     * @return AgeRange 年龄区间
+     */
+    public String getAgeRange() {
+        return this.AgeRange;
+    }
+
+    /**
+     * 设置年龄区间
+     * @param AgeRange 年龄区间
+     */
+    public void setAgeRange(String AgeRange) {
+        this.AgeRange = AgeRange;
+    }
+
+    /**
+     * 获取百分比
+     * @return Percent 百分比
+     */
+    public Float getPercent() {
+        return this.Percent;
+    }
+
+    /**
+     * 设置百分比
+     * @param Percent 百分比
+     */
+    public void setPercent(Float Percent) {
+        this.Percent = Percent;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AgeRange", this.AgeRange);
+        this.setParamSimple(map, prefix + "Percent", this.Percent);
+
+    }
+}
+

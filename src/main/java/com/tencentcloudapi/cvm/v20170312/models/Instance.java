@@ -35,6 +35,13 @@ public class Instance  extends AbstractModel{
     private String InstanceState;
 
     /**
+    * 实例关联的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
     * 实例所在的位置。
     */
     @SerializedName("Placement")
@@ -222,6 +229,22 @@ public class Instance  extends AbstractModel{
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
+    }
+
+    /**
+     * 获取实例关联的标签列表。
+     * @return Tags 实例关联的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置实例关联的标签列表。
+     * @param Tags 实例关联的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     /**
@@ -520,6 +543,7 @@ public class Instance  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);

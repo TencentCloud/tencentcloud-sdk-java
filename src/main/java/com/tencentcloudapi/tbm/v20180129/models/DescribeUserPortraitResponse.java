@@ -1,0 +1,160 @@
+package com.tencentcloudapi.tbm.v20180129.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class DescribeUserPortraitResponse  extends AbstractModel{
+
+
+    /**
+    * 年龄画像
+    */
+    @SerializedName("Age")
+    @Expose
+    private AgePortraitInfo Age;
+
+    /**
+    * 性别画像
+    */
+    @SerializedName("Gender")
+    @Expose
+    private GenderPortraitInfo Gender;
+
+    /**
+    * 省份画像
+    */
+    @SerializedName("Province")
+    @Expose
+    private ProvincePortraitInfo Province;
+
+    /**
+    * 电影喜好画像
+    */
+    @SerializedName("Movie")
+    @Expose
+    private MoviePortraitInfo Movie;
+
+    /**
+    * 明星喜好画像
+    */
+    @SerializedName("Star")
+    @Expose
+    private StarPortraitInfo Star;
+
+    /**
+    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * 获取年龄画像
+     * @return Age 年龄画像
+     */
+    public AgePortraitInfo getAge() {
+        return this.Age;
+    }
+
+    /**
+     * 设置年龄画像
+     * @param Age 年龄画像
+     */
+    public void setAge(AgePortraitInfo Age) {
+        this.Age = Age;
+    }
+
+    /**
+     * 获取性别画像
+     * @return Gender 性别画像
+     */
+    public GenderPortraitInfo getGender() {
+        return this.Gender;
+    }
+
+    /**
+     * 设置性别画像
+     * @param Gender 性别画像
+     */
+    public void setGender(GenderPortraitInfo Gender) {
+        this.Gender = Gender;
+    }
+
+    /**
+     * 获取省份画像
+     * @return Province 省份画像
+     */
+    public ProvincePortraitInfo getProvince() {
+        return this.Province;
+    }
+
+    /**
+     * 设置省份画像
+     * @param Province 省份画像
+     */
+    public void setProvince(ProvincePortraitInfo Province) {
+        this.Province = Province;
+    }
+
+    /**
+     * 获取电影喜好画像
+     * @return Movie 电影喜好画像
+     */
+    public MoviePortraitInfo getMovie() {
+        return this.Movie;
+    }
+
+    /**
+     * 设置电影喜好画像
+     * @param Movie 电影喜好画像
+     */
+    public void setMovie(MoviePortraitInfo Movie) {
+        this.Movie = Movie;
+    }
+
+    /**
+     * 获取明星喜好画像
+     * @return Star 明星喜好画像
+     */
+    public StarPortraitInfo getStar() {
+        return this.Star;
+    }
+
+    /**
+     * 设置明星喜好画像
+     * @param Star 明星喜好画像
+     */
+    public void setStar(StarPortraitInfo Star) {
+        this.Star = Star;
+    }
+
+    /**
+     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Age.", this.Age);
+        this.setParamObj(map, prefix + "Gender.", this.Gender);
+        this.setParamObj(map, prefix + "Province.", this.Province);
+        this.setParamObj(map, prefix + "Movie.", this.Movie);
+        this.setParamObj(map, prefix + "Star.", this.Star);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+
