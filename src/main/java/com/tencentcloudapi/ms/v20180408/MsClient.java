@@ -52,6 +52,24 @@ public class MsClient extends AbstractClient{
     }
 
     /**
+     *将应用和资源进行绑定
+     * @param req CreateBindInstanceRequest
+     * @return CreateBindInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBindInstanceResponse  CreateBindInstance(CreateBindInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBindInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBindInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateBindInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用户通过该接口批量提交应用进行应用扫描，扫描后需通过DescribeScanResults接口查询扫描结果
      * @param req CreateScanInstancesRequest
      * @return CreateScanInstancesResponse
@@ -88,6 +106,24 @@ public class MsClient extends AbstractClient{
     }
 
     /**
+     *对资源进行策略新增
+     * @param req CreateShieldPlanInstanceRequest
+     * @return CreateShieldPlanInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateShieldPlanInstanceResponse  CreateShieldPlanInstance(CreateShieldPlanInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateShieldPlanInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateShieldPlanInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateShieldPlanInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除一个或者多个app扫描信息
      * @param req DeleteScanInstancesRequest
      * @return DeleteScanInstancesResponse
@@ -117,6 +153,24 @@ public class MsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteShieldInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteShieldInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取某个用户的所有资源信息
+     * @param req DescribeResourceInstancesRequest
+     * @return DescribeResourceInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceInstancesResponse  DescribeResourceInstances(DescribeResourceInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeResourceInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -174,6 +228,24 @@ public class MsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeShieldInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeShieldInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询加固策略
+     * @param req DescribeShieldPlanInstanceRequest
+     * @return DescribeShieldPlanInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShieldPlanInstanceResponse  DescribeShieldPlanInstance(DescribeShieldPlanInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeShieldPlanInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeShieldPlanInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeShieldPlanInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

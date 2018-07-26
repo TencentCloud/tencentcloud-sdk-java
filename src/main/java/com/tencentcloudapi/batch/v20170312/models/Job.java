@@ -14,13 +14,6 @@ public class Job  extends AbstractModel{
     private String JobName;
 
     /**
-    * 作业描述
-    */
-    @SerializedName("JobDescription")
-    @Expose
-    private String JobDescription;
-
-    /**
     * 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
     */
     @SerializedName("Priority")
@@ -33,6 +26,13 @@ public class Job  extends AbstractModel{
     @SerializedName("Tasks")
     @Expose
     private Task [] Tasks;
+
+    /**
+    * 作业描述
+    */
+    @SerializedName("JobDescription")
+    @Expose
+    private String JobDescription;
 
     /**
     * 依赖信息
@@ -79,22 +79,6 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取作业描述
-     * @return JobDescription 作业描述
-     */
-    public String getJobDescription() {
-        return this.JobDescription;
-    }
-
-    /**
-     * 设置作业描述
-     * @param JobDescription 作业描述
-     */
-    public void setJobDescription(String JobDescription) {
-        this.JobDescription = JobDescription;
-    }
-
-    /**
      * 获取作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      * @return Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      */
@@ -124,6 +108,22 @@ public class Job  extends AbstractModel{
      */
     public void setTasks(Task [] Tasks) {
         this.Tasks = Tasks;
+    }
+
+    /**
+     * 获取作业描述
+     * @return JobDescription 作业描述
+     */
+    public String getJobDescription() {
+        return this.JobDescription;
+    }
+
+    /**
+     * 设置作业描述
+     * @param JobDescription 作业描述
+     */
+    public void setJobDescription(String JobDescription) {
+        this.JobDescription = JobDescription;
     }
 
     /**
@@ -195,9 +195,9 @@ public class Job  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobName", this.JobName);
-        this.setParamSimple(map, prefix + "JobDescription", this.JobDescription);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "JobDescription", this.JobDescription);
         this.setParamArrayObj(map, prefix + "Dependences.", this.Dependences);
         this.setParamArrayObj(map, prefix + "Notifications.", this.Notifications);
         this.setParamSimple(map, prefix + "TaskExecutionDependOn", this.TaskExecutionDependOn);

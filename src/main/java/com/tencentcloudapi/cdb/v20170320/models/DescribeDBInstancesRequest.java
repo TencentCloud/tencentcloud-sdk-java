@@ -28,7 +28,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private String [] Vips;
 
     /**
-    * 实例状态，可取值：0-创建中，1-运行中，4-删除中，5-隔离中
+    * 实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
     */
     @SerializedName("Status")
     @Expose
@@ -42,7 +42,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 单次请求返回的数量，默认值为20，最大值为100
+    * 单次请求返回的数量，默认值为20，最大值为2000
     */
     @SerializedName("Limit")
     @Expose
@@ -230,16 +230,16 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态，可取值：0-创建中，1-运行中，4-删除中，5-隔离中
-     * @return Status 实例状态，可取值：0-创建中，1-运行中，4-删除中，5-隔离中
+     * 获取实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
+     * @return Status 实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
      */
     public Integer [] getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置实例状态，可取值：0-创建中，1-运行中，4-删除中，5-隔离中
-     * @param Status 实例状态，可取值：0-创建中，1-运行中，4-删除中，5-隔离中
+     * 设置实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
+     * @param Status 实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
      */
     public void setStatus(Integer [] Status) {
         this.Status = Status;
@@ -262,16 +262,16 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次请求返回的数量，默认值为20，最大值为100
-     * @return Limit 单次请求返回的数量，默认值为20，最大值为100
+     * 获取单次请求返回的数量，默认值为20，最大值为2000
+     * @return Limit 单次请求返回的数量，默认值为20，最大值为2000
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置单次请求返回的数量，默认值为20，最大值为100
-     * @param Limit 单次请求返回的数量，默认值为20，最大值为100
+     * 设置单次请求返回的数量，默认值为20，最大值为2000
+     * @param Limit 单次请求返回的数量，默认值为20，最大值为2000
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

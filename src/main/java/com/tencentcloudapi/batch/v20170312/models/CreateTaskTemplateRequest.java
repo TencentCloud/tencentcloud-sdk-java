@@ -14,18 +14,18 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     private String TaskTemplateName;
 
     /**
-    * 任务模板描述
-    */
-    @SerializedName("TaskTemplateDescription")
-    @Expose
-    private String TaskTemplateDescription;
-
-    /**
     * 任务模板内容，参数要求与任务一致
     */
     @SerializedName("TaskTemplateInfo")
     @Expose
     private Task TaskTemplateInfo;
+
+    /**
+    * 任务模板描述
+    */
+    @SerializedName("TaskTemplateDescription")
+    @Expose
+    private String TaskTemplateDescription;
 
     /**
      * 获取任务模板名称
@@ -41,22 +41,6 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
      */
     public void setTaskTemplateName(String TaskTemplateName) {
         this.TaskTemplateName = TaskTemplateName;
-    }
-
-    /**
-     * 获取任务模板描述
-     * @return TaskTemplateDescription 任务模板描述
-     */
-    public String getTaskTemplateDescription() {
-        return this.TaskTemplateDescription;
-    }
-
-    /**
-     * 设置任务模板描述
-     * @param TaskTemplateDescription 任务模板描述
-     */
-    public void setTaskTemplateDescription(String TaskTemplateDescription) {
-        this.TaskTemplateDescription = TaskTemplateDescription;
     }
 
     /**
@@ -76,12 +60,28 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
+     * 获取任务模板描述
+     * @return TaskTemplateDescription 任务模板描述
+     */
+    public String getTaskTemplateDescription() {
+        return this.TaskTemplateDescription;
+    }
+
+    /**
+     * 设置任务模板描述
+     * @param TaskTemplateDescription 任务模板描述
+     */
+    public void setTaskTemplateDescription(String TaskTemplateDescription) {
+        this.TaskTemplateDescription = TaskTemplateDescription;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskTemplateName", this.TaskTemplateName);
-        this.setParamSimple(map, prefix + "TaskTemplateDescription", this.TaskTemplateDescription);
         this.setParamObj(map, prefix + "TaskTemplateInfo.", this.TaskTemplateInfo);
+        this.setParamSimple(map, prefix + "TaskTemplateDescription", this.TaskTemplateDescription);
 
     }
 }

@@ -7,6 +7,27 @@ public class Image  extends AbstractModel{
 
 
     /**
+    * 镜像ID
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
+    * 镜像操作系统
+    */
+    @SerializedName("OsName")
+    @Expose
+    private String OsName;
+
+    /**
+    * 镜像类型
+    */
+    @SerializedName("ImageType")
+    @Expose
+    private String ImageType;
+
+    /**
     * 镜像创建时间
     */
     @SerializedName("CreatedTime")
@@ -49,27 +70,6 @@ public class Image  extends AbstractModel{
     private String ImageState;
 
     /**
-    * 镜像ID
-    */
-    @SerializedName("ImageId")
-    @Expose
-    private String ImageId;
-
-    /**
-    * 镜像操作系统
-    */
-    @SerializedName("OsName")
-    @Expose
-    private String OsName;
-
-    /**
-    * 镜像类型
-    */
-    @SerializedName("ImageType")
-    @Expose
-    private String ImageType;
-
-    /**
     * 镜像来源平台
     */
     @SerializedName("Platform")
@@ -89,6 +89,54 @@ public class Image  extends AbstractModel{
     @SerializedName("ImageSource")
     @Expose
     private String ImageSource;
+
+    /**
+     * 获取镜像ID
+     * @return ImageId 镜像ID
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * 设置镜像ID
+     * @param ImageId 镜像ID
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
+    /**
+     * 获取镜像操作系统
+     * @return OsName 镜像操作系统
+     */
+    public String getOsName() {
+        return this.OsName;
+    }
+
+    /**
+     * 设置镜像操作系统
+     * @param OsName 镜像操作系统
+     */
+    public void setOsName(String OsName) {
+        this.OsName = OsName;
+    }
+
+    /**
+     * 获取镜像类型
+     * @return ImageType 镜像类型
+     */
+    public String getImageType() {
+        return this.ImageType;
+    }
+
+    /**
+     * 设置镜像类型
+     * @param ImageType 镜像类型
+     */
+    public void setImageType(String ImageType) {
+        this.ImageType = ImageType;
+    }
 
     /**
      * 获取镜像创建时间
@@ -187,54 +235,6 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像ID
-     * @return ImageId 镜像ID
-     */
-    public String getImageId() {
-        return this.ImageId;
-    }
-
-    /**
-     * 设置镜像ID
-     * @param ImageId 镜像ID
-     */
-    public void setImageId(String ImageId) {
-        this.ImageId = ImageId;
-    }
-
-    /**
-     * 获取镜像操作系统
-     * @return OsName 镜像操作系统
-     */
-    public String getOsName() {
-        return this.OsName;
-    }
-
-    /**
-     * 设置镜像操作系统
-     * @param OsName 镜像操作系统
-     */
-    public void setOsName(String OsName) {
-        this.OsName = OsName;
-    }
-
-    /**
-     * 获取镜像类型
-     * @return ImageType 镜像类型
-     */
-    public String getImageType() {
-        return this.ImageType;
-    }
-
-    /**
-     * 设置镜像类型
-     * @param ImageType 镜像类型
-     */
-    public void setImageType(String ImageType) {
-        this.ImageType = ImageType;
-    }
-
-    /**
      * 获取镜像来源平台
      * @return Platform 镜像来源平台
      */
@@ -286,15 +286,15 @@ public class Image  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "OsName", this.OsName);
+        this.setParamSimple(map, prefix + "ImageType", this.ImageType);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
         this.setParamSimple(map, prefix + "ImageSize", this.ImageSize);
         this.setParamSimple(map, prefix + "Architecture", this.Architecture);
         this.setParamSimple(map, prefix + "ImageState", this.ImageState);
-        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
-        this.setParamSimple(map, prefix + "OsName", this.OsName);
-        this.setParamSimple(map, prefix + "ImageType", this.ImageType);
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "ImageCreator", this.ImageCreator);
         this.setParamSimple(map, prefix + "ImageSource", this.ImageSource);

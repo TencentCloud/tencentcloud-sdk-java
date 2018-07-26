@@ -18,7 +18,7 @@ public class DeleteRoutesRequest  extends AbstractModel{
     */
     @SerializedName("Routes")
     @Expose
-    private String [] Routes;
+    private Route [] Routes;
 
     /**
      * 获取路由表实例ID。
@@ -40,7 +40,7 @@ public class DeleteRoutesRequest  extends AbstractModel{
      * 获取路由策略对象。
      * @return Routes 路由策略对象。
      */
-    public String [] getRoutes() {
+    public Route [] getRoutes() {
         return this.Routes;
     }
 
@@ -48,7 +48,7 @@ public class DeleteRoutesRequest  extends AbstractModel{
      * 设置路由策略对象。
      * @param Routes 路由策略对象。
      */
-    public void setRoutes(String [] Routes) {
+    public void setRoutes(Route [] Routes) {
         this.Routes = Routes;
     }
 
@@ -57,7 +57,7 @@ public class DeleteRoutesRequest  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
-        this.setParamArraySimple(map, prefix + "Routes.", this.Routes);
+        this.setParamArrayObj(map, prefix + "Routes.", this.Routes);
 
     }
 }

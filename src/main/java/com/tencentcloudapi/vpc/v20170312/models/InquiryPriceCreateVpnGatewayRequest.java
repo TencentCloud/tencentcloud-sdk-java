@@ -7,6 +7,13 @@ public class InquiryPriceCreateVpnGatewayRequest  extends AbstractModel{
 
 
     /**
+    * 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+    */
+    @SerializedName("InternetMaxBandwidthOut")
+    @Expose
+    private Integer InternetMaxBandwidthOut;
+
+    /**
     * VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。
     */
     @SerializedName("InstanceChargeType")
@@ -21,11 +28,20 @@ public class InquiryPriceCreateVpnGatewayRequest  extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
-    */
-    @SerializedName("InternetMaxBandwidthOut")
-    @Expose
-    private Integer InternetMaxBandwidthOut;
+     * 获取公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     */
+    public Integer getInternetMaxBandwidthOut() {
+        return this.InternetMaxBandwidthOut;
+    }
+
+    /**
+     * 设置公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     * @param InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     */
+    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
+        this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
+    }
 
     /**
      * 获取VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。
@@ -60,28 +76,12 @@ public class InquiryPriceCreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
-     * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
-     */
-    public Integer getInternetMaxBandwidthOut() {
-        return this.InternetMaxBandwidthOut;
-    }
-
-    /**
-     * 设置公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
-     * @param InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
-     */
-    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
-        this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
-        this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
 
     }
 }

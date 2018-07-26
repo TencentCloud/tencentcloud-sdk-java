@@ -7,41 +7,6 @@ public class Instance  extends AbstractModel{
 
 
     /**
-    * 操作系统名称。
-    */
-    @SerializedName("OsName")
-    @Expose
-    private String OsName;
-
-    /**
-    * 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
-    */
-    @SerializedName("SecurityGroupIds")
-    @Expose
-    private String [] SecurityGroupIds;
-
-    /**
-    * 实例登录设置。目前只返回实例所关联的密钥。
-    */
-    @SerializedName("LoginSettings")
-    @Expose
-    private LoginSettings LoginSettings;
-
-    /**
-    * 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
-    */
-    @SerializedName("InstanceState")
-    @Expose
-    private String InstanceState;
-
-    /**
-    * 实例关联的标签列表。
-    */
-    @SerializedName("Tags")
-    @Expose
-    private Tag [] Tags;
-
-    /**
     * 实例所在的位置。
     */
     @SerializedName("Placement")
@@ -168,84 +133,39 @@ public class Instance  extends AbstractModel{
     private String ExpiredTime;
 
     /**
-     * 获取操作系统名称。
-     * @return OsName 操作系统名称。
-     */
-    public String getOsName() {
-        return this.OsName;
-    }
+    * 操作系统名称。
+    */
+    @SerializedName("OsName")
+    @Expose
+    private String OsName;
 
     /**
-     * 设置操作系统名称。
-     * @param OsName 操作系统名称。
-     */
-    public void setOsName(String OsName) {
-        this.OsName = OsName;
-    }
+    * 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
 
     /**
-     * 获取实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
-     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
-     */
-    public String [] getSecurityGroupIds() {
-        return this.SecurityGroupIds;
-    }
+    * 实例登录设置。目前只返回实例所关联的密钥。
+    */
+    @SerializedName("LoginSettings")
+    @Expose
+    private LoginSettings LoginSettings;
 
     /**
-     * 设置实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
-     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
-     */
-    public void setSecurityGroupIds(String [] SecurityGroupIds) {
-        this.SecurityGroupIds = SecurityGroupIds;
-    }
+    * 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+    */
+    @SerializedName("InstanceState")
+    @Expose
+    private String InstanceState;
 
     /**
-     * 获取实例登录设置。目前只返回实例所关联的密钥。
-     * @return LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
-     */
-    public LoginSettings getLoginSettings() {
-        return this.LoginSettings;
-    }
-
-    /**
-     * 设置实例登录设置。目前只返回实例所关联的密钥。
-     * @param LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
-     */
-    public void setLoginSettings(LoginSettings LoginSettings) {
-        this.LoginSettings = LoginSettings;
-    }
-
-    /**
-     * 获取实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
-     * @return InstanceState 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
-     */
-    public String getInstanceState() {
-        return this.InstanceState;
-    }
-
-    /**
-     * 设置实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
-     * @param InstanceState 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
-     */
-    public void setInstanceState(String InstanceState) {
-        this.InstanceState = InstanceState;
-    }
-
-    /**
-     * 获取实例关联的标签列表。
-     * @return Tags 实例关联的标签列表。
-     */
-    public Tag [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * 设置实例关联的标签列表。
-     * @param Tags 实例关联的标签列表。
-     */
-    public void setTags(Tag [] Tags) {
-        this.Tags = Tags;
-    }
+    * 实例关联的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * 获取实例所在的位置。
@@ -536,14 +456,89 @@ public class Instance  extends AbstractModel{
     }
 
     /**
+     * 获取操作系统名称。
+     * @return OsName 操作系统名称。
+     */
+    public String getOsName() {
+        return this.OsName;
+    }
+
+    /**
+     * 设置操作系统名称。
+     * @param OsName 操作系统名称。
+     */
+    public void setOsName(String OsName) {
+        this.OsName = OsName;
+    }
+
+    /**
+     * 获取实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * 设置实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * 获取实例登录设置。目前只返回实例所关联的密钥。
+     * @return LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
+     */
+    public LoginSettings getLoginSettings() {
+        return this.LoginSettings;
+    }
+
+    /**
+     * 设置实例登录设置。目前只返回实例所关联的密钥。
+     * @param LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
+     */
+    public void setLoginSettings(LoginSettings LoginSettings) {
+        this.LoginSettings = LoginSettings;
+    }
+
+    /**
+     * 获取实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+     * @return InstanceState 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+     */
+    public String getInstanceState() {
+        return this.InstanceState;
+    }
+
+    /**
+     * 设置实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+     * @param InstanceState 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+     */
+    public void setInstanceState(String InstanceState) {
+        this.InstanceState = InstanceState;
+    }
+
+    /**
+     * 获取实例关联的标签列表。
+     * @return Tags 实例关联的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置实例关联的标签列表。
+     * @param Tags 实例关联的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OsName", this.OsName);
-        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
-        this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
-        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
@@ -562,6 +557,11 @@ public class Instance  extends AbstractModel{
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+        this.setParamSimple(map, prefix + "OsName", this.OsName);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

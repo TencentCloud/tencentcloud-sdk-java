@@ -21,18 +21,18 @@ public class Docker  extends AbstractModel{
     private String Password;
 
     /**
-    * Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
-    */
-    @SerializedName("Server")
-    @Expose
-    private String Server;
-
-    /**
     * Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
     */
     @SerializedName("Image")
     @Expose
     private String Image;
+
+    /**
+    * Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
+    */
+    @SerializedName("Server")
+    @Expose
+    private String Server;
 
     /**
      * 获取Docker Hub 用户名或 Tencent Registry 用户名
@@ -67,22 +67,6 @@ public class Docker  extends AbstractModel{
     }
 
     /**
-     * 获取Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
-     * @return Server Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
-     */
-    public String getServer() {
-        return this.Server;
-    }
-
-    /**
-     * 设置Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
-     * @param Server Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
-     */
-    public void setServer(String Server) {
-        this.Server = Server;
-    }
-
-    /**
      * 获取Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
      * @return Image Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
      */
@@ -99,13 +83,29 @@ public class Docker  extends AbstractModel{
     }
 
     /**
+     * 获取Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
+     * @return Server Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
+     */
+    public String getServer() {
+        return this.Server;
+    }
+
+    /**
+     * 设置Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
+     * @param Server Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
+     */
+    public void setServer(String Server) {
+        this.Server = Server;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "User", this.User);
         this.setParamSimple(map, prefix + "Password", this.Password);
-        this.setParamSimple(map, prefix + "Server", this.Server);
         this.setParamSimple(map, prefix + "Image", this.Image);
+        this.setParamSimple(map, prefix + "Server", this.Server);
 
     }
 }

@@ -252,6 +252,24 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
+     *获取批量计算可用区机型配置信息
+     * @param req DescribeCvmZoneInstanceConfigInfosRequest
+     * @return DescribeCvmZoneInstanceConfigInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCvmZoneInstanceConfigInfosResponse  DescribeCvmZoneInstanceConfigInfos(DescribeCvmZoneInstanceConfigInfosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCvmZoneInstanceConfigInfos"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查看一个作业的详细信息，包括内部任务（Task）和依赖（Dependence）信息。
      * @param req DescribeJobRequest
      * @return DescribeJobResponse

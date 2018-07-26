@@ -3,7 +3,7 @@ import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
-public class Filters  extends AbstractModel{
+public class Filter  extends AbstractModel{
 
 
     /**

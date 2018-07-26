@@ -49,6 +49,27 @@ public class Vpc  extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * DNS列表
+    */
+    @SerializedName("DnsServerSet")
+    @Expose
+    private String [] DnsServerSet;
+
+    /**
+    * DHCP域名选项值
+    */
+    @SerializedName("DomainName")
+    @Expose
+    private String DomainName;
+
+    /**
+    * DHCP选项集ID
+    */
+    @SerializedName("DhcpOptionsId")
+    @Expose
+    private String DhcpOptionsId;
+
+    /**
      * 获取Vpc名称。
      * @return VpcName Vpc名称。
      */
@@ -145,6 +166,54 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
+     * 获取DNS列表
+     * @return DnsServerSet DNS列表
+     */
+    public String [] getDnsServerSet() {
+        return this.DnsServerSet;
+    }
+
+    /**
+     * 设置DNS列表
+     * @param DnsServerSet DNS列表
+     */
+    public void setDnsServerSet(String [] DnsServerSet) {
+        this.DnsServerSet = DnsServerSet;
+    }
+
+    /**
+     * 获取DHCP域名选项值
+     * @return DomainName DHCP域名选项值
+     */
+    public String getDomainName() {
+        return this.DomainName;
+    }
+
+    /**
+     * 设置DHCP域名选项值
+     * @param DomainName DHCP域名选项值
+     */
+    public void setDomainName(String DomainName) {
+        this.DomainName = DomainName;
+    }
+
+    /**
+     * 获取DHCP选项集ID
+     * @return DhcpOptionsId DHCP选项集ID
+     */
+    public String getDhcpOptionsId() {
+        return this.DhcpOptionsId;
+    }
+
+    /**
+     * 设置DHCP选项集ID
+     * @param DhcpOptionsId DHCP选项集ID
+     */
+    public void setDhcpOptionsId(String DhcpOptionsId) {
+        this.DhcpOptionsId = DhcpOptionsId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -154,6 +223,9 @@ public class Vpc  extends AbstractModel{
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "EnableMulticast", this.EnableMulticast);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArraySimple(map, prefix + "DnsServerSet.", this.DnsServerSet);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "DhcpOptionsId", this.DhcpOptionsId);
 
     }
 }

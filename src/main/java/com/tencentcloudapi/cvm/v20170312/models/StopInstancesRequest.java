@@ -28,13 +28,6 @@ public class StopInstancesRequest  extends AbstractModel{
     private String StopType;
 
     /**
-    * 关机收费模式<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<br>默认取值：KEEP_CHARGING。
-    */
-    @SerializedName("StoppedMode")
-    @Expose
-    private String StoppedMode;
-
-    /**
      * 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
      * @return InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
      */
@@ -83,29 +76,12 @@ public class StopInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关机收费模式<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<br>默认取值：KEEP_CHARGING。
-     * @return StoppedMode 关机收费模式<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<br>默认取值：KEEP_CHARGING。
-     */
-    public String getStoppedMode() {
-        return this.StoppedMode;
-    }
-
-    /**
-     * 设置关机收费模式<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<br>默认取值：KEEP_CHARGING。
-     * @param StoppedMode 关机收费模式<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<br>默认取值：KEEP_CHARGING。
-     */
-    public void setStoppedMode(String StoppedMode) {
-        this.StoppedMode = StoppedMode;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "ForceStop", this.ForceStop);
         this.setParamSimple(map, prefix + "StopType", this.StopType);
-        this.setParamSimple(map, prefix + "StoppedMode", this.StoppedMode);
 
     }
 }

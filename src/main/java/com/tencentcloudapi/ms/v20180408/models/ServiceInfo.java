@@ -28,6 +28,13 @@ public class ServiceInfo  extends AbstractModel{
     private String SubmitSource;
 
     /**
+    * 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
+    */
+    @SerializedName("PlanId")
+    @Expose
+    private Integer PlanId;
+
+    /**
      * 获取服务版本，基础版basic,专业版Professional
      * @return ServiceEdition 服务版本，基础版basic,专业版Professional
      */
@@ -76,12 +83,29 @@ public class ServiceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
+     * @return PlanId 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
+     */
+    public Integer getPlanId() {
+        return this.PlanId;
+    }
+
+    /**
+     * 设置加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
+     * @param PlanId 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
+     */
+    public void setPlanId(Integer PlanId) {
+        this.PlanId = PlanId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceEdition", this.ServiceEdition);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "SubmitSource", this.SubmitSource);
+        this.setParamSimple(map, prefix + "PlanId", this.PlanId);
 
     }
 }

@@ -1,0 +1,88 @@
+package com.tencentcloudapi.ms.v20180408.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class BindInfo  extends AbstractModel{
+
+
+    /**
+    * app的icon的url
+    */
+    @SerializedName("AppIconUrl")
+    @Expose
+    private String AppIconUrl;
+
+    /**
+    * app的名称
+    */
+    @SerializedName("AppName")
+    @Expose
+    private String AppName;
+
+    /**
+    * app的包名
+    */
+    @SerializedName("AppPkgName")
+    @Expose
+    private String AppPkgName;
+
+    /**
+     * 获取app的icon的url
+     * @return AppIconUrl app的icon的url
+     */
+    public String getAppIconUrl() {
+        return this.AppIconUrl;
+    }
+
+    /**
+     * 设置app的icon的url
+     * @param AppIconUrl app的icon的url
+     */
+    public void setAppIconUrl(String AppIconUrl) {
+        this.AppIconUrl = AppIconUrl;
+    }
+
+    /**
+     * 获取app的名称
+     * @return AppName app的名称
+     */
+    public String getAppName() {
+        return this.AppName;
+    }
+
+    /**
+     * 设置app的名称
+     * @param AppName app的名称
+     */
+    public void setAppName(String AppName) {
+        this.AppName = AppName;
+    }
+
+    /**
+     * 获取app的包名
+     * @return AppPkgName app的包名
+     */
+    public String getAppPkgName() {
+        return this.AppPkgName;
+    }
+
+    /**
+     * 设置app的包名
+     * @param AppPkgName app的包名
+     */
+    public void setAppPkgName(String AppPkgName) {
+        this.AppPkgName = AppPkgName;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AppIconUrl", this.AppIconUrl);
+        this.setParamSimple(map, prefix + "AppName", this.AppName);
+        this.setParamSimple(map, prefix + "AppPkgName", this.AppPkgName);
+
+    }
+}
+

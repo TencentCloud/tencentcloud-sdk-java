@@ -1,0 +1,136 @@
+package com.tencentcloudapi.scf.v20180416.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class DeleteTriggerRequest  extends AbstractModel{
+
+
+    /**
+    * 函数的名称
+    */
+    @SerializedName("FunctionName")
+    @Expose
+    private String FunctionName;
+
+    /**
+    * 要删除的触发器名称
+    */
+    @SerializedName("TriggerName")
+    @Expose
+    private String TriggerName;
+
+    /**
+    * 要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+    */
+    @SerializedName("TriggerDesc")
+    @Expose
+    private String TriggerDesc;
+
+    /**
+    * 函数的版本信息
+    */
+    @SerializedName("Qualifier")
+    @Expose
+    private String Qualifier;
+
+    /**
+     * 获取函数的名称
+     * @return FunctionName 函数的名称
+     */
+    public String getFunctionName() {
+        return this.FunctionName;
+    }
+
+    /**
+     * 设置函数的名称
+     * @param FunctionName 函数的名称
+     */
+    public void setFunctionName(String FunctionName) {
+        this.FunctionName = FunctionName;
+    }
+
+    /**
+     * 获取要删除的触发器名称
+     * @return TriggerName 要删除的触发器名称
+     */
+    public String getTriggerName() {
+        return this.TriggerName;
+    }
+
+    /**
+     * 设置要删除的触发器名称
+     * @param TriggerName 要删除的触发器名称
+     */
+    public void setTriggerName(String TriggerName) {
+        this.TriggerName = TriggerName;
+    }
+
+    /**
+     * 获取要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
+     * @return Type 要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * 设置要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
+     * @param Type 要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * 获取如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+     * @return TriggerDesc 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+     */
+    public String getTriggerDesc() {
+        return this.TriggerDesc;
+    }
+
+    /**
+     * 设置如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+     * @param TriggerDesc 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+     */
+    public void setTriggerDesc(String TriggerDesc) {
+        this.TriggerDesc = TriggerDesc;
+    }
+
+    /**
+     * 获取函数的版本信息
+     * @return Qualifier 函数的版本信息
+     */
+    public String getQualifier() {
+        return this.Qualifier;
+    }
+
+    /**
+     * 设置函数的版本信息
+     * @param Qualifier 函数的版本信息
+     */
+    public void setQualifier(String Qualifier) {
+        this.Qualifier = Qualifier;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
+        this.setParamSimple(map, prefix + "TriggerName", this.TriggerName);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "TriggerDesc", this.TriggerDesc);
+        this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
+
+    }
+}
+

@@ -147,6 +147,13 @@ public class InstanceInfo  extends AbstractModel{
     private Integer TaskStatus;
 
     /**
+    * 主实例信息
+    */
+    @SerializedName("MasterInfo")
+    @Expose
+    private MasterInfo MasterInfo;
+
+    /**
     * 实例售卖机型
     */
     @SerializedName("DeviceType")
@@ -236,13 +243,6 @@ public class InstanceInfo  extends AbstractModel{
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
-
-    /**
-    * 主实例信息
-    */
-    @SerializedName("MasterInfo")
-    @Expose
-    private MasterInfo MasterInfo;
 
     /**
      * 获取外网状态
@@ -565,6 +565,22 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取主实例信息
+     * @return MasterInfo 主实例信息
+     */
+    public MasterInfo getMasterInfo() {
+        return this.MasterInfo;
+    }
+
+    /**
+     * 设置主实例信息
+     * @param MasterInfo 主实例信息
+     */
+    public void setMasterInfo(MasterInfo MasterInfo) {
+        this.MasterInfo = MasterInfo;
+    }
+
+    /**
      * 获取实例售卖机型
      * @return DeviceType 实例售卖机型
      */
@@ -773,22 +789,6 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取主实例信息
-     * @return MasterInfo 主实例信息
-     */
-    public MasterInfo getMasterInfo() {
-        return this.MasterInfo;
-    }
-
-    /**
-     * 设置主实例信息
-     * @param MasterInfo 主实例信息
-     */
-    public void setMasterInfo(MasterInfo MasterInfo) {
-        this.MasterInfo = MasterInfo;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -812,6 +812,7 @@ public class InstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
         this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+        this.setParamObj(map, prefix + "MasterInfo.", this.MasterInfo);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
@@ -825,7 +826,6 @@ public class InstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "CdbError", this.CdbError);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
-        this.setParamObj(map, prefix + "MasterInfo.", this.MasterInfo);
 
     }
 }

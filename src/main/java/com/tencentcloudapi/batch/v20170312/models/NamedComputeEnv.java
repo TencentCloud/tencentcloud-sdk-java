@@ -14,13 +14,6 @@ public class NamedComputeEnv  extends AbstractModel{
     private String EnvName;
 
     /**
-    * 计算环境描述
-    */
-    @SerializedName("EnvDescription")
-    @Expose
-    private String EnvDescription;
-
-    /**
     * 计算环境管理类型
     */
     @SerializedName("EnvType")
@@ -40,6 +33,13 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("DesiredComputeNodeCount")
     @Expose
     private Integer DesiredComputeNodeCount;
+
+    /**
+    * 计算环境描述
+    */
+    @SerializedName("EnvDescription")
+    @Expose
+    private String EnvDescription;
 
     /**
     * 数据盘挂载选项
@@ -100,22 +100,6 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境描述
-     * @return EnvDescription 计算环境描述
-     */
-    public String getEnvDescription() {
-        return this.EnvDescription;
-    }
-
-    /**
-     * 设置计算环境描述
-     * @param EnvDescription 计算环境描述
-     */
-    public void setEnvDescription(String EnvDescription) {
-        this.EnvDescription = EnvDescription;
-    }
-
-    /**
      * 获取计算环境管理类型
      * @return EnvType 计算环境管理类型
      */
@@ -161,6 +145,22 @@ public class NamedComputeEnv  extends AbstractModel{
      */
     public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
         this.DesiredComputeNodeCount = DesiredComputeNodeCount;
+    }
+
+    /**
+     * 获取计算环境描述
+     * @return EnvDescription 计算环境描述
+     */
+    public String getEnvDescription() {
+        return this.EnvDescription;
+    }
+
+    /**
+     * 设置计算环境描述
+     * @param EnvDescription 计算环境描述
+     */
+    public void setEnvDescription(String EnvDescription) {
+        this.EnvDescription = EnvDescription;
     }
 
     /**
@@ -264,10 +264,10 @@ public class NamedComputeEnv  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvName", this.EnvName);
-        this.setParamSimple(map, prefix + "EnvDescription", this.EnvDescription);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
         this.setParamObj(map, prefix + "EnvData.", this.EnvData);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+        this.setParamSimple(map, prefix + "EnvDescription", this.EnvDescription);
         this.setParamArrayObj(map, prefix + "MountDataDisks.", this.MountDataDisks);
         this.setParamArrayObj(map, prefix + "Authentications.", this.Authentications);
         this.setParamArrayObj(map, prefix + "InputMappings.", this.InputMappings);

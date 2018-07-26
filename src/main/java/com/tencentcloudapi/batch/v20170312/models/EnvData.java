@@ -77,6 +77,20 @@ public class EnvData  extends AbstractModel{
     private EnhancedService EnhancedService;
 
     /**
+    * CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
+    * 实例的市场相关选项，如竞价实例相关参数
+    */
+    @SerializedName("InstanceMarketOptions")
+    @Expose
+    private InstanceMarketOptionsRequest InstanceMarketOptions;
+
+    /**
      * 获取CVM实例类型
      * @return InstanceType CVM实例类型
      */
@@ -237,6 +251,38 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
+     * 获取CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+     * @return InstanceChargeType CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * 设置CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+     * @param InstanceChargeType CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * 获取实例的市场相关选项，如竞价实例相关参数
+     * @return InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
+     */
+    public InstanceMarketOptionsRequest getInstanceMarketOptions() {
+        return this.InstanceMarketOptions;
+    }
+
+    /**
+     * 设置实例的市场相关选项，如竞价实例相关参数
+     * @param InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
+     */
+    public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
+        this.InstanceMarketOptions = InstanceMarketOptions;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -250,6 +296,8 @@ public class EnvData  extends AbstractModel{
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
 
     }
 }

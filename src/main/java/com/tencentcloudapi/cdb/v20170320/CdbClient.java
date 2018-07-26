@@ -468,6 +468,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeDBPrice)用于查询云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。
+     * @param req DescribeDBPriceRequest
+     * @return DescribeDBPriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBPriceResponse  DescribeDBPrice(DescribeDBPriceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBPriceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBPriceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBPrice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse

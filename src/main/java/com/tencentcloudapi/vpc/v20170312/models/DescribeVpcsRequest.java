@@ -16,7 +16,7 @@ public class DescribeVpcsRequest  extends AbstractModel{
     /**
     * 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - Boolean - （过滤条件）是否默认VPC。</li>
+<li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
     */
@@ -57,12 +57,12 @@ public class DescribeVpcsRequest  extends AbstractModel{
     /**
      * 获取过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - Boolean - （过滤条件）是否默认VPC。</li>
+<li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
      * @return Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - Boolean - （过滤条件）是否默认VPC。</li>
+<li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
      */
@@ -73,12 +73,12 @@ public class DescribeVpcsRequest  extends AbstractModel{
     /**
      * 设置过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - Boolean - （过滤条件）是否默认VPC。</li>
+<li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
      * @param Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - Boolean - （过滤条件）是否默认VPC。</li>
+<li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
      */

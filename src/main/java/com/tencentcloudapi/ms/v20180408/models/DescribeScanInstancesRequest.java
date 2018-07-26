@@ -11,7 +11,7 @@ public class DescribeScanInstancesRequest  extends AbstractModel{
     */
     @SerializedName("Filters")
     @Expose
-    private Filters [] Filters;
+    private Filter [] Filters;
 
     /**
     * 偏移量，默认为0
@@ -52,7 +52,7 @@ public class DescribeScanInstancesRequest  extends AbstractModel{
      * 获取支持通过app名称，app包名进行筛选
      * @return Filters 支持通过app名称，app包名进行筛选
      */
-    public Filters [] getFilters() {
+    public Filter [] getFilters() {
         return this.Filters;
     }
 
@@ -60,7 +60,7 @@ public class DescribeScanInstancesRequest  extends AbstractModel{
      * 设置支持通过app名称，app包名进行筛选
      * @param Filters 支持通过app名称，app包名进行筛选
      */
-    public void setFilters(Filters [] Filters) {
+    public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 

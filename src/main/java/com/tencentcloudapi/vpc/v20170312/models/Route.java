@@ -7,13 +7,6 @@ public class Route  extends AbstractModel{
 
 
     /**
-    * 路由策略ID。
-    */
-    @SerializedName("RouteId")
-    @Expose
-    private Integer RouteId;
-
-    /**
     * 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
     */
     @SerializedName("DestinationCidrBlock")
@@ -35,6 +28,13 @@ public class Route  extends AbstractModel{
     private String GatewayId;
 
     /**
+    * 路由策略ID。
+    */
+    @SerializedName("RouteId")
+    @Expose
+    private Integer RouteId;
+
+    /**
     * 路由策略描述。
     */
     @SerializedName("RouteDescription")
@@ -42,20 +42,11 @@ public class Route  extends AbstractModel{
     private String RouteDescription;
 
     /**
-     * 获取路由策略ID。
-     * @return RouteId 路由策略ID。
-     */
-    public Integer getRouteId() {
-        return this.RouteId;
-    }
-
-    /**
-     * 设置路由策略ID。
-     * @param RouteId 路由策略ID。
-     */
-    public void setRouteId(Integer RouteId) {
-        this.RouteId = RouteId;
-    }
+    * 是否启用
+    */
+    @SerializedName("Enabled")
+    @Expose
+    private Boolean Enabled;
 
     /**
      * 获取目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
@@ -106,6 +97,22 @@ public class Route  extends AbstractModel{
     }
 
     /**
+     * 获取路由策略ID。
+     * @return RouteId 路由策略ID。
+     */
+    public Integer getRouteId() {
+        return this.RouteId;
+    }
+
+    /**
+     * 设置路由策略ID。
+     * @param RouteId 路由策略ID。
+     */
+    public void setRouteId(Integer RouteId) {
+        this.RouteId = RouteId;
+    }
+
+    /**
      * 获取路由策略描述。
      * @return RouteDescription 路由策略描述。
      */
@@ -122,14 +129,31 @@ public class Route  extends AbstractModel{
     }
 
     /**
+     * 获取是否启用
+     * @return Enabled 是否启用
+     */
+    public Boolean getEnabled() {
+        return this.Enabled;
+    }
+
+    /**
+     * 设置是否启用
+     * @param Enabled 是否启用
+     */
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RouteId", this.RouteId);
         this.setParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
         this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
+        this.setParamSimple(map, prefix + "RouteId", this.RouteId);
         this.setParamSimple(map, prefix + "RouteDescription", this.RouteDescription);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

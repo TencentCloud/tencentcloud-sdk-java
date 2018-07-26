@@ -35,6 +35,13 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     private Boolean Portable;
 
     /**
+    * 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
+    */
+    @SerializedName("DeleteWithInstance")
+    @Expose
+    private Boolean DeleteWithInstance;
+
+    /**
      * 获取一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
      * @return DiskIds 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
      */
@@ -99,6 +106,22 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
+     * @return DeleteWithInstance 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
+     */
+    public Boolean getDeleteWithInstance() {
+        return this.DeleteWithInstance;
+    }
+
+    /**
+     * 设置成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
+     * @param DeleteWithInstance 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
+     */
+    public void setDeleteWithInstance(Boolean DeleteWithInstance) {
+        this.DeleteWithInstance = DeleteWithInstance;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -106,6 +129,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DiskName", this.DiskName);
         this.setParamSimple(map, prefix + "Portable", this.Portable);
+        this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
 
     }
 }

@@ -7,7 +7,7 @@ public class DescribeAccountAttributesResponse  extends AbstractModel{
 
 
     /**
-    * 用户账号私有属性对象
+    * 用户账号属性对象
     */
     @SerializedName("AccountAttributeSet")
     @Expose
@@ -21,16 +21,16 @@ public class DescribeAccountAttributesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取用户账号私有属性对象
-     * @return AccountAttributeSet 用户账号私有属性对象
+     * 获取用户账号属性对象
+     * @return AccountAttributeSet 用户账号属性对象
      */
     public AccountAttribute [] getAccountAttributeSet() {
         return this.AccountAttributeSet;
     }
 
     /**
-     * 设置用户账号私有属性对象
-     * @param AccountAttributeSet 用户账号私有属性对象
+     * 设置用户账号属性对象
+     * @param AccountAttributeSet 用户账号属性对象
      */
     public void setAccountAttributeSet(AccountAttribute [] AccountAttributeSet) {
         this.AccountAttributeSet = AccountAttributeSet;

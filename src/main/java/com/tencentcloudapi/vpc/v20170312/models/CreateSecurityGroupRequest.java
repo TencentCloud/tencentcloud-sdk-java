@@ -7,13 +7,6 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
 
 
     /**
-    * 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private String ProjectId;
-
-    /**
     * 安全组名称，可任意命名，但不得超过60个字符。
     */
     @SerializedName("GroupName")
@@ -28,20 +21,11 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     private String GroupDescription;
 
     /**
-     * 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     * @return ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     */
-    public String getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     * @param ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     */
-    public void setProjectId(String ProjectId) {
-        this.ProjectId = ProjectId;
-    }
+    * 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
 
     /**
      * 获取安全组名称，可任意命名，但不得超过60个字符。
@@ -76,12 +60,28 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
+     * 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * @return ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * @param ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "GroupDescription", this.GroupDescription);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

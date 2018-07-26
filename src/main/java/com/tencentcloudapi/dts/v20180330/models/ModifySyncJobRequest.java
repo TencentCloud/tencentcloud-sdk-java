@@ -1,0 +1,122 @@
+package com.tencentcloudapi.dts.v20180330.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class ModifySyncJobRequest  extends AbstractModel{
+
+
+    /**
+    * 待修改的灾备同步任务ID
+    */
+    @SerializedName("JobId")
+    @Expose
+    private String JobId;
+
+    /**
+    * 灾备同步任务名称
+    */
+    @SerializedName("JobName")
+    @Expose
+    private String JobName;
+
+    /**
+    * 灾备同步任务配置选项
+    */
+    @SerializedName("SyncOption")
+    @Expose
+    private SyncOption SyncOption;
+
+    /**
+    * 当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
+对于database-table两级结构的数据库：
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
+    */
+    @SerializedName("DatabaseInfo")
+    @Expose
+    private String DatabaseInfo;
+
+    /**
+     * 获取待修改的灾备同步任务ID
+     * @return JobId 待修改的灾备同步任务ID
+     */
+    public String getJobId() {
+        return this.JobId;
+    }
+
+    /**
+     * 设置待修改的灾备同步任务ID
+     * @param JobId 待修改的灾备同步任务ID
+     */
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
+    }
+
+    /**
+     * 获取灾备同步任务名称
+     * @return JobName 灾备同步任务名称
+     */
+    public String getJobName() {
+        return this.JobName;
+    }
+
+    /**
+     * 设置灾备同步任务名称
+     * @param JobName 灾备同步任务名称
+     */
+    public void setJobName(String JobName) {
+        this.JobName = JobName;
+    }
+
+    /**
+     * 获取灾备同步任务配置选项
+     * @return SyncOption 灾备同步任务配置选项
+     */
+    public SyncOption getSyncOption() {
+        return this.SyncOption;
+    }
+
+    /**
+     * 设置灾备同步任务配置选项
+     * @param SyncOption 灾备同步任务配置选项
+     */
+    public void setSyncOption(SyncOption SyncOption) {
+        this.SyncOption = SyncOption;
+    }
+
+    /**
+     * 获取当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
+对于database-table两级结构的数据库：
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
+     * @return DatabaseInfo 当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
+对于database-table两级结构的数据库：
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
+     */
+    public String getDatabaseInfo() {
+        return this.DatabaseInfo;
+    }
+
+    /**
+     * 设置当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
+对于database-table两级结构的数据库：
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
+     * @param DatabaseInfo 当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
+对于database-table两级结构的数据库：
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
+     */
+    public void setDatabaseInfo(String DatabaseInfo) {
+        this.DatabaseInfo = DatabaseInfo;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "JobName", this.JobName);
+        this.setParamObj(map, prefix + "SyncOption.", this.SyncOption);
+        this.setParamSimple(map, prefix + "DatabaseInfo", this.DatabaseInfo);
+
+    }
+}
+

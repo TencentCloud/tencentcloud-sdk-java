@@ -49,6 +49,13 @@ public class ShieldInfo  extends AbstractModel{
     private String ItemId;
 
     /**
+    * 加固版本，basic基础版，professional专业版
+    */
+    @SerializedName("ServiceEdition")
+    @Expose
+    private String ServiceEdition;
+
+    /**
      * 获取加固结果的返回码
      * @return ShieldCode 加固结果的返回码
      */
@@ -145,6 +152,22 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
+     * 获取加固版本，basic基础版，professional专业版
+     * @return ServiceEdition 加固版本，basic基础版，professional专业版
+     */
+    public String getServiceEdition() {
+        return this.ServiceEdition;
+    }
+
+    /**
+     * 设置加固版本，basic基础版，professional专业版
+     * @param ServiceEdition 加固版本，basic基础版，professional专业版
+     */
+    public void setServiceEdition(String ServiceEdition) {
+        this.ServiceEdition = ServiceEdition;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -154,6 +177,7 @@ public class ShieldInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "AppUrl", this.AppUrl);
         this.setParamSimple(map, prefix + "TaskTime", this.TaskTime);
         this.setParamSimple(map, prefix + "ItemId", this.ItemId);
+        this.setParamSimple(map, prefix + "ServiceEdition", this.ServiceEdition);
 
     }
 }

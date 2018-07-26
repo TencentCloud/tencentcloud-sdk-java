@@ -52,7 +52,115 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
-     *Invoke用于运行函数
+     *该接口根据传入参数创建新的函数。
+     * @param req CreateFunctionRequest
+     * @return CreateFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFunctionResponse  CreateFunction(CreateFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFunctionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFunctionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口根据参数输入设置新的触发方式。
+     * @param req CreateTriggerRequest
+     * @return CreateTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTriggerResponse  CreateTrigger(CreateTriggerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTriggerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTriggerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTrigger"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口根据传入参数删除函数。
+     * @param req DeleteFunctionRequest
+     * @return DeleteFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFunctionResponse  DeleteFunction(DeleteFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFunctionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFunctionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口根据参数传入删除已有的触发方式。
+     * @param req DeleteTriggerRequest
+     * @return DeleteTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTriggerResponse  DeleteTrigger(DeleteTriggerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTriggerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTriggerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTrigger"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口获取某个函数的详细信息，包括名称、代码、处理方法、关联触发器和超时时间等字段。
+     * @param req GetFunctionRequest
+     * @return GetFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFunctionResponse  GetFunction(GetFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFunctionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFunctionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口根据设置的日志查询条件返回函数日志。
+     * @param req GetFunctionLogsRequest
+     * @return GetFunctionLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFunctionLogsResponse  GetFunctionLogs(GetFunctionLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFunctionLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFunctionLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetFunctionLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于运行函数。
      * @param req InvokeRequest
      * @return InvokeResponse
      * @throws TencentCloudSDKException
@@ -63,6 +171,60 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "Invoke"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口根据传入的查询参数返回相关函数信息。
+     * @param req ListFunctionsRequest
+     * @return ListFunctionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListFunctionsResponse  ListFunctions(ListFunctionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListFunctionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListFunctionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListFunctions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口根据传入参数更新函数代码。
+     * @param req UpdateFunctionCodeRequest
+     * @return UpdateFunctionCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFunctionCodeResponse  UpdateFunctionCode(UpdateFunctionCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateFunctionCodeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateFunctionCodeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateFunctionCode"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口根据传入参数更新函数配置。
+     * @param req UpdateFunctionConfigurationRequest
+     * @return UpdateFunctionConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFunctionConfigurationResponse  UpdateFunctionConfiguration(UpdateFunctionConfigurationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateFunctionConfigurationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateFunctionConfigurationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateFunctionConfiguration"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

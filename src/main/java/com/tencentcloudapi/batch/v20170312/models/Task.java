@@ -28,6 +28,27 @@ public class Task  extends AbstractModel{
     private Application Application;
 
     /**
+    * 重定向信息
+    */
+    @SerializedName("RedirectInfo")
+    @Expose
+    private RedirectInfo RedirectInfo;
+
+    /**
+    * 任务失败后的最大重试次数，默认为0
+    */
+    @SerializedName("MaxRetryCount")
+    @Expose
+    private Integer MaxRetryCount;
+
+    /**
+    * 任务启动后的超时时间，单位秒，默认为3600秒
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Integer Timeout;
+
+    /**
     * 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
     */
     @SerializedName("ComputeEnv")
@@ -40,13 +61,6 @@ public class Task  extends AbstractModel{
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
-
-    /**
-    * 重定向信息
-    */
-    @SerializedName("RedirectInfo")
-    @Expose
-    private RedirectInfo RedirectInfo;
 
     /**
     * 重定向本地信息
@@ -98,20 +112,6 @@ public class Task  extends AbstractModel{
     private String FailedAction;
 
     /**
-    * 任务失败后的最大重试次数，默认为0
-    */
-    @SerializedName("MaxRetryCount")
-    @Expose
-    private Integer MaxRetryCount;
-
-    /**
-    * 任务启动后的超时时间，单位秒，默认为3600秒
-    */
-    @SerializedName("Timeout")
-    @Expose
-    private Integer Timeout;
-
-    /**
      * 获取任务名称，在一个作业内部唯一
      * @return TaskName 任务名称，在一个作业内部唯一
      */
@@ -160,6 +160,54 @@ public class Task  extends AbstractModel{
     }
 
     /**
+     * 获取重定向信息
+     * @return RedirectInfo 重定向信息
+     */
+    public RedirectInfo getRedirectInfo() {
+        return this.RedirectInfo;
+    }
+
+    /**
+     * 设置重定向信息
+     * @param RedirectInfo 重定向信息
+     */
+    public void setRedirectInfo(RedirectInfo RedirectInfo) {
+        this.RedirectInfo = RedirectInfo;
+    }
+
+    /**
+     * 获取任务失败后的最大重试次数，默认为0
+     * @return MaxRetryCount 任务失败后的最大重试次数，默认为0
+     */
+    public Integer getMaxRetryCount() {
+        return this.MaxRetryCount;
+    }
+
+    /**
+     * 设置任务失败后的最大重试次数，默认为0
+     * @param MaxRetryCount 任务失败后的最大重试次数，默认为0
+     */
+    public void setMaxRetryCount(Integer MaxRetryCount) {
+        this.MaxRetryCount = MaxRetryCount;
+    }
+
+    /**
+     * 获取任务启动后的超时时间，单位秒，默认为3600秒
+     * @return Timeout 任务启动后的超时时间，单位秒，默认为3600秒
+     */
+    public Integer getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * 设置任务启动后的超时时间，单位秒，默认为3600秒
+     * @param Timeout 任务启动后的超时时间，单位秒，默认为3600秒
+     */
+    public void setTimeout(Integer Timeout) {
+        this.Timeout = Timeout;
+    }
+
+    /**
      * 获取运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      * @return ComputeEnv 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      */
@@ -189,22 +237,6 @@ public class Task  extends AbstractModel{
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
-    }
-
-    /**
-     * 获取重定向信息
-     * @return RedirectInfo 重定向信息
-     */
-    public RedirectInfo getRedirectInfo() {
-        return this.RedirectInfo;
-    }
-
-    /**
-     * 设置重定向信息
-     * @param RedirectInfo 重定向信息
-     */
-    public void setRedirectInfo(RedirectInfo RedirectInfo) {
-        this.RedirectInfo = RedirectInfo;
     }
 
     /**
@@ -320,47 +352,17 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取任务失败后的最大重试次数，默认为0
-     * @return MaxRetryCount 任务失败后的最大重试次数，默认为0
-     */
-    public Integer getMaxRetryCount() {
-        return this.MaxRetryCount;
-    }
-
-    /**
-     * 设置任务失败后的最大重试次数，默认为0
-     * @param MaxRetryCount 任务失败后的最大重试次数，默认为0
-     */
-    public void setMaxRetryCount(Integer MaxRetryCount) {
-        this.MaxRetryCount = MaxRetryCount;
-    }
-
-    /**
-     * 获取任务启动后的超时时间，单位秒，默认为3600秒
-     * @return Timeout 任务启动后的超时时间，单位秒，默认为3600秒
-     */
-    public Integer getTimeout() {
-        return this.Timeout;
-    }
-
-    /**
-     * 设置任务启动后的超时时间，单位秒，默认为3600秒
-     * @param Timeout 任务启动后的超时时间，单位秒，默认为3600秒
-     */
-    public void setTimeout(Integer Timeout) {
-        this.Timeout = Timeout;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "TaskInstanceNum", this.TaskInstanceNum);
         this.setParamObj(map, prefix + "Application.", this.Application);
+        this.setParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
+        this.setParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamObj(map, prefix + "ComputeEnv.", this.ComputeEnv);
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
-        this.setParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
         this.setParamObj(map, prefix + "RedirectLocalInfo.", this.RedirectLocalInfo);
         this.setParamArrayObj(map, prefix + "InputMappings.", this.InputMappings);
         this.setParamArrayObj(map, prefix + "OutputMappings.", this.OutputMappings);
@@ -368,8 +370,6 @@ public class Task  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "EnvVars.", this.EnvVars);
         this.setParamArrayObj(map, prefix + "Authentications.", this.Authentications);
         this.setParamSimple(map, prefix + "FailedAction", this.FailedAction);
-        this.setParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
-        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

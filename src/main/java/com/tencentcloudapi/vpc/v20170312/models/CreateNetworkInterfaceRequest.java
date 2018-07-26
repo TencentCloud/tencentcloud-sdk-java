@@ -21,18 +21,18 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     private String NetworkInterfaceName;
 
     /**
-    * 弹性网卡描述，可任意命名，但不得超过60个字符。
-    */
-    @SerializedName("NetworkInterfaceDescription")
-    @Expose
-    private String NetworkInterfaceDescription;
-
-    /**
     * 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
+
+    /**
+    * 弹性网卡描述，可任意命名，但不得超过60个字符。
+    */
+    @SerializedName("NetworkInterfaceDescription")
+    @Expose
+    private String NetworkInterfaceDescription;
 
     /**
     * 新申请的内网IP地址个数。
@@ -88,22 +88,6 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡描述，可任意命名，但不得超过60个字符。
-     * @return NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
-     */
-    public String getNetworkInterfaceDescription() {
-        return this.NetworkInterfaceDescription;
-    }
-
-    /**
-     * 设置弹性网卡描述，可任意命名，但不得超过60个字符。
-     * @param NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
-     */
-    public void setNetworkInterfaceDescription(String NetworkInterfaceDescription) {
-        this.NetworkInterfaceDescription = NetworkInterfaceDescription;
-    }
-
-    /**
      * 获取弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
      * @return SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
      */
@@ -117,6 +101,22 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
+    }
+
+    /**
+     * 获取弹性网卡描述，可任意命名，但不得超过60个字符。
+     * @return NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
+     */
+    public String getNetworkInterfaceDescription() {
+        return this.NetworkInterfaceDescription;
+    }
+
+    /**
+     * 设置弹性网卡描述，可任意命名，但不得超过60个字符。
+     * @param NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
+     */
+    public void setNetworkInterfaceDescription(String NetworkInterfaceDescription) {
+        this.NetworkInterfaceDescription = NetworkInterfaceDescription;
     }
 
     /**
@@ -173,8 +173,8 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "NetworkInterfaceName", this.NetworkInterfaceName);
-        this.setParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
         this.setParamSimple(map, prefix + "SecondaryPrivateIpAddressCount", this.SecondaryPrivateIpAddressCount);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);

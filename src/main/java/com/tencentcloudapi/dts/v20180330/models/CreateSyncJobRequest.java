@@ -1,0 +1,242 @@
+package com.tencentcloudapi.dts.v20180330.models;
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+public class CreateSyncJobRequest  extends AbstractModel{
+
+
+    /**
+    * 灾备同步任务名
+    */
+    @SerializedName("JobName")
+    @Expose
+    private String JobName;
+
+    /**
+    * 灾备同步任务配置选项
+    */
+    @SerializedName("SyncOption")
+    @Expose
+    private SyncOption SyncOption;
+
+    /**
+    * 源实例数据库类型，目前仅包括：mysql
+    */
+    @SerializedName("SrcDatabaseType")
+    @Expose
+    private String SrcDatabaseType;
+
+    /**
+    * 源实例接入类型，目前仅包括：cdb(云上cdb实例)
+    */
+    @SerializedName("SrcAccessType")
+    @Expose
+    private String SrcAccessType;
+
+    /**
+    * 源实例信息
+    */
+    @SerializedName("SrcInfo")
+    @Expose
+    private SyncInstanceInfo SrcInfo;
+
+    /**
+    * 目标实例数据库类型，目前仅包括：mysql
+    */
+    @SerializedName("DstDatabaseType")
+    @Expose
+    private String DstDatabaseType;
+
+    /**
+    * 目标实例接入类型，目前仅包括：cdb(云上cdb实例)
+    */
+    @SerializedName("DstAccessType")
+    @Expose
+    private String DstAccessType;
+
+    /**
+    * 目标实例信息
+    */
+    @SerializedName("DstInfo")
+    @Expose
+    private SyncInstanceInfo DstInfo;
+
+    /**
+    * 需要同步的源数据库表信息，用json格式的字符串描述。
+对于database-table两级结构的数据库：
+[{Database:db1,Table:[table1,table2]},{Database:db2}]
+    */
+    @SerializedName("DatabaseInfo")
+    @Expose
+    private String DatabaseInfo;
+
+    /**
+     * 获取灾备同步任务名
+     * @return JobName 灾备同步任务名
+     */
+    public String getJobName() {
+        return this.JobName;
+    }
+
+    /**
+     * 设置灾备同步任务名
+     * @param JobName 灾备同步任务名
+     */
+    public void setJobName(String JobName) {
+        this.JobName = JobName;
+    }
+
+    /**
+     * 获取灾备同步任务配置选项
+     * @return SyncOption 灾备同步任务配置选项
+     */
+    public SyncOption getSyncOption() {
+        return this.SyncOption;
+    }
+
+    /**
+     * 设置灾备同步任务配置选项
+     * @param SyncOption 灾备同步任务配置选项
+     */
+    public void setSyncOption(SyncOption SyncOption) {
+        this.SyncOption = SyncOption;
+    }
+
+    /**
+     * 获取源实例数据库类型，目前仅包括：mysql
+     * @return SrcDatabaseType 源实例数据库类型，目前仅包括：mysql
+     */
+    public String getSrcDatabaseType() {
+        return this.SrcDatabaseType;
+    }
+
+    /**
+     * 设置源实例数据库类型，目前仅包括：mysql
+     * @param SrcDatabaseType 源实例数据库类型，目前仅包括：mysql
+     */
+    public void setSrcDatabaseType(String SrcDatabaseType) {
+        this.SrcDatabaseType = SrcDatabaseType;
+    }
+
+    /**
+     * 获取源实例接入类型，目前仅包括：cdb(云上cdb实例)
+     * @return SrcAccessType 源实例接入类型，目前仅包括：cdb(云上cdb实例)
+     */
+    public String getSrcAccessType() {
+        return this.SrcAccessType;
+    }
+
+    /**
+     * 设置源实例接入类型，目前仅包括：cdb(云上cdb实例)
+     * @param SrcAccessType 源实例接入类型，目前仅包括：cdb(云上cdb实例)
+     */
+    public void setSrcAccessType(String SrcAccessType) {
+        this.SrcAccessType = SrcAccessType;
+    }
+
+    /**
+     * 获取源实例信息
+     * @return SrcInfo 源实例信息
+     */
+    public SyncInstanceInfo getSrcInfo() {
+        return this.SrcInfo;
+    }
+
+    /**
+     * 设置源实例信息
+     * @param SrcInfo 源实例信息
+     */
+    public void setSrcInfo(SyncInstanceInfo SrcInfo) {
+        this.SrcInfo = SrcInfo;
+    }
+
+    /**
+     * 获取目标实例数据库类型，目前仅包括：mysql
+     * @return DstDatabaseType 目标实例数据库类型，目前仅包括：mysql
+     */
+    public String getDstDatabaseType() {
+        return this.DstDatabaseType;
+    }
+
+    /**
+     * 设置目标实例数据库类型，目前仅包括：mysql
+     * @param DstDatabaseType 目标实例数据库类型，目前仅包括：mysql
+     */
+    public void setDstDatabaseType(String DstDatabaseType) {
+        this.DstDatabaseType = DstDatabaseType;
+    }
+
+    /**
+     * 获取目标实例接入类型，目前仅包括：cdb(云上cdb实例)
+     * @return DstAccessType 目标实例接入类型，目前仅包括：cdb(云上cdb实例)
+     */
+    public String getDstAccessType() {
+        return this.DstAccessType;
+    }
+
+    /**
+     * 设置目标实例接入类型，目前仅包括：cdb(云上cdb实例)
+     * @param DstAccessType 目标实例接入类型，目前仅包括：cdb(云上cdb实例)
+     */
+    public void setDstAccessType(String DstAccessType) {
+        this.DstAccessType = DstAccessType;
+    }
+
+    /**
+     * 获取目标实例信息
+     * @return DstInfo 目标实例信息
+     */
+    public SyncInstanceInfo getDstInfo() {
+        return this.DstInfo;
+    }
+
+    /**
+     * 设置目标实例信息
+     * @param DstInfo 目标实例信息
+     */
+    public void setDstInfo(SyncInstanceInfo DstInfo) {
+        this.DstInfo = DstInfo;
+    }
+
+    /**
+     * 获取需要同步的源数据库表信息，用json格式的字符串描述。
+对于database-table两级结构的数据库：
+[{Database:db1,Table:[table1,table2]},{Database:db2}]
+     * @return DatabaseInfo 需要同步的源数据库表信息，用json格式的字符串描述。
+对于database-table两级结构的数据库：
+[{Database:db1,Table:[table1,table2]},{Database:db2}]
+     */
+    public String getDatabaseInfo() {
+        return this.DatabaseInfo;
+    }
+
+    /**
+     * 设置需要同步的源数据库表信息，用json格式的字符串描述。
+对于database-table两级结构的数据库：
+[{Database:db1,Table:[table1,table2]},{Database:db2}]
+     * @param DatabaseInfo 需要同步的源数据库表信息，用json格式的字符串描述。
+对于database-table两级结构的数据库：
+[{Database:db1,Table:[table1,table2]},{Database:db2}]
+     */
+    public void setDatabaseInfo(String DatabaseInfo) {
+        this.DatabaseInfo = DatabaseInfo;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "JobName", this.JobName);
+        this.setParamObj(map, prefix + "SyncOption.", this.SyncOption);
+        this.setParamSimple(map, prefix + "SrcDatabaseType", this.SrcDatabaseType);
+        this.setParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
+        this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+        this.setParamSimple(map, prefix + "DstDatabaseType", this.DstDatabaseType);
+        this.setParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
+        this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
+        this.setParamSimple(map, prefix + "DatabaseInfo", this.DatabaseInfo);
+
+    }
+}
+

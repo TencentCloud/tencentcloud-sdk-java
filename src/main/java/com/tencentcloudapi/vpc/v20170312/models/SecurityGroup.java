@@ -7,13 +7,6 @@ public class SecurityGroup  extends AbstractModel{
 
 
     /**
-    * 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private String ProjectId;
-
-    /**
     * 安全组实例ID，例如：sg-ohuuioma。
     */
     @SerializedName("SecurityGroupId")
@@ -35,6 +28,13 @@ public class SecurityGroup  extends AbstractModel{
     private String SecurityGroupDesc;
 
     /**
+    * 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
     * 是否是默认安全组，默认安全组不支持删除。
     */
     @SerializedName("IsDefault")
@@ -47,22 +47,6 @@ public class SecurityGroup  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
-
-    /**
-     * 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     * @return ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     */
-    public String getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     * @param ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     */
-    public void setProjectId(String ProjectId) {
-        this.ProjectId = ProjectId;
-    }
 
     /**
      * 获取安全组实例ID，例如：sg-ohuuioma。
@@ -113,6 +97,22 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
+     * 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * @return ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * @param ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * 获取是否是默认安全组，默认安全组不支持删除。
      * @return IsDefault 是否是默认安全组，默认安全组不支持删除。
      */
@@ -148,10 +148,10 @@ public class SecurityGroup  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         this.setParamSimple(map, prefix + "SecurityGroupName", this.SecurityGroupName);
         this.setParamSimple(map, prefix + "SecurityGroupDesc", this.SecurityGroupDesc);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
 
