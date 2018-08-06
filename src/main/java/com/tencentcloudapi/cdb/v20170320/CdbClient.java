@@ -576,6 +576,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeRollbackRangeTime)用于查询云数据库实例可回档的时间范围。
+     * @param req DescribeRollbackRangeTimeRequest
+     * @return DescribeRollbackRangeTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRollbackRangeTimeResponse  DescribeRollbackRangeTime(DescribeRollbackRangeTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRollbackRangeTimeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRollbackRangeTimeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRollbackRangeTime"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeSlowLogs)用于获取云数据库实例的慢查询日志。
      * @param req DescribeSlowLogsRequest
      * @return DescribeSlowLogsResponse
@@ -587,6 +605,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowLogsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeTables)用于查询云数据库实例的数据库表信息。
+     * @param req DescribeTablesRequest
+     * @return DescribeTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTablesResponse  DescribeTables(DescribeTablesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTablesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTablesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTables"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -881,6 +917,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RestartDBInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RestartDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口（StartBatchRollback）用于批量回档云数据库实例的库表。
+     * @param req StartBatchRollbackRequest
+     * @return StartBatchRollbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartBatchRollbackResponse  StartBatchRollback(StartBatchRollbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartBatchRollbackResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartBatchRollbackResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StartBatchRollback"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
