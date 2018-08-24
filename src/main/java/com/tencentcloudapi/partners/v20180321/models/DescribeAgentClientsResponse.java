@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAgentClientsResponse  extends AbstractModel{
 
     /**
-    * 代客列表
+    * 待审核代客列表
     */
     @SerializedName("AgentClientSet")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeAgentClientsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取代客列表
-     * @return AgentClientSet 代客列表
+     * 获取待审核代客列表
+     * @return AgentClientSet 待审核代客列表
      */
     public AgentClientElem [] getAgentClientSet() {
         return this.AgentClientSet;
     }
 
     /**
-     * 设置代客列表
-     * @param AgentClientSet 代客列表
+     * 设置待审核代客列表
+     * @param AgentClientSet 待审核代客列表
      */
     public void setAgentClientSet(AgentClientElem [] AgentClientSet) {
         this.AgentClientSet = AgentClientSet;

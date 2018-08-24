@@ -30,7 +30,16 @@ public class Route  extends AbstractModel{
     private String DestinationCidrBlock;
 
     /**
-    * 下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
+    * 下一跳类型，目前我们支持的类型有：
+CVM：公网网关类型的云主机；
+VPN：VPN网关；
+DIRECTCONNECT：专线网关；
+PEERCONNECTION：对等连接；
+SSLVPN：sslvpn网关；
+NAT：NAT网关; 
+NORMAL_CVM：普通云主机；
+EIP：云主机的公网IP；
+CCN：云联网。
     */
     @SerializedName("GatewayType")
     @Expose
@@ -38,6 +47,7 @@ public class Route  extends AbstractModel{
 
     /**
     * 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
     */
     @SerializedName("GatewayId")
     @Expose
@@ -65,6 +75,17 @@ public class Route  extends AbstractModel{
     private Boolean Enabled;
 
     /**
+    * 路由类型，目前我们支持的类型有：
+USER：用户路由；
+NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
+CCN：云联网路由，系统默认下发，不可编辑与删除。
+用户只能添加和操作 USER 类型的路由。
+    */
+    @SerializedName("RouteType")
+    @Expose
+    private String RouteType;
+
+    /**
      * 获取目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      * @return DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
@@ -81,16 +102,52 @@ public class Route  extends AbstractModel{
     }
 
     /**
-     * 获取下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
-     * @return GatewayType 下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
+     * 获取下一跳类型，目前我们支持的类型有：
+CVM：公网网关类型的云主机；
+VPN：VPN网关；
+DIRECTCONNECT：专线网关；
+PEERCONNECTION：对等连接；
+SSLVPN：sslvpn网关；
+NAT：NAT网关; 
+NORMAL_CVM：普通云主机；
+EIP：云主机的公网IP；
+CCN：云联网。
+     * @return GatewayType 下一跳类型，目前我们支持的类型有：
+CVM：公网网关类型的云主机；
+VPN：VPN网关；
+DIRECTCONNECT：专线网关；
+PEERCONNECTION：对等连接；
+SSLVPN：sslvpn网关；
+NAT：NAT网关; 
+NORMAL_CVM：普通云主机；
+EIP：云主机的公网IP；
+CCN：云联网。
      */
     public String getGatewayType() {
         return this.GatewayType;
     }
 
     /**
-     * 设置下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
-     * @param GatewayType 下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
+     * 设置下一跳类型，目前我们支持的类型有：
+CVM：公网网关类型的云主机；
+VPN：VPN网关；
+DIRECTCONNECT：专线网关；
+PEERCONNECTION：对等连接；
+SSLVPN：sslvpn网关；
+NAT：NAT网关; 
+NORMAL_CVM：普通云主机；
+EIP：云主机的公网IP；
+CCN：云联网。
+     * @param GatewayType 下一跳类型，目前我们支持的类型有：
+CVM：公网网关类型的云主机；
+VPN：VPN网关；
+DIRECTCONNECT：专线网关；
+PEERCONNECTION：对等连接；
+SSLVPN：sslvpn网关；
+NAT：NAT网关; 
+NORMAL_CVM：普通云主机；
+EIP：云主机的公网IP；
+CCN：云联网。
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;
@@ -98,7 +155,9 @@ public class Route  extends AbstractModel{
 
     /**
      * 获取下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
      * @return GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -106,7 +165,9 @@ public class Route  extends AbstractModel{
 
     /**
      * 设置下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
      * @param GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
@@ -161,6 +222,38 @@ public class Route  extends AbstractModel{
     }
 
     /**
+     * 获取路由类型，目前我们支持的类型有：
+USER：用户路由；
+NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
+CCN：云联网路由，系统默认下发，不可编辑与删除。
+用户只能添加和操作 USER 类型的路由。
+     * @return RouteType 路由类型，目前我们支持的类型有：
+USER：用户路由；
+NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
+CCN：云联网路由，系统默认下发，不可编辑与删除。
+用户只能添加和操作 USER 类型的路由。
+     */
+    public String getRouteType() {
+        return this.RouteType;
+    }
+
+    /**
+     * 设置路由类型，目前我们支持的类型有：
+USER：用户路由；
+NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
+CCN：云联网路由，系统默认下发，不可编辑与删除。
+用户只能添加和操作 USER 类型的路由。
+     * @param RouteType 路由类型，目前我们支持的类型有：
+USER：用户路由；
+NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
+CCN：云联网路由，系统默认下发，不可编辑与删除。
+用户只能添加和操作 USER 类型的路由。
+     */
+    public void setRouteType(String RouteType) {
+        this.RouteType = RouteType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +263,7 @@ public class Route  extends AbstractModel{
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);
         this.setParamSimple(map, prefix + "RouteDescription", this.RouteDescription);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "RouteType", this.RouteType);
 
     }
 }

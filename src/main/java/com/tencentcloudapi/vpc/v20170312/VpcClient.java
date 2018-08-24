@@ -49,6 +49,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *接口用于添加带宽包资源，包括[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)和[负载均衡](https://cloud.tencent.com/document/product/214/517)等
+     * @param req AddBandwidthPackageResourcesRequest
+     * @return AddBandwidthPackageResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddBandwidthPackageResourcesResponse  AddBandwidthPackageResources(AddBandwidthPackageResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddBandwidthPackageResourcesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddBandwidthPackageResourcesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddBandwidthPackageResources"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (AllocateAddresses) 用于申请一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
 * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过七天之前，它会一直与您的腾讯云账户保持关联。
@@ -107,6 +125,25 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<AssociateAddressResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "AssociateAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（AttachCcnInstances）用于将网络实例加载到云联网实例中，网络实例包括VPC和专线网关。<br />
+每个云联网能够关联的网络实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
+     * @param req AttachCcnInstancesRequest
+     * @return AttachCcnInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachCcnInstancesResponse  AttachCcnInstances(AttachCcnInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachCcnInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachCcnInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AttachCcnInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -192,6 +229,43 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *接口支持创建[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[ip带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+     * @param req CreateBandwidthPackageRequest
+     * @return CreateBandwidthPackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBandwidthPackageResponse  CreateBandwidthPackage(CreateBandwidthPackageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBandwidthPackageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBandwidthPackageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateBandwidthPackage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateCcn）用于创建云联网（CCN）。<br />
+每个账号能创建的云联网实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
+     * @param req CreateCcnRequest
+     * @return CreateCcnResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCcnResponse  CreateCcn(CreateCcnRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCcnResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCcnResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCcn"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateCustomerGateway）用于创建对端网关。
      * @param req CreateCustomerGatewayRequest
      * @return CreateCustomerGatewayResponse
@@ -229,6 +303,42 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDefaultVpcResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateDefaultVpc"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateDirectConnectGateway）用于创建专线网关。
+     * @param req CreateDirectConnectGatewayRequest
+     * @return CreateDirectConnectGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDirectConnectGatewayResponse  CreateDirectConnectGateway(CreateDirectConnectGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDirectConnectGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDirectConnectGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDirectConnectGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateDirectConnectGatewayCcnRoutes）用于创建专线网关的云联网路由（IDC网段）
+     * @param req CreateDirectConnectGatewayCcnRoutesRequest
+     * @return CreateDirectConnectGatewayCcnRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDirectConnectGatewayCcnRoutesResponse  CreateDirectConnectGatewayCcnRoutes(CreateDirectConnectGatewayCcnRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDirectConnectGatewayCcnRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDirectConnectGatewayCcnRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDirectConnectGatewayCcnRoutes"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -403,8 +513,6 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口(CreateVpc)用于创建私有网络(VPC)。
 * 用户可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）,如果规划VPC网段请参见VPC网段规划说明。
-* 创建VPC时可同时把子网创建好，创建子网也请规划好子网网段及子网所在可用区，同一个VPC内子网网段不能重叠，不同可用区可以做跨可用区容灾，详见VPC可用区说明。
-* 如果您同时创建了子网，系统会创建一个默认路由表，系统会把子网关联到这个默认路由表。
 * 同一个地域能创建的VPC资源个数也是有限制的，详见 <a href="https://cloud.tencent.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>,如果需要扩充请联系在线客服。
      * @param req CreateVpcRequest
      * @return CreateVpcResponse
@@ -495,6 +603,45 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[ip带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+     * @param req DeleteBandwidthPackageRequest
+     * @return DeleteBandwidthPackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBandwidthPackageResponse  DeleteBandwidthPackage(DeleteBandwidthPackageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBandwidthPackageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBandwidthPackageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteBandwidthPackage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteCcn）用于删除云联网。
+* 删除后，云联网关联的所有实例间路由将被删除，网络将会中断，请务必确认
+* 删除云联网是不可逆的操作，请谨慎处理。
+
+     * @param req DeleteCcnRequest
+     * @return DeleteCcnResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCcnResponse  DeleteCcn(DeleteCcnRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCcnResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCcnResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteCcn"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteCustomerGateway）用于删除对端网关。
      * @param req DeleteCustomerGatewayRequest
      * @return DeleteCustomerGatewayResponse
@@ -506,6 +653,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteCustomerGatewayResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteCustomerGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteDirectConnectGatewayCcnRoutes）用于删除专线网关的云联网路由（IDC网段）
+     * @param req DeleteDirectConnectGatewayCcnRoutesRequest
+     * @return DeleteDirectConnectGatewayCcnRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDirectConnectGatewayCcnRoutesResponse  DeleteDirectConnectGatewayCcnRoutes(DeleteDirectConnectGatewayCcnRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDirectConnectGatewayCcnRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectGatewayCcnRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDirectConnectGatewayCcnRoutes"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -811,6 +976,114 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *接口用于查询账户在当前地域的带宽包上限数量以及使用数量
+     * @param req DescribeBandwidthPackageQuotaRequest
+     * @return DescribeBandwidthPackageQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBandwidthPackageQuotaResponse  DescribeBandwidthPackageQuota(DescribeBandwidthPackageQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBandwidthPackageQuotaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBandwidthPackageQuotaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBandwidthPackageQuota"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接口用于查询带宽包详细信息，包括带宽包唯一标识ID，类型，计费模式，名称，资源信息等
+     * @param req DescribeBandwidthPackagesRequest
+     * @return DescribeBandwidthPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBandwidthPackagesResponse  DescribeBandwidthPackages(DescribeBandwidthPackagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBandwidthPackagesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBandwidthPackagesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBandwidthPackages"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeCcnAttachedInstances）用于查询云联网实例下已关联的网络实例。
+     * @param req DescribeCcnAttachedInstancesRequest
+     * @return DescribeCcnAttachedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnAttachedInstancesResponse  DescribeCcnAttachedInstances(DescribeCcnAttachedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCcnAttachedInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCcnAttachedInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCcnAttachedInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeCcnRegionBandwidthLimits）用于查询云联网各地域出带宽上限，该接口只返回已关联网络实例包含的地域
+     * @param req DescribeCcnRegionBandwidthLimitsRequest
+     * @return DescribeCcnRegionBandwidthLimitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnRegionBandwidthLimitsResponse  DescribeCcnRegionBandwidthLimits(DescribeCcnRegionBandwidthLimitsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCcnRegionBandwidthLimitsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCcnRegionBandwidthLimitsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCcnRegionBandwidthLimits"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeCcnRoutes）用于查询已加入云联网（CCN）的路由
+     * @param req DescribeCcnRoutesRequest
+     * @return DescribeCcnRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnRoutesResponse  DescribeCcnRoutes(DescribeCcnRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCcnRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCcnRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCcnRoutes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeCcns）用于查询云联网（CCN）列表。
+     * @param req DescribeCcnsRequest
+     * @return DescribeCcnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnsResponse  DescribeCcns(DescribeCcnsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCcnsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCcnsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCcns"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeClassicLinkInstances)用于私有网络和基础网络设备互通。
      * @param req DescribeClassicLinkInstancesRequest
      * @return DescribeClassicLinkInstancesResponse
@@ -865,6 +1138,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDirectConnectGatewayCcnRoutes）用于查询专线网关的云联网路由（IDC网段）
+     * @param req DescribeDirectConnectGatewayCcnRoutesRequest
+     * @return DescribeDirectConnectGatewayCcnRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDirectConnectGatewayCcnRoutesResponse  DescribeDirectConnectGatewayCcnRoutes(DescribeDirectConnectGatewayCcnRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDirectConnectGatewayCcnRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectGatewayCcnRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDirectConnectGatewayCcnRoutes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
      * @param req DescribeNetworkInterfacesRequest
      * @return DescribeNetworkInterfacesResponse
@@ -876,6 +1167,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNetworkInterfacesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeNetworkInterfaces"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表
+     * @param req DescribeRouteConflictsRequest
+     * @return DescribeRouteConflictsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRouteConflictsResponse  DescribeRouteConflicts(DescribeRouteConflictsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRouteConflictsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRouteConflictsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRouteConflicts"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1063,6 +1372,25 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DetachCcnInstances）用于从云联网实例中解关联指定的网络实例。<br />
+解关联网络实例后，相应的路由策略会一并删除。
+     * @param req DetachCcnInstancesRequest
+     * @return DetachCcnInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachCcnInstancesResponse  DetachCcnInstances(DetachCcnInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachCcnInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachCcnInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetachCcnInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DetachClassicLinkVpc)用于删除私有网络和基础网络设备互通。
      * @param req DetachClassicLinkVpcRequest
      * @return DetachClassicLinkVpcResponse
@@ -1092,6 +1420,42 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DetachNetworkInterfaceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DetachNetworkInterface"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由
+     * @param req DisableCcnRoutesRequest
+     * @return DisableCcnRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableCcnRoutesResponse  DisableCcnRoutes(DisableCcnRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableCcnRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableCcnRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableCcnRoutes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DisableRoutes）用于禁用已启用的子网路由
+     * @param req DisableRoutesRequest
+     * @return DisableRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableRoutesResponse  DisableRoutes(DisableRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableRoutes"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1130,6 +1494,44 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DownloadCustomerGatewayConfigurationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DownloadCustomerGatewayConfiguration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（EnableCcnRoutes）用于启用已经加入云联网（CCN）的路由。<br />
+本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
+     * @param req EnableCcnRoutesRequest
+     * @return EnableCcnRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableCcnRoutesResponse  EnableCcnRoutes(EnableCcnRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableCcnRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableCcnRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableCcnRoutes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（EnableRoutes）用于启用已禁用的子网路由。<br />
+本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
+     * @param req EnableRoutesRequest
+     * @return EnableRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableRoutesResponse  EnableRoutes(EnableRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableRoutes"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1277,6 +1679,60 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAddressTemplateGroupAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyAddressTemplateGroupAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接口用于调整[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)(简称EIP)带宽，包括后付费EIP, 预付费EIP和带宽包EIP
+     * @param req ModifyAddressesBandwidthRequest
+     * @return ModifyAddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAddressesBandwidthResponse  ModifyAddressesBandwidth(ModifyAddressesBandwidthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAddressesBandwidthResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAddressesBandwidthResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAddressesBandwidth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接口用于修改带宽包属性，包括带宽包名字等
+     * @param req ModifyBandwidthPackageAttributeRequest
+     * @return ModifyBandwidthPackageAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBandwidthPackageAttributeResponse  ModifyBandwidthPackageAttribute(ModifyBandwidthPackageAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBandwidthPackageAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBandwidthPackageAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyBandwidthPackageAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyCcnAttribute）用于修改云联网（CCN）的相关属性。
+     * @param req ModifyCcnAttributeRequest
+     * @return ModifyCcnAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCcnAttributeResponse  ModifyCcnAttribute(ModifyCcnAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCcnAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCcnAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyCcnAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1529,6 +1985,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *接口用于删除带宽包资源，包括[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)和[负载均衡](https://cloud.tencent.com/document/product/214/517)等
+     * @param req RemoveBandwidthPackageResourcesRequest
+     * @return RemoveBandwidthPackageResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveBandwidthPackageResourcesResponse  RemoveBandwidthPackageResources(RemoveBandwidthPackageResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveBandwidthPackageResourcesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveBandwidthPackageResourcesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RemoveBandwidthPackageResources"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（RenewVpnGateway）用于预付费（包年包月）VPN网关续费。目前只支持IPSEC网关。
      * @param req RenewVpnGatewayRequest
      * @return RenewVpnGatewayResponse
@@ -1540,6 +2014,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RenewVpnGatewayResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RenewVpnGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ReplaceDirectConnectGatewayCcnRoutes）根据路由ID（RouteId）修改指定的路由（Route），支持批量修改。
+     * @param req ReplaceDirectConnectGatewayCcnRoutesRequest
+     * @return ReplaceDirectConnectGatewayCcnRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceDirectConnectGatewayCcnRoutesResponse  ReplaceDirectConnectGatewayCcnRoutes(ReplaceDirectConnectGatewayCcnRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReplaceDirectConnectGatewayCcnRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReplaceDirectConnectGatewayCcnRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReplaceDirectConnectGatewayCcnRoutes"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1603,7 +2095,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。
+     *本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br />
 注意: 调用本接口是先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
      * @param req ResetRoutesRequest
      * @return ResetRoutesResponse
@@ -1651,6 +2143,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetVpnGatewayInternetMaxBandwidthResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ResetVpnGatewayInternetMaxBandwidth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（SetCcnRegionBandwidthLimits）用于设置云联网（CCN）各地域出带宽上限，该接口只能设置已关联网络实例包含的地域的出带宽上限
+     * @param req SetCcnRegionBandwidthLimitsRequest
+     * @return SetCcnRegionBandwidthLimitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetCcnRegionBandwidthLimitsResponse  SetCcnRegionBandwidthLimits(SetCcnRegionBandwidthLimitsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetCcnRegionBandwidthLimitsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetCcnRegionBandwidthLimitsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetCcnRegionBandwidthLimits"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

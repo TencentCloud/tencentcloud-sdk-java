@@ -38,6 +38,15 @@ public class DirectConnectTunnel  extends AbstractModel{
 
     /**
     * 专线通道状态
+AVAILABLE:就绪或者已连接
+PENDING:申请中
+ALLOCATING:配置中
+ALLOCATED:配置完成
+ALTERING:修改中
+DELETING:删除中
+DELETED:删除完成
+COMFIRMING:待接受
+REJECTED:拒绝
     */
     @SerializedName("State")
     @Expose
@@ -58,7 +67,8 @@ public class DirectConnectTunnel  extends AbstractModel{
     private String OwnerAccount;
 
     /**
-    * 网络类型，分别为VPC、BMVPC VPC：私有网络 BMVPC：黑石网络
+    * 网络类型，分别为VPC、BMVPC、CCN
+ VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
     */
     @SerializedName("NetworkType")
     @Expose
@@ -182,7 +192,25 @@ public class DirectConnectTunnel  extends AbstractModel{
 
     /**
      * 获取专线通道状态
+AVAILABLE:就绪或者已连接
+PENDING:申请中
+ALLOCATING:配置中
+ALLOCATED:配置完成
+ALTERING:修改中
+DELETING:删除中
+DELETED:删除完成
+COMFIRMING:待接受
+REJECTED:拒绝
      * @return State 专线通道状态
+AVAILABLE:就绪或者已连接
+PENDING:申请中
+ALLOCATING:配置中
+ALLOCATED:配置完成
+ALTERING:修改中
+DELETING:删除中
+DELETED:删除完成
+COMFIRMING:待接受
+REJECTED:拒绝
      */
     public String getState() {
         return this.State;
@@ -190,7 +218,25 @@ public class DirectConnectTunnel  extends AbstractModel{
 
     /**
      * 设置专线通道状态
+AVAILABLE:就绪或者已连接
+PENDING:申请中
+ALLOCATING:配置中
+ALLOCATED:配置完成
+ALTERING:修改中
+DELETING:删除中
+DELETED:删除完成
+COMFIRMING:待接受
+REJECTED:拒绝
      * @param State 专线通道状态
+AVAILABLE:就绪或者已连接
+PENDING:申请中
+ALLOCATING:配置中
+ALLOCATED:配置完成
+ALTERING:修改中
+DELETING:删除中
+DELETED:删除完成
+COMFIRMING:待接受
+REJECTED:拒绝
      */
     public void setState(String State) {
         this.State = State;
@@ -229,16 +275,20 @@ public class DirectConnectTunnel  extends AbstractModel{
     }
 
     /**
-     * 获取网络类型，分别为VPC、BMVPC VPC：私有网络 BMVPC：黑石网络
-     * @return NetworkType 网络类型，分别为VPC、BMVPC VPC：私有网络 BMVPC：黑石网络
+     * 获取网络类型，分别为VPC、BMVPC、CCN
+ VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
+     * @return NetworkType 网络类型，分别为VPC、BMVPC、CCN
+ VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * 设置网络类型，分别为VPC、BMVPC VPC：私有网络 BMVPC：黑石网络
-     * @param NetworkType 网络类型，分别为VPC、BMVPC VPC：私有网络 BMVPC：黑石网络
+     * 设置网络类型，分别为VPC、BMVPC、CCN
+ VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
+     * @param NetworkType 网络类型，分别为VPC、BMVPC、CCN
+ VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;

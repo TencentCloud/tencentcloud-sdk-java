@@ -49,6 +49,24 @@ public class AaiClient extends AbstractClient{
     }
 
     /**
+     *提供基于文本的基础聊天能力，可以让您的应用快速拥有具备深度语义理解的机器聊天功能。
+     * @param req ChatRequest
+     * @return ChatResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChatResponse  Chat(ChatRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChatResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChatResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "Chat"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *识别60s内的短语音，当音频放在请求body中传输时整个请求大小不能超过1M，当音频以url方式传输时，音频时长不可超过60s。所有请求参数放在post的body中采用x-www-form-urlencoded（数据转换成一个字串（name1=value1&name2=value2…）进行urlencode后传输）编码传输。
      * @param req SentenceRecognitionRequest
      * @return SentenceRecognitionResponse
@@ -60,6 +78,24 @@ public class AaiClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SentenceRecognitionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SentenceRecognition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口是实时流式识别，可同时返回语音识别文本及翻译文本，当前仅支持中文和英文。该接口可配合同传windows客户端，提供会议现场同传服务。
+     * @param req SimultaneousInterpretingRequest
+     * @return SimultaneousInterpretingResponse
+     * @throws TencentCloudSDKException
+     */
+    public SimultaneousInterpretingResponse  SimultaneousInterpreting(SimultaneousInterpretingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SimultaneousInterpretingResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SimultaneousInterpretingResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SimultaneousInterpreting"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

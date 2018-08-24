@@ -72,14 +72,14 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     private String Url;
 
     /**
-    * 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
+    * 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode())。音频数据要小于900k。
     */
     @SerializedName("Data")
     @Expose
     private String Data;
 
     /**
-    * 数据长度，当 SourceType 值为1时必须填写，为0可不写。
+    * 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
     */
     @SerializedName("DataLen")
     @Expose
@@ -198,32 +198,32 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
-     * @return Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
+     * 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode())。音频数据要小于900k。
+     * @return Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode())。音频数据要小于900k。
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
-     * @param Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
+     * 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode())。音频数据要小于900k。
+     * @param Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode())。音频数据要小于900k。
      */
     public void setData(String Data) {
         this.Data = Data;
     }
 
     /**
-     * 获取数据长度，当 SourceType 值为1时必须填写，为0可不写。
-     * @return DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写。
+     * 获取数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+     * @return DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
      */
     public Integer getDataLen() {
         return this.DataLen;
     }
 
     /**
-     * 设置数据长度，当 SourceType 值为1时必须填写，为0可不写。
-     * @param DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写。
+     * 设置数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+     * @param DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
      */
     public void setDataLen(Integer DataLen) {
         this.DataLen = DataLen;

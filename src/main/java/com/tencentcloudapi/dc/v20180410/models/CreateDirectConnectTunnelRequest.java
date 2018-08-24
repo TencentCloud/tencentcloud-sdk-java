@@ -45,9 +45,10 @@ public class CreateDirectConnectTunnelRequest  extends AbstractModel{
     private String DirectConnectOwnerAccount;
 
     /**
-    * 网络类型，分别为VPC、BMVPC
+    * 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
+CCN：云联网
     */
     @SerializedName("NetworkType")
     @Expose
@@ -92,7 +93,7 @@ STATIC：静态
     private String RouteType;
 
     /**
-    * BgpPeer，用户侧bgp信息，包括asn和AuthKey
+    * BgpPeer，用户侧bgp信息，包括Asn和AuthKey
     */
     @SerializedName("BgpPeer")
     @Expose
@@ -181,24 +182,28 @@ STATIC：静态
     }
 
     /**
-     * 获取网络类型，分别为VPC、BMVPC
+     * 获取网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
-     * @return NetworkType 网络类型，分别为VPC、BMVPC
+CCN：云联网
+     * @return NetworkType 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
+CCN：云联网
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * 设置网络类型，分别为VPC、BMVPC
+     * 设置网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
-     * @param NetworkType 网络类型，分别为VPC、BMVPC
+CCN：云联网
+     * @param NetworkType 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
+CCN：云联网
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -297,16 +302,16 @@ STATIC：静态
     }
 
     /**
-     * 获取BgpPeer，用户侧bgp信息，包括asn和AuthKey
-     * @return BgpPeer BgpPeer，用户侧bgp信息，包括asn和AuthKey
+     * 获取BgpPeer，用户侧bgp信息，包括Asn和AuthKey
+     * @return BgpPeer BgpPeer，用户侧bgp信息，包括Asn和AuthKey
      */
     public BgpPeer getBgpPeer() {
         return this.BgpPeer;
     }
 
     /**
-     * 设置BgpPeer，用户侧bgp信息，包括asn和AuthKey
-     * @param BgpPeer BgpPeer，用户侧bgp信息，包括asn和AuthKey
+     * 设置BgpPeer，用户侧bgp信息，包括Asn和AuthKey
+     * @param BgpPeer BgpPeer，用户侧bgp信息，包括Asn和AuthKey
      */
     public void setBgpPeer(BgpPeer BgpPeer) {
         this.BgpPeer = BgpPeer;

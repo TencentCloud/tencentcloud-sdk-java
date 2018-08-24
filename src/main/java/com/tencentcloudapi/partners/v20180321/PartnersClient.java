@@ -49,6 +49,24 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *代理商支付订单接口，支持自付/代付
+     * @param req AgentPayDealsRequest
+     * @return AgentPayDealsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AgentPayDealsResponse  AgentPayDeals(AgentPayDealsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AgentPayDealsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AgentPayDealsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AgentPayDeals"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *代理商可以审核其名下申请中代客
      * @param req AuditApplyClientRequest
      * @return AuditApplyClientResponse
@@ -60,6 +78,24 @@ public class PartnersClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<AuditApplyClientResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "AuditApplyClient"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询已审核客户列表
+     * @param req DescribeAgentAuditedClientsRequest
+     * @return DescribeAgentAuditedClientsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentAuditedClientsResponse  DescribeAgentAuditedClients(DescribeAgentAuditedClientsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgentAuditedClientsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgentAuditedClientsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAgentAuditedClients"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

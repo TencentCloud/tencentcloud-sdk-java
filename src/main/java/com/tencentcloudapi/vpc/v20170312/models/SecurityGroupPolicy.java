@@ -48,7 +48,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     */
     @SerializedName("ServiceTemplate")
     @Expose
-    private String [] ServiceTemplate;
+    private ServiceTemplateSpecification ServiceTemplate;
 
     /**
     * 网段或IP(互斥)。
@@ -69,7 +69,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     */
     @SerializedName("AddressTemplate")
     @Expose
-    private String AddressTemplate;
+    private AddressTemplateSpecification AddressTemplate;
 
     /**
     * ACCEPT 或 DROP。
@@ -137,7 +137,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
      * 获取协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      * @return ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      */
-    public String [] getServiceTemplate() {
+    public ServiceTemplateSpecification getServiceTemplate() {
         return this.ServiceTemplate;
     }
 
@@ -145,7 +145,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
      * 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      * @param ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      */
-    public void setServiceTemplate(String [] ServiceTemplate) {
+    public void setServiceTemplate(ServiceTemplateSpecification ServiceTemplate) {
         this.ServiceTemplate = ServiceTemplate;
     }
 
@@ -185,7 +185,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
      * 获取IP地址ID或者ID地址组ID。
      * @return AddressTemplate IP地址ID或者ID地址组ID。
      */
-    public String getAddressTemplate() {
+    public AddressTemplateSpecification getAddressTemplate() {
         return this.AddressTemplate;
     }
 
@@ -193,7 +193,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
      * 设置IP地址ID或者ID地址组ID。
      * @param AddressTemplate IP地址ID或者ID地址组ID。
      */
-    public void setAddressTemplate(String AddressTemplate) {
+    public void setAddressTemplate(AddressTemplateSpecification AddressTemplate) {
         this.AddressTemplate = AddressTemplate;
     }
 
@@ -236,10 +236,10 @@ public class SecurityGroupPolicy  extends AbstractModel{
         this.setParamSimple(map, prefix + "PolicyIndex", this.PolicyIndex);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Port", this.Port);
-        this.setParamArraySimple(map, prefix + "ServiceTemplate.", this.ServiceTemplate);
+        this.setParamObj(map, prefix + "ServiceTemplate.", this.ServiceTemplate);
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
-        this.setParamSimple(map, prefix + "AddressTemplate", this.AddressTemplate);
+        this.setParamObj(map, prefix + "AddressTemplate.", this.AddressTemplate);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "PolicyDescription", this.PolicyDescription);
 

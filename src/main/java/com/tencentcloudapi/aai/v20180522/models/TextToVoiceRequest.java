@@ -44,42 +44,42 @@ public class TextToVoiceRequest  extends AbstractModel{
     private Integer ModelType;
 
     /**
-    * 音量大小，暂仅支持默认值1
+    * 音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
     */
     @SerializedName("Volume")
     @Expose
     private Float Volume;
 
     /**
-    * 语速，暂仅支持默认值1
+    * 语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
     */
     @SerializedName("Speed")
     @Expose
     private Float Speed;
 
     /**
-    * 用户自定义项目id，默认为0
+    * 项目id，用户自定义，默认为0
     */
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
 
     /**
-    * 音色，1-默认音色
+    * 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
     */
     @SerializedName("VoiceType")
     @Expose
     private Integer VoiceType;
 
     /**
-    * 主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
+    * 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
     */
     @SerializedName("PrimaryLanguage")
     @Expose
     private Integer PrimaryLanguage;
 
     /**
-    * 音频采样率：暂仅支持16k
+    * 音频采样率，16000：16k，8000：8k，默认16k
     */
     @SerializedName("SampleRate")
     @Expose
@@ -134,96 +134,96 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音量大小，暂仅支持默认值1
-     * @return Volume 音量大小，暂仅支持默认值1
+     * 获取音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
+     * @return Volume 音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
      */
     public Float getVolume() {
         return this.Volume;
     }
 
     /**
-     * 设置音量大小，暂仅支持默认值1
-     * @param Volume 音量大小，暂仅支持默认值1
+     * 设置音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
+     * @param Volume 音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
      */
     public void setVolume(Float Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * 获取语速，暂仅支持默认值1
-     * @return Speed 语速，暂仅支持默认值1
+     * 获取语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
+     * @return Speed 语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
      */
     public Float getSpeed() {
         return this.Speed;
     }
 
     /**
-     * 设置语速，暂仅支持默认值1
-     * @param Speed 语速，暂仅支持默认值1
+     * 设置语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
+     * @param Speed 语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
      */
     public void setSpeed(Float Speed) {
         this.Speed = Speed;
     }
 
     /**
-     * 获取用户自定义项目id，默认为0
-     * @return ProjectId 用户自定义项目id，默认为0
+     * 获取项目id，用户自定义，默认为0
+     * @return ProjectId 项目id，用户自定义，默认为0
      */
     public Integer getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置用户自定义项目id，默认为0
-     * @param ProjectId 用户自定义项目id，默认为0
+     * 设置项目id，用户自定义，默认为0
+     * @param ProjectId 项目id，用户自定义，默认为0
      */
     public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * 获取音色，1-默认音色
-     * @return VoiceType 音色，1-默认音色
+     * 获取音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
+     * @return VoiceType 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
      */
     public Integer getVoiceType() {
         return this.VoiceType;
     }
 
     /**
-     * 设置音色，1-默认音色
-     * @param VoiceType 音色，1-默认音色
+     * 设置音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
+     * @param VoiceType 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
      */
     public void setVoiceType(Integer VoiceType) {
         this.VoiceType = VoiceType;
     }
 
     /**
-     * 获取主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
-     * @return PrimaryLanguage 主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
+     * 获取主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+     * @return PrimaryLanguage 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
      */
     public Integer getPrimaryLanguage() {
         return this.PrimaryLanguage;
     }
 
     /**
-     * 设置主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
-     * @param PrimaryLanguage 主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
+     * 设置主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+     * @param PrimaryLanguage 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
      */
     public void setPrimaryLanguage(Integer PrimaryLanguage) {
         this.PrimaryLanguage = PrimaryLanguage;
     }
 
     /**
-     * 获取音频采样率：暂仅支持16k
-     * @return SampleRate 音频采样率：暂仅支持16k
+     * 获取音频采样率，16000：16k，8000：8k，默认16k
+     * @return SampleRate 音频采样率，16000：16k，8000：8k，默认16k
      */
     public Integer getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * 设置音频采样率：暂仅支持16k
-     * @param SampleRate 音频采样率：暂仅支持16k
+     * 设置音频采样率，16000：16k，8000：8k，默认16k
+     * @param SampleRate 音频采样率，16000：16k，8000：8k，默认16k
      */
     public void setSampleRate(Integer SampleRate) {
         this.SampleRate = SampleRate;

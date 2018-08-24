@@ -44,7 +44,7 @@ public class AgentClientElem  extends AbstractModel{
     private Integer ApplyTime;
 
     /**
-    * 代客类型，可能值为a/b
+    * 代客类型，可能值为a/b/c
     */
     @SerializedName("ClientFlag")
     @Expose
@@ -120,16 +120,16 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 获取代客类型，可能值为a/b
-     * @return ClientFlag 代客类型，可能值为a/b
+     * 获取代客类型，可能值为a/b/c
+     * @return ClientFlag 代客类型，可能值为a/b/c
      */
     public String getClientFlag() {
         return this.ClientFlag;
     }
 
     /**
-     * 设置代客类型，可能值为a/b
-     * @param ClientFlag 代客类型，可能值为a/b
+     * 设置代客类型，可能值为a/b/c
+     * @param ClientFlag 代客类型，可能值为a/b/c
      */
     public void setClientFlag(String ClientFlag) {
         this.ClientFlag = ClientFlag;

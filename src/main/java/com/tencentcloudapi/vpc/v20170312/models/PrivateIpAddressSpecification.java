@@ -65,6 +65,17 @@ public class PrivateIpAddressSpecification  extends AbstractModel{
     private Boolean IsWanIpBlocked;
 
     /**
+    * IP状态：
+PENDING：生产中
+MIGRATING：迁移中
+DELETING：删除中
+AVAILABLE：可用的
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+
+    /**
      * 获取内网IP地址。
      * @return PrivateIpAddress 内网IP地址。
      */
@@ -161,6 +172,38 @@ public class PrivateIpAddressSpecification  extends AbstractModel{
     }
 
     /**
+     * 获取IP状态：
+PENDING：生产中
+MIGRATING：迁移中
+DELETING：删除中
+AVAILABLE：可用的
+     * @return State IP状态：
+PENDING：生产中
+MIGRATING：迁移中
+DELETING：删除中
+AVAILABLE：可用的
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * 设置IP状态：
+PENDING：生产中
+MIGRATING：迁移中
+DELETING：删除中
+AVAILABLE：可用的
+     * @param State IP状态：
+PENDING：生产中
+MIGRATING：迁移中
+DELETING：删除中
+AVAILABLE：可用的
+     */
+    public void setState(String State) {
+        this.State = State;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +213,7 @@ public class PrivateIpAddressSpecification  extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressId", this.AddressId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsWanIpBlocked", this.IsWanIpBlocked);
+        this.setParamSimple(map, prefix + "State", this.State);
 
     }
 }

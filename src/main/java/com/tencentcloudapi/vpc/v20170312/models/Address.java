@@ -44,18 +44,18 @@ public class Address  extends AbstractModel{
     private String AddressStatus;
 
     /**
-    * 弹性外网IP
+    * 外网IP地址
     */
     @SerializedName("AddressIp")
     @Expose
     private String AddressIp;
 
     /**
-    * 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
+    * 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
     */
-    @SerializedName("BindedResourceId")
+    @SerializedName("InstanceId")
     @Expose
-    private String BindedResourceId;
+    private String InstanceId;
 
     /**
     * 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
@@ -63,6 +63,48 @@ public class Address  extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
+
+    /**
+    * 绑定的弹性网卡ID
+    */
+    @SerializedName("NetworkInterfaceId")
+    @Expose
+    private String NetworkInterfaceId;
+
+    /**
+    * 绑定的资源内网ip
+    */
+    @SerializedName("PrivateAddressIp")
+    @Expose
+    private String PrivateAddressIp;
+
+    /**
+    * 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+    */
+    @SerializedName("IsArrears")
+    @Expose
+    private Boolean IsArrears;
+
+    /**
+    * 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+    */
+    @SerializedName("IsBlocked")
+    @Expose
+    private Boolean IsBlocked;
+
+    /**
+    * eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+    */
+    @SerializedName("IsEipDirectConnection")
+    @Expose
+    private Boolean IsEipDirectConnection;
+
+    /**
+    * eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+    */
+    @SerializedName("AddressType")
+    @Expose
+    private String AddressType;
 
     /**
      * 获取`EIP`的`ID`，是`EIP`的唯一标识。
@@ -113,35 +155,35 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取弹性外网IP
-     * @return AddressIp 弹性外网IP
+     * 获取外网IP地址
+     * @return AddressIp 外网IP地址
      */
     public String getAddressIp() {
         return this.AddressIp;
     }
 
     /**
-     * 设置弹性外网IP
-     * @param AddressIp 弹性外网IP
+     * 设置外网IP地址
+     * @param AddressIp 外网IP地址
      */
     public void setAddressIp(String AddressIp) {
         this.AddressIp = AddressIp;
     }
 
     /**
-     * 获取绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
-     * @return BindedResourceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
+     * 获取绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+     * @return InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
      */
-    public String getBindedResourceId() {
-        return this.BindedResourceId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * 设置绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
-     * @param BindedResourceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`，或是弹性网卡。
+     * 设置绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+     * @param InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
      */
-    public void setBindedResourceId(String BindedResourceId) {
-        this.BindedResourceId = BindedResourceId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -161,6 +203,102 @@ public class Address  extends AbstractModel{
     }
 
     /**
+     * 获取绑定的弹性网卡ID
+     * @return NetworkInterfaceId 绑定的弹性网卡ID
+     */
+    public String getNetworkInterfaceId() {
+        return this.NetworkInterfaceId;
+    }
+
+    /**
+     * 设置绑定的弹性网卡ID
+     * @param NetworkInterfaceId 绑定的弹性网卡ID
+     */
+    public void setNetworkInterfaceId(String NetworkInterfaceId) {
+        this.NetworkInterfaceId = NetworkInterfaceId;
+    }
+
+    /**
+     * 获取绑定的资源内网ip
+     * @return PrivateAddressIp 绑定的资源内网ip
+     */
+    public String getPrivateAddressIp() {
+        return this.PrivateAddressIp;
+    }
+
+    /**
+     * 设置绑定的资源内网ip
+     * @param PrivateAddressIp 绑定的资源内网ip
+     */
+    public void setPrivateAddressIp(String PrivateAddressIp) {
+        this.PrivateAddressIp = PrivateAddressIp;
+    }
+
+    /**
+     * 获取资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+     * @return IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+     */
+    public Boolean getIsArrears() {
+        return this.IsArrears;
+    }
+
+    /**
+     * 设置资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+     * @param IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+     */
+    public void setIsArrears(Boolean IsArrears) {
+        this.IsArrears = IsArrears;
+    }
+
+    /**
+     * 获取资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     * @return IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     */
+    public Boolean getIsBlocked() {
+        return this.IsBlocked;
+    }
+
+    /**
+     * 设置资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     * @param IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     */
+    public void setIsBlocked(Boolean IsBlocked) {
+        this.IsBlocked = IsBlocked;
+    }
+
+    /**
+     * 获取eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     * @return IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     */
+    public Boolean getIsEipDirectConnection() {
+        return this.IsEipDirectConnection;
+    }
+
+    /**
+     * 设置eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     * @param IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     */
+    public void setIsEipDirectConnection(Boolean IsEipDirectConnection) {
+        this.IsEipDirectConnection = IsEipDirectConnection;
+    }
+
+    /**
+     * 获取eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * @return AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     */
+    public String getAddressType() {
+        return this.AddressType;
+    }
+
+    /**
+     * 设置eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * @param AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     */
+    public void setAddressType(String AddressType) {
+        this.AddressType = AddressType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -168,8 +306,14 @@ public class Address  extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressName", this.AddressName);
         this.setParamSimple(map, prefix + "AddressStatus", this.AddressStatus);
         this.setParamSimple(map, prefix + "AddressIp", this.AddressIp);
-        this.setParamSimple(map, prefix + "BindedResourceId", this.BindedResourceId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
+        this.setParamSimple(map, prefix + "PrivateAddressIp", this.PrivateAddressIp);
+        this.setParamSimple(map, prefix + "IsArrears", this.IsArrears);
+        this.setParamSimple(map, prefix + "IsBlocked", this.IsBlocked);
+        this.setParamSimple(map, prefix + "IsEipDirectConnection", this.IsEipDirectConnection);
+        this.setParamSimple(map, prefix + "AddressType", this.AddressType);
 
     }
 }
