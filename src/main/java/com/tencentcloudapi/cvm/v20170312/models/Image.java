@@ -107,6 +107,20 @@ public class Image  extends AbstractModel{
     private String ImageSource;
 
     /**
+    * 同步百分比
+    */
+    @SerializedName("SyncPercent")
+    @Expose
+    private Integer SyncPercent;
+
+    /**
+    * 镜像是否支持cloud-init
+    */
+    @SerializedName("IsSupportCloudinit")
+    @Expose
+    private Boolean IsSupportCloudinit;
+
+    /**
      * 获取镜像ID
      * @return ImageId 镜像ID
      */
@@ -299,6 +313,38 @@ public class Image  extends AbstractModel{
     }
 
     /**
+     * 获取同步百分比
+     * @return SyncPercent 同步百分比
+     */
+    public Integer getSyncPercent() {
+        return this.SyncPercent;
+    }
+
+    /**
+     * 设置同步百分比
+     * @param SyncPercent 同步百分比
+     */
+    public void setSyncPercent(Integer SyncPercent) {
+        this.SyncPercent = SyncPercent;
+    }
+
+    /**
+     * 获取镜像是否支持cloud-init
+     * @return IsSupportCloudinit 镜像是否支持cloud-init
+     */
+    public Boolean getIsSupportCloudinit() {
+        return this.IsSupportCloudinit;
+    }
+
+    /**
+     * 设置镜像是否支持cloud-init
+     * @param IsSupportCloudinit 镜像是否支持cloud-init
+     */
+    public void setIsSupportCloudinit(Boolean IsSupportCloudinit) {
+        this.IsSupportCloudinit = IsSupportCloudinit;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +360,8 @@ public class Image  extends AbstractModel{
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "ImageCreator", this.ImageCreator);
         this.setParamSimple(map, prefix + "ImageSource", this.ImageSource);
+        this.setParamSimple(map, prefix + "SyncPercent", this.SyncPercent);
+        this.setParamSimple(map, prefix + "IsSupportCloudinit", this.IsSupportCloudinit);
 
     }
 }

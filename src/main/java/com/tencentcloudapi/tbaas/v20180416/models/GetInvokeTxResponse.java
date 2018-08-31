@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cr.v20180321.models;
+package com.tencentcloudapi.tbaas.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportResponse  extends AbstractModel{
+public class GetInvokeTxResponse  extends AbstractModel{
 
     /**
-    * 日报下载地址
+    * 状态码
     */
-    @SerializedName("DailyReportUrl")
+    @SerializedName("TxValidationCode")
     @Expose
-    private String DailyReportUrl;
+    private Integer TxValidationCode;
 
     /**
-    * 结果下载地址
+    * 消息
     */
-    @SerializedName("ResultReportUrl")
+    @SerializedName("TxValidationMsg")
     @Expose
-    private String ResultReportUrl;
-
-    /**
-    * 明细下载地址
-    */
-    @SerializedName("DetailReportUrl")
-    @Expose
-    private String DetailReportUrl;
+    private String TxValidationMsg;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -51,51 +44,35 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日报下载地址
-     * @return DailyReportUrl 日报下载地址
+     * 获取状态码
+     * @return TxValidationCode 状态码
      */
-    public String getDailyReportUrl() {
-        return this.DailyReportUrl;
+    public Integer getTxValidationCode() {
+        return this.TxValidationCode;
     }
 
     /**
-     * 设置日报下载地址
-     * @param DailyReportUrl 日报下载地址
+     * 设置状态码
+     * @param TxValidationCode 状态码
      */
-    public void setDailyReportUrl(String DailyReportUrl) {
-        this.DailyReportUrl = DailyReportUrl;
+    public void setTxValidationCode(Integer TxValidationCode) {
+        this.TxValidationCode = TxValidationCode;
     }
 
     /**
-     * 获取结果下载地址
-     * @return ResultReportUrl 结果下载地址
+     * 获取消息
+     * @return TxValidationMsg 消息
      */
-    public String getResultReportUrl() {
-        return this.ResultReportUrl;
+    public String getTxValidationMsg() {
+        return this.TxValidationMsg;
     }
 
     /**
-     * 设置结果下载地址
-     * @param ResultReportUrl 结果下载地址
+     * 设置消息
+     * @param TxValidationMsg 消息
      */
-    public void setResultReportUrl(String ResultReportUrl) {
-        this.ResultReportUrl = ResultReportUrl;
-    }
-
-    /**
-     * 获取明细下载地址
-     * @return DetailReportUrl 明细下载地址
-     */
-    public String getDetailReportUrl() {
-        return this.DetailReportUrl;
-    }
-
-    /**
-     * 设置明细下载地址
-     * @param DetailReportUrl 明细下载地址
-     */
-    public void setDetailReportUrl(String DetailReportUrl) {
-        this.DetailReportUrl = DetailReportUrl;
+    public void setTxValidationMsg(String TxValidationMsg) {
+        this.TxValidationMsg = TxValidationMsg;
     }
 
     /**
@@ -118,9 +95,8 @@ public class DownloadReportResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
-        this.setParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
-        this.setParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+        this.setParamSimple(map, prefix + "TxValidationCode", this.TxValidationCode);
+        this.setParamSimple(map, prefix + "TxValidationMsg", this.TxValidationMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

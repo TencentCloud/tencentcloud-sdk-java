@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cr.v20180321.models;
+package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportResponse  extends AbstractModel{
+public class CreateProductResponse  extends AbstractModel{
 
     /**
-    * 日报下载地址
+    * 产品名称
     */
-    @SerializedName("DailyReportUrl")
+    @SerializedName("ProductName")
     @Expose
-    private String DailyReportUrl;
+    private String ProductName;
 
     /**
-    * 结果下载地址
+    * 产品 ID，腾讯云生成全局唯一 ID
     */
-    @SerializedName("ResultReportUrl")
+    @SerializedName("ProductId")
     @Expose
-    private String ResultReportUrl;
-
-    /**
-    * 明细下载地址
-    */
-    @SerializedName("DetailReportUrl")
-    @Expose
-    private String DetailReportUrl;
+    private String ProductId;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -51,51 +44,35 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日报下载地址
-     * @return DailyReportUrl 日报下载地址
+     * 获取产品名称
+     * @return ProductName 产品名称
      */
-    public String getDailyReportUrl() {
-        return this.DailyReportUrl;
+    public String getProductName() {
+        return this.ProductName;
     }
 
     /**
-     * 设置日报下载地址
-     * @param DailyReportUrl 日报下载地址
+     * 设置产品名称
+     * @param ProductName 产品名称
      */
-    public void setDailyReportUrl(String DailyReportUrl) {
-        this.DailyReportUrl = DailyReportUrl;
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
     /**
-     * 获取结果下载地址
-     * @return ResultReportUrl 结果下载地址
+     * 获取产品 ID，腾讯云生成全局唯一 ID
+     * @return ProductId 产品 ID，腾讯云生成全局唯一 ID
      */
-    public String getResultReportUrl() {
-        return this.ResultReportUrl;
+    public String getProductId() {
+        return this.ProductId;
     }
 
     /**
-     * 设置结果下载地址
-     * @param ResultReportUrl 结果下载地址
+     * 设置产品 ID，腾讯云生成全局唯一 ID
+     * @param ProductId 产品 ID，腾讯云生成全局唯一 ID
      */
-    public void setResultReportUrl(String ResultReportUrl) {
-        this.ResultReportUrl = ResultReportUrl;
-    }
-
-    /**
-     * 获取明细下载地址
-     * @return DetailReportUrl 明细下载地址
-     */
-    public String getDetailReportUrl() {
-        return this.DetailReportUrl;
-    }
-
-    /**
-     * 设置明细下载地址
-     * @param DetailReportUrl 明细下载地址
-     */
-    public void setDetailReportUrl(String DetailReportUrl) {
-        this.DetailReportUrl = DetailReportUrl;
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
     }
 
     /**
@@ -118,9 +95,8 @@ public class DownloadReportResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
-        this.setParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
-        this.setParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

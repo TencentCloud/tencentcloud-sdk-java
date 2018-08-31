@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cr.v20180321;
+package com.tencentcloudapi.tbaas.v20180416;
 
 import java.lang.reflect.Type;
 import com.google.gson.JsonSyntaxException;
@@ -23,18 +23,18 @@ import com.tencentcloudapi.common.AbstractClient;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.JsonResponseModel;
 import com.tencentcloudapi.common.Credential;
-import com.tencentcloudapi.cr.v20180321.models.*;
+import com.tencentcloudapi.tbaas.v20180416.models.*;
 
-public class CrClient extends AbstractClient{
-    private static String endpoint = "cr.tencentcloudapi.com";
-    private static String version = "2018-03-21";
+public class TbaasClient extends AbstractClient{
+    private static String endpoint = "tbaas.tencentcloudapi.com";
+    private static String version = "2018-04-16";
 
     /**
      * 构造client
      * @param credential 认证信息实例
      * @param region	产品地域
      */
-    public CrClient(Credential credential, String region) {
+    public TbaasClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
@@ -44,22 +44,22 @@ public class CrClient extends AbstractClient{
      * @param region	产品地域
      * @param profile 配置实例
      */
-    public CrClient(Credential credential, String region, ClientProfile profile) {
-        super(CrClient.endpoint, CrClient.version, credential, region, profile);
+    public TbaasClient(Credential credential, String region, ClientProfile profile) {
+        super(TbaasClient.endpoint, TbaasClient.version, credential, region, profile);
     }
 
     /**
-     *客户调用该接口查看任务执行状态。输入任务ID，输出任务执行状态或者结果
-     * @param req DescribeTaskStatusRequest
-     * @return DescribeTaskStatusResponse
+     *Invoke异步调用结果查询
+     * @param req GetInvokeTxRequest
+     * @return GetInvokeTxResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskStatusResponse  DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+    public GetInvokeTxResponse  GetInvokeTx(GetInvokeTxRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetInvokeTxResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<GetInvokeTxResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskStatus"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "GetInvokeTx"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -67,17 +67,17 @@ public class CrClient extends AbstractClient{
     }
 
     /**
-     *客户调用该接口下载指定日期的催收报告
-     * @param req DownloadReportRequest
-     * @return DownloadReportResponse
+     *新增交易
+     * @param req InvokeRequest
+     * @return InvokeResponse
      * @throws TencentCloudSDKException
      */
-    public DownloadReportResponse  DownloadReport(DownloadReportRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DownloadReportResponse> rsp = null;
+    public InvokeResponse  Invoke(InvokeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InvokeResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<DownloadReportResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DownloadReport"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "Invoke"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -85,17 +85,17 @@ public class CrClient extends AbstractClient{
     }
 
     /**
-     *客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。
-     * @param req UploadFileRequest
-     * @return UploadFileResponse
+     *查询交易
+     * @param req QueryRequest
+     * @return QueryResponse
      * @throws TencentCloudSDKException
      */
-    public UploadFileResponse  UploadFile(UploadFileRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UploadFileResponse> rsp = null;
+    public QueryResponse  Query(QueryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<UploadFileResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<QueryResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "UploadFile"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "Query"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

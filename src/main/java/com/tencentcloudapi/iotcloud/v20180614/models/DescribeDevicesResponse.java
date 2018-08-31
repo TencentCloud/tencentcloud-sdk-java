@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cr.v20180321.models;
+package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportResponse  extends AbstractModel{
+public class DescribeDevicesResponse  extends AbstractModel{
 
     /**
-    * 日报下载地址
+    * 设备总数
     */
-    @SerializedName("DailyReportUrl")
+    @SerializedName("TotalCount")
     @Expose
-    private String DailyReportUrl;
+    private Integer TotalCount;
 
     /**
-    * 结果下载地址
+    * 设备详细信息列表
     */
-    @SerializedName("ResultReportUrl")
+    @SerializedName("Devices")
     @Expose
-    private String ResultReportUrl;
-
-    /**
-    * 明细下载地址
-    */
-    @SerializedName("DetailReportUrl")
-    @Expose
-    private String DetailReportUrl;
+    private DeviceInfo [] Devices;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -51,51 +44,35 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日报下载地址
-     * @return DailyReportUrl 日报下载地址
+     * 获取设备总数
+     * @return TotalCount 设备总数
      */
-    public String getDailyReportUrl() {
-        return this.DailyReportUrl;
+    public Integer getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * 设置日报下载地址
-     * @param DailyReportUrl 日报下载地址
+     * 设置设备总数
+     * @param TotalCount 设备总数
      */
-    public void setDailyReportUrl(String DailyReportUrl) {
-        this.DailyReportUrl = DailyReportUrl;
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取结果下载地址
-     * @return ResultReportUrl 结果下载地址
+     * 获取设备详细信息列表
+     * @return Devices 设备详细信息列表
      */
-    public String getResultReportUrl() {
-        return this.ResultReportUrl;
+    public DeviceInfo [] getDevices() {
+        return this.Devices;
     }
 
     /**
-     * 设置结果下载地址
-     * @param ResultReportUrl 结果下载地址
+     * 设置设备详细信息列表
+     * @param Devices 设备详细信息列表
      */
-    public void setResultReportUrl(String ResultReportUrl) {
-        this.ResultReportUrl = ResultReportUrl;
-    }
-
-    /**
-     * 获取明细下载地址
-     * @return DetailReportUrl 明细下载地址
-     */
-    public String getDetailReportUrl() {
-        return this.DetailReportUrl;
-    }
-
-    /**
-     * 设置明细下载地址
-     * @param DetailReportUrl 明细下载地址
-     */
-    public void setDetailReportUrl(String DetailReportUrl) {
-        this.DetailReportUrl = DetailReportUrl;
+    public void setDevices(DeviceInfo [] Devices) {
+        this.Devices = Devices;
     }
 
     /**
@@ -118,9 +95,8 @@ public class DownloadReportResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
-        this.setParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
-        this.setParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Devices.", this.Devices);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

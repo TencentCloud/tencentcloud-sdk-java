@@ -13,35 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cr.v20180321.models;
+package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportResponse  extends AbstractModel{
+public class DescribeMultiDevicesResponse  extends AbstractModel{
 
     /**
-    * 日报下载地址
+    * 任务 ID，由批量创建设备接口返回
     */
-    @SerializedName("DailyReportUrl")
+    @SerializedName("TaskId")
     @Expose
-    private String DailyReportUrl;
+    private String TaskId;
 
     /**
-    * 结果下载地址
+    * 设备详细信息列表
     */
-    @SerializedName("ResultReportUrl")
+    @SerializedName("DevicesInfo")
     @Expose
-    private String ResultReportUrl;
+    private MultiDevicesInfo [] DevicesInfo;
 
     /**
-    * 明细下载地址
+    * 该任务创建设备的总数
     */
-    @SerializedName("DetailReportUrl")
+    @SerializedName("TotalDevNum")
     @Expose
-    private String DetailReportUrl;
+    private Integer TotalDevNum;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -51,51 +51,51 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日报下载地址
-     * @return DailyReportUrl 日报下载地址
+     * 获取任务 ID，由批量创建设备接口返回
+     * @return TaskId 任务 ID，由批量创建设备接口返回
      */
-    public String getDailyReportUrl() {
-        return this.DailyReportUrl;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * 设置日报下载地址
-     * @param DailyReportUrl 日报下载地址
+     * 设置任务 ID，由批量创建设备接口返回
+     * @param TaskId 任务 ID，由批量创建设备接口返回
      */
-    public void setDailyReportUrl(String DailyReportUrl) {
-        this.DailyReportUrl = DailyReportUrl;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
-     * 获取结果下载地址
-     * @return ResultReportUrl 结果下载地址
+     * 获取设备详细信息列表
+     * @return DevicesInfo 设备详细信息列表
      */
-    public String getResultReportUrl() {
-        return this.ResultReportUrl;
+    public MultiDevicesInfo [] getDevicesInfo() {
+        return this.DevicesInfo;
     }
 
     /**
-     * 设置结果下载地址
-     * @param ResultReportUrl 结果下载地址
+     * 设置设备详细信息列表
+     * @param DevicesInfo 设备详细信息列表
      */
-    public void setResultReportUrl(String ResultReportUrl) {
-        this.ResultReportUrl = ResultReportUrl;
+    public void setDevicesInfo(MultiDevicesInfo [] DevicesInfo) {
+        this.DevicesInfo = DevicesInfo;
     }
 
     /**
-     * 获取明细下载地址
-     * @return DetailReportUrl 明细下载地址
+     * 获取该任务创建设备的总数
+     * @return TotalDevNum 该任务创建设备的总数
      */
-    public String getDetailReportUrl() {
-        return this.DetailReportUrl;
+    public Integer getTotalDevNum() {
+        return this.TotalDevNum;
     }
 
     /**
-     * 设置明细下载地址
-     * @param DetailReportUrl 明细下载地址
+     * 设置该任务创建设备的总数
+     * @param TotalDevNum 该任务创建设备的总数
      */
-    public void setDetailReportUrl(String DetailReportUrl) {
-        this.DetailReportUrl = DetailReportUrl;
+    public void setTotalDevNum(Integer TotalDevNum) {
+        this.TotalDevNum = TotalDevNum;
     }
 
     /**
@@ -118,9 +118,9 @@ public class DownloadReportResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
-        this.setParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
-        this.setParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "DevicesInfo.", this.DevicesInfo);
+        this.setParamSimple(map, prefix + "TotalDevNum", this.TotalDevNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cr.v20180321.models;
+package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportResponse  extends AbstractModel{
+public class DescribeMultiDevTaskResponse  extends AbstractModel{
 
     /**
-    * 日报下载地址
+    * 任务 ID
     */
-    @SerializedName("DailyReportUrl")
+    @SerializedName("TaskId")
     @Expose
-    private String DailyReportUrl;
+    private String TaskId;
 
     /**
-    * 结果下载地址
+    * 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
     */
-    @SerializedName("ResultReportUrl")
+    @SerializedName("TaskStatus")
     @Expose
-    private String ResultReportUrl;
-
-    /**
-    * 明细下载地址
-    */
-    @SerializedName("DetailReportUrl")
-    @Expose
-    private String DetailReportUrl;
+    private Integer TaskStatus;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -51,51 +44,35 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日报下载地址
-     * @return DailyReportUrl 日报下载地址
+     * 获取任务 ID
+     * @return TaskId 任务 ID
      */
-    public String getDailyReportUrl() {
-        return this.DailyReportUrl;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * 设置日报下载地址
-     * @param DailyReportUrl 日报下载地址
+     * 设置任务 ID
+     * @param TaskId 任务 ID
      */
-    public void setDailyReportUrl(String DailyReportUrl) {
-        this.DailyReportUrl = DailyReportUrl;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
-     * 获取结果下载地址
-     * @return ResultReportUrl 结果下载地址
+     * 获取任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
+     * @return TaskStatus 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
      */
-    public String getResultReportUrl() {
-        return this.ResultReportUrl;
+    public Integer getTaskStatus() {
+        return this.TaskStatus;
     }
 
     /**
-     * 设置结果下载地址
-     * @param ResultReportUrl 结果下载地址
+     * 设置任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
+     * @param TaskStatus 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
      */
-    public void setResultReportUrl(String ResultReportUrl) {
-        this.ResultReportUrl = ResultReportUrl;
-    }
-
-    /**
-     * 获取明细下载地址
-     * @return DetailReportUrl 明细下载地址
-     */
-    public String getDetailReportUrl() {
-        return this.DetailReportUrl;
-    }
-
-    /**
-     * 设置明细下载地址
-     * @param DetailReportUrl 明细下载地址
-     */
-    public void setDetailReportUrl(String DetailReportUrl) {
-        this.DetailReportUrl = DetailReportUrl;
+    public void setTaskStatus(Integer TaskStatus) {
+        this.TaskStatus = TaskStatus;
     }
 
     /**
@@ -118,9 +95,8 @@ public class DownloadReportResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
-        this.setParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
-        this.setParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

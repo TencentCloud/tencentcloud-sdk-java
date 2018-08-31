@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SharePermission  extends AbstractModel{
+public class DescribeTasksRequest  extends AbstractModel{
 
     /**
-    * 镜像分享时间
+    * 分页偏移，从0开始
     */
-    @SerializedName("CreatedTime")
+    @SerializedName("Offset")
     @Expose
-    private String CreatedTime;
+    private Integer Offset;
 
     /**
-    * 镜像分享的账户ID
+    * 分页的大小，数值范围 1-250
     */
-    @SerializedName("AccountId")
+    @SerializedName("Limit")
     @Expose
-    private String AccountId;
+    private Integer Limit;
 
     /**
-     * 获取镜像分享时间
-     * @return CreatedTime 镜像分享时间
+     * 获取分页偏移，从0开始
+     * @return Offset 分页偏移，从0开始
      */
-    public String getCreatedTime() {
-        return this.CreatedTime;
+    public Integer getOffset() {
+        return this.Offset;
     }
 
     /**
-     * 设置镜像分享时间
-     * @param CreatedTime 镜像分享时间
+     * 设置分页偏移，从0开始
+     * @param Offset 分页偏移，从0开始
      */
-    public void setCreatedTime(String CreatedTime) {
-        this.CreatedTime = CreatedTime;
+    public void setOffset(Integer Offset) {
+        this.Offset = Offset;
     }
 
     /**
-     * 获取镜像分享的账户ID
-     * @return AccountId 镜像分享的账户ID
+     * 获取分页的大小，数值范围 1-250
+     * @return Limit 分页的大小，数值范围 1-250
      */
-    public String getAccountId() {
-        return this.AccountId;
+    public Integer getLimit() {
+        return this.Limit;
     }
 
     /**
-     * 设置镜像分享的账户ID
-     * @param AccountId 镜像分享的账户ID
+     * 设置分页的大小，数值范围 1-250
+     * @param Limit 分页的大小，数值范围 1-250
      */
-    public void setAccountId(String AccountId) {
-        this.AccountId = AccountId;
+    public void setLimit(Integer Limit) {
+        this.Limit = Limit;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
-        this.setParamSimple(map, prefix + "AccountId", this.AccountId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

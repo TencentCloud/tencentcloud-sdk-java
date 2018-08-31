@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.tbaas.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SharePermission  extends AbstractModel{
+public class PeerSet  extends AbstractModel{
 
     /**
-    * 镜像分享时间
+    * 节点名称
     */
-    @SerializedName("CreatedTime")
+    @SerializedName("PeerName")
     @Expose
-    private String CreatedTime;
+    private String PeerName;
 
     /**
-    * 镜像分享的账户ID
+    * 组织名称
     */
-    @SerializedName("AccountId")
+    @SerializedName("OrgName")
     @Expose
-    private String AccountId;
+    private String OrgName;
 
     /**
-     * 获取镜像分享时间
-     * @return CreatedTime 镜像分享时间
+     * 获取节点名称
+     * @return PeerName 节点名称
      */
-    public String getCreatedTime() {
-        return this.CreatedTime;
+    public String getPeerName() {
+        return this.PeerName;
     }
 
     /**
-     * 设置镜像分享时间
-     * @param CreatedTime 镜像分享时间
+     * 设置节点名称
+     * @param PeerName 节点名称
      */
-    public void setCreatedTime(String CreatedTime) {
-        this.CreatedTime = CreatedTime;
+    public void setPeerName(String PeerName) {
+        this.PeerName = PeerName;
     }
 
     /**
-     * 获取镜像分享的账户ID
-     * @return AccountId 镜像分享的账户ID
+     * 获取组织名称
+     * @return OrgName 组织名称
      */
-    public String getAccountId() {
-        return this.AccountId;
+    public String getOrgName() {
+        return this.OrgName;
     }
 
     /**
-     * 设置镜像分享的账户ID
-     * @param AccountId 镜像分享的账户ID
+     * 设置组织名称
+     * @param OrgName 组织名称
      */
-    public void setAccountId(String AccountId) {
-        this.AccountId = AccountId;
+    public void setOrgName(String OrgName) {
+        this.OrgName = OrgName;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
-        this.setParamSimple(map, prefix + "AccountId", this.AccountId);
+        this.setParamSimple(map, prefix + "PeerName", this.PeerName);
+        this.setParamSimple(map, prefix + "OrgName", this.OrgName);
 
     }
 }

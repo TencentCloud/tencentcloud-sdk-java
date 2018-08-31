@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cr.v20180321.models;
+package com.tencentcloudapi.tbaas.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportResponse  extends AbstractModel{
+public class InvokeResponse  extends AbstractModel{
 
     /**
-    * 日报下载地址
+    * 交易编号
     */
-    @SerializedName("DailyReportUrl")
+    @SerializedName("Txid")
     @Expose
-    private String DailyReportUrl;
+    private String Txid;
 
     /**
-    * 结果下载地址
+    * 返回内容
     */
-    @SerializedName("ResultReportUrl")
+    @SerializedName("Events")
     @Expose
-    private String ResultReportUrl;
-
-    /**
-    * 明细下载地址
-    */
-    @SerializedName("DetailReportUrl")
-    @Expose
-    private String DetailReportUrl;
+    private String Events;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -51,51 +44,35 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日报下载地址
-     * @return DailyReportUrl 日报下载地址
+     * 获取交易编号
+     * @return Txid 交易编号
      */
-    public String getDailyReportUrl() {
-        return this.DailyReportUrl;
+    public String getTxid() {
+        return this.Txid;
     }
 
     /**
-     * 设置日报下载地址
-     * @param DailyReportUrl 日报下载地址
+     * 设置交易编号
+     * @param Txid 交易编号
      */
-    public void setDailyReportUrl(String DailyReportUrl) {
-        this.DailyReportUrl = DailyReportUrl;
+    public void setTxid(String Txid) {
+        this.Txid = Txid;
     }
 
     /**
-     * 获取结果下载地址
-     * @return ResultReportUrl 结果下载地址
+     * 获取返回内容
+     * @return Events 返回内容
      */
-    public String getResultReportUrl() {
-        return this.ResultReportUrl;
+    public String getEvents() {
+        return this.Events;
     }
 
     /**
-     * 设置结果下载地址
-     * @param ResultReportUrl 结果下载地址
+     * 设置返回内容
+     * @param Events 返回内容
      */
-    public void setResultReportUrl(String ResultReportUrl) {
-        this.ResultReportUrl = ResultReportUrl;
-    }
-
-    /**
-     * 获取明细下载地址
-     * @return DetailReportUrl 明细下载地址
-     */
-    public String getDetailReportUrl() {
-        return this.DetailReportUrl;
-    }
-
-    /**
-     * 设置明细下载地址
-     * @param DetailReportUrl 明细下载地址
-     */
-    public void setDetailReportUrl(String DetailReportUrl) {
-        this.DetailReportUrl = DetailReportUrl;
+    public void setEvents(String Events) {
+        this.Events = Events;
     }
 
     /**
@@ -118,9 +95,8 @@ public class DownloadReportResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
-        this.setParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
-        this.setParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+        this.setParamSimple(map, prefix + "Txid", this.Txid);
+        this.setParamSimple(map, prefix + "Events", this.Events);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
