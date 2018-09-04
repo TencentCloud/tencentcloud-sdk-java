@@ -44,6 +44,17 @@ public class DataDisk  extends AbstractModel{
     private String DiskId;
 
     /**
+    * 数据盘是否随子机销毁。取值范围：
+<li>TRUE：子机销毁时，销毁数据盘
+<li>FALSE：子机销毁时，保留数据盘<br>
+默认取值：TRUE<br>
+该参数目前仅用于 `RunInstances` 接口。
+    */
+    @SerializedName("DeleteWithInstance")
+    @Expose
+    private Boolean DeleteWithInstance;
+
+    /**
      * 获取数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      * @return DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      */
@@ -92,12 +103,45 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
+     * 获取数据盘是否随子机销毁。取值范围：
+<li>TRUE：子机销毁时，销毁数据盘
+<li>FALSE：子机销毁时，保留数据盘<br>
+默认取值：TRUE<br>
+该参数目前仅用于 `RunInstances` 接口。
+     * @return DeleteWithInstance 数据盘是否随子机销毁。取值范围：
+<li>TRUE：子机销毁时，销毁数据盘
+<li>FALSE：子机销毁时，保留数据盘<br>
+默认取值：TRUE<br>
+该参数目前仅用于 `RunInstances` 接口。
+     */
+    public Boolean getDeleteWithInstance() {
+        return this.DeleteWithInstance;
+    }
+
+    /**
+     * 设置数据盘是否随子机销毁。取值范围：
+<li>TRUE：子机销毁时，销毁数据盘
+<li>FALSE：子机销毁时，保留数据盘<br>
+默认取值：TRUE<br>
+该参数目前仅用于 `RunInstances` 接口。
+     * @param DeleteWithInstance 数据盘是否随子机销毁。取值范围：
+<li>TRUE：子机销毁时，销毁数据盘
+<li>FALSE：子机销毁时，保留数据盘<br>
+默认取值：TRUE<br>
+该参数目前仅用于 `RunInstances` 接口。
+     */
+    public void setDeleteWithInstance(Boolean DeleteWithInstance) {
+        this.DeleteWithInstance = DeleteWithInstance;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
+        this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
 
     }
 }

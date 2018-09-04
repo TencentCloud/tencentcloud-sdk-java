@@ -34,7 +34,7 @@ public class BackupInfo  extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
     * 备份快照时间，时间格式：2016-03-17 02:10:37
@@ -112,7 +112,7 @@ public class BackupInfo  extends AbstractModel{
      * 获取备份文件大小，单位：Byte
      * @return Size 备份文件大小，单位：Byte
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -120,7 +120,7 @@ public class BackupInfo  extends AbstractModel{
      * 设置备份文件大小，单位：Byte
      * @param Size 备份文件大小，单位：Byte
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 
