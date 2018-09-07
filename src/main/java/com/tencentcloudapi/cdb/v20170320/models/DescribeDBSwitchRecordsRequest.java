@@ -30,14 +30,14 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 分页参数，偏移量。
+    * 分页偏移量。
     */
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
 
     /**
-    * 分页参数，单次请求数量限制。
+    * 分页大小，默认值为50，最小值为1，最大值为2000。
     */
     @SerializedName("Limit")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数，偏移量。
-     * @return Offset 分页参数，偏移量。
+     * 获取分页偏移量。
+     * @return Offset 分页偏移量。
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置分页参数，偏移量。
-     * @param Offset 分页参数，偏移量。
+     * 设置分页偏移量。
+     * @param Offset 分页偏移量。
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取分页参数，单次请求数量限制。
-     * @return Limit 分页参数，单次请求数量限制。
+     * 获取分页大小，默认值为50，最小值为1，最大值为2000。
+     * @return Limit 分页大小，默认值为50，最小值为1，最大值为2000。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页参数，单次请求数量限制。
-     * @param Limit 分页参数，单次请求数量限制。
+     * 设置分页大小，默认值为50，最小值为1，最大值为2000。
+     * @param Limit 分页大小，默认值为50，最小值为1，最大值为2000。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

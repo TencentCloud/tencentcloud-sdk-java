@@ -755,6 +755,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyAutoRenewFlag)用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。
+     * @param req ModifyAutoRenewFlagRequest
+     * @return ModifyAutoRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoRenewFlagResponse  ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAutoRenewFlagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAutoRenewFlagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAutoRenewFlag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyBackupConfig)用于修改数据库备份配置信息。
      * @param req ModifyBackupConfigRequest
      * @return ModifyBackupConfigResponse

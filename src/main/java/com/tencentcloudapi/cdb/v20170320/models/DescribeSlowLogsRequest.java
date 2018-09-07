@@ -37,7 +37,7 @@ public class DescribeSlowLogsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 返回记录数量，默认值为20，最大值为100。
+    * 分页大小，默认值为20，最小值为1，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录数量，默认值为20，最大值为100。
-     * @return Limit 返回记录数量，默认值为20，最大值为100。
+     * 获取分页大小，默认值为20，最小值为1，最大值为100。
+     * @return Limit 分页大小，默认值为20，最小值为1，最大值为100。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置返回记录数量，默认值为20，最大值为100。
-     * @param Limit 返回记录数量，默认值为20，最大值为100。
+     * 设置分页大小，默认值为20，最小值为1，最大值为100。
+     * @param Limit 分页大小，默认值为20，最小值为1，最大值为100。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

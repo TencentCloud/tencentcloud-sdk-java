@@ -97,7 +97,7 @@ public class PlanInfo  extends AbstractModel{
     */
     @SerializedName("SoType")
     @Expose
-    private String SoType;
+    private String [] SoType;
 
     /**
     * 防日志泄漏，0关闭，1开启
@@ -298,7 +298,7 @@ public class PlanInfo  extends AbstractModel{
      * 获取保护so的强度，
      * @return SoType 保护so的强度，
      */
-    public String getSoType() {
+    public String [] getSoType() {
         return this.SoType;
     }
 
@@ -306,7 +306,7 @@ public class PlanInfo  extends AbstractModel{
      * 设置保护so的强度，
      * @param SoType 保护so的强度，
      */
-    public void setSoType(String SoType) {
+    public void setSoType(String [] SoType) {
         this.SoType = SoType;
     }
 
@@ -404,7 +404,7 @@ public class PlanInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "DexSig", this.DexSig);
         this.setParamObj(map, prefix + "SoInfo.", this.SoInfo);
         this.setParamSimple(map, prefix + "AntiVMP", this.AntiVMP);
-        this.setParamSimple(map, prefix + "SoType", this.SoType);
+        this.setParamArraySimple(map, prefix + "SoType.", this.SoType);
         this.setParamSimple(map, prefix + "AntiLogLeak", this.AntiLogLeak);
         this.setParamSimple(map, prefix + "AntiQemuRoot", this.AntiQemuRoot);
         this.setParamSimple(map, prefix + "AntiAssets", this.AntiAssets);

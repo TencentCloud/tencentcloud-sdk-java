@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BackupConfig  extends AbstractModel{
 
     /**
-    * 第二个从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
+    * 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
     */
     @SerializedName("ReplicationMode")
     @Expose
@@ -51,16 +51,16 @@ public class BackupConfig  extends AbstractModel{
     private String Vport;
 
     /**
-     * 获取第二个从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
-     * @return ReplicationMode 第二个从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
+     * 获取第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
+     * @return ReplicationMode 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
      */
     public String getReplicationMode() {
         return this.ReplicationMode;
     }
 
     /**
-     * 设置第二个从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
-     * @param ReplicationMode 第二个从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
+     * 设置第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
+     * @param ReplicationMode 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
      */
     public void setReplicationMode(String ReplicationMode) {
         this.ReplicationMode = ReplicationMode;

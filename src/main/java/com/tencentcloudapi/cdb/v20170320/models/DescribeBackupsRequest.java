@@ -37,7 +37,7 @@ public class DescribeBackupsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 单次请求返回的数量，默认值为20，最大值为100。
+    * 分页大小，默认值为20，最小值为1，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次请求返回的数量，默认值为20，最大值为100。
-     * @return Limit 单次请求返回的数量，默认值为20，最大值为100。
+     * 获取分页大小，默认值为20，最小值为1，最大值为100。
+     * @return Limit 分页大小，默认值为20，最小值为1，最大值为100。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置单次请求返回的数量，默认值为20，最大值为100。
-     * @param Limit 单次请求返回的数量，默认值为20，最大值为100。
+     * 设置分页大小，默认值为20，最小值为1，最大值为100。
+     * @param Limit 分页大小，默认值为20，最小值为1，最大值为100。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

@@ -51,7 +51,7 @@ public class DescribeBackupDatabasesRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 分页大小，最大值为2000。
+    * 分页大小，最小值为1，最大值为2000。
     */
     @SerializedName("Limit")
     @Expose
@@ -122,16 +122,16 @@ public class DescribeBackupDatabasesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小，最大值为2000。
-     * @return Limit 分页大小，最大值为2000。
+     * 获取分页大小，最小值为1，最大值为2000。
+     * @return Limit 分页大小，最小值为1，最大值为2000。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页大小，最大值为2000。
-     * @param Limit 分页大小，最大值为2000。
+     * 设置分页大小，最小值为1，最大值为2000。
+     * @param Limit 分页大小，最小值为1，最大值为2000。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;
