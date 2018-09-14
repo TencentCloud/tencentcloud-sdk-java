@@ -1,0 +1,133 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.yunjing.v20180228.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeImpactedHostsRequest  extends AbstractModel{
+
+    /**
+    * 漏洞种类ID。
+    */
+    @SerializedName("VulId")
+    @Expose
+    private Integer VulId;
+
+    /**
+    * 返回数量，默认为10，最大值为100。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Integer Limit;
+
+    /**
+    * 偏移量，默认为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Integer Offset;
+
+    /**
+    * 过滤条件。
+<li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED：待处理 | FIXED：已修复）</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * 获取漏洞种类ID。
+     * @return VulId 漏洞种类ID。
+     */
+    public Integer getVulId() {
+        return this.VulId;
+    }
+
+    /**
+     * 设置漏洞种类ID。
+     * @param VulId 漏洞种类ID。
+     */
+    public void setVulId(Integer VulId) {
+        this.VulId = VulId;
+    }
+
+    /**
+     * 获取返回数量，默认为10，最大值为100。
+     * @return Limit 返回数量，默认为10，最大值为100。
+     */
+    public Integer getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * 设置返回数量，默认为10，最大值为100。
+     * @param Limit 返回数量，默认为10，最大值为100。
+     */
+    public void setLimit(Integer Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * 获取偏移量，默认为0。
+     * @return Offset 偏移量，默认为0。
+     */
+    public Integer getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * 设置偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
+     */
+    public void setOffset(Integer Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * 获取过滤条件。
+<li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED：待处理 | FIXED：已修复）</li>
+     * @return Filters 过滤条件。
+<li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED：待处理 | FIXED：已修复）</li>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * 设置过滤条件。
+<li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED：待处理 | FIXED：已修复）</li>
+     * @param Filters 过滤条件。
+<li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED：待处理 | FIXED：已修复）</li>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "VulId", this.VulId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+
+    }
+}
+

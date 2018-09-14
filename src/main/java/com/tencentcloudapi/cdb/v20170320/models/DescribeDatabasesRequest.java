@@ -37,7 +37,7 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 单次请求数量，取值范围：[0-100]。
+    * 单次请求数量，默认值为20，最小值为1，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -83,16 +83,16 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次请求数量，取值范围：[0-100]。
-     * @return Limit 单次请求数量，取值范围：[0-100]。
+     * 获取单次请求数量，默认值为20，最小值为1，最大值为100。
+     * @return Limit 单次请求数量，默认值为20，最小值为1，最大值为100。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置单次请求数量，取值范围：[0-100]。
-     * @param Limit 单次请求数量，取值范围：[0-100]。
+     * 设置单次请求数量，默认值为20，最小值为1，最大值为100。
+     * @param Limit 单次请求数量，默认值为20，最小值为1，最大值为100。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

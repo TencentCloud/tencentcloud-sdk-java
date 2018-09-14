@@ -30,7 +30,7 @@ public class CreateDirectConnectTunnelRequest  extends AbstractModel{
     private String DirectConnectId;
 
     /**
-    * 专线通道名称
+    * 专用通道名称
     */
     @SerializedName("DirectConnectTunnelName")
     @Expose
@@ -146,16 +146,16 @@ STATIC：静态
     }
 
     /**
-     * 获取专线通道名称
-     * @return DirectConnectTunnelName 专线通道名称
+     * 获取专用通道名称
+     * @return DirectConnectTunnelName 专用通道名称
      */
     public String getDirectConnectTunnelName() {
         return this.DirectConnectTunnelName;
     }
 
     /**
-     * 设置专线通道名称
-     * @param DirectConnectTunnelName 专线通道名称
+     * 设置专用通道名称
+     * @param DirectConnectTunnelName 专用通道名称
      */
     public void setDirectConnectTunnelName(String DirectConnectTunnelName) {
         this.DirectConnectTunnelName = DirectConnectTunnelName;

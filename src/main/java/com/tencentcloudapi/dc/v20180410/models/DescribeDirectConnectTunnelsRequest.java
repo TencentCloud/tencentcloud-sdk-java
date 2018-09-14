@@ -25,8 +25,8 @@ public class DescribeDirectConnectTunnelsRequest  extends AbstractModel{
     /**
     * 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专线通道名称。</li>
-<li> direct-connect-tunnel-id, 专线通道实例ID，如dcx-abcdefgh。</li>
+<li> direct-connect-tunnel-name, 专用通道名称。</li>
+<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
 <li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
     */
     @SerializedName("Filters")
@@ -34,7 +34,7 @@ public class DescribeDirectConnectTunnelsRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 专线通道 ID数组
+    * 专用通道 ID数组
     */
     @SerializedName("DirectConnectTunnelIds")
     @Expose
@@ -57,13 +57,13 @@ public class DescribeDirectConnectTunnelsRequest  extends AbstractModel{
     /**
      * 获取过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专线通道名称。</li>
-<li> direct-connect-tunnel-id, 专线通道实例ID，如dcx-abcdefgh。</li>
+<li> direct-connect-tunnel-name, 专用通道名称。</li>
+<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
 <li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
      * @return Filters 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专线通道名称。</li>
-<li> direct-connect-tunnel-id, 专线通道实例ID，如dcx-abcdefgh。</li>
+<li> direct-connect-tunnel-name, 专用通道名称。</li>
+<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
 <li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
      */
     public Filter [] getFilters() {
@@ -73,13 +73,13 @@ public class DescribeDirectConnectTunnelsRequest  extends AbstractModel{
     /**
      * 设置过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专线通道名称。</li>
-<li> direct-connect-tunnel-id, 专线通道实例ID，如dcx-abcdefgh。</li>
+<li> direct-connect-tunnel-name, 专用通道名称。</li>
+<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
 <li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
      * @param Filters 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专线通道名称。</li>
-<li> direct-connect-tunnel-id, 专线通道实例ID，如dcx-abcdefgh。</li>
+<li> direct-connect-tunnel-name, 专用通道名称。</li>
+<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
 <li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
      */
     public void setFilters(Filter [] Filters) {
@@ -87,16 +87,16 @@ public class DescribeDirectConnectTunnelsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取专线通道 ID数组
-     * @return DirectConnectTunnelIds 专线通道 ID数组
+     * 获取专用通道 ID数组
+     * @return DirectConnectTunnelIds 专用通道 ID数组
      */
     public String [] getDirectConnectTunnelIds() {
         return this.DirectConnectTunnelIds;
     }
 
     /**
-     * 设置专线通道 ID数组
-     * @param DirectConnectTunnelIds 专线通道 ID数组
+     * 设置专用通道 ID数组
+     * @param DirectConnectTunnelIds 专用通道 ID数组
      */
     public void setDirectConnectTunnelIds(String [] DirectConnectTunnelIds) {
         this.DirectConnectTunnelIds = DirectConnectTunnelIds;

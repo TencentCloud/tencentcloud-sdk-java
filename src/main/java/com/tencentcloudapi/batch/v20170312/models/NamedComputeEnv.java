@@ -30,20 +30,6 @@ public class NamedComputeEnv  extends AbstractModel{
     private String EnvName;
 
     /**
-    * 计算环境管理类型
-    */
-    @SerializedName("EnvType")
-    @Expose
-    private String EnvType;
-
-    /**
-    * 计算环境具体参数
-    */
-    @SerializedName("EnvData")
-    @Expose
-    private EnvData EnvData;
-
-    /**
     * 计算节点期望个数
     */
     @SerializedName("DesiredComputeNodeCount")
@@ -56,6 +42,20 @@ public class NamedComputeEnv  extends AbstractModel{
     @SerializedName("EnvDescription")
     @Expose
     private String EnvDescription;
+
+    /**
+    * 计算环境管理类型
+    */
+    @SerializedName("EnvType")
+    @Expose
+    private String EnvType;
+
+    /**
+    * 计算环境具体参数
+    */
+    @SerializedName("EnvData")
+    @Expose
+    private EnvData EnvData;
 
     /**
     * 数据盘挂载选项
@@ -116,38 +116,6 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境管理类型
-     * @return EnvType 计算环境管理类型
-     */
-    public String getEnvType() {
-        return this.EnvType;
-    }
-
-    /**
-     * 设置计算环境管理类型
-     * @param EnvType 计算环境管理类型
-     */
-    public void setEnvType(String EnvType) {
-        this.EnvType = EnvType;
-    }
-
-    /**
-     * 获取计算环境具体参数
-     * @return EnvData 计算环境具体参数
-     */
-    public EnvData getEnvData() {
-        return this.EnvData;
-    }
-
-    /**
-     * 设置计算环境具体参数
-     * @param EnvData 计算环境具体参数
-     */
-    public void setEnvData(EnvData EnvData) {
-        this.EnvData = EnvData;
-    }
-
-    /**
      * 获取计算节点期望个数
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
@@ -177,6 +145,38 @@ public class NamedComputeEnv  extends AbstractModel{
      */
     public void setEnvDescription(String EnvDescription) {
         this.EnvDescription = EnvDescription;
+    }
+
+    /**
+     * 获取计算环境管理类型
+     * @return EnvType 计算环境管理类型
+     */
+    public String getEnvType() {
+        return this.EnvType;
+    }
+
+    /**
+     * 设置计算环境管理类型
+     * @param EnvType 计算环境管理类型
+     */
+    public void setEnvType(String EnvType) {
+        this.EnvType = EnvType;
+    }
+
+    /**
+     * 获取计算环境具体参数
+     * @return EnvData 计算环境具体参数
+     */
+    public EnvData getEnvData() {
+        return this.EnvData;
+    }
+
+    /**
+     * 设置计算环境具体参数
+     * @param EnvData 计算环境具体参数
+     */
+    public void setEnvData(EnvData EnvData) {
+        this.EnvData = EnvData;
     }
 
     /**
@@ -280,10 +280,10 @@ public class NamedComputeEnv  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvName", this.EnvName);
-        this.setParamSimple(map, prefix + "EnvType", this.EnvType);
-        this.setParamObj(map, prefix + "EnvData.", this.EnvData);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
         this.setParamSimple(map, prefix + "EnvDescription", this.EnvDescription);
+        this.setParamSimple(map, prefix + "EnvType", this.EnvType);
+        this.setParamObj(map, prefix + "EnvData.", this.EnvData);
         this.setParamArrayObj(map, prefix + "MountDataDisks.", this.MountDataDisks);
         this.setParamArrayObj(map, prefix + "Authentications.", this.Authentications);
         this.setParamArrayObj(map, prefix + "InputMappings.", this.InputMappings);

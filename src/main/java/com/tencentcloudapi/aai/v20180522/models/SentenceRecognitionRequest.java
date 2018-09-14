@@ -30,14 +30,14 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-    * 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。
+    * 子服务类型。2，一句话识别。
     */
     @SerializedName("SubServiceType")
     @Expose
     private Integer SubServiceType;
 
     /**
-    * 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。
+    * 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
     */
     @SerializedName("EngSerViceType")
     @Expose
@@ -72,7 +72,7 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     private String Url;
 
     /**
-    * 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode())。音频数据要小于900k。
+    * 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于900k。
     */
     @SerializedName("Data")
     @Expose
@@ -102,32 +102,32 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。
-     * @return SubServiceType 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。
+     * 获取子服务类型。2，一句话识别。
+     * @return SubServiceType 子服务类型。2，一句话识别。
      */
     public Integer getSubServiceType() {
         return this.SubServiceType;
     }
 
     /**
-     * 设置子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。
-     * @param SubServiceType 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。
+     * 设置子服务类型。2，一句话识别。
+     * @param SubServiceType 子服务类型。2，一句话识别。
      */
     public void setSubServiceType(Integer SubServiceType) {
         this.SubServiceType = SubServiceType;
     }
 
     /**
-     * 获取引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。
-     * @return EngSerViceType 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。
+     * 获取引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
+     * @return EngSerViceType 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
      */
     public String getEngSerViceType() {
         return this.EngSerViceType;
     }
 
     /**
-     * 设置引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。
-     * @param EngSerViceType 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。
+     * 设置引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
+     * @param EngSerViceType 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
      */
     public void setEngSerViceType(String EngSerViceType) {
         this.EngSerViceType = EngSerViceType;
@@ -198,16 +198,16 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode())。音频数据要小于900k。
-     * @return Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode())。音频数据要小于900k。
+     * 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于900k。
+     * @return Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于900k。
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode())。音频数据要小于900k。
-     * @param Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode())。音频数据要小于900k。
+     * 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于900k。
+     * @param Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于900k。
      */
     public void setData(String Data) {
         this.Data = Data;

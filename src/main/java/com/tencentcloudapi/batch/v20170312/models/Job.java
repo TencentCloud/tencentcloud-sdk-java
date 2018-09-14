@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class Job  extends AbstractModel{
 
     /**
-    * 作业名称
-    */
-    @SerializedName("JobName")
-    @Expose
-    private String JobName;
-
-    /**
-    * 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
-    */
-    @SerializedName("Priority")
-    @Expose
-    private Integer Priority;
-
-    /**
     * 任务信息
     */
     @SerializedName("Tasks")
@@ -44,11 +30,25 @@ public class Job  extends AbstractModel{
     private Task [] Tasks;
 
     /**
+    * 作业名称
+    */
+    @SerializedName("JobName")
+    @Expose
+    private String JobName;
+
+    /**
     * 作业描述
     */
     @SerializedName("JobDescription")
     @Expose
     private String JobDescription;
+
+    /**
+    * 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+    */
+    @SerializedName("Priority")
+    @Expose
+    private Integer Priority;
 
     /**
     * 依赖信息
@@ -79,38 +79,6 @@ public class Job  extends AbstractModel{
     private String StateIfCreateCvmFailed;
 
     /**
-     * 获取作业名称
-     * @return JobName 作业名称
-     */
-    public String getJobName() {
-        return this.JobName;
-    }
-
-    /**
-     * 设置作业名称
-     * @param JobName 作业名称
-     */
-    public void setJobName(String JobName) {
-        this.JobName = JobName;
-    }
-
-    /**
-     * 获取作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
-     * @return Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
-     */
-    public Integer getPriority() {
-        return this.Priority;
-    }
-
-    /**
-     * 设置作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
-     * @param Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
-     */
-    public void setPriority(Integer Priority) {
-        this.Priority = Priority;
-    }
-
-    /**
      * 获取任务信息
      * @return Tasks 任务信息
      */
@@ -127,6 +95,22 @@ public class Job  extends AbstractModel{
     }
 
     /**
+     * 获取作业名称
+     * @return JobName 作业名称
+     */
+    public String getJobName() {
+        return this.JobName;
+    }
+
+    /**
+     * 设置作业名称
+     * @param JobName 作业名称
+     */
+    public void setJobName(String JobName) {
+        this.JobName = JobName;
+    }
+
+    /**
      * 获取作业描述
      * @return JobDescription 作业描述
      */
@@ -140,6 +124,22 @@ public class Job  extends AbstractModel{
      */
     public void setJobDescription(String JobDescription) {
         this.JobDescription = JobDescription;
+    }
+
+    /**
+     * 获取作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * @return Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     */
+    public Integer getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * 设置作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * @param Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     */
+    public void setPriority(Integer Priority) {
+        this.Priority = Priority;
     }
 
     /**
@@ -210,10 +210,10 @@ public class Job  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobName", this.JobName);
-        this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "JobDescription", this.JobDescription);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamArrayObj(map, prefix + "Dependences.", this.Dependences);
         this.setParamArrayObj(map, prefix + "Notifications.", this.Notifications);
         this.setParamSimple(map, prefix + "TaskExecutionDependOn", this.TaskExecutionDependOn);

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDirectConnectTunnelsResponse  extends AbstractModel{
 
     /**
-    * 专线通道列表
+    * 专用通道列表
     */
     @SerializedName("DirectConnectTunnelSet")
     @Expose
     private DirectConnectTunnel [] DirectConnectTunnelSet;
 
     /**
-    * 符合专线通道数量。
+    * 符合专用通道数量。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeDirectConnectTunnelsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取专线通道列表
-     * @return DirectConnectTunnelSet 专线通道列表
+     * 获取专用通道列表
+     * @return DirectConnectTunnelSet 专用通道列表
      */
     public DirectConnectTunnel [] getDirectConnectTunnelSet() {
         return this.DirectConnectTunnelSet;
     }
 
     /**
-     * 设置专线通道列表
-     * @param DirectConnectTunnelSet 专线通道列表
+     * 设置专用通道列表
+     * @param DirectConnectTunnelSet 专用通道列表
      */
     public void setDirectConnectTunnelSet(DirectConnectTunnel [] DirectConnectTunnelSet) {
         this.DirectConnectTunnelSet = DirectConnectTunnelSet;
     }
 
     /**
-     * 获取符合专线通道数量。
-     * @return TotalCount 符合专线通道数量。
+     * 获取符合专用通道数量。
+     * @return TotalCount 符合专用通道数量。
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置符合专线通道数量。
-     * @param TotalCount 符合专线通道数量。
+     * 设置符合专用通道数量。
+     * @param TotalCount 符合专用通道数量。
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;

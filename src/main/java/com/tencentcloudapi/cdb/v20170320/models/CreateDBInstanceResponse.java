@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDBInstanceResponse  extends AbstractModel{
 
     /**
-    * 短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+    * 短订单ID
     */
     @SerializedName("DealIds")
     @Expose
@@ -44,16 +44,16 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
-     * @return DealIds 短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+     * 获取短订单ID
+     * @return DealIds 短订单ID
      */
     public String [] getDealIds() {
         return this.DealIds;
     }
 
     /**
-     * 设置短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
-     * @param DealIds 短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+     * 设置短订单ID
+     * @param DealIds 短订单ID
      */
     public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;

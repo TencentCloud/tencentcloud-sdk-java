@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDirectConnectTunnelResponse  extends AbstractModel{
 
     /**
-    * 专线通道ID
+    * 专用通道ID
     */
     @SerializedName("DirectConnectTunnelIdSet")
     @Expose
@@ -37,16 +37,16 @@ public class CreateDirectConnectTunnelResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取专线通道ID
-     * @return DirectConnectTunnelIdSet 专线通道ID
+     * 获取专用通道ID
+     * @return DirectConnectTunnelIdSet 专用通道ID
      */
     public String [] getDirectConnectTunnelIdSet() {
         return this.DirectConnectTunnelIdSet;
     }
 
     /**
-     * 设置专线通道ID
-     * @param DirectConnectTunnelIdSet 专线通道ID
+     * 设置专用通道ID
+     * @param DirectConnectTunnelIdSet 专用通道ID
      */
     public void setDirectConnectTunnelIdSet(String [] DirectConnectTunnelIdSet) {
         this.DirectConnectTunnelIdSet = DirectConnectTunnelIdSet;

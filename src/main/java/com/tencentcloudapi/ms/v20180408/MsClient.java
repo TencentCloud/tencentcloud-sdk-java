@@ -67,6 +67,24 @@ public class MsClient extends AbstractClient{
     }
 
     /**
+     *用户可以使用该接口自建资源，只支持白名单用户
+     * @param req CreateResourceInstancesRequest
+     * @return CreateResourceInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResourceInstancesResponse  CreateResourceInstances(CreateResourceInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateResourceInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateResourceInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateResourceInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用户通过该接口批量提交应用进行应用扫描，扫描后需通过DescribeScanResults接口查询扫描结果
      * @param req CreateScanInstancesRequest
      * @return CreateScanInstancesResponse

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AcceptDirectConnectTunnelRequest  extends AbstractModel{
 
     /**
-    * 物理专线拥有者接受共享专线通道申请
+    * 物理专线拥有者接受共享专用通道申请
     */
     @SerializedName("DirectConnectTunnelId")
     @Expose
     private String DirectConnectTunnelId;
 
     /**
-     * 获取物理专线拥有者接受共享专线通道申请
-     * @return DirectConnectTunnelId 物理专线拥有者接受共享专线通道申请
+     * 获取物理专线拥有者接受共享专用通道申请
+     * @return DirectConnectTunnelId 物理专线拥有者接受共享专用通道申请
      */
     public String getDirectConnectTunnelId() {
         return this.DirectConnectTunnelId;
     }
 
     /**
-     * 设置物理专线拥有者接受共享专线通道申请
-     * @param DirectConnectTunnelId 物理专线拥有者接受共享专线通道申请
+     * 设置物理专线拥有者接受共享专用通道申请
+     * @param DirectConnectTunnelId 物理专线拥有者接受共享专用通道申请
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
         this.DirectConnectTunnelId = DirectConnectTunnelId;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
 
     /**
-    * 专线通道ID
+    * 专用通道ID
     */
     @SerializedName("DirectConnectTunnelId")
     @Expose
     private String DirectConnectTunnelId;
 
     /**
-    * 专线通道名称
+    * 专用通道名称
     */
     @SerializedName("DirectConnectTunnelName")
     @Expose
@@ -65,39 +65,39 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     private String CustomerAddress;
 
     /**
-    * 专线通道带宽值，单位为M。
+    * 专用通道带宽值，单位为M。
     */
     @SerializedName("Bandwidth")
     @Expose
     private Integer Bandwidth;
 
     /**
-     * 获取专线通道ID
-     * @return DirectConnectTunnelId 专线通道ID
+     * 获取专用通道ID
+     * @return DirectConnectTunnelId 专用通道ID
      */
     public String getDirectConnectTunnelId() {
         return this.DirectConnectTunnelId;
     }
 
     /**
-     * 设置专线通道ID
-     * @param DirectConnectTunnelId 专线通道ID
+     * 设置专用通道ID
+     * @param DirectConnectTunnelId 专用通道ID
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
         this.DirectConnectTunnelId = DirectConnectTunnelId;
     }
 
     /**
-     * 获取专线通道名称
-     * @return DirectConnectTunnelName 专线通道名称
+     * 获取专用通道名称
+     * @return DirectConnectTunnelName 专用通道名称
      */
     public String getDirectConnectTunnelName() {
         return this.DirectConnectTunnelName;
     }
 
     /**
-     * 设置专线通道名称
-     * @param DirectConnectTunnelName 专线通道名称
+     * 设置专用通道名称
+     * @param DirectConnectTunnelName 专用通道名称
      */
     public void setDirectConnectTunnelName(String DirectConnectTunnelName) {
         this.DirectConnectTunnelName = DirectConnectTunnelName;
@@ -168,16 +168,16 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取专线通道带宽值，单位为M。
-     * @return Bandwidth 专线通道带宽值，单位为M。
+     * 获取专用通道带宽值，单位为M。
+     * @return Bandwidth 专用通道带宽值，单位为M。
      */
     public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * 设置专线通道带宽值，单位为M。
-     * @param Bandwidth 专线通道带宽值，单位为M。
+     * 设置专用通道带宽值，单位为M。
+     * @param Bandwidth 专用通道带宽值，单位为M。
      */
     public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
