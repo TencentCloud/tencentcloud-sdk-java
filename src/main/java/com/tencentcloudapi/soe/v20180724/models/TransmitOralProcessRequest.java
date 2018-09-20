@@ -65,6 +65,13 @@ public class TransmitOralProcessRequest  extends AbstractModel{
     private String SessionId;
 
     /**
+    * 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+    */
+    @SerializedName("SoeAppId")
+    @Expose
+    private String SoeAppId;
+
+    /**
      * 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
      * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
      */
@@ -161,6 +168,22 @@ public class TransmitOralProcessRequest  extends AbstractModel{
     }
 
     /**
+     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     * @return SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     */
+    public String getSoeAppId() {
+        return this.SoeAppId;
+    }
+
+    /**
+     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     * @param SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     */
+    public void setSoeAppId(String SoeAppId) {
+        this.SoeAppId = SoeAppId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class TransmitOralProcessRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "VoiceEncodeType", this.VoiceEncodeType);
         this.setParamSimple(map, prefix + "UserVoiceData", this.UserVoiceData);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
 
     }
 }

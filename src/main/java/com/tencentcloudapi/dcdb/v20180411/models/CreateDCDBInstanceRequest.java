@@ -30,39 +30,11 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     private String [] Zones;
 
     /**
-    * 欲购买实例的数量，目前只支持购买1个实例
-    */
-    @SerializedName("Count")
-    @Expose
-    private Integer Count;
-
-    /**
     * 欲购买的时长，单位：月。
     */
     @SerializedName("Period")
     @Expose
     private Integer Period;
-
-    /**
-    * 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private Integer ProjectId;
-
-    /**
-    * 虚拟私有网络 ID，不传或传空表示创建为基础网络
-    */
-    @SerializedName("VpcId")
-    @Expose
-    private String VpcId;
-
-    /**
-    * 虚拟私有网络子网 ID，VpcId不为空时必填
-    */
-    @SerializedName("SubnetId")
-    @Expose
-    private String SubnetId;
 
     /**
     * 分片内存大小，单位：GB，可以通过 DescribeShardSpec
@@ -94,6 +66,34 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     @SerializedName("ShardCount")
     @Expose
     private Integer ShardCount;
+
+    /**
+    * 欲购买实例的数量，目前只支持购买1个实例
+    */
+    @SerializedName("Count")
+    @Expose
+    private Integer Count;
+
+    /**
+    * 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Integer ProjectId;
+
+    /**
+    * 虚拟私有网络 ID，不传或传空表示创建为基础网络
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 虚拟私有网络子网 ID，VpcId不为空时必填
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
 
     /**
     * 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
@@ -133,22 +133,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取欲购买实例的数量，目前只支持购买1个实例
-     * @return Count 欲购买实例的数量，目前只支持购买1个实例
-     */
-    public Integer getCount() {
-        return this.Count;
-    }
-
-    /**
-     * 设置欲购买实例的数量，目前只支持购买1个实例
-     * @param Count 欲购买实例的数量，目前只支持购买1个实例
-     */
-    public void setCount(Integer Count) {
-        this.Count = Count;
-    }
-
-    /**
      * 获取欲购买的时长，单位：月。
      * @return Period 欲购买的时长，单位：月。
      */
@@ -162,54 +146,6 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
      */
     public void setPeriod(Integer Period) {
         this.Period = Period;
-    }
-
-    /**
-     * 获取项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
-     * @return ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
-     */
-    public Integer getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * 设置项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
-     * @param ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
-     */
-    public void setProjectId(Integer ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
-     * 获取虚拟私有网络 ID，不传或传空表示创建为基础网络
-     * @return VpcId 虚拟私有网络 ID，不传或传空表示创建为基础网络
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * 设置虚拟私有网络 ID，不传或传空表示创建为基础网络
-     * @param VpcId 虚拟私有网络 ID，不传或传空表示创建为基础网络
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
-
-    /**
-     * 获取虚拟私有网络子网 ID，VpcId不为空时必填
-     * @return SubnetId 虚拟私有网络子网 ID，VpcId不为空时必填
-     */
-    public String getSubnetId() {
-        return this.SubnetId;
-    }
-
-    /**
-     * 设置虚拟私有网络子网 ID，VpcId不为空时必填
-     * @param SubnetId 虚拟私有网络子网 ID，VpcId不为空时必填
-     */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
     }
 
     /**
@@ -289,6 +225,70 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取欲购买实例的数量，目前只支持购买1个实例
+     * @return Count 欲购买实例的数量，目前只支持购买1个实例
+     */
+    public Integer getCount() {
+        return this.Count;
+    }
+
+    /**
+     * 设置欲购买实例的数量，目前只支持购买1个实例
+     * @param Count 欲购买实例的数量，目前只支持购买1个实例
+     */
+    public void setCount(Integer Count) {
+        this.Count = Count;
+    }
+
+    /**
+     * 获取项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
+     * @return ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
+     */
+    public Integer getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * 设置项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
+     * @param ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
+     */
+    public void setProjectId(Integer ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * 获取虚拟私有网络 ID，不传或传空表示创建为基础网络
+     * @return VpcId 虚拟私有网络 ID，不传或传空表示创建为基础网络
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * 设置虚拟私有网络 ID，不传或传空表示创建为基础网络
+     * @param VpcId 虚拟私有网络 ID，不传或传空表示创建为基础网络
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * 获取虚拟私有网络子网 ID，VpcId不为空时必填
+     * @return SubnetId 虚拟私有网络子网 ID，VpcId不为空时必填
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * 设置虚拟私有网络子网 ID，VpcId不为空时必填
+     * @param SubnetId 虚拟私有网络子网 ID，VpcId不为空时必填
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
      * 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
      * @return DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
      */
@@ -341,15 +341,15 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
-        this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Period", this.Period);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ShardMemory", this.ShardMemory);
         this.setParamSimple(map, prefix + "ShardStorage", this.ShardStorage);
         this.setParamSimple(map, prefix + "ShardNodeCount", this.ShardNodeCount);
         this.setParamSimple(map, prefix + "ShardCount", this.ShardCount);
+        this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);

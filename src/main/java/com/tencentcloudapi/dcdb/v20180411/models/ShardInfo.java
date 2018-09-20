@@ -37,7 +37,7 @@ public class ShardInfo  extends AbstractModel{
     private String ShardSerialId;
 
     /**
-    * 状态
+    * 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
     */
     @SerializedName("Status")
     @Expose
@@ -72,6 +72,20 @@ public class ShardInfo  extends AbstractModel{
     private Integer ShardId;
 
     /**
+    * 节点数，2 为一主一从， 3 为一主二从
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Integer NodeCount;
+
+    /**
+    * 产品类型 Id（过时字段，请勿依赖该值）
+    */
+    @SerializedName("Pid")
+    @Expose
+    private Integer Pid;
+
+    /**
      * 获取分片ID
      * @return ShardInstanceId 分片ID
      */
@@ -104,16 +118,16 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态
-     * @return Status 状态
+     * 获取状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
+     * @return Status 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
      */
     public Integer getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置状态
-     * @param Status 状态
+     * 设置状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
+     * @param Status 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
      */
     public void setStatus(Integer Status) {
         this.Status = Status;
@@ -184,6 +198,38 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
+     * 获取节点数，2 为一主一从， 3 为一主二从
+     * @return NodeCount 节点数，2 为一主一从， 3 为一主二从
+     */
+    public Integer getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * 设置节点数，2 为一主一从， 3 为一主二从
+     * @param NodeCount 节点数，2 为一主一从， 3 为一主二从
+     */
+    public void setNodeCount(Integer NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
+    /**
+     * 获取产品类型 Id（过时字段，请勿依赖该值）
+     * @return Pid 产品类型 Id（过时字段，请勿依赖该值）
+     */
+    public Integer getPid() {
+        return this.Pid;
+    }
+
+    /**
+     * 设置产品类型 Id（过时字段，请勿依赖该值）
+     * @param Pid 产品类型 Id（过时字段，请勿依赖该值）
+     */
+    public void setPid(Integer Pid) {
+        this.Pid = Pid;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class ShardInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "ShardId", this.ShardId);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "Pid", this.Pid);
 
     }
 }

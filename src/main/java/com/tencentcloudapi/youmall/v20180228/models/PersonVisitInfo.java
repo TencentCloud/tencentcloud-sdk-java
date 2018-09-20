@@ -44,7 +44,7 @@ public class PersonVisitInfo  extends AbstractModel{
     private Integer InTime;
 
     /**
-    * 抓拍到的头像，这里返回的是图片内容的Base64编码
+    * 抓拍到的头像Base64内容，已弃用，返回默认空值
     */
     @SerializedName("CapturedPicture")
     @Expose
@@ -70,6 +70,13 @@ public class PersonVisitInfo  extends AbstractModel{
     @SerializedName("HairType")
     @Expose
     private Integer HairType;
+
+    /**
+    * 抓拍到的头像Url，在有效期内可以访问下载
+    */
+    @SerializedName("CapturedPictureUrl")
+    @Expose
+    private String CapturedPictureUrl;
 
     /**
      * 获取用户ID
@@ -120,16 +127,16 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍到的头像，这里返回的是图片内容的Base64编码
-     * @return CapturedPicture 抓拍到的头像，这里返回的是图片内容的Base64编码
+     * 获取抓拍到的头像Base64内容，已弃用，返回默认空值
+     * @return CapturedPicture 抓拍到的头像Base64内容，已弃用，返回默认空值
      */
     public String getCapturedPicture() {
         return this.CapturedPicture;
     }
 
     /**
-     * 设置抓拍到的头像，这里返回的是图片内容的Base64编码
-     * @param CapturedPicture 抓拍到的头像，这里返回的是图片内容的Base64编码
+     * 设置抓拍到的头像Base64内容，已弃用，返回默认空值
+     * @param CapturedPicture 抓拍到的头像Base64内容，已弃用，返回默认空值
      */
     public void setCapturedPicture(String CapturedPicture) {
         this.CapturedPicture = CapturedPicture;
@@ -184,6 +191,22 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
+     * 获取抓拍到的头像Url，在有效期内可以访问下载
+     * @return CapturedPictureUrl 抓拍到的头像Url，在有效期内可以访问下载
+     */
+    public String getCapturedPictureUrl() {
+        return this.CapturedPictureUrl;
+    }
+
+    /**
+     * 设置抓拍到的头像Url，在有效期内可以访问下载
+     * @param CapturedPictureUrl 抓拍到的头像Url，在有效期内可以访问下载
+     */
+    public void setCapturedPictureUrl(String CapturedPictureUrl) {
+        this.CapturedPictureUrl = CapturedPictureUrl;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class PersonVisitInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "MaskType", this.MaskType);
         this.setParamSimple(map, prefix + "GlassType", this.GlassType);
         this.setParamSimple(map, prefix + "HairType", this.HairType);
+        this.setParamSimple(map, prefix + "CapturedPictureUrl", this.CapturedPictureUrl);
 
     }
 }

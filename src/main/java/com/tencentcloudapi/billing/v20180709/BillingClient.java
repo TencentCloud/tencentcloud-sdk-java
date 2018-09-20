@@ -49,6 +49,24 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *获取云账户余额信息。
+     * @param req DescribeAccountBalanceRequest
+     * @return DescribeAccountBalanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountBalanceResponse  DescribeAccountBalance(DescribeAccountBalanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountBalanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAccountBalance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询账单明细数据
      * @param req DescribeBillDetailRequest
      * @return DescribeBillDetailResponse

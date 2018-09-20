@@ -44,6 +44,13 @@ public class ListModelsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
+    * 模型类型
+    */
+    @SerializedName("ServType")
+    @Expose
+    private String ServType;
+
+    /**
      * 获取部署模型的集群
      * @return Cluster 部署模型的集群
      */
@@ -92,12 +99,29 @@ public class ListModelsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取模型类型
+     * @return ServType 模型类型
+     */
+    public String getServType() {
+        return this.ServType;
+    }
+
+    /**
+     * 设置模型类型
+     * @param ServType 模型类型
+     */
+    public void setServType(String ServType) {
+        this.ServType = ServType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Cluster", this.Cluster);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "ServType", this.ServType);
 
     }
 }

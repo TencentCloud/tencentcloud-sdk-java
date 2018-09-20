@@ -58,6 +58,13 @@ public class Deal  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
+    * 付费模式，0后付费/1预付费
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Integer PayMode;
+
+    /**
      * 获取订单号
      * @return DealName 订单号
      */
@@ -138,6 +145,22 @@ public class Deal  extends AbstractModel{
     }
 
     /**
+     * 获取付费模式，0后付费/1预付费
+     * @return PayMode 付费模式，0后付费/1预付费
+     */
+    public Integer getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * 设置付费模式，0后付费/1预付费
+     * @param PayMode 付费模式，0后付费/1预付费
+     */
+    public void setPayMode(Integer PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class Deal  extends AbstractModel{
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

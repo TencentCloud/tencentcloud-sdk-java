@@ -114,6 +114,13 @@ public class CreateJobRequest  extends AbstractModel{
     private Boolean Debug;
 
     /**
+    * 运行任务的其他配置信息
+    */
+    @SerializedName("RuntimeConf")
+    @Expose
+    private String [] RuntimeConf;
+
+    /**
      * 获取任务名称
      * @return Name 任务名称
      */
@@ -322,6 +329,22 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
+     * 获取运行任务的其他配置信息
+     * @return RuntimeConf 运行任务的其他配置信息
+     */
+    public String [] getRuntimeConf() {
+        return this.RuntimeConf;
+    }
+
+    /**
+     * 设置运行任务的其他配置信息
+     * @param RuntimeConf 运行任务的其他配置信息
+     */
+    public void setRuntimeConf(String [] RuntimeConf) {
+        this.RuntimeConf = RuntimeConf;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class CreateJobRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "WorkerCount", this.WorkerCount);
         this.setParamSimple(map, prefix + "ParameterServerCount", this.ParameterServerCount);
         this.setParamSimple(map, prefix + "Debug", this.Debug);
+        this.setParamArraySimple(map, prefix + "RuntimeConf.", this.RuntimeConf);
 
     }
 }

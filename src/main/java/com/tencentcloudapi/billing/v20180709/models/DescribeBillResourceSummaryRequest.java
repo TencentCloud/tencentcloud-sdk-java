@@ -30,7 +30,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 数量
+    * 数量，最大值为1000
     */
     @SerializedName("Limit")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数量
-     * @return Limit 数量
+     * 获取数量，最大值为1000
+     * @return Limit 数量，最大值为1000
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置数量
-     * @param Limit 数量
+     * 设置数量，最大值为1000
+     * @param Limit 数量，最大值为1000
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

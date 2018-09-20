@@ -65,6 +65,13 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
+    * 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+    */
+    @SerializedName("PictureExpires")
+    @Expose
+    private Integer PictureExpires;
+
+    /**
      * 获取公司ID
      * @return CompanyId 公司ID
      */
@@ -161,6 +168,22 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
+     * 获取图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * @return PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     */
+    public Integer getPictureExpires() {
+        return this.PictureExpires;
+    }
+
+    /**
+     * 设置图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * @param PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     */
+    public void setPictureExpires(Integer PictureExpires) {
+        this.PictureExpires = PictureExpires;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "EndDate", this.EndDate);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "PictureExpires", this.PictureExpires);
 
     }
 }

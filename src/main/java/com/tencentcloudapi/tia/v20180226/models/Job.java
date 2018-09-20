@@ -170,6 +170,20 @@ public class Job  extends AbstractModel{
     private Boolean Debug;
 
     /**
+    * Runtime的额外配置信息
+    */
+    @SerializedName("RuntimeConf")
+    @Expose
+    private String [] RuntimeConf;
+
+    /**
+    * 任务Id
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * 获取任务名称
      * @return Name 任务名称
      */
@@ -506,6 +520,38 @@ public class Job  extends AbstractModel{
     }
 
     /**
+     * 获取Runtime的额外配置信息
+     * @return RuntimeConf Runtime的额外配置信息
+     */
+    public String [] getRuntimeConf() {
+        return this.RuntimeConf;
+    }
+
+    /**
+     * 设置Runtime的额外配置信息
+     * @param RuntimeConf Runtime的额外配置信息
+     */
+    public void setRuntimeConf(String [] RuntimeConf) {
+        this.RuntimeConf = RuntimeConf;
+    }
+
+    /**
+     * 获取任务Id
+     * @return Id 任务Id
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * 设置任务Id
+     * @param Id 任务Id
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -530,6 +576,8 @@ public class Job  extends AbstractModel{
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "Debug", this.Debug);
+        this.setParamArraySimple(map, prefix + "RuntimeConf.", this.RuntimeConf);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

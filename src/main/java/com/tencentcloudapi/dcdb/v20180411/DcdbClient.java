@@ -49,6 +49,61 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(CloseDBExtranetAccess)用于关闭云数据库实例的外网访问。关闭外网访问后，外网地址将不可访问，查询实例列表接口将不返回对应实例的外网域名和端口信息。
+     * @param req CloseDBExtranetAccessRequest
+     * @return CloseDBExtranetAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseDBExtranetAccessResponse  CloseDBExtranetAccess(CloseDBExtranetAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseDBExtranetAccessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CloseDBExtranetAccess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CopyAccountPrivileges）用于复制云数据库账号的权限。
+注意：相同用户名，不同Host是不同的账号，Readonly属性相同的账号之间才能复制权限。
+     * @param req CopyAccountPrivilegesRequest
+     * @return CopyAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyAccountPrivilegesResponse  CopyAccountPrivileges(CopyAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CopyAccountPrivilegesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CopyAccountPrivilegesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CopyAccountPrivileges"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateAccount）用于创建云数据库账号。一个实例可以创建多个不同的账号，相同的用户名+不同的host是不同的账号。
+     * @param req CreateAccountRequest
+     * @return CreateAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccountResponse  CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccountResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAccount"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateDCDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
      * @param req CreateDCDBInstanceRequest
      * @return CreateDCDBInstanceResponse
@@ -67,6 +122,61 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
+     * @param req DeleteAccountRequest
+     * @return DeleteAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccountResponse  DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAccountResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAccountResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAccount"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeAccountPrivileges）用于查询云数据库账号权限。
+注意：注意：相同用户名，不同Host是不同的账号。
+     * @param req DescribeAccountPrivilegesRequest
+     * @return DescribeAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountPrivilegesResponse  DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountPrivilegesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAccountPrivileges"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeAccounts）用于查询指定云数据库实例的账号列表。
+     * @param req DescribeAccountsRequest
+     * @return DescribeAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountsResponse  DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAccounts"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBLogFiles)用于获取数据库的各种日志列表，包括冷备、binlog、errlog和slowlog。
      * @param req DescribeDBLogFilesRequest
      * @return DescribeDBLogFilesResponse
@@ -78,6 +188,42 @@ public class DcdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBLogFilesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBLogFiles"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeDBParameters)用于获取数据库的当前参数设置。
+     * @param req DescribeDBParametersRequest
+     * @return DescribeDBParametersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBParametersResponse  DescribeDBParameters(DescribeDBParametersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBParametersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBParametersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBParameters"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDBSyncMode）用于查询云数据库实例的同步模式。
+     * @param req DescribeDBSyncModeRequest
+     * @return DescribeDBSyncModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSyncModeResponse  DescribeDBSyncMode(DescribeDBSyncModeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSyncModeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSyncModeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBSyncMode"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -158,6 +304,24 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDCDBShards）用于查询云数据库实例的分片信息。
+     * @param req DescribeDCDBShardsRequest
+     * @return DescribeDCDBShardsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDCDBShardsResponse  DescribeDCDBShards(DescribeDCDBShardsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDCDBShardsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDCDBShardsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDCDBShards"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDCDBUpgradePrice）用于查询升级分布式数据库实例价格。
      * @param req DescribeDCDBUpgradePriceRequest
      * @return DescribeDCDBUpgradePriceResponse
@@ -169,6 +333,60 @@ public class DcdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDCDBUpgradePriceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDCDBUpgradePrice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
+     * @param req DescribeDatabaseObjectsRequest
+     * @return DescribeDatabaseObjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseObjectsResponse  DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatabaseObjectsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDatabaseObjects"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDatabaseObjects）用于查询云数据库实例的表信息。
+     * @param req DescribeDatabaseTableRequest
+     * @return DescribeDatabaseTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseTableResponse  DescribeDatabaseTable(DescribeDatabaseTableRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatabaseTableResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDatabaseTable"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
+     * @param req DescribeDatabasesRequest
+     * @return DescribeDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabasesResponse  DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatabasesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDatabases"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -212,6 +430,134 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（GrantAccountPrivileges）用于给云数据库账号赋权。
+注意：相同用户名，不同Host是不同的账号。
+     * @param req GrantAccountPrivilegesRequest
+     * @return GrantAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantAccountPrivilegesResponse  GrantAccountPrivileges(GrantAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GrantAccountPrivilegesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GrantAccountPrivilegesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GrantAccountPrivileges"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(InitDCDBInstances)用于初始化云数据库实例，包括设置默认字符集、表名大小写敏感等。
+     * @param req InitDCDBInstancesRequest
+     * @return InitDCDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InitDCDBInstancesResponse  InitDCDBInstances(InitDCDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InitDCDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InitDCDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InitDCDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyAccountDescription）用于修改云数据库账号备注。
+注意：相同用户名，不同Host是不同的账号。
+     * @param req ModifyAccountDescriptionRequest
+     * @return ModifyAccountDescriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountDescriptionResponse  ModifyAccountDescription(ModifyAccountDescriptionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccountDescriptionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAccountDescription"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyDBInstancesProject）用于修改云数据库实例所属项目。
+     * @param req ModifyDBInstancesProjectRequest
+     * @return ModifyDBInstancesProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstancesProjectResponse  ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDBInstancesProject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyDBParameters)用于修改数据库参数。
+     * @param req ModifyDBParametersRequest
+     * @return ModifyDBParametersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBParametersResponse  ModifyDBParameters(ModifyDBParametersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBParametersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBParametersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDBParameters"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyDBSyncMode）用于修改云数据库实例的同步模式。
+     * @param req ModifyDBSyncModeRequest
+     * @return ModifyDBSyncModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBSyncModeResponse  ModifyDBSyncMode(ModifyDBSyncModeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBSyncModeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDBSyncMode"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（OpenDBExtranetAccess）用于开通云数据库实例的外网访问。开通外网访问后，您可通过外网域名和端口访问实例，可使用查询实例列表接口获取外网域名和端口信息。
+     * @param req OpenDBExtranetAccessRequest
+     * @return OpenDBExtranetAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenDBExtranetAccessResponse  OpenDBExtranetAccess(OpenDBExtranetAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenDBExtranetAccessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenDBExtranetAccessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OpenDBExtranetAccess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（RenewDCDBInstance）用于续费分布式数据库实例。
      * @param req RenewDCDBInstanceRequest
      * @return RenewDCDBInstanceResponse
@@ -223,6 +569,25 @@ public class DcdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RenewDCDBInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RenewDCDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ResetAccountPassword）用于重置云数据库账号的密码。
+注意：相同用户名，不同Host是不同的账号。
+     * @param req ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetAccountPasswordResponse  ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ResetAccountPassword"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -67,6 +67,24 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *为合作伙伴提供转账给客户能力。仅支持合作伙伴为自己名下客户转账。
+     * @param req AgentTransferMoneyRequest
+     * @return AgentTransferMoneyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AgentTransferMoneyResponse  AgentTransferMoney(AgentTransferMoneyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AgentTransferMoneyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AgentTransferMoneyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AgentTransferMoney"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *代理商可以审核其名下申请中代客
      * @param req AuditApplyClientRequest
      * @return AuditApplyClientResponse
@@ -132,6 +150,24 @@ public class PartnersClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentClientsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeAgentClients"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+     * @param req DescribeClientBalanceRequest
+     * @return DescribeClientBalanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClientBalanceResponse  DescribeClientBalance(DescribeClientBalanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClientBalanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClientBalanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClientBalance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

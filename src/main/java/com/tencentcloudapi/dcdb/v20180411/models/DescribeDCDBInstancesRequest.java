@@ -51,11 +51,11 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     private Integer [] ProjectIds;
 
     /**
-    * 是否根据 VPC 网络来搜索，0 为否，1 为是
+    * 是否根据 VPC 网络来搜索
     */
     @SerializedName("IsFilterVpc")
     @Expose
-    private Integer [] IsFilterVpc;
+    private Boolean IsFilterVpc;
 
     /**
     * 私有网络 ID， IsFilterVpc 为 1 时有效
@@ -98,6 +98,20 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
+
+    /**
+    * 1非独享集群，2独享集群， 0全部
+    */
+    @SerializedName("ExclusterType")
+    @Expose
+    private Integer ExclusterType;
+
+    /**
+    * 标识是否使用ExclusterType字段, false不使用，true使用
+    */
+    @SerializedName("IsFilterExcluster")
+    @Expose
+    private Boolean IsFilterExcluster;
 
     /**
      * 获取按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
@@ -164,18 +178,18 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否根据 VPC 网络来搜索，0 为否，1 为是
-     * @return IsFilterVpc 是否根据 VPC 网络来搜索，0 为否，1 为是
+     * 获取是否根据 VPC 网络来搜索
+     * @return IsFilterVpc 是否根据 VPC 网络来搜索
      */
-    public Integer [] getIsFilterVpc() {
+    public Boolean getIsFilterVpc() {
         return this.IsFilterVpc;
     }
 
     /**
-     * 设置是否根据 VPC 网络来搜索，0 为否，1 为是
-     * @param IsFilterVpc 是否根据 VPC 网络来搜索，0 为否，1 为是
+     * 设置是否根据 VPC 网络来搜索
+     * @param IsFilterVpc 是否根据 VPC 网络来搜索
      */
-    public void setIsFilterVpc(Integer [] IsFilterVpc) {
+    public void setIsFilterVpc(Boolean IsFilterVpc) {
         this.IsFilterVpc = IsFilterVpc;
     }
 
@@ -276,6 +290,38 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取1非独享集群，2独享集群， 0全部
+     * @return ExclusterType 1非独享集群，2独享集群， 0全部
+     */
+    public Integer getExclusterType() {
+        return this.ExclusterType;
+    }
+
+    /**
+     * 设置1非独享集群，2独享集群， 0全部
+     * @param ExclusterType 1非独享集群，2独享集群， 0全部
+     */
+    public void setExclusterType(Integer ExclusterType) {
+        this.ExclusterType = ExclusterType;
+    }
+
+    /**
+     * 获取标识是否使用ExclusterType字段, false不使用，true使用
+     * @return IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
+     */
+    public Boolean getIsFilterExcluster() {
+        return this.IsFilterExcluster;
+    }
+
+    /**
+     * 设置标识是否使用ExclusterType字段, false不使用，true使用
+     * @param IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
+     */
+    public void setIsFilterExcluster(Boolean IsFilterExcluster) {
+        this.IsFilterExcluster = IsFilterExcluster;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -283,13 +329,15 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "SearchName", this.SearchName);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
-        this.setParamArraySimple(map, prefix + "IsFilterVpc.", this.IsFilterVpc);
+        this.setParamSimple(map, prefix + "IsFilterVpc", this.IsFilterVpc);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
+        this.setParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
 
     }
 }

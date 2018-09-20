@@ -30,7 +30,7 @@ public class PersonInfo  extends AbstractModel{
     private Integer PersonId;
 
     /**
-    * 人脸图片，这里返回的是图片内容的Base64编码
+    * 人脸图片Base64内容，已弃用，返回默认空值
     */
     @SerializedName("PersonPicture")
     @Expose
@@ -58,6 +58,13 @@ public class PersonInfo  extends AbstractModel{
     private Integer PersonType;
 
     /**
+    * 人脸图片Url，在有效期内可以访问下载
+    */
+    @SerializedName("PersonPictureUrl")
+    @Expose
+    private String PersonPictureUrl;
+
+    /**
      * 获取用户ID
      * @return PersonId 用户ID
      */
@@ -74,16 +81,16 @@ public class PersonInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸图片，这里返回的是图片内容的Base64编码
-     * @return PersonPicture 人脸图片，这里返回的是图片内容的Base64编码
+     * 获取人脸图片Base64内容，已弃用，返回默认空值
+     * @return PersonPicture 人脸图片Base64内容，已弃用，返回默认空值
      */
     public String getPersonPicture() {
         return this.PersonPicture;
     }
 
     /**
-     * 设置人脸图片，这里返回的是图片内容的Base64编码
-     * @param PersonPicture 人脸图片，这里返回的是图片内容的Base64编码
+     * 设置人脸图片Base64内容，已弃用，返回默认空值
+     * @param PersonPicture 人脸图片Base64内容，已弃用，返回默认空值
      */
     public void setPersonPicture(String PersonPicture) {
         this.PersonPicture = PersonPicture;
@@ -138,6 +145,22 @@ public class PersonInfo  extends AbstractModel{
     }
 
     /**
+     * 获取人脸图片Url，在有效期内可以访问下载
+     * @return PersonPictureUrl 人脸图片Url，在有效期内可以访问下载
+     */
+    public String getPersonPictureUrl() {
+        return this.PersonPictureUrl;
+    }
+
+    /**
+     * 设置人脸图片Url，在有效期内可以访问下载
+     * @param PersonPictureUrl 人脸图片Url，在有效期内可以访问下载
+     */
+    public void setPersonPictureUrl(String PersonPictureUrl) {
+        this.PersonPictureUrl = PersonPictureUrl;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class PersonInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "Gender", this.Gender);
         this.setParamSimple(map, prefix + "Age", this.Age);
         this.setParamSimple(map, prefix + "PersonType", this.PersonType);
+        this.setParamSimple(map, prefix + "PersonPictureUrl", this.PersonPictureUrl);
 
     }
 }

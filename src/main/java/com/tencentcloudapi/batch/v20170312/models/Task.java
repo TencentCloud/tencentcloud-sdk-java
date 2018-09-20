@@ -97,14 +97,14 @@ public class Task  extends AbstractModel{
     */
     @SerializedName("EnvVars")
     @Expose
-    private Authentication [] EnvVars;
+    private EnvVar [] EnvVars;
 
     /**
     * 授权信息
     */
     @SerializedName("Authentications")
     @Expose
-    private EnvVar [] Authentications;
+    private Authentication [] Authentications;
 
     /**
     * TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
@@ -291,7 +291,7 @@ public class Task  extends AbstractModel{
      * 获取自定义环境变量
      * @return EnvVars 自定义环境变量
      */
-    public Authentication [] getEnvVars() {
+    public EnvVar [] getEnvVars() {
         return this.EnvVars;
     }
 
@@ -299,7 +299,7 @@ public class Task  extends AbstractModel{
      * 设置自定义环境变量
      * @param EnvVars 自定义环境变量
      */
-    public void setEnvVars(Authentication [] EnvVars) {
+    public void setEnvVars(EnvVar [] EnvVars) {
         this.EnvVars = EnvVars;
     }
 
@@ -307,7 +307,7 @@ public class Task  extends AbstractModel{
      * 获取授权信息
      * @return Authentications 授权信息
      */
-    public EnvVar [] getAuthentications() {
+    public Authentication [] getAuthentications() {
         return this.Authentications;
     }
 
@@ -315,7 +315,7 @@ public class Task  extends AbstractModel{
      * 设置授权信息
      * @param Authentications 授权信息
      */
-    public void setAuthentications(EnvVar [] Authentications) {
+    public void setAuthentications(Authentication [] Authentications) {
         this.Authentications = Authentications;
     }
 

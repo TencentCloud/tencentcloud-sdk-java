@@ -170,6 +170,111 @@ public class DCDBInstanceInfo  extends AbstractModel{
     private ShardInfo [] ShardDetail;
 
     /**
+    * 节点数，2 为一主一从， 3 为一主二从
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Integer NodeCount;
+
+    /**
+    * 临时实例标记，0 为非临时实例
+    */
+    @SerializedName("IsTmp")
+    @Expose
+    private Integer IsTmp;
+
+    /**
+    * 独享集群Id，为空表示非独享集群实例
+    */
+    @SerializedName("ExclusterId")
+    @Expose
+    private String ExclusterId;
+
+    /**
+    * 字符串型的私有网络Id
+    */
+    @SerializedName("UniqueVpcId")
+    @Expose
+    private String UniqueVpcId;
+
+    /**
+    * 字符串型的私有网络子网Id
+    */
+    @SerializedName("UniqueSubnetId")
+    @Expose
+    private String UniqueSubnetId;
+
+    /**
+    * 数字实例Id（过时字段，请勿依赖该值）
+    */
+    @SerializedName("Id")
+    @Expose
+    private Integer Id;
+
+    /**
+    * 外网访问的域名，公网可解析
+    */
+    @SerializedName("WanDomain")
+    @Expose
+    private String WanDomain;
+
+    /**
+    * 外网 IP 地址，公网可访问
+    */
+    @SerializedName("WanVip")
+    @Expose
+    private String WanVip;
+
+    /**
+    * 外网端口
+    */
+    @SerializedName("WanPort")
+    @Expose
+    private Integer WanPort;
+
+    /**
+    * 产品类型 Id（过时字段，请勿依赖该值）
+    */
+    @SerializedName("Pid")
+    @Expose
+    private Integer Pid;
+
+    /**
+    * 实例最后更新时间，格式为 2006-01-02 15:04:05
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+    * 数据库引擎
+    */
+    @SerializedName("DbEngine")
+    @Expose
+    private String DbEngine;
+
+    /**
+    * 数据库引擎版本
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
+
+    /**
+    * 付费模式
+    */
+    @SerializedName("Paymode")
+    @Expose
+    private String Paymode;
+
+    /**
+    * 实例处于异步任务状态时，表示异步任务流程ID
+    */
+    @SerializedName("Locker")
+    @Expose
+    private Integer Locker;
+
+    /**
      * 获取实例ID
      * @return InstanceId 实例ID
      */
@@ -506,6 +611,246 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取节点数，2 为一主一从， 3 为一主二从
+     * @return NodeCount 节点数，2 为一主一从， 3 为一主二从
+     */
+    public Integer getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * 设置节点数，2 为一主一从， 3 为一主二从
+     * @param NodeCount 节点数，2 为一主一从， 3 为一主二从
+     */
+    public void setNodeCount(Integer NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
+    /**
+     * 获取临时实例标记，0 为非临时实例
+     * @return IsTmp 临时实例标记，0 为非临时实例
+     */
+    public Integer getIsTmp() {
+        return this.IsTmp;
+    }
+
+    /**
+     * 设置临时实例标记，0 为非临时实例
+     * @param IsTmp 临时实例标记，0 为非临时实例
+     */
+    public void setIsTmp(Integer IsTmp) {
+        this.IsTmp = IsTmp;
+    }
+
+    /**
+     * 获取独享集群Id，为空表示非独享集群实例
+     * @return ExclusterId 独享集群Id，为空表示非独享集群实例
+     */
+    public String getExclusterId() {
+        return this.ExclusterId;
+    }
+
+    /**
+     * 设置独享集群Id，为空表示非独享集群实例
+     * @param ExclusterId 独享集群Id，为空表示非独享集群实例
+     */
+    public void setExclusterId(String ExclusterId) {
+        this.ExclusterId = ExclusterId;
+    }
+
+    /**
+     * 获取字符串型的私有网络Id
+     * @return UniqueVpcId 字符串型的私有网络Id
+     */
+    public String getUniqueVpcId() {
+        return this.UniqueVpcId;
+    }
+
+    /**
+     * 设置字符串型的私有网络Id
+     * @param UniqueVpcId 字符串型的私有网络Id
+     */
+    public void setUniqueVpcId(String UniqueVpcId) {
+        this.UniqueVpcId = UniqueVpcId;
+    }
+
+    /**
+     * 获取字符串型的私有网络子网Id
+     * @return UniqueSubnetId 字符串型的私有网络子网Id
+     */
+    public String getUniqueSubnetId() {
+        return this.UniqueSubnetId;
+    }
+
+    /**
+     * 设置字符串型的私有网络子网Id
+     * @param UniqueSubnetId 字符串型的私有网络子网Id
+     */
+    public void setUniqueSubnetId(String UniqueSubnetId) {
+        this.UniqueSubnetId = UniqueSubnetId;
+    }
+
+    /**
+     * 获取数字实例Id（过时字段，请勿依赖该值）
+     * @return Id 数字实例Id（过时字段，请勿依赖该值）
+     */
+    public Integer getId() {
+        return this.Id;
+    }
+
+    /**
+     * 设置数字实例Id（过时字段，请勿依赖该值）
+     * @param Id 数字实例Id（过时字段，请勿依赖该值）
+     */
+    public void setId(Integer Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * 获取外网访问的域名，公网可解析
+     * @return WanDomain 外网访问的域名，公网可解析
+     */
+    public String getWanDomain() {
+        return this.WanDomain;
+    }
+
+    /**
+     * 设置外网访问的域名，公网可解析
+     * @param WanDomain 外网访问的域名，公网可解析
+     */
+    public void setWanDomain(String WanDomain) {
+        this.WanDomain = WanDomain;
+    }
+
+    /**
+     * 获取外网 IP 地址，公网可访问
+     * @return WanVip 外网 IP 地址，公网可访问
+     */
+    public String getWanVip() {
+        return this.WanVip;
+    }
+
+    /**
+     * 设置外网 IP 地址，公网可访问
+     * @param WanVip 外网 IP 地址，公网可访问
+     */
+    public void setWanVip(String WanVip) {
+        this.WanVip = WanVip;
+    }
+
+    /**
+     * 获取外网端口
+     * @return WanPort 外网端口
+     */
+    public Integer getWanPort() {
+        return this.WanPort;
+    }
+
+    /**
+     * 设置外网端口
+     * @param WanPort 外网端口
+     */
+    public void setWanPort(Integer WanPort) {
+        this.WanPort = WanPort;
+    }
+
+    /**
+     * 获取产品类型 Id（过时字段，请勿依赖该值）
+     * @return Pid 产品类型 Id（过时字段，请勿依赖该值）
+     */
+    public Integer getPid() {
+        return this.Pid;
+    }
+
+    /**
+     * 设置产品类型 Id（过时字段，请勿依赖该值）
+     * @param Pid 产品类型 Id（过时字段，请勿依赖该值）
+     */
+    public void setPid(Integer Pid) {
+        this.Pid = Pid;
+    }
+
+    /**
+     * 获取实例最后更新时间，格式为 2006-01-02 15:04:05
+     * @return UpdateTime 实例最后更新时间，格式为 2006-01-02 15:04:05
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * 设置实例最后更新时间，格式为 2006-01-02 15:04:05
+     * @param UpdateTime 实例最后更新时间，格式为 2006-01-02 15:04:05
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * 获取数据库引擎
+     * @return DbEngine 数据库引擎
+     */
+    public String getDbEngine() {
+        return this.DbEngine;
+    }
+
+    /**
+     * 设置数据库引擎
+     * @param DbEngine 数据库引擎
+     */
+    public void setDbEngine(String DbEngine) {
+        this.DbEngine = DbEngine;
+    }
+
+    /**
+     * 获取数据库引擎版本
+     * @return DbVersion 数据库引擎版本
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * 设置数据库引擎版本
+     * @param DbVersion 数据库引擎版本
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
+    /**
+     * 获取付费模式
+     * @return Paymode 付费模式
+     */
+    public String getPaymode() {
+        return this.Paymode;
+    }
+
+    /**
+     * 设置付费模式
+     * @param Paymode 付费模式
+     */
+    public void setPaymode(String Paymode) {
+        this.Paymode = Paymode;
+    }
+
+    /**
+     * 获取实例处于异步任务状态时，表示异步任务流程ID
+     * @return Locker 实例处于异步任务状态时，表示异步任务流程ID
+     */
+    public Integer getLocker() {
+        return this.Locker;
+    }
+
+    /**
+     * 设置实例处于异步任务状态时，表示异步任务流程ID
+     * @param Locker 实例处于异步任务状态时，表示异步任务流程ID
+     */
+    public void setLocker(Integer Locker) {
+        this.Locker = Locker;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -530,6 +875,21 @@ public class DCDBInstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "IsolatedTimestamp", this.IsolatedTimestamp);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamArrayObj(map, prefix + "ShardDetail.", this.ShardDetail);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "IsTmp", this.IsTmp);
+        this.setParamSimple(map, prefix + "ExclusterId", this.ExclusterId);
+        this.setParamSimple(map, prefix + "UniqueVpcId", this.UniqueVpcId);
+        this.setParamSimple(map, prefix + "UniqueSubnetId", this.UniqueSubnetId);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "WanDomain", this.WanDomain);
+        this.setParamSimple(map, prefix + "WanVip", this.WanVip);
+        this.setParamSimple(map, prefix + "WanPort", this.WanPort);
+        this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "DbEngine", this.DbEngine);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
+        this.setParamSimple(map, prefix + "Paymode", this.Paymode);
+        this.setParamSimple(map, prefix + "Locker", this.Locker);
 
     }
 }

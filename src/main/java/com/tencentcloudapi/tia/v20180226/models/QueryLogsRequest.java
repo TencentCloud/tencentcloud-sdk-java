@@ -58,7 +58,7 @@ public class QueryLogsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-    * 加载更多使用，透传上次返回的context值，获取后续的日志内容
+    * 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
     */
     @SerializedName("Context")
     @Expose
@@ -145,16 +145,16 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取加载更多使用，透传上次返回的context值，获取后续的日志内容
-     * @return Context 加载更多使用，透传上次返回的context值，获取后续的日志内容
+     * 获取加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
+     * @return Context 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * 设置加载更多使用，透传上次返回的context值，获取后续的日志内容
-     * @param Context 加载更多使用，透传上次返回的context值，获取后续的日志内容
+     * 设置加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
+     * @param Context 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
      */
     public void setContext(String Context) {
         this.Context = Context;

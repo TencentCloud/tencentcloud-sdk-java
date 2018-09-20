@@ -30,7 +30,7 @@ public class EnhancedService  extends AbstractModel{
     private RunSecurityServiceEnabled SecurityService;
 
     /**
-    * 开启云安全服务。若不指定该参数，则默认开启云监控服务。
+    * 开启云监控服务。若不指定该参数，则默认开启云监控服务。
     */
     @SerializedName("MonitorService")
     @Expose
@@ -53,16 +53,16 @@ public class EnhancedService  extends AbstractModel{
     }
 
     /**
-     * 获取开启云安全服务。若不指定该参数，则默认开启云监控服务。
-     * @return MonitorService 开启云安全服务。若不指定该参数，则默认开启云监控服务。
+     * 获取开启云监控服务。若不指定该参数，则默认开启云监控服务。
+     * @return MonitorService 开启云监控服务。若不指定该参数，则默认开启云监控服务。
      */
     public RunMonitorServiceEnabled getMonitorService() {
         return this.MonitorService;
     }
 
     /**
-     * 设置开启云安全服务。若不指定该参数，则默认开启云监控服务。
-     * @param MonitorService 开启云安全服务。若不指定该参数，则默认开启云监控服务。
+     * 设置开启云监控服务。若不指定该参数，则默认开启云监控服务。
+     * @param MonitorService 开启云监控服务。若不指定该参数，则默认开启云监控服务。
      */
     public void setMonitorService(RunMonitorServiceEnabled MonitorService) {
         this.MonitorService = MonitorService;

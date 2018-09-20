@@ -49,6 +49,78 @@ public class YoumallClient extends AbstractClient{
     }
 
     /**
+     *通过指定设备ID和指定时段，获取该时段内中收银台摄像设备抓取到顾客头像及身份ID
+     * @param req DescribeCameraPersonRequest
+     * @return DescribeCameraPersonResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCameraPersonResponse  DescribeCameraPerson(DescribeCameraPersonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCameraPersonResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCameraPersonResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCameraPerson"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过DescribeCameraPerson接口上报的收银台身份ID查询顾客的FaceID。查询最佳时间为收银台上报的次日1点后。
+     * @param req DescribeFaceIdByTempIdRequest
+     * @return DescribeFaceIdByTempIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFaceIdByTempIdResponse  DescribeFaceIdByTempId(DescribeFaceIdByTempIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFaceIdByTempIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFaceIdByTempIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFaceIdByTempId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *返回当前门店历史网络状态数据
+     * @param req DescribeHistoryNetworkInfoRequest
+     * @return DescribeHistoryNetworkInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHistoryNetworkInfoResponse  DescribeHistoryNetworkInfo(DescribeHistoryNetworkInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHistoryNetworkInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHistoryNetworkInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeHistoryNetworkInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *返回当前门店最新网络状态数据
+     * @param req DescribeNetworkInfoRequest
+     * @return DescribeNetworkInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkInfoResponse  DescribeNetworkInfo(DescribeNetworkInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNetworkInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNetworkInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNetworkInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *指定门店获取所有顾客详情列表，包含客户ID、图片、年龄、性别
      * @param req DescribePersonInfoRequest
      * @return DescribePersonInfoResponse
@@ -150,6 +222,25 @@ public class YoumallClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneTrafficInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeZoneTrafficInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *标记到店顾客的身份类型，例如黑名单、白名单等
+
+     * @param req ModifyPersonTagInfoRequest
+     * @return ModifyPersonTagInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPersonTagInfoResponse  ModifyPersonTagInfo(ModifyPersonTagInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPersonTagInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPersonTagInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPersonTagInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
