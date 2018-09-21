@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.batch.v20170312.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeJobsResponse  extends AbstractModel{
+public class DescribeInstanceBackupsResponse  extends AbstractModel{
 
     /**
-    * 作业列表
-    */
-    @SerializedName("JobSet")
-    @Expose
-    private JobView [] JobSet;
-
-    /**
-    * 符合条件的作业数量
+    * 备份总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
+
+    /**
+    * 实例的备份数组
+    */
+    @SerializedName("BackupSet")
+    @Expose
+    private RedisBackupSet [] BackupSet;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -44,35 +44,35 @@ public class DescribeJobsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取作业列表
-     * @return JobSet 作业列表
-     */
-    public JobView [] getJobSet() {
-        return this.JobSet;
-    }
-
-    /**
-     * 设置作业列表
-     * @param JobSet 作业列表
-     */
-    public void setJobSet(JobView [] JobSet) {
-        this.JobSet = JobSet;
-    }
-
-    /**
-     * 获取符合条件的作业数量
-     * @return TotalCount 符合条件的作业数量
+     * 获取备份总数
+     * @return TotalCount 备份总数
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置符合条件的作业数量
-     * @param TotalCount 符合条件的作业数量
+     * 设置备份总数
+     * @param TotalCount 备份总数
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * 获取实例的备份数组
+     * @return BackupSet 实例的备份数组
+     */
+    public RedisBackupSet [] getBackupSet() {
+        return this.BackupSet;
+    }
+
+    /**
+     * 设置实例的备份数组
+     * @param BackupSet 实例的备份数组
+     */
+    public void setBackupSet(RedisBackupSet [] BackupSet) {
+        this.BackupSet = BackupSet;
     }
 
     /**
@@ -95,8 +95,8 @@ public class DescribeJobsResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "JobSet.", this.JobSet);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "BackupSet.", this.BackupSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

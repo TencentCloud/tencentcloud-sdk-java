@@ -121,7 +121,7 @@ public class Task  extends AbstractModel{
     private Integer MaxRetryCount;
 
     /**
-    * 任务启动后的超时时间，单位秒，默认为3600秒
+    * 任务启动后的超时时间，单位秒，默认为86400秒
     */
     @SerializedName("Timeout")
     @Expose
@@ -352,16 +352,16 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取任务启动后的超时时间，单位秒，默认为3600秒
-     * @return Timeout 任务启动后的超时时间，单位秒，默认为3600秒
+     * 获取任务启动后的超时时间，单位秒，默认为86400秒
+     * @return Timeout 任务启动后的超时时间，单位秒，默认为86400秒
      */
     public Integer getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * 设置任务启动后的超时时间，单位秒，默认为3600秒
-     * @param Timeout 任务启动后的超时时间，单位秒，默认为3600秒
+     * 设置任务启动后的超时时间，单位秒，默认为86400秒
+     * @param Timeout 任务启动后的超时时间，单位秒，默认为86400秒
      */
     public void setTimeout(Integer Timeout) {
         this.Timeout = Timeout;

@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.batch.v20170312.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeJobsResponse  extends AbstractModel{
+public class UpgradeInstanceResponse  extends AbstractModel{
 
     /**
-    * 作业列表
+    * 订单ID
     */
-    @SerializedName("JobSet")
+    @SerializedName("DealId")
     @Expose
-    private JobView [] JobSet;
-
-    /**
-    * 符合条件的作业数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Integer TotalCount;
+    private String DealId;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -44,35 +37,19 @@ public class DescribeJobsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取作业列表
-     * @return JobSet 作业列表
+     * 获取订单ID
+     * @return DealId 订单ID
      */
-    public JobView [] getJobSet() {
-        return this.JobSet;
+    public String getDealId() {
+        return this.DealId;
     }
 
     /**
-     * 设置作业列表
-     * @param JobSet 作业列表
+     * 设置订单ID
+     * @param DealId 订单ID
      */
-    public void setJobSet(JobView [] JobSet) {
-        this.JobSet = JobSet;
-    }
-
-    /**
-     * 获取符合条件的作业数量
-     * @return TotalCount 符合条件的作业数量
-     */
-    public Integer getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * 设置符合条件的作业数量
-     * @param TotalCount 符合条件的作业数量
-     */
-    public void setTotalCount(Integer TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setDealId(String DealId) {
+        this.DealId = DealId;
     }
 
     /**
@@ -95,8 +72,7 @@ public class DescribeJobsResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "JobSet.", this.JobSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "DealId", this.DealId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
