@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EnvData  extends AbstractModel{
 
     /**
-    * CVM实例类型
+    * CVM实例类型，不能与InstanceTypes同时出现。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -107,16 +107,23 @@ public class EnvData  extends AbstractModel{
     private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
-     * 获取CVM实例类型
-     * @return InstanceType CVM实例类型
+    * CVM实例类型列表，不能与InstanceType同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+    */
+    @SerializedName("InstanceTypes")
+    @Expose
+    private String [] InstanceTypes;
+
+    /**
+     * 获取CVM实例类型，不能与InstanceTypes同时出现。
+     * @return InstanceType CVM实例类型，不能与InstanceTypes同时出现。
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * 设置CVM实例类型
-     * @param InstanceType CVM实例类型
+     * 设置CVM实例类型，不能与InstanceTypes同时出现。
+     * @param InstanceType CVM实例类型，不能与InstanceTypes同时出现。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -299,6 +306,22 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
+     * 获取CVM实例类型列表，不能与InstanceType同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+     * @return InstanceTypes CVM实例类型列表，不能与InstanceType同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+     */
+    public String [] getInstanceTypes() {
+        return this.InstanceTypes;
+    }
+
+    /**
+     * 设置CVM实例类型列表，不能与InstanceType同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+     * @param InstanceTypes CVM实例类型列表，不能与InstanceType同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+     */
+    public void setInstanceTypes(String [] InstanceTypes) {
+        this.InstanceTypes = InstanceTypes;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class EnvData  extends AbstractModel{
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+        this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
 
     }
 }
