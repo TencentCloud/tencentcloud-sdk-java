@@ -44,13 +44,6 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     private String SrcHost;
 
     /**
-    * 源账号的 ReadOnly 属性
-    */
-    @SerializedName("SrcReadOnly")
-    @Expose
-    private String SrcReadOnly;
-
-    /**
     * 目的用户名
     */
     @SerializedName("DstUserName")
@@ -63,6 +56,13 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     @SerializedName("DstHost")
     @Expose
     private String DstHost;
+
+    /**
+    * 源账号的 ReadOnly 属性
+    */
+    @SerializedName("SrcReadOnly")
+    @Expose
+    private String SrcReadOnly;
 
     /**
     * 目的账号的 ReadOnly 属性
@@ -120,22 +120,6 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源账号的 ReadOnly 属性
-     * @return SrcReadOnly 源账号的 ReadOnly 属性
-     */
-    public String getSrcReadOnly() {
-        return this.SrcReadOnly;
-    }
-
-    /**
-     * 设置源账号的 ReadOnly 属性
-     * @param SrcReadOnly 源账号的 ReadOnly 属性
-     */
-    public void setSrcReadOnly(String SrcReadOnly) {
-        this.SrcReadOnly = SrcReadOnly;
-    }
-
-    /**
      * 获取目的用户名
      * @return DstUserName 目的用户名
      */
@@ -168,6 +152,22 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取源账号的 ReadOnly 属性
+     * @return SrcReadOnly 源账号的 ReadOnly 属性
+     */
+    public String getSrcReadOnly() {
+        return this.SrcReadOnly;
+    }
+
+    /**
+     * 设置源账号的 ReadOnly 属性
+     * @param SrcReadOnly 源账号的 ReadOnly 属性
+     */
+    public void setSrcReadOnly(String SrcReadOnly) {
+        this.SrcReadOnly = SrcReadOnly;
+    }
+
+    /**
      * 获取目的账号的 ReadOnly 属性
      * @return DstReadOnly 目的账号的 ReadOnly 属性
      */
@@ -190,9 +190,9 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SrcUserName", this.SrcUserName);
         this.setParamSimple(map, prefix + "SrcHost", this.SrcHost);
-        this.setParamSimple(map, prefix + "SrcReadOnly", this.SrcReadOnly);
         this.setParamSimple(map, prefix + "DstUserName", this.DstUserName);
         this.setParamSimple(map, prefix + "DstHost", this.DstHost);
+        this.setParamSimple(map, prefix + "SrcReadOnly", this.SrcReadOnly);
         this.setParamSimple(map, prefix + "DstReadOnly", this.DstReadOnly);
 
     }

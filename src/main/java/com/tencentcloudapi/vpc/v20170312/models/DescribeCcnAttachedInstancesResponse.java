@@ -30,11 +30,11 @@ public class DescribeCcnAttachedInstancesResponse  extends AbstractModel{
     private Integer TotalCount;
 
     /**
-    * 关联实例列表
+    * 关联实例列表。
     */
     @SerializedName("InstanceSet")
     @Expose
-    private CcnInstance [] InstanceSet;
+    private CcnAttachedInstance [] InstanceSet;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -60,18 +60,18 @@ public class DescribeCcnAttachedInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例列表
-     * @return InstanceSet 关联实例列表
+     * 获取关联实例列表。
+     * @return InstanceSet 关联实例列表。
      */
-    public CcnInstance [] getInstanceSet() {
+    public CcnAttachedInstance [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * 设置关联实例列表
-     * @param InstanceSet 关联实例列表
+     * 设置关联实例列表。
+     * @param InstanceSet 关联实例列表。
      */
-    public void setInstanceSet(CcnInstance [] InstanceSet) {
+    public void setInstanceSet(CcnAttachedInstance [] InstanceSet) {
         this.InstanceSet = InstanceSet;
     }
 

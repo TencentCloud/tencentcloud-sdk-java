@@ -13,91 +13,91 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotcloud.v20180614.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProductsRequest  extends AbstractModel{
+public class DescribeSqlLogsRequest  extends AbstractModel{
 
     /**
-    * 分页偏移，Offset从0开始
+    * 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * SQL日志偏移。
     */
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
 
     /**
-    * 分页大小，当前页面中显示的最大数量，值范围 10-250。
+    * 拉取数量（0-1000，为0时拉取总数信息）。
     */
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
 
     /**
-    * 过滤条件
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
+     * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * @return InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
 
     /**
-     * 获取分页偏移，Offset从0开始
-     * @return Offset 分页偏移，Offset从0开始
+     * 设置实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * @param InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * 获取SQL日志偏移。
+     * @return Offset SQL日志偏移。
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置分页偏移，Offset从0开始
-     * @param Offset 分页偏移，Offset从0开始
+     * 设置SQL日志偏移。
+     * @param Offset SQL日志偏移。
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取分页大小，当前页面中显示的最大数量，值范围 10-250。
-     * @return Limit 分页大小，当前页面中显示的最大数量，值范围 10-250。
+     * 获取拉取数量（0-1000，为0时拉取总数信息）。
+     * @return Limit 拉取数量（0-1000，为0时拉取总数信息）。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页大小，当前页面中显示的最大数量，值范围 10-250。
-     * @param Limit 分页大小，当前页面中显示的最大数量，值范围 10-250。
+     * 设置拉取数量（0-1000，为0时拉取总数信息）。
+     * @param Limit 拉取数量（0-1000，为0时拉取总数信息）。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取过滤条件
-     * @return Filters 过滤条件
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * 设置过滤条件
-     * @param Filters 过滤条件
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

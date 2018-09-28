@@ -65,6 +65,13 @@ public class DBAccount  extends AbstractModel{
     private Integer ReadOnly;
 
     /**
+    * 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+    */
+    @SerializedName("DelayThresh")
+    @Expose
+    private Integer DelayThresh;
+
+    /**
      * 获取用户名
      * @return UserName 用户名
      */
@@ -161,6 +168,22 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
+     * 获取该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+     * @return DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+     */
+    public Integer getDelayThresh() {
+        return this.DelayThresh;
+    }
+
+    /**
+     * 设置该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+     * @param DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+     */
+    public void setDelayThresh(Integer DelayThresh) {
+        this.DelayThresh = DelayThresh;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class DBAccount  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+        this.setParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
 
     }
 }

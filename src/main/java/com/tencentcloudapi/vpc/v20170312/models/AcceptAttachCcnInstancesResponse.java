@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mariadb.v20170312.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBParametersResponse  extends AbstractModel{
-
-    /**
-    * 实例 ID，形如：tdsql-ow728lmc。
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
-    * 参数修改结果
-    */
-    @SerializedName("Result")
-    @Expose
-    private ParamModifyResult [] Result;
+public class AcceptAttachCcnInstancesResponse  extends AbstractModel{
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -42,38 +28,6 @@ public class ModifyDBParametersResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * 获取实例 ID，形如：tdsql-ow728lmc。
-     * @return InstanceId 实例 ID，形如：tdsql-ow728lmc。
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * 设置实例 ID，形如：tdsql-ow728lmc。
-     * @param InstanceId 实例 ID，形如：tdsql-ow728lmc。
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
-     * 获取参数修改结果
-     * @return Result 参数修改结果
-     */
-    public ParamModifyResult [] getResult() {
-        return this.Result;
-    }
-
-    /**
-     * 设置参数修改结果
-     * @param Result 参数修改结果
-     */
-    public void setResult(ParamModifyResult [] Result) {
-        this.Result = Result;
-    }
 
     /**
      * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -95,8 +49,6 @@ public class ModifyDBParametersResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamArrayObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

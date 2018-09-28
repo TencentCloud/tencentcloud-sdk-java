@@ -27,7 +27,7 @@ public class DescribeDBInstancesResponse  extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer [] TotalCount;
+    private Integer TotalCount;
 
     /**
     * 实例详细信息列表
@@ -47,7 +47,7 @@ public class DescribeDBInstancesResponse  extends AbstractModel{
      * 获取符合条件的实例数量
      * @return TotalCount 符合条件的实例数量
      */
-    public Integer [] getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDBInstancesResponse  extends AbstractModel{
      * 设置符合条件的实例数量
      * @param TotalCount 符合条件的实例数量
      */
-    public void setTotalCount(Integer [] TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 
@@ -95,7 +95,7 @@ public class DescribeDBInstancesResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TotalCount.", this.TotalCount);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Instances.", this.Instances);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

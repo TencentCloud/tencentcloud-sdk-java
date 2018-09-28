@@ -51,25 +51,25 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Integer [] ProjectIds;
 
     /**
-    * 是否根据 VPC 网络来搜索，0 为否，1 为是
+    * 是否根据 VPC 网络来搜索
     */
     @SerializedName("IsFilterVpc")
     @Expose
-    private Integer IsFilterVpc;
+    private Boolean IsFilterVpc;
 
     /**
     * 私有网络 ID， IsFilterVpc 为 1 时有效
     */
     @SerializedName("VpcId")
     @Expose
-    private Integer VpcId;
+    private String VpcId;
 
     /**
     * 私有网络的子网 ID， IsFilterVpc 为 1 时有效
     */
     @SerializedName("SubnetId")
     @Expose
-    private Integer SubnetId;
+    private String SubnetId;
 
     /**
     * 排序字段， projectId， createtime， instancename 三者之一
@@ -105,6 +105,20 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("OriginSerialIds")
     @Expose
     private String [] OriginSerialIds;
+
+    /**
+    * 标识是否使用ExclusterType字段, false不使用，true使用
+    */
+    @SerializedName("IsFilterExcluster")
+    @Expose
+    private Boolean IsFilterExcluster;
+
+    /**
+    * 1非独享集群，2独享集群， 0全部
+    */
+    @SerializedName("ExclusterType")
+    @Expose
+    private Integer ExclusterType;
 
     /**
      * 获取按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
@@ -171,18 +185,18 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否根据 VPC 网络来搜索，0 为否，1 为是
-     * @return IsFilterVpc 是否根据 VPC 网络来搜索，0 为否，1 为是
+     * 获取是否根据 VPC 网络来搜索
+     * @return IsFilterVpc 是否根据 VPC 网络来搜索
      */
-    public Integer getIsFilterVpc() {
+    public Boolean getIsFilterVpc() {
         return this.IsFilterVpc;
     }
 
     /**
-     * 设置是否根据 VPC 网络来搜索，0 为否，1 为是
-     * @param IsFilterVpc 是否根据 VPC 网络来搜索，0 为否，1 为是
+     * 设置是否根据 VPC 网络来搜索
+     * @param IsFilterVpc 是否根据 VPC 网络来搜索
      */
-    public void setIsFilterVpc(Integer IsFilterVpc) {
+    public void setIsFilterVpc(Boolean IsFilterVpc) {
         this.IsFilterVpc = IsFilterVpc;
     }
 
@@ -190,7 +204,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
      * 获取私有网络 ID， IsFilterVpc 为 1 时有效
      * @return VpcId 私有网络 ID， IsFilterVpc 为 1 时有效
      */
-    public Integer getVpcId() {
+    public String getVpcId() {
         return this.VpcId;
     }
 
@@ -198,7 +212,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
      * 设置私有网络 ID， IsFilterVpc 为 1 时有效
      * @param VpcId 私有网络 ID， IsFilterVpc 为 1 时有效
      */
-    public void setVpcId(Integer VpcId) {
+    public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
@@ -206,7 +220,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
      * 获取私有网络的子网 ID， IsFilterVpc 为 1 时有效
      * @return SubnetId 私有网络的子网 ID， IsFilterVpc 为 1 时有效
      */
-    public Integer getSubnetId() {
+    public String getSubnetId() {
         return this.SubnetId;
     }
 
@@ -214,7 +228,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
      * 设置私有网络的子网 ID， IsFilterVpc 为 1 时有效
      * @param SubnetId 私有网络的子网 ID， IsFilterVpc 为 1 时有效
      */
-    public void setSubnetId(Integer SubnetId) {
+    public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
@@ -299,6 +313,38 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取标识是否使用ExclusterType字段, false不使用，true使用
+     * @return IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
+     */
+    public Boolean getIsFilterExcluster() {
+        return this.IsFilterExcluster;
+    }
+
+    /**
+     * 设置标识是否使用ExclusterType字段, false不使用，true使用
+     * @param IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
+     */
+    public void setIsFilterExcluster(Boolean IsFilterExcluster) {
+        this.IsFilterExcluster = IsFilterExcluster;
+    }
+
+    /**
+     * 获取1非独享集群，2独享集群， 0全部
+     * @return ExclusterType 1非独享集群，2独享集群， 0全部
+     */
+    public Integer getExclusterType() {
+        return this.ExclusterType;
+    }
+
+    /**
+     * 设置1非独享集群，2独享集群， 0全部
+     * @param ExclusterType 1非独享集群，2独享集群， 0全部
+     */
+    public void setExclusterType(Integer ExclusterType) {
+        this.ExclusterType = ExclusterType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +360,8 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "OriginSerialIds.", this.OriginSerialIds);
+        this.setParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
+        this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
 
     }
 }

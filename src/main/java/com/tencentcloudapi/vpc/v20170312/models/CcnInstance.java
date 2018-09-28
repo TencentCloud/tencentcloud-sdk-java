@@ -37,32 +37,11 @@ public class CcnInstance  extends AbstractModel{
     private String InstanceRegion;
 
     /**
-    * 云联网实例ID
-    */
-    @SerializedName("CcnId")
-    @Expose
-    private String CcnId;
-
-    /**
     * 关联实例类型，可选值：VPC、DIRECTCONNECT
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
-
-    /**
-    * 关联实例名称
-    */
-    @SerializedName("InstanceName")
-    @Expose
-    private String InstanceName;
-
-    /**
-    * 关联实例CIDR
-    */
-    @SerializedName("CidrBlock")
-    @Expose
-    private String [] CidrBlock;
 
     /**
      * 获取关联实例ID
@@ -97,22 +76,6 @@ public class CcnInstance  extends AbstractModel{
     }
 
     /**
-     * 获取云联网实例ID
-     * @return CcnId 云联网实例ID
-     */
-    public String getCcnId() {
-        return this.CcnId;
-    }
-
-    /**
-     * 设置云联网实例ID
-     * @param CcnId 云联网实例ID
-     */
-    public void setCcnId(String CcnId) {
-        this.CcnId = CcnId;
-    }
-
-    /**
      * 获取关联实例类型，可选值：VPC、DIRECTCONNECT
      * @return InstanceType 关联实例类型，可选值：VPC、DIRECTCONNECT
      */
@@ -129,47 +92,12 @@ public class CcnInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例名称
-     * @return InstanceName 关联实例名称
-     */
-    public String getInstanceName() {
-        return this.InstanceName;
-    }
-
-    /**
-     * 设置关联实例名称
-     * @param InstanceName 关联实例名称
-     */
-    public void setInstanceName(String InstanceName) {
-        this.InstanceName = InstanceName;
-    }
-
-    /**
-     * 获取关联实例CIDR
-     * @return CidrBlock 关联实例CIDR
-     */
-    public String [] getCidrBlock() {
-        return this.CidrBlock;
-    }
-
-    /**
-     * 设置关联实例CIDR
-     * @param CidrBlock 关联实例CIDR
-     */
-    public void setCidrBlock(String [] CidrBlock) {
-        this.CidrBlock = CidrBlock;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
-        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
-        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
-        this.setParamArraySimple(map, prefix + "CidrBlock.", this.CidrBlock);
 
     }
 }

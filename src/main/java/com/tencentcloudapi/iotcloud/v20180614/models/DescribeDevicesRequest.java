@@ -37,7 +37,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 分页的大小，数值范围 10-250
+    * 分页的大小，数值范围 10-100
     */
     @SerializedName("Limit")
     @Expose
@@ -83,16 +83,16 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页的大小，数值范围 10-250
-     * @return Limit 分页的大小，数值范围 10-250
+     * 获取分页的大小，数值范围 10-100
+     * @return Limit 分页的大小，数值范围 10-100
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页的大小，数值范围 10-250
-     * @param Limit 分页的大小，数值范围 10-250
+     * 设置分页的大小，数值范围 10-100
+     * @param Limit 分页的大小，数值范围 10-100
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

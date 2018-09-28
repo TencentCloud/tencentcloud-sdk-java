@@ -41,7 +41,7 @@ public class LogFileInfo  extends AbstractModel{
     */
     @SerializedName("Uri")
     @Expose
-    private Integer Uri;
+    private String Uri;
 
     /**
      * 获取Log最后修改时间
@@ -79,7 +79,7 @@ public class LogFileInfo  extends AbstractModel{
      * 获取下载Log时用到的统一资源标识符
      * @return Uri 下载Log时用到的统一资源标识符
      */
-    public Integer getUri() {
+    public String getUri() {
         return this.Uri;
     }
 
@@ -87,7 +87,7 @@ public class LogFileInfo  extends AbstractModel{
      * 设置下载Log时用到的统一资源标识符
      * @param Uri 下载Log时用到的统一资源标识符
      */
-    public void setUri(Integer Uri) {
+    public void setUri(String Uri) {
         this.Uri = Uri;
     }
 

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachCcnInstancesRequest  extends AbstractModel{
+public class AcceptAttachCcnInstancesRequest  extends AbstractModel{
 
     /**
     * CCN实例ID。形如：ccn-f49l6u0z。
@@ -30,18 +30,11 @@ public class AttachCcnInstancesRequest  extends AbstractModel{
     private String CcnId;
 
     /**
-    * 关联网络实例列表
+    * 接受关联实例列表。
     */
     @SerializedName("Instances")
     @Expose
     private CcnInstance [] Instances;
-
-    /**
-    * CCN所属UIN（根账号），默认当前账号所属UIN
-    */
-    @SerializedName("CcnUin")
-    @Expose
-    private String CcnUin;
 
     /**
      * 获取CCN实例ID。形如：ccn-f49l6u0z。
@@ -60,35 +53,19 @@ public class AttachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关联网络实例列表
-     * @return Instances 关联网络实例列表
+     * 获取接受关联实例列表。
+     * @return Instances 接受关联实例列表。
      */
     public CcnInstance [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * 设置关联网络实例列表
-     * @param Instances 关联网络实例列表
+     * 设置接受关联实例列表。
+     * @param Instances 接受关联实例列表。
      */
     public void setInstances(CcnInstance [] Instances) {
         this.Instances = Instances;
-    }
-
-    /**
-     * 获取CCN所属UIN（根账号），默认当前账号所属UIN
-     * @return CcnUin CCN所属UIN（根账号），默认当前账号所属UIN
-     */
-    public String getCcnUin() {
-        return this.CcnUin;
-    }
-
-    /**
-     * 设置CCN所属UIN（根账号），默认当前账号所属UIN
-     * @param CcnUin CCN所属UIN（根账号），默认当前账号所属UIN
-     */
-    public void setCcnUin(String CcnUin) {
-        this.CcnUin = CcnUin;
     }
 
     /**
@@ -97,7 +74,6 @@ public class AttachCcnInstancesRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamArrayObj(map, prefix + "Instances.", this.Instances);
-        this.setParamSimple(map, prefix + "CcnUin", this.CcnUin);
 
     }
 }

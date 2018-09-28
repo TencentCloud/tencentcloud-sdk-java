@@ -34,28 +34,28 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     */
     @SerializedName("LockTimeSum")
     @Expose
-    private String LockTimeSum;
+    private Float LockTimeSum;
 
     /**
     * 所有语句查询总次数
     */
     @SerializedName("QueryCount")
     @Expose
-    private String QueryCount;
+    private Integer QueryCount;
 
     /**
     * 总记录数
     */
     @SerializedName("Total")
     @Expose
-    private String Total;
+    private Integer Total;
 
     /**
     * 所有语句查询时间总和
     */
     @SerializedName("QueryTimeSum")
     @Expose
-    private String QueryTimeSum;
+    private Float QueryTimeSum;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -84,7 +84,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
      * 获取所有语句锁时间总和
      * @return LockTimeSum 所有语句锁时间总和
      */
-    public String getLockTimeSum() {
+    public Float getLockTimeSum() {
         return this.LockTimeSum;
     }
 
@@ -92,7 +92,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
      * 设置所有语句锁时间总和
      * @param LockTimeSum 所有语句锁时间总和
      */
-    public void setLockTimeSum(String LockTimeSum) {
+    public void setLockTimeSum(Float LockTimeSum) {
         this.LockTimeSum = LockTimeSum;
     }
 
@@ -100,7 +100,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
      * 获取所有语句查询总次数
      * @return QueryCount 所有语句查询总次数
      */
-    public String getQueryCount() {
+    public Integer getQueryCount() {
         return this.QueryCount;
     }
 
@@ -108,7 +108,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
      * 设置所有语句查询总次数
      * @param QueryCount 所有语句查询总次数
      */
-    public void setQueryCount(String QueryCount) {
+    public void setQueryCount(Integer QueryCount) {
         this.QueryCount = QueryCount;
     }
 
@@ -116,7 +116,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
      * 获取总记录数
      * @return Total 总记录数
      */
-    public String getTotal() {
+    public Integer getTotal() {
         return this.Total;
     }
 
@@ -124,7 +124,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
      * 设置总记录数
      * @param Total 总记录数
      */
-    public void setTotal(String Total) {
+    public void setTotal(Integer Total) {
         this.Total = Total;
     }
 
@@ -132,7 +132,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
      * 获取所有语句查询时间总和
      * @return QueryTimeSum 所有语句查询时间总和
      */
-    public String getQueryTimeSum() {
+    public Float getQueryTimeSum() {
         return this.QueryTimeSum;
     }
 
@@ -140,7 +140,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
      * 设置所有语句查询时间总和
      * @param QueryTimeSum 所有语句查询时间总和
      */
-    public void setQueryTimeSum(String QueryTimeSum) {
+    public void setQueryTimeSum(Float QueryTimeSum) {
         this.QueryTimeSum = QueryTimeSum;
     }
 

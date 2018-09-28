@@ -49,6 +49,24 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（CloneAccount）用于克隆实例账户。
+     * @param req CloneAccountRequest
+     * @return CloneAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneAccountResponse  CloneAccount(CloneAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneAccountResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneAccountResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CloneAccount"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CloseDBExtranetAccess)用于关闭云数据库实例的外网访问。关闭外网访问后，外网地址将不可访问，查询实例列表接口将不返回对应实例的外网域名和端口信息。
      * @param req CloseDBExtranetAccessRequest
      * @return CloseDBExtranetAccessResponse
@@ -459,6 +477,24 @@ public class MariadbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSaleInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSaleInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeSqlLogs）用于获取实例SQL日志。
+     * @param req DescribeSqlLogsRequest
+     * @return DescribeSqlLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSqlLogsResponse  DescribeSqlLogs(DescribeSqlLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSqlLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSqlLogs"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

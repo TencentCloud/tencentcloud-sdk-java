@@ -57,7 +57,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     */
     @SerializedName("VoucherIds")
     @Expose
-    private String VoucherIds;
+    private String [] VoucherIds;
 
     /**
      * 获取待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
@@ -135,7 +135,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
      * 获取代金券ID列表，目前仅支持指定一张代金券。
      * @return VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
-    public String getVoucherIds() {
+    public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
@@ -143,7 +143,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
      * 设置代金券ID列表，目前仅支持指定一张代金券。
      * @param VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
-    public void setVoucherIds(String VoucherIds) {
+    public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
     }
 
@@ -155,7 +155,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
-        this.setParamSimple(map, prefix + "VoucherIds", this.VoucherIds);
+        this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
 
     }
 }

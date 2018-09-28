@@ -114,6 +114,13 @@ public class DeviceInfo  extends AbstractModel{
     private Integer LastUpdateTime;
 
     /**
+    * LoRa设备的dev eui
+    */
+    @SerializedName("LoraDevEui")
+    @Expose
+    private String LoraDevEui;
+
+    /**
      * 获取设备名
      * @return DeviceName 设备名
      */
@@ -322,6 +329,22 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取LoRa设备的dev eui
+     * @return LoraDevEui LoRa设备的dev eui
+     */
+    public String getLoraDevEui() {
+        return this.LoraDevEui;
+    }
+
+    /**
+     * 设置LoRa设备的dev eui
+     * @param LoraDevEui LoRa设备的dev eui
+     */
+    public void setLoraDevEui(String LoraDevEui) {
+        this.LoraDevEui = LoraDevEui;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class DeviceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "NbiotDeviceID", this.NbiotDeviceID);
         this.setParamSimple(map, prefix + "ConnIP", this.ConnIP);
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
+        this.setParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
 
     }
 }

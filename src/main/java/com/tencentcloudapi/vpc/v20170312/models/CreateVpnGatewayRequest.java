@@ -58,6 +58,13 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
+    * 可用区，如：ap-guangzhou-2。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
@@ -138,6 +145,22 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
+     * 获取可用区，如：ap-guangzhou-2。
+     * @return Zone 可用区，如：ap-guangzhou-2。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * 设置可用区，如：ap-guangzhou-2。
+     * @param Zone 可用区，如：ap-guangzhou-2。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

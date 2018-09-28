@@ -39,9 +39,9 @@ public class Deal  extends AbstractModel{
     /**
     * 商品数量
     */
-    @SerializedName("Quantity")
+    @SerializedName("Count")
     @Expose
-    private Integer Quantity;
+    private Integer Count;
 
     /**
     * 关联的流程 Id，可用于查询流程执行状态
@@ -56,6 +56,13 @@ public class Deal  extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
+
+    /**
+    * 付费模式，0后付费/1预付费
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Integer PayMode;
 
     /**
      * 获取订单号
@@ -91,18 +98,18 @@ public class Deal  extends AbstractModel{
 
     /**
      * 获取商品数量
-     * @return Quantity 商品数量
+     * @return Count 商品数量
      */
-    public Integer getQuantity() {
-        return this.Quantity;
+    public Integer getCount() {
+        return this.Count;
     }
 
     /**
      * 设置商品数量
-     * @param Quantity 商品数量
+     * @param Count 商品数量
      */
-    public void setQuantity(Integer Quantity) {
-        this.Quantity = Quantity;
+    public void setCount(Integer Count) {
+        this.Count = Count;
     }
 
     /**
@@ -138,14 +145,31 @@ public class Deal  extends AbstractModel{
     }
 
     /**
+     * 获取付费模式，0后付费/1预付费
+     * @return PayMode 付费模式，0后付费/1预付费
+     */
+    public Integer getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * 设置付费模式，0后付费/1预付费
+     * @param PayMode 付费模式，0后付费/1预付费
+     */
+    public void setPayMode(Integer PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
-        this.setParamSimple(map, prefix + "Quantity", this.Quantity);
+        this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

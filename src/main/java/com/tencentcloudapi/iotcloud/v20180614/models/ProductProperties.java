@@ -58,6 +58,20 @@ public class ProductProperties  extends AbstractModel{
     private String Format;
 
     /**
+    * 产品所属平台，默认值是0
+    */
+    @SerializedName("Platform")
+    @Expose
+    private String Platform;
+
+    /**
+    * LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+    */
+    @SerializedName("Appeui")
+    @Expose
+    private String Appeui;
+
+    /**
      * 获取产品描述
      * @return ProductDescription 产品描述
      */
@@ -138,6 +152,38 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
+     * 获取产品所属平台，默认值是0
+     * @return Platform 产品所属平台，默认值是0
+     */
+    public String getPlatform() {
+        return this.Platform;
+    }
+
+    /**
+     * 设置产品所属平台，默认值是0
+     * @param Platform 产品所属平台，默认值是0
+     */
+    public void setPlatform(String Platform) {
+        this.Platform = Platform;
+    }
+
+    /**
+     * 获取LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     * @return Appeui LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     */
+    public String getAppeui() {
+        return this.Appeui;
+    }
+
+    /**
+     * 设置LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     * @param Appeui LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     */
+    public void setAppeui(String Appeui) {
+        this.Appeui = Appeui;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class ProductProperties  extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "ProductType", this.ProductType);
         this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "Platform", this.Platform);
+        this.setParamSimple(map, prefix + "Appeui", this.Appeui);
 
     }
 }

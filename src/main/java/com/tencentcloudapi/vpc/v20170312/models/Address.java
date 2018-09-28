@@ -107,6 +107,13 @@ public class Address  extends AbstractModel{
     private String AddressType;
 
     /**
+    * eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+    */
+    @SerializedName("CascadeRelease")
+    @Expose
+    private Boolean CascadeRelease;
+
+    /**
      * 获取`EIP`的`ID`，是`EIP`的唯一标识。
      * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
@@ -299,6 +306,22 @@ public class Address  extends AbstractModel{
     }
 
     /**
+     * 获取eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     * @return CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     */
+    public Boolean getCascadeRelease() {
+        return this.CascadeRelease;
+    }
+
+    /**
+     * 设置eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     * @param CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     */
+    public void setCascadeRelease(Boolean CascadeRelease) {
+        this.CascadeRelease = CascadeRelease;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class Address  extends AbstractModel{
         this.setParamSimple(map, prefix + "IsBlocked", this.IsBlocked);
         this.setParamSimple(map, prefix + "IsEipDirectConnection", this.IsEipDirectConnection);
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
+        this.setParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
 
     }
 }

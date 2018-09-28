@@ -30,7 +30,14 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     private String [] VpnGatewayIds;
 
     /**
-    * 过滤器对象属性
+    * 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>public-ip-address- String - （过滤条件）公网IP。</li>
+<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
+<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -67,16 +74,44 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤器对象属性
-     * @return Filters 过滤器对象属性
+     * 获取过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>public-ip-address- String - （过滤条件）公网IP。</li>
+<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
+<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
+     * @return Filters 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>public-ip-address- String - （过滤条件）公网IP。</li>
+<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
+<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
      */
     public FilterObject [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * 设置过滤器对象属性
-     * @param Filters 过滤器对象属性
+     * 设置过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>public-ip-address- String - （过滤条件）公网IP。</li>
+<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
+<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
+     * @param Filters 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>public-ip-address- String - （过滤条件）公网IP。</li>
+<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
+<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
      */
     public void setFilters(FilterObject [] Filters) {
         this.Filters = Filters;

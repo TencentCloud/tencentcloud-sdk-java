@@ -53,16 +53,16 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     /**
     * 如果是VPC网络的实例，做用本前缀加上URI为下载地址
     */
-    @SerializedName("Vpcprefix")
+    @SerializedName("VpcPrefix")
     @Expose
-    private String Vpcprefix;
+    private String VpcPrefix;
 
     /**
     * 如果是普通网络的实例，做用本前缀加上URI为下载地址
     */
-    @SerializedName("Normalprefix")
+    @SerializedName("NormalPrefix")
     @Expose
-    private String Normalprefix;
+    private String NormalPrefix;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -137,34 +137,34 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
 
     /**
      * 获取如果是VPC网络的实例，做用本前缀加上URI为下载地址
-     * @return Vpcprefix 如果是VPC网络的实例，做用本前缀加上URI为下载地址
+     * @return VpcPrefix 如果是VPC网络的实例，做用本前缀加上URI为下载地址
      */
-    public String getVpcprefix() {
-        return this.Vpcprefix;
+    public String getVpcPrefix() {
+        return this.VpcPrefix;
     }
 
     /**
      * 设置如果是VPC网络的实例，做用本前缀加上URI为下载地址
-     * @param Vpcprefix 如果是VPC网络的实例，做用本前缀加上URI为下载地址
+     * @param VpcPrefix 如果是VPC网络的实例，做用本前缀加上URI为下载地址
      */
-    public void setVpcprefix(String Vpcprefix) {
-        this.Vpcprefix = Vpcprefix;
+    public void setVpcPrefix(String VpcPrefix) {
+        this.VpcPrefix = VpcPrefix;
     }
 
     /**
      * 获取如果是普通网络的实例，做用本前缀加上URI为下载地址
-     * @return Normalprefix 如果是普通网络的实例，做用本前缀加上URI为下载地址
+     * @return NormalPrefix 如果是普通网络的实例，做用本前缀加上URI为下载地址
      */
-    public String getNormalprefix() {
-        return this.Normalprefix;
+    public String getNormalPrefix() {
+        return this.NormalPrefix;
     }
 
     /**
      * 设置如果是普通网络的实例，做用本前缀加上URI为下载地址
-     * @param Normalprefix 如果是普通网络的实例，做用本前缀加上URI为下载地址
+     * @param NormalPrefix 如果是普通网络的实例，做用本前缀加上URI为下载地址
      */
-    public void setNormalprefix(String Normalprefix) {
-        this.Normalprefix = Normalprefix;
+    public void setNormalPrefix(String NormalPrefix) {
+        this.NormalPrefix = NormalPrefix;
     }
 
     /**
@@ -191,8 +191,8 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArrayObj(map, prefix + "Files.", this.Files);
-        this.setParamSimple(map, prefix + "Vpcprefix", this.Vpcprefix);
-        this.setParamSimple(map, prefix + "Normalprefix", this.Normalprefix);
+        this.setParamSimple(map, prefix + "VpcPrefix", this.VpcPrefix);
+        this.setParamSimple(map, prefix + "NormalPrefix", this.NormalPrefix);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

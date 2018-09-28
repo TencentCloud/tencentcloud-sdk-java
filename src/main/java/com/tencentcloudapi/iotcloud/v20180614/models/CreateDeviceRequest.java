@@ -65,6 +65,13 @@ public class CreateDeviceRequest  extends AbstractModel{
     private String Imei;
 
     /**
+    * LoRa设备的DevEui，当创建LoRa时，此字段必填
+    */
+    @SerializedName("LoraDevEui")
+    @Expose
+    private String LoraDevEui;
+
+    /**
      * 获取产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      * @return ProductId 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      */
@@ -161,6 +168,22 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取LoRa设备的DevEui，当创建LoRa时，此字段必填
+     * @return LoraDevEui LoRa设备的DevEui，当创建LoRa时，此字段必填
+     */
+    public String getLoraDevEui() {
+        return this.LoraDevEui;
+    }
+
+    /**
+     * 设置LoRa设备的DevEui，当创建LoRa时，此字段必填
+     * @param LoraDevEui LoRa设备的DevEui，当创建LoRa时，此字段必填
+     */
+    public void setLoraDevEui(String LoraDevEui) {
+        this.LoraDevEui = LoraDevEui;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateDeviceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "DefinedPsk", this.DefinedPsk);
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamSimple(map, prefix + "Imei", this.Imei);
+        this.setParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
 
     }
 }

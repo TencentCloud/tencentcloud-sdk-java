@@ -142,13 +142,6 @@ public class DBInstance  extends AbstractModel{
     private Integer AutoRenewFlag;
 
     /**
-    * 产品类型 Id
-    */
-    @SerializedName("Pid")
-    @Expose
-    private Integer Pid;
-
-    /**
     * 实例到期时间，格式为 2006-01-02 15:04:05
     */
     @SerializedName("PeriodEndTime")
@@ -163,7 +156,7 @@ public class DBInstance  extends AbstractModel{
     private String Uin;
 
     /**
-    * TDSQL 版本信息，如 10.1.9
+    * TDSQL 版本信息
     */
     @SerializedName("TdsqlVersion")
     @Expose
@@ -182,6 +175,90 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("Storage")
     @Expose
     private Integer Storage;
+
+    /**
+    * 字符串型的私有网络Id
+    */
+    @SerializedName("UniqueVpcId")
+    @Expose
+    private String UniqueVpcId;
+
+    /**
+    * 字符串型的私有网络子网Id
+    */
+    @SerializedName("UniqueSubnetId")
+    @Expose
+    private String UniqueSubnetId;
+
+    /**
+    * 原始实例ID（过时字段，请勿依赖该值）
+    */
+    @SerializedName("OriginSerialId")
+    @Expose
+    private String OriginSerialId;
+
+    /**
+    * 节点数，2为一主一从，3为一主二从
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Integer NodeCount;
+
+    /**
+    * 是否临时实例，0为否，非0为是
+    */
+    @SerializedName("IsTmp")
+    @Expose
+    private Integer IsTmp;
+
+    /**
+    * 独享集群Id，为空表示为普通实例
+    */
+    @SerializedName("ExclusterId")
+    @Expose
+    private String ExclusterId;
+
+    /**
+    * 数字实例Id（过时字段，请勿依赖该值）
+    */
+    @SerializedName("Id")
+    @Expose
+    private Integer Id;
+
+    /**
+    * 产品类型 Id
+    */
+    @SerializedName("Pid")
+    @Expose
+    private Integer Pid;
+
+    /**
+    * 最大 Qps 值
+    */
+    @SerializedName("Qps")
+    @Expose
+    private Integer Qps;
+
+    /**
+    * 付费模式
+    */
+    @SerializedName("Paymode")
+    @Expose
+    private String Paymode;
+
+    /**
+    * 实例处于异步任务时的异步任务流程ID
+    */
+    @SerializedName("Locker")
+    @Expose
+    private Integer Locker;
+
+    /**
+    * 实例目前运行状态描述
+    */
+    @SerializedName("StatusDesc")
+    @Expose
+    private String StatusDesc;
 
     /**
      * 获取实例 Id，唯一标识一个 TDSQL 实例
@@ -456,22 +533,6 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型 Id
-     * @return Pid 产品类型 Id
-     */
-    public Integer getPid() {
-        return this.Pid;
-    }
-
-    /**
-     * 设置产品类型 Id
-     * @param Pid 产品类型 Id
-     */
-    public void setPid(Integer Pid) {
-        this.Pid = Pid;
-    }
-
-    /**
      * 获取实例到期时间，格式为 2006-01-02 15:04:05
      * @return PeriodEndTime 实例到期时间，格式为 2006-01-02 15:04:05
      */
@@ -504,16 +565,16 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取TDSQL 版本信息，如 10.1.9
-     * @return TdsqlVersion TDSQL 版本信息，如 10.1.9
+     * 获取TDSQL 版本信息
+     * @return TdsqlVersion TDSQL 版本信息
      */
     public String getTdsqlVersion() {
         return this.TdsqlVersion;
     }
 
     /**
-     * 设置TDSQL 版本信息，如 10.1.9
-     * @param TdsqlVersion TDSQL 版本信息，如 10.1.9
+     * 设置TDSQL 版本信息
+     * @param TdsqlVersion TDSQL 版本信息
      */
     public void setTdsqlVersion(String TdsqlVersion) {
         this.TdsqlVersion = TdsqlVersion;
@@ -552,6 +613,198 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
+     * 获取字符串型的私有网络Id
+     * @return UniqueVpcId 字符串型的私有网络Id
+     */
+    public String getUniqueVpcId() {
+        return this.UniqueVpcId;
+    }
+
+    /**
+     * 设置字符串型的私有网络Id
+     * @param UniqueVpcId 字符串型的私有网络Id
+     */
+    public void setUniqueVpcId(String UniqueVpcId) {
+        this.UniqueVpcId = UniqueVpcId;
+    }
+
+    /**
+     * 获取字符串型的私有网络子网Id
+     * @return UniqueSubnetId 字符串型的私有网络子网Id
+     */
+    public String getUniqueSubnetId() {
+        return this.UniqueSubnetId;
+    }
+
+    /**
+     * 设置字符串型的私有网络子网Id
+     * @param UniqueSubnetId 字符串型的私有网络子网Id
+     */
+    public void setUniqueSubnetId(String UniqueSubnetId) {
+        this.UniqueSubnetId = UniqueSubnetId;
+    }
+
+    /**
+     * 获取原始实例ID（过时字段，请勿依赖该值）
+     * @return OriginSerialId 原始实例ID（过时字段，请勿依赖该值）
+     */
+    public String getOriginSerialId() {
+        return this.OriginSerialId;
+    }
+
+    /**
+     * 设置原始实例ID（过时字段，请勿依赖该值）
+     * @param OriginSerialId 原始实例ID（过时字段，请勿依赖该值）
+     */
+    public void setOriginSerialId(String OriginSerialId) {
+        this.OriginSerialId = OriginSerialId;
+    }
+
+    /**
+     * 获取节点数，2为一主一从，3为一主二从
+     * @return NodeCount 节点数，2为一主一从，3为一主二从
+     */
+    public Integer getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * 设置节点数，2为一主一从，3为一主二从
+     * @param NodeCount 节点数，2为一主一从，3为一主二从
+     */
+    public void setNodeCount(Integer NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
+    /**
+     * 获取是否临时实例，0为否，非0为是
+     * @return IsTmp 是否临时实例，0为否，非0为是
+     */
+    public Integer getIsTmp() {
+        return this.IsTmp;
+    }
+
+    /**
+     * 设置是否临时实例，0为否，非0为是
+     * @param IsTmp 是否临时实例，0为否，非0为是
+     */
+    public void setIsTmp(Integer IsTmp) {
+        this.IsTmp = IsTmp;
+    }
+
+    /**
+     * 获取独享集群Id，为空表示为普通实例
+     * @return ExclusterId 独享集群Id，为空表示为普通实例
+     */
+    public String getExclusterId() {
+        return this.ExclusterId;
+    }
+
+    /**
+     * 设置独享集群Id，为空表示为普通实例
+     * @param ExclusterId 独享集群Id，为空表示为普通实例
+     */
+    public void setExclusterId(String ExclusterId) {
+        this.ExclusterId = ExclusterId;
+    }
+
+    /**
+     * 获取数字实例Id（过时字段，请勿依赖该值）
+     * @return Id 数字实例Id（过时字段，请勿依赖该值）
+     */
+    public Integer getId() {
+        return this.Id;
+    }
+
+    /**
+     * 设置数字实例Id（过时字段，请勿依赖该值）
+     * @param Id 数字实例Id（过时字段，请勿依赖该值）
+     */
+    public void setId(Integer Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * 获取产品类型 Id
+     * @return Pid 产品类型 Id
+     */
+    public Integer getPid() {
+        return this.Pid;
+    }
+
+    /**
+     * 设置产品类型 Id
+     * @param Pid 产品类型 Id
+     */
+    public void setPid(Integer Pid) {
+        this.Pid = Pid;
+    }
+
+    /**
+     * 获取最大 Qps 值
+     * @return Qps 最大 Qps 值
+     */
+    public Integer getQps() {
+        return this.Qps;
+    }
+
+    /**
+     * 设置最大 Qps 值
+     * @param Qps 最大 Qps 值
+     */
+    public void setQps(Integer Qps) {
+        this.Qps = Qps;
+    }
+
+    /**
+     * 获取付费模式
+     * @return Paymode 付费模式
+     */
+    public String getPaymode() {
+        return this.Paymode;
+    }
+
+    /**
+     * 设置付费模式
+     * @param Paymode 付费模式
+     */
+    public void setPaymode(String Paymode) {
+        this.Paymode = Paymode;
+    }
+
+    /**
+     * 获取实例处于异步任务时的异步任务流程ID
+     * @return Locker 实例处于异步任务时的异步任务流程ID
+     */
+    public Integer getLocker() {
+        return this.Locker;
+    }
+
+    /**
+     * 设置实例处于异步任务时的异步任务流程ID
+     * @param Locker 实例处于异步任务时的异步任务流程ID
+     */
+    public void setLocker(Integer Locker) {
+        this.Locker = Locker;
+    }
+
+    /**
+     * 获取实例目前运行状态描述
+     * @return StatusDesc 实例目前运行状态描述
+     */
+    public String getStatusDesc() {
+        return this.StatusDesc;
+    }
+
+    /**
+     * 设置实例目前运行状态描述
+     * @param StatusDesc 实例目前运行状态描述
+     */
+    public void setStatusDesc(String StatusDesc) {
+        this.StatusDesc = StatusDesc;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -572,12 +825,23 @@ public class DBInstance  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
-        this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "TdsqlVersion", this.TdsqlVersion);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "UniqueVpcId", this.UniqueVpcId);
+        this.setParamSimple(map, prefix + "UniqueSubnetId", this.UniqueSubnetId);
+        this.setParamSimple(map, prefix + "OriginSerialId", this.OriginSerialId);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "IsTmp", this.IsTmp);
+        this.setParamSimple(map, prefix + "ExclusterId", this.ExclusterId);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "Qps", this.Qps);
+        this.setParamSimple(map, prefix + "Paymode", this.Paymode);
+        this.setParamSimple(map, prefix + "Locker", this.Locker);
+        this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
 
     }
 }

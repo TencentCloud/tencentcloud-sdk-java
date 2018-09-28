@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBParametersResponse  extends AbstractModel{
+public class CloneAccountResponse  extends AbstractModel{
 
     /**
-    * 实例 ID，形如：tdsql-ow728lmc。
+    * 异步任务流程ID。
     */
-    @SerializedName("InstanceId")
+    @SerializedName("FlowId")
     @Expose
-    private String InstanceId;
-
-    /**
-    * 参数修改结果
-    */
-    @SerializedName("Result")
-    @Expose
-    private ParamModifyResult [] Result;
+    private Integer FlowId;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -44,35 +37,19 @@ public class ModifyDBParametersResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例 ID，形如：tdsql-ow728lmc。
-     * @return InstanceId 实例 ID，形如：tdsql-ow728lmc。
+     * 获取异步任务流程ID。
+     * @return FlowId 异步任务流程ID。
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public Integer getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * 设置实例 ID，形如：tdsql-ow728lmc。
-     * @param InstanceId 实例 ID，形如：tdsql-ow728lmc。
+     * 设置异步任务流程ID。
+     * @param FlowId 异步任务流程ID。
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
-     * 获取参数修改结果
-     * @return Result 参数修改结果
-     */
-    public ParamModifyResult [] getResult() {
-        return this.Result;
-    }
-
-    /**
-     * 设置参数修改结果
-     * @param Result 参数修改结果
-     */
-    public void setResult(ParamModifyResult [] Result) {
-        this.Result = Result;
+    public void setFlowId(Integer FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -95,8 +72,7 @@ public class ModifyDBParametersResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamArrayObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

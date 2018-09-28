@@ -48,77 +48,77 @@ public class SlowLogData  extends AbstractModel{
     */
     @SerializedName("LockTimeAvg")
     @Expose
-    private String LockTimeAvg;
+    private Float LockTimeAvg;
 
     /**
     * 最大锁时间
     */
     @SerializedName("LockTimeMax")
     @Expose
-    private String LockTimeMax;
+    private Float LockTimeMax;
 
     /**
     * 最小锁时间
     */
     @SerializedName("LockTimeMin")
     @Expose
-    private String LockTimeMin;
+    private Float LockTimeMin;
 
     /**
     * 锁时间总和
     */
     @SerializedName("LockTimeSum")
     @Expose
-    private String LockTimeSum;
+    private Float LockTimeSum;
 
     /**
     * 查询次数
     */
     @SerializedName("QueryCount")
     @Expose
-    private String QueryCount;
+    private Integer QueryCount;
 
     /**
     * 平均查询时间
     */
     @SerializedName("QueryTimeAvg")
     @Expose
-    private String QueryTimeAvg;
+    private Float QueryTimeAvg;
 
     /**
     * 最大查询时间
     */
     @SerializedName("QueryTimeMax")
     @Expose
-    private String QueryTimeMax;
+    private Float QueryTimeMax;
 
     /**
     * 最小查询时间
     */
     @SerializedName("QueryTimeMin")
     @Expose
-    private String QueryTimeMin;
+    private Float QueryTimeMin;
 
     /**
     * 查询时间总和
     */
     @SerializedName("QueryTimeSum")
     @Expose
-    private String QueryTimeSum;
+    private Float QueryTimeSum;
 
     /**
     * 扫描行数
     */
     @SerializedName("RowsExaminedSum")
     @Expose
-    private String RowsExaminedSum;
+    private Integer RowsExaminedSum;
 
     /**
     * 发送行数
     */
     @SerializedName("RowsSentSum")
     @Expose
-    private String RowsSentSum;
+    private Integer RowsSentSum;
 
     /**
     * 首次执行时间
@@ -193,7 +193,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取平均的锁时间
      * @return LockTimeAvg 平均的锁时间
      */
-    public String getLockTimeAvg() {
+    public Float getLockTimeAvg() {
         return this.LockTimeAvg;
     }
 
@@ -201,7 +201,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置平均的锁时间
      * @param LockTimeAvg 平均的锁时间
      */
-    public void setLockTimeAvg(String LockTimeAvg) {
+    public void setLockTimeAvg(Float LockTimeAvg) {
         this.LockTimeAvg = LockTimeAvg;
     }
 
@@ -209,7 +209,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取最大锁时间
      * @return LockTimeMax 最大锁时间
      */
-    public String getLockTimeMax() {
+    public Float getLockTimeMax() {
         return this.LockTimeMax;
     }
 
@@ -217,7 +217,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置最大锁时间
      * @param LockTimeMax 最大锁时间
      */
-    public void setLockTimeMax(String LockTimeMax) {
+    public void setLockTimeMax(Float LockTimeMax) {
         this.LockTimeMax = LockTimeMax;
     }
 
@@ -225,7 +225,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取最小锁时间
      * @return LockTimeMin 最小锁时间
      */
-    public String getLockTimeMin() {
+    public Float getLockTimeMin() {
         return this.LockTimeMin;
     }
 
@@ -233,7 +233,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置最小锁时间
      * @param LockTimeMin 最小锁时间
      */
-    public void setLockTimeMin(String LockTimeMin) {
+    public void setLockTimeMin(Float LockTimeMin) {
         this.LockTimeMin = LockTimeMin;
     }
 
@@ -241,7 +241,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取锁时间总和
      * @return LockTimeSum 锁时间总和
      */
-    public String getLockTimeSum() {
+    public Float getLockTimeSum() {
         return this.LockTimeSum;
     }
 
@@ -249,7 +249,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置锁时间总和
      * @param LockTimeSum 锁时间总和
      */
-    public void setLockTimeSum(String LockTimeSum) {
+    public void setLockTimeSum(Float LockTimeSum) {
         this.LockTimeSum = LockTimeSum;
     }
 
@@ -257,7 +257,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取查询次数
      * @return QueryCount 查询次数
      */
-    public String getQueryCount() {
+    public Integer getQueryCount() {
         return this.QueryCount;
     }
 
@@ -265,7 +265,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置查询次数
      * @param QueryCount 查询次数
      */
-    public void setQueryCount(String QueryCount) {
+    public void setQueryCount(Integer QueryCount) {
         this.QueryCount = QueryCount;
     }
 
@@ -273,7 +273,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取平均查询时间
      * @return QueryTimeAvg 平均查询时间
      */
-    public String getQueryTimeAvg() {
+    public Float getQueryTimeAvg() {
         return this.QueryTimeAvg;
     }
 
@@ -281,7 +281,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置平均查询时间
      * @param QueryTimeAvg 平均查询时间
      */
-    public void setQueryTimeAvg(String QueryTimeAvg) {
+    public void setQueryTimeAvg(Float QueryTimeAvg) {
         this.QueryTimeAvg = QueryTimeAvg;
     }
 
@@ -289,7 +289,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取最大查询时间
      * @return QueryTimeMax 最大查询时间
      */
-    public String getQueryTimeMax() {
+    public Float getQueryTimeMax() {
         return this.QueryTimeMax;
     }
 
@@ -297,7 +297,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置最大查询时间
      * @param QueryTimeMax 最大查询时间
      */
-    public void setQueryTimeMax(String QueryTimeMax) {
+    public void setQueryTimeMax(Float QueryTimeMax) {
         this.QueryTimeMax = QueryTimeMax;
     }
 
@@ -305,7 +305,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取最小查询时间
      * @return QueryTimeMin 最小查询时间
      */
-    public String getQueryTimeMin() {
+    public Float getQueryTimeMin() {
         return this.QueryTimeMin;
     }
 
@@ -313,7 +313,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置最小查询时间
      * @param QueryTimeMin 最小查询时间
      */
-    public void setQueryTimeMin(String QueryTimeMin) {
+    public void setQueryTimeMin(Float QueryTimeMin) {
         this.QueryTimeMin = QueryTimeMin;
     }
 
@@ -321,7 +321,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取查询时间总和
      * @return QueryTimeSum 查询时间总和
      */
-    public String getQueryTimeSum() {
+    public Float getQueryTimeSum() {
         return this.QueryTimeSum;
     }
 
@@ -329,7 +329,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置查询时间总和
      * @param QueryTimeSum 查询时间总和
      */
-    public void setQueryTimeSum(String QueryTimeSum) {
+    public void setQueryTimeSum(Float QueryTimeSum) {
         this.QueryTimeSum = QueryTimeSum;
     }
 
@@ -337,7 +337,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取扫描行数
      * @return RowsExaminedSum 扫描行数
      */
-    public String getRowsExaminedSum() {
+    public Integer getRowsExaminedSum() {
         return this.RowsExaminedSum;
     }
 
@@ -345,7 +345,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置扫描行数
      * @param RowsExaminedSum 扫描行数
      */
-    public void setRowsExaminedSum(String RowsExaminedSum) {
+    public void setRowsExaminedSum(Integer RowsExaminedSum) {
         this.RowsExaminedSum = RowsExaminedSum;
     }
 
@@ -353,7 +353,7 @@ public class SlowLogData  extends AbstractModel{
      * 获取发送行数
      * @return RowsSentSum 发送行数
      */
-    public String getRowsSentSum() {
+    public Integer getRowsSentSum() {
         return this.RowsSentSum;
     }
 
@@ -361,7 +361,7 @@ public class SlowLogData  extends AbstractModel{
      * 设置发送行数
      * @param RowsSentSum 发送行数
      */
-    public void setRowsSentSum(String RowsSentSum) {
+    public void setRowsSentSum(Integer RowsSentSum) {
         this.RowsSentSum = RowsSentSum;
     }
 

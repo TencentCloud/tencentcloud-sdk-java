@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
 
     /**
-    * CCN实例ID。形如：ccn-f49l6u0z。
-    */
-    @SerializedName("CcnId")
-    @Expose
-    private String CcnId;
-
-    /**
     * 偏移量
     */
     @SerializedName("Offset")
@@ -44,20 +37,22 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取CCN实例ID。形如：ccn-f49l6u0z。
-     * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     */
-    public String getCcnId() {
-        return this.CcnId;
-    }
+    * 过滤条件：
+<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
+<li>instance-type - String -（过滤条件）关联实例类型。</li>
+<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
+<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
 
     /**
-     * 设置CCN实例ID。形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     */
-    public void setCcnId(String CcnId) {
-        this.CcnId = CcnId;
-    }
+    * 云联网实例ID
+    */
+    @SerializedName("CcnId")
+    @Expose
+    private String CcnId;
 
     /**
      * 获取偏移量
@@ -92,12 +87,61 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取过滤条件：
+<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
+<li>instance-type - String -（过滤条件）关联实例类型。</li>
+<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
+<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+     * @return Filters 过滤条件：
+<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
+<li>instance-type - String -（过滤条件）关联实例类型。</li>
+<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
+<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * 设置过滤条件：
+<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
+<li>instance-type - String -（过滤条件）关联实例类型。</li>
+<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
+<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+     * @param Filters 过滤条件：
+<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
+<li>instance-type - String -（过滤条件）关联实例类型。</li>
+<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
+<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * 获取云联网实例ID
+     * @return CcnId 云联网实例ID
+     */
+    public String getCcnId() {
+        return this.CcnId;
+    }
+
+    /**
+     * 设置云联网实例ID
+     * @param CcnId 云联网实例ID
+     */
+    public void setCcnId(String CcnId) {
+        this.CcnId = CcnId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
 
     }
 }

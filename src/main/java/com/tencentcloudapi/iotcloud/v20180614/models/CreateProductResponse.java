@@ -37,6 +37,13 @@ public class CreateProductResponse  extends AbstractModel{
     private String ProductId;
 
     /**
+    * 产品属性
+    */
+    @SerializedName("ProductProperties")
+    @Expose
+    private ProductProperties ProductProperties;
+
+    /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class CreateProductResponse  extends AbstractModel{
     }
 
     /**
+     * 获取产品属性
+     * @return ProductProperties 产品属性
+     */
+    public ProductProperties getProductProperties() {
+        return this.ProductProperties;
+    }
+
+    /**
+     * 设置产品属性
+     * @param ProductProperties 产品属性
+     */
+    public void setProductProperties(ProductProperties ProductProperties) {
+        this.ProductProperties = ProductProperties;
+    }
+
+    /**
      * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
@@ -97,6 +120,7 @@ public class CreateProductResponse  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamObj(map, prefix + "ProductProperties.", this.ProductProperties);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

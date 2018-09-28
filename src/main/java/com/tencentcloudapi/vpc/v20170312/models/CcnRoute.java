@@ -79,6 +79,13 @@ public class CcnRoute  extends AbstractModel{
     private Boolean Enabled;
 
     /**
+    * 关联实例所属UIN（根账号）
+    */
+    @SerializedName("InstanceUin")
+    @Expose
+    private String InstanceUin;
+
+    /**
      * 获取路由策略ID
      * @return RouteId 路由策略ID
      */
@@ -207,6 +214,22 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
+     * 获取关联实例所属UIN（根账号）
+     * @return InstanceUin 关联实例所属UIN（根账号）
+     */
+    public String getInstanceUin() {
+        return this.InstanceUin;
+    }
+
+    /**
+     * 设置关联实例所属UIN（根账号）
+     * @param InstanceUin 关联实例所属UIN（根账号）
+     */
+    public void setInstanceUin(String InstanceUin) {
+        this.InstanceUin = InstanceUin;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class CcnRoute  extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "InstanceUin", this.InstanceUin);
 
     }
 }

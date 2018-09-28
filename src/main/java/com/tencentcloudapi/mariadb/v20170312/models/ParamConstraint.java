@@ -44,6 +44,13 @@ public class ParamConstraint  extends AbstractModel{
     private ConstraintRange Range;
 
     /**
+    * 约束类型为string时的可选值列表
+    */
+    @SerializedName("String")
+    @Expose
+    private String String;
+
+    /**
      * 获取约束类型,如枚举enum，区间section
      * @return Type 约束类型,如枚举enum，区间section
      */
@@ -92,12 +99,29 @@ public class ParamConstraint  extends AbstractModel{
     }
 
     /**
+     * 获取约束类型为string时的可选值列表
+     * @return String 约束类型为string时的可选值列表
+     */
+    public String getString() {
+        return this.String;
+    }
+
+    /**
+     * 设置约束类型为string时的可选值列表
+     * @param String 约束类型为string时的可选值列表
+     */
+    public void setString(String String) {
+        this.String = String;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Enum", this.Enum);
         this.setParamObj(map, prefix + "Range.", this.Range);
+        this.setParamSimple(map, prefix + "String", this.String);
 
     }
 }

@@ -121,6 +121,13 @@ public class VpnGateway  extends AbstractModel{
     private String RestrictState;
 
     /**
+    * 可用区，如：ap-guangzhou-2
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * 获取网关实例ID。
      * @return VpnGatewayId 网关实例ID。
      */
@@ -345,6 +352,22 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
+     * 获取可用区，如：ap-guangzhou-2
+     * @return Zone 可用区，如：ap-guangzhou-2
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * 设置可用区，如：ap-guangzhou-2
+     * @param Zone 可用区，如：ap-guangzhou-2
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class VpnGateway  extends AbstractModel{
         this.setParamSimple(map, prefix + "IsAddressBlocked", this.IsAddressBlocked);
         this.setParamSimple(map, prefix + "NewPurchasePlan", this.NewPurchasePlan);
         this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

@@ -51,6 +51,13 @@ public class CreateDeviceResponse  extends AbstractModel{
     private String DevicePrivateKey;
 
     /**
+    * LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
+    */
+    @SerializedName("LoraDevEui")
+    @Expose
+    private String LoraDevEui;
+
+    /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
+     * 获取LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
+     * @return LoraDevEui LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
+     */
+    public String getLoraDevEui() {
+        return this.LoraDevEui;
+    }
+
+    /**
+     * 设置LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
+     * @param LoraDevEui LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
+     */
+    public void setLoraDevEui(String LoraDevEui) {
+        this.LoraDevEui = LoraDevEui;
+    }
+
+    /**
      * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
@@ -145,6 +168,7 @@ public class CreateDeviceResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "DevicePsk", this.DevicePsk);
         this.setParamSimple(map, prefix + "DeviceCert", this.DeviceCert);
         this.setParamSimple(map, prefix + "DevicePrivateKey", this.DevicePrivateKey);
+        this.setParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
