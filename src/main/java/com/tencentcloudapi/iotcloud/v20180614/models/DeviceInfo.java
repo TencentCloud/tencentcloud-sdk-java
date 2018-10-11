@@ -104,7 +104,7 @@ public class DeviceInfo  extends AbstractModel{
     */
     @SerializedName("ConnIP")
     @Expose
-    private Integer ConnIP;
+    private Long ConnIP;
 
     /**
     * 设备最后更新时间
@@ -300,7 +300,7 @@ public class DeviceInfo  extends AbstractModel{
      * 获取IP地址
      * @return ConnIP IP地址
      */
-    public Integer getConnIP() {
+    public Long getConnIP() {
         return this.ConnIP;
     }
 
@@ -308,7 +308,7 @@ public class DeviceInfo  extends AbstractModel{
      * 设置IP地址
      * @param ConnIP IP地址
      */
-    public void setConnIP(Integer ConnIP) {
+    public void setConnIP(Long ConnIP) {
         this.ConnIP = ConnIP;
     }
 
