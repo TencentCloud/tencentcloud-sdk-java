@@ -104,7 +104,7 @@ public class DeviceInfo  extends AbstractModel{
     */
     @SerializedName("ConnIP")
     @Expose
-    private Integer ConnIP;
+    private Long ConnIP;
 
     /**
     * 设备最后更新时间
@@ -119,6 +119,13 @@ public class DeviceInfo  extends AbstractModel{
     @SerializedName("LoraDevEui")
     @Expose
     private String LoraDevEui;
+
+    /**
+    * LoRa设备的Mote type
+    */
+    @SerializedName("LoraMoteType")
+    @Expose
+    private Integer LoraMoteType;
 
     /**
      * 获取设备名
@@ -300,7 +307,7 @@ public class DeviceInfo  extends AbstractModel{
      * 获取IP地址
      * @return ConnIP IP地址
      */
-    public Integer getConnIP() {
+    public Long getConnIP() {
         return this.ConnIP;
     }
 
@@ -308,7 +315,7 @@ public class DeviceInfo  extends AbstractModel{
      * 设置IP地址
      * @param ConnIP IP地址
      */
-    public void setConnIP(Integer ConnIP) {
+    public void setConnIP(Long ConnIP) {
         this.ConnIP = ConnIP;
     }
 
@@ -345,6 +352,22 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取LoRa设备的Mote type
+     * @return LoraMoteType LoRa设备的Mote type
+     */
+    public Integer getLoraMoteType() {
+        return this.LoraMoteType;
+    }
+
+    /**
+     * 设置LoRa设备的Mote type
+     * @param LoraMoteType LoRa设备的Mote type
+     */
+    public void setLoraMoteType(Integer LoraMoteType) {
+        this.LoraMoteType = LoraMoteType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class DeviceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "ConnIP", this.ConnIP);
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         this.setParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
+        this.setParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
 
     }
 }

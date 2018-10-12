@@ -114,7 +114,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     private String Password;
 
     /**
-    * 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
+    * 参数列表，参数格式如ParamList.0.Name=auto_increment_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
     */
     @SerializedName("ParamList")
     @Expose
@@ -149,7 +149,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     private String BackupZone;
 
     /**
-    * 安全组参数
+    * 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -163,7 +163,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     private RoGroup RoGroup;
 
     /**
-    * 自动续费标记，值为0或1
+    * 自动续费标记，值为0或1。购买按量计费实例该字段无意义
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -385,16 +385,16 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
-     * @return ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
+     * 获取参数列表，参数格式如ParamList.0.Name=auto_increment_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
+     * @return ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
      */
     public ParamInfo [] getParamList() {
         return this.ParamList;
     }
 
     /**
-     * 设置参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
-     * @param ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
+     * 设置参数列表，参数格式如ParamList.0.Name=auto_increment_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
+     * @param ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
      */
     public void setParamList(ParamInfo [] ParamList) {
         this.ParamList = ParamList;
@@ -465,16 +465,16 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组参数
-     * @return SecurityGroup 安全组参数
+     * 获取安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
+     * @return SecurityGroup 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
      */
     public String [] getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * 设置安全组参数
-     * @param SecurityGroup 安全组参数
+     * 设置安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
+     * @param SecurityGroup 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
      */
     public void setSecurityGroup(String [] SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
@@ -497,16 +497,16 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标记，值为0或1
-     * @return AutoRenewFlag 自动续费标记，值为0或1
+     * 获取自动续费标记，值为0或1。购买按量计费实例该字段无意义
+     * @return AutoRenewFlag 自动续费标记，值为0或1。购买按量计费实例该字段无意义
      */
     public Integer getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * 设置自动续费标记，值为0或1
-     * @param AutoRenewFlag 自动续费标记，值为0或1
+     * 设置自动续费标记，值为0或1。购买按量计费实例该字段无意义
+     * @param AutoRenewFlag 自动续费标记，值为0或1。购买按量计费实例该字段无意义
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

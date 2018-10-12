@@ -142,14 +142,14 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private String OrderDirection;
 
     /**
-    * 是否包含安全组信息
+    * 是否包含安全组信息，可取值：0-不包含，1-包含
     */
     @SerializedName("WithSecurityGroup")
     @Expose
     private Integer WithSecurityGroup;
 
     /**
-    * 是否包含独享集群信息
+    * 是否包含独享集群信息，可取值：0-不包含，1-包含
     */
     @SerializedName("WithExCluster")
     @Expose
@@ -177,21 +177,21 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Integer InitFlag;
 
     /**
-    * 是否包含灾备实例
+    * 是否包含灾备实例，可取值：0-不包含，1-包含
     */
     @SerializedName("WithDr")
     @Expose
     private Integer WithDr;
 
     /**
-    * 是否包含只读实例
+    * 是否包含只读实例，可取值：0-不包含，1-包含
     */
     @SerializedName("WithRo")
     @Expose
     private Integer WithRo;
 
     /**
-    * 是否包含主实例
+    * 是否包含主实例，可取值：0-不包含，1-包含
     */
     @SerializedName("WithMaster")
     @Expose
@@ -470,32 +470,32 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否包含安全组信息
-     * @return WithSecurityGroup 是否包含安全组信息
+     * 获取是否包含安全组信息，可取值：0-不包含，1-包含
+     * @return WithSecurityGroup 是否包含安全组信息，可取值：0-不包含，1-包含
      */
     public Integer getWithSecurityGroup() {
         return this.WithSecurityGroup;
     }
 
     /**
-     * 设置是否包含安全组信息
-     * @param WithSecurityGroup 是否包含安全组信息
+     * 设置是否包含安全组信息，可取值：0-不包含，1-包含
+     * @param WithSecurityGroup 是否包含安全组信息，可取值：0-不包含，1-包含
      */
     public void setWithSecurityGroup(Integer WithSecurityGroup) {
         this.WithSecurityGroup = WithSecurityGroup;
     }
 
     /**
-     * 获取是否包含独享集群信息
-     * @return WithExCluster 是否包含独享集群信息
+     * 获取是否包含独享集群信息，可取值：0-不包含，1-包含
+     * @return WithExCluster 是否包含独享集群信息，可取值：0-不包含，1-包含
      */
     public Integer getWithExCluster() {
         return this.WithExCluster;
     }
 
     /**
-     * 设置是否包含独享集群信息
-     * @param WithExCluster 是否包含独享集群信息
+     * 设置是否包含独享集群信息，可取值：0-不包含，1-包含
+     * @param WithExCluster 是否包含独享集群信息，可取值：0-不包含，1-包含
      */
     public void setWithExCluster(Integer WithExCluster) {
         this.WithExCluster = WithExCluster;
@@ -550,48 +550,48 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否包含灾备实例
-     * @return WithDr 是否包含灾备实例
+     * 获取是否包含灾备实例，可取值：0-不包含，1-包含
+     * @return WithDr 是否包含灾备实例，可取值：0-不包含，1-包含
      */
     public Integer getWithDr() {
         return this.WithDr;
     }
 
     /**
-     * 设置是否包含灾备实例
-     * @param WithDr 是否包含灾备实例
+     * 设置是否包含灾备实例，可取值：0-不包含，1-包含
+     * @param WithDr 是否包含灾备实例，可取值：0-不包含，1-包含
      */
     public void setWithDr(Integer WithDr) {
         this.WithDr = WithDr;
     }
 
     /**
-     * 获取是否包含只读实例
-     * @return WithRo 是否包含只读实例
+     * 获取是否包含只读实例，可取值：0-不包含，1-包含
+     * @return WithRo 是否包含只读实例，可取值：0-不包含，1-包含
      */
     public Integer getWithRo() {
         return this.WithRo;
     }
 
     /**
-     * 设置是否包含只读实例
-     * @param WithRo 是否包含只读实例
+     * 设置是否包含只读实例，可取值：0-不包含，1-包含
+     * @param WithRo 是否包含只读实例，可取值：0-不包含，1-包含
      */
     public void setWithRo(Integer WithRo) {
         this.WithRo = WithRo;
     }
 
     /**
-     * 获取是否包含主实例
-     * @return WithMaster 是否包含主实例
+     * 获取是否包含主实例，可取值：0-不包含，1-包含
+     * @return WithMaster 是否包含主实例，可取值：0-不包含，1-包含
      */
     public Integer getWithMaster() {
         return this.WithMaster;
     }
 
     /**
-     * 设置是否包含主实例
-     * @param WithMaster 是否包含主实例
+     * 设置是否包含主实例，可取值：0-不包含，1-包含
+     * @param WithMaster 是否包含主实例，可取值：0-不包含，1-包含
      */
     public void setWithMaster(Integer WithMaster) {
         this.WithMaster = WithMaster;

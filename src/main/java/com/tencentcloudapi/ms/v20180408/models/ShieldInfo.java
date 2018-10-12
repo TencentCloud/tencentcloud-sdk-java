@@ -44,7 +44,7 @@ public class ShieldInfo  extends AbstractModel{
     private String ShieldMd5;
 
     /**
-    * 加固后的APP下载地址
+    * 加固后的APP下载地址，该地址有效期为20分钟，请及时下载
     */
     @SerializedName("AppUrl")
     @Expose
@@ -65,7 +65,7 @@ public class ShieldInfo  extends AbstractModel{
     private String ItemId;
 
     /**
-    * 加固版本，basic基础版，professional专业版
+    * 加固版本，basic基础版，professional专业版，enterprise企业版
     */
     @SerializedName("ServiceEdition")
     @Expose
@@ -120,16 +120,16 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固后的APP下载地址
-     * @return AppUrl 加固后的APP下载地址
+     * 获取加固后的APP下载地址，该地址有效期为20分钟，请及时下载
+     * @return AppUrl 加固后的APP下载地址，该地址有效期为20分钟，请及时下载
      */
     public String getAppUrl() {
         return this.AppUrl;
     }
 
     /**
-     * 设置加固后的APP下载地址
-     * @param AppUrl 加固后的APP下载地址
+     * 设置加固后的APP下载地址，该地址有效期为20分钟，请及时下载
+     * @param AppUrl 加固后的APP下载地址，该地址有效期为20分钟，请及时下载
      */
     public void setAppUrl(String AppUrl) {
         this.AppUrl = AppUrl;
@@ -168,16 +168,16 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固版本，basic基础版，professional专业版
-     * @return ServiceEdition 加固版本，basic基础版，professional专业版
+     * 获取加固版本，basic基础版，professional专业版，enterprise企业版
+     * @return ServiceEdition 加固版本，basic基础版，professional专业版，enterprise企业版
      */
     public String getServiceEdition() {
         return this.ServiceEdition;
     }
 
     /**
-     * 设置加固版本，basic基础版，professional专业版
-     * @param ServiceEdition 加固版本，basic基础版，professional专业版
+     * 设置加固版本，basic基础版，professional专业版，enterprise企业版
+     * @param ServiceEdition 加固版本，basic基础版，professional专业版，enterprise企业版
      */
     public void setServiceEdition(String ServiceEdition) {
         this.ServiceEdition = ServiceEdition;

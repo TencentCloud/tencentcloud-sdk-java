@@ -163,7 +163,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     private String MasterRegion;
 
     /**
-    * 安全组参数
+    * 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -504,16 +504,16 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组参数
-     * @return SecurityGroup 安全组参数
+     * 获取安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
+     * @return SecurityGroup 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
      */
     public String [] getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * 设置安全组参数
-     * @param SecurityGroup 安全组参数
+     * 设置安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
+     * @param SecurityGroup 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
      */
     public void setSecurityGroup(String [] SecurityGroup) {
         this.SecurityGroup = SecurityGroup;

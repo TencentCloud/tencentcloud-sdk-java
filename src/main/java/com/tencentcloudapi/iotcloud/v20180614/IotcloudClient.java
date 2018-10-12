@@ -301,24 +301,6 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（GetDeviceShadow）用于查询虚拟设备信息。
-     * @param req GetDeviceShadowRequest
-     * @return GetDeviceShadowResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDeviceShadowResponse  GetDeviceShadow(GetDeviceShadowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDeviceShadowResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDeviceShadowResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GetDeviceShadow"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（PublishMessage）用于向某个主题发消息。
      * @param req PublishMessageRequest
      * @return PublishMessageResponse

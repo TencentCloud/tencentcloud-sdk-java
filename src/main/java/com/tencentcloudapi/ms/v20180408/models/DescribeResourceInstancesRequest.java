@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeResourceInstancesRequest  extends AbstractModel{
 
     /**
-    * 资源类别id数组
+    * 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
     */
     @SerializedName("Pids")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     private String OrderDirection;
 
     /**
-     * 获取资源类别id数组
-     * @return Pids 资源类别id数组
+     * 获取资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+     * @return Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
      */
     public Integer [] getPids() {
         return this.Pids;
     }
 
     /**
-     * 设置资源类别id数组
-     * @param Pids 资源类别id数组
+     * 设置资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+     * @param Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
      */
     public void setPids(Integer [] Pids) {
         this.Pids = Pids;

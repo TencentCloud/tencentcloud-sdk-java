@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotcloud.v20180614.models;
+package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDeviceShadowResponse  extends AbstractModel{
+public class CreateAutoScalingGroupResponse  extends AbstractModel{
 
     /**
-    * 设备影子数据
+    * 伸缩组ID
     */
-    @SerializedName("Data")
+    @SerializedName("AutoScalingGroupId")
     @Expose
-    private String Data;
+    private String AutoScalingGroupId;
 
     /**
     * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -37,19 +37,19 @@ public class GetDeviceShadowResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取设备影子数据
-     * @return Data 设备影子数据
+     * 获取伸缩组ID
+     * @return AutoScalingGroupId 伸缩组ID
      */
-    public String getData() {
-        return this.Data;
+    public String getAutoScalingGroupId() {
+        return this.AutoScalingGroupId;
     }
 
     /**
-     * 设置设备影子数据
-     * @param Data 设备影子数据
+     * 设置伸缩组ID
+     * @param AutoScalingGroupId 伸缩组ID
      */
-    public void setData(String Data) {
-        this.Data = Data;
+    public void setAutoScalingGroupId(String AutoScalingGroupId) {
+        this.AutoScalingGroupId = AutoScalingGroupId;
     }
 
     /**
@@ -72,7 +72,7 @@ public class GetDeviceShadowResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

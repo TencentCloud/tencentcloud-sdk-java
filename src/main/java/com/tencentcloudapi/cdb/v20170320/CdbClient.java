@@ -261,6 +261,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeAsyncRequestInfo)用于查询云数据库实例异步任务的执行结果。
+     * @param req DescribeAsyncRequestInfoRequest
+     * @return DescribeAsyncRequestInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAsyncRequestInfoResponse  DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAsyncRequestInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeBackupConfig)用于查询数据库备份配置信息。
      * @param req DescribeBackupConfigRequest
      * @return DescribeBackupConfigResponse
@@ -545,6 +563,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDatabases"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口（DescribeInstanceParams）用于查询实例的参数列表。
+     * @param req DescribeInstanceParamsRequest
+     * @return DescribeInstanceParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceParamsResponse  DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceParams"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

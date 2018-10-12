@@ -69,7 +69,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     */
     @SerializedName("Infos")
     @Expose
-    private NetworkInfoNoShop [] Infos;
+    private NetworkInfo [] Infos;
 
     /**
      * 获取总数
@@ -171,7 +171,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
      * 获取网络信息
      * @return Infos 网络信息
      */
-    public NetworkInfoNoShop [] getInfos() {
+    public NetworkInfo [] getInfos() {
         return this.Infos;
     }
 
@@ -179,7 +179,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
      * 设置网络信息
      * @param Infos 网络信息
      */
-    public void setInfos(NetworkInfoNoShop [] Infos) {
+    public void setInfos(NetworkInfo [] Infos) {
         this.Infos = Infos;
     }
 

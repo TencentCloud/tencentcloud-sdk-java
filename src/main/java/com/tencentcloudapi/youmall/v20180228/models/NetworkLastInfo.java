@@ -34,7 +34,7 @@ public class NetworkLastInfo  extends AbstractModel{
     */
     @SerializedName("Infos")
     @Expose
-    private NetworkInfo [] Infos;
+    private NetworkAndShopInfo [] Infos;
 
     /**
      * 获取总数
@@ -56,7 +56,7 @@ public class NetworkLastInfo  extends AbstractModel{
      * 获取网络状态
      * @return Infos 网络状态
      */
-    public NetworkInfo [] getInfos() {
+    public NetworkAndShopInfo [] getInfos() {
         return this.Infos;
     }
 
@@ -64,7 +64,7 @@ public class NetworkLastInfo  extends AbstractModel{
      * 设置网络状态
      * @param Infos 网络状态
      */
-    public void setInfos(NetworkInfo [] Infos) {
+    public void setInfos(NetworkAndShopInfo [] Infos) {
         this.Infos = Infos;
     }
 

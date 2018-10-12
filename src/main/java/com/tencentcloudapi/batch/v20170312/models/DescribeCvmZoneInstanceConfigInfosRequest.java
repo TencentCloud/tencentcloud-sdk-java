@@ -27,13 +27,13 @@ public class DescribeCvmZoneInstanceConfigInfosRequest  extends AbstractModel{
     */
     @SerializedName("Filters")
     @Expose
-    private Filter Filters;
+    private Filter [] Filters;
 
     /**
      * 获取过滤条件
      * @return Filters 过滤条件
      */
-    public Filter getFilters() {
+    public Filter [] getFilters() {
         return this.Filters;
     }
 
@@ -41,7 +41,7 @@ public class DescribeCvmZoneInstanceConfigInfosRequest  extends AbstractModel{
      * 设置过滤条件
      * @param Filters 过滤条件
      */
-    public void setFilters(Filter Filters) {
+    public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
@@ -49,7 +49,7 @@ public class DescribeCvmZoneInstanceConfigInfosRequest  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

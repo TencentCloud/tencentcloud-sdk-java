@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateResourceInstancesRequest  extends AbstractModel{
 
     /**
-    * 资源类型id。
+    * 资源类型id。13624：加固专业版。
     */
     @SerializedName("Pid")
     @Expose
@@ -51,16 +51,16 @@ public class CreateResourceInstancesRequest  extends AbstractModel{
     private Integer ResourceNum;
 
     /**
-     * 获取资源类型id。
-     * @return Pid 资源类型id。
+     * 获取资源类型id。13624：加固专业版。
+     * @return Pid 资源类型id。13624：加固专业版。
      */
     public Integer getPid() {
         return this.Pid;
     }
 
     /**
-     * 设置资源类型id。
-     * @param Pid 资源类型id。
+     * 设置资源类型id。13624：加固专业版。
+     * @param Pid 资源类型id。13624：加固专业版。
      */
     public void setPid(Integer Pid) {
         this.Pid = Pid;

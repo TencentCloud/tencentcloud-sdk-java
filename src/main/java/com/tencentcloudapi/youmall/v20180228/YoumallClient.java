@@ -49,6 +49,42 @@ public class YoumallClient extends AbstractClient{
     }
 
     /**
+     *创建集团门店管理员账号
+     * @param req CreateAccountRequest
+     * @return CreateAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccountResponse  CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccountResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAccount"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *上传人脸图片
+     * @param req CreateFacePictureRequest
+     * @return CreateFacePictureResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFacePictureResponse  CreateFacePicture(CreateFacePictureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFacePictureResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFacePictureResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateFacePicture"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过指定设备ID和指定时段，获取该时段内中收银台摄像设备抓取到顾客头像及身份ID
      * @param req DescribeCameraPersonRequest
      * @return DescribeCameraPersonResponse
@@ -204,6 +240,132 @@ public class YoumallClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeShopTrafficInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeShopTrafficInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取动线轨迹信息
+     * @param req DescribeTrajectoryDataRequest
+     * @return DescribeTrajectoryDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrajectoryDataResponse  DescribeTrajectoryData(DescribeTrajectoryDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrajectoryDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrajectoryDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTrajectoryData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定区域人流各年龄占比
+     * @param req DescribeZoneFlowAgeInfoByZoneIdRequest
+     * @return DescribeZoneFlowAgeInfoByZoneIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneFlowAgeInfoByZoneIdResponse  DescribeZoneFlowAgeInfoByZoneId(DescribeZoneFlowAgeInfoByZoneIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZoneFlowAgeInfoByZoneIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowAgeInfoByZoneIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeZoneFlowAgeInfoByZoneId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取区域人流和停留时间
+     * @param req DescribeZoneFlowAndStayTimeRequest
+     * @return DescribeZoneFlowAndStayTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneFlowAndStayTimeResponse  DescribeZoneFlowAndStayTime(DescribeZoneFlowAndStayTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZoneFlowAndStayTimeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowAndStayTimeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeZoneFlowAndStayTime"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定区域每日客流量
+     * @param req DescribeZoneFlowDailyByZoneIdRequest
+     * @return DescribeZoneFlowDailyByZoneIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneFlowDailyByZoneIdResponse  DescribeZoneFlowDailyByZoneId(DescribeZoneFlowDailyByZoneIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZoneFlowDailyByZoneIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowDailyByZoneIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeZoneFlowDailyByZoneId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定区域不同年龄段男女平均停留时间
+     * @param req DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest
+     * @return DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse  DescribeZoneFlowGenderAvrStayTimeByZoneId(DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeZoneFlowGenderAvrStayTimeByZoneId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定区域性别占比
+     * @param req DescribeZoneFlowGenderInfoByZoneIdRequest
+     * @return DescribeZoneFlowGenderInfoByZoneIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneFlowGenderInfoByZoneIdResponse  DescribeZoneFlowGenderInfoByZoneId(DescribeZoneFlowGenderInfoByZoneIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZoneFlowGenderInfoByZoneIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowGenderInfoByZoneIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeZoneFlowGenderInfoByZoneId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定区域分时客流量
+     * @param req DescribeZoneFlowHourlyByZoneIdRequest
+     * @return DescribeZoneFlowHourlyByZoneIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneFlowHourlyByZoneIdResponse  DescribeZoneFlowHourlyByZoneId(DescribeZoneFlowHourlyByZoneIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZoneFlowHourlyByZoneIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowHourlyByZoneIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeZoneFlowHourlyByZoneId"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
