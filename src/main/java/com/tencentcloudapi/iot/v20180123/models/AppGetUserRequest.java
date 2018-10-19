@@ -20,12 +20,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddUserRequest  extends AbstractModel{
+public class AppGetUserRequest  extends AbstractModel{
+
+    /**
+    * 访问Token
+    */
+    @SerializedName("AccessToken")
+    @Expose
+    private String AccessToken;
+
+    /**
+     * 获取访问Token
+     * @return AccessToken 访问Token
+     */
+    public String getAccessToken() {
+        return this.AccessToken;
+    }
+
+    /**
+     * 设置访问Token
+     * @param AccessToken 访问Token
+     */
+    public void setAccessToken(String AccessToken) {
+        this.AccessToken = AccessToken;
+    }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AccessToken", this.AccessToken);
 
     }
 }

@@ -44,6 +44,13 @@ public class GetDevicesRequest  extends AbstractModel{
     private Integer Length;
 
     /**
+    * 关键字查询
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * 获取产品Id
      * @return ProductId 产品Id
      */
@@ -92,12 +99,29 @@ public class GetDevicesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取关键字查询
+     * @return Keyword 关键字查询
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * 设置关键字查询
+     * @param Keyword 关键字查询
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Length", this.Length);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

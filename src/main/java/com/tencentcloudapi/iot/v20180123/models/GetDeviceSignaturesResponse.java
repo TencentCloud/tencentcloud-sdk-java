@@ -20,49 +20,49 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddUserResponse  extends AbstractModel{
+public class GetDeviceSignaturesResponse  extends AbstractModel{
 
     /**
-    * 用户信息
+    * 设备绑定签名列表
     */
-    @SerializedName("User")
+    @SerializedName("DeviceSignatures")
     @Expose
-    private User User;
+    private DeviceSignature [] DeviceSignatures;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * 获取用户信息
-     * @return User 用户信息
+     * 获取设备绑定签名列表
+     * @return DeviceSignatures 设备绑定签名列表
      */
-    public User getUser() {
-        return this.User;
+    public DeviceSignature [] getDeviceSignatures() {
+        return this.DeviceSignatures;
     }
 
     /**
-     * 设置用户信息
-     * @param User 用户信息
+     * 设置设备绑定签名列表
+     * @param DeviceSignatures 设备绑定签名列表
      */
-    public void setUser(User User) {
-        this.User = User;
+    public void setDeviceSignatures(DeviceSignature [] DeviceSignatures) {
+        this.DeviceSignatures = DeviceSignatures;
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -72,7 +72,7 @@ public class AddUserResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "User.", this.User);
+        this.setParamArrayObj(map, prefix + "DeviceSignatures.", this.DeviceSignatures);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

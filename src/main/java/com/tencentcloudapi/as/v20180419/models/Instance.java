@@ -83,7 +83,7 @@ public class Instance  extends AbstractModel{
     */
     @SerializedName("CreationType")
     @Expose
-    private String [] CreationType;
+    private String CreationType;
 
     /**
     * 实例加入时间
@@ -224,7 +224,7 @@ public class Instance  extends AbstractModel{
      * 获取创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      * @return CreationType 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      */
-    public String [] getCreationType() {
+    public String getCreationType() {
         return this.CreationType;
     }
 
@@ -232,7 +232,7 @@ public class Instance  extends AbstractModel{
      * 设置创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      * @param CreationType 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      */
-    public void setCreationType(String [] CreationType) {
+    public void setCreationType(String CreationType) {
         this.CreationType = CreationType;
     }
 
@@ -264,7 +264,7 @@ public class Instance  extends AbstractModel{
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
         this.setParamSimple(map, prefix + "ProtectedFromScaleIn", this.ProtectedFromScaleIn);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamArraySimple(map, prefix + "CreationType.", this.CreationType);
+        this.setParamSimple(map, prefix + "CreationType", this.CreationType);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
 
     }

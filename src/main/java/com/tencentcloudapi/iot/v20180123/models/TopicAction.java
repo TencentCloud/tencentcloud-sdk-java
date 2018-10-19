@@ -20,12 +20,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetUserRequest  extends AbstractModel{
+public class TopicAction  extends AbstractModel{
+
+    /**
+    * 目标topic
+    */
+    @SerializedName("Topic")
+    @Expose
+    private String Topic;
+
+    /**
+     * 获取目标topic
+     * @return Topic 目标topic
+     */
+    public String getTopic() {
+        return this.Topic;
+    }
+
+    /**
+     * 设置目标topic
+     * @param Topic 目标topic
+     */
+    public void setTopic(String Topic) {
+        this.Topic = Topic;
+    }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Topic", this.Topic);
 
     }
 }

@@ -62,7 +62,7 @@ public class Rule  extends AbstractModel{
     */
     @SerializedName("Actions")
     @Expose
-    private Object [] Actions;
+    private Action [] Actions;
 
     /**
     * 已启动
@@ -91,6 +91,20 @@ public class Rule  extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * 消息顺序
+    */
+    @SerializedName("MsgOrder")
+    @Expose
+    private Integer MsgOrder;
+
+    /**
+    * 数据类型（0：文本，1：二进制）
+    */
+    @SerializedName("DataType")
+    @Expose
+    private Integer DataType;
 
     /**
      * 获取规则Id
@@ -176,7 +190,7 @@ public class Rule  extends AbstractModel{
      * 获取转发
      * @return Actions 转发
      */
-    public Object [] getActions() {
+    public Action [] getActions() {
         return this.Actions;
     }
 
@@ -184,7 +198,7 @@ public class Rule  extends AbstractModel{
      * 设置转发
      * @param Actions 转发
      */
-    public void setActions(Object [] Actions) {
+    public void setActions(Action [] Actions) {
         this.Actions = Actions;
     }
 
@@ -253,6 +267,38 @@ public class Rule  extends AbstractModel{
     }
 
     /**
+     * 获取消息顺序
+     * @return MsgOrder 消息顺序
+     */
+    public Integer getMsgOrder() {
+        return this.MsgOrder;
+    }
+
+    /**
+     * 设置消息顺序
+     * @param MsgOrder 消息顺序
+     */
+    public void setMsgOrder(Integer MsgOrder) {
+        this.MsgOrder = MsgOrder;
+    }
+
+    /**
+     * 获取数据类型（0：文本，1：二进制）
+     * @return DataType 数据类型（0：文本，1：二进制）
+     */
+    public Integer getDataType() {
+        return this.DataType;
+    }
+
+    /**
+     * 设置数据类型（0：文本，1：二进制）
+     * @param DataType 数据类型（0：文本，1：二进制）
+     */
+    public void setDataType(Integer DataType) {
+        this.DataType = DataType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +312,8 @@ public class Rule  extends AbstractModel{
         this.setParamSimple(map, prefix + "Deleted", this.Deleted);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "MsgOrder", this.MsgOrder);
+        this.setParamSimple(map, prefix + "DataType", this.DataType);
 
     }
 }

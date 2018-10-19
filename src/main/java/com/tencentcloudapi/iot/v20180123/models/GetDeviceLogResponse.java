@@ -27,17 +27,24 @@ public class GetDeviceLogResponse  extends AbstractModel{
     */
     @SerializedName("DeviceLog")
     @Expose
-    private Object [] DeviceLog;
+    private DeviceLogEntry [] DeviceLog;
 
     /**
     * 查询游标
     */
     @SerializedName("ScrollId")
     @Expose
-    private String [] ScrollId;
+    private String ScrollId;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 游标超时
+    */
+    @SerializedName("ScrollTimeout")
+    @Expose
+    private Integer ScrollTimeout;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -47,7 +54,7 @@ public class GetDeviceLogResponse  extends AbstractModel{
      * 获取设备日志
      * @return DeviceLog 设备日志
      */
-    public Object [] getDeviceLog() {
+    public DeviceLogEntry [] getDeviceLog() {
         return this.DeviceLog;
     }
 
@@ -55,7 +62,7 @@ public class GetDeviceLogResponse  extends AbstractModel{
      * 设置设备日志
      * @param DeviceLog 设备日志
      */
-    public void setDeviceLog(Object [] DeviceLog) {
+    public void setDeviceLog(DeviceLogEntry [] DeviceLog) {
         this.DeviceLog = DeviceLog;
     }
 
@@ -63,7 +70,7 @@ public class GetDeviceLogResponse  extends AbstractModel{
      * 获取查询游标
      * @return ScrollId 查询游标
      */
-    public String [] getScrollId() {
+    public String getScrollId() {
         return this.ScrollId;
     }
 
@@ -71,21 +78,37 @@ public class GetDeviceLogResponse  extends AbstractModel{
      * 设置查询游标
      * @param ScrollId 查询游标
      */
-    public void setScrollId(String [] ScrollId) {
+    public void setScrollId(String ScrollId) {
         this.ScrollId = ScrollId;
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取游标超时
+     * @return ScrollTimeout 游标超时
+     */
+    public Integer getScrollTimeout() {
+        return this.ScrollTimeout;
+    }
+
+    /**
+     * 设置游标超时
+     * @param ScrollTimeout 游标超时
+     */
+    public void setScrollTimeout(Integer ScrollTimeout) {
+        this.ScrollTimeout = ScrollTimeout;
+    }
+
+    /**
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -96,7 +119,8 @@ public class GetDeviceLogResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DeviceLog.", this.DeviceLog);
-        this.setParamArraySimple(map, prefix + "ScrollId.", this.ScrollId);
+        this.setParamSimple(map, prefix + "ScrollId", this.ScrollId);
+        this.setParamSimple(map, prefix + "ScrollTimeout", this.ScrollTimeout);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

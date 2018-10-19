@@ -20,49 +20,49 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetUserResponse  extends AbstractModel{
+public class AppGetDevicesResponse  extends AbstractModel{
 
     /**
-    * 用户信息
+    * 绑定设备列表
     */
-    @SerializedName("User")
+    @SerializedName("Devices")
     @Expose
-    private User User;
+    private AppDevice [] Devices;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * 获取用户信息
-     * @return User 用户信息
+     * 获取绑定设备列表
+     * @return Devices 绑定设备列表
      */
-    public User getUser() {
-        return this.User;
+    public AppDevice [] getDevices() {
+        return this.Devices;
     }
 
     /**
-     * 设置用户信息
-     * @param User 用户信息
+     * 设置绑定设备列表
+     * @param Devices 绑定设备列表
      */
-    public void setUser(User User) {
-        this.User = User;
+    public void setDevices(AppDevice [] Devices) {
+        this.Devices = Devices;
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -72,7 +72,7 @@ public class GetUserResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "User.", this.User);
+        this.setParamArrayObj(map, prefix + "Devices.", this.Devices);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

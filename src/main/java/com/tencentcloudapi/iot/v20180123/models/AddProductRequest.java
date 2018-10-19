@@ -37,25 +37,39 @@ public class AddProductRequest  extends AbstractModel{
     private String Description;
 
     /**
-    * 鉴权模式（1：动态令牌，推荐使用动态令牌）
+    * 数据模版
+    */
+    @SerializedName("DataTemplate")
+    @Expose
+    private DataTemplate [] DataTemplate;
+
+    /**
+    * 产品版本（native表示基础版，template表示高级版，默认值为template）
+    */
+    @SerializedName("DataProtocol")
+    @Expose
+    private String DataProtocol;
+
+    /**
+    * 设备认证方式（1：动态令牌，2：签名直连鉴权）
     */
     @SerializedName("AuthType")
     @Expose
     private Integer AuthType;
 
     /**
-    * 数据模版（json数组）
+    * 通信方式（other/wifi/cellular/nb-iot）
     */
-    @SerializedName("DataTemplate")
+    @SerializedName("CommProtocol")
     @Expose
-    private String [] DataTemplate;
+    private String CommProtocol;
 
     /**
-    * 数据协议（native表示自定义，template表示数据模板，默认值为template）
+    * 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
     */
-    @SerializedName("DataProtocol")
+    @SerializedName("DeviceType")
     @Expose
-    private String DataProtocol;
+    private String DeviceType;
 
     /**
      * 获取产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
@@ -90,51 +104,83 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取鉴权模式（1：动态令牌，推荐使用动态令牌）
-     * @return AuthType 鉴权模式（1：动态令牌，推荐使用动态令牌）
+     * 获取数据模版
+     * @return DataTemplate 数据模版
      */
-    public Integer getAuthType() {
-        return this.AuthType;
-    }
-
-    /**
-     * 设置鉴权模式（1：动态令牌，推荐使用动态令牌）
-     * @param AuthType 鉴权模式（1：动态令牌，推荐使用动态令牌）
-     */
-    public void setAuthType(Integer AuthType) {
-        this.AuthType = AuthType;
-    }
-
-    /**
-     * 获取数据模版（json数组）
-     * @return DataTemplate 数据模版（json数组）
-     */
-    public String [] getDataTemplate() {
+    public DataTemplate [] getDataTemplate() {
         return this.DataTemplate;
     }
 
     /**
-     * 设置数据模版（json数组）
-     * @param DataTemplate 数据模版（json数组）
+     * 设置数据模版
+     * @param DataTemplate 数据模版
      */
-    public void setDataTemplate(String [] DataTemplate) {
+    public void setDataTemplate(DataTemplate [] DataTemplate) {
         this.DataTemplate = DataTemplate;
     }
 
     /**
-     * 获取数据协议（native表示自定义，template表示数据模板，默认值为template）
-     * @return DataProtocol 数据协议（native表示自定义，template表示数据模板，默认值为template）
+     * 获取产品版本（native表示基础版，template表示高级版，默认值为template）
+     * @return DataProtocol 产品版本（native表示基础版，template表示高级版，默认值为template）
      */
     public String getDataProtocol() {
         return this.DataProtocol;
     }
 
     /**
-     * 设置数据协议（native表示自定义，template表示数据模板，默认值为template）
-     * @param DataProtocol 数据协议（native表示自定义，template表示数据模板，默认值为template）
+     * 设置产品版本（native表示基础版，template表示高级版，默认值为template）
+     * @param DataProtocol 产品版本（native表示基础版，template表示高级版，默认值为template）
      */
     public void setDataProtocol(String DataProtocol) {
         this.DataProtocol = DataProtocol;
+    }
+
+    /**
+     * 获取设备认证方式（1：动态令牌，2：签名直连鉴权）
+     * @return AuthType 设备认证方式（1：动态令牌，2：签名直连鉴权）
+     */
+    public Integer getAuthType() {
+        return this.AuthType;
+    }
+
+    /**
+     * 设置设备认证方式（1：动态令牌，2：签名直连鉴权）
+     * @param AuthType 设备认证方式（1：动态令牌，2：签名直连鉴权）
+     */
+    public void setAuthType(Integer AuthType) {
+        this.AuthType = AuthType;
+    }
+
+    /**
+     * 获取通信方式（other/wifi/cellular/nb-iot）
+     * @return CommProtocol 通信方式（other/wifi/cellular/nb-iot）
+     */
+    public String getCommProtocol() {
+        return this.CommProtocol;
+    }
+
+    /**
+     * 设置通信方式（other/wifi/cellular/nb-iot）
+     * @param CommProtocol 通信方式（other/wifi/cellular/nb-iot）
+     */
+    public void setCommProtocol(String CommProtocol) {
+        this.CommProtocol = CommProtocol;
+    }
+
+    /**
+     * 获取产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
+     * @return DeviceType 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * 设置产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
+     * @param DeviceType 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
     }
 
     /**
@@ -143,9 +189,11 @@ public class AddProductRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
-        this.setParamSimple(map, prefix + "AuthType", this.AuthType);
-        this.setParamArraySimple(map, prefix + "DataTemplate.", this.DataTemplate);
+        this.setParamArrayObj(map, prefix + "DataTemplate.", this.DataTemplate);
         this.setParamSimple(map, prefix + "DataProtocol", this.DataProtocol);
+        this.setParamSimple(map, prefix + "AuthType", this.AuthType);
+        this.setParamSimple(map, prefix + "CommProtocol", this.CommProtocol);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
 
     }
 }

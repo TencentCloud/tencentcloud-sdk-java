@@ -27,10 +27,10 @@ public class GetDeviceDataResponse  extends AbstractModel{
     */
     @SerializedName("DeviceData")
     @Expose
-    private Object DeviceData;
+    private String DeviceData;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -40,7 +40,7 @@ public class GetDeviceDataResponse  extends AbstractModel{
      * 获取设备数据
      * @return DeviceData 设备数据
      */
-    public Object getDeviceData() {
+    public String getDeviceData() {
         return this.DeviceData;
     }
 
@@ -48,21 +48,21 @@ public class GetDeviceDataResponse  extends AbstractModel{
      * 设置设备数据
      * @param DeviceData 设备数据
      */
-    public void setDeviceData(Object DeviceData) {
+    public void setDeviceData(String DeviceData) {
         this.DeviceData = DeviceData;
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -72,7 +72,7 @@ public class GetDeviceDataResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "DeviceData.", this.DeviceData);
+        this.setParamSimple(map, prefix + "DeviceData", this.DeviceData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

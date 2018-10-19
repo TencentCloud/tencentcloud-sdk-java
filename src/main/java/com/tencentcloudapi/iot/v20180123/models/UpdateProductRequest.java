@@ -44,11 +44,11 @@ public class UpdateProductRequest  extends AbstractModel{
     private String Description;
 
     /**
-    * 数据模版（json）
+    * 数据模版
     */
     @SerializedName("DataTemplate")
     @Expose
-    private String DataTemplate;
+    private DataTemplate [] DataTemplate;
 
     /**
      * 获取产品Id
@@ -99,18 +99,18 @@ public class UpdateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据模版（json）
-     * @return DataTemplate 数据模版（json）
+     * 获取数据模版
+     * @return DataTemplate 数据模版
      */
-    public String getDataTemplate() {
+    public DataTemplate [] getDataTemplate() {
         return this.DataTemplate;
     }
 
     /**
-     * 设置数据模版（json）
-     * @param DataTemplate 数据模版（json）
+     * 设置数据模版
+     * @param DataTemplate 数据模版
      */
-    public void setDataTemplate(String DataTemplate) {
+    public void setDataTemplate(DataTemplate [] DataTemplate) {
         this.DataTemplate = DataTemplate;
     }
 
@@ -121,7 +121,7 @@ public class UpdateProductRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
-        this.setParamSimple(map, prefix + "DataTemplate", this.DataTemplate);
+        this.setParamArrayObj(map, prefix + "DataTemplate.", this.DataTemplate);
 
     }
 }

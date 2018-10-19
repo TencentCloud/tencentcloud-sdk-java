@@ -27,7 +27,7 @@ public class GetProductsResponse  extends AbstractModel{
     */
     @SerializedName("Products")
     @Expose
-    private Product [] Products;
+    private ProductEntry [] Products;
 
     /**
     * Product总数
@@ -37,7 +37,7 @@ public class GetProductsResponse  extends AbstractModel{
     private Integer Total;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -47,7 +47,7 @@ public class GetProductsResponse  extends AbstractModel{
      * 获取Product列表
      * @return Products Product列表
      */
-    public Product [] getProducts() {
+    public ProductEntry [] getProducts() {
         return this.Products;
     }
 
@@ -55,7 +55,7 @@ public class GetProductsResponse  extends AbstractModel{
      * 设置Product列表
      * @param Products Product列表
      */
-    public void setProducts(Product [] Products) {
+    public void setProducts(ProductEntry [] Products) {
         this.Products = Products;
     }
 
@@ -76,16 +76,16 @@ public class GetProductsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;

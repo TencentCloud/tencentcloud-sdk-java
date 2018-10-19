@@ -37,6 +37,27 @@ public class DeviceStatus  extends AbstractModel{
     private String Status;
 
     /**
+    * 首次上线时间
+    */
+    @SerializedName("FirstOnline")
+    @Expose
+    private String FirstOnline;
+
+    /**
+    * 最后上线时间
+    */
+    @SerializedName("LastOnline")
+    @Expose
+    private String LastOnline;
+
+    /**
+    * 上线次数
+    */
+    @SerializedName("OnlineTimes")
+    @Expose
+    private Integer OnlineTimes;
+
+    /**
      * 获取设备名称
      * @return DeviceName 设备名称
      */
@@ -69,11 +90,62 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
+     * 获取首次上线时间
+     * @return FirstOnline 首次上线时间
+     */
+    public String getFirstOnline() {
+        return this.FirstOnline;
+    }
+
+    /**
+     * 设置首次上线时间
+     * @param FirstOnline 首次上线时间
+     */
+    public void setFirstOnline(String FirstOnline) {
+        this.FirstOnline = FirstOnline;
+    }
+
+    /**
+     * 获取最后上线时间
+     * @return LastOnline 最后上线时间
+     */
+    public String getLastOnline() {
+        return this.LastOnline;
+    }
+
+    /**
+     * 设置最后上线时间
+     * @param LastOnline 最后上线时间
+     */
+    public void setLastOnline(String LastOnline) {
+        this.LastOnline = LastOnline;
+    }
+
+    /**
+     * 获取上线次数
+     * @return OnlineTimes 上线次数
+     */
+    public Integer getOnlineTimes() {
+        return this.OnlineTimes;
+    }
+
+    /**
+     * 设置上线次数
+     * @param OnlineTimes 上线次数
+     */
+    public void setOnlineTimes(Integer OnlineTimes) {
+        this.OnlineTimes = OnlineTimes;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "FirstOnline", this.FirstOnline);
+        this.setParamSimple(map, prefix + "LastOnline", this.LastOnline);
+        this.setParamSimple(map, prefix + "OnlineTimes", this.OnlineTimes);
 
     }
 }

@@ -51,11 +51,18 @@ public class UpdateRuleRequest  extends AbstractModel{
     private RuleQuery Query;
 
     /**
-    * 转发
+    * 转发动作列表
     */
     @SerializedName("Actions")
     @Expose
-    private Object [] Actions;
+    private Action [] Actions;
+
+    /**
+    * 数据类型（0：文本，1：二进制）
+    */
+    @SerializedName("DataType")
+    @Expose
+    private Integer DataType;
 
     /**
      * 获取规则Id
@@ -122,19 +129,35 @@ public class UpdateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发
-     * @return Actions 转发
+     * 获取转发动作列表
+     * @return Actions 转发动作列表
      */
-    public Object [] getActions() {
+    public Action [] getActions() {
         return this.Actions;
     }
 
     /**
-     * 设置转发
-     * @param Actions 转发
+     * 设置转发动作列表
+     * @param Actions 转发动作列表
      */
-    public void setActions(Object [] Actions) {
+    public void setActions(Action [] Actions) {
         this.Actions = Actions;
+    }
+
+    /**
+     * 获取数据类型（0：文本，1：二进制）
+     * @return DataType 数据类型（0：文本，1：二进制）
+     */
+    public Integer getDataType() {
+        return this.DataType;
+    }
+
+    /**
+     * 设置数据类型（0：文本，1：二进制）
+     * @param DataType 数据类型（0：文本，1：二进制）
+     */
+    public void setDataType(Integer DataType) {
+        this.DataType = DataType;
     }
 
     /**
@@ -146,6 +169,7 @@ public class UpdateRuleRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamObj(map, prefix + "Query.", this.Query);
         this.setParamArrayObj(map, prefix + "Actions.", this.Actions);
+        this.setParamSimple(map, prefix + "DataType", this.DataType);
 
     }
 }

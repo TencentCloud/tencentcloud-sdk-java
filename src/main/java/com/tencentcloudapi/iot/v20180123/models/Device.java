@@ -58,11 +58,11 @@ public class Device  extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 设备信息
+    * 设备信息（json）
     */
     @SerializedName("DeviceInfo")
     @Expose
-    private Object DeviceInfo;
+    private String DeviceInfo;
 
     /**
      * 获取产品Id
@@ -145,18 +145,18 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 获取设备信息
-     * @return DeviceInfo 设备信息
+     * 获取设备信息（json）
+     * @return DeviceInfo 设备信息（json）
      */
-    public Object getDeviceInfo() {
+    public String getDeviceInfo() {
         return this.DeviceInfo;
     }
 
     /**
-     * 设置设备信息
-     * @param DeviceInfo 设备信息
+     * 设置设备信息（json）
+     * @param DeviceInfo 设备信息（json）
      */
-    public void setDeviceInfo(Object DeviceInfo) {
+    public void setDeviceInfo(String DeviceInfo) {
         this.DeviceInfo = DeviceInfo;
     }
 
@@ -169,7 +169,7 @@ public class Device  extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceSecret", this.DeviceSecret);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
-        this.setParamObj(map, prefix + "DeviceInfo.", this.DeviceInfo);
+        this.setParamSimple(map, prefix + "DeviceInfo", this.DeviceInfo);
 
     }
 }

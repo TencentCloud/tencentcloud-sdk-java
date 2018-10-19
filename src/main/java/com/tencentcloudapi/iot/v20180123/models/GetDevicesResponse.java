@@ -27,7 +27,7 @@ public class GetDevicesResponse  extends AbstractModel{
     */
     @SerializedName("Devices")
     @Expose
-    private Device [] Devices;
+    private DeviceEntry [] Devices;
 
     /**
     * 设备总数
@@ -37,7 +37,7 @@ public class GetDevicesResponse  extends AbstractModel{
     private Integer Total;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -47,7 +47,7 @@ public class GetDevicesResponse  extends AbstractModel{
      * 获取设备列表
      * @return Devices 设备列表
      */
-    public Device [] getDevices() {
+    public DeviceEntry [] getDevices() {
         return this.Devices;
     }
 
@@ -55,7 +55,7 @@ public class GetDevicesResponse  extends AbstractModel{
      * 设置设备列表
      * @param Devices 设备列表
      */
-    public void setDevices(Device [] Devices) {
+    public void setDevices(DeviceEntry [] Devices) {
         this.Devices = Devices;
     }
 
@@ -76,16 +76,16 @@ public class GetDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;

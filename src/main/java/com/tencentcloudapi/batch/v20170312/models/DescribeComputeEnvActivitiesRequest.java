@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
 
     /**
-    * u8ba1u7b97u73afu5883ID
+    * 计算环境ID
     */
     @SerializedName("EnvId")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     private Filter Filters;
 
     /**
-     * 获取u8ba1u7b97u73afu5883ID
-     * @return EnvId u8ba1u7b97u73afu5883ID
+     * 获取计算环境ID
+     * @return EnvId 计算环境ID
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * 设置u8ba1u7b97u73afu5883ID
-     * @param EnvId u8ba1u7b97u73afu5883ID
+     * 设置计算环境ID
+     * @param EnvId 计算环境ID
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

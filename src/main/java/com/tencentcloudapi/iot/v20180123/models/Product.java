@@ -37,13 +37,6 @@ public class Product  extends AbstractModel{
     private String ProductKey;
 
     /**
-    * 产品直连密钥
-    */
-    @SerializedName("ProductSecret")
-    @Expose
-    private String ProductSecret;
-
-    /**
     * AppId
     */
     @SerializedName("AppId")
@@ -118,7 +111,63 @@ public class Product  extends AbstractModel{
     */
     @SerializedName("DataTemplate")
     @Expose
-    private Object DataTemplate;
+    private DataTemplate [] DataTemplate;
+
+    /**
+    * 数据协议（native/template）
+    */
+    @SerializedName("DataProtocol")
+    @Expose
+    private String DataProtocol;
+
+    /**
+    * 直连用户名
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
+    * 直连密码
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
+    * 通信方式
+    */
+    @SerializedName("CommProtocol")
+    @Expose
+    private String CommProtocol;
+
+    /**
+    * qps
+    */
+    @SerializedName("Qps")
+    @Expose
+    private Integer Qps;
+
+    /**
+    * 地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 产品的设备类型
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
+    * 关联的产品列表
+    */
+    @SerializedName("AssociatedProducts")
+    @Expose
+    private String [] AssociatedProducts;
 
     /**
      * 获取产品Id
@@ -150,22 +199,6 @@ public class Product  extends AbstractModel{
      */
     public void setProductKey(String ProductKey) {
         this.ProductKey = ProductKey;
-    }
-
-    /**
-     * 获取产品直连密钥
-     * @return ProductSecret 产品直连密钥
-     */
-    public String getProductSecret() {
-        return this.ProductSecret;
-    }
-
-    /**
-     * 设置产品直连密钥
-     * @param ProductSecret 产品直连密钥
-     */
-    public void setProductSecret(String ProductSecret) {
-        this.ProductSecret = ProductSecret;
     }
 
     /**
@@ -332,7 +365,7 @@ public class Product  extends AbstractModel{
      * 获取数据模版
      * @return DataTemplate 数据模版
      */
-    public Object getDataTemplate() {
+    public DataTemplate [] getDataTemplate() {
         return this.DataTemplate;
     }
 
@@ -340,8 +373,136 @@ public class Product  extends AbstractModel{
      * 设置数据模版
      * @param DataTemplate 数据模版
      */
-    public void setDataTemplate(Object DataTemplate) {
+    public void setDataTemplate(DataTemplate [] DataTemplate) {
         this.DataTemplate = DataTemplate;
+    }
+
+    /**
+     * 获取数据协议（native/template）
+     * @return DataProtocol 数据协议（native/template）
+     */
+    public String getDataProtocol() {
+        return this.DataProtocol;
+    }
+
+    /**
+     * 设置数据协议（native/template）
+     * @param DataProtocol 数据协议（native/template）
+     */
+    public void setDataProtocol(String DataProtocol) {
+        this.DataProtocol = DataProtocol;
+    }
+
+    /**
+     * 获取直连用户名
+     * @return Username 直连用户名
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * 设置直连用户名
+     * @param Username 直连用户名
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
+    /**
+     * 获取直连密码
+     * @return Password 直连密码
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * 设置直连密码
+     * @param Password 直连密码
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
+     * 获取通信方式
+     * @return CommProtocol 通信方式
+     */
+    public String getCommProtocol() {
+        return this.CommProtocol;
+    }
+
+    /**
+     * 设置通信方式
+     * @param CommProtocol 通信方式
+     */
+    public void setCommProtocol(String CommProtocol) {
+        this.CommProtocol = CommProtocol;
+    }
+
+    /**
+     * 获取qps
+     * @return Qps qps
+     */
+    public Integer getQps() {
+        return this.Qps;
+    }
+
+    /**
+     * 设置qps
+     * @param Qps qps
+     */
+    public void setQps(Integer Qps) {
+        this.Qps = Qps;
+    }
+
+    /**
+     * 获取地域
+     * @return Region 地域
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * 设置地域
+     * @param Region 地域
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * 获取产品的设备类型
+     * @return DeviceType 产品的设备类型
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * 设置产品的设备类型
+     * @param DeviceType 产品的设备类型
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
+    /**
+     * 获取关联的产品列表
+     * @return AssociatedProducts 关联的产品列表
+     */
+    public String [] getAssociatedProducts() {
+        return this.AssociatedProducts;
+    }
+
+    /**
+     * 设置关联的产品列表
+     * @param AssociatedProducts 关联的产品列表
+     */
+    public void setAssociatedProducts(String [] AssociatedProducts) {
+        this.AssociatedProducts = AssociatedProducts;
     }
 
     /**
@@ -350,7 +511,6 @@ public class Product  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "ProductKey", this.ProductKey);
-        this.setParamSimple(map, prefix + "ProductSecret", this.ProductSecret);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
@@ -361,7 +521,15 @@ public class Product  extends AbstractModel{
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-        this.setParamObj(map, prefix + "DataTemplate.", this.DataTemplate);
+        this.setParamArrayObj(map, prefix + "DataTemplate.", this.DataTemplate);
+        this.setParamSimple(map, prefix + "DataProtocol", this.DataProtocol);
+        this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "CommProtocol", this.CommProtocol);
+        this.setParamSimple(map, prefix + "Qps", this.Qps);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamArraySimple(map, prefix + "AssociatedProducts.", this.AssociatedProducts);
 
     }
 }

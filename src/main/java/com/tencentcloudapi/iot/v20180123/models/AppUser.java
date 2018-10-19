@@ -44,13 +44,6 @@ public class AppUser  extends AbstractModel{
     private String NickName;
 
     /**
-    * 绑定设备列表
-    */
-    @SerializedName("Devices")
-    @Expose
-    private Object [] Devices;
-
-    /**
     * 创建时间
     */
     @SerializedName("CreateTime")
@@ -113,22 +106,6 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 获取绑定设备列表
-     * @return Devices 绑定设备列表
-     */
-    public Object [] getDevices() {
-        return this.Devices;
-    }
-
-    /**
-     * 设置绑定设备列表
-     * @param Devices 绑定设备列表
-     */
-    public void setDevices(Object [] Devices) {
-        this.Devices = Devices;
-    }
-
-    /**
      * 获取创建时间
      * @return CreateTime 创建时间
      */
@@ -167,7 +144,6 @@ public class AppUser  extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "NickName", this.NickName);
-        this.setParamArrayObj(map, prefix + "Devices.", this.Devices);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

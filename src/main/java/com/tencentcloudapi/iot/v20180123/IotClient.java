@@ -139,25 +139,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *注册用户
-     * @param req AddUserRequest
-     * @return AddUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public AddUserResponse  AddUser(AddUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddUserResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddUserResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "AddUser"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *注册应用用户
+     *为APP提供用户注册功能
      * @param req AppAddUserRequest
      * @return AppAddUserResponse
      * @throws TencentCloudSDKException
@@ -168,6 +150,240 @@ public class IotClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<AppAddUserResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "AppAddUser"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户解除与设备的关联关系，解除后APP用户无法控制设备，获取设备数据
+     * @param req AppDeleteDeviceRequest
+     * @return AppDeleteDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppDeleteDeviceResponse  AppDeleteDevice(AppDeleteDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppDeleteDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppDeleteDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppDeleteDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取绑定设备的基本信息与数据模板定义
+     * @param req AppGetDeviceRequest
+     * @return AppGetDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppGetDeviceResponse  AppGetDevice(AppGetDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppGetDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppGetDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppGetDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取绑定设备数据，用于实时展示设备的最新数据
+     * @param req AppGetDeviceDataRequest
+     * @return AppGetDeviceDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppGetDeviceDataResponse  AppGetDeviceData(AppGetDeviceDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppGetDeviceDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppGetDeviceDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppGetDeviceData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取绑定设备的上下线状态
+     * @param req AppGetDeviceStatusesRequest
+     * @return AppGetDeviceStatusesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppGetDeviceStatusesResponse  AppGetDeviceStatuses(AppGetDeviceStatusesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppGetDeviceStatusesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppGetDeviceStatusesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppGetDeviceStatuses"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户的绑定设备列表
+     * @param req AppGetDevicesRequest
+     * @return AppGetDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppGetDevicesResponse  AppGetDevices(AppGetDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppGetDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppGetDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppGetDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户token
+     * @param req AppGetTokenRequest
+     * @return AppGetTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppGetTokenResponse  AppGetToken(AppGetTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppGetTokenResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppGetTokenResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppGetToken"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户信息
+     * @param req AppGetUserRequest
+     * @return AppGetUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppGetUserResponse  AppGetUser(AppGetUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppGetUserResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppGetUserResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppGetUser"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户通过APP控制设备
+     * @param req AppIssueDeviceControlRequest
+     * @return AppIssueDeviceControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppIssueDeviceControlResponse  AppIssueDeviceControl(AppIssueDeviceControlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppIssueDeviceControlResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppIssueDeviceControlResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppIssueDeviceControl"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重置APP用户密码
+     * @param req AppResetPasswordRequest
+     * @return AppResetPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppResetPasswordResponse  AppResetPassword(AppResetPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppResetPasswordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppResetPasswordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppResetPassword"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户绑定设备，绑定后可以在APP端进行控制。绑定设备前需调用“获取设备绑定签名”接口
+     * @param req AppSecureAddDeviceRequest
+     * @return AppSecureAddDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppSecureAddDeviceResponse  AppSecureAddDevice(AppSecureAddDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppSecureAddDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppSecureAddDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppSecureAddDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改设备别名，便于用户个性化定义设备的名称
+     * @param req AppUpdateDeviceRequest
+     * @return AppUpdateDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppUpdateDeviceResponse  AppUpdateDevice(AppUpdateDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppUpdateDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppUpdateDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppUpdateDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户信息
+     * @param req AppUpdateUserRequest
+     * @return AppUpdateUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public AppUpdateUserResponse  AppUpdateUser(AppUpdateUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AppUpdateUserResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AppUpdateUserResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AppUpdateUser"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *关联子设备产品和网关产品
+     * @param req AssociateSubDeviceToGatewayProductRequest
+     * @return AssociateSubDeviceToGatewayProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateSubDeviceToGatewayProductResponse  AssociateSubDeviceToGatewayProduct(AssociateSubDeviceToGatewayProductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateSubDeviceToGatewayProductResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateSubDeviceToGatewayProductResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateSubDeviceToGatewayProduct"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -265,7 +481,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *批量获取设备某一段时间范围的设备上报数据。该接口只允许使用数据模板类型的产品通过REST API方式同步设备上报数据至用户的应用系统。
+     *批量获取设备某一段时间范围的设备上报数据。该接口适用于使用高级版类型的产品
      * @param req GetDataHistoryRequest
      * @return GetDataHistoryResponse
      * @throws TencentCloudSDKException
@@ -276,6 +492,24 @@ public class IotClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetDataHistoryResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetDataHistory"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设备的调试日志，用于定位问题
+     * @param req GetDebugLogRequest
+     * @return GetDebugLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDebugLogResponse  GetDebugLog(GetDebugLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDebugLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDebugLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetDebugLog"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -319,7 +553,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *批量获取设备与云端的详细通信日志，该接口适用于使用数据模板类型的产品。
+     *批量获取设备与云端的详细通信日志，该接口适用于使用高级版类型的产品。
      * @param req GetDeviceLogRequest
      * @return GetDeviceLogResponse
      * @throws TencentCloudSDKException
@@ -330,6 +564,42 @@ public class IotClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetDeviceLogResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetDeviceLog"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设备绑定签名，用于用户绑定某个设备的应用场景
+     * @param req GetDeviceSignaturesRequest
+     * @return GetDeviceSignaturesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDeviceSignaturesResponse  GetDeviceSignatures(GetDeviceSignaturesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDeviceSignaturesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDeviceSignaturesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetDeviceSignatures"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询某段时间范围内产品的在线、激活设备数
+     * @param req GetDeviceStatisticsRequest
+     * @return GetDeviceStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDeviceStatisticsResponse  GetDeviceStatistics(GetDeviceStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDeviceStatisticsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDeviceStatisticsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetDeviceStatistics"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -481,25 +751,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *获取用户信息
-     * @param req GetUserRequest
-     * @return GetUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetUserResponse  GetUser(GetUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetUserResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetUserResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GetUser"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *提供下发控制指令到指定设备的能力，该接口适用于使用数据模板类型的产品。
+     *提供下发控制指令到指定设备的能力，该接口适用于使用高级版类型的产品。
      * @param req IssueDeviceControlRequest
      * @return IssueDeviceControlResponse
      * @throws TencentCloudSDKException
@@ -517,7 +769,7 @@ public class IotClient extends AbstractClient{
     }
 
     /**
-     *提供向指定的Topic发布消息的能力，常用于向设备下发控制指令；该接口只适用于数据协议为“自定义”类型的产品，使用数据模板类型的产品需使用IssueDeviceControl接口
+     *提供向指定的Topic发布消息的能力，常用于向设备下发控制指令。该接口只适用于产品版本为“基础版”类型的产品，使用高级版的产品需使用“下发设备控制指令”接口
      * @param req PublishMsgRequest
      * @return PublishMsgResponse
      * @throws TencentCloudSDKException
@@ -546,6 +798,24 @@ public class IotClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetDeviceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ResetDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *取消子设备产品与网关设备产品的关联
+     * @param req UnassociateSubDeviceFromGatewayProductRequest
+     * @return UnassociateSubDeviceFromGatewayProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnassociateSubDeviceFromGatewayProductResponse  UnassociateSubDeviceFromGatewayProduct(UnassociateSubDeviceFromGatewayProductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnassociateSubDeviceFromGatewayProductResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnassociateSubDeviceFromGatewayProductResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UnassociateSubDeviceFromGatewayProduct"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

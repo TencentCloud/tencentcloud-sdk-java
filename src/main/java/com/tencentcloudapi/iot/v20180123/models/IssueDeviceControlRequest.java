@@ -44,6 +44,13 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     private String ControlData;
 
     /**
+    * 是否发送metadata字段
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private Boolean Metadata;
+
+    /**
      * 获取产品Id
      * @return ProductId 产品Id
      */
@@ -92,12 +99,29 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否发送metadata字段
+     * @return Metadata 是否发送metadata字段
+     */
+    public Boolean getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * 设置是否发送metadata字段
+     * @param Metadata 是否发送metadata字段
+     */
+    public void setMetadata(Boolean Metadata) {
+        this.Metadata = Metadata;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ControlData", this.ControlData);
+        this.setParamSimple(map, prefix + "Metadata", this.Metadata);
 
     }
 }
