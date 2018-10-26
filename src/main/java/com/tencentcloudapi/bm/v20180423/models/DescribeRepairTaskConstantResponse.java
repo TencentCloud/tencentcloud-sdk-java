@@ -25,12 +25,12 @@ public class DescribeRepairTaskConstantResponse  extends AbstractModel{
     /**
     * 故障类型ID与对应中文名列表
     */
-    @SerializedName("TaskTypeList")
+    @SerializedName("TaskTypeSet")
     @Expose
-    private TaskType [] TaskTypeList;
+    private TaskType [] TaskTypeSet;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -38,31 +38,31 @@ public class DescribeRepairTaskConstantResponse  extends AbstractModel{
 
     /**
      * 获取故障类型ID与对应中文名列表
-     * @return TaskTypeList 故障类型ID与对应中文名列表
+     * @return TaskTypeSet 故障类型ID与对应中文名列表
      */
-    public TaskType [] getTaskTypeList() {
-        return this.TaskTypeList;
+    public TaskType [] getTaskTypeSet() {
+        return this.TaskTypeSet;
     }
 
     /**
      * 设置故障类型ID与对应中文名列表
-     * @param TaskTypeList 故障类型ID与对应中文名列表
+     * @param TaskTypeSet 故障类型ID与对应中文名列表
      */
-    public void setTaskTypeList(TaskType [] TaskTypeList) {
-        this.TaskTypeList = TaskTypeList;
+    public void setTaskTypeSet(TaskType [] TaskTypeSet) {
+        this.TaskTypeSet = TaskTypeSet;
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -72,7 +72,7 @@ public class DescribeRepairTaskConstantResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TaskTypeList.", this.TaskTypeList);
+        this.setParamArrayObj(map, prefix + "TaskTypeSet.", this.TaskTypeSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

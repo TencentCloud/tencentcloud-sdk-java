@@ -357,7 +357,7 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
-     *用于修改计算环境的期望节点数量
+     *用于修改计算环境属性
      * @param req ModifyComputeEnvRequest
      * @return ModifyComputeEnvResponse
      * @throws TencentCloudSDKException

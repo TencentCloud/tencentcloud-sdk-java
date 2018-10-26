@@ -27,20 +27,20 @@ public class SlaveInfo  extends AbstractModel{
     */
     @SerializedName("First")
     @Expose
-    private First First;
+    private SlaveInstanceInfo First;
 
     /**
     * 第二备机信息
     */
     @SerializedName("Second")
     @Expose
-    private First Second;
+    private SlaveInstanceInfo Second;
 
     /**
      * 获取第一备机信息
      * @return First 第一备机信息
      */
-    public First getFirst() {
+    public SlaveInstanceInfo getFirst() {
         return this.First;
     }
 
@@ -48,7 +48,7 @@ public class SlaveInfo  extends AbstractModel{
      * 设置第一备机信息
      * @param First 第一备机信息
      */
-    public void setFirst(First First) {
+    public void setFirst(SlaveInstanceInfo First) {
         this.First = First;
     }
 
@@ -56,7 +56,7 @@ public class SlaveInfo  extends AbstractModel{
      * 获取第二备机信息
      * @return Second 第二备机信息
      */
-    public First getSecond() {
+    public SlaveInstanceInfo getSecond() {
         return this.Second;
     }
 
@@ -64,7 +64,7 @@ public class SlaveInfo  extends AbstractModel{
      * 设置第二备机信息
      * @param Second 第二备机信息
      */
-    public void setSecond(First Second) {
+    public void setSecond(SlaveInstanceInfo Second) {
         this.Second = Second;
     }
 

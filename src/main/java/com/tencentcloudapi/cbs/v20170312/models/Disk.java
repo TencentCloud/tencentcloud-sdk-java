@@ -198,6 +198,13 @@ public class Disk  extends AbstractModel{
     private Boolean DeleteWithInstance;
 
     /**
+    * 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+    */
+    @SerializedName("DifferDaysOfDeadline")
+    @Expose
+    private Integer DifferDaysOfDeadline;
+
+    /**
      * 获取云硬盘ID。
      * @return DiskId 云硬盘ID。
      */
@@ -598,6 +605,22 @@ public class Disk  extends AbstractModel{
     }
 
     /**
+     * 获取当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     * @return DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     */
+    public Integer getDifferDaysOfDeadline() {
+        return this.DifferDaysOfDeadline;
+    }
+
+    /**
+     * 设置当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     * @param DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     */
+    public void setDifferDaysOfDeadline(Integer DifferDaysOfDeadline) {
+        this.DifferDaysOfDeadline = DifferDaysOfDeadline;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -626,6 +649,7 @@ public class Disk  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AutoSnapshotPolicyIds.", this.AutoSnapshotPolicyIds);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+        this.setParamSimple(map, prefix + "DifferDaysOfDeadline", this.DifferDaysOfDeadline);
 
     }
 }

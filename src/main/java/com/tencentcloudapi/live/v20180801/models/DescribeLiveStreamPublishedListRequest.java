@@ -32,7 +32,7 @@ public class DescribeLiveStreamPublishedListRequest  extends AbstractModel{
     /**
     * 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
-EndTime 和 StartTime 之间的间隔不能超过 30 天。
+不超过当前时间。
     */
     @SerializedName("EndTime")
     @Expose
@@ -41,6 +41,7 @@ EndTime 和 StartTime 之间的间隔不能超过 30 天。
     /**
     * 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
+和当前时间相隔不超过7天。
     */
     @SerializedName("StartTime")
     @Expose
@@ -91,10 +92,10 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     /**
      * 获取结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
-EndTime 和 StartTime 之间的间隔不能超过 30 天。
+不超过当前时间。
      * @return EndTime 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
-EndTime 和 StartTime 之间的间隔不能超过 30 天。
+不超过当前时间。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -103,10 +104,10 @@ EndTime 和 StartTime 之间的间隔不能超过 30 天。
     /**
      * 设置结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
-EndTime 和 StartTime 之间的间隔不能超过 30 天。
+不超过当前时间。
      * @param EndTime 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
-EndTime 和 StartTime 之间的间隔不能超过 30 天。
+不超过当前时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -115,8 +116,10 @@ EndTime 和 StartTime 之间的间隔不能超过 30 天。
     /**
      * 获取起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
+和当前时间相隔不超过7天。
      * @return StartTime 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
+和当前时间相隔不超过7天。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -125,8 +128,10 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     /**
      * 设置起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
+和当前时间相隔不超过7天。
      * @param StartTime 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
+和当前时间相隔不超过7天。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

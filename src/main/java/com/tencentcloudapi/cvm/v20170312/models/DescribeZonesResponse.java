@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeZonesResponse  extends AbstractModel{
 
     /**
-    * 可用区数量
+    * 可用区数量。
     */
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
 
     /**
-    * 可用区列表信息
+    * 可用区列表信息。
     */
     @SerializedName("ZoneSet")
     @Expose
     private ZoneInfo [] ZoneSet;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * 获取可用区数量
-     * @return TotalCount 可用区数量
+     * 获取可用区数量。
+     * @return TotalCount 可用区数量。
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置可用区数量
-     * @param TotalCount 可用区数量
+     * 设置可用区数量。
+     * @param TotalCount 可用区数量。
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取可用区列表信息
-     * @return ZoneSet 可用区列表信息
+     * 获取可用区列表信息。
+     * @return ZoneSet 可用区列表信息。
      */
     public ZoneInfo [] getZoneSet() {
         return this.ZoneSet;
     }
 
     /**
-     * 设置可用区列表信息
-     * @param ZoneSet 可用区列表信息
+     * 设置可用区列表信息。
+     * @param ZoneSet 可用区列表信息。
      */
     public void setZoneSet(ZoneInfo [] ZoneSet) {
         this.ZoneSet = ZoneSet;
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;

@@ -51,6 +51,13 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     private Integer BandwidthPackageCount;
 
     /**
+    * 带宽包限速大小。单位：Mbps，-1表示不限速。
+    */
+    @SerializedName("InternetMaxBandwidth")
+    @Expose
+    private Integer InternetMaxBandwidth;
+
+    /**
      * 获取带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      * @return NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      */
@@ -115,6 +122,22 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
+     * 获取带宽包限速大小。单位：Mbps，-1表示不限速。
+     * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
+     */
+    public Integer getInternetMaxBandwidth() {
+        return this.InternetMaxBandwidth;
+    }
+
+    /**
+     * 设置带宽包限速大小。单位：Mbps，-1表示不限速。
+     * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
+     */
+    public void setInternetMaxBandwidth(Integer InternetMaxBandwidth) {
+        this.InternetMaxBandwidth = InternetMaxBandwidth;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
         this.setParamSimple(map, prefix + "BandwidthPackageCount", this.BandwidthPackageCount);
+        this.setParamSimple(map, prefix + "InternetMaxBandwidth", this.InternetMaxBandwidth);
 
     }
 }

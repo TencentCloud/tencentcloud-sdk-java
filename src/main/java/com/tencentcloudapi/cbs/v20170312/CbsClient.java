@@ -72,7 +72,7 @@ public class CbsClient extends AbstractClient{
 
     /**
      *本接口（AttachDisks）用于挂载云硬盘。
-
+ 
 * 支持批量操作，将多块云盘挂载到同一云主机。如果多个云盘存在不允许挂载的云盘，则操作不执行，以返回特定的错误码返回。
 * 本接口为异步接口，当挂载云盘的请求成功返回时，表示后台已发起挂载云盘的操作，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHING”变为“ATTACHED”，则为挂载成功。
      * @param req AttachDisksRequest
@@ -167,6 +167,27 @@ public class CbsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskConfigQuotaResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDiskConfigQuota"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDiskOperationLogs）用于查询云盘操作日志列表。
+
+可根据云盘ID过滤。云盘ID形如：disk-a1kmcp13。
+
+     * @param req DescribeDiskOperationLogsRequest
+     * @return DescribeDiskOperationLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiskOperationLogsResponse  DescribeDiskOperationLogs(DescribeDiskOperationLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiskOperationLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiskOperationLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDiskOperationLogs"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -320,7 +341,7 @@ public class CbsClient extends AbstractClient{
 
     /**
      *本接口（ModifyDiskAttributes）用于修改云硬盘属性。
-
+ 
 * 只支持修改弹性云盘的项目ID。随云主机创建的云硬盘项目ID与云主机联动。可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。
 * “云硬盘名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行云盘管理操作的依据。
 * 支持批量操作，如果传入多个云盘ID，则所有云盘修改为同一属性。如果存在不允许操作的云盘，则操作不执行，以特定错误码返回。

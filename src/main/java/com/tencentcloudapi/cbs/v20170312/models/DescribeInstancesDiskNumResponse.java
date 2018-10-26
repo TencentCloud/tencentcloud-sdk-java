@@ -23,69 +23,46 @@ import java.util.HashMap;
 public class DescribeInstancesDiskNumResponse  extends AbstractModel{
 
     /**
-    * 当前云服务器已挂载弹性云盘数量。
+    * 各个云服务器已挂载和可挂载弹性云盘的数量。
     */
-    @SerializedName("AttachedDiskCount")
+    @SerializedName("AttachDetail")
     @Expose
-    private Integer AttachedDiskCount;
+    private AttachDetail [] AttachDetail;
 
     /**
-    * 当前云服务器最大可挂载弹性云盘数量。
-    */
-    @SerializedName("MaxAttachCount")
-    @Expose
-    private Integer MaxAttachCount;
-
-    /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * 获取当前云服务器已挂载弹性云盘数量。
-     * @return AttachedDiskCount 当前云服务器已挂载弹性云盘数量。
+     * 获取各个云服务器已挂载和可挂载弹性云盘的数量。
+     * @return AttachDetail 各个云服务器已挂载和可挂载弹性云盘的数量。
      */
-    public Integer getAttachedDiskCount() {
-        return this.AttachedDiskCount;
+    public AttachDetail [] getAttachDetail() {
+        return this.AttachDetail;
     }
 
     /**
-     * 设置当前云服务器已挂载弹性云盘数量。
-     * @param AttachedDiskCount 当前云服务器已挂载弹性云盘数量。
+     * 设置各个云服务器已挂载和可挂载弹性云盘的数量。
+     * @param AttachDetail 各个云服务器已挂载和可挂载弹性云盘的数量。
      */
-    public void setAttachedDiskCount(Integer AttachedDiskCount) {
-        this.AttachedDiskCount = AttachedDiskCount;
+    public void setAttachDetail(AttachDetail [] AttachDetail) {
+        this.AttachDetail = AttachDetail;
     }
 
     /**
-     * 获取当前云服务器最大可挂载弹性云盘数量。
-     * @return MaxAttachCount 当前云服务器最大可挂载弹性云盘数量。
-     */
-    public Integer getMaxAttachCount() {
-        return this.MaxAttachCount;
-    }
-
-    /**
-     * 设置当前云服务器最大可挂载弹性云盘数量。
-     * @param MaxAttachCount 当前云服务器最大可挂载弹性云盘数量。
-     */
-    public void setMaxAttachCount(Integer MaxAttachCount) {
-        this.MaxAttachCount = MaxAttachCount;
-    }
-
-    /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -95,8 +72,7 @@ public class DescribeInstancesDiskNumResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AttachedDiskCount", this.AttachedDiskCount);
-        this.setParamSimple(map, prefix + "MaxAttachCount", this.MaxAttachCount);
+        this.setParamArrayObj(map, prefix + "AttachDetail.", this.AttachDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

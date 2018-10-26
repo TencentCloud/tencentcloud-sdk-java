@@ -72,6 +72,13 @@ public class BandwidthPackage  extends AbstractModel{
     private Resource [] ResourceSet;
 
     /**
+    * 带宽包限速大小。单位：Mbps，-1表示不限速。
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Integer Bandwidth;
+
+    /**
      * 获取带宽包唯一标识Id
      * @return BandwidthPackageId 带宽包唯一标识Id
      */
@@ -184,6 +191,22 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
+     * 获取带宽包限速大小。单位：Mbps，-1表示不限速。
+     * @return Bandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
+     */
+    public Integer getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * 设置带宽包限速大小。单位：Mbps，-1表示不限速。
+     * @param Bandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
+     */
+    public void setBandwidth(Integer Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class BandwidthPackage  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "ResourceSet.", this.ResourceSet);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
 
     }
 }

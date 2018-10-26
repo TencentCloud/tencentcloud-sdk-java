@@ -51,7 +51,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Integer [] Status;
 
     /**
-    * 记录偏移量，默认值为0
+    * 偏移量，默认值为0
     */
     @SerializedName("Offset")
     @Expose
@@ -128,28 +128,28 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Integer [] CdbErrors;
 
     /**
-    * 排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+    * 返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序方式，目前支持："ASC"或者"DESC"
+    * 返回结果集排序方式，目前支持："ASC"或者"DESC"
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-    * 是否包含安全组信息，可取值：0-不包含，1-包含
+    * 是否包含安全组详细信息，可取值：0-不包含，1-包含
     */
     @SerializedName("WithSecurityGroup")
     @Expose
     private Integer WithSecurityGroup;
 
     /**
-    * 是否包含独享集群信息，可取值：0-不包含，1-包含
+    * 是否包含独享集群详细信息，可取值：0-不包含，1-包含
     */
     @SerializedName("WithExCluster")
     @Expose
@@ -262,16 +262,16 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取记录偏移量，默认值为0
-     * @return Offset 记录偏移量，默认值为0
+     * 获取偏移量，默认值为0
+     * @return Offset 偏移量，默认值为0
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置记录偏移量，默认值为0
-     * @param Offset 记录偏移量，默认值为0
+     * 设置偏移量，默认值为0
+     * @param Offset 偏移量，默认值为0
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
@@ -438,64 +438,64 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
-     * @return OrderBy 排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+     * 获取返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+     * @return OrderBy 返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * 设置排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
-     * @param OrderBy 排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+     * 设置返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+     * @param OrderBy 返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * 获取排序方式，目前支持："ASC"或者"DESC"
-     * @return OrderDirection 排序方式，目前支持："ASC"或者"DESC"
+     * 获取返回结果集排序方式，目前支持："ASC"或者"DESC"
+     * @return OrderDirection 返回结果集排序方式，目前支持："ASC"或者"DESC"
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * 设置排序方式，目前支持："ASC"或者"DESC"
-     * @param OrderDirection 排序方式，目前支持："ASC"或者"DESC"
+     * 设置返回结果集排序方式，目前支持："ASC"或者"DESC"
+     * @param OrderDirection 返回结果集排序方式，目前支持："ASC"或者"DESC"
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
     }
 
     /**
-     * 获取是否包含安全组信息，可取值：0-不包含，1-包含
-     * @return WithSecurityGroup 是否包含安全组信息，可取值：0-不包含，1-包含
+     * 获取是否包含安全组详细信息，可取值：0-不包含，1-包含
+     * @return WithSecurityGroup 是否包含安全组详细信息，可取值：0-不包含，1-包含
      */
     public Integer getWithSecurityGroup() {
         return this.WithSecurityGroup;
     }
 
     /**
-     * 设置是否包含安全组信息，可取值：0-不包含，1-包含
-     * @param WithSecurityGroup 是否包含安全组信息，可取值：0-不包含，1-包含
+     * 设置是否包含安全组详细信息，可取值：0-不包含，1-包含
+     * @param WithSecurityGroup 是否包含安全组详细信息，可取值：0-不包含，1-包含
      */
     public void setWithSecurityGroup(Integer WithSecurityGroup) {
         this.WithSecurityGroup = WithSecurityGroup;
     }
 
     /**
-     * 获取是否包含独享集群信息，可取值：0-不包含，1-包含
-     * @return WithExCluster 是否包含独享集群信息，可取值：0-不包含，1-包含
+     * 获取是否包含独享集群详细信息，可取值：0-不包含，1-包含
+     * @return WithExCluster 是否包含独享集群详细信息，可取值：0-不包含，1-包含
      */
     public Integer getWithExCluster() {
         return this.WithExCluster;
     }
 
     /**
-     * 设置是否包含独享集群信息，可取值：0-不包含，1-包含
-     * @param WithExCluster 是否包含独享集群信息，可取值：0-不包含，1-包含
+     * 设置是否包含独享集群详细信息，可取值：0-不包含，1-包含
+     * @param WithExCluster 是否包含独享集群详细信息，可取值：0-不包含，1-包含
      */
     public void setWithExCluster(Integer WithExCluster) {
         this.WithExCluster = WithExCluster;

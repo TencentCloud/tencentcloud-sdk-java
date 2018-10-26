@@ -67,7 +67,7 @@ public class YoumallClient extends AbstractClient{
     }
 
     /**
-     *上传人脸图片
+     *通过上传指定规格的人脸图片，创建黑名单用户或者白名单用户。
      * @param req CreateFacePictureRequest
      * @return CreateFacePictureResponse
      * @throws TencentCloudSDKException
@@ -96,6 +96,42 @@ public class YoumallClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCameraPersonResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeCameraPerson"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *输出开始时间到结束时间段内的进出场数据。按天聚合的情况下，每天多次进出场算一次，以最初进场时间为进场时间，最后离场时间为离场时间。停留时间为多次进出场的停留时间之和。
+     * @param req DescribeClusterPersonArrivedMallRequest
+     * @return DescribeClusterPersonArrivedMallResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterPersonArrivedMallResponse  DescribeClusterPersonArrivedMall(DescribeClusterPersonArrivedMallRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterPersonArrivedMallResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterPersonArrivedMallResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterPersonArrivedMall"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *输出开始时间到结束时间段内的进出场数据。按天聚合的情况下，每天多次进出场算一次，以最初进场时间为进场时间，最后离场时间为离场时间。
+     * @param req DescribeClusterPersonTraceRequest
+     * @return DescribeClusterPersonTraceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterPersonTraceResponse  DescribeClusterPersonTrace(DescribeClusterPersonTraceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterPersonTraceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterPersonTraceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterPersonTrace"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -157,6 +193,44 @@ public class YoumallClient extends AbstractClient{
     }
 
     /**
+     *查询指定某一卖场的用户信息
+     * @param req DescribePersonRequest
+     * @return DescribePersonResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePersonResponse  DescribePerson(DescribePersonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePersonResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePersonResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePerson"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *输出开始时间到结束时间段内的进出场数据。不做按天聚合的情况下，每次进出场，产生一条进出场数据。
+
+
+     * @param req DescribePersonArrivedMallRequest
+     * @return DescribePersonArrivedMallResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePersonArrivedMallResponse  DescribePersonArrivedMall(DescribePersonArrivedMallRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePersonArrivedMallResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePersonArrivedMallResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePersonArrivedMall"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *指定门店获取所有顾客详情列表，包含客户ID、图片、年龄、性别
      * @param req DescribePersonInfoRequest
      * @return DescribePersonInfoResponse
@@ -168,6 +242,42 @@ public class YoumallClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePersonInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribePersonInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *输出开始时间到结束时间段内的进出场数据。
+     * @param req DescribePersonTraceRequest
+     * @return DescribePersonTraceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePersonTraceResponse  DescribePersonTrace(DescribePersonTraceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePersonTraceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePersonTraceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePersonTrace"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询客户单次到场轨迹明细
+     * @param req DescribePersonTraceDetailRequest
+     * @return DescribePersonTraceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePersonTraceDetailResponse  DescribePersonTraceDetail(DescribePersonTraceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePersonTraceDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePersonTraceDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePersonTraceDetail"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

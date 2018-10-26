@@ -100,6 +100,13 @@ public class CreateDisksRequest  extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+    */
+    @SerializedName("DeleteWithInstance")
+    @Expose
+    private Boolean DeleteWithInstance;
+
+    /**
      * 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      * @return DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      */
@@ -276,6 +283,22 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
+     * 获取可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+     * @return DeleteWithInstance 可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+     */
+    public Boolean getDeleteWithInstance() {
+        return this.DeleteWithInstance;
+    }
+
+    /**
+     * 设置可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+     * @param DeleteWithInstance 可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+     */
+    public void setDeleteWithInstance(Boolean DeleteWithInstance) {
+        this.DeleteWithInstance = DeleteWithInstance;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class CreateDisksRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
 
     }
 }

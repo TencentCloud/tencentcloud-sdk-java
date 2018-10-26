@@ -49,6 +49,78 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *为预授权规则绑定标签
+     * @param req BindPsaTagRequest
+     * @return BindPsaTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindPsaTagResponse  BindPsaTag(BindPsaTagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindPsaTagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindPsaTagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BindPsaTag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建预授权规则
+     * @param req CreatePsaRegulationRequest
+     * @return CreatePsaRegulationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePsaRegulationResponse  CreatePsaRegulation(CreatePsaRegulationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePsaRegulationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePsaRegulationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePsaRegulation"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除预授权规则
+     * @param req DeletePsaRegulationRequest
+     * @return DeletePsaRegulationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePsaRegulationResponse  DeletePsaRegulation(DeletePsaRegulationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePsaRegulationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePsaRegulationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePsaRegulation"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取预授权规则列表
+     * @param req DescribePsaRegulationsRequest
+     * @return DescribePsaRegulationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePsaRegulationsResponse  DescribePsaRegulations(DescribePsaRegulationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePsaRegulationsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePsaRegulationsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePsaRegulations"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *维修任务配置获取
      * @param req DescribeRepairTaskConstantRequest
      * @return DescribeRepairTaskConstantResponse
@@ -111,6 +183,24 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     }
 
     /**
+     *允许修改规则信息及关联故障类型
+     * @param req ModifyPsaRegulationRequest
+     * @return ModifyPsaRegulationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPsaRegulationResponse  ModifyPsaRegulation(ModifyPsaRegulationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPsaRegulationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPsaRegulationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPsaRegulation"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于操作维修任务<br>
 入参TaskId为维修任务ID<br>
 入参Operate表示对维修任务的操作，支持如下取值：<br>
@@ -142,6 +232,24 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
                 Type type = new TypeToken<JsonResponseModel<RepairTaskControlResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RepairTaskControl"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解除标签与预授权规则的绑定
+     * @param req UnbindPsaTagRequest
+     * @return UnbindPsaTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindPsaTagResponse  UnbindPsaTag(UnbindPsaTagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindPsaTagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindPsaTagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UnbindPsaTag"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

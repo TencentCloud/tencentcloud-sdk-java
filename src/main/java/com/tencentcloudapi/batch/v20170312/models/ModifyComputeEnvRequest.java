@@ -37,6 +37,27 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     private Integer DesiredComputeNodeCount;
 
     /**
+    * 计算环境名称
+    */
+    @SerializedName("EnvName")
+    @Expose
+    private String EnvName;
+
+    /**
+    * 计算环境描述
+    */
+    @SerializedName("EnvDescription")
+    @Expose
+    private String EnvDescription;
+
+    /**
+    * 计算环境属性数据
+    */
+    @SerializedName("EnvData")
+    @Expose
+    private ComputeEnvData EnvData;
+
+    /**
      * 获取计算环境ID
      * @return EnvId 计算环境ID
      */
@@ -69,11 +90,62 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
+     * 获取计算环境名称
+     * @return EnvName 计算环境名称
+     */
+    public String getEnvName() {
+        return this.EnvName;
+    }
+
+    /**
+     * 设置计算环境名称
+     * @param EnvName 计算环境名称
+     */
+    public void setEnvName(String EnvName) {
+        this.EnvName = EnvName;
+    }
+
+    /**
+     * 获取计算环境描述
+     * @return EnvDescription 计算环境描述
+     */
+    public String getEnvDescription() {
+        return this.EnvDescription;
+    }
+
+    /**
+     * 设置计算环境描述
+     * @param EnvDescription 计算环境描述
+     */
+    public void setEnvDescription(String EnvDescription) {
+        this.EnvDescription = EnvDescription;
+    }
+
+    /**
+     * 获取计算环境属性数据
+     * @return EnvData 计算环境属性数据
+     */
+    public ComputeEnvData getEnvData() {
+        return this.EnvData;
+    }
+
+    /**
+     * 设置计算环境属性数据
+     * @param EnvData 计算环境属性数据
+     */
+    public void setEnvData(ComputeEnvData EnvData) {
+        this.EnvData = EnvData;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+        this.setParamSimple(map, prefix + "EnvName", this.EnvName);
+        this.setParamSimple(map, prefix + "EnvDescription", this.EnvDescription);
+        this.setParamObj(map, prefix + "EnvData.", this.EnvData);
 
     }
 }

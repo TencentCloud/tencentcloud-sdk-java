@@ -67,6 +67,97 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *添加水印
+     * @param req AddLiveWatermarkRequest
+     * @return AddLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddLiveWatermarkResponse  AddLiveWatermark(AddLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddLiveWatermarkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddLiveWatermarkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddLiveWatermark"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *录制文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播服务，录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 对应文档。
+创建直播录制。该接口支持两种录制模式：定时录制模式与实时视频录制模式。定时录制需要传入开始与结束时间，录制任务根据时间自动开始与结束；实时视频录制忽略传入的开始时间，在录制任务创建后立即开始录制，录制时长支持最大为30分钟，如果传入的结束时间与当前时间差大于30分钟，则按30分钟计算，实时视频录制主要用于录制精彩视频场景，时长建议控制在5分钟以内。注意：调用接口超时设置应大于3秒，小于3秒重试以及频繁调用都有可能产生重复录制任务。
+     * @param req CreateLiveRecordRequest
+     * @return CreateLiveRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveRecordResponse  CreateLiveRecord(CreateLiveRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveRecordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveRecordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveRecord"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加拉流配置
+     * @param req CreatePullStreamConfigRequest
+     * @return CreatePullStreamConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePullStreamConfigResponse  CreatePullStreamConfig(CreatePullStreamConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePullStreamConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePullStreamConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePullStreamConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于删除录制任务
+     * @param req DeleteLiveRecordRequest
+     * @return DeleteLiveRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveRecordResponse  DeleteLiveRecord(DeleteLiveRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveRecordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveRecord"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除水印
+     * @param req DeleteLiveWatermarkRequest
+     * @return DeleteLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveWatermarkResponse  DeleteLiveWatermark(DeleteLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveWatermarkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveWatermark"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询在线推流信息列表
      * @param req DescribeLiveStreamOnlineInfoRequest
      * @return DescribeLiveStreamOnlineInfoResponse
@@ -139,6 +230,42 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *查询水印列表
+     * @param req DescribeLiveWatermarksRequest
+     * @return DescribeLiveWatermarksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveWatermarksResponse  DescribeLiveWatermarks(DescribeLiveWatermarksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveWatermarksResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarksResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveWatermarks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询拉流配置
+     * @param req DescribePullStreamConfigsRequest
+     * @return DescribePullStreamConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePullStreamConfigsResponse  DescribePullStreamConfigs(DescribePullStreamConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePullStreamConfigsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePullStreamConfigsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePullStreamConfigs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *断开推流连接，但可以重新推流
      * @param req DropLiveStreamRequest
      * @return DropLiveStreamResponse
@@ -175,6 +302,42 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *更新拉流配置
+     * @param req ModifyPullStreamConfigRequest
+     * @return ModifyPullStreamConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPullStreamConfigResponse  ModifyPullStreamConfig(ModifyPullStreamConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPullStreamConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPullStreamConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPullStreamConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改直播拉流配置状态
+     * @param req ModifyPullStreamStatusRequest
+     * @return ModifyPullStreamStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPullStreamStatusResponse  ModifyPullStreamStatus(ModifyPullStreamStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPullStreamStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPullStreamStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPullStreamStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *恢复延迟播放设置
      * @param req ResumeDelayLiveStreamRequest
      * @return ResumeDelayLiveStreamResponse
@@ -204,6 +367,60 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResumeLiveStreamResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ResumeLiveStream"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置水印是否启用
+     * @param req SetLiveWatermarkStatusRequest
+     * @return SetLiveWatermarkStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetLiveWatermarkStatusResponse  SetLiveWatermarkStatus(SetLiveWatermarkStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetLiveWatermarkStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetLiveWatermarkStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetLiveWatermarkStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
+     * @param req StopLiveRecordRequest
+     * @return StopLiveRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopLiveRecordResponse  StopLiveRecord(StopLiveRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopLiveRecordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopLiveRecordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StopLiveRecord"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新水印
+     * @param req UpdateLiveWatermarkRequest
+     * @return UpdateLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateLiveWatermarkResponse  UpdateLiveWatermark(UpdateLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateLiveWatermarkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateLiveWatermarkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateLiveWatermark"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

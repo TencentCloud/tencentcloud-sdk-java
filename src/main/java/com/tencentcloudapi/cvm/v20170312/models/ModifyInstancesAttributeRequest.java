@@ -37,7 +37,7 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 指定实例的安全组Id列表。
+    * 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
     */
     @SerializedName("SecurityGroups")
     @Expose
@@ -76,16 +76,16 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定实例的安全组Id列表。
-     * @return SecurityGroups 指定实例的安全组Id列表。
+     * 获取指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
+     * @return SecurityGroups 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
      */
     public String [] getSecurityGroups() {
         return this.SecurityGroups;
     }
 
     /**
-     * 设置指定实例的安全组Id列表。
-     * @param SecurityGroups 指定实例的安全组Id列表。
+     * 设置指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
+     * @param SecurityGroups 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
      */
     public void setSecurityGroups(String [] SecurityGroups) {
         this.SecurityGroups = SecurityGroups;

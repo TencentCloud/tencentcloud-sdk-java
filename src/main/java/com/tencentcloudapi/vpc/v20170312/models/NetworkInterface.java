@@ -79,7 +79,12 @@ public class NetworkInterface  extends AbstractModel{
     private String MacAddress;
 
     /**
-    * 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+    * 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
     */
     @SerializedName("State")
     @Expose
@@ -242,16 +247,36 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
-     * @return State 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+     * 获取弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+     * @return State 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * 设置取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
-     * @param State 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+     * 设置弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+     * @param State 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
      */
     public void setState(String State) {
         this.State = State;
