@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class TransmitOralProcessRequest  extends AbstractModel{
 
     /**
-    * 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
+    * 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
     */
     @SerializedName("SeqId")
     @Expose
     private Integer SeqId;
 
     /**
-    * 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义
+    * 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
     */
     @SerializedName("IsEnd")
     @Expose
     private Integer IsEnd;
 
     /**
-    * 语音文件类型 	1:raw, 2:wav, 3:mp3(mp3格式目前仅支持16k采样率16bit编码单声道)
+    * 语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
     */
     @SerializedName("VoiceFileType")
     @Expose
     private Integer VoiceFileType;
 
     /**
-    * 语音编码类型	1:pcm
+    * 语音编码类型	1:pcm。
     */
     @SerializedName("VoiceEncodeType")
     @Expose
@@ -58,7 +58,7 @@ public class TransmitOralProcessRequest  extends AbstractModel{
     private String UserVoiceData;
 
     /**
-    * 语音段唯一标识，一个完整语音一个SessionId
+    * 语音段唯一标识，一个完整语音一个SessionId。
     */
     @SerializedName("SessionId")
     @Expose
@@ -72,64 +72,71 @@ public class TransmitOralProcessRequest  extends AbstractModel{
     private String SoeAppId;
 
     /**
-     * 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
-     * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
+    * 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+    */
+    @SerializedName("IsLongLifeSession")
+    @Expose
+    private Integer IsLongLifeSession;
+
+    /**
+     * 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
+     * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
      */
     public Integer getSeqId() {
         return this.SeqId;
     }
 
     /**
-     * 设置流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
-     * @param SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
+     * 设置流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
+     * @param SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
      */
     public void setSeqId(Integer SeqId) {
         this.SeqId = SeqId;
     }
 
     /**
-     * 获取是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义
-     * @return IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义
+     * 获取是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+     * @return IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      */
     public Integer getIsEnd() {
         return this.IsEnd;
     }
 
     /**
-     * 设置是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义
-     * @param IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义
+     * 设置是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+     * @param IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      */
     public void setIsEnd(Integer IsEnd) {
         this.IsEnd = IsEnd;
     }
 
     /**
-     * 获取语音文件类型 	1:raw, 2:wav, 3:mp3(mp3格式目前仅支持16k采样率16bit编码单声道)
-     * @return VoiceFileType 语音文件类型 	1:raw, 2:wav, 3:mp3(mp3格式目前仅支持16k采样率16bit编码单声道)
+     * 获取语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
+     * @return VoiceFileType 语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
      */
     public Integer getVoiceFileType() {
         return this.VoiceFileType;
     }
 
     /**
-     * 设置语音文件类型 	1:raw, 2:wav, 3:mp3(mp3格式目前仅支持16k采样率16bit编码单声道)
-     * @param VoiceFileType 语音文件类型 	1:raw, 2:wav, 3:mp3(mp3格式目前仅支持16k采样率16bit编码单声道)
+     * 设置语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
+     * @param VoiceFileType 语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
      */
     public void setVoiceFileType(Integer VoiceFileType) {
         this.VoiceFileType = VoiceFileType;
     }
 
     /**
-     * 获取语音编码类型	1:pcm
-     * @return VoiceEncodeType 语音编码类型	1:pcm
+     * 获取语音编码类型	1:pcm。
+     * @return VoiceEncodeType 语音编码类型	1:pcm。
      */
     public Integer getVoiceEncodeType() {
         return this.VoiceEncodeType;
     }
 
     /**
-     * 设置语音编码类型	1:pcm
-     * @param VoiceEncodeType 语音编码类型	1:pcm
+     * 设置语音编码类型	1:pcm。
+     * @param VoiceEncodeType 语音编码类型	1:pcm。
      */
     public void setVoiceEncodeType(Integer VoiceEncodeType) {
         this.VoiceEncodeType = VoiceEncodeType;
@@ -152,16 +159,16 @@ public class TransmitOralProcessRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音段唯一标识，一个完整语音一个SessionId
-     * @return SessionId 语音段唯一标识，一个完整语音一个SessionId
+     * 获取语音段唯一标识，一个完整语音一个SessionId。
+     * @return SessionId 语音段唯一标识，一个完整语音一个SessionId。
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * 设置语音段唯一标识，一个完整语音一个SessionId
-     * @param SessionId 语音段唯一标识，一个完整语音一个SessionId
+     * 设置语音段唯一标识，一个完整语音一个SessionId。
+     * @param SessionId 语音段唯一标识，一个完整语音一个SessionId。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
@@ -184,6 +191,22 @@ public class TransmitOralProcessRequest  extends AbstractModel{
     }
 
     /**
+     * 获取长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+     * @return IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+     */
+    public Integer getIsLongLifeSession() {
+        return this.IsLongLifeSession;
+    }
+
+    /**
+     * 设置长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+     * @param IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+     */
+    public void setIsLongLifeSession(Integer IsLongLifeSession) {
+        this.IsLongLifeSession = IsLongLifeSession;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class TransmitOralProcessRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "UserVoiceData", this.UserVoiceData);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
+        this.setParamSimple(map, prefix + "IsLongLifeSession", this.IsLongLifeSession);
 
     }
 }

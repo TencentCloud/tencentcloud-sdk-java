@@ -30,7 +30,7 @@ public class InitOralProcessRequest  extends AbstractModel{
     private String SessionId;
 
     /**
-    * 被评估语音对应的文本
+    * 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
     */
     @SerializedName("RefText")
     @Expose
@@ -58,6 +58,20 @@ public class InitOralProcessRequest  extends AbstractModel{
     private Float ScoreCoeff;
 
     /**
+    * 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+    */
+    @SerializedName("SoeAppId")
+    @Expose
+    private String SoeAppId;
+
+    /**
+    * 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
+    */
+    @SerializedName("IsLongLifeSession")
+    @Expose
+    private Integer IsLongLifeSession;
+
+    /**
      * 获取语音段唯一标识，一段语音一个SessionId
      * @return SessionId 语音段唯一标识，一段语音一个SessionId
      */
@@ -74,16 +88,16 @@ public class InitOralProcessRequest  extends AbstractModel{
     }
 
     /**
-     * 获取被评估语音对应的文本
-     * @return RefText 被评估语音对应的文本
+     * 获取被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
+     * @return RefText 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
      */
     public String getRefText() {
         return this.RefText;
     }
 
     /**
-     * 设置被评估语音对应的文本
-     * @param RefText 被评估语音对应的文本
+     * 设置被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
+     * @param RefText 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
      */
     public void setRefText(String RefText) {
         this.RefText = RefText;
@@ -138,6 +152,38 @@ public class InitOralProcessRequest  extends AbstractModel{
     }
 
     /**
+     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     * @return SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     */
+    public String getSoeAppId() {
+        return this.SoeAppId;
+    }
+
+    /**
+     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     * @param SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     */
+    public void setSoeAppId(String SoeAppId) {
+        this.SoeAppId = SoeAppId;
+    }
+
+    /**
+     * 获取长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
+     * @return IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
+     */
+    public Integer getIsLongLifeSession() {
+        return this.IsLongLifeSession;
+    }
+
+    /**
+     * 设置长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
+     * @param IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
+     */
+    public void setIsLongLifeSession(Integer IsLongLifeSession) {
+        this.IsLongLifeSession = IsLongLifeSession;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class InitOralProcessRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "WorkMode", this.WorkMode);
         this.setParamSimple(map, prefix + "EvalMode", this.EvalMode);
         this.setParamSimple(map, prefix + "ScoreCoeff", this.ScoreCoeff);
+        this.setParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
+        this.setParamSimple(map, prefix + "IsLongLifeSession", this.IsLongLifeSession);
 
     }
 }
