@@ -85,6 +85,42 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *创建黑石竞价实例
+     * @param req CreateSpotDeviceRequest
+     * @return CreateSpotDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSpotDeviceResponse  CreateSpotDevice(CreateSpotDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSpotDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSpotDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSpotDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建自定义脚本
+     * @param req CreateUserCmdRequest
+     * @return CreateUserCmdResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserCmdResponse  CreateUserCmd(CreateUserCmdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUserCmdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUserCmdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateUserCmd"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除预授权规则
      * @param req DeletePsaRegulationRequest
      * @return DeletePsaRegulationResponse
@@ -96,6 +132,24 @@ public class BmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeletePsaRegulationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeletePsaRegulation"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询物理服务器，可以按照实例，业务IP等过滤
+     * @param req DescribeDevicesRequest
+     * @return DescribeDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDevicesResponse  DescribeDevices(DescribeDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDevices"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
