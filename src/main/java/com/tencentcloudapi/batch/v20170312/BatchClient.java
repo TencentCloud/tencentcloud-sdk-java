@@ -339,6 +339,24 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
+     *用于获取任务多个实例标准输出和标准错误日志。
+     * @param req DescribeTaskLogsRequest
+     * @return DescribeTaskLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskLogsResponse  DescribeTaskLogs(DescribeTaskLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询任务模板信息
      * @param req DescribeTaskTemplatesRequest
      * @return DescribeTaskTemplatesResponse

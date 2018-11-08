@@ -23,23 +23,33 @@ import java.util.HashMap;
 public class DescribeAvailableCvmInstanceTypesRequest  extends AbstractModel{
 
     /**
-    * 过滤条件
+    * 过滤条件。
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * 获取过滤条件
-     * @return Filters 过滤条件
+     * 获取过滤条件。
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
+     * @return Filters 过滤条件。
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * 设置过滤条件
-     * @param Filters 过滤条件
+     * 设置过滤条件。
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
+     * @param Filters 过滤条件。
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

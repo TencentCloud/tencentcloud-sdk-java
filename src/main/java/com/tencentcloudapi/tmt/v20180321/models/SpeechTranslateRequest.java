@@ -51,14 +51,14 @@ public class SpeechTranslateRequest  extends AbstractModel{
     private Integer AudioFormat;
 
     /**
-    * 语音分片后的第几片
+    * 语音分片的序号，从0开始
     */
     @SerializedName("Seq")
     @Expose
     private Integer Seq;
 
     /**
-    * 是否最后一片
+    * 是否最后一片语音分片，0-否，1-是
     */
     @SerializedName("IsEnd")
     @Expose
@@ -72,7 +72,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     private String Data;
 
     /**
-    * 项目id
+    * 项目id，用户可自定义
     */
     @SerializedName("ProjectId")
     @Expose
@@ -143,32 +143,32 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音分片后的第几片
-     * @return Seq 语音分片后的第几片
+     * 获取语音分片的序号，从0开始
+     * @return Seq 语音分片的序号，从0开始
      */
     public Integer getSeq() {
         return this.Seq;
     }
 
     /**
-     * 设置语音分片后的第几片
-     * @param Seq 语音分片后的第几片
+     * 设置语音分片的序号，从0开始
+     * @param Seq 语音分片的序号，从0开始
      */
     public void setSeq(Integer Seq) {
         this.Seq = Seq;
     }
 
     /**
-     * 获取是否最后一片
-     * @return IsEnd 是否最后一片
+     * 获取是否最后一片语音分片，0-否，1-是
+     * @return IsEnd 是否最后一片语音分片，0-否，1-是
      */
     public Integer getIsEnd() {
         return this.IsEnd;
     }
 
     /**
-     * 设置是否最后一片
-     * @param IsEnd 是否最后一片
+     * 设置是否最后一片语音分片，0-否，1-是
+     * @param IsEnd 是否最后一片语音分片，0-否，1-是
      */
     public void setIsEnd(Integer IsEnd) {
         this.IsEnd = IsEnd;
@@ -191,16 +191,16 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目id
-     * @return ProjectId 项目id
+     * 获取项目id，用户可自定义
+     * @return ProjectId 项目id，用户可自定义
      */
     public Integer getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置项目id
-     * @param ProjectId 项目id
+     * 设置项目id，用户可自定义
+     * @param ProjectId 项目id，用户可自定义
      */
     public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;

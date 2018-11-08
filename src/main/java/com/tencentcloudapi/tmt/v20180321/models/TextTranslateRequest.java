@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TextTranslateRequest  extends AbstractModel{
 
     /**
-    * 待翻译的文本
+    * 待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
     */
     @SerializedName("SourceText")
     @Expose
@@ -52,16 +52,16 @@ public class TextTranslateRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-     * 获取待翻译的文本
-     * @return SourceText 待翻译的文本
+     * 获取待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
+     * @return SourceText 待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
      */
     public String getSourceText() {
         return this.SourceText;
     }
 
     /**
-     * 设置待翻译的文本
-     * @param SourceText 待翻译的文本
+     * 设置待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
+     * @param SourceText 待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
      */
     public void setSourceText(String SourceText) {
         this.SourceText = SourceText;

@@ -31,6 +31,9 @@ public class DescribeComputeEnvsRequest  extends AbstractModel{
 
     /**
     * 过滤条件
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -68,7 +71,13 @@ public class DescribeComputeEnvsRequest  extends AbstractModel{
 
     /**
      * 获取过滤条件
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
      * @return Filters 过滤条件
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -76,7 +85,13 @@ public class DescribeComputeEnvsRequest  extends AbstractModel{
 
     /**
      * 设置过滤条件
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
      * @param Filters 过滤条件
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

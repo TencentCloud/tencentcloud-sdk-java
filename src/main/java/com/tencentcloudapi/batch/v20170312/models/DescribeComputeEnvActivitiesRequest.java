@@ -45,6 +45,7 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
 
     /**
     * 过滤条件
+<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -100,7 +101,9 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
 
     /**
      * 获取过滤条件
+<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
      * @return Filters 过滤条件
+<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
      */
     public Filter getFilters() {
         return this.Filters;
@@ -108,7 +111,9 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
 
     /**
      * 设置过滤条件
+<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
      * @param Filters 过滤条件
+<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
      */
     public void setFilters(Filter Filters) {
         this.Filters = Filters;
