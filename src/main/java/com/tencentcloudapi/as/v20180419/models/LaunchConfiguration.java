@@ -144,6 +144,13 @@ public class LaunchConfiguration  extends AbstractModel{
     private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
+    * 实例机型列表。
+    */
+    @SerializedName("InstanceTypes")
+    @Expose
+    private String [] InstanceTypes;
+
+    /**
      * 获取实例所属项目ID。
      * @return ProjectId 实例所属项目ID。
      */
@@ -424,6 +431,22 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
+     * 获取实例机型列表。
+     * @return InstanceTypes 实例机型列表。
+     */
+    public String [] getInstanceTypes() {
+        return this.InstanceTypes;
+    }
+
+    /**
+     * 设置实例机型列表。
+     * @param InstanceTypes 实例机型列表。
+     */
+    public void setInstanceTypes(String [] InstanceTypes) {
+        this.InstanceTypes = InstanceTypes;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -444,6 +467,7 @@ public class LaunchConfiguration  extends AbstractModel{
         this.setParamSimple(map, prefix + "LaunchConfigurationStatus", this.LaunchConfigurationStatus);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+        this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
 
     }
 }

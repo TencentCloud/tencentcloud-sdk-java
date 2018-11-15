@@ -93,6 +93,13 @@ public class Instance  extends AbstractModel{
     private String AddTime;
 
     /**
+    * 实例类型
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * 获取实例ID
      * @return InstanceId 实例ID
      */
@@ -253,6 +260,22 @@ public class Instance  extends AbstractModel{
     }
 
     /**
+     * 获取实例类型
+     * @return InstanceType 实例类型
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * 设置实例类型
+     * @param InstanceType 实例类型
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class Instance  extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "CreationType", this.CreationType);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

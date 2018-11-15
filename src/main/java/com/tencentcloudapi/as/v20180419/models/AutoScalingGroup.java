@@ -163,6 +163,13 @@ public class AutoScalingGroup  extends AbstractModel{
     private String [] ZoneSet;
 
     /**
+    * 重试策略
+    */
+    @SerializedName("RetryPolicy")
+    @Expose
+    private String RetryPolicy;
+
+    /**
      * 获取伸缩组ID
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -483,6 +490,22 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
+     * 获取重试策略
+     * @return RetryPolicy 重试策略
+     */
+    public String getRetryPolicy() {
+        return this.RetryPolicy;
+    }
+
+    /**
+     * 设置重试策略
+     * @param RetryPolicy 重试策略
+     */
+    public void setRetryPolicy(String RetryPolicy) {
+        this.RetryPolicy = RetryPolicy;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -506,6 +529,7 @@ public class AutoScalingGroup  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TerminationPolicySet.", this.TerminationPolicySet);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArraySimple(map, prefix + "ZoneSet.", this.ZoneSet);
+        this.setParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
 
     }
 }

@@ -31,9 +31,9 @@ public class DescribeScheduledActionsRequest  extends AbstractModel{
 
     /**
     * 过滤条件。
-* scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。
-* scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。
-* auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。
+<li> scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。</li>
+<li> scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -71,13 +71,13 @@ public class DescribeScheduledActionsRequest  extends AbstractModel{
 
     /**
      * 获取过滤条件。
-* scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。
-* scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。
-* auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。
+<li> scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。</li>
+<li> scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。</li>
      * @return Filters 过滤条件。
-* scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。
-* scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。
-* auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。
+<li> scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。</li>
+<li> scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -85,13 +85,13 @@ public class DescribeScheduledActionsRequest  extends AbstractModel{
 
     /**
      * 设置过滤条件。
-* scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。
-* scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。
-* auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。
+<li> scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。</li>
+<li> scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。</li>
      * @param Filters 过滤条件。
-* scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。
-* scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。
-* auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。
+<li> scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。</li>
+<li> scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

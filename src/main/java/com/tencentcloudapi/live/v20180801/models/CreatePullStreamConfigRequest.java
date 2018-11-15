@@ -58,7 +58,10 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     private String StartTime;
 
     /**
-    * 结束时间。
+    * 结束时间，注意：
+1. 结束时间必须大于开始时间；
+2. 结束时间和开始时间必须大于当前时间；
+3. 结束时间 和 开始时间 间隔必须小于七天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -145,16 +148,28 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间。
-     * @return EndTime 结束时间。
+     * 获取结束时间，注意：
+1. 结束时间必须大于开始时间；
+2. 结束时间和开始时间必须大于当前时间；
+3. 结束时间 和 开始时间 间隔必须小于七天。
+     * @return EndTime 结束时间，注意：
+1. 结束时间必须大于开始时间；
+2. 结束时间和开始时间必须大于当前时间；
+3. 结束时间 和 开始时间 间隔必须小于七天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * 设置结束时间。
-     * @param EndTime 结束时间。
+     * 设置结束时间，注意：
+1. 结束时间必须大于开始时间；
+2. 结束时间和开始时间必须大于当前时间；
+3. 结束时间 和 开始时间 间隔必须小于七天。
+     * @param EndTime 结束时间，注意：
+1. 结束时间必须大于开始时间；
+2. 结束时间和开始时间必须大于当前时间；
+3. 结束时间 和 开始时间 间隔必须小于七天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

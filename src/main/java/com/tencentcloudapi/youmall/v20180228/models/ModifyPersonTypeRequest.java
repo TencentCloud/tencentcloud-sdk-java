@@ -20,49 +20,35 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonInfo  extends AbstractModel{
+public class ModifyPersonTypeRequest  extends AbstractModel{
 
     /**
-    * 用户ID
+    * 集团ID
+    */
+    @SerializedName("CompanyId")
+    @Expose
+    private String CompanyId;
+
+    /**
+    * 门店ID
+    */
+    @SerializedName("ShopId")
+    @Expose
+    private Integer ShopId;
+
+    /**
+    * 顾客ID
     */
     @SerializedName("PersonId")
     @Expose
     private Integer PersonId;
 
     /**
-    * 人脸图片Base64内容，已弃用，返回默认空值
-    */
-    @SerializedName("PersonPicture")
-    @Expose
-    private String PersonPicture;
-
-    /**
-    * 性别：0男1女
-    */
-    @SerializedName("Gender")
-    @Expose
-    private Integer Gender;
-
-    /**
-    * 年龄
-    */
-    @SerializedName("Age")
-    @Expose
-    private Integer Age;
-
-    /**
-    * 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
+    * 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
     */
     @SerializedName("PersonType")
     @Expose
     private Integer PersonType;
-
-    /**
-    * 人脸图片Url，在有效期内可以访问下载
-    */
-    @SerializedName("PersonPictureUrl")
-    @Expose
-    private String PersonPictureUrl;
 
     /**
     * 身份子类型:
@@ -75,99 +61,67 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     private Integer PersonSubType;
 
     /**
-     * 获取用户ID
-     * @return PersonId 用户ID
+     * 获取集团ID
+     * @return CompanyId 集团ID
+     */
+    public String getCompanyId() {
+        return this.CompanyId;
+    }
+
+    /**
+     * 设置集团ID
+     * @param CompanyId 集团ID
+     */
+    public void setCompanyId(String CompanyId) {
+        this.CompanyId = CompanyId;
+    }
+
+    /**
+     * 获取门店ID
+     * @return ShopId 门店ID
+     */
+    public Integer getShopId() {
+        return this.ShopId;
+    }
+
+    /**
+     * 设置门店ID
+     * @param ShopId 门店ID
+     */
+    public void setShopId(Integer ShopId) {
+        this.ShopId = ShopId;
+    }
+
+    /**
+     * 获取顾客ID
+     * @return PersonId 顾客ID
      */
     public Integer getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * 设置用户ID
-     * @param PersonId 用户ID
+     * 设置顾客ID
+     * @param PersonId 顾客ID
      */
     public void setPersonId(Integer PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * 获取人脸图片Base64内容，已弃用，返回默认空值
-     * @return PersonPicture 人脸图片Base64内容，已弃用，返回默认空值
-     */
-    public String getPersonPicture() {
-        return this.PersonPicture;
-    }
-
-    /**
-     * 设置人脸图片Base64内容，已弃用，返回默认空值
-     * @param PersonPicture 人脸图片Base64内容，已弃用，返回默认空值
-     */
-    public void setPersonPicture(String PersonPicture) {
-        this.PersonPicture = PersonPicture;
-    }
-
-    /**
-     * 获取性别：0男1女
-     * @return Gender 性别：0男1女
-     */
-    public Integer getGender() {
-        return this.Gender;
-    }
-
-    /**
-     * 设置性别：0男1女
-     * @param Gender 性别：0男1女
-     */
-    public void setGender(Integer Gender) {
-        this.Gender = Gender;
-    }
-
-    /**
-     * 获取年龄
-     * @return Age 年龄
-     */
-    public Integer getAge() {
-        return this.Age;
-    }
-
-    /**
-     * 设置年龄
-     * @param Age 年龄
-     */
-    public void setAge(Integer Age) {
-        this.Age = Age;
-    }
-
-    /**
-     * 获取身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
-     * @return PersonType 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
+     * 获取身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+     * @return PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
     public Integer getPersonType() {
         return this.PersonType;
     }
 
     /**
-     * 设置身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
-     * @param PersonType 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
+     * 设置身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+     * @param PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
     public void setPersonType(Integer PersonType) {
         this.PersonType = PersonType;
-    }
-
-    /**
-     * 获取人脸图片Url，在有效期内可以访问下载
-     * @return PersonPictureUrl 人脸图片Url，在有效期内可以访问下载
-     */
-    public String getPersonPictureUrl() {
-        return this.PersonPictureUrl;
-    }
-
-    /**
-     * 设置人脸图片Url，在有效期内可以访问下载
-     * @param PersonPictureUrl 人脸图片Url，在有效期内可以访问下载
-     */
-    public void setPersonPictureUrl(String PersonPictureUrl) {
-        this.PersonPictureUrl = PersonPictureUrl;
     }
 
     /**
@@ -202,12 +156,10 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);
+        this.setParamSimple(map, prefix + "ShopId", this.ShopId);
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);
-        this.setParamSimple(map, prefix + "PersonPicture", this.PersonPicture);
-        this.setParamSimple(map, prefix + "Gender", this.Gender);
-        this.setParamSimple(map, prefix + "Age", this.Age);
         this.setParamSimple(map, prefix + "PersonType", this.PersonType);
-        this.setParamSimple(map, prefix + "PersonPictureUrl", this.PersonPictureUrl);
         this.setParamSimple(map, prefix + "PersonSubType", this.PersonSubType);
 
     }

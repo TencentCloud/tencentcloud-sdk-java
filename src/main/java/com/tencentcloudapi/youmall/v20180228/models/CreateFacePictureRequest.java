@@ -58,6 +58,13 @@ public class CreateFacePictureRequest  extends AbstractModel{
     private String PictureName;
 
     /**
+    * 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
+    */
+    @SerializedName("IsForceUpload")
+    @Expose
+    private Boolean IsForceUpload;
+
+    /**
      * 获取集团ID
      * @return CompanyId 集团ID
      */
@@ -138,6 +145,22 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
+     * @return IsForceUpload 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
+     */
+    public Boolean getIsForceUpload() {
+        return this.IsForceUpload;
+    }
+
+    /**
+     * 设置是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
+     * @param IsForceUpload 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
+     */
+    public void setIsForceUpload(Boolean IsForceUpload) {
+        this.IsForceUpload = IsForceUpload;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "PersonType", this.PersonType);
         this.setParamSimple(map, prefix + "Picture", this.Picture);
         this.setParamSimple(map, prefix + "PictureName", this.PictureName);
+        this.setParamSimple(map, prefix + "IsForceUpload", this.IsForceUpload);
 
     }
 }

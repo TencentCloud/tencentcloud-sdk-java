@@ -85,6 +85,24 @@ public class YoumallClient extends AbstractClient{
     }
 
     /**
+     *删除顾客特征，仅支持删除黑名单或者白名单用户特征。
+     * @param req DeletePersonFeatureRequest
+     * @return DeletePersonFeatureResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePersonFeatureResponse  DeletePersonFeature(DeletePersonFeatureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePersonFeatureResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePersonFeatureResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePersonFeature"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过指定设备ID和指定时段，获取该时段内中收银台摄像设备抓取到顾客头像及身份ID
      * @param req DescribeCameraPersonRequest
      * @return DescribeCameraPersonResponse
@@ -513,6 +531,24 @@ public class YoumallClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonTagInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyPersonTagInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改顾客身份类型接口
+     * @param req ModifyPersonTypeRequest
+     * @return ModifyPersonTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPersonTypeResponse  ModifyPersonType(ModifyPersonTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPersonTypeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPersonTypeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPersonType"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

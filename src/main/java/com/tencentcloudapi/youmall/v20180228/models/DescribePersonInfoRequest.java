@@ -65,6 +65,13 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     private Integer PictureExpires;
 
     /**
+    * 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+    */
+    @SerializedName("PersonType")
+    @Expose
+    private Integer PersonType;
+
+    /**
      * 获取公司ID
      * @return CompanyId 公司ID
      */
@@ -161,6 +168,22 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
+     * 获取身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+     * @return PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+     */
+    public Integer getPersonType() {
+        return this.PersonType;
+    }
+
+    /**
+     * 设置身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+     * @param PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+     */
+    public void setPersonType(Integer PersonType) {
+        this.PersonType = PersonType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "PictureExpires", this.PictureExpires);
+        this.setParamSimple(map, prefix + "PersonType", this.PersonType);
 
     }
 }

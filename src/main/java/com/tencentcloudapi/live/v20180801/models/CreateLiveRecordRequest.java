@@ -37,35 +37,38 @@ public class CreateLiveRecordRequest  extends AbstractModel{
     private String AppName;
 
     /**
-    * 您的加速域名。
+    * 推流域名。多域名推流必须设置。
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
+    * 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
+    * 任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 录制类型。其值为“video”,“audio”，不区分大小写，默认为“video”。
+    * 录制类型。不区分大小写。
+“video” : 音视频录制【默认】。
+“audio” : 纯音频录制。
     */
     @SerializedName("RecordType")
     @Expose
     private String RecordType;
 
     /**
-    * 录制文件格式。其值为“flv”,“hls”,”mp4”,“aac”,”mp3”，不区分大小写，默认为“flv”。
+    * 录制文件格式。不区分大小写。其值为：
+“flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
     */
     @SerializedName("FileFormat")
     @Expose
@@ -129,80 +132,92 @@ eg. interval=3600&storage_time=7200
     }
 
     /**
-     * 获取您的加速域名。
-     * @return DomainName 您的加速域名。
+     * 获取推流域名。多域名推流必须设置。
+     * @return DomainName 推流域名。多域名推流必须设置。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * 设置您的加速域名。
-     * @param DomainName 您的加速域名。
+     * 设置推流域名。多域名推流必须设置。
+     * @param DomainName 推流域名。多域名推流必须设置。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * 获取任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
-     * @return StartTime 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
+     * 获取任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
+     * @return StartTime 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * 设置任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
-     * @param StartTime 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
+     * 设置任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
+     * @param StartTime 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * 获取结束时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
-     * @return EndTime 结束时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
+     * 获取任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+     * @return EndTime 任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * 设置结束时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
-     * @param EndTime 结束时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
+     * 设置任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+     * @param EndTime 任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * 获取录制类型。其值为“video”,“audio”，不区分大小写，默认为“video”。
-     * @return RecordType 录制类型。其值为“video”,“audio”，不区分大小写，默认为“video”。
+     * 获取录制类型。不区分大小写。
+“video” : 音视频录制【默认】。
+“audio” : 纯音频录制。
+     * @return RecordType 录制类型。不区分大小写。
+“video” : 音视频录制【默认】。
+“audio” : 纯音频录制。
      */
     public String getRecordType() {
         return this.RecordType;
     }
 
     /**
-     * 设置录制类型。其值为“video”,“audio”，不区分大小写，默认为“video”。
-     * @param RecordType 录制类型。其值为“video”,“audio”，不区分大小写，默认为“video”。
+     * 设置录制类型。不区分大小写。
+“video” : 音视频录制【默认】。
+“audio” : 纯音频录制。
+     * @param RecordType 录制类型。不区分大小写。
+“video” : 音视频录制【默认】。
+“audio” : 纯音频录制。
      */
     public void setRecordType(String RecordType) {
         this.RecordType = RecordType;
     }
 
     /**
-     * 获取录制文件格式。其值为“flv”,“hls”,”mp4”,“aac”,”mp3”，不区分大小写，默认为“flv”。
-     * @return FileFormat 录制文件格式。其值为“flv”,“hls”,”mp4”,“aac”,”mp3”，不区分大小写，默认为“flv”。
+     * 获取录制文件格式。不区分大小写。其值为：
+“flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
+     * @return FileFormat 录制文件格式。不区分大小写。其值为：
+“flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
      */
     public String getFileFormat() {
         return this.FileFormat;
     }
 
     /**
-     * 设置录制文件格式。其值为“flv”,“hls”,”mp4”,“aac”,”mp3”，不区分大小写，默认为“flv”。
-     * @param FileFormat 录制文件格式。其值为“flv”,“hls”,”mp4”,“aac”,”mp3”，不区分大小写，默认为“flv”。
+     * 设置录制文件格式。不区分大小写。其值为：
+“flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
+     * @param FileFormat 录制文件格式。不区分大小写。其值为：
+“flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
      */
     public void setFileFormat(String FileFormat) {
         this.FileFormat = FileFormat;
