@@ -35,6 +35,11 @@ public class ClientProfile {
     public static final String SIGN_SHA256 = "HmacSHA256";
     
     /**
+     * Signature Version 3
+     */
+    public static final String SIGN_TC3_256 = "TC3-HMAC-SHA256";
+    
+    /**
      * http相关选项，请参考HttpProfile
      */
 	private HttpProfile httpProfile;
@@ -45,17 +50,27 @@ public class ClientProfile {
 	private String signMethod;
 	
 	/**
+	 * If payload is NOT involved in signing process, true means will ignore payload,
+	 * default is false.
+	 */
+	private boolean unsignedPayload;
+	
+	/**
 	 * @param signMethod  签名方法
 	 * @param httpProfile HttpProfile实例
 	 */
-	public ClientProfile(String signMethod, HttpProfile httpProfile) {
-		this.signMethod = signMethod;
-		this.httpProfile = httpProfile;
-	}
-	
-	public ClientProfile(String signMethod) {
-		this(signMethod, new HttpProfile());
-	}
+    public ClientProfile(String signMethod, HttpProfile httpProfile) {
+        if (signMethod == null || signMethod.isEmpty()) {
+            signMethod = SIGN_SHA256;
+        }
+        this.signMethod = signMethod;
+        this.httpProfile = httpProfile;
+        this.unsignedPayload = false;
+    }
+
+    public ClientProfile(String signMethod) {
+        this(signMethod, new HttpProfile());
+    }
 	
 	public ClientProfile() {
 		this(ClientProfile.SIGN_SHA256, new HttpProfile());
@@ -63,7 +78,7 @@ public class ClientProfile {
 	
 	/**
 	 * 设置签名方法
-	 * @param signMethod (HmacSHA1 HmacSHA256)
+	 * @param signMethod
 	 */
 	public void setSignMethod(String signMethod) {
 		this.signMethod = signMethod;
@@ -91,5 +106,22 @@ public class ClientProfile {
 	 */
 	public HttpProfile getHttpProfile() {
 		return this.httpProfile;
+	}
+	
+	/**
+	 * Set the flag of whether payload should be ignored.
+	 * Only has effect when request method is POST.
+	 * @param flag
+	 */
+	public void setUnsignedPayload(boolean flag) {
+	    this.unsignedPayload = flag;
+	}
+
+	/**
+	 * Get the flag of whether payload is ignored.
+	 * @return
+	 */
+	public boolean isUnsignedPayload() {
+	    return this.unsignedPayload;
 	}
 }

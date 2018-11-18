@@ -32,6 +32,11 @@ public class TencentCloudSDKException extends Exception {
 	 * 请求Id,发起请求前的异常这个字段为空
 	 */
 	private String requestId;
+	
+	/**
+	 * Error code, When API returns a failure, it must have an error code.
+	 */
+	private String errorCode;
     
 	/**
 	 * @param message 异常信息
@@ -58,11 +63,19 @@ public class TencentCloudSDKException extends Exception {
     }
     
     /**
+     * Get error code
+     * @return A string represents error code
+     */
+//    public String getErrorCode() {
+//        return errorCode;
+//    }
+    
+    /**
      * 格式化输出异常信息
      * @return 异常信息
      */
     public String toString() {
-    	return "[TencentCloudSDKException]" + "message:" + this.getMessage() + "  requestId:" + this.getRequestId();
+    	return "[TencentCloudSDKException]" + "message:" + this.getMessage() + " requestId:" + this.getRequestId();
     }
     
     
