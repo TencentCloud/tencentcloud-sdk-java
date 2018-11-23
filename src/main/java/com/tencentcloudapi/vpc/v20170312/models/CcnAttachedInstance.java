@@ -23,49 +23,52 @@ import java.util.HashMap;
 public class CcnAttachedInstance  extends AbstractModel{
 
     /**
-    * 云联网实例ID
+    * 云联网实例ID。
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 关联实例类型，可选值：VPC、DIRECTCONNECT
+    * 关联实例类型：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 关联实例ID
+    * 关联实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 关联实例名称
+    * 关联实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 关联实例所属大区，例如：ap-guangzhou
+    * 关联实例所属大区，例如：ap-guangzhou。
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * 关联实例所属UIN（根账号）
+    * 关联实例所属UIN（根账号）。
     */
     @SerializedName("InstanceUin")
     @Expose
     private String InstanceUin;
 
     /**
-    * 关联实例CIDR
+    * 关联实例CIDR。
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -73,137 +76,151 @@ public class CcnAttachedInstance  extends AbstractModel{
 
     /**
     * 关联实例状态：
-PENDING：申请中
-ACTIVE：已连接
-EXPIRED：已过期
-REJECTED：已拒绝
-DELETED：已删除
+<li>`PENDING`：申请中</li>
+<li>`ACTIVE`：已连接</li>
+<li>`EXPIRED`：已过期</li>
+<li>`REJECTED`：已拒绝</li>
+<li>`DELETED`：已删除</li>
+<li>`ATTACHING`：关联中</li>
+<li>`DETACHING`：解关联中</li>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 关联时间
+    * 关联时间。
     */
     @SerializedName("AttachedTime")
     @Expose
     private String AttachedTime;
 
     /**
-    * 云联网所属UIN（根账号）
+    * 云联网所属UIN（根账号）。
     */
     @SerializedName("CcnUin")
     @Expose
     private String CcnUin;
 
     /**
-     * 获取云联网实例ID
-     * @return CcnId 云联网实例ID
+     * 获取云联网实例ID。
+     * @return CcnId 云联网实例ID。
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * 设置云联网实例ID
-     * @param CcnId 云联网实例ID
+     * 设置云联网实例ID。
+     * @param CcnId 云联网实例ID。
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * 获取关联实例类型，可选值：VPC、DIRECTCONNECT
-     * @return InstanceType 关联实例类型，可选值：VPC、DIRECTCONNECT
+     * 获取关联实例类型：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
+     * @return InstanceType 关联实例类型：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * 设置关联实例类型，可选值：VPC、DIRECTCONNECT
-     * @param InstanceType 关联实例类型，可选值：VPC、DIRECTCONNECT
+     * 设置关联实例类型：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
+     * @param InstanceType 关联实例类型：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * 获取关联实例ID
-     * @return InstanceId 关联实例ID
+     * 获取关联实例ID。
+     * @return InstanceId 关联实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置关联实例ID
-     * @param InstanceId 关联实例ID
+     * 设置关联实例ID。
+     * @param InstanceId 关联实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * 获取关联实例名称
-     * @return InstanceName 关联实例名称
+     * 获取关联实例名称。
+     * @return InstanceName 关联实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * 设置关联实例名称
-     * @param InstanceName 关联实例名称
+     * 设置关联实例名称。
+     * @param InstanceName 关联实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * 获取关联实例所属大区，例如：ap-guangzhou
-     * @return InstanceRegion 关联实例所属大区，例如：ap-guangzhou
+     * 获取关联实例所属大区，例如：ap-guangzhou。
+     * @return InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * 设置关联实例所属大区，例如：ap-guangzhou
-     * @param InstanceRegion 关联实例所属大区，例如：ap-guangzhou
+     * 设置关联实例所属大区，例如：ap-guangzhou。
+     * @param InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * 获取关联实例所属UIN（根账号）
-     * @return InstanceUin 关联实例所属UIN（根账号）
+     * 获取关联实例所属UIN（根账号）。
+     * @return InstanceUin 关联实例所属UIN（根账号）。
      */
     public String getInstanceUin() {
         return this.InstanceUin;
     }
 
     /**
-     * 设置关联实例所属UIN（根账号）
-     * @param InstanceUin 关联实例所属UIN（根账号）
+     * 设置关联实例所属UIN（根账号）。
+     * @param InstanceUin 关联实例所属UIN（根账号）。
      */
     public void setInstanceUin(String InstanceUin) {
         this.InstanceUin = InstanceUin;
     }
 
     /**
-     * 获取关联实例CIDR
-     * @return CidrBlock 关联实例CIDR
+     * 获取关联实例CIDR。
+     * @return CidrBlock 关联实例CIDR。
      */
     public String [] getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * 设置关联实例CIDR
-     * @param CidrBlock 关联实例CIDR
+     * 设置关联实例CIDR。
+     * @param CidrBlock 关联实例CIDR。
      */
     public void setCidrBlock(String [] CidrBlock) {
         this.CidrBlock = CidrBlock;
@@ -211,17 +228,21 @@ DELETED：已删除
 
     /**
      * 获取关联实例状态：
-PENDING：申请中
-ACTIVE：已连接
-EXPIRED：已过期
-REJECTED：已拒绝
-DELETED：已删除
+<li>`PENDING`：申请中</li>
+<li>`ACTIVE`：已连接</li>
+<li>`EXPIRED`：已过期</li>
+<li>`REJECTED`：已拒绝</li>
+<li>`DELETED`：已删除</li>
+<li>`ATTACHING`：关联中</li>
+<li>`DETACHING`：解关联中</li>
      * @return State 关联实例状态：
-PENDING：申请中
-ACTIVE：已连接
-EXPIRED：已过期
-REJECTED：已拒绝
-DELETED：已删除
+<li>`PENDING`：申请中</li>
+<li>`ACTIVE`：已连接</li>
+<li>`EXPIRED`：已过期</li>
+<li>`REJECTED`：已拒绝</li>
+<li>`DELETED`：已删除</li>
+<li>`ATTACHING`：关联中</li>
+<li>`DETACHING`：解关联中</li>
      */
     public String getState() {
         return this.State;
@@ -229,49 +250,53 @@ DELETED：已删除
 
     /**
      * 设置关联实例状态：
-PENDING：申请中
-ACTIVE：已连接
-EXPIRED：已过期
-REJECTED：已拒绝
-DELETED：已删除
+<li>`PENDING`：申请中</li>
+<li>`ACTIVE`：已连接</li>
+<li>`EXPIRED`：已过期</li>
+<li>`REJECTED`：已拒绝</li>
+<li>`DELETED`：已删除</li>
+<li>`ATTACHING`：关联中</li>
+<li>`DETACHING`：解关联中</li>
      * @param State 关联实例状态：
-PENDING：申请中
-ACTIVE：已连接
-EXPIRED：已过期
-REJECTED：已拒绝
-DELETED：已删除
+<li>`PENDING`：申请中</li>
+<li>`ACTIVE`：已连接</li>
+<li>`EXPIRED`：已过期</li>
+<li>`REJECTED`：已拒绝</li>
+<li>`DELETED`：已删除</li>
+<li>`ATTACHING`：关联中</li>
+<li>`DETACHING`：解关联中</li>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * 获取关联时间
-     * @return AttachedTime 关联时间
+     * 获取关联时间。
+     * @return AttachedTime 关联时间。
      */
     public String getAttachedTime() {
         return this.AttachedTime;
     }
 
     /**
-     * 设置关联时间
-     * @param AttachedTime 关联时间
+     * 设置关联时间。
+     * @param AttachedTime 关联时间。
      */
     public void setAttachedTime(String AttachedTime) {
         this.AttachedTime = AttachedTime;
     }
 
     /**
-     * 获取云联网所属UIN（根账号）
-     * @return CcnUin 云联网所属UIN（根账号）
+     * 获取云联网所属UIN（根账号）。
+     * @return CcnUin 云联网所属UIN（根账号）。
      */
     public String getCcnUin() {
         return this.CcnUin;
     }
 
     /**
-     * 设置云联网所属UIN（根账号）
-     * @param CcnUin 云联网所属UIN（根账号）
+     * 设置云联网所属UIN（根账号）。
+     * @param CcnUin 云联网所属UIN（根账号）。
      */
     public void setCcnUin(String CcnUin) {
         this.CcnUin = CcnUin;

@@ -65,7 +65,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     private Integer IsEnd;
 
     /**
-    * 语音分片内容的base64字符串
+    * 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
     */
     @SerializedName("Data")
     @Expose
@@ -175,16 +175,16 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音分片内容的base64字符串
-     * @return Data 语音分片内容的base64字符串
+     * 获取语音分片内容的base64字符串，音频内容应含有效并可识别的文本
+     * @return Data 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * 设置语音分片内容的base64字符串
-     * @param Data 语音分片内容的base64字符串
+     * 设置语音分片内容的base64字符串，音频内容应含有效并可识别的文本
+     * @param Data 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
      */
     public void setData(String Data) {
         this.Data = Data;

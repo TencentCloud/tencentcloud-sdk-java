@@ -23,49 +23,72 @@ import java.util.HashMap;
 public class DirectConnectGatewayCcnRoute  extends AbstractModel{
 
     /**
-    * 路由ID
+    * 路由ID。
     */
     @SerializedName("RouteId")
     @Expose
     private String RouteId;
 
     /**
-    * IDC网段
+    * IDC网段。
     */
     @SerializedName("DestinationCidrBlock")
     @Expose
     private String DestinationCidrBlock;
 
     /**
-     * 获取路由ID
-     * @return RouteId 路由ID
+    * `BGP`的`AS-Path`属性。
+    */
+    @SerializedName("ASPath")
+    @Expose
+    private String [] ASPath;
+
+    /**
+     * 获取路由ID。
+     * @return RouteId 路由ID。
      */
     public String getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * 设置路由ID
-     * @param RouteId 路由ID
+     * 设置路由ID。
+     * @param RouteId 路由ID。
      */
     public void setRouteId(String RouteId) {
         this.RouteId = RouteId;
     }
 
     /**
-     * 获取IDC网段
-     * @return DestinationCidrBlock IDC网段
+     * 获取IDC网段。
+     * @return DestinationCidrBlock IDC网段。
      */
     public String getDestinationCidrBlock() {
         return this.DestinationCidrBlock;
     }
 
     /**
-     * 设置IDC网段
-     * @param DestinationCidrBlock IDC网段
+     * 设置IDC网段。
+     * @param DestinationCidrBlock IDC网段。
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
         this.DestinationCidrBlock = DestinationCidrBlock;
+    }
+
+    /**
+     * 获取`BGP`的`AS-Path`属性。
+     * @return ASPath `BGP`的`AS-Path`属性。
+     */
+    public String [] getASPath() {
+        return this.ASPath;
+    }
+
+    /**
+     * 设置`BGP`的`AS-Path`属性。
+     * @param ASPath `BGP`的`AS-Path`属性。
+     */
+    public void setASPath(String [] ASPath) {
+        this.ASPath = ASPath;
     }
 
     /**
@@ -74,6 +97,7 @@ public class DirectConnectGatewayCcnRoute  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);
         this.setParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
+        this.setParamArraySimple(map, prefix + "ASPath.", this.ASPath);
 
     }
 }

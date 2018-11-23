@@ -30,14 +30,14 @@ public class AssignPrivateIpAddressesRequest  extends AbstractModel{
     private String NetworkInterfaceId;
 
     /**
-    * 指定的内网IP信息。
+    * 指定的内网IP信息，单次最多指定10个。
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
 
     /**
-    * 新申请的内网IP地址个数。
+    * 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
     */
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
@@ -60,32 +60,32 @@ public class AssignPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定的内网IP信息。
-     * @return PrivateIpAddresses 指定的内网IP信息。
+     * 获取指定的内网IP信息，单次最多指定10个。
+     * @return PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
     }
 
     /**
-     * 设置指定的内网IP信息。
-     * @param PrivateIpAddresses 指定的内网IP信息。
+     * 设置指定的内网IP信息，单次最多指定10个。
+     * @param PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      */
     public void setPrivateIpAddresses(PrivateIpAddressSpecification [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
     /**
-     * 获取新申请的内网IP地址个数。
-     * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。
+     * 获取新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      */
     public Integer getSecondaryPrivateIpAddressCount() {
         return this.SecondaryPrivateIpAddressCount;
     }
 
     /**
-     * 设置新申请的内网IP地址个数。
-     * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。
+     * 设置新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      */
     public void setSecondaryPrivateIpAddressCount(Integer SecondaryPrivateIpAddressCount) {
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;

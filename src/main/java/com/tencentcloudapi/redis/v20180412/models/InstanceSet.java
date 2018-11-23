@@ -65,14 +65,14 @@ public class InstanceSet  extends AbstractModel{
     private Integer ZoneId;
 
     /**
-    * vpc网络id
+    * vpc网络id 如：75101
     */
     @SerializedName("VpcId")
     @Expose
     private Integer VpcId;
 
     /**
-    * vpc网络下子网id
+    * vpc网络下子网id 如：46315
     */
     @SerializedName("SubnetId")
     @Expose
@@ -140,6 +140,41 @@ public class InstanceSet  extends AbstractModel{
     @SerializedName("DeadlineTime")
     @Expose
     private String DeadlineTime;
+
+    /**
+    * 引擎：社区版Redis、腾讯云CKV
+    */
+    @SerializedName("Engine")
+    @Expose
+    private String Engine;
+
+    /**
+    * 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+    */
+    @SerializedName("ProductType")
+    @Expose
+    private String ProductType;
+
+    /**
+    * vpc网络id 如：vpc-fk33jsf43kgv
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * vpc网络下子网id 如：subnet-fd3j6l35mm0
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+
+    /**
+    * 计费模式：0-按量计费，1-包年包月
+    */
+    @SerializedName("BillingMode")
+    @Expose
+    private Integer BillingMode;
 
     /**
      * 获取实例名称
@@ -238,32 +273,32 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取vpc网络id
-     * @return VpcId vpc网络id
+     * 获取vpc网络id 如：75101
+     * @return VpcId vpc网络id 如：75101
      */
     public Integer getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置vpc网络id
-     * @param VpcId vpc网络id
+     * 设置vpc网络id 如：75101
+     * @param VpcId vpc网络id 如：75101
      */
     public void setVpcId(Integer VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * 获取vpc网络下子网id
-     * @return SubnetId vpc网络下子网id
+     * 获取vpc网络下子网id 如：46315
+     * @return SubnetId vpc网络下子网id 如：46315
      */
     public Integer getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * 设置vpc网络下子网id
-     * @param SubnetId vpc网络下子网id
+     * 设置vpc网络下子网id 如：46315
+     * @param SubnetId vpc网络下子网id 如：46315
      */
     public void setSubnetId(Integer SubnetId) {
         this.SubnetId = SubnetId;
@@ -414,6 +449,86 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
+     * 获取引擎：社区版Redis、腾讯云CKV
+     * @return Engine 引擎：社区版Redis、腾讯云CKV
+     */
+    public String getEngine() {
+        return this.Engine;
+    }
+
+    /**
+     * 设置引擎：社区版Redis、腾讯云CKV
+     * @param Engine 引擎：社区版Redis、腾讯云CKV
+     */
+    public void setEngine(String Engine) {
+        this.Engine = Engine;
+    }
+
+    /**
+     * 获取产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+     * @return ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+     */
+    public String getProductType() {
+        return this.ProductType;
+    }
+
+    /**
+     * 设置产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+     * @param ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+     */
+    public void setProductType(String ProductType) {
+        this.ProductType = ProductType;
+    }
+
+    /**
+     * 获取vpc网络id 如：vpc-fk33jsf43kgv
+     * @return UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * 设置vpc网络id 如：vpc-fk33jsf43kgv
+     * @param UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * 获取vpc网络下子网id 如：subnet-fd3j6l35mm0
+     * @return UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * 设置vpc网络下子网id 如：subnet-fd3j6l35mm0
+     * @param UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
+     * 获取计费模式：0-按量计费，1-包年包月
+     * @return BillingMode 计费模式：0-按量计费，1-包年包月
+     */
+    public Integer getBillingMode() {
+        return this.BillingMode;
+    }
+
+    /**
+     * 设置计费模式：0-按量计费，1-包年包月
+     * @param BillingMode 计费模式：0-按量计费，1-包年包月
+     */
+    public void setBillingMode(Integer BillingMode) {
+        this.BillingMode = BillingMode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +549,11 @@ public class InstanceSet  extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
+        this.setParamSimple(map, prefix + "Engine", this.Engine);
+        this.setParamSimple(map, prefix + "ProductType", this.ProductType);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
 
     }
 }

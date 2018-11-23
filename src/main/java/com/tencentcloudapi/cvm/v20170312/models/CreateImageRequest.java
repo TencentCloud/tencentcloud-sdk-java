@@ -65,6 +65,13 @@ public class CreateImageRequest  extends AbstractModel{
     private String Reboot;
 
     /**
+    * DryRun
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * 获取需要制作镜像的实例ID
      * @return InstanceId 需要制作镜像的实例ID
      */
@@ -161,6 +168,22 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
+     * 获取DryRun
+     * @return DryRun DryRun
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * 设置DryRun
+     * @param DryRun DryRun
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateImageRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ForcePoweroff", this.ForcePoweroff);
         this.setParamSimple(map, prefix + "Sysprep", this.Sysprep);
         this.setParamSimple(map, prefix + "Reboot", this.Reboot);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

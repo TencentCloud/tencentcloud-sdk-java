@@ -169,24 +169,6 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *Drm获取加密key
-     * @param req DescribeDrmEncryptKeysRequest
-     * @return DescribeDrmEncryptKeysResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDrmEncryptKeysResponse  DescribeDrmEncryptKeys(DescribeDrmEncryptKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDrmEncryptKeysResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDrmEncryptKeysResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDrmEncryptKeys"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询播放鉴权key
      * @param req DescribeLivePlayAuthKeyRequest
      * @return DescribeLivePlayAuthKeyResponse
@@ -367,42 +349,6 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *获取直播DRM的license
-     * @param req GetLiveDrmLicenseRequest
-     * @return GetLiveDrmLicenseResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetLiveDrmLicenseResponse  GetLiveDrmLicense(GetLiveDrmLicenseRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetLiveDrmLicenseResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetLiveDrmLicenseResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GetLiveDrmLicense"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *获取点播DRM的license
-     * @param req GetVodDrmLicenseRequest
-     * @return GetVodDrmLicenseResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetVodDrmLicenseResponse  GetVodDrmLicense(GetVodDrmLicenseRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetVodDrmLicenseResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetVodDrmLicenseResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GetVodDrmLicense"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *修改播放鉴权key
      * @param req ModifyLivePlayAuthKeyRequest
      * @return ModifyLivePlayAuthKeyResponse
@@ -522,24 +468,6 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetLiveWatermarkStatusResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SetLiveWatermarkStatus"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *该接口用于Drm加密请求
-     * @param req StartDrmEncryptionRequest
-     * @return StartDrmEncryptionResponse
-     * @throws TencentCloudSDKException
-     */
-    public StartDrmEncryptionResponse  StartDrmEncryption(StartDrmEncryptionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartDrmEncryptionResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<StartDrmEncryptionResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "StartDrmEncryption"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

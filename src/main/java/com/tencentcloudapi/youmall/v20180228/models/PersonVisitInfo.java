@@ -79,6 +79,13 @@ public class PersonVisitInfo  extends AbstractModel{
     private String CapturedPictureUrl;
 
     /**
+    * 抓拍头像的场景图信息
+    */
+    @SerializedName("SceneInfo")
+    @Expose
+    private SceneInfo SceneInfo;
+
+    /**
      * 获取用户ID
      * @return PersonId 用户ID
      */
@@ -207,6 +214,22 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
+     * 获取抓拍头像的场景图信息
+     * @return SceneInfo 抓拍头像的场景图信息
+     */
+    public SceneInfo getSceneInfo() {
+        return this.SceneInfo;
+    }
+
+    /**
+     * 设置抓拍头像的场景图信息
+     * @param SceneInfo 抓拍头像的场景图信息
+     */
+    public void setSceneInfo(SceneInfo SceneInfo) {
+        this.SceneInfo = SceneInfo;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class PersonVisitInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "GlassType", this.GlassType);
         this.setParamSimple(map, prefix + "HairType", this.HairType);
         this.setParamSimple(map, prefix + "CapturedPictureUrl", this.CapturedPictureUrl);
+        this.setParamObj(map, prefix + "SceneInfo.", this.SceneInfo);
 
     }
 }

@@ -30,7 +30,7 @@ public class AppInfo  extends AbstractModel{
     private String AppUrl;
 
     /**
-    * app的md5
+    * app的md5，需要正确传递
     */
     @SerializedName("AppMd5")
     @Expose
@@ -51,7 +51,7 @@ public class AppInfo  extends AbstractModel{
     private String FileName;
 
     /**
-    * app的包名
+    * app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
     */
     @SerializedName("AppPkgName")
     @Expose
@@ -95,16 +95,16 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的md5
-     * @return AppMd5 app的md5
+     * 获取app的md5，需要正确传递
+     * @return AppMd5 app的md5，需要正确传递
      */
     public String getAppMd5() {
         return this.AppMd5;
     }
 
     /**
-     * 设置app的md5
-     * @param AppMd5 app的md5
+     * 设置app的md5，需要正确传递
+     * @param AppMd5 app的md5，需要正确传递
      */
     public void setAppMd5(String AppMd5) {
         this.AppMd5 = AppMd5;
@@ -143,16 +143,16 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的包名
-     * @return AppPkgName app的包名
+     * 获取app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
+     * @return AppPkgName app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
      */
     public String getAppPkgName() {
         return this.AppPkgName;
     }
 
     /**
-     * 设置app的包名
-     * @param AppPkgName app的包名
+     * 设置app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
+     * @param AppPkgName app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
      */
     public void setAppPkgName(String AppPkgName) {
         this.AppPkgName = AppPkgName;

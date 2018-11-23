@@ -58,6 +58,13 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     private String PosId;
 
     /**
+    * 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+    */
+    @SerializedName("PictureExpires")
+    @Expose
+    private Integer PictureExpires;
+
+    /**
      * 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @return CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
@@ -138,6 +145,22 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
+     * 获取图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * @return PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     */
+    public Integer getPictureExpires() {
+        return this.PictureExpires;
+    }
+
+    /**
+     * 设置图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * @param PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     */
+    public void setPictureExpires(Integer PictureExpires) {
+        this.PictureExpires = PictureExpires;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "TempId", this.TempId);
         this.setParamSimple(map, prefix + "CameraId", this.CameraId);
         this.setParamSimple(map, prefix + "PosId", this.PosId);
+        this.setParamSimple(map, prefix + "PictureExpires", this.PictureExpires);
 
     }
 }

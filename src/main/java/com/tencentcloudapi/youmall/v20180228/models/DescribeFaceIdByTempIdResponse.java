@@ -65,6 +65,13 @@ public class DescribeFaceIdByTempIdResponse  extends AbstractModel{
     private Integer FaceId;
 
     /**
+    * 顾客属性信息
+    */
+    @SerializedName("PersonInfo")
+    @Expose
+    private PersonInfo PersonInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +175,22 @@ public class DescribeFaceIdByTempIdResponse  extends AbstractModel{
     }
 
     /**
+     * 获取顾客属性信息
+     * @return PersonInfo 顾客属性信息
+     */
+    public PersonInfo getPersonInfo() {
+        return this.PersonInfo;
+    }
+
+    /**
+     * 设置顾客属性信息
+     * @param PersonInfo 顾客属性信息
+     */
+    public void setPersonInfo(PersonInfo PersonInfo) {
+        this.PersonInfo = PersonInfo;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -193,6 +216,7 @@ public class DescribeFaceIdByTempIdResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "PosId", this.PosId);
         this.setParamSimple(map, prefix + "TempId", this.TempId);
         this.setParamSimple(map, prefix + "FaceId", this.FaceId);
+        this.setParamObj(map, prefix + "PersonInfo.", this.PersonInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

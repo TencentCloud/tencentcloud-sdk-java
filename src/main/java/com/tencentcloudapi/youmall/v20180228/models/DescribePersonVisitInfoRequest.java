@@ -37,20 +37,6 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     private Integer ShopId;
 
     /**
-    * 开始日期，格式yyyy-MM-dd
-    */
-    @SerializedName("StartDate")
-    @Expose
-    private String StartDate;
-
-    /**
-    * 结束日期，格式yyyy-MM-dd
-    */
-    @SerializedName("EndDate")
-    @Expose
-    private String EndDate;
-
-    /**
     * 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
     */
     @SerializedName("Offset")
@@ -65,11 +51,39 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
+    * 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+    */
+    @SerializedName("StartDate")
+    @Expose
+    private String StartDate;
+
+    /**
+    * 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+    */
+    @SerializedName("EndDate")
+    @Expose
+    private String EndDate;
+
+    /**
     * 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
     */
     @SerializedName("PictureExpires")
     @Expose
     private Integer PictureExpires;
+
+    /**
+    * 开始时间，格式yyyy-MM-dd HH:mm:ss
+    */
+    @SerializedName("StartDateTime")
+    @Expose
+    private String StartDateTime;
+
+    /**
+    * 结束时间，格式yyyy-MM-dd HH:mm:ss
+    */
+    @SerializedName("EndDateTime")
+    @Expose
+    private String EndDateTime;
 
     /**
      * 获取公司ID
@@ -101,38 +115,6 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
      */
     public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
-    }
-
-    /**
-     * 获取开始日期，格式yyyy-MM-dd
-     * @return StartDate 开始日期，格式yyyy-MM-dd
-     */
-    public String getStartDate() {
-        return this.StartDate;
-    }
-
-    /**
-     * 设置开始日期，格式yyyy-MM-dd
-     * @param StartDate 开始日期，格式yyyy-MM-dd
-     */
-    public void setStartDate(String StartDate) {
-        this.StartDate = StartDate;
-    }
-
-    /**
-     * 获取结束日期，格式yyyy-MM-dd
-     * @return EndDate 结束日期，格式yyyy-MM-dd
-     */
-    public String getEndDate() {
-        return this.EndDate;
-    }
-
-    /**
-     * 设置结束日期，格式yyyy-MM-dd
-     * @param EndDate 结束日期，格式yyyy-MM-dd
-     */
-    public void setEndDate(String EndDate) {
-        this.EndDate = EndDate;
     }
 
     /**
@@ -168,6 +150,38 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
+     * 获取开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+     * @return StartDate 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+     */
+    public String getStartDate() {
+        return this.StartDate;
+    }
+
+    /**
+     * 设置开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+     * @param StartDate 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+     */
+    public void setStartDate(String StartDate) {
+        this.StartDate = StartDate;
+    }
+
+    /**
+     * 获取结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+     * @return EndDate 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+     */
+    public String getEndDate() {
+        return this.EndDate;
+    }
+
+    /**
+     * 设置结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+     * @param EndDate 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+     */
+    public void setEndDate(String EndDate) {
+        this.EndDate = EndDate;
+    }
+
+    /**
      * 获取图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      * @return PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
@@ -184,16 +198,50 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
+     * 获取开始时间，格式yyyy-MM-dd HH:mm:ss
+     * @return StartDateTime 开始时间，格式yyyy-MM-dd HH:mm:ss
+     */
+    public String getStartDateTime() {
+        return this.StartDateTime;
+    }
+
+    /**
+     * 设置开始时间，格式yyyy-MM-dd HH:mm:ss
+     * @param StartDateTime 开始时间，格式yyyy-MM-dd HH:mm:ss
+     */
+    public void setStartDateTime(String StartDateTime) {
+        this.StartDateTime = StartDateTime;
+    }
+
+    /**
+     * 获取结束时间，格式yyyy-MM-dd HH:mm:ss
+     * @return EndDateTime 结束时间，格式yyyy-MM-dd HH:mm:ss
+     */
+    public String getEndDateTime() {
+        return this.EndDateTime;
+    }
+
+    /**
+     * 设置结束时间，格式yyyy-MM-dd HH:mm:ss
+     * @param EndDateTime 结束时间，格式yyyy-MM-dd HH:mm:ss
+     */
+    public void setEndDateTime(String EndDateTime) {
+        this.EndDateTime = EndDateTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);
         this.setParamSimple(map, prefix + "ShopId", this.ShopId);
-        this.setParamSimple(map, prefix + "StartDate", this.StartDate);
-        this.setParamSimple(map, prefix + "EndDate", this.EndDate);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "StartDate", this.StartDate);
+        this.setParamSimple(map, prefix + "EndDate", this.EndDate);
         this.setParamSimple(map, prefix + "PictureExpires", this.PictureExpires);
+        this.setParamSimple(map, prefix + "StartDateTime", this.StartDateTime);
+        this.setParamSimple(map, prefix + "EndDateTime", this.EndDateTime);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InstanceInfo  extends AbstractModel{
 
     /**
-    * 外网状态，可能的返回值为：0-未开通外网；1-已开通外网
+    * 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
     */
     @SerializedName("WanStatus")
     @Expose
@@ -261,16 +261,23 @@ public class InstanceInfo  extends AbstractModel{
     private String UniqSubnetId;
 
     /**
-     * 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网
-     * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网
+    * 物理ID
+    */
+    @SerializedName("PhysicalId")
+    @Expose
+    private String PhysicalId;
+
+    /**
+     * 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
+     * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
     public Integer getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * 设置外网状态，可能的返回值为：0-未开通外网；1-已开通外网
-     * @param WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网
+     * 设置外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
+     * @param WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
     public void setWanStatus(Integer WanStatus) {
         this.WanStatus = WanStatus;
@@ -805,6 +812,22 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取物理ID
+     * @return PhysicalId 物理ID
+     */
+    public String getPhysicalId() {
+        return this.PhysicalId;
+    }
+
+    /**
+     * 设置物理ID
+     * @param PhysicalId 物理ID
+     */
+    public void setPhysicalId(String PhysicalId) {
+        this.PhysicalId = PhysicalId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -842,6 +865,7 @@ public class InstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "CdbError", this.CdbError);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "PhysicalId", this.PhysicalId);
 
     }
 }

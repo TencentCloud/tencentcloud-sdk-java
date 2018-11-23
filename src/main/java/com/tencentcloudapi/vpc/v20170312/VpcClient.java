@@ -107,7 +107,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（AssignPrivateIpAddresses）用于弹性网卡申请内网 IP。
-* 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="https://cloud.tencent.com/document/product/215/6513">弹性网卡使用限制</a>。
+* 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
 * 可以指定内网IP地址申请，内网IP地址类型不能为主IP，主IP已存在，不能修改，内网IP必须要弹性网卡所在子网内，而且不能被占用。
 * 在弹性网卡上申请一个到多个辅助内网IP，接口会在弹性网卡所在子网网段内返回指定数量的辅助内网IP。
      * @param req AssignPrivateIpAddressesRequest
@@ -364,9 +364,28 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
+     * @param req CreateHaVipRequest
+     * @return CreateHaVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHaVipResponse  CreateHaVip(CreateHaVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateHaVipResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateHaVipResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateHaVip"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateNetworkInterface）用于创建弹性网卡。
 * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
 * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
+* 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
 * 创建弹性网卡同时可以绑定已有安全组。
      * @param req CreateNetworkInterfaceRequest
      * @return CreateNetworkInterfaceResponse
@@ -678,6 +697,27 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteDirectConnectGateway）用于删除专线网关。
+<li>如果是 NAT 网关，删除专线网关后，NAT 规则以及 ACL 策略都被清理了。</li>
+<li>删除专线网关后，系统会删除路由表中跟该专线网关相关的路由策略。</li>
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+     * @param req DeleteDirectConnectGatewayRequest
+     * @return DeleteDirectConnectGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDirectConnectGatewayResponse  DeleteDirectConnectGateway(DeleteDirectConnectGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDirectConnectGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDirectConnectGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteDirectConnectGatewayCcnRoutes）用于删除专线网关的云联网路由（IDC网段）
      * @param req DeleteDirectConnectGatewayCcnRoutesRequest
      * @return DeleteDirectConnectGatewayCcnRoutesResponse
@@ -689,6 +729,25 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectGatewayCcnRoutesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteDirectConnectGatewayCcnRoutes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）<br />
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+     * @param req DeleteHaVipRequest
+     * @return DeleteHaVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteHaVipResponse  DeleteHaVip(DeleteHaVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteHaVipResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteHaVipResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteHaVip"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1174,6 +1233,42 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDirectConnectGateways）用于查询专线网关。
+     * @param req DescribeDirectConnectGatewaysRequest
+     * @return DescribeDirectConnectGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDirectConnectGatewaysResponse  DescribeDirectConnectGateways(DescribeDirectConnectGatewaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDirectConnectGatewaysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectGatewaysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDirectConnectGateways"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeHaVips）用于查询高可用虚拟IP（HAVIP）列表。
+     * @param req DescribeHaVipsRequest
+     * @return DescribeHaVipsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHaVipsResponse  DescribeHaVips(DescribeHaVipsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHaVipsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHaVipsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeHaVips"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
      * @param req DescribeNetworkInterfacesRequest
      * @return DescribeNetworkInterfacesResponse
@@ -1557,6 +1652,44 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）<br />
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+     * @param req HaVipAssociateAddressIpRequest
+     * @return HaVipAssociateAddressIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public HaVipAssociateAddressIpResponse  HaVipAssociateAddressIp(HaVipAssociateAddressIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<HaVipAssociateAddressIpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<HaVipAssociateAddressIpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "HaVipAssociateAddressIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（HaVipDisassociateAddressIp）用于将高可用虚拟IP（HAVIP）已绑定的弹性公网IP（EIP）解除绑定<br />
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+     * @param req HaVipDisassociateAddressIpRequest
+     * @return HaVipDisassociateAddressIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public HaVipDisassociateAddressIpResponse  HaVipDisassociateAddressIp(HaVipDisassociateAddressIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<HaVipDisassociateAddressIpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<HaVipDisassociateAddressIpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "HaVipDisassociateAddressIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
      * @param req InquiryPriceCreateVpnGatewayRequest
      * @return InquiryPriceCreateVpnGatewayResponse
@@ -1769,6 +1902,43 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomerGatewayAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyCustomerGatewayAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyDirectConnectGatewayAttribute）用于修改专线网关属性
+
+     * @param req ModifyDirectConnectGatewayAttributeRequest
+     * @return ModifyDirectConnectGatewayAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDirectConnectGatewayAttributeResponse  ModifyDirectConnectGatewayAttribute(ModifyDirectConnectGatewayAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDirectConnectGatewayAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectGatewayAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDirectConnectGatewayAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyHaVipAttribute）用于修改高可用虚拟IP（HAVIP）属性
+     * @param req ModifyHaVipAttributeRequest
+     * @return ModifyHaVipAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHaVipAttributeResponse  ModifyHaVipAttribute(ModifyHaVipAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyHaVipAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyHaVipAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyHaVipAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

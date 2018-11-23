@@ -44,7 +44,21 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     private ShieldInfo ShieldInfo;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 状态描述
+    */
+    @SerializedName("StatusDesc")
+    @Expose
+    private String StatusDesc;
+
+    /**
+    * 状态指引
+    */
+    @SerializedName("StatusRef")
+    @Expose
+    private String StatusRef;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -99,16 +113,48 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取状态描述
+     * @return StatusDesc 状态描述
+     */
+    public String getStatusDesc() {
+        return this.StatusDesc;
+    }
+
+    /**
+     * 设置状态描述
+     * @param StatusDesc 状态描述
+     */
+    public void setStatusDesc(String StatusDesc) {
+        this.StatusDesc = StatusDesc;
+    }
+
+    /**
+     * 获取状态指引
+     * @return StatusRef 状态指引
+     */
+    public String getStatusRef() {
+        return this.StatusRef;
+    }
+
+    /**
+     * 设置状态指引
+     * @param StatusRef 状态指引
+     */
+    public void setStatusRef(String StatusRef) {
+        this.StatusRef = StatusRef;
+    }
+
+    /**
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -121,6 +167,8 @@ public class DescribeShieldResultResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamObj(map, prefix + "AppDetailInfo.", this.AppDetailInfo);
         this.setParamObj(map, prefix + "ShieldInfo.", this.ShieldInfo);
+        this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "StatusRef", this.StatusRef);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

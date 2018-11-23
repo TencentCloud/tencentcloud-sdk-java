@@ -67,6 +67,24 @@ public class MsClient extends AbstractClient{
     }
 
     /**
+     *获取云COS文件存储临时密钥，密钥仅限于临时上传文件，有访问限制和时效性。
+     * @param req CreateCosSecKeyInstanceRequest
+     * @return CreateCosSecKeyInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosSecKeyInstanceResponse  CreateCosSecKeyInstance(CreateCosSecKeyInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCosSecKeyInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCosSecKeyInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCosSecKeyInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用户可以使用该接口自建资源，只支持白名单用户
      * @param req CreateResourceInstancesRequest
      * @return CreateResourceInstancesResponse

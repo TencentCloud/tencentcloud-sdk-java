@@ -86,6 +86,13 @@ public class Activity  extends AbstractModel{
     private String EndTime;
 
     /**
+    * 云服务器实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * 获取活动ID
      * @return ActivityId 活动ID
      */
@@ -230,6 +237,22 @@ public class Activity  extends AbstractModel{
     }
 
     /**
+     * 获取云服务器实例ID
+     * @return InstanceId 云服务器实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * 设置云服务器实例ID
+     * @param InstanceId 云服务器实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class Activity  extends AbstractModel{
         this.setParamSimple(map, prefix + "StateReason", this.StateReason);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

@@ -30,7 +30,7 @@ public class UnassignPrivateIpAddressesRequest  extends AbstractModel{
     private String NetworkInterfaceId;
 
     /**
-    * 指定的内网IP信息。
+    * 指定的内网IP信息，单次最多指定10个。
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
@@ -53,16 +53,16 @@ public class UnassignPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定的内网IP信息。
-     * @return PrivateIpAddresses 指定的内网IP信息。
+     * 获取指定的内网IP信息，单次最多指定10个。
+     * @return PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
     }
 
     /**
-     * 设置指定的内网IP信息。
-     * @param PrivateIpAddresses 指定的内网IP信息。
+     * 设置指定的内网IP信息，单次最多指定10个。
+     * @param PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      */
     public void setPrivateIpAddresses(PrivateIpAddressSpecification [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;

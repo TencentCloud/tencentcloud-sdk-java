@@ -65,6 +65,27 @@ public class ScanSetInfo  extends AbstractModel{
     private Integer TaskTime;
 
     /**
+    * 状态码，成功返回0，失败返回错误码
+    */
+    @SerializedName("StatusCode")
+    @Expose
+    private Integer StatusCode;
+
+    /**
+    * 状态描述
+    */
+    @SerializedName("StatusDesc")
+    @Expose
+    private String StatusDesc;
+
+    /**
+    * 状态操作指引
+    */
+    @SerializedName("StatusRef")
+    @Expose
+    private String StatusRef;
+
+    /**
      * 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @return TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
@@ -161,6 +182,54 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
+     * 获取状态码，成功返回0，失败返回错误码
+     * @return StatusCode 状态码，成功返回0，失败返回错误码
+     */
+    public Integer getStatusCode() {
+        return this.StatusCode;
+    }
+
+    /**
+     * 设置状态码，成功返回0，失败返回错误码
+     * @param StatusCode 状态码，成功返回0，失败返回错误码
+     */
+    public void setStatusCode(Integer StatusCode) {
+        this.StatusCode = StatusCode;
+    }
+
+    /**
+     * 获取状态描述
+     * @return StatusDesc 状态描述
+     */
+    public String getStatusDesc() {
+        return this.StatusDesc;
+    }
+
+    /**
+     * 设置状态描述
+     * @param StatusDesc 状态描述
+     */
+    public void setStatusDesc(String StatusDesc) {
+        this.StatusDesc = StatusDesc;
+    }
+
+    /**
+     * 获取状态操作指引
+     * @return StatusRef 状态操作指引
+     */
+    public String getStatusRef() {
+        return this.StatusRef;
+    }
+
+    /**
+     * 设置状态操作指引
+     * @param StatusRef 状态操作指引
+     */
+    public void setStatusRef(String StatusRef) {
+        this.StatusRef = StatusRef;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +239,9 @@ public class ScanSetInfo  extends AbstractModel{
         this.setParamObj(map, prefix + "VulInfo.", this.VulInfo);
         this.setParamObj(map, prefix + "AdInfo.", this.AdInfo);
         this.setParamSimple(map, prefix + "TaskTime", this.TaskTime);
+        this.setParamSimple(map, prefix + "StatusCode", this.StatusCode);
+        this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "StatusRef", this.StatusRef);
 
     }
 }

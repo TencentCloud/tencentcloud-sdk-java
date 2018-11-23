@@ -45,8 +45,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
 
     /**
     * 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-
-UTC 时间，格式：2018-08-08T17:37:00Z。
+注意：默认禁播90天，且最长支持禁播90天。
     */
     @SerializedName("ResumeTime")
     @Expose
@@ -102,11 +101,9 @@ UTC 时间，格式：2018-08-08T17:37:00Z。
 
     /**
      * 获取恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-
-UTC 时间，格式：2018-08-08T17:37:00Z。
+注意：默认禁播90天，且最长支持禁播90天。
      * @return ResumeTime 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-
-UTC 时间，格式：2018-08-08T17:37:00Z。
+注意：默认禁播90天，且最长支持禁播90天。
      */
     public String getResumeTime() {
         return this.ResumeTime;
@@ -114,11 +111,9 @@ UTC 时间，格式：2018-08-08T17:37:00Z。
 
     /**
      * 设置恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-
-UTC 时间，格式：2018-08-08T17:37:00Z。
+注意：默认禁播90天，且最长支持禁播90天。
      * @param ResumeTime 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-
-UTC 时间，格式：2018-08-08T17:37:00Z。
+注意：默认禁播90天，且最长支持禁播90天。
      */
     public void setResumeTime(String ResumeTime) {
         this.ResumeTime = ResumeTime;

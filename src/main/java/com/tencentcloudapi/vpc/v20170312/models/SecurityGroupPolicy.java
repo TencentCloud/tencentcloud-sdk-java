@@ -58,7 +58,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     private String CidrBlock;
 
     /**
-    * 已绑定安全组的网段或IP。
+    * 安全组实例ID，例如：sg-ohuuioma。
     */
     @SerializedName("SecurityGroupId")
     @Expose
@@ -166,16 +166,16 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取已绑定安全组的网段或IP。
-     * @return SecurityGroupId 已绑定安全组的网段或IP。
+     * 获取安全组实例ID，例如：sg-ohuuioma。
+     * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * 设置已绑定安全组的网段或IP。
-     * @param SecurityGroupId 已绑定安全组的网段或IP。
+     * 设置安全组实例ID，例如：sg-ohuuioma。
+     * @param SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;

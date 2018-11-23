@@ -65,20 +65,6 @@ public class InstanceTypeConfig  extends AbstractModel{
     private Integer Memory;
 
     /**
-    * 是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-    */
-    @SerializedName("CbsSupport")
-    @Expose
-    private String CbsSupport;
-
-    /**
-    * 机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
-    */
-    @SerializedName("InstanceTypeState")
-    @Expose
-    private String InstanceTypeState;
-
-    /**
      * 获取可用区。
      * @return Zone 可用区。
      */
@@ -175,38 +161,6 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-     * @return CbsSupport 是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-     */
-    public String getCbsSupport() {
-        return this.CbsSupport;
-    }
-
-    /**
-     * 设置是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-     * @param CbsSupport 是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-     */
-    public void setCbsSupport(String CbsSupport) {
-        this.CbsSupport = CbsSupport;
-    }
-
-    /**
-     * 获取机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
-     * @return InstanceTypeState 机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
-     */
-    public String getInstanceTypeState() {
-        return this.InstanceTypeState;
-    }
-
-    /**
-     * 设置机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
-     * @param InstanceTypeState 机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
-     */
-    public void setInstanceTypeState(String InstanceTypeState) {
-        this.InstanceTypeState = InstanceTypeState;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -216,8 +170,6 @@ public class InstanceTypeConfig  extends AbstractModel{
         this.setParamSimple(map, prefix + "GPU", this.GPU);
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
-        this.setParamSimple(map, prefix + "CbsSupport", this.CbsSupport);
-        this.setParamSimple(map, prefix + "InstanceTypeState", this.InstanceTypeState);
 
     }
 }

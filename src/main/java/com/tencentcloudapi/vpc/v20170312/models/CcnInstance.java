@@ -23,69 +23,84 @@ import java.util.HashMap;
 public class CcnInstance  extends AbstractModel{
 
     /**
-    * 关联实例ID
+    * 关联实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 关联实例ID所属大区，例如：ap-guangzhou
+    * 关联实例ID所属大区，例如：ap-guangzhou。
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * 关联实例类型，可选值：VPC、DIRECTCONNECT
+    * 关联实例类型，可选值：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-     * 获取关联实例ID
-     * @return InstanceId 关联实例ID
+     * 获取关联实例ID。
+     * @return InstanceId 关联实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置关联实例ID
-     * @param InstanceId 关联实例ID
+     * 设置关联实例ID。
+     * @param InstanceId 关联实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * 获取关联实例ID所属大区，例如：ap-guangzhou
-     * @return InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou
+     * 获取关联实例ID所属大区，例如：ap-guangzhou。
+     * @return InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * 设置关联实例ID所属大区，例如：ap-guangzhou
-     * @param InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou
+     * 设置关联实例ID所属大区，例如：ap-guangzhou。
+     * @param InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * 获取关联实例类型，可选值：VPC、DIRECTCONNECT
-     * @return InstanceType 关联实例类型，可选值：VPC、DIRECTCONNECT
+     * 获取关联实例类型，可选值：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
+     * @return InstanceType 关联实例类型，可选值：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * 设置关联实例类型，可选值：VPC、DIRECTCONNECT
-     * @param InstanceType 关联实例类型，可选值：VPC、DIRECTCONNECT
+     * 设置关联实例类型，可选值：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
+     * @param InstanceType 关联实例类型，可选值：
+<li>`VPC`：私有网络</li>
+<li>`DIRECTCONNECT`：专线网关</li>
+<li>`BMVPC`：黑石私有网络</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

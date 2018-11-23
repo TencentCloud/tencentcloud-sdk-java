@@ -30,7 +30,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     private String FromUrl;
 
     /**
-    * 目的Url。
+    * 目的Url，目前限制该目标地址为腾讯域名。
     */
     @SerializedName("ToUrl")
     @Expose
@@ -84,16 +84,16 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目的Url。
-     * @return ToUrl 目的Url。
+     * 获取目的Url，目前限制该目标地址为腾讯域名。
+     * @return ToUrl 目的Url，目前限制该目标地址为腾讯域名。
      */
     public String getToUrl() {
         return this.ToUrl;
     }
 
     /**
-     * 设置目的Url。
-     * @param ToUrl 目的Url。
+     * 设置目的Url，目前限制该目标地址为腾讯域名。
+     * @param ToUrl 目的Url，目前限制该目标地址为腾讯域名。
      */
     public void setToUrl(String ToUrl) {
         this.ToUrl = ToUrl;
