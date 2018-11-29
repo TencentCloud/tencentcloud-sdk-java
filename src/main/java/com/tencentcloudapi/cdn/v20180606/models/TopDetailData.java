@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClearInstanceRequest  extends AbstractModel{
+public class TopDetailData  extends AbstractModel{
 
     /**
-    * 实例Id
+    * 数据类型的名称
     */
-    @SerializedName("InstanceId")
+    @SerializedName("Name")
     @Expose
-    private String InstanceId;
+    private String Name;
 
     /**
-    * redis的实例密码
+    * 数据值
     */
-    @SerializedName("Password")
+    @SerializedName("Value")
     @Expose
-    private String Password;
+    private Float Value;
 
     /**
-     * 获取实例Id
-     * @return InstanceId 实例Id
+     * 获取数据类型的名称
+     * @return Name 数据类型的名称
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * 设置实例Id
-     * @param InstanceId 实例Id
+     * 设置数据类型的名称
+     * @param Name 数据类型的名称
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * 获取redis的实例密码
-     * @return Password redis的实例密码
+     * 获取数据值
+     * @return Value 数据值
      */
-    public String getPassword() {
-        return this.Password;
+    public Float getValue() {
+        return this.Value;
     }
 
     /**
-     * 设置redis的实例密码
-     * @param Password redis的实例密码
+     * 设置数据值
+     * @param Value 数据值
      */
-    public void setPassword(String Password) {
-        this.Password = Password;
+    public void setValue(Float Value) {
+        this.Value = Value;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

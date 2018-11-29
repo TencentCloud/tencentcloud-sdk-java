@@ -184,6 +184,14 @@ public class Instance  extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 实例的关机计费模式。
+取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+    */
+    @SerializedName("StopChargingMode")
+    @Expose
+    private String StopChargingMode;
+
+    /**
      * 获取实例所在的位置。
      * @return Placement 实例所在的位置。
      */
@@ -552,6 +560,26 @@ public class Instance  extends AbstractModel{
     }
 
     /**
+     * 获取实例的关机计费模式。
+取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+     * @return StopChargingMode 实例的关机计费模式。
+取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+     */
+    public String getStopChargingMode() {
+        return this.StopChargingMode;
+    }
+
+    /**
+     * 设置实例的关机计费模式。
+取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+     * @param StopChargingMode 实例的关机计费模式。
+取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+     */
+    public void setStopChargingMode(String StopChargingMode) {
+        this.StopChargingMode = StopChargingMode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -578,6 +606,7 @@ public class Instance  extends AbstractModel{
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "StopChargingMode", this.StopChargingMode);
 
     }
 }

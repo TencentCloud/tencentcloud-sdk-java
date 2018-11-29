@@ -65,6 +65,13 @@ public class CCN  extends AbstractModel{
     private String State;
 
     /**
+    * 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
      * 获取云联网唯一ID
      * @return CcnId 云联网唯一ID
      */
@@ -161,6 +168,22 @@ public class CCN  extends AbstractModel{
     }
 
     /**
+     * 获取实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     * @return QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * 设置实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     * @param QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CCN  extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
 
     }
 }

@@ -49,6 +49,42 @@ public class CrClient extends AbstractClient{
     }
 
     /**
+     *提交黑名单申请。
+     * @param req ApplyBlackListRequest
+     * @return ApplyBlackListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyBlackListResponse  ApplyBlackList(ApplyBlackListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyBlackListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyBlackListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ApplyBlackList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询录音，返回录音列表。
+     * @param req DescribeRecordsRequest
+     * @return DescribeRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordsResponse  DescribeRecords(DescribeRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRecords"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *客户调用该接口查看任务执行状态。输入任务ID，输出任务执行状态或者结果
      * @param req DescribeTaskStatusRequest
      * @return DescribeTaskStatusResponse
@@ -78,6 +114,24 @@ public class CrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DownloadReportResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DownloadReport"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *客户通过调用该接口上传需催收文档或还款文档，接口返回任务ID。
+     * @param req UploadDataFileRequest
+     * @return UploadDataFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadDataFileResponse  UploadDataFile(UploadDataFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadDataFileResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadDataFileResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UploadDataFile"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

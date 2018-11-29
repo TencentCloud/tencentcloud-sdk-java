@@ -30,28 +30,28 @@ public class InstanceSet  extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 实例串号
+    * 实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * appid
+    * 用户的Appid
     */
     @SerializedName("Appid")
     @Expose
     private Integer Appid;
 
     /**
-    * 项目id
+    * 项目Id
     */
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
 
     /**
-    * 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+    * 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
     */
     @SerializedName("RegionId")
     @Expose
@@ -79,7 +79,7 @@ public class InstanceSet  extends AbstractModel{
     private Integer SubnetId;
 
     /**
-    * 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
+    * 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
     */
     @SerializedName("Status")
     @Expose
@@ -121,7 +121,7 @@ public class InstanceSet  extends AbstractModel{
     private Float SizeUsed;
 
     /**
-    * 实例类型，1：集群版；2：主从版
+    * 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
     */
     @SerializedName("Type")
     @Expose
@@ -149,7 +149,7 @@ public class InstanceSet  extends AbstractModel{
     private String Engine;
 
     /**
-    * 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+    * 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
     */
     @SerializedName("ProductType")
     @Expose
@@ -193,64 +193,64 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例串号
-     * @return InstanceId 实例串号
+     * 获取实例Id
+     * @return InstanceId 实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置实例串号
-     * @param InstanceId 实例串号
+     * 设置实例Id
+     * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * 获取appid
-     * @return Appid appid
+     * 获取用户的Appid
+     * @return Appid 用户的Appid
      */
     public Integer getAppid() {
         return this.Appid;
     }
 
     /**
-     * 设置appid
-     * @param Appid appid
+     * 设置用户的Appid
+     * @param Appid 用户的Appid
      */
     public void setAppid(Integer Appid) {
         this.Appid = Appid;
     }
 
     /**
-     * 获取项目id
-     * @return ProjectId 项目id
+     * 获取项目Id
+     * @return ProjectId 项目Id
      */
     public Integer getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置项目id
-     * @param ProjectId 项目id
+     * 设置项目Id
+     * @param ProjectId 项目Id
      */
     public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * 获取地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
-     * @return RegionId 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+     * 获取地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * @return RegionId 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
     public Integer getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * 设置地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
-     * @param RegionId 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+     * 设置地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * @param RegionId 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
     public void setRegionId(Integer RegionId) {
         this.RegionId = RegionId;
@@ -305,16 +305,16 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
-     * @return Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
+     * 获取实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+     * @return Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
      */
     public Integer getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
-     * @param Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
+     * 设置实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+     * @param Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
      */
     public void setStatus(Integer Status) {
         this.Status = Status;
@@ -401,16 +401,16 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，1：集群版；2：主从版
-     * @return Type 实例类型，1：集群版；2：主从版
+     * 获取实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
+     * @return Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
      */
     public Integer getType() {
         return this.Type;
     }
 
     /**
-     * 设置实例类型，1：集群版；2：主从版
-     * @param Type 实例类型，1：集群版；2：主从版
+     * 设置实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
+     * @param Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
      */
     public void setType(Integer Type) {
         this.Type = Type;
@@ -465,16 +465,16 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
-     * @return ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+     * 获取产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+     * @return ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * 设置产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
-     * @param ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版、Redis3.2集群版、Redis2.8单机版、Redis4.0集群版
+     * 设置产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+     * @param ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;

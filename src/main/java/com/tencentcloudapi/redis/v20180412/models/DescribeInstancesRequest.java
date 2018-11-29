@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstancesRequest  extends AbstractModel{
 
     /**
-    * 实例列表大小
+    * 实例列表的大小，参数默认值20
     */
     @SerializedName("Limit")
     @Expose
@@ -37,7 +37,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 实例Id
+    * 实例Id，如：crs-6ubhgouj
     */
     @SerializedName("InstanceId")
     @Expose
@@ -58,14 +58,14 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private Integer OrderType;
 
     /**
-    * 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络
+    * 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
     */
     @SerializedName("VpcIds")
     @Expose
     private String [] VpcIds;
 
     /**
-    * 子网ID数组，数组下标从0开始
+    * 子网ID数组，数组下标从0开始，如：56854
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -86,13 +86,6 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private String SearchKey;
 
     /**
-    * 查询的Region的列表。
-    */
-    @SerializedName("RegionIds")
-    @Expose
-    private Integer [] RegionIds;
-
-    /**
     * 实例名称
     */
     @SerializedName("InstanceName")
@@ -100,16 +93,37 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private String InstanceName;
 
     /**
-     * 获取实例列表大小
-     * @return Limit 实例列表大小
+    * 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+    */
+    @SerializedName("UniqVpcIds")
+    @Expose
+    private String [] UniqVpcIds;
+
+    /**
+    * 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+    */
+    @SerializedName("UniqSubnetIds")
+    @Expose
+    private String [] UniqSubnetIds;
+
+    /**
+    * 地域ID，已经弃用，可通过公共参数Region查询对应地域
+    */
+    @SerializedName("RegionIds")
+    @Expose
+    private Integer [] RegionIds;
+
+    /**
+     * 获取实例列表的大小，参数默认值20
+     * @return Limit 实例列表的大小，参数默认值20
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置实例列表大小
-     * @param Limit 实例列表大小
+     * 设置实例列表的大小，参数默认值20
+     * @param Limit 实例列表的大小，参数默认值20
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;
@@ -132,16 +146,16 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例Id
-     * @return InstanceId 实例Id
+     * 获取实例Id，如：crs-6ubhgouj
+     * @return InstanceId 实例Id，如：crs-6ubhgouj
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置实例Id
-     * @param InstanceId 实例Id
+     * 设置实例Id，如：crs-6ubhgouj
+     * @param InstanceId 实例Id，如：crs-6ubhgouj
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -180,32 +194,32 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络
-     * @return VpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络
+     * 获取私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
+     * @return VpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
      */
     public String [] getVpcIds() {
         return this.VpcIds;
     }
 
     /**
-     * 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络
-     * @param VpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络
+     * 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
+     * @param VpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
      */
     public void setVpcIds(String [] VpcIds) {
         this.VpcIds = VpcIds;
     }
 
     /**
-     * 获取子网ID数组，数组下标从0开始
-     * @return SubnetIds 子网ID数组，数组下标从0开始
+     * 获取子网ID数组，数组下标从0开始，如：56854
+     * @return SubnetIds 子网ID数组，数组下标从0开始，如：56854
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * 设置子网ID数组，数组下标从0开始
-     * @param SubnetIds 子网ID数组，数组下标从0开始
+     * 设置子网ID数组，数组下标从0开始，如：56854
+     * @param SubnetIds 子网ID数组，数组下标从0开始，如：56854
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
@@ -244,22 +258,6 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询的Region的列表。
-     * @return RegionIds 查询的Region的列表。
-     */
-    public Integer [] getRegionIds() {
-        return this.RegionIds;
-    }
-
-    /**
-     * 设置查询的Region的列表。
-     * @param RegionIds 查询的Region的列表。
-     */
-    public void setRegionIds(Integer [] RegionIds) {
-        this.RegionIds = RegionIds;
-    }
-
-    /**
      * 获取实例名称
      * @return InstanceName 实例名称
      */
@@ -276,6 +274,54 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * @return UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     */
+    public String [] getUniqVpcIds() {
+        return this.UniqVpcIds;
+    }
+
+    /**
+     * 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * @param UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     */
+    public void setUniqVpcIds(String [] UniqVpcIds) {
+        this.UniqVpcIds = UniqVpcIds;
+    }
+
+    /**
+     * 获取子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * @return UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     */
+    public String [] getUniqSubnetIds() {
+        return this.UniqSubnetIds;
+    }
+
+    /**
+     * 设置子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * @param UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     */
+    public void setUniqSubnetIds(String [] UniqSubnetIds) {
+        this.UniqSubnetIds = UniqSubnetIds;
+    }
+
+    /**
+     * 获取地域ID，已经弃用，可通过公共参数Region查询对应地域
+     * @return RegionIds 地域ID，已经弃用，可通过公共参数Region查询对应地域
+     */
+    public Integer [] getRegionIds() {
+        return this.RegionIds;
+    }
+
+    /**
+     * 设置地域ID，已经弃用，可通过公共参数Region查询对应地域
+     * @param RegionIds 地域ID，已经弃用，可通过公共参数Region查询对应地域
+     */
+    public void setRegionIds(Integer [] RegionIds) {
+        this.RegionIds = RegionIds;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -288,8 +334,10 @@ public class DescribeInstancesRequest  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
-        this.setParamArraySimple(map, prefix + "RegionIds.", this.RegionIds);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamArraySimple(map, prefix + "UniqVpcIds.", this.UniqVpcIds);
+        this.setParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
+        this.setParamArraySimple(map, prefix + "RegionIds.", this.RegionIds);
 
     }
 }

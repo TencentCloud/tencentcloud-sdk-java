@@ -115,7 +115,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *添加拉流配置
+     *添加拉流配置，目前限制添加10条任务。
      * @param req CreatePullStreamConfigRequest
      * @return CreatePullStreamConfigResponse
      * @throws TencentCloudSDKException

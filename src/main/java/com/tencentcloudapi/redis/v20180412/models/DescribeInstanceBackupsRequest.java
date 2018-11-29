@@ -30,7 +30,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 实例列表大小
+    * 实例列表大小，默认大小20
     */
     @SerializedName("Limit")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例列表大小
-     * @return Limit 实例列表大小
+     * 获取实例列表大小，默认大小20
+     * @return Limit 实例列表大小，默认大小20
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置实例列表大小
-     * @param Limit 实例列表大小
+     * 设置实例列表大小，默认大小20
+     * @param Limit 实例列表大小，默认大小20
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

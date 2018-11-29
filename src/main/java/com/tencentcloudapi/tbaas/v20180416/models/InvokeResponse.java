@@ -30,7 +30,7 @@ public class InvokeResponse  extends AbstractModel{
     private String Txid;
 
     /**
-    * 返回内容
+    * 交易执行结果
     */
     @SerializedName("Events")
     @Expose
@@ -60,16 +60,16 @@ public class InvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回内容
-     * @return Events 返回内容
+     * 获取交易执行结果
+     * @return Events 交易执行结果
      */
     public String getEvents() {
         return this.Events;
     }
 
     /**
-     * 设置返回内容
-     * @param Events 返回内容
+     * 设置交易执行结果
+     * @param Events 交易执行结果
      */
     public void setEvents(String Events) {
         this.Events = Events;

@@ -1,0 +1,248 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.cr.v20180321.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeRecordsRequest  extends AbstractModel{
+
+    /**
+    * 模块
+    */
+    @SerializedName("Module")
+    @Expose
+    private String Module;
+
+    /**
+    * 操作
+    */
+    @SerializedName("Operation")
+    @Expose
+    private String Operation;
+
+    /**
+    * 产品ID
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
+    * 案件编号
+    */
+    @SerializedName("AccountNum")
+    @Expose
+    private String AccountNum;
+
+    /**
+    * 被叫号码
+    */
+    @SerializedName("CalledPhone")
+    @Expose
+    private String CalledPhone;
+
+    /**
+    * 查询起始日期
+    */
+    @SerializedName("StartBizDate")
+    @Expose
+    private String StartBizDate;
+
+    /**
+    * 查询结束日期
+    */
+    @SerializedName("EndBizDate")
+    @Expose
+    private String EndBizDate;
+
+    /**
+    * 分页参数，索引，从0开始
+    */
+    @SerializedName("Offset")
+    @Expose
+    private String Offset;
+
+    /**
+    * 分页参数，页长
+    */
+    @SerializedName("Limit")
+    @Expose
+    private String Limit;
+
+    /**
+     * 获取模块
+     * @return Module 模块
+     */
+    public String getModule() {
+        return this.Module;
+    }
+
+    /**
+     * 设置模块
+     * @param Module 模块
+     */
+    public void setModule(String Module) {
+        this.Module = Module;
+    }
+
+    /**
+     * 获取操作
+     * @return Operation 操作
+     */
+    public String getOperation() {
+        return this.Operation;
+    }
+
+    /**
+     * 设置操作
+     * @param Operation 操作
+     */
+    public void setOperation(String Operation) {
+        this.Operation = Operation;
+    }
+
+    /**
+     * 获取产品ID
+     * @return ProductId 产品ID
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * 设置产品ID
+     * @param ProductId 产品ID
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
+     * 获取案件编号
+     * @return AccountNum 案件编号
+     */
+    public String getAccountNum() {
+        return this.AccountNum;
+    }
+
+    /**
+     * 设置案件编号
+     * @param AccountNum 案件编号
+     */
+    public void setAccountNum(String AccountNum) {
+        this.AccountNum = AccountNum;
+    }
+
+    /**
+     * 获取被叫号码
+     * @return CalledPhone 被叫号码
+     */
+    public String getCalledPhone() {
+        return this.CalledPhone;
+    }
+
+    /**
+     * 设置被叫号码
+     * @param CalledPhone 被叫号码
+     */
+    public void setCalledPhone(String CalledPhone) {
+        this.CalledPhone = CalledPhone;
+    }
+
+    /**
+     * 获取查询起始日期
+     * @return StartBizDate 查询起始日期
+     */
+    public String getStartBizDate() {
+        return this.StartBizDate;
+    }
+
+    /**
+     * 设置查询起始日期
+     * @param StartBizDate 查询起始日期
+     */
+    public void setStartBizDate(String StartBizDate) {
+        this.StartBizDate = StartBizDate;
+    }
+
+    /**
+     * 获取查询结束日期
+     * @return EndBizDate 查询结束日期
+     */
+    public String getEndBizDate() {
+        return this.EndBizDate;
+    }
+
+    /**
+     * 设置查询结束日期
+     * @param EndBizDate 查询结束日期
+     */
+    public void setEndBizDate(String EndBizDate) {
+        this.EndBizDate = EndBizDate;
+    }
+
+    /**
+     * 获取分页参数，索引，从0开始
+     * @return Offset 分页参数，索引，从0开始
+     */
+    public String getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * 设置分页参数，索引，从0开始
+     * @param Offset 分页参数，索引，从0开始
+     */
+    public void setOffset(String Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * 获取分页参数，页长
+     * @return Limit 分页参数，页长
+     */
+    public String getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * 设置分页参数，页长
+     * @param Limit 分页参数，页长
+     */
+    public void setLimit(String Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Module", this.Module);
+        this.setParamSimple(map, prefix + "Operation", this.Operation);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "AccountNum", this.AccountNum);
+        this.setParamSimple(map, prefix + "CalledPhone", this.CalledPhone);
+        this.setParamSimple(map, prefix + "StartBizDate", this.StartBizDate);
+        this.setParamSimple(map, prefix + "EndBizDate", this.EndBizDate);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+
+    }
+}
+

@@ -51,7 +51,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     private Boolean IsDefault;
 
     /**
-    * 网络类型
+    * 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
     */
     @SerializedName("NetWorkType")
     @Expose
@@ -136,16 +136,16 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 获取网络类型
-     * @return NetWorkType 网络类型
+     * 获取网络类型：basenet -- 基础网络；vpcnet -- VPC网络
+     * @return NetWorkType 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
      */
     public String [] getNetWorkType() {
         return this.NetWorkType;
     }
 
     /**
-     * 设置网络类型
-     * @param NetWorkType 网络类型
+     * 设置网络类型：basenet -- 基础网络；vpcnet -- VPC网络
+     * @param NetWorkType 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
      */
     public void setNetWorkType(String [] NetWorkType) {
         this.NetWorkType = NetWorkType;

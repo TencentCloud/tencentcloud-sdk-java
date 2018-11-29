@@ -20,28 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportResponse  extends AbstractModel{
+public class DescribeRecordsResponse  extends AbstractModel{
 
     /**
-    * 日报下载地址
+    * 录音列表。
     */
-    @SerializedName("DailyReportUrl")
+    @SerializedName("RecordList")
     @Expose
-    private String DailyReportUrl;
+    private SingleRecord [] RecordList;
 
     /**
-    * 结果下载地址
+    * 录音总量。
     */
-    @SerializedName("ResultReportUrl")
+    @SerializedName("TotalCount")
     @Expose
-    private String ResultReportUrl;
-
-    /**
-    * 明细下载地址
-    */
-    @SerializedName("DetailReportUrl")
-    @Expose
-    private String DetailReportUrl;
+    private Integer TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日报下载地址
-     * @return DailyReportUrl 日报下载地址
+     * 获取录音列表。
+     * @return RecordList 录音列表。
      */
-    public String getDailyReportUrl() {
-        return this.DailyReportUrl;
+    public SingleRecord [] getRecordList() {
+        return this.RecordList;
     }
 
     /**
-     * 设置日报下载地址
-     * @param DailyReportUrl 日报下载地址
+     * 设置录音列表。
+     * @param RecordList 录音列表。
      */
-    public void setDailyReportUrl(String DailyReportUrl) {
-        this.DailyReportUrl = DailyReportUrl;
+    public void setRecordList(SingleRecord [] RecordList) {
+        this.RecordList = RecordList;
     }
 
     /**
-     * 获取结果下载地址
-     * @return ResultReportUrl 结果下载地址
+     * 获取录音总量。
+     * @return TotalCount 录音总量。
      */
-    public String getResultReportUrl() {
-        return this.ResultReportUrl;
+    public Integer getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * 设置结果下载地址
-     * @param ResultReportUrl 结果下载地址
+     * 设置录音总量。
+     * @param TotalCount 录音总量。
      */
-    public void setResultReportUrl(String ResultReportUrl) {
-        this.ResultReportUrl = ResultReportUrl;
-    }
-
-    /**
-     * 获取明细下载地址
-     * @return DetailReportUrl 明细下载地址
-     */
-    public String getDetailReportUrl() {
-        return this.DetailReportUrl;
-    }
-
-    /**
-     * 设置明细下载地址
-     * @param DetailReportUrl 明细下载地址
-     */
-    public void setDetailReportUrl(String DetailReportUrl) {
-        this.DetailReportUrl = DetailReportUrl;
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -118,9 +95,8 @@ public class DownloadReportResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
-        this.setParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
-        this.setParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+        this.setParamArrayObj(map, prefix + "RecordList.", this.RecordList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

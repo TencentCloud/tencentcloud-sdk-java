@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cr.v20180321.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportResponse  extends AbstractModel{
+public class DescribeIpVisitResponse  extends AbstractModel{
 
     /**
-    * 日报下载地址
+    * 数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
     */
-    @SerializedName("DailyReportUrl")
+    @SerializedName("Interval")
     @Expose
-    private String DailyReportUrl;
+    private String Interval;
 
     /**
-    * 结果下载地址
+    * 各个资源的回源数据详情。
     */
-    @SerializedName("ResultReportUrl")
+    @SerializedName("Data")
     @Expose
-    private String ResultReportUrl;
-
-    /**
-    * 明细下载地址
-    */
-    @SerializedName("DetailReportUrl")
-    @Expose
-    private String DetailReportUrl;
+    private ResourceData [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日报下载地址
-     * @return DailyReportUrl 日报下载地址
+     * 获取数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
+     * @return Interval 数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
      */
-    public String getDailyReportUrl() {
-        return this.DailyReportUrl;
+    public String getInterval() {
+        return this.Interval;
     }
 
     /**
-     * 设置日报下载地址
-     * @param DailyReportUrl 日报下载地址
+     * 设置数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
+     * @param Interval 数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
      */
-    public void setDailyReportUrl(String DailyReportUrl) {
-        this.DailyReportUrl = DailyReportUrl;
+    public void setInterval(String Interval) {
+        this.Interval = Interval;
     }
 
     /**
-     * 获取结果下载地址
-     * @return ResultReportUrl 结果下载地址
+     * 获取各个资源的回源数据详情。
+     * @return Data 各个资源的回源数据详情。
      */
-    public String getResultReportUrl() {
-        return this.ResultReportUrl;
+    public ResourceData [] getData() {
+        return this.Data;
     }
 
     /**
-     * 设置结果下载地址
-     * @param ResultReportUrl 结果下载地址
+     * 设置各个资源的回源数据详情。
+     * @param Data 各个资源的回源数据详情。
      */
-    public void setResultReportUrl(String ResultReportUrl) {
-        this.ResultReportUrl = ResultReportUrl;
-    }
-
-    /**
-     * 获取明细下载地址
-     * @return DetailReportUrl 明细下载地址
-     */
-    public String getDetailReportUrl() {
-        return this.DetailReportUrl;
-    }
-
-    /**
-     * 设置明细下载地址
-     * @param DetailReportUrl 明细下载地址
-     */
-    public void setDetailReportUrl(String DetailReportUrl) {
-        this.DetailReportUrl = DetailReportUrl;
+    public void setData(ResourceData [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -118,9 +95,8 @@ public class DownloadReportResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
-        this.setParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
-        this.setParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

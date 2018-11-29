@@ -20,28 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportResponse  extends AbstractModel{
+public class UploadDataFileResponse  extends AbstractModel{
 
     /**
-    * 日报下载地址
+    * 数据ID
     */
-    @SerializedName("DailyReportUrl")
+    @SerializedName("DataResId")
     @Expose
-    private String DailyReportUrl;
-
-    /**
-    * 结果下载地址
-    */
-    @SerializedName("ResultReportUrl")
-    @Expose
-    private String ResultReportUrl;
-
-    /**
-    * 明细下载地址
-    */
-    @SerializedName("DetailReportUrl")
-    @Expose
-    private String DetailReportUrl;
+    private String DataResId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日报下载地址
-     * @return DailyReportUrl 日报下载地址
+     * 获取数据ID
+     * @return DataResId 数据ID
      */
-    public String getDailyReportUrl() {
-        return this.DailyReportUrl;
+    public String getDataResId() {
+        return this.DataResId;
     }
 
     /**
-     * 设置日报下载地址
-     * @param DailyReportUrl 日报下载地址
+     * 设置数据ID
+     * @param DataResId 数据ID
      */
-    public void setDailyReportUrl(String DailyReportUrl) {
-        this.DailyReportUrl = DailyReportUrl;
-    }
-
-    /**
-     * 获取结果下载地址
-     * @return ResultReportUrl 结果下载地址
-     */
-    public String getResultReportUrl() {
-        return this.ResultReportUrl;
-    }
-
-    /**
-     * 设置结果下载地址
-     * @param ResultReportUrl 结果下载地址
-     */
-    public void setResultReportUrl(String ResultReportUrl) {
-        this.ResultReportUrl = ResultReportUrl;
-    }
-
-    /**
-     * 获取明细下载地址
-     * @return DetailReportUrl 明细下载地址
-     */
-    public String getDetailReportUrl() {
-        return this.DetailReportUrl;
-    }
-
-    /**
-     * 设置明细下载地址
-     * @param DetailReportUrl 明细下载地址
-     */
-    public void setDetailReportUrl(String DetailReportUrl) {
-        this.DetailReportUrl = DetailReportUrl;
+    public void setDataResId(String DataResId) {
+        this.DataResId = DataResId;
     }
 
     /**
@@ -118,9 +72,7 @@ public class DownloadReportResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
-        this.setParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
-        this.setParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+        this.setParamSimple(map, prefix + "DataResId", this.DataResId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

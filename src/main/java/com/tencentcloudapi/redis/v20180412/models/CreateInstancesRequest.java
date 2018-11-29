@@ -30,7 +30,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     private Integer ZoneId;
 
     /**
-    * 实例类型：2 – 主从版，5-单机版
+    * 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
     */
     @SerializedName("TypeId")
     @Expose
@@ -72,14 +72,14 @@ public class CreateInstancesRequest  extends AbstractModel{
     private Integer BillingMode;
 
     /**
-    * 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表 查询
+    * 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 基础网络下， subnetId无效； vpc子网下，取值以查询查询子网列表
+    * 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
     */
     @SerializedName("SubnetId")
     @Expose
@@ -114,6 +114,27 @@ public class CreateInstancesRequest  extends AbstractModel{
     private Integer VPort;
 
     /**
+    * 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+    */
+    @SerializedName("RedisShardNum")
+    @Expose
+    private Integer RedisShardNum;
+
+    /**
+    * 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+    */
+    @SerializedName("RedisReplicasNum")
+    @Expose
+    private Integer RedisReplicasNum;
+
+    /**
+    * 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+    */
+    @SerializedName("ReplicasReadonly")
+    @Expose
+    private Boolean ReplicasReadonly;
+
+    /**
      * 获取实例所属的可用区id
      * @return ZoneId 实例所属的可用区id
      */
@@ -130,16 +151,16 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型：2 – 主从版，5-单机版
-     * @return TypeId 实例类型：2 – 主从版，5-单机版
+     * 获取实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
+     * @return TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
      */
     public Integer getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * 设置实例类型：2 – 主从版，5-单机版
-     * @param TypeId 实例类型：2 – 主从版，5-单机版
+     * 设置实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
+     * @param TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
      */
     public void setTypeId(Integer TypeId) {
         this.TypeId = TypeId;
@@ -226,32 +247,32 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表 查询
-     * @return VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表 查询
+     * 获取私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
+     * @return VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表 查询
-     * @param VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表 查询
+     * 设置私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
+     * @param VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * 获取基础网络下， subnetId无效； vpc子网下，取值以查询查询子网列表
-     * @return SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询查询子网列表
+     * 获取基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
+     * @return SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * 设置基础网络下， subnetId无效； vpc子网下，取值以查询查询子网列表
-     * @param SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询查询子网列表
+     * 设置基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
+     * @param SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -322,6 +343,54 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @return RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     */
+    public Integer getRedisShardNum() {
+        return this.RedisShardNum;
+    }
+
+    /**
+     * 设置实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @param RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     */
+    public void setRedisShardNum(Integer RedisShardNum) {
+        this.RedisShardNum = RedisShardNum;
+    }
+
+    /**
+     * 获取实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @return RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     */
+    public Integer getRedisReplicasNum() {
+        return this.RedisReplicasNum;
+    }
+
+    /**
+     * 设置实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @param RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     */
+    public void setRedisReplicasNum(Integer RedisReplicasNum) {
+        this.RedisReplicasNum = RedisReplicasNum;
+    }
+
+    /**
+     * 获取是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @return ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     */
+    public Boolean getReplicasReadonly() {
+        return this.ReplicasReadonly;
+    }
+
+    /**
+     * 设置是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @param ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     */
+    public void setReplicasReadonly(Boolean ReplicasReadonly) {
+        this.ReplicasReadonly = ReplicasReadonly;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +407,9 @@ public class CreateInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamArraySimple(map, prefix + "SecurityGroupIdList.", this.SecurityGroupIdList);
         this.setParamSimple(map, prefix + "VPort", this.VPort);
+        this.setParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
+        this.setParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
+        this.setParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
 
     }
 }

@@ -86,6 +86,55 @@ public class Deal  extends AbstractModel{
     private Integer GoodsCategoryId;
 
     /**
+    * 产品详情
+    */
+    @SerializedName("ProductInfo")
+    @Expose
+    private ProductInfo [] ProductInfo;
+
+    /**
+    * 时长
+    */
+    @SerializedName("TimeSpan")
+    @Expose
+    private Float TimeSpan;
+
+    /**
+    * 时间单位
+    */
+    @SerializedName("TimeUnit")
+    @Expose
+    private String TimeUnit;
+
+    /**
+    * 货币单位
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
+
+    /**
+    * 折扣率
+    */
+    @SerializedName("Policy")
+    @Expose
+    private Float Policy;
+
+    /**
+    * 单价（分）
+    */
+    @SerializedName("Price")
+    @Expose
+    private Float Price;
+
+    /**
+    * 原价（分）
+    */
+    @SerializedName("TotalCost")
+    @Expose
+    private Float TotalCost;
+
+    /**
      * 获取订单号
      * @return OrderId 订单号
      */
@@ -230,6 +279,118 @@ public class Deal  extends AbstractModel{
     }
 
     /**
+     * 获取产品详情
+     * @return ProductInfo 产品详情
+     */
+    public ProductInfo [] getProductInfo() {
+        return this.ProductInfo;
+    }
+
+    /**
+     * 设置产品详情
+     * @param ProductInfo 产品详情
+     */
+    public void setProductInfo(ProductInfo [] ProductInfo) {
+        this.ProductInfo = ProductInfo;
+    }
+
+    /**
+     * 获取时长
+     * @return TimeSpan 时长
+     */
+    public Float getTimeSpan() {
+        return this.TimeSpan;
+    }
+
+    /**
+     * 设置时长
+     * @param TimeSpan 时长
+     */
+    public void setTimeSpan(Float TimeSpan) {
+        this.TimeSpan = TimeSpan;
+    }
+
+    /**
+     * 获取时间单位
+     * @return TimeUnit 时间单位
+     */
+    public String getTimeUnit() {
+        return this.TimeUnit;
+    }
+
+    /**
+     * 设置时间单位
+     * @param TimeUnit 时间单位
+     */
+    public void setTimeUnit(String TimeUnit) {
+        this.TimeUnit = TimeUnit;
+    }
+
+    /**
+     * 获取货币单位
+     * @return Currency 货币单位
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * 设置货币单位
+     * @param Currency 货币单位
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
+    /**
+     * 获取折扣率
+     * @return Policy 折扣率
+     */
+    public Float getPolicy() {
+        return this.Policy;
+    }
+
+    /**
+     * 设置折扣率
+     * @param Policy 折扣率
+     */
+    public void setPolicy(Float Policy) {
+        this.Policy = Policy;
+    }
+
+    /**
+     * 获取单价（分）
+     * @return Price 单价（分）
+     */
+    public Float getPrice() {
+        return this.Price;
+    }
+
+    /**
+     * 设置单价（分）
+     * @param Price 单价（分）
+     */
+    public void setPrice(Float Price) {
+        this.Price = Price;
+    }
+
+    /**
+     * 获取原价（分）
+     * @return TotalCost 原价（分）
+     */
+    public Float getTotalCost() {
+        return this.TotalCost;
+    }
+
+    /**
+     * 设置原价（分）
+     * @param TotalCost 原价（分）
+     */
+    public void setTotalCost(Float TotalCost) {
+        this.TotalCost = TotalCost;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +403,13 @@ public class Deal  extends AbstractModel{
         this.setParamSimple(map, prefix + "VoucherDecline", this.VoucherDecline);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "GoodsCategoryId", this.GoodsCategoryId);
+        this.setParamArrayObj(map, prefix + "ProductInfo.", this.ProductInfo);
+        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "Policy", this.Policy);
+        this.setParamSimple(map, prefix + "Price", this.Price);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }
 }

@@ -23,207 +23,207 @@ import java.util.HashMap;
 public class InvokeRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名，固定字段：transaction
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名，固定地段：invoke
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * cluster标识
+    * 区块链网络ID，可在区块链网络详情或列表中获取
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 合约名称
+    * 业务所属智能合约名称，可在智能合约详情或列表中获取
     */
     @SerializedName("ChaincodeName")
     @Expose
     private String ChaincodeName;
 
     /**
-    * 通道名称
+    * 业务所属通道名称，可在通道详情或列表中获取
     */
     @SerializedName("ChannelName")
     @Expose
     private String ChannelName;
 
     /**
-    * 使用的节点名称及对应组织名称
+    * 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
     */
     @SerializedName("Peers")
     @Expose
     private PeerSet [] Peers;
 
     /**
-    * 函数名
+    * 该笔交易需要调用的智能合约中的函数名称
     */
     @SerializedName("FuncName")
     @Expose
     private String FuncName;
 
     /**
-    * 函数参数列表
+    * 被调用的函数参数列表
     */
     @SerializedName("Args")
     @Expose
     private String [] Args;
 
     /**
-    * 同步调用标识
+    * 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
     */
     @SerializedName("AsyncFlag")
     @Expose
     private Integer AsyncFlag;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+     * 获取模块名，固定字段：transaction
+     * @return Module 模块名，固定字段：transaction
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名，固定字段：transaction
+     * @param Module 模块名，固定字段：transaction
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名，固定地段：invoke
+     * @return Operation 操作名，固定地段：invoke
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名，固定地段：invoke
+     * @param Operation 操作名，固定地段：invoke
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * 获取cluster标识
-     * @return ClusterId cluster标识
+     * 获取区块链网络ID，可在区块链网络详情或列表中获取
+     * @return ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * 设置cluster标识
-     * @param ClusterId cluster标识
+     * 设置区块链网络ID，可在区块链网络详情或列表中获取
+     * @param ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * 获取合约名称
-     * @return ChaincodeName 合约名称
+     * 获取业务所属智能合约名称，可在智能合约详情或列表中获取
+     * @return ChaincodeName 业务所属智能合约名称，可在智能合约详情或列表中获取
      */
     public String getChaincodeName() {
         return this.ChaincodeName;
     }
 
     /**
-     * 设置合约名称
-     * @param ChaincodeName 合约名称
+     * 设置业务所属智能合约名称，可在智能合约详情或列表中获取
+     * @param ChaincodeName 业务所属智能合约名称，可在智能合约详情或列表中获取
      */
     public void setChaincodeName(String ChaincodeName) {
         this.ChaincodeName = ChaincodeName;
     }
 
     /**
-     * 获取通道名称
-     * @return ChannelName 通道名称
+     * 获取业务所属通道名称，可在通道详情或列表中获取
+     * @return ChannelName 业务所属通道名称，可在通道详情或列表中获取
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * 设置通道名称
-     * @param ChannelName 通道名称
+     * 设置业务所属通道名称，可在通道详情或列表中获取
+     * @param ChannelName 业务所属通道名称，可在通道详情或列表中获取
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;
     }
 
     /**
-     * 获取使用的节点名称及对应组织名称
-     * @return Peers 使用的节点名称及对应组织名称
+     * 获取对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @return Peers 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public PeerSet [] getPeers() {
         return this.Peers;
     }
 
     /**
-     * 设置使用的节点名称及对应组织名称
-     * @param Peers 使用的节点名称及对应组织名称
+     * 设置对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @param Peers 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public void setPeers(PeerSet [] Peers) {
         this.Peers = Peers;
     }
 
     /**
-     * 获取函数名
-     * @return FuncName 函数名
+     * 获取该笔交易需要调用的智能合约中的函数名称
+     * @return FuncName 该笔交易需要调用的智能合约中的函数名称
      */
     public String getFuncName() {
         return this.FuncName;
     }
 
     /**
-     * 设置函数名
-     * @param FuncName 函数名
+     * 设置该笔交易需要调用的智能合约中的函数名称
+     * @param FuncName 该笔交易需要调用的智能合约中的函数名称
      */
     public void setFuncName(String FuncName) {
         this.FuncName = FuncName;
     }
 
     /**
-     * 获取函数参数列表
-     * @return Args 函数参数列表
+     * 获取被调用的函数参数列表
+     * @return Args 被调用的函数参数列表
      */
     public String [] getArgs() {
         return this.Args;
     }
 
     /**
-     * 设置函数参数列表
-     * @param Args 函数参数列表
+     * 设置被调用的函数参数列表
+     * @param Args 被调用的函数参数列表
      */
     public void setArgs(String [] Args) {
         this.Args = Args;
     }
 
     /**
-     * 获取同步调用标识
-     * @return AsyncFlag 同步调用标识
+     * 获取同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
+     * @return AsyncFlag 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      */
     public Integer getAsyncFlag() {
         return this.AsyncFlag;
     }
 
     /**
-     * 设置同步调用标识
-     * @param AsyncFlag 同步调用标识
+     * 设置同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
+     * @param AsyncFlag 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      */
     public void setAsyncFlag(Integer AsyncFlag) {
         this.AsyncFlag = AsyncFlag;

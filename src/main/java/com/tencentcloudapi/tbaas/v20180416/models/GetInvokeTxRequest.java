@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class GetInvokeTxRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名，固定字段：transaction
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名，固定地段：invoke
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * cluster标识
+    * 区块链网络ID，可在区块链网络详情或列表中获取
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 通道名称
+    * 业务所属通道名称，可在通道详情或列表中获取
     */
     @SerializedName("ChannelName")
     @Expose
     private String ChannelName;
 
     /**
-    * 节点名称
+    * 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
     */
     @SerializedName("PeerName")
     @Expose
     private String PeerName;
 
     /**
-    * 节点所属组织名称
+    * 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
     */
     @SerializedName("PeerGroup")
     @Expose
@@ -72,96 +72,96 @@ public class GetInvokeTxRequest  extends AbstractModel{
     private String TxId;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+     * 获取模块名，固定字段：transaction
+     * @return Module 模块名，固定字段：transaction
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名，固定字段：transaction
+     * @param Module 模块名，固定字段：transaction
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名，固定地段：invoke
+     * @return Operation 操作名，固定地段：invoke
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名，固定地段：invoke
+     * @param Operation 操作名，固定地段：invoke
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * 获取cluster标识
-     * @return ClusterId cluster标识
+     * 获取区块链网络ID，可在区块链网络详情或列表中获取
+     * @return ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * 设置cluster标识
-     * @param ClusterId cluster标识
+     * 设置区块链网络ID，可在区块链网络详情或列表中获取
+     * @param ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * 获取通道名称
-     * @return ChannelName 通道名称
+     * 获取业务所属通道名称，可在通道详情或列表中获取
+     * @return ChannelName 业务所属通道名称，可在通道详情或列表中获取
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * 设置通道名称
-     * @param ChannelName 通道名称
+     * 设置业务所属通道名称，可在通道详情或列表中获取
+     * @param ChannelName 业务所属通道名称，可在通道详情或列表中获取
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;
     }
 
     /**
-     * 获取节点名称
-     * @return PeerName 节点名称
+     * 获取执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @return PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public String getPeerName() {
         return this.PeerName;
     }
 
     /**
-     * 设置节点名称
-     * @param PeerName 节点名称
+     * 设置执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @param PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public void setPeerName(String PeerName) {
         this.PeerName = PeerName;
     }
 
     /**
-     * 获取节点所属组织名称
-     * @return PeerGroup 节点所属组织名称
+     * 获取执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @return PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public String getPeerGroup() {
         return this.PeerGroup;
     }
 
     /**
-     * 设置节点所属组织名称
-     * @param PeerGroup 节点所属组织名称
+     * 设置执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @param PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public void setPeerGroup(String PeerGroup) {
         this.PeerGroup = PeerGroup;

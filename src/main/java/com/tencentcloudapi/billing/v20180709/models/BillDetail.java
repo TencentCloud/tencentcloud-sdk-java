@@ -128,6 +128,27 @@ public class BillDetail  extends AbstractModel{
     private BillDetailComponent [] ComponentSet;
 
     /**
+    * 支付者UIN
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
+    * 使用者UIN
+    */
+    @SerializedName("OwnerUin")
+    @Expose
+    private String OwnerUin;
+
+    /**
+    * 操作者UIN
+    */
+    @SerializedName("OperateUin")
+    @Expose
+    private String OperateUin;
+
+    /**
      * 获取产品名称
      * @return BusinessCodeName 产品名称
      */
@@ -368,6 +389,54 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
+     * 获取支付者UIN
+     * @return PayerUin 支付者UIN
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * 设置支付者UIN
+     * @param PayerUin 支付者UIN
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
+    /**
+     * 获取使用者UIN
+     * @return OwnerUin 使用者UIN
+     */
+    public String getOwnerUin() {
+        return this.OwnerUin;
+    }
+
+    /**
+     * 设置使用者UIN
+     * @param OwnerUin 使用者UIN
+     */
+    public void setOwnerUin(String OwnerUin) {
+        this.OwnerUin = OwnerUin;
+    }
+
+    /**
+     * 获取操作者UIN
+     * @return OperateUin 操作者UIN
+     */
+    public String getOperateUin() {
+        return this.OperateUin;
+    }
+
+    /**
+     * 设置操作者UIN
+     * @param OperateUin 操作者UIN
+     */
+    public void setOperateUin(String OperateUin) {
+        this.OperateUin = OperateUin;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +455,9 @@ public class BillDetail  extends AbstractModel{
         this.setParamSimple(map, prefix + "FeeBeginTime", this.FeeBeginTime);
         this.setParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
         this.setParamArrayObj(map, prefix + "ComponentSet.", this.ComponentSet);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
+        this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+        this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
 
     }
 }
