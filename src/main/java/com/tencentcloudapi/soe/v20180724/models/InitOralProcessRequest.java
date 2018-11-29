@@ -58,7 +58,7 @@ public class InitOralProcessRequest  extends AbstractModel{
     private Float ScoreCoeff;
 
     /**
-    * 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+    * 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
     */
     @SerializedName("SoeAppId")
     @Expose
@@ -70,6 +70,13 @@ public class InitOralProcessRequest  extends AbstractModel{
     @SerializedName("IsLongLifeSession")
     @Expose
     private Integer IsLongLifeSession;
+
+    /**
+    * 音频存储模式，0：不存储，1：存储到公共对象存储
+    */
+    @SerializedName("StorageMode")
+    @Expose
+    private Integer StorageMode;
 
     /**
      * 获取语音段唯一标识，一段语音一个SessionId
@@ -152,16 +159,16 @@ public class InitOralProcessRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
-     * @return SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
+     * @return SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
      */
     public String getSoeAppId() {
         return this.SoeAppId;
     }
 
     /**
-     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
-     * @param SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
+     * @param SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
      */
     public void setSoeAppId(String SoeAppId) {
         this.SoeAppId = SoeAppId;
@@ -184,6 +191,22 @@ public class InitOralProcessRequest  extends AbstractModel{
     }
 
     /**
+     * 获取音频存储模式，0：不存储，1：存储到公共对象存储
+     * @return StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储
+     */
+    public Integer getStorageMode() {
+        return this.StorageMode;
+    }
+
+    /**
+     * 设置音频存储模式，0：不存储，1：存储到公共对象存储
+     * @param StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储
+     */
+    public void setStorageMode(Integer StorageMode) {
+        this.StorageMode = StorageMode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class InitOralProcessRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ScoreCoeff", this.ScoreCoeff);
         this.setParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
         this.setParamSimple(map, prefix + "IsLongLifeSession", this.IsLongLifeSession);
+        this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
 
     }
 }

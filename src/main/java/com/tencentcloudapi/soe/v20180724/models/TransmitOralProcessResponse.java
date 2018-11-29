@@ -58,6 +58,13 @@ public class TransmitOralProcessResponse  extends AbstractModel{
     private String SessionId;
 
     /**
+    * 保存语音音频文件下载地址
+    */
+    @SerializedName("AudioUrl")
+    @Expose
+    private String AudioUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -145,6 +152,22 @@ public class TransmitOralProcessResponse  extends AbstractModel{
     }
 
     /**
+     * 获取保存语音音频文件下载地址
+     * @return AudioUrl 保存语音音频文件下载地址
+     */
+    public String getAudioUrl() {
+        return this.AudioUrl;
+    }
+
+    /**
+     * 设置保存语音音频文件下载地址
+     * @param AudioUrl 保存语音音频文件下载地址
+     */
+    public void setAudioUrl(String AudioUrl) {
+        this.AudioUrl = AudioUrl;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -169,6 +192,7 @@ public class TransmitOralProcessResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "PronCompletion", this.PronCompletion);
         this.setParamArrayObj(map, prefix + "Words.", this.Words);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

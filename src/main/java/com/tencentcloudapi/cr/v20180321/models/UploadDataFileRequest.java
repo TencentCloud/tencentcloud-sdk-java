@@ -55,7 +55,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     */
     @SerializedName("File")
     @Expose
-    private binary File;
+    private String File;
 
     /**
     * 文件上传地址
@@ -132,7 +132,7 @@ public class UploadDataFileRequest  extends AbstractModel{
      * 获取文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
      * @return File 文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
      */
-    public binary getFile() {
+    public String getFile() {
         return this.File;
     }
 
@@ -140,7 +140,7 @@ public class UploadDataFileRequest  extends AbstractModel{
      * 设置文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
      * @param File 文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
      */
-    public void setFile(binary File) {
+    public void setFile(String File) {
         this.File = File;
     }
 
