@@ -13,19 +13,19 @@ public class InitOralProcess {
     public static void main(String[] args) {
         try {
             // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
-            Credential cred = new Credential("secretId", "secretKey");
+            Credential cred = new Credential("AKIDq9MQI1PuGTUJvOQpmW8kFYihT2PZ9QJ6", "jGeqqfHm7GDxYxBGD6tXzEHBtRn041mL");
 
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
             HttpProfile httpProfile = new HttpProfile();
-            httpProfile.setReqMethod("GET"); // post请求(默认为post请求)
+            httpProfile.setReqMethod("POST"); // post请求(默认为post请求)
             httpProfile.setConnTimeout(30); // 请求连接超时时间，单位为秒(默认60秒)
             httpProfile.setEndpoint("soe.tencentcloudapi.com"); // 指定接入地域域名(默认就近接入)
 
             // 实例化要请求产品的client对象,clientProfile是可选的
             SoeClient client = new SoeClient(cred, "");
             InitOralProcessRequest req = new InitOralProcessRequest();
-            req.setSessionId("1234567");
-            req.setRefText("智聆口语评测");
+            req.setSessionId("1");
+            req.setRefText("since");
             req.setWorkMode(1);
             req.setEvalMode(0);
             req.setScoreCoeff(2.0f);
