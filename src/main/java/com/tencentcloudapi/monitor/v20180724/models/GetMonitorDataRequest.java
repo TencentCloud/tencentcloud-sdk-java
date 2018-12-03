@@ -51,7 +51,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     private Integer Period;
 
     /**
-    * 起始时间，如 2018-01-01 00:00:00
+    * 起始时间，如2018-09-22T19:51:23+08:00
     */
     @SerializedName("StartTime")
     @Expose
@@ -129,16 +129,16 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始时间，如 2018-01-01 00:00:00
-     * @return StartTime 起始时间，如 2018-01-01 00:00:00
+     * 获取起始时间，如2018-09-22T19:51:23+08:00
+     * @return StartTime 起始时间，如2018-09-22T19:51:23+08:00
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * 设置起始时间，如 2018-01-01 00:00:00
-     * @param StartTime 起始时间，如 2018-01-01 00:00:00
+     * 设置起始时间，如2018-09-22T19:51:23+08:00
+     * @param StartTime 起始时间，如2018-09-22T19:51:23+08:00
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
