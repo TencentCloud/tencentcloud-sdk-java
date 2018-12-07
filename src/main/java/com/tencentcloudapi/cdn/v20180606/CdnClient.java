@@ -97,6 +97,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeMapInfo 用于查询省份对应的 ID，运营商对应的 ID 信息。
+     * @param req DescribeMapInfoRequest
+     * @return DescribeMapInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMapInfoResponse  DescribeMapInfo(DescribeMapInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMapInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMapInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMapInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeOriginData 用于查询 CDN 实时回源监控数据，支持以下指标查询：
 
 + 回源流量（单位为 byte）
@@ -118,6 +136,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeOriginDataResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeOriginData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribePayType 用于查询用户的计费类型，计费周期等信息。
+     * @param req DescribePayTypeRequest
+     * @return DescribePayTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePayTypeResponse  DescribePayType(DescribePayTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePayTypeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePayTypeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePayType"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -267,6 +267,24 @@ public class YoumallClient extends AbstractClient{
     }
 
     /**
+     *通过上传人脸图片检索系统face id、顾客身份信息及底图
+     * @param req DescribePersonInfoByFacePictureRequest
+     * @return DescribePersonInfoByFacePictureResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePersonInfoByFacePictureResponse  DescribePersonInfoByFacePicture(DescribePersonInfoByFacePictureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePersonInfoByFacePictureResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePersonInfoByFacePictureResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePersonInfoByFacePicture"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *输出开始时间到结束时间段内的进出场数据。
      * @param req DescribePersonTraceRequest
      * @return DescribePersonTraceResponse

@@ -169,6 +169,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *删除直播拉流配置
+     * @param req DeletePullStreamConfigRequest
+     * @return DeletePullStreamConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePullStreamConfigResponse  DeletePullStreamConfig(DeletePullStreamConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePullStreamConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePullStreamConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePullStreamConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询播放鉴权key
      * @param req DescribeLivePlayAuthKeyRequest
      * @return DescribeLivePlayAuthKeyResponse

@@ -38,7 +38,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String LoadBalancerType;
 
     /**
-    * 1：应用型，0：传统型，-1：全部类型。
+    * 1：应用型，0：传统型。
     */
     @SerializedName("Forward")
     @Expose
@@ -165,16 +165,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取1：应用型，0：传统型，-1：全部类型。
-     * @return Forward 1：应用型，0：传统型，-1：全部类型。
+     * 获取1：应用型，0：传统型。
+     * @return Forward 1：应用型，0：传统型。
      */
     public Integer getForward() {
         return this.Forward;
     }
 
     /**
-     * 设置1：应用型，0：传统型，-1：全部类型。
-     * @param Forward 1：应用型，0：传统型，-1：全部类型。
+     * 设置1：应用型，0：传统型。
+     * @param Forward 1：应用型，0：传统型。
      */
     public void setForward(Integer Forward) {
         this.Forward = Forward;

@@ -125,6 +125,18 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     private String [] InstanceTypes;
 
     /**
+    * 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
+
+实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
+如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+    */
+    @SerializedName("InstanceTypesCheckPolicy")
+    @Expose
+    private String InstanceTypesCheckPolicy;
+
+    /**
      * 获取启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      * @return LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      */
@@ -365,6 +377,42 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
+
+实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
+如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+     * @return InstanceTypesCheckPolicy 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
+
+实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
+如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+     */
+    public String getInstanceTypesCheckPolicy() {
+        return this.InstanceTypesCheckPolicy;
+    }
+
+    /**
+     * 设置实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
+
+实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
+如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+     * @param InstanceTypesCheckPolicy 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
+
+实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
+如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+     */
+    public void setInstanceTypesCheckPolicy(String InstanceTypesCheckPolicy) {
+        this.InstanceTypesCheckPolicy = InstanceTypesCheckPolicy;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -382,6 +430,7 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
+        this.setParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
 
     }
 }

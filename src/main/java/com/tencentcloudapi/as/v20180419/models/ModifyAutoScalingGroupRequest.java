@@ -86,7 +86,9 @@ public class ModifyAutoScalingGroupRequest  extends AbstractModel{
     private String [] SubnetIds;
 
     /**
-    * 销毁策略，目前长度上限为1
+    * 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE。
+<br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
+<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
     */
     @SerializedName("TerminationPolicies")
     @Expose
@@ -114,6 +116,18 @@ public class ModifyAutoScalingGroupRequest  extends AbstractModel{
     @SerializedName("RetryPolicy")
     @Expose
     private String RetryPolicy;
+
+    /**
+    * 可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。在伸缩组实际变更资源相关字段时（启动配置、可用区、子网）发挥作用。
+<br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
+
+可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
+如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
+    */
+    @SerializedName("ZonesCheckPolicy")
+    @Expose
+    private String ZonesCheckPolicy;
 
     /**
      * 获取伸缩组ID
@@ -260,16 +274,24 @@ public class ModifyAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取销毁策略，目前长度上限为1
-     * @return TerminationPolicies 销毁策略，目前长度上限为1
+     * 获取销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE。
+<br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
+<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
+     * @return TerminationPolicies 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE。
+<br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
+<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
      */
     public String [] getTerminationPolicies() {
         return this.TerminationPolicies;
     }
 
     /**
-     * 设置销毁策略，目前长度上限为1
-     * @param TerminationPolicies 销毁策略，目前长度上限为1
+     * 设置销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE。
+<br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
+<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
+     * @param TerminationPolicies 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE。
+<br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
+<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
      */
     public void setTerminationPolicies(String [] TerminationPolicies) {
         this.TerminationPolicies = TerminationPolicies;
@@ -332,6 +354,42 @@ public class ModifyAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
+     * 获取可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。在伸缩组实际变更资源相关字段时（启动配置、可用区、子网）发挥作用。
+<br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
+
+可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
+如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
+     * @return ZonesCheckPolicy 可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。在伸缩组实际变更资源相关字段时（启动配置、可用区、子网）发挥作用。
+<br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
+
+可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
+如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
+     */
+    public String getZonesCheckPolicy() {
+        return this.ZonesCheckPolicy;
+    }
+
+    /**
+     * 设置可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。在伸缩组实际变更资源相关字段时（启动配置、可用区、子网）发挥作用。
+<br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
+
+可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
+如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
+     * @param ZonesCheckPolicy 可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。在伸缩组实际变更资源相关字段时（启动配置、可用区、子网）发挥作用。
+<br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
+<br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
+
+可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
+如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
+     */
+    public void setZonesCheckPolicy(String ZonesCheckPolicy) {
+        this.ZonesCheckPolicy = ZonesCheckPolicy;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -348,6 +406,7 @@ public class ModifyAutoScalingGroupRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
+        this.setParamSimple(map, prefix + "ZonesCheckPolicy", this.ZonesCheckPolicy);
 
     }
 }

@@ -51,6 +51,13 @@ public class PlayAuthKeyInfo  extends AbstractModel{
     private Integer AuthDelta;
 
     /**
+    * 鉴权BackKey。
+    */
+    @SerializedName("AuthBackKey")
+    @Expose
+    private String AuthBackKey;
+
+    /**
      * 获取域名。
      * @return DomainName 域名。
      */
@@ -115,6 +122,22 @@ public class PlayAuthKeyInfo  extends AbstractModel{
     }
 
     /**
+     * 获取鉴权BackKey。
+     * @return AuthBackKey 鉴权BackKey。
+     */
+    public String getAuthBackKey() {
+        return this.AuthBackKey;
+    }
+
+    /**
+     * 设置鉴权BackKey。
+     * @param AuthBackKey 鉴权BackKey。
+     */
+    public void setAuthBackKey(String AuthBackKey) {
+        this.AuthBackKey = AuthBackKey;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class PlayAuthKeyInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "AuthKey", this.AuthKey);
         this.setParamSimple(map, prefix + "AuthDelta", this.AuthDelta);
+        this.setParamSimple(map, prefix + "AuthBackKey", this.AuthBackKey);
 
     }
 }

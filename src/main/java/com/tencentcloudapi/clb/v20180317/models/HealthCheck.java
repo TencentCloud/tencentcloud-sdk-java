@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class HealthCheck  extends AbstractModel{
 
     /**
-    * 是否开启健康检查：1（开启）、0（关闭）。默认值 1，表示打开。
+    * 是否开启健康检查：1（开启）、0（关闭）。
     */
     @SerializedName("HealthSwitch")
     @Expose
@@ -87,16 +87,16 @@ public class HealthCheck  extends AbstractModel{
     private String HttpCheckMethod;
 
     /**
-     * 获取是否开启健康检查：1（开启）、0（关闭）。默认值 1，表示打开。
-     * @return HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。默认值 1，表示打开。
+     * 获取是否开启健康检查：1（开启）、0（关闭）。
+     * @return HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
      */
     public Integer getHealthSwitch() {
         return this.HealthSwitch;
     }
 
     /**
-     * 设置是否开启健康检查：1（开启）、0（关闭）。默认值 1，表示打开。
-     * @param HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。默认值 1，表示打开。
+     * 设置是否开启健康检查：1（开启）、0（关闭）。
+     * @param HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
      */
     public void setHealthSwitch(Integer HealthSwitch) {
         this.HealthSwitch = HealthSwitch;

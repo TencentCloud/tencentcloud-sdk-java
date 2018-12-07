@@ -376,6 +376,27 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyLaunchConfigurationAttributes）用于修改启动配置部分属性。
+
+* 修改启动配置后，已经使用该启动配置扩容的存量实例不会发生变更，此后使用该启动配置的新增实例会按照新的配置进行扩容。
+* 本接口支持修改部分简单类型。
+     * @param req ModifyLaunchConfigurationAttributesRequest
+     * @return ModifyLaunchConfigurationAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLaunchConfigurationAttributesResponse  ModifyLaunchConfigurationAttributes(ModifyLaunchConfigurationAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLaunchConfigurationAttributesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLaunchConfigurationAttributesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLaunchConfigurationAttributes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyScheduledAction）用于修改定时任务。
      * @param req ModifyScheduledActionRequest
      * @return ModifyScheduledActionResponse

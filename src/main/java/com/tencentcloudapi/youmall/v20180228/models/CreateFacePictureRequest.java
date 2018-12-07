@@ -30,14 +30,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     private String CompanyId;
 
     /**
-    * 店铺ID
-    */
-    @SerializedName("ShopId")
-    @Expose
-    private Integer ShopId;
-
-    /**
-    * 人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
+    * 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
     */
     @SerializedName("PersonType")
     @Expose
@@ -56,6 +49,13 @@ public class CreateFacePictureRequest  extends AbstractModel{
     @SerializedName("PictureName")
     @Expose
     private String PictureName;
+
+    /**
+    * 店铺ID，如果不填表示操作集团身份库
+    */
+    @SerializedName("ShopId")
+    @Expose
+    private Integer ShopId;
 
     /**
     * 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
@@ -81,32 +81,16 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取店铺ID
-     * @return ShopId 店铺ID
-     */
-    public Integer getShopId() {
-        return this.ShopId;
-    }
-
-    /**
-     * 设置店铺ID
-     * @param ShopId 店铺ID
-     */
-    public void setShopId(Integer ShopId) {
-        this.ShopId = ShopId;
-    }
-
-    /**
-     * 获取人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
-     * @return PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
+     * 获取人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+     * @return PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
     public Integer getPersonType() {
         return this.PersonType;
     }
 
     /**
-     * 设置人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
-     * @param PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
+     * 设置人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+     * @param PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
     public void setPersonType(Integer PersonType) {
         this.PersonType = PersonType;
@@ -145,6 +129,22 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
+     * 获取店铺ID，如果不填表示操作集团身份库
+     * @return ShopId 店铺ID，如果不填表示操作集团身份库
+     */
+    public Integer getShopId() {
+        return this.ShopId;
+    }
+
+    /**
+     * 设置店铺ID，如果不填表示操作集团身份库
+     * @param ShopId 店铺ID，如果不填表示操作集团身份库
+     */
+    public void setShopId(Integer ShopId) {
+        this.ShopId = ShopId;
+    }
+
+    /**
      * 获取是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
      * @return IsForceUpload 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
      */
@@ -165,10 +165,10 @@ public class CreateFacePictureRequest  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);
-        this.setParamSimple(map, prefix + "ShopId", this.ShopId);
         this.setParamSimple(map, prefix + "PersonType", this.PersonType);
         this.setParamSimple(map, prefix + "Picture", this.Picture);
         this.setParamSimple(map, prefix + "PictureName", this.PictureName);
+        this.setParamSimple(map, prefix + "ShopId", this.ShopId);
         this.setParamSimple(map, prefix + "IsForceUpload", this.IsForceUpload);
 
     }

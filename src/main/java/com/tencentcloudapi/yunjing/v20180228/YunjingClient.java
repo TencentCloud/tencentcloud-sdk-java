@@ -139,6 +139,24 @@ public class YunjingClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DeleteMaliciousRequests) 用于删除恶意请求记录。
+     * @param req DeleteMaliciousRequestsRequest
+     * @return DeleteMaliciousRequestsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMaliciousRequestsResponse  DeleteMaliciousRequests(DeleteMaliciousRequestsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteMaliciousRequestsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteMaliciousRequestsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteMaliciousRequests"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DeleteMalwares) 用于删除木马记录。
      * @param req DeleteMalwaresRequest
      * @return DeleteMalwaresResponse
@@ -402,6 +420,24 @@ public class YunjingClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeMachinesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeMachines"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeMaliciousRequests) 用于获取恶意请求数据。
+     * @param req DescribeMaliciousRequestsRequest
+     * @return DescribeMaliciousRequestsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaliciousRequestsResponse  DescribeMaliciousRequests(DescribeMaliciousRequestsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMaliciousRequestsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMaliciousRequestsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMaliciousRequests"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -790,6 +826,24 @@ public class YunjingClient extends AbstractClient{
     }
 
     /**
+     *本接口 (ExportMaliciousRequests) 用于导出下载恶意请求文件。
+     * @param req ExportMaliciousRequestsRequest
+     * @return ExportMaliciousRequestsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportMaliciousRequestsResponse  ExportMaliciousRequests(ExportMaliciousRequestsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportMaliciousRequestsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportMaliciousRequestsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ExportMaliciousRequests"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (IngoreImpactedHosts) 用于忽略漏洞。
      * @param req IgnoreImpactedHostsRequest
      * @return IgnoreImpactedHostsResponse
@@ -801,6 +855,24 @@ public class YunjingClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<IgnoreImpactedHostsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "IgnoreImpactedHosts"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (InquiryPriceOpenProVersionPrepaid) 用于开通专业版询价(预付费)。
+     * @param req InquiryPriceOpenProVersionPrepaidRequest
+     * @return InquiryPriceOpenProVersionPrepaidResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceOpenProVersionPrepaidResponse  InquiryPriceOpenProVersionPrepaid(InquiryPriceOpenProVersionPrepaidRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceOpenProVersionPrepaid"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -862,6 +934,42 @@ public class YunjingClient extends AbstractClient{
     }
 
     /**
+     *本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
+     * @param req ModifyProVersionRenewFlagRequest
+     * @return ModifyProVersionRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProVersionRenewFlagResponse  ModifyProVersionRenewFlag(ModifyProVersionRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyProVersionRenewFlagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyProVersionRenewFlagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyProVersionRenewFlag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。
+     * @param req OpenProVersionPrepaidRequest
+     * @return OpenProVersionPrepaidResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenProVersionPrepaidResponse  OpenProVersionPrepaid(OpenProVersionPrepaidRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenProVersionPrepaidResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenProVersionPrepaidResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OpenProVersionPrepaid"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（RecoverMalwares）用于批量恢复已经被隔离的木马文件。
      * @param req RecoverMalwaresRequest
      * @return RecoverMalwaresResponse
@@ -873,6 +981,24 @@ public class YunjingClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RecoverMalwaresResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RecoverMalwares"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (RenewProVersion) 用于续费专业版(包年包月)。
+     * @param req RenewProVersionRequest
+     * @return RenewProVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewProVersionResponse  RenewProVersion(RenewProVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewProVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewProVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RenewProVersion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -916,6 +1042,24 @@ public class YunjingClient extends AbstractClient{
     }
 
     /**
+     *本接口 (TrustMaliciousRequest) 用于恶意请求添加信任。
+     * @param req TrustMaliciousRequestRequest
+     * @return TrustMaliciousRequestResponse
+     * @throws TencentCloudSDKException
+     */
+    public TrustMaliciousRequestResponse  TrustMaliciousRequest(TrustMaliciousRequestRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TrustMaliciousRequestResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TrustMaliciousRequestResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TrustMaliciousRequest"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(TrustMalwares)将被识别木马文件设为信任。
      * @param req TrustMalwaresRequest
      * @return TrustMalwaresResponse
@@ -927,6 +1071,24 @@ public class YunjingClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<TrustMalwaresResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "TrustMalwares"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (UntrustMaliciousRequest) 用于取消信任恶意请求。
+     * @param req UntrustMaliciousRequestRequest
+     * @return UntrustMaliciousRequestResponse
+     * @throws TencentCloudSDKException
+     */
+    public UntrustMaliciousRequestResponse  UntrustMaliciousRequest(UntrustMaliciousRequestRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UntrustMaliciousRequestResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UntrustMaliciousRequestResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UntrustMaliciousRequest"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

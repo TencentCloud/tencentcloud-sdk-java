@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class CreateImageRequest  extends AbstractModel{
 
     /**
-    * 需要制作镜像的实例ID
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
     * 镜像名称
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
+
+    /**
+    * 需要制作镜像的实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
 
     /**
     * 镜像描述
@@ -65,27 +65,25 @@ public class CreateImageRequest  extends AbstractModel{
     private String Reboot;
 
     /**
+    * 实例需要制作镜像的数据盘Id
+    */
+    @SerializedName("DataDiskIds")
+    @Expose
+    private String [] DataDiskIds;
+
+    /**
+    * 需要制作镜像的快照Id,必须包含一个系统盘快照
+    */
+    @SerializedName("SnapshotIds")
+    @Expose
+    private String [] SnapshotIds;
+
+    /**
     * DryRun
     */
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
-
-    /**
-     * 获取需要制作镜像的实例ID
-     * @return InstanceId 需要制作镜像的实例ID
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * 设置需要制作镜像的实例ID
-     * @param InstanceId 需要制作镜像的实例ID
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
 
     /**
      * 获取镜像名称
@@ -101,6 +99,22 @@ public class CreateImageRequest  extends AbstractModel{
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
+    }
+
+    /**
+     * 获取需要制作镜像的实例ID
+     * @return InstanceId 需要制作镜像的实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * 设置需要制作镜像的实例ID
+     * @param InstanceId 需要制作镜像的实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -168,6 +182,38 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例需要制作镜像的数据盘Id
+     * @return DataDiskIds 实例需要制作镜像的数据盘Id
+     */
+    public String [] getDataDiskIds() {
+        return this.DataDiskIds;
+    }
+
+    /**
+     * 设置实例需要制作镜像的数据盘Id
+     * @param DataDiskIds 实例需要制作镜像的数据盘Id
+     */
+    public void setDataDiskIds(String [] DataDiskIds) {
+        this.DataDiskIds = DataDiskIds;
+    }
+
+    /**
+     * 获取需要制作镜像的快照Id,必须包含一个系统盘快照
+     * @return SnapshotIds 需要制作镜像的快照Id,必须包含一个系统盘快照
+     */
+    public String [] getSnapshotIds() {
+        return this.SnapshotIds;
+    }
+
+    /**
+     * 设置需要制作镜像的快照Id,必须包含一个系统盘快照
+     * @param SnapshotIds 需要制作镜像的快照Id,必须包含一个系统盘快照
+     */
+    public void setSnapshotIds(String [] SnapshotIds) {
+        this.SnapshotIds = SnapshotIds;
+    }
+
+    /**
      * 获取DryRun
      * @return DryRun DryRun
      */
@@ -187,12 +233,14 @@ public class CreateImageRequest  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
         this.setParamSimple(map, prefix + "ForcePoweroff", this.ForcePoweroff);
         this.setParamSimple(map, prefix + "Sysprep", this.Sysprep);
         this.setParamSimple(map, prefix + "Reboot", this.Reboot);
+        this.setParamArraySimple(map, prefix + "DataDiskIds.", this.DataDiskIds);
+        this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
