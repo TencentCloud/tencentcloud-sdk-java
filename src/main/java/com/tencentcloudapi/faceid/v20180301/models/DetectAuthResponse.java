@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.yunjing.v20180228.models;
+package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceOpenProVersionPrepaidResponse  extends AbstractModel{
+public class DetectAuthResponse  extends AbstractModel{
 
     /**
-    * 预支费用的原价，单位：元。
+    * 用于跳转的URL。只能于微信中打开。
     */
-    @SerializedName("OriginalPrice")
+    @SerializedName("Url")
     @Expose
-    private Float OriginalPrice;
+    private String Url;
 
     /**
-    * 预支费用的折扣价，单位：元。
+    * 业务流水号。在获取认证信息接口中作为BizToken传入
     */
-    @SerializedName("DiscountPrice")
+    @SerializedName("BizToken")
     @Expose
-    private Float DiscountPrice;
+    private String BizToken;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class InquiryPriceOpenProVersionPrepaidResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取预支费用的原价，单位：元。
-     * @return OriginalPrice 预支费用的原价，单位：元。
+     * 获取用于跳转的URL。只能于微信中打开。
+     * @return Url 用于跳转的URL。只能于微信中打开。
      */
-    public Float getOriginalPrice() {
-        return this.OriginalPrice;
+    public String getUrl() {
+        return this.Url;
     }
 
     /**
-     * 设置预支费用的原价，单位：元。
-     * @param OriginalPrice 预支费用的原价，单位：元。
+     * 设置用于跳转的URL。只能于微信中打开。
+     * @param Url 用于跳转的URL。只能于微信中打开。
      */
-    public void setOriginalPrice(Float OriginalPrice) {
-        this.OriginalPrice = OriginalPrice;
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     /**
-     * 获取预支费用的折扣价，单位：元。
-     * @return DiscountPrice 预支费用的折扣价，单位：元。
+     * 获取业务流水号。在获取认证信息接口中作为BizToken传入
+     * @return BizToken 业务流水号。在获取认证信息接口中作为BizToken传入
      */
-    public Float getDiscountPrice() {
-        return this.DiscountPrice;
+    public String getBizToken() {
+        return this.BizToken;
     }
 
     /**
-     * 设置预支费用的折扣价，单位：元。
-     * @param DiscountPrice 预支费用的折扣价，单位：元。
+     * 设置业务流水号。在获取认证信息接口中作为BizToken传入
+     * @param BizToken 业务流水号。在获取认证信息接口中作为BizToken传入
      */
-    public void setDiscountPrice(Float DiscountPrice) {
-        this.DiscountPrice = DiscountPrice;
+    public void setBizToken(String BizToken) {
+        this.BizToken = BizToken;
     }
 
     /**
@@ -95,8 +95,8 @@ public class InquiryPriceOpenProVersionPrepaidResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-        this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "BizToken", this.BizToken);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

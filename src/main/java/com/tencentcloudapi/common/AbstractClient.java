@@ -52,7 +52,7 @@ import com.tencentcloudapi.common.Credential;
 abstract public class AbstractClient {
 
     public static final int HTTP_RSP_OK = 200;
-    public static final String SDK_VERSION = "SDK_JAVA_3.0.39";
+    public static final String SDK_VERSION = "SDK_JAVA_3.0.40";
 
 
     private Credential credential;
