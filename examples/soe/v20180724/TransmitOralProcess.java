@@ -14,7 +14,7 @@ public class TransmitOralProcess {
     public static void main(String[] args) {
         try {
             // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
-            Credential cred = new Credential("AKIDq9MQI1PuGTUJvOQpmW8kFYihT2PZ9QJ6", "jGeqqfHm7GDxYxBGD6tXzEHBtRn041mL");
+            Credential cred = new Credential("secretId", "secretKey");
 
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
             HttpProfile httpProfile = new HttpProfile();
