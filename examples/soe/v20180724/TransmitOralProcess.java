@@ -2,6 +2,7 @@ package soe.v20180724;
 
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.profile.HttpProfile;
 import com.tencentcloudapi.soe.v20180724.SoeClient;
 import com.tencentcloudapi.soe.v20180724.models.TransmitOralProcessRequest;
@@ -14,7 +15,7 @@ public class TransmitOralProcess {
     public static void main(String[] args) {
         try {
             // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
-            Credential cred = new Credential("secretId", "secretKey");
+            Credential cred = new Credential("...", "...");
 
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
             HttpProfile httpProfile = new HttpProfile();
@@ -22,8 +23,10 @@ public class TransmitOralProcess {
             httpProfile.setConnTimeout(30); // 请求连接超时时间，单位为秒(默认60秒)
             httpProfile.setEndpoint("soe.tencentcloudapi.com"); // 指定接入地域域名(默认就近接入)
 
+            ClientProfile clientProfile = new ClientProfile();
+            clientProfile.setUnsignedPayload(true);
             // 实例化要请求产品的client对象,clientProfile是可选的
-            SoeClient client = new SoeClient(cred, "ap-guangzhou");
+            SoeClient client = new SoeClient(cred, "ap-guangzhou",clientProfile);
             TransmitOralProcessRequest req = new TransmitOralProcessRequest();
 
             req.setIsEnd(1);

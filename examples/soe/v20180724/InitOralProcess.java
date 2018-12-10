@@ -13,7 +13,7 @@ public class InitOralProcess {
     public static void main(String[] args) {
         try {
             // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
-            Credential cred = new Credential("secretId", "secretKey");
+            Credential cred = new Credential("...", "...");
 
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
             HttpProfile httpProfile = new HttpProfile();
