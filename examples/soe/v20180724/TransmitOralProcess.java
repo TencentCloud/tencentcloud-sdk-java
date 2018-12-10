@@ -7,8 +7,6 @@ import com.tencentcloudapi.soe.v20180724.SoeClient;
 import com.tencentcloudapi.soe.v20180724.models.TransmitOralProcessRequest;
 import com.tencentcloudapi.soe.v20180724.models.TransmitOralProcessResponse;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Base64;
 
 
 public class TransmitOralProcess {
@@ -27,6 +25,7 @@ public class TransmitOralProcess {
             // 实例化要请求产品的client对象,clientProfile是可选的
             SoeClient client = new SoeClient(cred, "ap-guangzhou");
             TransmitOralProcessRequest req = new TransmitOralProcessRequest();
+
             req.setIsEnd(1);
             req.setSeqId(1);
             req.setSessionId("1");
