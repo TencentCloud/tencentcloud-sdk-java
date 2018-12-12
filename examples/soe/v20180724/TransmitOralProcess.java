@@ -20,13 +20,14 @@ public class TransmitOralProcess {
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
             HttpProfile httpProfile = new HttpProfile();
             httpProfile.setReqMethod("POST"); // post请求(默认为post请求)
-            httpProfile.setConnTimeout(30); // 请求连接超时时间，单位为秒(默认60秒)
-            httpProfile.setEndpoint("soe.tencentcloudapi.com"); // 指定接入地域域名(默认就近接入)
+            httpProfile.setConnTimeout(60); // 请求连接超时时间，单位为秒(默认60秒)
+            httpProfile.setEndpoint("soe.ap-beijing.tencentcloudapi.com"); // 指定接入地域域名(默认就近接入)
 
             ClientProfile clientProfile = new ClientProfile();
             clientProfile.setUnsignedPayload(true);
+            clientProfile.setHttpProfile(httpProfile);
             // 实例化要请求产品的client对象,clientProfile是可选的
-            SoeClient client = new SoeClient(cred, "ap-guangzhou",clientProfile);
+            SoeClient client = new SoeClient(cred, "",clientProfile);
             TransmitOralProcessRequest req = new TransmitOralProcessRequest();
 
             req.setIsEnd(1);
