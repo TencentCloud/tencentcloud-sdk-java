@@ -72,6 +72,20 @@ public class CreateDeviceRequest  extends AbstractModel{
     private String LoraDevEui;
 
     /**
+    * LoRa设备的MoteType
+    */
+    @SerializedName("LoraMoteType")
+    @Expose
+    private Integer LoraMoteType;
+
+    /**
+    * 创建LoRa设备需要skey
+    */
+    @SerializedName("Skey")
+    @Expose
+    private String Skey;
+
+    /**
      * 获取产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      * @return ProductId 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      */
@@ -184,6 +198,38 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取LoRa设备的MoteType
+     * @return LoraMoteType LoRa设备的MoteType
+     */
+    public Integer getLoraMoteType() {
+        return this.LoraMoteType;
+    }
+
+    /**
+     * 设置LoRa设备的MoteType
+     * @param LoraMoteType LoRa设备的MoteType
+     */
+    public void setLoraMoteType(Integer LoraMoteType) {
+        this.LoraMoteType = LoraMoteType;
+    }
+
+    /**
+     * 获取创建LoRa设备需要skey
+     * @return Skey 创建LoRa设备需要skey
+     */
+    public String getSkey() {
+        return this.Skey;
+    }
+
+    /**
+     * 设置创建LoRa设备需要skey
+     * @param Skey 创建LoRa设备需要skey
+     */
+    public void setSkey(String Skey) {
+        this.Skey = Skey;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class CreateDeviceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamSimple(map, prefix + "Imei", this.Imei);
         this.setParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
+        this.setParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
+        this.setParamSimple(map, prefix + "Skey", this.Skey);
 
     }
 }

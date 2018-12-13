@@ -72,6 +72,20 @@ public class ProductProperties  extends AbstractModel{
     private String Appeui;
 
     /**
+    * 产品绑定的物模型ID，-1表示不绑定
+    */
+    @SerializedName("ModelId")
+    @Expose
+    private String ModelId;
+
+    /**
+    * 产品绑定的物模型名称
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
+
+    /**
      * 获取产品描述
      * @return ProductDescription 产品描述
      */
@@ -184,6 +198,38 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
+     * 获取产品绑定的物模型ID，-1表示不绑定
+     * @return ModelId 产品绑定的物模型ID，-1表示不绑定
+     */
+    public String getModelId() {
+        return this.ModelId;
+    }
+
+    /**
+     * 设置产品绑定的物模型ID，-1表示不绑定
+     * @param ModelId 产品绑定的物模型ID，-1表示不绑定
+     */
+    public void setModelId(String ModelId) {
+        this.ModelId = ModelId;
+    }
+
+    /**
+     * 获取产品绑定的物模型名称
+     * @return ModelName 产品绑定的物模型名称
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * 设置产品绑定的物模型名称
+     * @param ModelName 产品绑定的物模型名称
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class ProductProperties  extends AbstractModel{
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "Appeui", this.Appeui);
+        this.setParamSimple(map, prefix + "ModelId", this.ModelId);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
 
     }
 }

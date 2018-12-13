@@ -261,6 +261,13 @@ public class DBInstance  extends AbstractModel{
     private String StatusDesc;
 
     /**
+    * 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+    */
+    @SerializedName("WanStatus")
+    @Expose
+    private Integer WanStatus;
+
+    /**
      * 获取实例 Id，唯一标识一个 TDSQL 实例
      * @return InstanceId 实例 Id，唯一标识一个 TDSQL 实例
      */
@@ -805,6 +812,22 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
+     * 获取外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+     * @return WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+     */
+    public Integer getWanStatus() {
+        return this.WanStatus;
+    }
+
+    /**
+     * 设置外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+     * @param WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+     */
+    public void setWanStatus(Integer WanStatus) {
+        this.WanStatus = WanStatus;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -842,6 +865,7 @@ public class DBInstance  extends AbstractModel{
         this.setParamSimple(map, prefix + "Paymode", this.Paymode);
         this.setParamSimple(map, prefix + "Locker", this.Locker);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
 
     }
 }

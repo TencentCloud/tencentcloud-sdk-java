@@ -37,6 +37,13 @@ public class CreateProductRequest  extends AbstractModel{
     private ProductProperties ProductProperties;
 
     /**
+    * 创建LoRa产品需要的Skey
+    */
+    @SerializedName("Skey")
+    @Expose
+    private String Skey;
+
+    /**
      * 获取产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      * @return ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      */
@@ -69,11 +76,28 @@ public class CreateProductRequest  extends AbstractModel{
     }
 
     /**
+     * 获取创建LoRa产品需要的Skey
+     * @return Skey 创建LoRa产品需要的Skey
+     */
+    public String getSkey() {
+        return this.Skey;
+    }
+
+    /**
+     * 设置创建LoRa产品需要的Skey
+     * @param Skey 创建LoRa产品需要的Skey
+     */
+    public void setSkey(String Skey) {
+        this.Skey = Skey;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamObj(map, prefix + "ProductProperties.", this.ProductProperties);
+        this.setParamSimple(map, prefix + "Skey", this.Skey);
 
     }
 }

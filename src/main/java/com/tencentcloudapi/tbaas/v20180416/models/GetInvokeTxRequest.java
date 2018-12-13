@@ -30,7 +30,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     private String Module;
 
     /**
-    * 操作名，固定地段：invoke
+    * 操作名，固定字段：query_txid
     */
     @SerializedName("Operation")
     @Expose
@@ -88,16 +88,16 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定地段：invoke
-     * @return Operation 操作名，固定地段：invoke
+     * 获取操作名，固定字段：query_txid
+     * @return Operation 操作名，固定字段：query_txid
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名，固定地段：invoke
-     * @param Operation 操作名，固定地段：invoke
+     * 设置操作名，固定字段：query_txid
+     * @param Operation 操作名，固定字段：query_txid
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

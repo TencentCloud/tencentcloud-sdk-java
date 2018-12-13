@@ -121,14 +121,14 @@ public class SlowLogData  extends AbstractModel{
     private Integer RowsSentSum;
 
     /**
-    * 首次执行时间
+    * 最后执行时间
     */
     @SerializedName("TsMax")
     @Expose
     private String TsMax;
 
     /**
-    * 最后执行时间
+    * 首次执行时间
     */
     @SerializedName("TsMin")
     @Expose
@@ -366,32 +366,32 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取首次执行时间
-     * @return TsMax 首次执行时间
+     * 获取最后执行时间
+     * @return TsMax 最后执行时间
      */
     public String getTsMax() {
         return this.TsMax;
     }
 
     /**
-     * 设置首次执行时间
-     * @param TsMax 首次执行时间
+     * 设置最后执行时间
+     * @param TsMax 最后执行时间
      */
     public void setTsMax(String TsMax) {
         this.TsMax = TsMax;
     }
 
     /**
-     * 获取最后执行时间
-     * @return TsMin 最后执行时间
+     * 获取首次执行时间
+     * @return TsMin 首次执行时间
      */
     public String getTsMin() {
         return this.TsMin;
     }
 
     /**
-     * 设置最后执行时间
-     * @param TsMin 最后执行时间
+     * 设置首次执行时间
+     * @param TsMin 首次执行时间
      */
     public void setTsMin(String TsMin) {
         this.TsMin = TsMin;

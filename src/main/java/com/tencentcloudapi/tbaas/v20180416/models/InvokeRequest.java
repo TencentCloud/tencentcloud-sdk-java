@@ -30,7 +30,7 @@ public class InvokeRequest  extends AbstractModel{
     private String Module;
 
     /**
-    * 操作名，固定地段：invoke
+    * 操作名，固定字段：invoke
     */
     @SerializedName("Operation")
     @Expose
@@ -102,16 +102,16 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定地段：invoke
-     * @return Operation 操作名，固定地段：invoke
+     * 获取操作名，固定字段：invoke
+     * @return Operation 操作名，固定字段：invoke
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名，固定地段：invoke
-     * @param Operation 操作名，固定地段：invoke
+     * 设置操作名，固定字段：invoke
+     * @param Operation 操作名，固定字段：invoke
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

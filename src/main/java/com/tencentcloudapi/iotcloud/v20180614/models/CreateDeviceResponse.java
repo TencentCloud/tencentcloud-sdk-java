@@ -58,7 +58,28 @@ public class CreateDeviceResponse  extends AbstractModel{
     private String LoraDevEui;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+    */
+    @SerializedName("LoraMoteType")
+    @Expose
+    private Integer LoraMoteType;
+
+    /**
+    * LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+    */
+    @SerializedName("LoraAppKey")
+    @Expose
+    private String LoraAppKey;
+
+    /**
+    * LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+    */
+    @SerializedName("LoraNwkKey")
+    @Expose
+    private String LoraNwkKey;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -145,16 +166,64 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+     * @return LoraMoteType LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+     */
+    public Integer getLoraMoteType() {
+        return this.LoraMoteType;
+    }
+
+    /**
+     * 设置LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+     * @param LoraMoteType LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+     */
+    public void setLoraMoteType(Integer LoraMoteType) {
+        this.LoraMoteType = LoraMoteType;
+    }
+
+    /**
+     * 获取LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+     * @return LoraAppKey LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+     */
+    public String getLoraAppKey() {
+        return this.LoraAppKey;
+    }
+
+    /**
+     * 设置LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+     * @param LoraAppKey LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+     */
+    public void setLoraAppKey(String LoraAppKey) {
+        this.LoraAppKey = LoraAppKey;
+    }
+
+    /**
+     * 获取LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+     * @return LoraNwkKey LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+     */
+    public String getLoraNwkKey() {
+        return this.LoraNwkKey;
+    }
+
+    /**
+     * 设置LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+     * @param LoraNwkKey LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+     */
+    public void setLoraNwkKey(String LoraNwkKey) {
+        this.LoraNwkKey = LoraNwkKey;
+    }
+
+    /**
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -169,6 +238,9 @@ public class CreateDeviceResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceCert", this.DeviceCert);
         this.setParamSimple(map, prefix + "DevicePrivateKey", this.DevicePrivateKey);
         this.setParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
+        this.setParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
+        this.setParamSimple(map, prefix + "LoraAppKey", this.LoraAppKey);
+        this.setParamSimple(map, prefix + "LoraNwkKey", this.LoraNwkKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

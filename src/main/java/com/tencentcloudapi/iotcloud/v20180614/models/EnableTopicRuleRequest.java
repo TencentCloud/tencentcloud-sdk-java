@@ -20,36 +20,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDeviceResponse  extends AbstractModel{
+public class EnableTopicRuleRequest  extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 规则名称
     */
-    @SerializedName("RequestId")
+    @SerializedName("RuleName")
     @Expose
-    private String RequestId;
+    private String RuleName;
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * 获取规则名称
+     * @return RuleName 规则名称
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getRuleName() {
+        return this.RuleName;
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * 设置规则名称
+     * @param RuleName 规则名称
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
 
     }
 }

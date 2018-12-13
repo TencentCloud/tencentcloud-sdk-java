@@ -37,6 +37,13 @@ public class DeleteDeviceRequest  extends AbstractModel{
     private String DeviceName;
 
     /**
+    * 删除LoRa设备以及LoRa网关设备需要skey
+    */
+    @SerializedName("Skey")
+    @Expose
+    private String Skey;
+
+    /**
      * 获取设备所属的产品 ID
      * @return ProductId 设备所属的产品 ID
      */
@@ -69,11 +76,28 @@ public class DeleteDeviceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取删除LoRa设备以及LoRa网关设备需要skey
+     * @return Skey 删除LoRa设备以及LoRa网关设备需要skey
+     */
+    public String getSkey() {
+        return this.Skey;
+    }
+
+    /**
+     * 设置删除LoRa设备以及LoRa网关设备需要skey
+     * @param Skey 删除LoRa设备以及LoRa网关设备需要skey
+     */
+    public void setSkey(String Skey) {
+        this.Skey = Skey;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "Skey", this.Skey);
 
     }
 }

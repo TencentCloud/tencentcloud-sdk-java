@@ -30,21 +30,21 @@ public class InitOralProcessRequest  extends AbstractModel{
     private String SessionId;
 
     /**
-    * 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
+    * 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，会统一替换成空格，中文评估使用 utf-8 编码，自由说模式该值传空。
     */
     @SerializedName("RefText")
     @Expose
     private String RefText;
 
     /**
-    * 语音输入模式，0流式分片，1非流式一次性评估
+    * 语音输入模式，0：流式分片，1：非流式一次性评估
     */
     @SerializedName("WorkMode")
     @Expose
     private Integer WorkMode;
 
     /**
-    * 评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+    * 评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
     */
     @SerializedName("EvalMode")
     @Expose
@@ -72,11 +72,25 @@ public class InitOralProcessRequest  extends AbstractModel{
     private Integer IsLongLifeSession;
 
     /**
-    * 音频存储模式，0：不存储，1：存储到公共对象存储
+    * 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
     */
     @SerializedName("StorageMode")
     @Expose
     private Integer StorageMode;
+
+    /**
+    * 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+    */
+    @SerializedName("SentenceInfoEnabled")
+    @Expose
+    private Integer SentenceInfoEnabled;
+
+    /**
+    * 评估语言，0：英文，1：中文。
+    */
+    @SerializedName("ServerType")
+    @Expose
+    private Integer ServerType;
 
     /**
      * 获取语音段唯一标识，一段语音一个SessionId
@@ -95,48 +109,48 @@ public class InitOralProcessRequest  extends AbstractModel{
     }
 
     /**
-     * 获取被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
-     * @return RefText 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
+     * 获取被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，会统一替换成空格，中文评估使用 utf-8 编码，自由说模式该值传空。
+     * @return RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，会统一替换成空格，中文评估使用 utf-8 编码，自由说模式该值传空。
      */
     public String getRefText() {
         return this.RefText;
     }
 
     /**
-     * 设置被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
-     * @param RefText 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
+     * 设置被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，会统一替换成空格，中文评估使用 utf-8 编码，自由说模式该值传空。
+     * @param RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，会统一替换成空格，中文评估使用 utf-8 编码，自由说模式该值传空。
      */
     public void setRefText(String RefText) {
         this.RefText = RefText;
     }
 
     /**
-     * 获取语音输入模式，0流式分片，1非流式一次性评估
-     * @return WorkMode 语音输入模式，0流式分片，1非流式一次性评估
+     * 获取语音输入模式，0：流式分片，1：非流式一次性评估
+     * @return WorkMode 语音输入模式，0：流式分片，1：非流式一次性评估
      */
     public Integer getWorkMode() {
         return this.WorkMode;
     }
 
     /**
-     * 设置语音输入模式，0流式分片，1非流式一次性评估
-     * @param WorkMode 语音输入模式，0流式分片，1非流式一次性评估
+     * 设置语音输入模式，0：流式分片，1：非流式一次性评估
+     * @param WorkMode 语音输入模式，0：流式分片，1：非流式一次性评估
      */
     public void setWorkMode(Integer WorkMode) {
         this.WorkMode = WorkMode;
     }
 
     /**
-     * 获取评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
-     * @return EvalMode 评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+     * 获取评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+     * @return EvalMode 评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
      */
     public Integer getEvalMode() {
         return this.EvalMode;
     }
 
     /**
-     * 设置评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
-     * @param EvalMode 评估模式，0:词模式, 1:句子模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+     * 设置评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+     * @param EvalMode 评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
      */
     public void setEvalMode(Integer EvalMode) {
         this.EvalMode = EvalMode;
@@ -191,19 +205,51 @@ public class InitOralProcessRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音频存储模式，0：不存储，1：存储到公共对象存储
-     * @return StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储
+     * 获取音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
+     * @return StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
      */
     public Integer getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * 设置音频存储模式，0：不存储，1：存储到公共对象存储
-     * @param StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储
+     * 设置音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
+     * @param StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
      */
     public void setStorageMode(Integer StorageMode) {
         this.StorageMode = StorageMode;
+    }
+
+    /**
+     * 获取输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+     * @return SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+     */
+    public Integer getSentenceInfoEnabled() {
+        return this.SentenceInfoEnabled;
+    }
+
+    /**
+     * 设置输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+     * @param SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+     */
+    public void setSentenceInfoEnabled(Integer SentenceInfoEnabled) {
+        this.SentenceInfoEnabled = SentenceInfoEnabled;
+    }
+
+    /**
+     * 获取评估语言，0：英文，1：中文。
+     * @return ServerType 评估语言，0：英文，1：中文。
+     */
+    public Integer getServerType() {
+        return this.ServerType;
+    }
+
+    /**
+     * 设置评估语言，0：英文，1：中文。
+     * @param ServerType 评估语言，0：英文，1：中文。
+     */
+    public void setServerType(Integer ServerType) {
+        this.ServerType = ServerType;
     }
 
     /**
@@ -218,6 +264,8 @@ public class InitOralProcessRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
         this.setParamSimple(map, prefix + "IsLongLifeSession", this.IsLongLifeSession);
         this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
+        this.setParamSimple(map, prefix + "SentenceInfoEnabled", this.SentenceInfoEnabled);
+        this.setParamSimple(map, prefix + "ServerType", this.ServerType);
 
     }
 }

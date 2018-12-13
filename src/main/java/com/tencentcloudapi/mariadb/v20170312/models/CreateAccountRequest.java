@@ -65,6 +65,13 @@ public class CreateAccountRequest  extends AbstractModel{
     private String Description;
 
     /**
+    * 根据传入时间判断备机不可用
+    */
+    @SerializedName("DelayThresh")
+    @Expose
+    private Integer DelayThresh;
+
+    /**
      * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
@@ -161,6 +168,22 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
+     * 获取根据传入时间判断备机不可用
+     * @return DelayThresh 根据传入时间判断备机不可用
+     */
+    public Integer getDelayThresh() {
+        return this.DelayThresh;
+    }
+
+    /**
+     * 设置根据传入时间判断备机不可用
+     * @param DelayThresh 根据传入时间判断备机不可用
+     */
+    public void setDelayThresh(Integer DelayThresh) {
+        this.DelayThresh = DelayThresh;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateAccountRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
 
     }
 }

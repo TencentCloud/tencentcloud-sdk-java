@@ -20,60 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteProductRequest  extends AbstractModel{
+public class CreateTopicRuleRequest  extends AbstractModel{
 
     /**
-    * 需要删除的产品 ID
+    * 规则名称
     */
-    @SerializedName("ProductId")
+    @SerializedName("RuleName")
     @Expose
-    private String ProductId;
+    private String RuleName;
 
     /**
-    * 删除LoRa产品需要skey
+    * 规则内容
     */
-    @SerializedName("Skey")
+    @SerializedName("TopicRulePayload")
     @Expose
-    private String Skey;
+    private TopicRulePayload TopicRulePayload;
 
     /**
-     * 获取需要删除的产品 ID
-     * @return ProductId 需要删除的产品 ID
+     * 获取规则名称
+     * @return RuleName 规则名称
      */
-    public String getProductId() {
-        return this.ProductId;
+    public String getRuleName() {
+        return this.RuleName;
     }
 
     /**
-     * 设置需要删除的产品 ID
-     * @param ProductId 需要删除的产品 ID
+     * 设置规则名称
+     * @param RuleName 规则名称
      */
-    public void setProductId(String ProductId) {
-        this.ProductId = ProductId;
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
     }
 
     /**
-     * 获取删除LoRa产品需要skey
-     * @return Skey 删除LoRa产品需要skey
+     * 获取规则内容
+     * @return TopicRulePayload 规则内容
      */
-    public String getSkey() {
-        return this.Skey;
+    public TopicRulePayload getTopicRulePayload() {
+        return this.TopicRulePayload;
     }
 
     /**
-     * 设置删除LoRa产品需要skey
-     * @param Skey 删除LoRa产品需要skey
+     * 设置规则内容
+     * @param TopicRulePayload 规则内容
      */
-    public void setSkey(String Skey) {
-        this.Skey = Skey;
+    public void setTopicRulePayload(TopicRulePayload TopicRulePayload) {
+        this.TopicRulePayload = TopicRulePayload;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
-        this.setParamSimple(map, prefix + "Skey", this.Skey);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamObj(map, prefix + "TopicRulePayload.", this.TopicRulePayload);
 
     }
 }

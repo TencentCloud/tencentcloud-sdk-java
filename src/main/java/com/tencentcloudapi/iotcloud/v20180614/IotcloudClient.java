@@ -139,6 +139,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateTopicRule）用于创建一个规则
+     * @param req CreateTopicRuleRequest
+     * @return CreateTopicRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTopicRuleResponse  CreateTopicRule(CreateTopicRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTopicRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTopicRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTopicRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteDevice）用于删除物联网通信设备。
      * @param req DeleteDeviceRequest
      * @return DeleteDeviceResponse
@@ -168,6 +186,42 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteProductResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteProduct"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteTopicRule）用于删除规则
+     * @param req DeleteTopicRuleRequest
+     * @return DeleteTopicRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTopicRuleResponse  DeleteTopicRule(DeleteTopicRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTopicRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTopicRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTopicRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDevice）用于查看设备信息
+     * @param req DescribeDeviceRequest
+     * @return DescribeDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceResponse  DescribeDevice(DescribeDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDevice"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -301,6 +355,42 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（DisableTopicRule）用于禁用规则
+     * @param req DisableTopicRuleRequest
+     * @return DisableTopicRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableTopicRuleResponse  DisableTopicRule(DisableTopicRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableTopicRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableTopicRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableTopicRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（EnableTopicRule）用于启用规则
+     * @param req EnableTopicRuleRequest
+     * @return EnableTopicRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableTopicRuleResponse  EnableTopicRule(EnableTopicRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableTopicRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableTopicRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableTopicRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（PublishMessage）用于向某个主题发消息。
      * @param req PublishMessageRequest
      * @return PublishMessageResponse
@@ -312,6 +402,24 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PublishMessageResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PublishMessage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ReplaceTopicRule）用于修改替换规则
+     * @param req ReplaceTopicRuleRequest
+     * @return ReplaceTopicRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceTopicRuleResponse  ReplaceTopicRule(ReplaceTopicRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReplaceTopicRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReplaceTopicRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReplaceTopicRule"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

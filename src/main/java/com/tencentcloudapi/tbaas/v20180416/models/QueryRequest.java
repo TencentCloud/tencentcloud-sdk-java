@@ -30,7 +30,7 @@ public class QueryRequest  extends AbstractModel{
     private String Module;
 
     /**
-    * 操作名，固定地段：query
+    * 操作名，固定字段：query
     */
     @SerializedName("Operation")
     @Expose
@@ -95,16 +95,16 @@ public class QueryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定地段：query
-     * @return Operation 操作名，固定地段：query
+     * 获取操作名，固定字段：query
+     * @return Operation 操作名，固定字段：query
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名，固定地段：query
-     * @param Operation 操作名，固定地段：query
+     * 设置操作名，固定字段：query
+     * @param Operation 操作名，固定字段：query
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

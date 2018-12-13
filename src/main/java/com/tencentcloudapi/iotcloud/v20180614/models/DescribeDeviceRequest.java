@@ -20,36 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDeviceResponse  extends AbstractModel{
+public class DescribeDeviceRequest  extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 产品ID
     */
-    @SerializedName("RequestId")
+    @SerializedName("ProductID")
     @Expose
-    private String RequestId;
+    private String ProductID;
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 产品名
+    */
+    @SerializedName("DeviceName")
+    @Expose
+    private String DeviceName;
+
+    /**
+     * 获取产品ID
+     * @return ProductID 产品ID
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getProductID() {
+        return this.ProductID;
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * 设置产品ID
+     * @param ProductID 产品ID
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setProductID(String ProductID) {
+        this.ProductID = ProductID;
+    }
+
+    /**
+     * 获取产品名
+     * @return DeviceName 产品名
+     */
+    public String getDeviceName() {
+        return this.DeviceName;
+    }
+
+    /**
+     * 设置产品名
+     * @param DeviceName 产品名
+     */
+    public void setDeviceName(String DeviceName) {
+        this.DeviceName = DeviceName;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "ProductID", this.ProductID);
+        this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
 
     }
 }

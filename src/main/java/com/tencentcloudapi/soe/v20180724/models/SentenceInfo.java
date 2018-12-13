@@ -20,7 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransmitOralProcessResponse  extends AbstractModel{
+public class SentenceInfo  extends AbstractModel{
+
+    /**
+    * 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
+    */
+    @SerializedName("SentenceId")
+    @Expose
+    private Integer SentenceId;
+
+    /**
+    * 详细发音评估结果
+    */
+    @SerializedName("Words")
+    @Expose
+    private WordRsp [] Words;
 
     /**
     * 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值。当为流式模式且请求中IsEnd未置1时，取值无意义
@@ -44,39 +58,36 @@ public class TransmitOralProcessResponse  extends AbstractModel{
     private Float PronCompletion;
 
     /**
-    * 详细发音评估结果
-    */
-    @SerializedName("Words")
-    @Expose
-    private WordRsp [] Words;
+     * 获取句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
+     * @return SentenceId 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
+     */
+    public Integer getSentenceId() {
+        return this.SentenceId;
+    }
 
     /**
-    * 语音段唯一标识，一段语音一个SessionId
-    */
-    @SerializedName("SessionId")
-    @Expose
-    private String SessionId;
+     * 设置句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
+     * @param SentenceId 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
+     */
+    public void setSentenceId(Integer SentenceId) {
+        this.SentenceId = SentenceId;
+    }
 
     /**
-    * 保存语音音频文件下载地址
-    */
-    @SerializedName("AudioUrl")
-    @Expose
-    private String AudioUrl;
+     * 获取详细发音评估结果
+     * @return Words 详细发音评估结果
+     */
+    public WordRsp [] getWords() {
+        return this.Words;
+    }
 
     /**
-    * 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
-    */
-    @SerializedName("SentenceInfoSet")
-    @Expose
-    private SentenceInfo [] SentenceInfoSet;
-
-    /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
+     * 设置详细发音评估结果
+     * @param Words 详细发音评估结果
+     */
+    public void setWords(WordRsp [] Words) {
+        this.Words = Words;
+    }
 
     /**
      * 获取发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值。当为流式模式且请求中IsEnd未置1时，取值无意义
@@ -127,97 +138,14 @@ public class TransmitOralProcessResponse  extends AbstractModel{
     }
 
     /**
-     * 获取详细发音评估结果
-     * @return Words 详细发音评估结果
-     */
-    public WordRsp [] getWords() {
-        return this.Words;
-    }
-
-    /**
-     * 设置详细发音评估结果
-     * @param Words 详细发音评估结果
-     */
-    public void setWords(WordRsp [] Words) {
-        this.Words = Words;
-    }
-
-    /**
-     * 获取语音段唯一标识，一段语音一个SessionId
-     * @return SessionId 语音段唯一标识，一段语音一个SessionId
-     */
-    public String getSessionId() {
-        return this.SessionId;
-    }
-
-    /**
-     * 设置语音段唯一标识，一段语音一个SessionId
-     * @param SessionId 语音段唯一标识，一段语音一个SessionId
-     */
-    public void setSessionId(String SessionId) {
-        this.SessionId = SessionId;
-    }
-
-    /**
-     * 获取保存语音音频文件下载地址
-     * @return AudioUrl 保存语音音频文件下载地址
-     */
-    public String getAudioUrl() {
-        return this.AudioUrl;
-    }
-
-    /**
-     * 设置保存语音音频文件下载地址
-     * @param AudioUrl 保存语音音频文件下载地址
-     */
-    public void setAudioUrl(String AudioUrl) {
-        this.AudioUrl = AudioUrl;
-    }
-
-    /**
-     * 获取断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
-     * @return SentenceInfoSet 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
-     */
-    public SentenceInfo [] getSentenceInfoSet() {
-        return this.SentenceInfoSet;
-    }
-
-    /**
-     * 设置断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
-     * @param SentenceInfoSet 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
-     */
-    public void setSentenceInfoSet(SentenceInfo [] SentenceInfoSet) {
-        this.SentenceInfoSet = SentenceInfoSet;
-    }
-
-    /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SentenceId", this.SentenceId);
+        this.setParamArrayObj(map, prefix + "Words.", this.Words);
         this.setParamSimple(map, prefix + "PronAccuracy", this.PronAccuracy);
         this.setParamSimple(map, prefix + "PronFluency", this.PronFluency);
         this.setParamSimple(map, prefix + "PronCompletion", this.PronCompletion);
-        this.setParamArrayObj(map, prefix + "Words.", this.Words);
-        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
-        this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
-        this.setParamArrayObj(map, prefix + "SentenceInfoSet.", this.SentenceInfoSet);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }
