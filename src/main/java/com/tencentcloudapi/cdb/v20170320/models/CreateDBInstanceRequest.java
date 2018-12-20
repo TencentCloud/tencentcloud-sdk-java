@@ -184,6 +184,13 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     private String InstanceName;
 
     /**
+    * 实例要绑定的标签
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private TagInfo [] ResourceTags;
+
+    /**
      * 获取实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
      * @return Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
      */
@@ -552,6 +559,22 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例要绑定的标签
+     * @return ResourceTags 实例要绑定的标签
+     */
+    public TagInfo [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * 设置实例要绑定的标签
+     * @param ResourceTags 实例要绑定的标签
+     */
+    public void setResourceTags(TagInfo [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -578,6 +601,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         this.setParamObj(map, prefix + "RoGroup.", this.RoGroup);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

@@ -247,6 +247,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *修改实例相关信息（目前支持：实例重命名）
+     * @param req ModifyInstanceRequest
+     * @return ModifyInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceResponse  ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *续费实例
      * @param req RenewInstanceRequest
      * @return RenewInstanceResponse

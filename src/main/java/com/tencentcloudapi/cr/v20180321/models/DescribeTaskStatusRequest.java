@@ -37,11 +37,11 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     private String Operation;
 
     /**
-    * 任务ID
+    * 任务ID，形如abc-a0b1c2xyz
     */
     @SerializedName("TaskId")
     @Expose
-    private Integer TaskId;
+    private String TaskId;
 
     /**
      * 获取模块名
@@ -76,18 +76,18 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID
-     * @return TaskId 任务ID
+     * 获取任务ID，形如abc-a0b1c2xyz
+     * @return TaskId 任务ID，形如abc-a0b1c2xyz
      */
-    public Integer getTaskId() {
+    public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置任务ID
-     * @param TaskId 任务ID
+     * 设置任务ID，形如abc-a0b1c2xyz
+     * @param TaskId 任务ID，形如abc-a0b1c2xyz
      */
-    public void setTaskId(Integer TaskId) {
+    public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 

@@ -182,6 +182,96 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *DeregisterTargetsFromClassicalLB用于解绑后端服务器
+     * @param req DeregisterTargetsFromClassicalLBRequest
+     * @return DeregisterTargetsFromClassicalLBResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeregisterTargetsFromClassicalLBResponse  DeregisterTargetsFromClassicalLB(DeregisterTargetsFromClassicalLBRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeregisterTargetsFromClassicalLBResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeregisterTargetsFromClassicalLBResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeregisterTargetsFromClassicalLB"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeClassicalLBByInstanceId用于通过后端实例ID获取传统型负载均衡ID列表
+     * @param req DescribeClassicalLBByInstanceIdRequest
+     * @return DescribeClassicalLBByInstanceIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClassicalLBByInstanceIdResponse  DescribeClassicalLBByInstanceId(DescribeClassicalLBByInstanceIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClassicalLBByInstanceIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBByInstanceIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClassicalLBByInstanceId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeClassicalLBHealthStatus用于获取传统型负载均衡后端的健康状态
+     * @param req DescribeClassicalLBHealthStatusRequest
+     * @return DescribeClassicalLBHealthStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClassicalLBHealthStatusResponse  DescribeClassicalLBHealthStatus(DescribeClassicalLBHealthStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClassicalLBHealthStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBHealthStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClassicalLBHealthStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeClassicalLBListeners用于获取传统型负载均衡信息
+     * @param req DescribeClassicalLBListenersRequest
+     * @return DescribeClassicalLBListenersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClassicalLBListenersResponse  DescribeClassicalLBListeners(DescribeClassicalLBListenersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClassicalLBListenersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBListenersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClassicalLBListeners"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeClassicalLBTargets用于获取传统型负载均衡绑定的后端服务
+     * @param req DescribeClassicalLBTargetsRequest
+     * @return DescribeClassicalLBTargetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClassicalLBTargetsResponse  DescribeClassicalLBTargets(DescribeClassicalLBTargetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClassicalLBTargetsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBTargetsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClassicalLBTargets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeListeners 接口可根据负载均衡器 ID，监听器的协议或者端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，默认返该负载均衡器下的默认数据长度（20 个）的监听器。
      * @param req DescribeListenersRequest
      * @return DescribeListenersResponse
@@ -381,6 +471,24 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RegisterTargetsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RegisterTargets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *RegisterTargetsWithClassicalLB用于绑定后端服务到传统型负载均衡
+     * @param req RegisterTargetsWithClassicalLBRequest
+     * @return RegisterTargetsWithClassicalLBResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterTargetsWithClassicalLBResponse  RegisterTargetsWithClassicalLB(RegisterTargetsWithClassicalLBRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RegisterTargetsWithClassicalLBResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RegisterTargetsWithClassicalLBResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RegisterTargetsWithClassicalLB"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

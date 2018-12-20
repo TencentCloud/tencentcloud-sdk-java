@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DisassociateSecurityGroupsRequest  extends AbstractModel{
 
     /**
-    * 要解绑的`安全组ID`，类似sg-efil73jd，支持解绑多个安全组。
+    * 要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 被解绑的`实例ID`，类似ins-lesecurk 。
+    * 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * 获取要解绑的`安全组ID`，类似sg-efil73jd，支持解绑多个安全组。
-     * @return SecurityGroupIds 要解绑的`安全组ID`，类似sg-efil73jd，支持解绑多个安全组。
+     * 获取要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
+     * @return SecurityGroupIds 要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * 设置要解绑的`安全组ID`，类似sg-efil73jd，支持解绑多个安全组。
-     * @param SecurityGroupIds 要解绑的`安全组ID`，类似sg-efil73jd，支持解绑多个安全组。
+     * 设置要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
+     * @param SecurityGroupIds 要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * 获取被解绑的`实例ID`，类似ins-lesecurk 。
-     * @return InstanceIds 被解绑的`实例ID`，类似ins-lesecurk 。
+     * 获取被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
+     * @return InstanceIds 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * 设置被解绑的`实例ID`，类似ins-lesecurk 。
-     * @param InstanceIds 被解绑的`实例ID`，类似ins-lesecurk 。
+     * 设置被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
+     * @param InstanceIds 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

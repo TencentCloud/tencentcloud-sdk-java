@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class DescribeLiveStreamStateResponse  extends AbstractModel{
 
     /**
-    * 流状态
+    * 流状态，
+active：活跃，
+inactive：非活跃，
+forbid：禁播。
     */
     @SerializedName("StreamState")
     @Expose
@@ -37,16 +40,28 @@ public class DescribeLiveStreamStateResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取流状态
-     * @return StreamState 流状态
+     * 获取流状态，
+active：活跃，
+inactive：非活跃，
+forbid：禁播。
+     * @return StreamState 流状态，
+active：活跃，
+inactive：非活跃，
+forbid：禁播。
      */
     public String getStreamState() {
         return this.StreamState;
     }
 
     /**
-     * 设置流状态
-     * @param StreamState 流状态
+     * 设置流状态，
+active：活跃，
+inactive：非活跃，
+forbid：禁播。
+     * @param StreamState 流状态，
+active：活跃，
+inactive：非活跃，
+forbid：禁播。
      */
     public void setStreamState(String StreamState) {
         this.StreamState = StreamState;

@@ -23,69 +23,74 @@ import java.util.HashMap;
 public class GetDetectInfoRequest  extends AbstractModel{
 
     /**
-    * 业务流水号
+    * 人脸核身流程的标识，调用DetectAuth接口时生成。
     */
     @SerializedName("BizToken")
     @Expose
     private String BizToken;
 
     /**
-    * 规则Id。
+    * 用于细分客户使用场景，由腾讯侧在线下对接时分配。
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 指定需要拉取何种信息（0：全部；1：文本类；2：身份证正反面；3：截帧（最佳帧）；4：视频）。可拼接。如 134表示拉取文本类、截帧（最佳帧）、视频
+    * 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+如 134表示拉取文本类、视频最佳截图照片、视频。
     */
     @SerializedName("InfoType")
     @Expose
     private String InfoType;
 
     /**
-     * 获取业务流水号
-     * @return BizToken 业务流水号
+     * 获取人脸核身流程的标识，调用DetectAuth接口时生成。
+     * @return BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
      */
     public String getBizToken() {
         return this.BizToken;
     }
 
     /**
-     * 设置业务流水号
-     * @param BizToken 业务流水号
+     * 设置人脸核身流程的标识，调用DetectAuth接口时生成。
+     * @param BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
      */
     public void setBizToken(String BizToken) {
         this.BizToken = BizToken;
     }
 
     /**
-     * 获取规则Id。
-     * @return RuleId 规则Id。
+     * 获取用于细分客户使用场景，由腾讯侧在线下对接时分配。
+     * @return RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * 设置规则Id。
-     * @param RuleId 规则Id。
+     * 设置用于细分客户使用场景，由腾讯侧在线下对接时分配。
+     * @param RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * 获取指定需要拉取何种信息（0：全部；1：文本类；2：身份证正反面；3：截帧（最佳帧）；4：视频）。可拼接。如 134表示拉取文本类、截帧（最佳帧）、视频
-     * @return InfoType 指定需要拉取何种信息（0：全部；1：文本类；2：身份证正反面；3：截帧（最佳帧）；4：视频）。可拼接。如 134表示拉取文本类、截帧（最佳帧）、视频
+     * 获取指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+如 134表示拉取文本类、视频最佳截图照片、视频。
+     * @return InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+如 134表示拉取文本类、视频最佳截图照片、视频。
      */
     public String getInfoType() {
         return this.InfoType;
     }
 
     /**
-     * 设置指定需要拉取何种信息（0：全部；1：文本类；2：身份证正反面；3：截帧（最佳帧）；4：视频）。可拼接。如 134表示拉取文本类、截帧（最佳帧）、视频
-     * @param InfoType 指定需要拉取何种信息（0：全部；1：文本类；2：身份证正反面；3：截帧（最佳帧）；4：视频）。可拼接。如 134表示拉取文本类、截帧（最佳帧）、视频
+     * 设置指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+如 134表示拉取文本类、视频最佳截图照片、视频。
+     * @param InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+如 134表示拉取文本类、视频最佳截图照片、视频。
      */
     public void setInfoType(String InfoType) {
         this.InfoType = InfoType;

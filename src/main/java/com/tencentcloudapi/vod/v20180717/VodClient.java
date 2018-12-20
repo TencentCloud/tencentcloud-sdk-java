@@ -225,4 +225,24 @@ public class VodClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *搜索媒体信息，支持文本模糊搜索及条件过滤。
+<li>该接口单次请求最多返回100条数据。</li>
+<li>搜索结果超过 5000条，不再支持分页查询超过 5000 部分的数据。</li>
+     * @param req SearchMediaRequest
+     * @return SearchMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchMediaResponse  SearchMedia(SearchMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchMediaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchMediaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SearchMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

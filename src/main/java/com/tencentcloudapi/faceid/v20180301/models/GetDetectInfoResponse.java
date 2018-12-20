@@ -53,7 +53,7 @@ public class GetDetectInfoResponse  extends AbstractModel{
     "OcrFront": null,
     "OcrBack": null
   },
-  // 最佳帧照片Base64
+  // 视频最佳帧截图Base64
   "BestFrame": {
     "BestFrame": null
   },
@@ -105,7 +105,7 @@ public class GetDetectInfoResponse  extends AbstractModel{
     "OcrFront": null,
     "OcrBack": null
   },
-  // 最佳帧照片Base64
+  // 视频最佳帧截图Base64
   "BestFrame": {
     "BestFrame": null
   },
@@ -144,7 +144,7 @@ public class GetDetectInfoResponse  extends AbstractModel{
     "OcrFront": null,
     "OcrBack": null
   },
-  // 最佳帧照片Base64
+  // 视频最佳帧截图Base64
   "BestFrame": {
     "BestFrame": null
   },
@@ -189,7 +189,7 @@ public class GetDetectInfoResponse  extends AbstractModel{
     "OcrFront": null,
     "OcrBack": null
   },
-  // 最佳帧照片Base64
+  // 视频最佳帧截图Base64
   "BestFrame": {
     "BestFrame": null
   },
@@ -228,7 +228,7 @@ public class GetDetectInfoResponse  extends AbstractModel{
     "OcrFront": null,
     "OcrBack": null
   },
-  // 最佳帧照片Base64
+  // 视频最佳帧截图Base64
   "BestFrame": {
     "BestFrame": null
   },

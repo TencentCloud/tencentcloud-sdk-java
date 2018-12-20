@@ -51,7 +51,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     private Float Confidence;
 
     /**
-    * 此字段为保留字段，目前统一返回pass。请使用FusefaceReviewDetail中的“Suggestion”字段
+    * 此字段为保留字段，目前统一返回pass。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -129,16 +129,16 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取此字段为保留字段，目前统一返回pass。请使用FusefaceReviewDetail中的“Suggestion”字段
-     * @return Suggestion 此字段为保留字段，目前统一返回pass。请使用FusefaceReviewDetail中的“Suggestion”字段
+     * 获取此字段为保留字段，目前统一返回pass。
+     * @return Suggestion 此字段为保留字段，目前统一返回pass。
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * 设置此字段为保留字段，目前统一返回pass。请使用FusefaceReviewDetail中的“Suggestion”字段
-     * @param Suggestion 此字段为保留字段，目前统一返回pass。请使用FusefaceReviewDetail中的“Suggestion”字段
+     * 设置此字段为保留字段，目前统一返回pass。
+     * @param Suggestion 此字段为保留字段，目前统一返回pass。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;

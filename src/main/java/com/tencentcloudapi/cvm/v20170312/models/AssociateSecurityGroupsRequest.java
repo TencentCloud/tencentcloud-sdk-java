@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class AssociateSecurityGroupsRequest  extends AbstractModel{
 
     /**
-    * 要绑定的`安全组ID`，类似sg-efil73jd，支持绑定多个安全组。
+    * 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 被绑定的`实例ID`，类似ins-lesecurk，只支持指定单个实例。
+    * 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * 获取要绑定的`安全组ID`，类似sg-efil73jd，支持绑定多个安全组。
-     * @return SecurityGroupIds 要绑定的`安全组ID`，类似sg-efil73jd，支持绑定多个安全组。
+     * 获取要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
+     * @return SecurityGroupIds 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * 设置要绑定的`安全组ID`，类似sg-efil73jd，支持绑定多个安全组。
-     * @param SecurityGroupIds 要绑定的`安全组ID`，类似sg-efil73jd，支持绑定多个安全组。
+     * 设置要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
+     * @param SecurityGroupIds 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * 获取被绑定的`实例ID`，类似ins-lesecurk，只支持指定单个实例。
-     * @return InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，只支持指定单个实例。
+     * 获取被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
+     * @return InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * 设置被绑定的`实例ID`，类似ins-lesecurk，只支持指定单个实例。
-     * @param InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，只支持指定单个实例。
+     * 设置被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
+     * @param InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

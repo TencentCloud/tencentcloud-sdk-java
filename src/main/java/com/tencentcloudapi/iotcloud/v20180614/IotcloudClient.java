@@ -139,6 +139,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateTopicPolicy）用于创建一个Topic
+     * @param req CreateTopicPolicyRequest
+     * @return CreateTopicPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTopicPolicyResponse  CreateTopicPolicy(CreateTopicPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTopicPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTopicPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTopicPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateTopicRule）用于创建一个规则
      * @param req CreateTopicRuleRequest
      * @return CreateTopicRuleResponse
@@ -438,6 +456,24 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateDeviceShadowResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UpdateDeviceShadow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UpdateTopicPolicy）用于更新Topic信息
+     * @param req UpdateTopicPolicyRequest
+     * @return UpdateTopicPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTopicPolicyResponse  UpdateTopicPolicy(UpdateTopicPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateTopicPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateTopicPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateTopicPolicy"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -177,6 +177,13 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     private String InstanceName;
 
     /**
+    * 实例标签
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private TagInfo [] ResourceTags;
+
+    /**
      * 获取实例数量，默认值为1, 最小值1，最大值为100
      * @return GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
      */
@@ -529,6 +536,22 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例标签
+     * @return ResourceTags 实例标签
+     */
+    public TagInfo [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * 设置实例标签
+     * @param ResourceTags 实例标签
+     */
+    public void setResourceTags(TagInfo [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -554,6 +577,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "RoGroup.", this.RoGroup);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

@@ -51,14 +51,14 @@ public class UploadDataFileRequest  extends AbstractModel{
     private String UploadModel;
 
     /**
-    * 文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
+    * 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
     */
     @SerializedName("File")
     @Expose
     private String File;
 
     /**
-    * 文件上传地址
+    * 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
     */
     @SerializedName("FileUrl")
     @Expose
@@ -129,32 +129,32 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
-     * @return File 文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
+     * 获取文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
+     * @return File 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      */
     public String getFile() {
         return this.File;
     }
 
     /**
-     * 设置文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
-     * @param File 文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
+     * 设置文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
+     * @param File 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      */
     public void setFile(String File) {
         this.File = File;
     }
 
     /**
-     * 获取文件上传地址
-     * @return FileUrl 文件上传地址
+     * 获取文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
+     * @return FileUrl 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * 设置文件上传地址
-     * @param FileUrl 文件上传地址
+     * 设置文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
+     * @param FileUrl 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;

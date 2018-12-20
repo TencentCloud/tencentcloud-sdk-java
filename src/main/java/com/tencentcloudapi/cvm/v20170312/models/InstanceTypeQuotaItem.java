@@ -93,7 +93,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     private LocalDiskType [] LocalDiskTypeList;
 
     /**
-    * 实例是否售卖。
+    * 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
     */
     @SerializedName("Status")
     @Expose
@@ -267,16 +267,16 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例是否售卖。
-     * @return Status 实例是否售卖。
+     * 获取实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
+     * @return Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置实例是否售卖。
-     * @param Status 实例是否售卖。
+     * 设置实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
+     * @param Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -44,7 +44,7 @@ public class FuseFaceReviewDetail  extends AbstractModel{
     private Float Confidence;
 
     /**
-    * 对应子类审核建议: block,review,pass
+    * 此字段为保留字段，目前统一返回pass。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -99,16 +99,16 @@ public class FuseFaceReviewDetail  extends AbstractModel{
     }
 
     /**
-     * 获取对应子类审核建议: block,review,pass
-     * @return Suggestion 对应子类审核建议: block,review,pass
+     * 获取此字段为保留字段，目前统一返回pass。
+     * @return Suggestion 此字段为保留字段，目前统一返回pass。
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * 设置对应子类审核建议: block,review,pass
-     * @param Suggestion 对应子类审核建议: block,review,pass
+     * 设置此字段为保留字段，目前统一返回pass。
+     * @param Suggestion 此字段为保留字段，目前统一返回pass。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;

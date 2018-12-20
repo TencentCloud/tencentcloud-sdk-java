@@ -303,4 +303,22 @@ public class MsClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *获取用户基础信息
+     * @param req DescribeUserBaseInfoInstanceRequest
+     * @return DescribeUserBaseInfoInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserBaseInfoInstanceResponse  DescribeUserBaseInfoInstance(DescribeUserBaseInfoInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserBaseInfoInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserBaseInfoInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeUserBaseInfoInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

@@ -268,6 +268,13 @@ public class InstanceInfo  extends AbstractModel{
     private String PhysicalId;
 
     /**
+    * 核心数
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Integer Cpu;
+
+    /**
      * 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -828,6 +835,22 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取核心数
+     * @return Cpu 核心数
+     */
+    public Integer getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * 设置核心数
+     * @param Cpu 核心数
+     */
+    public void setCpu(Integer Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -866,6 +889,7 @@ public class InstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "PhysicalId", this.PhysicalId);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

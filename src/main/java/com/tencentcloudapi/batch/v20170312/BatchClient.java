@@ -411,6 +411,25 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
+     *用于重试作业中失败的任务实例。
+当且仅当作业处于“FAILED”状态，支持重试操作。重试操作成功后，作业会按照“DAG”中指定的任务依赖关系，依次重试各个任务中失败的任务实例。任务实例的历史信息将被重置，如同首次运行一样，参与后续的调度和执行。
+     * @param req RetryJobsRequest
+     * @return RetryJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetryJobsResponse  RetryJobs(RetryJobsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RetryJobsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RetryJobsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RetryJobs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于提交一个作业
      * @param req SubmitJobRequest
      * @return SubmitJobResponse

@@ -23,14 +23,15 @@ import java.util.HashMap;
 public class DetectAuthResponse  extends AbstractModel{
 
     /**
-    * 用于跳转的URL。只能于微信中打开。
+    * 用于发起核身流程的URL，仅微信H5场景使用。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 业务流水号。在获取认证信息接口中作为BizToken传入
+    * 一次核身流程的标识，有效时间为7,200秒；
+完成核身后，可用该标识获取验证结果信息。
     */
     @SerializedName("BizToken")
     @Expose
@@ -44,32 +45,36 @@ public class DetectAuthResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取用于跳转的URL。只能于微信中打开。
-     * @return Url 用于跳转的URL。只能于微信中打开。
+     * 获取用于发起核身流程的URL，仅微信H5场景使用。
+     * @return Url 用于发起核身流程的URL，仅微信H5场景使用。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * 设置用于跳转的URL。只能于微信中打开。
-     * @param Url 用于跳转的URL。只能于微信中打开。
+     * 设置用于发起核身流程的URL，仅微信H5场景使用。
+     * @param Url 用于发起核身流程的URL，仅微信H5场景使用。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * 获取业务流水号。在获取认证信息接口中作为BizToken传入
-     * @return BizToken 业务流水号。在获取认证信息接口中作为BizToken传入
+     * 获取一次核身流程的标识，有效时间为7,200秒；
+完成核身后，可用该标识获取验证结果信息。
+     * @return BizToken 一次核身流程的标识，有效时间为7,200秒；
+完成核身后，可用该标识获取验证结果信息。
      */
     public String getBizToken() {
         return this.BizToken;
     }
 
     /**
-     * 设置业务流水号。在获取认证信息接口中作为BizToken传入
-     * @param BizToken 业务流水号。在获取认证信息接口中作为BizToken传入
+     * 设置一次核身流程的标识，有效时间为7,200秒；
+完成核身后，可用该标识获取验证结果信息。
+     * @param BizToken 一次核身流程的标识，有效时间为7,200秒；
+完成核身后，可用该标识获取验证结果信息。
      */
     public void setBizToken(String BizToken) {
         this.BizToken = BizToken;

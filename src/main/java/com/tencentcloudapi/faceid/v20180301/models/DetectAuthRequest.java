@@ -23,21 +23,22 @@ import java.util.HashMap;
 public class DetectAuthRequest  extends AbstractModel{
 
     /**
-    * 规则Id。a-zA-Z0-9组合。最长长度32位。
+    * 用于细分客户使用场景，由腾讯侧在线下对接时分配。
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 终端类型。可选值有：weixinh5, weixinh5native, h5, tinyappsdk, iossdk, androidsdk。只有值为"weixinh5"时会返回跳转URL。
+    * 本接口不需要传递此参数。
     */
     @SerializedName("TerminalType")
     @Expose
     private String TerminalType;
 
     /**
-    * 身份证号或者是客户系统内部的唯一用户id。（传uid的时候只能使用ImageBase64传的照片进行一比一）a-zA-Z0-9组合。最长长度32位。
+    * 身份标识（与公安权威库比对时必须是身份证号）。
+规则：a-zA-Z0-9组合。最长长度32位。
     */
     @SerializedName("IdCard")
     @Expose
@@ -51,69 +52,74 @@ public class DetectAuthRequest  extends AbstractModel{
     private String Name;
 
     /**
-    * 回调地址。最长长度1024位。
+    * 认证结束后重定向的回调链接地址。最长长度1024位。
     */
     @SerializedName("RedirectUrl")
     @Expose
     private String RedirectUrl;
 
     /**
-    * 额外参数，会在getDetectInfo时带回去。最长长度1024位。
+    * 透传字段，在获取验证结果时返回。
     */
     @SerializedName("Extra")
     @Expose
     private String Extra;
 
     /**
-    * 用于一比一时的照片base64。此时必须传入IdCard。
+    * 用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-     * 获取规则Id。a-zA-Z0-9组合。最长长度32位。
-     * @return RuleId 规则Id。a-zA-Z0-9组合。最长长度32位。
+     * 获取用于细分客户使用场景，由腾讯侧在线下对接时分配。
+     * @return RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * 设置规则Id。a-zA-Z0-9组合。最长长度32位。
-     * @param RuleId 规则Id。a-zA-Z0-9组合。最长长度32位。
+     * 设置用于细分客户使用场景，由腾讯侧在线下对接时分配。
+     * @param RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * 获取终端类型。可选值有：weixinh5, weixinh5native, h5, tinyappsdk, iossdk, androidsdk。只有值为"weixinh5"时会返回跳转URL。
-     * @return TerminalType 终端类型。可选值有：weixinh5, weixinh5native, h5, tinyappsdk, iossdk, androidsdk。只有值为"weixinh5"时会返回跳转URL。
+     * 获取本接口不需要传递此参数。
+     * @return TerminalType 本接口不需要传递此参数。
      */
     public String getTerminalType() {
         return this.TerminalType;
     }
 
     /**
-     * 设置终端类型。可选值有：weixinh5, weixinh5native, h5, tinyappsdk, iossdk, androidsdk。只有值为"weixinh5"时会返回跳转URL。
-     * @param TerminalType 终端类型。可选值有：weixinh5, weixinh5native, h5, tinyappsdk, iossdk, androidsdk。只有值为"weixinh5"时会返回跳转URL。
+     * 设置本接口不需要传递此参数。
+     * @param TerminalType 本接口不需要传递此参数。
      */
     public void setTerminalType(String TerminalType) {
         this.TerminalType = TerminalType;
     }
 
     /**
-     * 获取身份证号或者是客户系统内部的唯一用户id。（传uid的时候只能使用ImageBase64传的照片进行一比一）a-zA-Z0-9组合。最长长度32位。
-     * @return IdCard 身份证号或者是客户系统内部的唯一用户id。（传uid的时候只能使用ImageBase64传的照片进行一比一）a-zA-Z0-9组合。最长长度32位。
+     * 获取身份标识（与公安权威库比对时必须是身份证号）。
+规则：a-zA-Z0-9组合。最长长度32位。
+     * @return IdCard 身份标识（与公安权威库比对时必须是身份证号）。
+规则：a-zA-Z0-9组合。最长长度32位。
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * 设置身份证号或者是客户系统内部的唯一用户id。（传uid的时候只能使用ImageBase64传的照片进行一比一）a-zA-Z0-9组合。最长长度32位。
-     * @param IdCard 身份证号或者是客户系统内部的唯一用户id。（传uid的时候只能使用ImageBase64传的照片进行一比一）a-zA-Z0-9组合。最长长度32位。
+     * 设置身份标识（与公安权威库比对时必须是身份证号）。
+规则：a-zA-Z0-9组合。最长长度32位。
+     * @param IdCard 身份标识（与公安权威库比对时必须是身份证号）。
+规则：a-zA-Z0-9组合。最长长度32位。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
@@ -136,48 +142,52 @@ public class DetectAuthRequest  extends AbstractModel{
     }
 
     /**
-     * 获取回调地址。最长长度1024位。
-     * @return RedirectUrl 回调地址。最长长度1024位。
+     * 获取认证结束后重定向的回调链接地址。最长长度1024位。
+     * @return RedirectUrl 认证结束后重定向的回调链接地址。最长长度1024位。
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
     }
 
     /**
-     * 设置回调地址。最长长度1024位。
-     * @param RedirectUrl 回调地址。最长长度1024位。
+     * 设置认证结束后重定向的回调链接地址。最长长度1024位。
+     * @param RedirectUrl 认证结束后重定向的回调链接地址。最长长度1024位。
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;
     }
 
     /**
-     * 获取额外参数，会在getDetectInfo时带回去。最长长度1024位。
-     * @return Extra 额外参数，会在getDetectInfo时带回去。最长长度1024位。
+     * 获取透传字段，在获取验证结果时返回。
+     * @return Extra 透传字段，在获取验证结果时返回。
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * 设置额外参数，会在getDetectInfo时带回去。最长长度1024位。
-     * @param Extra 额外参数，会在getDetectInfo时带回去。最长长度1024位。
+     * 设置透传字段，在获取验证结果时返回。
+     * @param Extra 透传字段，在获取验证结果时返回。
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;
     }
 
     /**
-     * 获取用于一比一时的照片base64。此时必须传入IdCard。
-     * @return ImageBase64 用于一比一时的照片base64。此时必须传入IdCard。
+     * 获取用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+     * @return ImageBase64 用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * 设置用于一比一时的照片base64。此时必须传入IdCard。
-     * @param ImageBase64 用于一比一时的照片base64。此时必须传入IdCard。
+     * 设置用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+     * @param ImageBase64 用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;

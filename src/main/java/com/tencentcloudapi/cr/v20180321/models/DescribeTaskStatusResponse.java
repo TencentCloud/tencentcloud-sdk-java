@@ -30,7 +30,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     private String TaskResult;
 
     /**
-    * 任务类型，010代表上传任务
+    * 任务类型，001为报告下载，002为数据上传，003为还款数据上传。
     */
     @SerializedName("TaskType")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务类型，010代表上传任务
-     * @return TaskType 任务类型，010代表上传任务
+     * 获取任务类型，001为报告下载，002为数据上传，003为还款数据上传。
+     * @return TaskType 任务类型，001为报告下载，002为数据上传，003为还款数据上传。
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * 设置任务类型，010代表上传任务
-     * @param TaskType 任务类型，010代表上传任务
+     * 设置任务类型，001为报告下载，002为数据上传，003为还款数据上传。
+     * @param TaskType 任务类型，001为报告下载，002为数据上传，003为还款数据上传。
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

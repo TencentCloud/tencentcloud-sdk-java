@@ -49,7 +49,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *实名核身鉴权。用于获取一次核身流程的BizToken。如果是微信平台，会同时返回一个URL，用作微信平台的跳转。
+     *每次开始核身前，需先调用本接口获取BizToken，用来串联核身流程，在核身完成后，用于获取验证结果信息。
      * @param req DetectAuthRequest
      * @return DetectAuthResponse
      * @throws TencentCloudSDKException
@@ -67,7 +67,25 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *获取实名核身结果信息
+     *使用动作活体检测模式前，需调用本接口获取动作顺序。
+     * @param req GetActionSequenceRequest
+     * @return GetActionSequenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetActionSequenceResponse  GetActionSequence(GetActionSequenceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetActionSequenceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetActionSequenceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetActionSequence"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
      * @param req GetDetectInfoRequest
      * @return GetDetectInfoResponse
      * @throws TencentCloudSDKException
@@ -78,6 +96,78 @@ public class FaceidClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetDetectInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetDetectInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *使用数字活体检测模式前，需调用本接口获取数字验证码。
+     * @param req GetLiveCodeRequest
+     * @return GetLiveCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLiveCodeResponse  GetLiveCode(GetLiveCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetLiveCodeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetLiveCodeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetLiveCode"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *传入照片和身份信息，判断该照片与公安权威库的证件照是否属于同一个人。
+     * @param req ImageRecognitionRequest
+     * @return ImageRecognitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImageRecognitionResponse  ImageRecognition(ImageRecognitionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImageRecognitionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImageRecognitionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ImageRecognition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *传入视频和照片，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与上传照片是否属于同一个人。
+     * @param req LivenessCompareRequest
+     * @return LivenessCompareResponse
+     * @throws TencentCloudSDKException
+     */
+    public LivenessCompareResponse  LivenessCompare(LivenessCompareRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<LivenessCompareResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<LivenessCompareResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "LivenessCompare"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *传入视频和身份信息，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与公安权威库的证件照是否属于同一个人。
+     * @param req LivenessRecognitionRequest
+     * @return LivenessRecognitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public LivenessRecognitionResponse  LivenessRecognition(LivenessRecognitionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<LivenessRecognitionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<LivenessRecognitionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "LivenessRecognition"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
