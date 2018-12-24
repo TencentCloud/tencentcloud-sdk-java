@@ -22,6 +22,9 @@ import java.util.Map;
 import java.util.Random;
 import java.util.TimeZone;
 import java.util.TreeMap;
+
+import javax.crypto.Mac;
+import javax.net.ssl.SSLContext;
 import javax.xml.bind.DatatypeConverter;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -79,6 +82,7 @@ abstract public class AbstractClient {
         this.sdkVersion = AbstractClient.SDK_VERSION;
         this.apiVersion = version;
         this.gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+        warmup();
     }
 
     /**
@@ -340,5 +344,24 @@ abstract public class AbstractClient {
             throw new TencentCloudSDKException(e.getMessage());
         }
         return strParam;
+    }
+    
+    /**
+     * warm up, try to avoid unnecessary cost in the first request
+     */
+    private void warmup() {
+        try {
+            // it happens in SDK signature process.
+            // first invoke costs around 250 ms.
+            Mac.getInstance("HmacSHA1");
+            Mac.getInstance("HmacSHA256");
+            // it happens inside okhttp, but I think any https framework/package will do the same.
+            // first invoke costs around 150 ms.
+            SSLContext sslContext = SSLContext.getInstance("TLS");
+            sslContext.init(null, null, null);
+        } catch (Exception e) {
+            // ignore but print message to console
+            e.printStackTrace();
+        }
     }
 }
