@@ -37,6 +37,13 @@ public class DataDisk  extends AbstractModel{
     private Integer DiskSize;
 
     /**
+    * 数据盘快照 ID，类似 `snap-l8psqwnt`。
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
      * 获取数据盘类型。数据盘类型限制详见[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。
      * @return DiskType 数据盘类型。数据盘类型限制详见[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。
      */
@@ -69,11 +76,28 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
+     * 获取数据盘快照 ID，类似 `snap-l8psqwnt`。
+     * @return SnapshotId 数据盘快照 ID，类似 `snap-l8psqwnt`。
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * 设置数据盘快照 ID，类似 `snap-l8psqwnt`。
+     * @param SnapshotId 数据盘快照 ID，类似 `snap-l8psqwnt`。
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
 
     }
 }

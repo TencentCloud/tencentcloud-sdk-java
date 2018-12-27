@@ -37,6 +37,13 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     private Integer BandwidthLimit;
 
     /**
+    * 是否黑石地域，默认`false`。
+    */
+    @SerializedName("IsBm")
+    @Expose
+    private Boolean IsBm;
+
+    /**
      * 获取地域，例如：ap-guangzhou
      * @return Region 地域，例如：ap-guangzhou
      */
@@ -69,11 +76,28 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
+     * 获取是否黑石地域，默认`false`。
+     * @return IsBm 是否黑石地域，默认`false`。
+     */
+    public Boolean getIsBm() {
+        return this.IsBm;
+    }
+
+    /**
+     * 设置是否黑石地域，默认`false`。
+     * @param IsBm 是否黑石地域，默认`false`。
+     */
+    public void setIsBm(Boolean IsBm) {
+        this.IsBm = IsBm;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
+        this.setParamSimple(map, prefix + "IsBm", this.IsBm);
 
     }
 }

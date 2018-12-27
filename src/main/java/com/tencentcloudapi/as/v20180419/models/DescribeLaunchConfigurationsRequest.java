@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLaunchConfigurationsRequest  extends AbstractModel{
 
     /**
-    * 按照一个或者多个启动配置ID查询。启动配置ID形如：`asc-ouy1ax38`。每次请求的上限为100。参数不支持同时指定`LaunchConfigurationIds`和`Filters`。
+    * 按照一个或者多个启动配置ID查询。启动配置ID形如：`asc-ouy1ax38`。每次请求的上限为100。参数不支持同时指定`LaunchConfigurationIds`和`Filters`
     */
     @SerializedName("LaunchConfigurationIds")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeLaunchConfigurationsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取按照一个或者多个启动配置ID查询。启动配置ID形如：`asc-ouy1ax38`。每次请求的上限为100。参数不支持同时指定`LaunchConfigurationIds`和`Filters`。
-     * @return LaunchConfigurationIds 按照一个或者多个启动配置ID查询。启动配置ID形如：`asc-ouy1ax38`。每次请求的上限为100。参数不支持同时指定`LaunchConfigurationIds`和`Filters`。
+     * 获取按照一个或者多个启动配置ID查询。启动配置ID形如：`asc-ouy1ax38`。每次请求的上限为100。参数不支持同时指定`LaunchConfigurationIds`和`Filters`
+     * @return LaunchConfigurationIds 按照一个或者多个启动配置ID查询。启动配置ID形如：`asc-ouy1ax38`。每次请求的上限为100。参数不支持同时指定`LaunchConfigurationIds`和`Filters`
      */
     public String [] getLaunchConfigurationIds() {
         return this.LaunchConfigurationIds;
     }
 
     /**
-     * 设置按照一个或者多个启动配置ID查询。启动配置ID形如：`asc-ouy1ax38`。每次请求的上限为100。参数不支持同时指定`LaunchConfigurationIds`和`Filters`。
-     * @param LaunchConfigurationIds 按照一个或者多个启动配置ID查询。启动配置ID形如：`asc-ouy1ax38`。每次请求的上限为100。参数不支持同时指定`LaunchConfigurationIds`和`Filters`。
+     * 设置按照一个或者多个启动配置ID查询。启动配置ID形如：`asc-ouy1ax38`。每次请求的上限为100。参数不支持同时指定`LaunchConfigurationIds`和`Filters`
+     * @param LaunchConfigurationIds 按照一个或者多个启动配置ID查询。启动配置ID形如：`asc-ouy1ax38`。每次请求的上限为100。参数不支持同时指定`LaunchConfigurationIds`和`Filters`
      */
     public void setLaunchConfigurationIds(String [] LaunchConfigurationIds) {
         this.LaunchConfigurationIds = LaunchConfigurationIds;

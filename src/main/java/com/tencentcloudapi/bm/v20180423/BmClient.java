@@ -157,6 +157,78 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *获取获取设备类型
+     * @param req DescribeDeviceClassRequest
+     * @return DescribeDeviceClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceClassResponse  DescribeDeviceClass(DescribeDeviceClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceClassResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceClassResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDeviceClass"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询设备库存
+     * @param req DescribeDeviceInventoryRequest
+     * @return DescribeDeviceInventoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceInventoryResponse  DescribeDeviceInventory(DescribeDeviceInventoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceInventoryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceInventoryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDeviceInventory"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询设备操作日志， 如设备重启，重装，设置密码等操作
+     * @param req DescribeDeviceOperationLogRequest
+     * @return DescribeDeviceOperationLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceOperationLogResponse  DescribeDeviceOperationLog(DescribeDeviceOperationLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceOperationLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceOperationLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDeviceOperationLog"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询服务器所在的位置，如机架，上联交换机等信息
+     * @param req DescribeDevicePositionRequest
+     * @return DescribeDevicePositionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDevicePositionResponse  DescribeDevicePosition(DescribeDevicePositionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDevicePositionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDevicePositionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDevicePosition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询服务器价格信息，支持设备的批量查找，支持标准机型和弹性机型的混合查找
      * @param req DescribeDevicePriceInfoRequest
      * @return DescribeDevicePriceInfoResponse
@@ -186,6 +258,24 @@ public class BmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询指定机型所支持的操作系统
+     * @param req DescribeOsInfoRequest
+     * @return DescribeOsInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOsInfoResponse  DescribeOsInfo(DescribeOsInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOsInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOsInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeOsInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -345,6 +435,24 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     }
 
     /**
+     *修改物理机服务器自动续费标志
+     * @param req ModifyDeviceAutoRenewFlagRequest
+     * @return ModifyDeviceAutoRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceAutoRenewFlagResponse  ModifyDeviceAutoRenewFlag(ModifyDeviceAutoRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDeviceAutoRenewFlagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDeviceAutoRenewFlagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDeviceAutoRenewFlag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *将设备的预付费模式修改为后付费计费模式，支持批量转换。（前提是客户要加入黑石物理机后付费计费的白名单，申请黑石物理机后付费可以联系腾讯云客服）
      * @param req ModifyPayModePre2PostRequest
      * @return ModifyPayModePre2PostResponse
@@ -392,6 +500,24 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
                 Type type = new TypeToken<JsonResponseModel<ModifyUserCmdResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyUserCmd"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于销毁可退还的服务器
+     * @param req OfflineDevicesRequest
+     * @return OfflineDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public OfflineDevicesResponse  OfflineDevices(OfflineDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OfflineDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OfflineDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OfflineDevices"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -484,6 +610,24 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
                 Type type = new TypeToken<JsonResponseModel<RunUserCmdResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RunUserCmd"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置带外VPN认证用户密码
+     * @param req SetOutBandVpnAuthPasswordRequest
+     * @return SetOutBandVpnAuthPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetOutBandVpnAuthPasswordResponse  SetOutBandVpnAuthPassword(SetOutBandVpnAuthPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetOutBandVpnAuthPasswordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetOutBandVpnAuthPasswordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetOutBandVpnAuthPassword"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

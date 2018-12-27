@@ -51,6 +51,14 @@ public class AddDelayLiveStreamRequest  extends AbstractModel{
     private Integer DelayTime;
 
     /**
+    * 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：默认7天后过期，且最长支持7天内生效。
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
      * 获取应用名称。
      * @return AppName 应用名称。
      */
@@ -115,6 +123,26 @@ public class AddDelayLiveStreamRequest  extends AbstractModel{
     }
 
     /**
+     * 获取延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：默认7天后过期，且最长支持7天内生效。
+     * @return ExpireTime 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：默认7天后过期，且最长支持7天内生效。
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * 设置延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：默认7天后过期，且最长支持7天内生效。
+     * @param ExpireTime 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：默认7天后过期，且最长支持7天内生效。
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +150,7 @@ public class AddDelayLiveStreamRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "DelayTime", this.DelayTime);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }
 }

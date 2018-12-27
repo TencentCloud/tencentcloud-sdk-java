@@ -86,6 +86,13 @@ public class Vpc  extends AbstractModel{
     private String DhcpOptionsId;
 
     /**
+    * 是否开启DHCP。
+    */
+    @SerializedName("EnableDhcp")
+    @Expose
+    private Boolean EnableDhcp;
+
+    /**
      * 获取Vpc名称。
      * @return VpcName Vpc名称。
      */
@@ -230,6 +237,22 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
+     * 获取是否开启DHCP。
+     * @return EnableDhcp 是否开启DHCP。
+     */
+    public Boolean getEnableDhcp() {
+        return this.EnableDhcp;
+    }
+
+    /**
+     * 设置是否开启DHCP。
+     * @param EnableDhcp 是否开启DHCP。
+     */
+    public void setEnableDhcp(Boolean EnableDhcp) {
+        this.EnableDhcp = EnableDhcp;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class Vpc  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DnsServerSet.", this.DnsServerSet);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "DhcpOptionsId", this.DhcpOptionsId);
+        this.setParamSimple(map, prefix + "EnableDhcp", this.EnableDhcp);
 
     }
 }

@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.aai.v20180522.models;
+package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse  extends AbstractModel{
+public class DescribeDeviceOperationLogResponse  extends AbstractModel{
 
     /**
-    * base编码的wav音频
+    * 操作日志列表
     */
-    @SerializedName("Audio")
+    @SerializedName("DeviceOperationLogSet")
     @Expose
-    private String Audio;
+    private DeviceOperationLog [] DeviceOperationLogSet;
 
     /**
-    * 一次请求对应一个SessionId
+    * 返回数目
     */
-    @SerializedName("SessionId")
+    @SerializedName("TotalCount")
     @Expose
-    private String SessionId;
+    private Integer TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class TextToVoiceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取base编码的wav音频
-     * @return Audio base编码的wav音频
+     * 获取操作日志列表
+     * @return DeviceOperationLogSet 操作日志列表
      */
-    public String getAudio() {
-        return this.Audio;
+    public DeviceOperationLog [] getDeviceOperationLogSet() {
+        return this.DeviceOperationLogSet;
     }
 
     /**
-     * 设置base编码的wav音频
-     * @param Audio base编码的wav音频
+     * 设置操作日志列表
+     * @param DeviceOperationLogSet 操作日志列表
      */
-    public void setAudio(String Audio) {
-        this.Audio = Audio;
+    public void setDeviceOperationLogSet(DeviceOperationLog [] DeviceOperationLogSet) {
+        this.DeviceOperationLogSet = DeviceOperationLogSet;
     }
 
     /**
-     * 获取一次请求对应一个SessionId
-     * @return SessionId 一次请求对应一个SessionId
+     * 获取返回数目
+     * @return TotalCount 返回数目
      */
-    public String getSessionId() {
-        return this.SessionId;
+    public Integer getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * 设置一次请求对应一个SessionId
-     * @param SessionId 一次请求对应一个SessionId
+     * 设置返回数目
+     * @param TotalCount 返回数目
      */
-    public void setSessionId(String SessionId) {
-        this.SessionId = SessionId;
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -95,8 +95,8 @@ public class TextToVoiceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Audio", this.Audio);
-        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamArrayObj(map, prefix + "DeviceOperationLogSet.", this.DeviceOperationLogSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

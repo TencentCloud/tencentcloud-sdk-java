@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.aai.v20180522.models;
+package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse  extends AbstractModel{
+public class DescribeDevicePositionResponse  extends AbstractModel{
 
     /**
-    * base编码的wav音频
+    * 返回数量
     */
-    @SerializedName("Audio")
+    @SerializedName("TotalCount")
     @Expose
-    private String Audio;
+    private Integer TotalCount;
 
     /**
-    * 一次请求对应一个SessionId
+    * 设备所在机架信息
     */
-    @SerializedName("SessionId")
+    @SerializedName("DevicePositionInfoSet")
     @Expose
-    private String SessionId;
+    private DevicePositionInfo [] DevicePositionInfoSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class TextToVoiceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取base编码的wav音频
-     * @return Audio base编码的wav音频
+     * 获取返回数量
+     * @return TotalCount 返回数量
      */
-    public String getAudio() {
-        return this.Audio;
+    public Integer getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * 设置base编码的wav音频
-     * @param Audio base编码的wav音频
+     * 设置返回数量
+     * @param TotalCount 返回数量
      */
-    public void setAudio(String Audio) {
-        this.Audio = Audio;
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取一次请求对应一个SessionId
-     * @return SessionId 一次请求对应一个SessionId
+     * 获取设备所在机架信息
+     * @return DevicePositionInfoSet 设备所在机架信息
      */
-    public String getSessionId() {
-        return this.SessionId;
+    public DevicePositionInfo [] getDevicePositionInfoSet() {
+        return this.DevicePositionInfoSet;
     }
 
     /**
-     * 设置一次请求对应一个SessionId
-     * @param SessionId 一次请求对应一个SessionId
+     * 设置设备所在机架信息
+     * @param DevicePositionInfoSet 设备所在机架信息
      */
-    public void setSessionId(String SessionId) {
-        this.SessionId = SessionId;
+    public void setDevicePositionInfoSet(DevicePositionInfo [] DevicePositionInfoSet) {
+        this.DevicePositionInfoSet = DevicePositionInfoSet;
     }
 
     /**
@@ -95,8 +95,8 @@ public class TextToVoiceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Audio", this.Audio);
-        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "DevicePositionInfoSet.", this.DevicePositionInfoSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

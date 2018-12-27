@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.aai.v20180522.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse  extends AbstractModel{
+public class CreateSubnetsResponse  extends AbstractModel{
 
     /**
-    * base编码的wav音频
+    * 新创建的子网列表。
     */
-    @SerializedName("Audio")
+    @SerializedName("SubnetSet")
     @Expose
-    private String Audio;
-
-    /**
-    * 一次请求对应一个SessionId
-    */
-    @SerializedName("SessionId")
-    @Expose
-    private String SessionId;
+    private Subnet [] SubnetSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class TextToVoiceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取base编码的wav音频
-     * @return Audio base编码的wav音频
+     * 获取新创建的子网列表。
+     * @return SubnetSet 新创建的子网列表。
      */
-    public String getAudio() {
-        return this.Audio;
+    public Subnet [] getSubnetSet() {
+        return this.SubnetSet;
     }
 
     /**
-     * 设置base编码的wav音频
-     * @param Audio base编码的wav音频
+     * 设置新创建的子网列表。
+     * @param SubnetSet 新创建的子网列表。
      */
-    public void setAudio(String Audio) {
-        this.Audio = Audio;
-    }
-
-    /**
-     * 获取一次请求对应一个SessionId
-     * @return SessionId 一次请求对应一个SessionId
-     */
-    public String getSessionId() {
-        return this.SessionId;
-    }
-
-    /**
-     * 设置一次请求对应一个SessionId
-     * @param SessionId 一次请求对应一个SessionId
-     */
-    public void setSessionId(String SessionId) {
-        this.SessionId = SessionId;
+    public void setSubnetSet(Subnet [] SubnetSet) {
+        this.SubnetSet = SubnetSet;
     }
 
     /**
@@ -95,8 +72,7 @@ public class TextToVoiceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Audio", this.Audio);
-        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamArrayObj(map, prefix + "SubnetSet.", this.SubnetSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

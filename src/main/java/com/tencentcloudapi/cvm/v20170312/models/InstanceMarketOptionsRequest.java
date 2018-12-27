@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class InstanceMarketOptionsRequest  extends AbstractModel{
 
     /**
-    * 市场选项类型，当前只支持取值：spot
-    */
-    @SerializedName("MarketType")
-    @Expose
-    private String MarketType;
-
-    /**
     * 竞价相关选项
     */
     @SerializedName("SpotOptions")
@@ -37,20 +30,11 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
     private SpotMarketOptions SpotOptions;
 
     /**
-     * 获取市场选项类型，当前只支持取值：spot
-     * @return MarketType 市场选项类型，当前只支持取值：spot
-     */
-    public String getMarketType() {
-        return this.MarketType;
-    }
-
-    /**
-     * 设置市场选项类型，当前只支持取值：spot
-     * @param MarketType 市场选项类型，当前只支持取值：spot
-     */
-    public void setMarketType(String MarketType) {
-        this.MarketType = MarketType;
-    }
+    * 市场选项类型，当前只支持取值：spot
+    */
+    @SerializedName("MarketType")
+    @Expose
+    private String MarketType;
 
     /**
      * 获取竞价相关选项
@@ -69,11 +53,27 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取市场选项类型，当前只支持取值：spot
+     * @return MarketType 市场选项类型，当前只支持取值：spot
+     */
+    public String getMarketType() {
+        return this.MarketType;
+    }
+
+    /**
+     * 设置市场选项类型，当前只支持取值：spot
+     * @param MarketType 市场选项类型，当前只支持取值：spot
+     */
+    public void setMarketType(String MarketType) {
+        this.MarketType = MarketType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MarketType", this.MarketType);
         this.setParamObj(map, prefix + "SpotOptions.", this.SpotOptions);
+        this.setParamSimple(map, prefix + "MarketType", this.MarketType);
 
     }
 }

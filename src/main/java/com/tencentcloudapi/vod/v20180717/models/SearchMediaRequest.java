@@ -31,8 +31,8 @@ public class SearchMediaRequest  extends AbstractModel{
 
     /**
     * 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8 个字符</li>
-<li>数组长度限制：10</li>
+<li>单个标签长度限制：8 个字符。</li>
+<li>数组长度限制：10。</li>
     */
     @SerializedName("Tags")
     @Expose
@@ -46,8 +46,8 @@ public class SearchMediaRequest  extends AbstractModel{
     private Integer [] ClassIds;
 
     /**
-    * 创建时间的开始时间
-<li>大于等于开始时间</li>
+    * 创建时间的开始时间。
+<li>大于等于开始时间。</li>
 <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
     */
     @SerializedName("StartTime")
@@ -55,8 +55,8 @@ public class SearchMediaRequest  extends AbstractModel{
     private String StartTime;
 
     /**
-    * 创建时间的结束时间
-<li>小于结束时间</li>
+    * 创建时间的结束时间。
+<li>小于结束时间。</li>
 <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
     */
     @SerializedName("EndTime")
@@ -64,28 +64,28 @@ public class SearchMediaRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-    * 媒体文件来源
+    * 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
     */
     @SerializedName("SourceType")
     @Expose
-    private Integer SourceType;
+    private String SourceType;
 
     /**
-    * 推流[直播码](https://cloud.tencent.com/document/product/267/5959)
+    * 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
     */
     @SerializedName("StreamId")
     @Expose
     private String StreamId;
 
     /**
-    * 直播录制文件的唯一标识
+    * 直播录制文件的唯一标识。
     */
     @SerializedName("Vid")
     @Expose
     private String Vid;
 
     /**
-    * 排序方式
+    * 排序方式。
 <li>Sort.Field 可选值：CreateTime</li>
 <li>指定 Text 搜索时，将根据匹配度排序，该字段无效</li>
     */
@@ -94,9 +94,9 @@ public class SearchMediaRequest  extends AbstractModel{
     private SortBy Sort;
 
     /**
-    * 偏移量
-<li>默认值：0</li>
-<li>取值范围：Offset + Limit 不超过5000</li>
+    * 偏移量。
+<li>默认值：0。</li>
+<li>取值范围：Offset + Limit 不超过 5000。</li>
     */
     @SerializedName("Offset")
     @Expose
@@ -134,11 +134,11 @@ public class SearchMediaRequest  extends AbstractModel{
 
     /**
      * 获取标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8 个字符</li>
-<li>数组长度限制：10</li>
+<li>单个标签长度限制：8 个字符。</li>
+<li>数组长度限制：10。</li>
      * @return Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8 个字符</li>
-<li>数组长度限制：10</li>
+<li>单个标签长度限制：8 个字符。</li>
+<li>数组长度限制：10。</li>
      */
     public String [] getTags() {
         return this.Tags;
@@ -146,11 +146,11 @@ public class SearchMediaRequest  extends AbstractModel{
 
     /**
      * 设置标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8 个字符</li>
-<li>数组长度限制：10</li>
+<li>单个标签长度限制：8 个字符。</li>
+<li>数组长度限制：10。</li>
      * @param Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8 个字符</li>
-<li>数组长度限制：10</li>
+<li>单个标签长度限制：8 个字符。</li>
+<li>数组长度限制：10。</li>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
@@ -173,11 +173,11 @@ public class SearchMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间的开始时间
-<li>大于等于开始时间</li>
+     * 获取创建时间的开始时间。
+<li>大于等于开始时间。</li>
 <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
-     * @return StartTime 创建时间的开始时间
-<li>大于等于开始时间</li>
+     * @return StartTime 创建时间的开始时间。
+<li>大于等于开始时间。</li>
 <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      */
     public String getStartTime() {
@@ -185,11 +185,11 @@ public class SearchMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间的开始时间
-<li>大于等于开始时间</li>
+     * 设置创建时间的开始时间。
+<li>大于等于开始时间。</li>
 <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
-     * @param StartTime 创建时间的开始时间
-<li>大于等于开始时间</li>
+     * @param StartTime 创建时间的开始时间。
+<li>大于等于开始时间。</li>
 <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      */
     public void setStartTime(String StartTime) {
@@ -197,11 +197,11 @@ public class SearchMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间的结束时间
-<li>小于结束时间</li>
+     * 获取创建时间的结束时间。
+<li>小于结束时间。</li>
 <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
-     * @return EndTime 创建时间的结束时间
-<li>小于结束时间</li>
+     * @return EndTime 创建时间的结束时间。
+<li>小于结束时间。</li>
 <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      */
     public String getEndTime() {
@@ -209,11 +209,11 @@ public class SearchMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间的结束时间
-<li>小于结束时间</li>
+     * 设置创建时间的结束时间。
+<li>小于结束时间。</li>
 <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
-     * @param EndTime 创建时间的结束时间
-<li>小于结束时间</li>
+     * @param EndTime 创建时间的结束时间。
+<li>小于结束时间。</li>
 <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      */
     public void setEndTime(String EndTime) {
@@ -221,58 +221,58 @@ public class SearchMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取媒体文件来源
-     * @return SourceType 媒体文件来源
+     * 获取媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+     * @return SourceType 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
      */
-    public Integer getSourceType() {
+    public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * 设置媒体文件来源
-     * @param SourceType 媒体文件来源
+     * 设置媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+     * @param SourceType 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
      */
-    public void setSourceType(Integer SourceType) {
+    public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * 获取推流[直播码](https://cloud.tencent.com/document/product/267/5959)
-     * @return StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)
+     * 获取推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * @return StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * 设置推流[直播码](https://cloud.tencent.com/document/product/267/5959)
-     * @param StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)
+     * 设置推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * @param StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
     }
 
     /**
-     * 获取直播录制文件的唯一标识
-     * @return Vid 直播录制文件的唯一标识
+     * 获取直播录制文件的唯一标识。
+     * @return Vid 直播录制文件的唯一标识。
      */
     public String getVid() {
         return this.Vid;
     }
 
     /**
-     * 设置直播录制文件的唯一标识
-     * @param Vid 直播录制文件的唯一标识
+     * 设置直播录制文件的唯一标识。
+     * @param Vid 直播录制文件的唯一标识。
      */
     public void setVid(String Vid) {
         this.Vid = Vid;
     }
 
     /**
-     * 获取排序方式
+     * 获取排序方式。
 <li>Sort.Field 可选值：CreateTime</li>
 <li>指定 Text 搜索时，将根据匹配度排序，该字段无效</li>
-     * @return Sort 排序方式
+     * @return Sort 排序方式。
 <li>Sort.Field 可选值：CreateTime</li>
 <li>指定 Text 搜索时，将根据匹配度排序，该字段无效</li>
      */
@@ -281,10 +281,10 @@ public class SearchMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式
+     * 设置排序方式。
 <li>Sort.Field 可选值：CreateTime</li>
 <li>指定 Text 搜索时，将根据匹配度排序，该字段无效</li>
-     * @param Sort 排序方式
+     * @param Sort 排序方式。
 <li>Sort.Field 可选值：CreateTime</li>
 <li>指定 Text 搜索时，将根据匹配度排序，该字段无效</li>
      */
@@ -293,24 +293,24 @@ public class SearchMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
-<li>默认值：0</li>
-<li>取值范围：Offset + Limit 不超过5000</li>
-     * @return Offset 偏移量
-<li>默认值：0</li>
-<li>取值范围：Offset + Limit 不超过5000</li>
+     * 获取偏移量。
+<li>默认值：0。</li>
+<li>取值范围：Offset + Limit 不超过 5000。</li>
+     * @return Offset 偏移量。
+<li>默认值：0。</li>
+<li>取值范围：Offset + Limit 不超过 5000。</li>
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量
-<li>默认值：0</li>
-<li>取值范围：Offset + Limit 不超过5000</li>
-     * @param Offset 偏移量
-<li>默认值：0</li>
-<li>取值范围：Offset + Limit 不超过5000</li>
+     * 设置偏移量。
+<li>默认值：0。</li>
+<li>取值范围：Offset + Limit 不超过 5000。</li>
+     * @param Offset 偏移量。
+<li>默认值：0。</li>
+<li>取值范围：Offset + Limit 不超过 5000。</li>
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;

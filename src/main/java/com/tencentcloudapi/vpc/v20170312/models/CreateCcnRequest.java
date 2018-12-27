@@ -37,6 +37,13 @@ public class CreateCcnRequest  extends AbstractModel{
     private String CcnDescription;
 
     /**
+    * CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
      * 获取CCN名称，最大长度不能超过60个字节。
      * @return CcnName CCN名称，最大长度不能超过60个字节。
      */
@@ -69,11 +76,28 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
+     * 获取CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+     * @return QosLevel CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * 设置CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+     * @param QosLevel CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnName", this.CcnName);
         this.setParamSimple(map, prefix + "CcnDescription", this.CcnDescription);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
 
     }
 }

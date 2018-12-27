@@ -30,7 +30,7 @@ public class ReplaceRoutesRequest  extends AbstractModel{
     private String RouteTableId;
 
     /**
-    * 路由策略对象。只需要指定路由策略ID（RouteId）。
+    * 路由策略对象。需要指定路由策略ID（RouteId）。
     */
     @SerializedName("Routes")
     @Expose
@@ -53,16 +53,16 @@ public class ReplaceRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取路由策略对象。只需要指定路由策略ID（RouteId）。
-     * @return Routes 路由策略对象。只需要指定路由策略ID（RouteId）。
+     * 获取路由策略对象。需要指定路由策略ID（RouteId）。
+     * @return Routes 路由策略对象。需要指定路由策略ID（RouteId）。
      */
     public Route [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * 设置路由策略对象。只需要指定路由策略ID（RouteId）。
-     * @param Routes 路由策略对象。只需要指定路由策略ID（RouteId）。
+     * 设置路由策略对象。需要指定路由策略ID（RouteId）。
+     * @param Routes 路由策略对象。需要指定路由策略ID（RouteId）。
      */
     public void setRoutes(Route [] Routes) {
         this.Routes = Routes;

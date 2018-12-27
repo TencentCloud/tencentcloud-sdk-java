@@ -30,7 +30,7 @@ public class LivenessRecognitionRequest  extends AbstractModel{
     private String IdCard;
 
     /**
-    * 姓名
+    * 姓名。中文请使用UTF-8编码。
     */
     @SerializedName("Name")
     @Expose
@@ -53,8 +53,8 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     private String LivenessType;
 
     /**
-    * 数字模式传参：唇语验证码(1234)，需先获取唇语验证码；
-动作模式传参：传动作顺序(12,21)，需先获取动作顺序；
+    * 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
+动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
 静默模式传参：空。
     */
     @SerializedName("ValidateData")
@@ -85,16 +85,16 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 获取姓名
-     * @return Name 姓名
+     * 获取姓名。中文请使用UTF-8编码。
+     * @return Name 姓名。中文请使用UTF-8编码。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * 设置姓名
-     * @param Name 姓名
+     * 设置姓名。中文请使用UTF-8编码。
+     * @param Name 姓名。中文请使用UTF-8编码。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -141,11 +141,11 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 获取数字模式传参：唇语验证码(1234)，需先获取唇语验证码；
-动作模式传参：传动作顺序(12,21)，需先获取动作顺序；
+     * 获取数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
+动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
 静默模式传参：空。
-     * @return ValidateData 数字模式传参：唇语验证码(1234)，需先获取唇语验证码；
-动作模式传参：传动作顺序(12,21)，需先获取动作顺序；
+     * @return ValidateData 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
+动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
 静默模式传参：空。
      */
     public String getValidateData() {
@@ -153,11 +153,11 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 设置数字模式传参：唇语验证码(1234)，需先获取唇语验证码；
-动作模式传参：传动作顺序(12,21)，需先获取动作顺序；
+     * 设置数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
+动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
 静默模式传参：空。
-     * @param ValidateData 数字模式传参：唇语验证码(1234)，需先获取唇语验证码；
-动作模式传参：传动作顺序(12,21)，需先获取动作顺序；
+     * @param ValidateData 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
+动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
 静默模式传参：空。
      */
     public void setValidateData(String ValidateData) {

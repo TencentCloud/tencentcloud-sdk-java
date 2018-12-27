@@ -45,7 +45,7 @@ public class DetectAuthRequest  extends AbstractModel{
     private String IdCard;
 
     /**
-    * 姓名。最长长度32位。
+    * 姓名。最长长度32位。中文请使用UTF-8编码。
     */
     @SerializedName("Name")
     @Expose
@@ -126,16 +126,16 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 获取姓名。最长长度32位。
-     * @return Name 姓名。最长长度32位。
+     * 获取姓名。最长长度32位。中文请使用UTF-8编码。
+     * @return Name 姓名。最长长度32位。中文请使用UTF-8编码。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * 设置姓名。最长长度32位。
-     * @param Name 姓名。最长长度32位。
+     * 设置姓名。最长长度32位。中文请使用UTF-8编码。
+     * @param Name 姓名。最长长度32位。中文请使用UTF-8编码。
      */
     public void setName(String Name) {
         this.Name = Name;

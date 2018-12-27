@@ -32,9 +32,8 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
 
     /**
     * 分页大小。
-
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10
     */
     @SerializedName("PageSize")
@@ -77,14 +76,12 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
 
     /**
      * 获取分页大小。
-
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10
      * @return PageSize 分页大小。
-
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10
      */
     public Integer getPageSize() {
@@ -93,14 +90,12 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
 
     /**
      * 设置分页大小。
-
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10
      * @param PageSize 分页大小。
-
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10
      */
     public void setPageSize(Integer PageSize) {

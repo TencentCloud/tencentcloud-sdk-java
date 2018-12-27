@@ -72,7 +72,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     private Integer VoiceType;
 
     /**
-    * 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+    * 主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
     */
     @SerializedName("PrimaryLanguage")
     @Expose
@@ -198,16 +198,16 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
-     * @return PrimaryLanguage 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+     * 获取主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
+     * @return PrimaryLanguage 主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
      */
     public Integer getPrimaryLanguage() {
         return this.PrimaryLanguage;
     }
 
     /**
-     * 设置主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
-     * @param PrimaryLanguage 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+     * 设置主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
+     * @param PrimaryLanguage 主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
      */
     public void setPrimaryLanguage(Integer PrimaryLanguage) {
         this.PrimaryLanguage = PrimaryLanguage;

@@ -45,7 +45,7 @@ public class DataDisk  extends AbstractModel{
 
     /**
     * 数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘
+<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
@@ -104,12 +104,12 @@ public class DataDisk  extends AbstractModel{
 
     /**
      * 获取数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘
+<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
      * @return DeleteWithInstance 数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘
+<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
@@ -120,12 +120,12 @@ public class DataDisk  extends AbstractModel{
 
     /**
      * 设置数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘
+<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
      * @param DeleteWithInstance 数据盘是否随子机销毁。取值范围：
-<li>TRUE：子机销毁时，销毁数据盘
+<li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。

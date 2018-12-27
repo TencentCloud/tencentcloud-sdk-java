@@ -38,7 +38,6 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
 
     /**
     * 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>
@@ -97,14 +96,12 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
 
     /**
      * 获取过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>
 <li>instance-region - String -（过滤条件）下一跳所属地域。</li>
 <li>instance-id - String -（过滤条件）下一跳实例ID。</li>
      * @return Filters 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>
@@ -117,14 +114,12 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
 
     /**
      * 设置过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>
 <li>instance-region - String -（过滤条件）下一跳所属地域。</li>
 <li>instance-id - String -（过滤条件）下一跳实例ID。</li>
      * @param Filters 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>

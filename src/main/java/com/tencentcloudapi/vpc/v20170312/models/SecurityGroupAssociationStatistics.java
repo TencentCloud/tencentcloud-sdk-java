@@ -65,6 +65,13 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     private Integer CLB;
 
     /**
+    * 全量实例的绑定统计。
+    */
+    @SerializedName("InstanceStatistics")
+    @Expose
+    private String [] InstanceStatistics;
+
+    /**
      * 获取安全组实例ID。
      * @return SecurityGroupId 安全组实例ID。
      */
@@ -161,6 +168,22 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
+     * 获取全量实例的绑定统计。
+     * @return InstanceStatistics 全量实例的绑定统计。
+     */
+    public String [] getInstanceStatistics() {
+        return this.InstanceStatistics;
+    }
+
+    /**
+     * 设置全量实例的绑定统计。
+     * @param InstanceStatistics 全量实例的绑定统计。
+     */
+    public void setInstanceStatistics(String [] InstanceStatistics) {
+        this.InstanceStatistics = InstanceStatistics;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
         this.setParamSimple(map, prefix + "ENI", this.ENI);
         this.setParamSimple(map, prefix + "SG", this.SG);
         this.setParamSimple(map, prefix + "CLB", this.CLB);
+        this.setParamArraySimple(map, prefix + "InstanceStatistics.", this.InstanceStatistics);
 
     }
 }
