@@ -54,6 +54,12 @@ public class TencentCloudSDKException extends Exception {
     	this.requestId = requestId;
     }
     
+    public TencentCloudSDKException(String message, String requestId, String errorCode) {
+        super(message);
+        this.requestId = requestId;
+        this.errorCode = errorCode;
+    }
+    
     /**
      * 获取请求id
      * @return requestId
@@ -77,6 +83,4 @@ public class TencentCloudSDKException extends Exception {
     public String toString() {
     	return "[TencentCloudSDKException]" + "message:" + this.getMessage() + " requestId:" + this.getRequestId();
     }
-    
-    
 }

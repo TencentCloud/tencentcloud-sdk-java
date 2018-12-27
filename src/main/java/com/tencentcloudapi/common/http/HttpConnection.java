@@ -49,7 +49,7 @@ public class HttpConnection {
     	try {
     		response = this.client.newCall(request).execute();
     	} catch (IOException e) {
-    		throw new TencentCloudSDKException(e.getMessage());
+    		throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     	}
     	return response;
     }
@@ -62,7 +62,7 @@ public class HttpConnection {
         			.get()
         			.build();
     	} catch (IllegalArgumentException e) {
-    		throw new TencentCloudSDKException(e.getMessage());
+    		throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     	}
 
     	return this.doRequest(request); 	
@@ -77,7 +77,7 @@ public class HttpConnection {
                     .get()
                     .build();
         } catch (IllegalArgumentException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
         }
 
         return this.doRequest(request); 
@@ -92,7 +92,7 @@ public class HttpConnection {
                     .post(RequestBody.create(contentType, body))
                     .build();
     	} catch (IllegalArgumentException e) {
-    		throw new TencentCloudSDKException(e.getMessage());
+    		throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     	}
 
         return this.doRequest(request);   		
@@ -108,7 +108,7 @@ public class HttpConnection {
                     .headers(headers)
                     .build();
         } catch (IllegalArgumentException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
         }
 
         return this.doRequest(request);         

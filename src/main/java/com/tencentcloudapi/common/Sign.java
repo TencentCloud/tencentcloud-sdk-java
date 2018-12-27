@@ -54,7 +54,7 @@ public class Sign {
 	        hash = mac.doFinal(sigStr.getBytes(UTF8));
 	        sig = DatatypeConverter.printBase64Binary(hash);
     	} catch (Exception e) {
-    		throw new TencentCloudSDKException(e.getMessage());
+    		throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     	}
         return sig;	
     }
@@ -107,7 +107,7 @@ public class Sign {
         try {
             mac.init(secretKeySpec);
         } catch (InvalidKeyException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
         }
         return mac.doFinal(msg.getBytes(UTF8));
     }

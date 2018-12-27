@@ -166,7 +166,7 @@ abstract public class AbstractClient {
         try {
             strResp = okRsp.body().string();
         } catch (IOException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
         }
 
         JsonResponseModel<JsonResponseErrModel> errResp = null;
@@ -175,7 +175,7 @@ abstract public class AbstractClient {
             }.getType();
             errResp = gson.fromJson(strResp, errType);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
         }
         if (errResp.response.error != null) {
             throw new TencentCloudSDKException(errResp.response.error.code + "-" + errResp.response.error.message,
@@ -341,7 +341,7 @@ abstract public class AbstractClient {
             }
             strParam += ("Signature=" + URLEncoder.encode(sigOutParam, "utf-8"));
         } catch (UnsupportedEncodingException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
         }
         return strParam;
     }
