@@ -53,7 +53,7 @@ public class ModifyPersonTypeRequest  extends AbstractModel{
     /**
     * 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
+PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
     */
     @SerializedName("PersonSubType")
@@ -127,11 +127,11 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     /**
      * 获取身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
+PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * @return PersonSubType 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
+PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      */
     public Integer getPersonSubType() {
@@ -141,11 +141,11 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     /**
      * 设置身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
+PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * @param PersonSubType 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
-PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
+PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      */
     public void setPersonSubType(Integer PersonSubType) {

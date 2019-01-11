@@ -30,7 +30,7 @@ public class CreateLiveRecordRequest  extends AbstractModel{
     private String StreamName;
 
     /**
-    * 直播流所属应用名称。
+    * 推流App名。
     */
     @SerializedName("AppName")
     @Expose
@@ -44,14 +44,14 @@ public class CreateLiveRecordRequest  extends AbstractModel{
     private String DomainName;
 
     /**
-    * 任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
+    * 录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+    * 录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
     */
     @SerializedName("EndTime")
     @Expose
@@ -75,24 +75,24 @@ public class CreateLiveRecordRequest  extends AbstractModel{
     private String FileFormat;
 
     /**
-    * 精彩视频标志。0：普通视频【默认】；1：精彩视频。
+    * 开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
     */
     @SerializedName("Highlight")
     @Expose
     private Integer Highlight;
 
     /**
-    * A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
+    * 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
     */
     @SerializedName("MixStream")
     @Expose
     private Integer MixStream;
 
     /**
-    * 录制流参数，当前支持以下参数： 
-interval 录制分片时长，单位 秒，0 - 7200
-storage_time 录制文件存储时长，单位 秒
-eg. interval=3600&storage_time=7200
+    * 录制流参数。当前支持以下参数：
+record_interval - 录制分片时长，单位 秒，1800 - 7200
+storage_time - 录制文件存储时长，单位 秒
+eg. record_interval=3600&storage_time=7200
 注：参数需要url encode。
     */
     @SerializedName("StreamParam")
@@ -116,16 +116,16 @@ eg. interval=3600&storage_time=7200
     }
 
     /**
-     * 获取直播流所属应用名称。
-     * @return AppName 直播流所属应用名称。
+     * 获取推流App名。
+     * @return AppName 推流App名。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * 设置直播流所属应用名称。
-     * @param AppName 直播流所属应用名称。
+     * 设置推流App名。
+     * @param AppName 推流App名。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
@@ -148,32 +148,32 @@ eg. interval=3600&storage_time=7200
     }
 
     /**
-     * 获取任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
-     * @return StartTime 任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
+     * 获取录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+     * @return StartTime 录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * 设置任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
-     * @param StartTime 任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
+     * 设置录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+     * @param StartTime 录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * 获取任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
-     * @return EndTime 任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+     * 获取录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
+     * @return EndTime 录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * 设置任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
-     * @param EndTime 任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+     * 设置录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
+     * @param EndTime 录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -224,47 +224,47 @@ eg. interval=3600&storage_time=7200
     }
 
     /**
-     * 获取精彩视频标志。0：普通视频【默认】；1：精彩视频。
-     * @return Highlight 精彩视频标志。0：普通视频【默认】；1：精彩视频。
+     * 获取开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
+     * @return Highlight 开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
      */
     public Integer getHighlight() {
         return this.Highlight;
     }
 
     /**
-     * 设置精彩视频标志。0：普通视频【默认】；1：精彩视频。
-     * @param Highlight 精彩视频标志。0：普通视频【默认】；1：精彩视频。
+     * 设置开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
+     * @param Highlight 开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
      */
     public void setHighlight(Integer Highlight) {
         this.Highlight = Highlight;
     }
 
     /**
-     * 获取A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
-     * @return MixStream A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
+     * 获取开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+     * @return MixStream 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
      */
     public Integer getMixStream() {
         return this.MixStream;
     }
 
     /**
-     * 设置A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
-     * @param MixStream A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
+     * 设置开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+     * @param MixStream 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
      */
     public void setMixStream(Integer MixStream) {
         this.MixStream = MixStream;
     }
 
     /**
-     * 获取录制流参数，当前支持以下参数： 
-interval 录制分片时长，单位 秒，0 - 7200
-storage_time 录制文件存储时长，单位 秒
-eg. interval=3600&storage_time=7200
+     * 获取录制流参数。当前支持以下参数：
+record_interval - 录制分片时长，单位 秒，1800 - 7200
+storage_time - 录制文件存储时长，单位 秒
+eg. record_interval=3600&storage_time=7200
 注：参数需要url encode。
-     * @return StreamParam 录制流参数，当前支持以下参数： 
-interval 录制分片时长，单位 秒，0 - 7200
-storage_time 录制文件存储时长，单位 秒
-eg. interval=3600&storage_time=7200
+     * @return StreamParam 录制流参数。当前支持以下参数：
+record_interval - 录制分片时长，单位 秒，1800 - 7200
+storage_time - 录制文件存储时长，单位 秒
+eg. record_interval=3600&storage_time=7200
 注：参数需要url encode。
      */
     public String getStreamParam() {
@@ -272,15 +272,15 @@ eg. interval=3600&storage_time=7200
     }
 
     /**
-     * 设置录制流参数，当前支持以下参数： 
-interval 录制分片时长，单位 秒，0 - 7200
-storage_time 录制文件存储时长，单位 秒
-eg. interval=3600&storage_time=7200
+     * 设置录制流参数。当前支持以下参数：
+record_interval - 录制分片时长，单位 秒，1800 - 7200
+storage_time - 录制文件存储时长，单位 秒
+eg. record_interval=3600&storage_time=7200
 注：参数需要url encode。
-     * @param StreamParam 录制流参数，当前支持以下参数： 
-interval 录制分片时长，单位 秒，0 - 7200
-storage_time 录制文件存储时长，单位 秒
-eg. interval=3600&storage_time=7200
+     * @param StreamParam 录制流参数。当前支持以下参数：
+record_interval - 录制分片时长，单位 秒，1800 - 7200
+storage_time - 录制文件存储时长，单位 秒
+eg. record_interval=3600&storage_time=7200
 注：参数需要url encode。
      */
     public void setStreamParam(String StreamParam) {

@@ -236,6 +236,27 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSnapshotOperationLogs）用于查询快照操作日志列表。
+
+可根据快照ID过滤。快照ID形如：snap-a1kmcp13。
+
+     * @param req DescribeSnapshotOperationLogsRequest
+     * @return DescribeSnapshotOperationLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotOperationLogsResponse  DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSnapshotOperationLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeSnapshots）用于查询快照的详细信息。
 
 * 根据快照ID、创建快照的云硬盘ID、创建快照的云硬盘类型等对结果进行过滤，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。

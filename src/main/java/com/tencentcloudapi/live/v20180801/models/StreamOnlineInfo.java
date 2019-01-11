@@ -37,6 +37,13 @@ public class StreamOnlineInfo  extends AbstractModel{
     private PublishTime [] PublishTimeList;
 
     /**
+    * 应用名称。
+    */
+    @SerializedName("AppName")
+    @Expose
+    private String AppName;
+
+    /**
      * 获取流名称。
      * @return StreamName 流名称。
      */
@@ -69,11 +76,28 @@ public class StreamOnlineInfo  extends AbstractModel{
     }
 
     /**
+     * 获取应用名称。
+     * @return AppName 应用名称。
+     */
+    public String getAppName() {
+        return this.AppName;
+    }
+
+    /**
+     * 设置应用名称。
+     * @param AppName 应用名称。
+     */
+    public void setAppName(String AppName) {
+        this.AppName = AppName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamArrayObj(map, prefix + "PublishTimeList.", this.PublishTimeList);
+        this.setParamSimple(map, prefix + "AppName", this.AppName);
 
     }
 }

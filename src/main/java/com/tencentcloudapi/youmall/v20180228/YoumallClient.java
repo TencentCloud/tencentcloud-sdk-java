@@ -537,6 +537,24 @@ public class YoumallClient extends AbstractClient{
     }
 
     /**
+     *支持修改黑白名单类型的顾客特征
+     * @param req ModifyPersonFeatureInfoRequest
+     * @return ModifyPersonFeatureInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPersonFeatureInfoResponse  ModifyPersonFeatureInfo(ModifyPersonFeatureInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPersonFeatureInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPersonFeatureInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPersonFeatureInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *标记到店顾客的身份类型，例如黑名单、白名单等
 
      * @param req ModifyPersonTagInfoRequest

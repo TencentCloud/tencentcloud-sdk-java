@@ -75,6 +75,20 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     private Integer PersonSubType;
 
     /**
+    * 到访次数，-1表示未知
+    */
+    @SerializedName("VisitTimes")
+    @Expose
+    private Integer VisitTimes;
+
+    /**
+    * 到访天数，-1表示未知
+    */
+    @SerializedName("VisitDays")
+    @Expose
+    private Integer VisitDays;
+
+    /**
      * 获取用户ID
      * @return PersonId 用户ID
      */
@@ -199,6 +213,38 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
+     * 获取到访次数，-1表示未知
+     * @return VisitTimes 到访次数，-1表示未知
+     */
+    public Integer getVisitTimes() {
+        return this.VisitTimes;
+    }
+
+    /**
+     * 设置到访次数，-1表示未知
+     * @param VisitTimes 到访次数，-1表示未知
+     */
+    public void setVisitTimes(Integer VisitTimes) {
+        this.VisitTimes = VisitTimes;
+    }
+
+    /**
+     * 获取到访天数，-1表示未知
+     * @return VisitDays 到访天数，-1表示未知
+     */
+    public Integer getVisitDays() {
+        return this.VisitDays;
+    }
+
+    /**
+     * 设置到访天数，-1表示未知
+     * @param VisitDays 到访天数，-1表示未知
+     */
+    public void setVisitDays(Integer VisitDays) {
+        this.VisitDays = VisitDays;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -209,6 +255,8 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
         this.setParamSimple(map, prefix + "PersonType", this.PersonType);
         this.setParamSimple(map, prefix + "PersonPictureUrl", this.PersonPictureUrl);
         this.setParamSimple(map, prefix + "PersonSubType", this.PersonSubType);
+        this.setParamSimple(map, prefix + "VisitTimes", this.VisitTimes);
+        this.setParamSimple(map, prefix + "VisitDays", this.VisitDays);
 
     }
 }

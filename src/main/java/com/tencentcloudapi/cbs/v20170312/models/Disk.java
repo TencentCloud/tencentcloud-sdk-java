@@ -79,7 +79,7 @@ public class Disk  extends AbstractModel{
     private Integer DiskSize;
 
     /**
-    * 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
+    * 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中<br><li>TORECYCLE：待回收<br><li>DUMPING：拷贝硬盘中。
     */
     @SerializedName("DiskState")
     @Expose
@@ -203,6 +203,20 @@ public class Disk  extends AbstractModel{
     @SerializedName("DifferDaysOfDeadline")
     @Expose
     private Integer DifferDaysOfDeadline;
+
+    /**
+    * 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+    */
+    @SerializedName("Migrating")
+    @Expose
+    private Boolean Migrating;
+
+    /**
+    * 云盘类型变更的迁移进度，取值0到100。
+    */
+    @SerializedName("MigratePercent")
+    @Expose
+    private Integer MigratePercent;
 
     /**
      * 获取云硬盘ID。
@@ -333,16 +347,16 @@ public class Disk  extends AbstractModel{
     }
 
     /**
-     * 获取云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
-     * @return DiskState 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
+     * 获取云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中<br><li>TORECYCLE：待回收<br><li>DUMPING：拷贝硬盘中。
+     * @return DiskState 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中<br><li>TORECYCLE：待回收<br><li>DUMPING：拷贝硬盘中。
      */
     public String getDiskState() {
         return this.DiskState;
     }
 
     /**
-     * 设置云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
-     * @param DiskState 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
+     * 设置云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中<br><li>TORECYCLE：待回收<br><li>DUMPING：拷贝硬盘中。
+     * @param DiskState 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中<br><li>TORECYCLE：待回收<br><li>DUMPING：拷贝硬盘中。
      */
     public void setDiskState(String DiskState) {
         this.DiskState = DiskState;
@@ -621,6 +635,38 @@ public class Disk  extends AbstractModel{
     }
 
     /**
+     * 获取云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+     * @return Migrating 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+     */
+    public Boolean getMigrating() {
+        return this.Migrating;
+    }
+
+    /**
+     * 设置云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+     * @param Migrating 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+     */
+    public void setMigrating(Boolean Migrating) {
+        this.Migrating = Migrating;
+    }
+
+    /**
+     * 获取云盘类型变更的迁移进度，取值0到100。
+     * @return MigratePercent 云盘类型变更的迁移进度，取值0到100。
+     */
+    public Integer getMigratePercent() {
+        return this.MigratePercent;
+    }
+
+    /**
+     * 设置云盘类型变更的迁移进度，取值0到100。
+     * @param MigratePercent 云盘类型变更的迁移进度，取值0到100。
+     */
+    public void setMigratePercent(Integer MigratePercent) {
+        this.MigratePercent = MigratePercent;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -650,6 +696,8 @@ public class Disk  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         this.setParamSimple(map, prefix + "DifferDaysOfDeadline", this.DifferDaysOfDeadline);
+        this.setParamSimple(map, prefix + "Migrating", this.Migrating);
+        this.setParamSimple(map, prefix + "MigratePercent", this.MigratePercent);
 
     }
 }

@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ms.v20180408.models;
+package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
+public class DescribeSnapshotOperationLogsResponse  extends AbstractModel{
 
     /**
-    * 用户uin信息
+    * 快照操作日志列表。
     */
-    @SerializedName("UserUin")
+    @SerializedName("SnapshotOperationLogSet")
     @Expose
-    private Long UserUin;
-
-    /**
-    * 用户APPID信息
-    */
-    @SerializedName("UserAppid")
-    @Expose
-    private Integer UserAppid;
-
-    /**
-    * 系统时间戳
-    */
-    @SerializedName("TimeStamp")
-    @Expose
-    private Integer TimeStamp;
+    private SnapshotOperationLog [] SnapshotOperationLogSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取用户uin信息
-     * @return UserUin 用户uin信息
+     * 获取快照操作日志列表。
+     * @return SnapshotOperationLogSet 快照操作日志列表。
      */
-    public Long getUserUin() {
-        return this.UserUin;
+    public SnapshotOperationLog [] getSnapshotOperationLogSet() {
+        return this.SnapshotOperationLogSet;
     }
 
     /**
-     * 设置用户uin信息
-     * @param UserUin 用户uin信息
+     * 设置快照操作日志列表。
+     * @param SnapshotOperationLogSet 快照操作日志列表。
      */
-    public void setUserUin(Long UserUin) {
-        this.UserUin = UserUin;
-    }
-
-    /**
-     * 获取用户APPID信息
-     * @return UserAppid 用户APPID信息
-     */
-    public Integer getUserAppid() {
-        return this.UserAppid;
-    }
-
-    /**
-     * 设置用户APPID信息
-     * @param UserAppid 用户APPID信息
-     */
-    public void setUserAppid(Integer UserAppid) {
-        this.UserAppid = UserAppid;
-    }
-
-    /**
-     * 获取系统时间戳
-     * @return TimeStamp 系统时间戳
-     */
-    public Integer getTimeStamp() {
-        return this.TimeStamp;
-    }
-
-    /**
-     * 设置系统时间戳
-     * @param TimeStamp 系统时间戳
-     */
-    public void setTimeStamp(Integer TimeStamp) {
-        this.TimeStamp = TimeStamp;
+    public void setSnapshotOperationLogSet(SnapshotOperationLog [] SnapshotOperationLogSet) {
+        this.SnapshotOperationLogSet = SnapshotOperationLogSet;
     }
 
     /**
@@ -118,9 +72,7 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UserUin", this.UserUin);
-        this.setParamSimple(map, prefix + "UserAppid", this.UserAppid);
-        this.setParamSimple(map, prefix + "TimeStamp", this.TimeStamp);
+        this.setParamArrayObj(map, prefix + "SnapshotOperationLogSet.", this.SnapshotOperationLogSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

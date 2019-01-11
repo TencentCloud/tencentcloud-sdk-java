@@ -58,6 +58,13 @@ public class CameraPersonInfo  extends AbstractModel{
     private Integer Time;
 
     /**
+    * 当前的person基本信息，图片以FacePic为准，结构体内未填
+    */
+    @SerializedName("PersonInfo")
+    @Expose
+    private PersonInfo PersonInfo;
+
+    /**
      * 获取临时id，还未生成face id时返回
      * @return TempId 临时id，还未生成face id时返回
      */
@@ -138,6 +145,22 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
+     * 获取当前的person基本信息，图片以FacePic为准，结构体内未填
+     * @return PersonInfo 当前的person基本信息，图片以FacePic为准，结构体内未填
+     */
+    public PersonInfo getPersonInfo() {
+        return this.PersonInfo;
+    }
+
+    /**
+     * 设置当前的person基本信息，图片以FacePic为准，结构体内未填
+     * @param PersonInfo 当前的person基本信息，图片以FacePic为准，结构体内未填
+     */
+    public void setPersonInfo(PersonInfo PersonInfo) {
+        this.PersonInfo = PersonInfo;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CameraPersonInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "IdType", this.IdType);
         this.setParamSimple(map, prefix + "FacePic", this.FacePic);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamObj(map, prefix + "PersonInfo.", this.PersonInfo);
 
     }
 }

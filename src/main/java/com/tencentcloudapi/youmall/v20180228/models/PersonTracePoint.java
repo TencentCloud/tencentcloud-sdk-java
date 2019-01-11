@@ -65,6 +65,20 @@ public class PersonTracePoint  extends AbstractModel{
     private String CapPic;
 
     /**
+    * 购物袋类型
+    */
+    @SerializedName("ShoppingBagType")
+    @Expose
+    private Integer ShoppingBagType;
+
+    /**
+    * 购物袋数量
+    */
+    @SerializedName("ShoppingBagCount")
+    @Expose
+    private Integer ShoppingBagCount;
+
+    /**
      * 获取卖场区域编码
      * @return MallAreaId 卖场区域编码
      */
@@ -161,6 +175,38 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
+     * 获取购物袋类型
+     * @return ShoppingBagType 购物袋类型
+     */
+    public Integer getShoppingBagType() {
+        return this.ShoppingBagType;
+    }
+
+    /**
+     * 设置购物袋类型
+     * @param ShoppingBagType 购物袋类型
+     */
+    public void setShoppingBagType(Integer ShoppingBagType) {
+        this.ShoppingBagType = ShoppingBagType;
+    }
+
+    /**
+     * 获取购物袋数量
+     * @return ShoppingBagCount 购物袋数量
+     */
+    public Integer getShoppingBagCount() {
+        return this.ShoppingBagCount;
+    }
+
+    /**
+     * 设置购物袋数量
+     * @param ShoppingBagCount 购物袋数量
+     */
+    public void setShoppingBagCount(Integer ShoppingBagCount) {
+        this.ShoppingBagCount = ShoppingBagCount;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +216,8 @@ public class PersonTracePoint  extends AbstractModel{
         this.setParamSimple(map, prefix + "TraceEventType", this.TraceEventType);
         this.setParamSimple(map, prefix + "TraceEventTime", this.TraceEventTime);
         this.setParamSimple(map, prefix + "CapPic", this.CapPic);
+        this.setParamSimple(map, prefix + "ShoppingBagType", this.ShoppingBagType);
+        this.setParamSimple(map, prefix + "ShoppingBagCount", this.ShoppingBagCount);
 
     }
 }

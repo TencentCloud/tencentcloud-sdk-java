@@ -37,7 +37,7 @@ public class Price  extends AbstractModel{
     private Float DiscountPrice;
 
     /**
-    * 后付费云盘的单价，单位：元。
+    * 后付费云盘原单价，单位：元。
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -49,6 +49,13 @@ public class Price  extends AbstractModel{
     @SerializedName("ChargeUnit")
     @Expose
     private String ChargeUnit;
+
+    /**
+    * 后付费云盘折扣单价，单位：元。
+    */
+    @SerializedName("UnitPriceDiscount")
+    @Expose
+    private Float UnitPriceDiscount;
 
     /**
      * 获取预付费云盘预支费用的原价，单位：元。
@@ -83,16 +90,16 @@ public class Price  extends AbstractModel{
     }
 
     /**
-     * 获取后付费云盘的单价，单位：元。
-     * @return UnitPrice 后付费云盘的单价，单位：元。
+     * 获取后付费云盘原单价，单位：元。
+     * @return UnitPrice 后付费云盘原单价，单位：元。
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * 设置后付费云盘的单价，单位：元。
-     * @param UnitPrice 后付费云盘的单价，单位：元。
+     * 设置后付费云盘原单价，单位：元。
+     * @param UnitPrice 后付费云盘原单价，单位：元。
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
@@ -115,6 +122,22 @@ public class Price  extends AbstractModel{
     }
 
     /**
+     * 获取后付费云盘折扣单价，单位：元。
+     * @return UnitPriceDiscount 后付费云盘折扣单价，单位：元。
+     */
+    public Float getUnitPriceDiscount() {
+        return this.UnitPriceDiscount;
+    }
+
+    /**
+     * 设置后付费云盘折扣单价，单位：元。
+     * @param UnitPriceDiscount 后付费云盘折扣单价，单位：元。
+     */
+    public void setUnitPriceDiscount(Float UnitPriceDiscount) {
+        this.UnitPriceDiscount = UnitPriceDiscount;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class Price  extends AbstractModel{
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         this.setParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
         this.setParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
+        this.setParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
 
     }
 }

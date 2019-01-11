@@ -610,7 +610,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateVpnGateways）用于创建VPN网关。
+     *本接口（CreateVpnGateway）用于创建VPN网关。
      * @param req CreateVpnGatewayRequest
      * @return CreateVpnGatewayResponse
      * @throws TencentCloudSDKException

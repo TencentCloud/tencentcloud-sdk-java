@@ -59,6 +59,8 @@ public class PullStreamConfig  extends AbstractModel{
 
     /**
     * 开始时间。
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
     */
     @SerializedName("StartTime")
     @Expose
@@ -66,6 +68,9 @@ public class PullStreamConfig  extends AbstractModel{
 
     /**
     * 结束时间。
+
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
     */
     @SerializedName("EndTime")
     @Expose
@@ -160,7 +165,11 @@ public class PullStreamConfig  extends AbstractModel{
 
     /**
      * 获取开始时间。
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      * @return StartTime 开始时间。
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -168,7 +177,11 @@ public class PullStreamConfig  extends AbstractModel{
 
     /**
      * 设置开始时间。
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      * @param StartTime 开始时间。
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -176,7 +189,13 @@ public class PullStreamConfig  extends AbstractModel{
 
     /**
      * 获取结束时间。
+
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      * @return EndTime 结束时间。
+
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -184,7 +203,13 @@ public class PullStreamConfig  extends AbstractModel{
 
     /**
      * 设置结束时间。
+
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      * @param EndTime 结束时间。
+
+UTC格式时间，
+例如：2019-01-08T10:00:00Z。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

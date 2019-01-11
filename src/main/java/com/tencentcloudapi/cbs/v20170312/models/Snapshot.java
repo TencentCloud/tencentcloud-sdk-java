@@ -121,6 +121,13 @@ public class Snapshot  extends AbstractModel{
     private Boolean CopyFromRemote;
 
     /**
+    * 快照关联的镜像ID列表。
+    */
+    @SerializedName("ImageIds")
+    @Expose
+    private String [] ImageIds;
+
+    /**
      * 获取快照ID。
      * @return SnapshotId 快照ID。
      */
@@ -345,6 +352,22 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
+     * 获取快照关联的镜像ID列表。
+     * @return ImageIds 快照关联的镜像ID列表。
+     */
+    public String [] getImageIds() {
+        return this.ImageIds;
+    }
+
+    /**
+     * 设置快照关联的镜像ID列表。
+     * @param ImageIds 快照关联的镜像ID列表。
+     */
+    public void setImageIds(String [] ImageIds) {
+        this.ImageIds = ImageIds;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class Snapshot  extends AbstractModel{
         this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
         this.setParamArraySimple(map, prefix + "CopyingToRegions.", this.CopyingToRegions);
         this.setParamSimple(map, prefix + "CopyFromRemote", this.CopyFromRemote);
+        this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
 
     }
 }

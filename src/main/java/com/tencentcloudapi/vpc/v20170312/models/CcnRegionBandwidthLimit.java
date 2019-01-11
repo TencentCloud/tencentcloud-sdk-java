@@ -44,6 +44,20 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     private Boolean IsBm;
 
     /**
+    * 目的地域，例如：ap-shanghai
+    */
+    @SerializedName("DstRegion")
+    @Expose
+    private String DstRegion;
+
+    /**
+    * 目的地域是否为黑石地域，默认`false`。
+    */
+    @SerializedName("DstIsBm")
+    @Expose
+    private Boolean DstIsBm;
+
+    /**
      * 获取地域，例如：ap-guangzhou
      * @return Region 地域，例如：ap-guangzhou
      */
@@ -92,12 +106,46 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
+     * 获取目的地域，例如：ap-shanghai
+     * @return DstRegion 目的地域，例如：ap-shanghai
+     */
+    public String getDstRegion() {
+        return this.DstRegion;
+    }
+
+    /**
+     * 设置目的地域，例如：ap-shanghai
+     * @param DstRegion 目的地域，例如：ap-shanghai
+     */
+    public void setDstRegion(String DstRegion) {
+        this.DstRegion = DstRegion;
+    }
+
+    /**
+     * 获取目的地域是否为黑石地域，默认`false`。
+     * @return DstIsBm 目的地域是否为黑石地域，默认`false`。
+     */
+    public Boolean getDstIsBm() {
+        return this.DstIsBm;
+    }
+
+    /**
+     * 设置目的地域是否为黑石地域，默认`false`。
+     * @param DstIsBm 目的地域是否为黑石地域，默认`false`。
+     */
+    public void setDstIsBm(Boolean DstIsBm) {
+        this.DstIsBm = DstIsBm;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
         this.setParamSimple(map, prefix + "IsBm", this.IsBm);
+        this.setParamSimple(map, prefix + "DstRegion", this.DstRegion);
+        this.setParamSimple(map, prefix + "DstIsBm", this.DstIsBm);
 
     }
 }
