@@ -93,6 +93,13 @@ public class InitOralProcessRequest  extends AbstractModel{
     private Integer ServerType;
 
     /**
+    * 异步模式标识，0：同步模式，1：异步模式。
+    */
+    @SerializedName("IsAsync")
+    @Expose
+    private Integer IsAsync;
+
+    /**
      * 获取语音段唯一标识，一段语音一个SessionId
      * @return SessionId 语音段唯一标识，一段语音一个SessionId
      */
@@ -253,6 +260,22 @@ public class InitOralProcessRequest  extends AbstractModel{
     }
 
     /**
+     * 获取异步模式标识，0：同步模式，1：异步模式。
+     * @return IsAsync 异步模式标识，0：同步模式，1：异步模式。
+     */
+    public Integer getIsAsync() {
+        return this.IsAsync;
+    }
+
+    /**
+     * 设置异步模式标识，0：同步模式，1：异步模式。
+     * @param IsAsync 异步模式标识，0：同步模式，1：异步模式。
+     */
+    public void setIsAsync(Integer IsAsync) {
+        this.IsAsync = IsAsync;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class InitOralProcessRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
         this.setParamSimple(map, prefix + "SentenceInfoEnabled", this.SentenceInfoEnabled);
         this.setParamSimple(map, prefix + "ServerType", this.ServerType);
+        this.setParamSimple(map, prefix + "IsAsync", this.IsAsync);
 
     }
 }

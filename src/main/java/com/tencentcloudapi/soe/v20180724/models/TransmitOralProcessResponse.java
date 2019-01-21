@@ -72,6 +72,13 @@ public class TransmitOralProcessResponse  extends AbstractModel{
     private SentenceInfo [] SentenceInfoSet;
 
     /**
+    * 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -191,6 +198,22 @@ public class TransmitOralProcessResponse  extends AbstractModel{
     }
 
     /**
+     * 获取评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+     * @return Status 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * 设置评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+     * @param Status 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -217,6 +240,7 @@ public class TransmitOralProcessResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamArrayObj(map, prefix + "SentenceInfoSet.", this.SentenceInfoSet);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -44,6 +44,13 @@ public class StreamOnlineInfo  extends AbstractModel{
     private String AppName;
 
     /**
+    * 推流域名。
+    */
+    @SerializedName("DomainName")
+    @Expose
+    private String DomainName;
+
+    /**
      * 获取流名称。
      * @return StreamName 流名称。
      */
@@ -92,12 +99,29 @@ public class StreamOnlineInfo  extends AbstractModel{
     }
 
     /**
+     * 获取推流域名。
+     * @return DomainName 推流域名。
+     */
+    public String getDomainName() {
+        return this.DomainName;
+    }
+
+    /**
+     * 设置推流域名。
+     * @param DomainName 推流域名。
+     */
+    public void setDomainName(String DomainName) {
+        this.DomainName = DomainName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamArrayObj(map, prefix + "PublishTimeList.", this.PublishTimeList);
         this.setParamSimple(map, prefix + "AppName", this.AppName);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
 
     }
 }

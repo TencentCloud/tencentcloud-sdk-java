@@ -24,7 +24,7 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
 
     /**
     * 取得第几页。
-默认值：1
+默认值：1。
     */
     @SerializedName("PageNum")
     @Expose
@@ -33,15 +33,15 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     /**
     * 分页大小。
 最大值：100。
-取值范围：10~100 之前的任意整数。
-默认值：10
+取值范围：1~100 之前的任意整数。
+默认值：10。
     */
     @SerializedName("PageSize")
     @Expose
     private Integer PageSize;
 
     /**
-    * 0:未开始推流 1:正在推流 2:服务出错 3:已关闭。
+    * 0:未开始推流 1:正在推流
     */
     @SerializedName("Status")
     @Expose
@@ -56,9 +56,9 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
 
     /**
      * 获取取得第几页。
-默认值：1
+默认值：1。
      * @return PageNum 取得第几页。
-默认值：1
+默认值：1。
      */
     public Integer getPageNum() {
         return this.PageNum;
@@ -66,9 +66,9 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
 
     /**
      * 设置取得第几页。
-默认值：1
+默认值：1。
      * @param PageNum 取得第几页。
-默认值：1
+默认值：1。
      */
     public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
@@ -77,12 +77,12 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     /**
      * 获取分页大小。
 最大值：100。
-取值范围：10~100 之前的任意整数。
-默认值：10
+取值范围：1~100 之前的任意整数。
+默认值：10。
      * @return PageSize 分页大小。
 最大值：100。
-取值范围：10~100 之前的任意整数。
-默认值：10
+取值范围：1~100 之前的任意整数。
+默认值：10。
      */
     public Integer getPageSize() {
         return this.PageSize;
@@ -91,28 +91,28 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     /**
      * 设置分页大小。
 最大值：100。
-取值范围：10~100 之前的任意整数。
-默认值：10
+取值范围：1~100 之前的任意整数。
+默认值：10。
      * @param PageSize 分页大小。
 最大值：100。
-取值范围：10~100 之前的任意整数。
-默认值：10
+取值范围：1~100 之前的任意整数。
+默认值：10。
      */
     public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * 获取0:未开始推流 1:正在推流 2:服务出错 3:已关闭。
-     * @return Status 0:未开始推流 1:正在推流 2:服务出错 3:已关闭。
+     * 获取0:未开始推流 1:正在推流
+     * @return Status 0:未开始推流 1:正在推流
      */
     public Integer getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置0:未开始推流 1:正在推流 2:服务出错 3:已关闭。
-     * @param Status 0:未开始推流 1:正在推流 2:服务出错 3:已关闭。
+     * 设置0:未开始推流 1:正在推流
+     * @param Status 0:未开始推流 1:正在推流
      */
     public void setStatus(Integer Status) {
         this.Status = Status;

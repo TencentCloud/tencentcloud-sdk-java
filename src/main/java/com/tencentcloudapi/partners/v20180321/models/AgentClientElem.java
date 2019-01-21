@@ -72,6 +72,13 @@ public class AgentClientElem  extends AbstractModel{
     private Integer HasOverdueBill;
 
     /**
+    * 1:待代理商审核;2:待腾讯云审核
+    */
+    @SerializedName("Status")
+    @Expose
+    private Integer Status;
+
+    /**
      * 获取代理商账号ID
      * @return Uin 代理商账号ID
      */
@@ -184,6 +191,22 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
+     * 获取1:待代理商审核;2:待腾讯云审核
+     * @return Status 1:待代理商审核;2:待腾讯云审核
+     */
+    public Integer getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * 设置1:待代理商审核;2:待腾讯云审核
+     * @param Status 1:待代理商审核;2:待腾讯云审核
+     */
+    public void setStatus(Integer Status) {
+        this.Status = Status;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class AgentClientElem  extends AbstractModel{
         this.setParamSimple(map, prefix + "Mail", this.Mail);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "HasOverdueBill", this.HasOverdueBill);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

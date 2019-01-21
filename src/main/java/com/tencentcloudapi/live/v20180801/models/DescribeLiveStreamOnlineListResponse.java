@@ -51,7 +51,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     private Integer PageSize;
 
     /**
-    * 正在推送流的信息列表
+    * 正在推送流的信息列表。
     */
     @SerializedName("OnlineInfo")
     @Expose
@@ -129,16 +129,16 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取正在推送流的信息列表
-     * @return OnlineInfo 正在推送流的信息列表
+     * 获取正在推送流的信息列表。
+     * @return OnlineInfo 正在推送流的信息列表。
      */
     public StreamOnlineInfo [] getOnlineInfo() {
         return this.OnlineInfo;
     }
 
     /**
-     * 设置正在推送流的信息列表
-     * @param OnlineInfo 正在推送流的信息列表
+     * 设置正在推送流的信息列表。
+     * @param OnlineInfo 正在推送流的信息列表。
      */
     public void setOnlineInfo(StreamOnlineInfo [] OnlineInfo) {
         this.OnlineInfo = OnlineInfo;

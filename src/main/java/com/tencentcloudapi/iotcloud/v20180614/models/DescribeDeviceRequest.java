@@ -30,7 +30,7 @@ public class DescribeDeviceRequest  extends AbstractModel{
     private String ProductID;
 
     /**
-    * 产品名
+    * 设备名
     */
     @SerializedName("DeviceName")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品名
-     * @return DeviceName 产品名
+     * 获取设备名
+     * @return DeviceName 设备名
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * 设置产品名
-     * @param DeviceName 产品名
+     * 设置设备名
+     * @param DeviceName 设备名
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
 
     /**
-    * 您的加速域名。
+    * 推流域名。
     */
     @SerializedName("DomainName")
     @Expose
@@ -46,23 +46,30 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     /**
     * 每页大小，最大100。 
 取值：1~100之前的任意整数。
-默认值：10
+默认值：10。
     */
     @SerializedName("PageSize")
     @Expose
     private Integer PageSize;
 
     /**
-     * 获取您的加速域名。
-     * @return DomainName 您的加速域名。
+    * 流名称，精确查询。
+    */
+    @SerializedName("StreamName")
+    @Expose
+    private String StreamName;
+
+    /**
+     * 获取推流域名。
+     * @return DomainName 推流域名。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * 设置您的加速域名。
-     * @param DomainName 您的加速域名。
+     * 设置推流域名。
+     * @param DomainName 推流域名。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
@@ -103,10 +110,10 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     /**
      * 获取每页大小，最大100。 
 取值：1~100之前的任意整数。
-默认值：10
+默认值：10。
      * @return PageSize 每页大小，最大100。 
 取值：1~100之前的任意整数。
-默认值：10
+默认值：10。
      */
     public Integer getPageSize() {
         return this.PageSize;
@@ -115,13 +122,29 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     /**
      * 设置每页大小，最大100。 
 取值：1~100之前的任意整数。
-默认值：10
+默认值：10。
      * @param PageSize 每页大小，最大100。 
 取值：1~100之前的任意整数。
-默认值：10
+默认值：10。
      */
     public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
+    }
+
+    /**
+     * 获取流名称，精确查询。
+     * @return StreamName 流名称，精确查询。
+     */
+    public String getStreamName() {
+        return this.StreamName;
+    }
+
+    /**
+     * 设置流名称，精确查询。
+     * @param StreamName 流名称，精确查询。
+     */
+    public void setStreamName(String StreamName) {
+        this.StreamName = StreamName;
     }
 
     /**
@@ -132,6 +155,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "StreamName", this.StreamName);
 
     }
 }

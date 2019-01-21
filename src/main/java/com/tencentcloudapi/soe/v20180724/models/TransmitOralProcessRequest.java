@@ -79,6 +79,13 @@ public class TransmitOralProcessRequest  extends AbstractModel{
     private Integer IsLongLifeSession;
 
     /**
+    * 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
+    */
+    @SerializedName("IsQuery")
+    @Expose
+    private Integer IsQuery;
+
+    /**
      * 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      */
@@ -207,6 +214,22 @@ public class TransmitOralProcessRequest  extends AbstractModel{
     }
 
     /**
+     * 获取查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
+     * @return IsQuery 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
+     */
+    public Integer getIsQuery() {
+        return this.IsQuery;
+    }
+
+    /**
+     * 设置查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
+     * @param IsQuery 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
+     */
+    public void setIsQuery(Integer IsQuery) {
+        this.IsQuery = IsQuery;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class TransmitOralProcessRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
         this.setParamSimple(map, prefix + "IsLongLifeSession", this.IsLongLifeSession);
+        this.setParamSimple(map, prefix + "IsQuery", this.IsQuery);
 
     }
 }

@@ -84,4 +84,22 @@ public class SoeClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *初始化并传输音频数据，分片传输时，尽量保证SeqId顺序传输。音频源目前仅支持16k采样率16bit单声道编码方式，如有不一致可能导致评估不准确或失败。
+     * @param req TransmitOralProcessWithInitRequest
+     * @return TransmitOralProcessWithInitResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransmitOralProcessWithInitResponse  TransmitOralProcessWithInit(TransmitOralProcessWithInitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TransmitOralProcessWithInitResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TransmitOralProcessWithInitResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TransmitOralProcessWithInit"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

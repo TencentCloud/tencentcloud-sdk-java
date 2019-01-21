@@ -30,11 +30,25 @@ public class EvaluationRequest  extends AbstractModel{
     private String SessionId;
 
     /**
-    * 图片数据，需要使用base64对图片的二进制数据进行编码；
+    * 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
     */
     @SerializedName("Image")
     @Expose
     private String Image;
+
+    /**
+    * 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+    */
+    @SerializedName("HcmAppid")
+    @Expose
+    private String HcmAppid;
+
+    /**
+    * 图片url，与Image参数二者填一即可；
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
 
     /**
      * 获取图片唯一标识，一张图片一个SessionId；
@@ -53,19 +67,51 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片数据，需要使用base64对图片的二进制数据进行编码；
-     * @return Image 图片数据，需要使用base64对图片的二进制数据进行编码；
+     * 获取图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
+     * @return Image 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * 设置图片数据，需要使用base64对图片的二进制数据进行编码；
-     * @param Image 图片数据，需要使用base64对图片的二进制数据进行编码；
+     * 设置图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
+     * @param Image 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
      */
     public void setImage(String Image) {
         this.Image = Image;
+    }
+
+    /**
+     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * @return HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     */
+    public String getHcmAppid() {
+        return this.HcmAppid;
+    }
+
+    /**
+     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * @param HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     */
+    public void setHcmAppid(String HcmAppid) {
+        this.HcmAppid = HcmAppid;
+    }
+
+    /**
+     * 获取图片url，与Image参数二者填一即可；
+     * @return Url 图片url，与Image参数二者填一即可；
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * 设置图片url，与Image参数二者填一即可；
+     * @param Url 图片url，与Image参数二者填一即可；
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     /**
@@ -74,6 +120,8 @@ public class EvaluationRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "Image", this.Image);
+        this.setParamSimple(map, prefix + "HcmAppid", this.HcmAppid);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

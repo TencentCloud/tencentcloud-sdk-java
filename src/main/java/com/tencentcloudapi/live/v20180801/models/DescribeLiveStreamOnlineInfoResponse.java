@@ -30,7 +30,7 @@ public class DescribeLiveStreamOnlineInfoResponse  extends AbstractModel{
     private Integer PageNum;
 
     /**
-    * 每页大小
+    * 每页大小。
     */
     @SerializedName("PageSize")
     @Expose
@@ -51,7 +51,7 @@ public class DescribeLiveStreamOnlineInfoResponse  extends AbstractModel{
     private Integer TotalPage;
 
     /**
-    * 流信息列表
+    * 流信息列表。
     */
     @SerializedName("StreamInfoList")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeLiveStreamOnlineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小
-     * @return PageSize 每页大小
+     * 获取每页大小。
+     * @return PageSize 每页大小。
      */
     public Integer getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * 设置每页大小
-     * @param PageSize 每页大小
+     * 设置每页大小。
+     * @param PageSize 每页大小。
      */
     public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
@@ -129,16 +129,16 @@ public class DescribeLiveStreamOnlineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取流信息列表
-     * @return StreamInfoList 流信息列表
+     * 获取流信息列表。
+     * @return StreamInfoList 流信息列表。
      */
     public StreamInfo [] getStreamInfoList() {
         return this.StreamInfoList;
     }
 
     /**
-     * 设置流信息列表
-     * @param StreamInfoList 流信息列表
+     * 设置流信息列表。
+     * @param StreamInfoList 流信息列表。
      */
     public void setStreamInfoList(StreamInfo [] StreamInfoList) {
         this.StreamInfoList = StreamInfoList;

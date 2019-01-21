@@ -37,6 +37,20 @@ public class LivenessCompareResponse  extends AbstractModel{
     private Float Sim;
 
     /**
+    * 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+    */
+    @SerializedName("Result")
+    @Expose
+    private String Result;
+
+    /**
+    * 业务错误描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +90,38 @@ public class LivenessCompareResponse  extends AbstractModel{
     }
 
     /**
+     * 获取业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * @return Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     */
+    public String getResult() {
+        return this.Result;
+    }
+
+    /**
+     * 设置业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * @param Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     */
+    public void setResult(String Result) {
+        this.Result = Result;
+    }
+
+    /**
+     * 获取业务错误描述
+     * @return Description 业务错误描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * 设置业务错误描述
+     * @param Description 业务错误描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +143,8 @@ public class LivenessCompareResponse  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BestFrameBase64", this.BestFrameBase64);
         this.setParamSimple(map, prefix + "Sim", this.Sim);
+        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

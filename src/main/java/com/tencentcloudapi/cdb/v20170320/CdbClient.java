@@ -191,6 +191,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口（CreateParamTemplate）用于创建参数模板。
+     * @param req CreateParamTemplateRequest
+     * @return CreateParamTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateParamTemplateResponse  CreateParamTemplate(CreateParamTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateParamTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateParamTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateParamTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DeleteAccounts)用于删除云数据库的账户。
      * @param req DeleteAccountsRequest
      * @return DeleteAccountsResponse
@@ -569,6 +587,60 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口（DescribeDefaultParams）用于查询默认的可设置参数列表。
+     * @param req DescribeDefaultParamsRequest
+     * @return DescribeDefaultParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDefaultParamsResponse  DescribeDefaultParams(DescribeDefaultParamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDefaultParamsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDefaultParamsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDefaultParams"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDeviceMonitorInfo）用于查询云数据库物理机当天的监控信息，暂只支持内存488G、硬盘6T的实例查询。
+     * @param req DescribeDeviceMonitorInfoRequest
+     * @return DescribeDeviceMonitorInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceMonitorInfoResponse  DescribeDeviceMonitorInfo(DescribeDeviceMonitorInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceMonitorInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceMonitorInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDeviceMonitorInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
+     * @param req DescribeInstanceParamRecordsRequest
+     * @return DescribeInstanceParamRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceParamRecordsResponse  DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamRecordsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceParamRecords"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（DescribeInstanceParams）用于查询实例的参数列表。
      * @param req DescribeInstanceParamsRequest
      * @return DescribeInstanceParamsResponse
@@ -580,6 +652,42 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceParams"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口（DescribeParamTemplateInfo）用于查询参数模板详情。
+     * @param req DescribeParamTemplateInfoRequest
+     * @return DescribeParamTemplateInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParamTemplateInfoResponse  DescribeParamTemplateInfo(DescribeParamTemplateInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParamTemplateInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParamTemplateInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeParamTemplateInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口（DescribeParamTemplates）查询参数模板列表。
+     * @param req DescribeParamTemplatesRequest
+     * @return DescribeParamTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParamTemplatesResponse  DescribeParamTemplates(DescribeParamTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParamTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeParamTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -659,6 +767,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *获取实例绑定的标签
+     * @param req DescribeTagsOfInstanceIdsRequest
+     * @return DescribeTagsOfInstanceIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTagsOfInstanceIdsResponse  DescribeTagsOfInstanceIds(DescribeTagsOfInstanceIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTagsOfInstanceIdsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTagsOfInstanceIdsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTagsOfInstanceIds"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeTasks)用于查询云数据库实例任务列表。
      * @param req DescribeTasksRequest
      * @return DescribeTasksResponse
@@ -724,6 +850,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InitDBInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "InitDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(InquiryPriceUpgradeInstances)用于查询云数据库实例升级的价格，支持查询按量计费或者包年包月实例的升级价格，实例类型支持主实例、灾备实例和只读实例。
+     * @param req InquiryPriceUpgradeInstancesRequest
+     * @return InquiryPriceUpgradeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceUpgradeInstancesResponse  InquiryPriceUpgradeInstances(InquiryPriceUpgradeInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceUpgradeInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceUpgradeInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -929,6 +1073,42 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *可以对实例标签进行添加、修改或者删除
+     * @param req ModifyInstanceTagRequest
+     * @return ModifyInstanceTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceTagResponse  ModifyInstanceTag(ModifyInstanceTagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceTagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceTagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyInstanceTag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口（ModifyParamTemplate）用于修改参数模板。
+     * @param req ModifyParamTemplateRequest
+     * @return ModifyParamTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyParamTemplateResponse  ModifyParamTemplate(ModifyParamTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyParamTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(OpenDBInstanceGTID)用于开启云数据库实例的GTID，只支持版本为5.6以及以上的实例。
      * @param req OpenDBInstanceGTIDRequest
      * @return OpenDBInstanceGTIDResponse
@@ -947,7 +1127,9 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(OpenWanService)用于开通实例外网访问
+     *本接口(OpenWanService)用于开通实例外网访问。
+
+注意，实例开通外网访问之前，需要先将实例进行[实例初始化](https://cloud.tencent.com/document/api/236/15873)操作。
      * @param req OpenWanServiceRequest
      * @return OpenWanServiceResponse
      * @throws TencentCloudSDKException

@@ -56,7 +56,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 
     /**
     * 取得第几页。
-默认值：1
+默认值：1。
     */
     @SerializedName("PageNum")
     @Expose
@@ -64,10 +64,9 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 
     /**
     * 分页大小。
-
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10
+默认值：10。
     */
     @SerializedName("PageSize")
     @Expose
@@ -155,9 +154,9 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 
     /**
      * 获取取得第几页。
-默认值：1
+默认值：1。
      * @return PageNum 取得第几页。
-默认值：1
+默认值：1。
      */
     public Integer getPageNum() {
         return this.PageNum;
@@ -165,9 +164,9 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 
     /**
      * 设置取得第几页。
-默认值：1
+默认值：1。
      * @param PageNum 取得第几页。
-默认值：1
+默认值：1。
      */
     public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
@@ -175,15 +174,13 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 
     /**
      * 获取分页大小。
-
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10
+默认值：10。
      * @return PageSize 分页大小。
-
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10
+默认值：10。
      */
     public Integer getPageSize() {
         return this.PageSize;
@@ -191,15 +188,13 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 
     /**
      * 设置分页大小。
-
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10
+默认值：10。
      * @param PageSize 分页大小。
-
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10
+默认值：10。
      */
     public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
