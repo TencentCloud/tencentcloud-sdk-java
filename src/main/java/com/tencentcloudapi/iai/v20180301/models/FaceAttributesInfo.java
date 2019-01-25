@@ -1,0 +1,311 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.iai.v20180301.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class FaceAttributesInfo  extends AbstractModel{
+
+    /**
+    * 性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+    */
+    @SerializedName("Gender")
+    @Expose
+    private Integer Gender;
+
+    /**
+    * 年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+    */
+    @SerializedName("Age")
+    @Expose
+    private Integer Age;
+
+    /**
+    * 微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+    */
+    @SerializedName("Expression")
+    @Expose
+    private Integer Expression;
+
+    /**
+    * 是否有眼镜 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+    */
+    @SerializedName("Glass")
+    @Expose
+    private Boolean Glass;
+
+    /**
+    * 上下偏移[-30,30]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+建议：人脸入库选择[-10,10]的图片。
+    */
+    @SerializedName("Pitch")
+    @Expose
+    private Integer Pitch;
+
+    /**
+    * 左右偏移[-30,30]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+建议：人脸入库选择[-10,10]的图片。
+    */
+    @SerializedName("Yaw")
+    @Expose
+    private Integer Yaw;
+
+    /**
+    * 平面旋转[-180,180]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
+建议：人脸入库选择[-20,20]的图片。
+    */
+    @SerializedName("Roll")
+    @Expose
+    private Integer Roll;
+
+    /**
+    * 魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+    */
+    @SerializedName("Beauty")
+    @Expose
+    private Integer Beauty;
+
+    /**
+    * 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+    */
+    @SerializedName("Hat")
+    @Expose
+    private Boolean Hat;
+
+    /**
+    * 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+    */
+    @SerializedName("Mask")
+    @Expose
+    private Boolean Mask;
+
+    /**
+    * 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+    */
+    @SerializedName("Hair")
+    @Expose
+    private FaceHairAttributesInfo Hair;
+
+    /**
+     * 获取性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @return Gender 性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public Integer getGender() {
+        return this.Gender;
+    }
+
+    /**
+     * 设置性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @param Gender 性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public void setGender(Integer Gender) {
+        this.Gender = Gender;
+    }
+
+    /**
+     * 获取年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @return Age 年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public Integer getAge() {
+        return this.Age;
+    }
+
+    /**
+     * 设置年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @param Age 年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public void setAge(Integer Age) {
+        this.Age = Age;
+    }
+
+    /**
+     * 获取微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @return Expression 微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public Integer getExpression() {
+        return this.Expression;
+    }
+
+    /**
+     * 设置微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @param Expression 微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public void setExpression(Integer Expression) {
+        this.Expression = Expression;
+    }
+
+    /**
+     * 获取是否有眼镜 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @return Glass 是否有眼镜 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public Boolean getGlass() {
+        return this.Glass;
+    }
+
+    /**
+     * 设置是否有眼镜 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @param Glass 是否有眼镜 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public void setGlass(Boolean Glass) {
+        this.Glass = Glass;
+    }
+
+    /**
+     * 获取上下偏移[-30,30]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+建议：人脸入库选择[-10,10]的图片。
+     * @return Pitch 上下偏移[-30,30]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+建议：人脸入库选择[-10,10]的图片。
+     */
+    public Integer getPitch() {
+        return this.Pitch;
+    }
+
+    /**
+     * 设置上下偏移[-30,30]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+建议：人脸入库选择[-10,10]的图片。
+     * @param Pitch 上下偏移[-30,30]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+建议：人脸入库选择[-10,10]的图片。
+     */
+    public void setPitch(Integer Pitch) {
+        this.Pitch = Pitch;
+    }
+
+    /**
+     * 获取左右偏移[-30,30]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+建议：人脸入库选择[-10,10]的图片。
+     * @return Yaw 左右偏移[-30,30]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+建议：人脸入库选择[-10,10]的图片。
+     */
+    public Integer getYaw() {
+        return this.Yaw;
+    }
+
+    /**
+     * 设置左右偏移[-30,30]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+建议：人脸入库选择[-10,10]的图片。
+     * @param Yaw 左右偏移[-30,30]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+建议：人脸入库选择[-10,10]的图片。
+     */
+    public void setYaw(Integer Yaw) {
+        this.Yaw = Yaw;
+    }
+
+    /**
+     * 获取平面旋转[-180,180]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
+建议：人脸入库选择[-20,20]的图片。
+     * @return Roll 平面旋转[-180,180]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
+建议：人脸入库选择[-20,20]的图片。
+     */
+    public Integer getRoll() {
+        return this.Roll;
+    }
+
+    /**
+     * 设置平面旋转[-180,180]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
+建议：人脸入库选择[-20,20]的图片。
+     * @param Roll 平面旋转[-180,180]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
+建议：人脸入库选择[-20,20]的图片。
+     */
+    public void setRoll(Integer Roll) {
+        this.Roll = Roll;
+    }
+
+    /**
+     * 获取魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @return Beauty 魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public Integer getBeauty() {
+        return this.Beauty;
+    }
+
+    /**
+     * 设置魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @param Beauty 魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public void setBeauty(Integer Beauty) {
+        this.Beauty = Beauty;
+    }
+
+    /**
+     * 获取是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @return Hat 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public Boolean getHat() {
+        return this.Hat;
+    }
+
+    /**
+     * 设置是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @param Hat 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public void setHat(Boolean Hat) {
+        this.Hat = Hat;
+    }
+
+    /**
+     * 获取是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @return Mask 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public Boolean getMask() {
+        return this.Mask;
+    }
+
+    /**
+     * 设置是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @param Mask 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     */
+    public void setMask(Boolean Mask) {
+        this.Mask = Mask;
+    }
+
+    /**
+     * 获取头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+     * @return Hair 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+     */
+    public FaceHairAttributesInfo getHair() {
+        return this.Hair;
+    }
+
+    /**
+     * 设置头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+     * @param Hair 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+     */
+    public void setHair(FaceHairAttributesInfo Hair) {
+        this.Hair = Hair;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Gender", this.Gender);
+        this.setParamSimple(map, prefix + "Age", this.Age);
+        this.setParamSimple(map, prefix + "Expression", this.Expression);
+        this.setParamSimple(map, prefix + "Glass", this.Glass);
+        this.setParamSimple(map, prefix + "Pitch", this.Pitch);
+        this.setParamSimple(map, prefix + "Yaw", this.Yaw);
+        this.setParamSimple(map, prefix + "Roll", this.Roll);
+        this.setParamSimple(map, prefix + "Beauty", this.Beauty);
+        this.setParamSimple(map, prefix + "Hat", this.Hat);
+        this.setParamSimple(map, prefix + "Mask", this.Mask);
+        this.setParamObj(map, prefix + "Hair.", this.Hair);
+
+    }
+}
+

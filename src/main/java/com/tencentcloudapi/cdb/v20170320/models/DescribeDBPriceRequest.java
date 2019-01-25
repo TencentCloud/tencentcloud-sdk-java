@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBPriceRequest  extends AbstractModel{
 
     /**
-    * 可用区信息，格式如"ap-guangzhou-1"
+    * 可用区信息，格式如"ap-guangzhou-2"。具体能设置的值请通过<a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a>接口查询。
     */
     @SerializedName("Zone")
     @Expose
@@ -79,16 +79,16 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     private Integer ProtectMode;
 
     /**
-     * 获取可用区信息，格式如"ap-guangzhou-1"
-     * @return Zone 可用区信息，格式如"ap-guangzhou-1"
+     * 获取可用区信息，格式如"ap-guangzhou-2"。具体能设置的值请通过<a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a>接口查询。
+     * @return Zone 可用区信息，格式如"ap-guangzhou-2"。具体能设置的值请通过<a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a>接口查询。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * 设置可用区信息，格式如"ap-guangzhou-1"
-     * @param Zone 可用区信息，格式如"ap-guangzhou-1"
+     * 设置可用区信息，格式如"ap-guangzhou-2"。具体能设置的值请通过<a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a>接口查询。
+     * @param Zone 可用区信息，格式如"ap-guangzhou-2"。具体能设置的值请通过<a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a>接口查询。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

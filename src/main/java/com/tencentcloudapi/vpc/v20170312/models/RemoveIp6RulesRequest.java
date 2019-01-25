@@ -1,0 +1,80 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.vpc.v20170312.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class RemoveIp6RulesRequest  extends AbstractModel{
+
+    /**
+    * IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
+    */
+    @SerializedName("Ip6TranslatorId")
+    @Expose
+    private String Ip6TranslatorId;
+
+    /**
+    * 待删除IPV6转换规则，形如rule6-xxxxxxxx
+    */
+    @SerializedName("Ip6RuleIds")
+    @Expose
+    private String [] Ip6RuleIds;
+
+    /**
+     * 获取IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
+     * @return Ip6TranslatorId IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
+     */
+    public String getIp6TranslatorId() {
+        return this.Ip6TranslatorId;
+    }
+
+    /**
+     * 设置IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
+     * @param Ip6TranslatorId IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
+     */
+    public void setIp6TranslatorId(String Ip6TranslatorId) {
+        this.Ip6TranslatorId = Ip6TranslatorId;
+    }
+
+    /**
+     * 获取待删除IPV6转换规则，形如rule6-xxxxxxxx
+     * @return Ip6RuleIds 待删除IPV6转换规则，形如rule6-xxxxxxxx
+     */
+    public String [] getIp6RuleIds() {
+        return this.Ip6RuleIds;
+    }
+
+    /**
+     * 设置待删除IPV6转换规则，形如rule6-xxxxxxxx
+     * @param Ip6RuleIds 待删除IPV6转换规则，形如rule6-xxxxxxxx
+     */
+    public void setIp6RuleIds(String [] Ip6RuleIds) {
+        this.Ip6RuleIds = Ip6RuleIds;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Ip6TranslatorId", this.Ip6TranslatorId);
+        this.setParamArraySimple(map, prefix + "Ip6RuleIds.", this.Ip6RuleIds);
+
+    }
+}
+

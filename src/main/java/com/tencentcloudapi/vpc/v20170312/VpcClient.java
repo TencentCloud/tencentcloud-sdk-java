@@ -85,6 +85,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *1. 该接口用于在转换实例下添加IPV6转换规则。
+2. 支持在同一个转换实例下批量添加转换规则，一个账户在一个地域最多50个。
+3. 一个完整的转换规则包括vip6:vport6:protocol:vip:vport，其中vip6:vport6:protocol必须是唯一。
+     * @param req AddIp6RulesRequest
+     * @return AddIp6RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddIp6RulesResponse  AddIp6Rules(AddIp6RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddIp6RulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddIp6RulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddIp6Rules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (AllocateAddresses) 用于申请一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
 * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过七天之前，它会一直与您的腾讯云账户保持关联。
@@ -376,6 +396,25 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateHaVipResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateHaVip"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *1. 该接口用于创建IPV6转换IPV4实例，支持批量
+2. 同一个账户在在一个地域最多允许创建10个转换实例
+     * @param req CreateIp6TranslatorsRequest
+     * @return CreateIp6TranslatorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIp6TranslatorsResponse  CreateIp6Translators(CreateIp6TranslatorsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateIp6TranslatorsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateIp6TranslatorsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateIp6Translators"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -772,6 +811,25 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteHaVipResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteHaVip"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *1. 该接口用于释放IPV6转换实例，支持批量。
+2.  如果IPV6转换实例建立有转换规则，会一并删除。
+     * @param req DeleteIp6TranslatorsRequest
+     * @return DeleteIp6TranslatorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIp6TranslatorsResponse  DeleteIp6Translators(DeleteIp6TranslatorsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteIp6TranslatorsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteIp6TranslatorsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteIp6Translators"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1293,6 +1351,43 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *查询账户在指定地域IPV6转换实例和规则的配额
+     * @param req DescribeIp6TranslatorQuotaRequest
+     * @return DescribeIp6TranslatorQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIp6TranslatorQuotaResponse  DescribeIp6TranslatorQuota(DescribeIp6TranslatorQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIp6TranslatorQuotaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIp6TranslatorQuotaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeIp6TranslatorQuota"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *1. 该接口用于查询账户下的IPV6转换实例及其绑定的转换规则信息
+2. 支持过滤查询
+     * @param req DescribeIp6TranslatorsRequest
+     * @return DescribeIp6TranslatorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIp6TranslatorsResponse  DescribeIp6Translators(DescribeIp6TranslatorsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIp6TranslatorsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIp6TranslatorsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeIp6Translators"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
      * @param req DescribeNetworkInterfacesRequest
      * @return DescribeNetworkInterfacesResponse
@@ -1448,6 +1543,25 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSubnetsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSubnets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeVpcPrivateIpAddresses）用于查询VPC内网IP信息。<br />
+只能查询已使用的IP信息，当查询未使用的IP时，本接口不会报错，但不会出现在返回结果里。
+     * @param req DescribeVpcPrivateIpAddressesRequest
+     * @return DescribeVpcPrivateIpAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcPrivateIpAddressesResponse  DescribeVpcPrivateIpAddresses(DescribeVpcPrivateIpAddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcPrivateIpAddressesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcPrivateIpAddressesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVpcPrivateIpAddresses"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1972,6 +2086,42 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *该接口用于修改IPV6转换规则，当前仅支持修改转换规则名称，IPV4地址和IPV4端口号
+     * @param req ModifyIp6RuleRequest
+     * @return ModifyIp6RuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIp6RuleResponse  ModifyIp6Rule(ModifyIp6RuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyIp6RuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyIp6RuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyIp6Rule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于修改IP6转换实例属性，当前仅支持修改实例名称。
+     * @param req ModifyIp6TranslatorRequest
+     * @return ModifyIp6TranslatorResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIp6TranslatorResponse  ModifyIp6Translator(ModifyIp6TranslatorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyIp6TranslatorResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyIp6TranslatorResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyIp6Translator"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyNetworkInterfaceAttribute）用于修改弹性网卡属性。
      * @param req ModifyNetworkInterfaceAttributeRequest
      * @return ModifyNetworkInterfaceAttributeResponse
@@ -2229,6 +2379,25 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RemoveBandwidthPackageResourcesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RemoveBandwidthPackageResources"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *1. 该接口用于删除IPV6转换规则
+2. 支持批量删除同一个转换实例下的多个转换规则
+     * @param req RemoveIp6RulesRequest
+     * @return RemoveIp6RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveIp6RulesResponse  RemoveIp6Rules(RemoveIp6RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveIp6RulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveIp6RulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RemoveIp6Rules"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

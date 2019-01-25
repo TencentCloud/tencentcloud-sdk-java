@@ -1,0 +1,215 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.iai.v20180301.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CreatePersonRequest  extends AbstractModel{
+
+    /**
+    * 待加入的人员库ID。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * 人员名称。[1，60]个字符，可修改，可重复。
+    */
+    @SerializedName("PersonName")
+    @Expose
+    private String PersonName;
+
+    /**
+    * 人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+    */
+    @SerializedName("PersonId")
+    @Expose
+    private String PersonId;
+
+    /**
+    * 0代表未填写，1代表男性，2代表女性。
+    */
+    @SerializedName("Gender")
+    @Expose
+    private Integer Gender;
+
+    /**
+    * 人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
+    */
+    @SerializedName("PersonExDescriptionInfos")
+    @Expose
+    private PersonExDescriptionInfo [] PersonExDescriptionInfos;
+
+    /**
+    * 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+    */
+    @SerializedName("Image")
+    @Expose
+    private String Image;
+
+    /**
+    * 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
+非腾讯云存储的Url速度和稳定性可能受一定影响。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+     * 获取待加入的人员库ID。
+     * @return GroupId 待加入的人员库ID。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * 设置待加入的人员库ID。
+     * @param GroupId 待加入的人员库ID。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * 获取人员名称。[1，60]个字符，可修改，可重复。
+     * @return PersonName 人员名称。[1，60]个字符，可修改，可重复。
+     */
+    public String getPersonName() {
+        return this.PersonName;
+    }
+
+    /**
+     * 设置人员名称。[1，60]个字符，可修改，可重复。
+     * @param PersonName 人员名称。[1，60]个字符，可修改，可重复。
+     */
+    public void setPersonName(String PersonName) {
+        this.PersonName = PersonName;
+    }
+
+    /**
+     * 获取人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+     * @return PersonId 人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+     */
+    public String getPersonId() {
+        return this.PersonId;
+    }
+
+    /**
+     * 设置人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+     * @param PersonId 人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+     */
+    public void setPersonId(String PersonId) {
+        this.PersonId = PersonId;
+    }
+
+    /**
+     * 获取0代表未填写，1代表男性，2代表女性。
+     * @return Gender 0代表未填写，1代表男性，2代表女性。
+     */
+    public Integer getGender() {
+        return this.Gender;
+    }
+
+    /**
+     * 设置0代表未填写，1代表男性，2代表女性。
+     * @param Gender 0代表未填写，1代表男性，2代表女性。
+     */
+    public void setGender(Integer Gender) {
+        this.Gender = Gender;
+    }
+
+    /**
+     * 获取人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
+     * @return PersonExDescriptionInfos 人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
+     */
+    public PersonExDescriptionInfo [] getPersonExDescriptionInfos() {
+        return this.PersonExDescriptionInfos;
+    }
+
+    /**
+     * 设置人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
+     * @param PersonExDescriptionInfos 人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
+     */
+    public void setPersonExDescriptionInfos(PersonExDescriptionInfo [] PersonExDescriptionInfos) {
+        this.PersonExDescriptionInfos = PersonExDescriptionInfos;
+    }
+
+    /**
+     * 获取图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @return Image 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     */
+    public String getImage() {
+        return this.Image;
+    }
+
+    /**
+     * 设置图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param Image 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     */
+    public void setImage(String Image) {
+        this.Image = Image;
+    }
+
+    /**
+     * 获取图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
+非腾讯云存储的Url速度和稳定性可能受一定影响。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @return Url 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
+非腾讯云存储的Url速度和稳定性可能受一定影响。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * 设置图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
+非腾讯云存储的Url速度和稳定性可能受一定影响。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param Url 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
+非腾讯云存储的Url速度和稳定性可能受一定影响。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "PersonName", this.PersonName);
+        this.setParamSimple(map, prefix + "PersonId", this.PersonId);
+        this.setParamSimple(map, prefix + "Gender", this.Gender);
+        this.setParamArrayObj(map, prefix + "PersonExDescriptionInfos.", this.PersonExDescriptionInfos);
+        this.setParamSimple(map, prefix + "Image", this.Image);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+
+    }
+}
+

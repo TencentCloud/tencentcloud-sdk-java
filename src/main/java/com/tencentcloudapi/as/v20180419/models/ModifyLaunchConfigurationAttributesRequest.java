@@ -64,6 +64,13 @@ public class ModifyLaunchConfigurationAttributesRequest  extends AbstractModel{
     private String LaunchConfigurationName;
 
     /**
+    * 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
      * 获取启动配置ID
      * @return LaunchConfigurationId 启动配置ID
      */
@@ -168,6 +175,22 @@ public class ModifyLaunchConfigurationAttributesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
+     * @return UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * 设置经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
+     * @param UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -176,6 +199,7 @@ public class ModifyLaunchConfigurationAttributesRequest  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
         this.setParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
         this.setParamSimple(map, prefix + "LaunchConfigurationName", this.LaunchConfigurationName);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
 
     }
 }

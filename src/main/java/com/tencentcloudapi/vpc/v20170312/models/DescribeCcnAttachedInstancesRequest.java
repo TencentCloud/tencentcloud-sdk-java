@@ -55,6 +55,20 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     private String CcnId;
 
     /**
+    * 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方法。顺序：`ASC`，倒序：`DESC`。
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
      * 获取偏移量
      * @return Offset 偏移量
      */
@@ -135,6 +149,38 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+     * @return OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * 设置排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+     * @param OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * 获取排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @return OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * 设置排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @param OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -142,6 +188,8 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

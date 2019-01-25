@@ -297,4 +297,24 @@ public class VodClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *对 HLS 视频进行按时间段裁剪。
+
+注意：裁剪出来的视频与原始视频共用 ts，仅生成新的 m3u8。原始视频删除后，该裁剪视频也会被删除。
+     * @param req SimpleHlsClipRequest
+     * @return SimpleHlsClipResponse
+     * @throws TencentCloudSDKException
+     */
+    public SimpleHlsClipResponse  SimpleHlsClip(SimpleHlsClipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SimpleHlsClipResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SimpleHlsClipResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SimpleHlsClip"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

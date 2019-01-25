@@ -245,6 +245,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口（DeleteParamTemplate）用于删除参数模板。
+     * @param req DeleteParamTemplateRequest
+     * @return DeleteParamTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteParamTemplateResponse  DeleteParamTemplate(DeleteParamTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteParamTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteParamTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeAccountPrivileges)用于查询云数据库账户支持的权限信息。
      * @param req DescribeAccountPrivilegesRequest
      * @return DescribeAccountPrivilegesResponse
@@ -498,6 +516,8 @@ public class CdbClient extends AbstractClient{
 
     /**
      *本接口(DescribeDBPrice)用于查询云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。
+
+注意：对某个地域进行询价，请使用对应地域的接入点，接入点信息请参照<a href="https://cloud.tencent.com/document/api/236/15832">服务地址</a>文档。例如：对广州地域进行询价，请把请求发到：cdb.ap-guangzhou.tencentcloudapi.com。同理对上海地域询价，把请求发到：cdb.ap-shanghai.tencentcloudapi.com
      * @param req DescribeDBPriceRequest
      * @return DescribeDBPriceResponse
      * @throws TencentCloudSDKException
@@ -742,6 +762,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowLogsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeSupportedPrivileges)用于查询云数据库的支持的权限信息，包括全局权限，数据库权限，表权限以及列权限。
+     * @param req DescribeSupportedPrivilegesRequest
+     * @return DescribeSupportedPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSupportedPrivilegesResponse  DescribeSupportedPrivileges(DescribeSupportedPrivilegesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSupportedPrivilegesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSupportedPrivilegesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSupportedPrivileges"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
