@@ -19,6 +19,7 @@ package com.tencentcloudapi.common;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
 import java.util.HashMap;
 
 /**
@@ -28,6 +29,15 @@ abstract public class AbstractModel {
 	
 	protected abstract void toMap(HashMap<String, String> map, String prefix);
 	
+	/*
+	 * valid only when its a request object.
+	 * some actions can only be posted in multipart format,
+	 * this method is used to mark which parameters are binary type.
+	 */
+	protected String [] getBinaryParams() {
+	    return new String[0];
+	}
+
     protected <V> void setParamSimple(HashMap<String, String> map, String key, V value) {
     	if (value != null) {
     		

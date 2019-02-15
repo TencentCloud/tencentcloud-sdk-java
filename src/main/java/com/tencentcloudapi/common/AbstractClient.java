@@ -17,11 +17,13 @@
 
 package com.tencentcloudapi.common;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 import java.util.TimeZone;
 import java.util.TreeMap;
+import java.util.UUID;
 
 import javax.crypto.Mac;
 import javax.net.ssl.SSLContext;
@@ -37,17 +39,14 @@ import java.text.SimpleDateFormat;
 import com.squareup.okhttp.Headers;
 import com.squareup.okhttp.Headers.Builder;
 import com.squareup.okhttp.Response;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.JsonSyntaxException;
-
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.http.HttpConnection;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.profile.HttpProfile;
-import com.tencentcloudapi.common.Credential;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.JsonSyntaxException;
 
 /**
  * 抽象client类
@@ -150,11 +149,12 @@ abstract public class AbstractClient {
             endpoint = this.profile.getHttpProfile().getEndpoint();
         }
         
+        String [] binaryParams = request.getBinaryParams();
         String sm = this.profile.getSignMethod();
-        if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {
-            okRsp = doRequest(endpoint, request, actionName);
-        } else if (sm.equals(ClientProfile.SIGN_TC3_256)) {
+        if (binaryParams.length > 0 || sm.equals(ClientProfile.SIGN_TC3_256)) {
             okRsp = doRequestWithTC3(endpoint, request, actionName);
+        } else if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {
+            okRsp = doRequest(endpoint, request, actionName);
         } else {
             throw new TencentCloudSDKException("Signature method " + sm + " is invalid or not supported yet.");
         }
@@ -206,22 +206,32 @@ abstract public class AbstractClient {
     
     private Response doRequestWithTC3(String endpoint, AbstractModel request, String action) throws TencentCloudSDKException {
         String httpRequestMethod = this.profile.getHttpProfile().getReqMethod();
+        if (httpRequestMethod == null) {
+            throw new TencentCloudSDKException("Request method should not be null, can only be GET or POST");
+        }
         String contentType = "application/x-www-form-urlencoded";
-        if (httpRequestMethod != null && httpRequestMethod.equals(HttpProfile.REQ_POST)) {
+        String requestPayload = "";
+        HashMap<String, String> params = new HashMap<String, String>();
+        request.toMap(params, "");
+        String [] binaryParams = request.getBinaryParams();
+        if ( binaryParams.length > 0 ) {
+            httpRequestMethod = HttpProfile.REQ_POST;
+            String boundary = UUID.randomUUID().toString();
+            // okhttp always set charset even we don't specify it,
+            // to ensure signature be correct, we have to set it here as well.
+            contentType = "multipart/form-data; charset=utf-8" + "; boundary=" + boundary;
+            requestPayload = getMultipartPayload(params, binaryParams, boundary);
+        } else if (httpRequestMethod.equals(HttpProfile.REQ_POST)) {
+            requestPayload = AbstractModel.toJsonString(request);
             // okhttp always set charset even we don't specify it,
             // to ensure signature be correct, we have to set it here as well.
             contentType = "application/json; charset=utf-8";
         }
         String canonicalUri = "/";
-        HashMap<String, String> params = new HashMap<String, String>();
-        request.toMap(params, "");
         String canonicalQueryString = this.getCanonicalQueryString(params, httpRequestMethod);
         String canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
         String signedHeaders = "content-type;host";
-        String requestPayload = "";
-        if (httpRequestMethod != null && httpRequestMethod.equals(HttpProfile.REQ_POST)) {
-            requestPayload = AbstractModel.toJsonString(request);
-        }
+
         String hashedRequestPayload = "";
         if (this.profile.isUnsignedPayload()) {
             hashedRequestPayload = Sign.sha256Hex("UNSIGNED-PAYLOAD");
@@ -270,7 +280,7 @@ abstract public class AbstractClient {
         if (this.profile.isUnsignedPayload()) {
             hb.add("X-TC-Content-SHA256", "UNSIGNED-PAYLOAD");
         }
-        
+
         Headers headers = hb.build();
         if (httpRequestMethod.equals(HttpProfile.REQ_GET)) {
             return conn.getRequest(url + "?" + canonicalQueryString, headers);
@@ -279,6 +289,25 @@ abstract public class AbstractClient {
         } else {
             throw new TencentCloudSDKException("Method only support GET, POST");
         }
+    }
+
+    private String getMultipartPayload(HashMap<String, String> params, String [] binaryParams, String boundary) {
+        StringBuilder sb = new StringBuilder();
+        for (Map.Entry<String, String> entry : params.entrySet()) {
+            sb.append("--").append(boundary).append("\r\n");
+            sb.append("Content-Disposition: form-data; name=\"").append(entry.getKey());
+            if (Arrays.asList(binaryParams).contains(entry.getKey())) {
+                sb.append("\"; filename=\"").append(entry.getKey()).append("\"\r\n");
+            } else {
+                sb.append("\"\r\n");
+            }
+            sb.append("\r\n").append(entry.getValue()).append("\r\n");
+        }
+        if (sb.length() != 0) {
+            sb.append("--").append(boundary).append("--\r\n");
+        }
+
+        return sb.toString();
     }
 
     private String getCanonicalQueryString(HashMap<String, String> params, String method) throws TencentCloudSDKException {

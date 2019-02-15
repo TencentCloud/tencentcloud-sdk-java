@@ -99,7 +99,7 @@ public class HttpConnection {
     }
 
     public Response postRequest(String url, String body, Headers headers) throws TencentCloudSDKException {   
-        MediaType contentType = MediaType.parse("application/json");
+        MediaType contentType = MediaType.parse(headers.get("Content-Type"));
         Request request = null;
         try {
             request = new Request.Builder()
