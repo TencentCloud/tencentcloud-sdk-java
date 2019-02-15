@@ -58,7 +58,7 @@ public class CbsClient extends AbstractClient{
      * @return ApplySnapshotResponse
      * @throws TencentCloudSDKException
      */
-    public ApplySnapshotResponse  ApplySnapshot(ApplySnapshotRequest req) throws TencentCloudSDKException{
+    public ApplySnapshotResponse ApplySnapshot(ApplySnapshotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplySnapshotResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplySnapshotResponse>>() {
@@ -79,7 +79,7 @@ public class CbsClient extends AbstractClient{
      * @return AttachDisksResponse
      * @throws TencentCloudSDKException
      */
-    public AttachDisksResponse  AttachDisks(AttachDisksRequest req) throws TencentCloudSDKException{
+    public AttachDisksResponse AttachDisks(AttachDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachDisksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachDisksResponse>>() {
@@ -101,7 +101,7 @@ public class CbsClient extends AbstractClient{
      * @return CreateDisksResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDisksResponse  CreateDisks(CreateDisksRequest req) throws TencentCloudSDKException{
+    public CreateDisksResponse CreateDisks(CreateDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDisksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDisksResponse>>() {
@@ -122,7 +122,7 @@ public class CbsClient extends AbstractClient{
      * @return CreateSnapshotResponse
      * @throws TencentCloudSDKException
      */
-    public CreateSnapshotResponse  CreateSnapshot(CreateSnapshotRequest req) throws TencentCloudSDKException{
+    public CreateSnapshotResponse CreateSnapshot(CreateSnapshotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSnapshotResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSnapshotResponse>>() {
@@ -143,7 +143,7 @@ public class CbsClient extends AbstractClient{
      * @return DeleteSnapshotsResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteSnapshotsResponse  DeleteSnapshots(DeleteSnapshotsRequest req) throws TencentCloudSDKException{
+    public DeleteSnapshotsResponse DeleteSnapshots(DeleteSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSnapshotsResponse>>() {
@@ -161,7 +161,7 @@ public class CbsClient extends AbstractClient{
      * @return DescribeDiskConfigQuotaResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDiskConfigQuotaResponse  DescribeDiskConfigQuota(DescribeDiskConfigQuotaRequest req) throws TencentCloudSDKException{
+    public DescribeDiskConfigQuotaResponse DescribeDiskConfigQuota(DescribeDiskConfigQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskConfigQuotaResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskConfigQuotaResponse>>() {
@@ -182,7 +182,7 @@ public class CbsClient extends AbstractClient{
      * @return DescribeDiskOperationLogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDiskOperationLogsResponse  DescribeDiskOperationLogs(DescribeDiskOperationLogsRequest req) throws TencentCloudSDKException{
+    public DescribeDiskOperationLogsResponse DescribeDiskOperationLogs(DescribeDiskOperationLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskOperationLogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskOperationLogsResponse>>() {
@@ -203,7 +203,7 @@ public class CbsClient extends AbstractClient{
      * @return DescribeDisksResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDisksResponse  DescribeDisks(DescribeDisksRequest req) throws TencentCloudSDKException{
+    public DescribeDisksResponse DescribeDisks(DescribeDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDisksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDisksResponse>>() {
@@ -223,7 +223,7 @@ public class CbsClient extends AbstractClient{
      * @return DescribeInstancesDiskNumResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstancesDiskNumResponse  DescribeInstancesDiskNum(DescribeInstancesDiskNumRequest req) throws TencentCloudSDKException{
+    public DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(DescribeInstancesDiskNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesDiskNumResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesDiskNumResponse>>() {
@@ -244,7 +244,7 @@ public class CbsClient extends AbstractClient{
      * @return DescribeSnapshotOperationLogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSnapshotOperationLogsResponse  DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req) throws TencentCloudSDKException{
+    public DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>() {
@@ -265,7 +265,7 @@ public class CbsClient extends AbstractClient{
      * @return DescribeSnapshotsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSnapshotsResponse  DescribeSnapshots(DescribeSnapshotsRequest req) throws TencentCloudSDKException{
+    public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotsResponse>>() {
@@ -286,7 +286,7 @@ public class CbsClient extends AbstractClient{
      * @return DetachDisksResponse
      * @throws TencentCloudSDKException
      */
-    public DetachDisksResponse  DetachDisks(DetachDisksRequest req) throws TencentCloudSDKException{
+    public DetachDisksResponse DetachDisks(DetachDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachDisksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachDisksResponse>>() {
@@ -306,7 +306,7 @@ public class CbsClient extends AbstractClient{
      * @return InquiryPriceCreateDisksResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceCreateDisksResponse  InquiryPriceCreateDisks(InquiryPriceCreateDisksRequest req) throws TencentCloudSDKException{
+    public InquiryPriceCreateDisksResponse InquiryPriceCreateDisks(InquiryPriceCreateDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateDisksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateDisksResponse>>() {
@@ -328,7 +328,7 @@ public class CbsClient extends AbstractClient{
      * @return InquiryPriceRenewDisksResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceRenewDisksResponse  InquiryPriceRenewDisks(InquiryPriceRenewDisksRequest req) throws TencentCloudSDKException{
+    public InquiryPriceRenewDisksResponse InquiryPriceRenewDisks(InquiryPriceRenewDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceRenewDisksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewDisksResponse>>() {
@@ -348,7 +348,7 @@ public class CbsClient extends AbstractClient{
      * @return InquiryPriceResizeDiskResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceResizeDiskResponse  InquiryPriceResizeDisk(InquiryPriceResizeDiskRequest req) throws TencentCloudSDKException{
+    public InquiryPriceResizeDiskResponse InquiryPriceResizeDisk(InquiryPriceResizeDiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResizeDiskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResizeDiskResponse>>() {
@@ -370,7 +370,7 @@ public class CbsClient extends AbstractClient{
      * @return ModifyDiskAttributesResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDiskAttributesResponse  ModifyDiskAttributes(ModifyDiskAttributesRequest req) throws TencentCloudSDKException{
+    public ModifyDiskAttributesResponse ModifyDiskAttributes(ModifyDiskAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDiskAttributesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskAttributesResponse>>() {
@@ -388,7 +388,7 @@ public class CbsClient extends AbstractClient{
      * @return ModifyDisksRenewFlagResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDisksRenewFlagResponse  ModifyDisksRenewFlag(ModifyDisksRenewFlagRequest req) throws TencentCloudSDKException{
+    public ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(ModifyDisksRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDisksRenewFlagResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDisksRenewFlagResponse>>() {
@@ -409,7 +409,7 @@ public class CbsClient extends AbstractClient{
      * @return ModifySnapshotAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifySnapshotAttributeResponse  ModifySnapshotAttribute(ModifySnapshotAttributeRequest req) throws TencentCloudSDKException{
+    public ModifySnapshotAttributeResponse ModifySnapshotAttribute(ModifySnapshotAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySnapshotAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySnapshotAttributeResponse>>() {
@@ -431,7 +431,7 @@ public class CbsClient extends AbstractClient{
      * @return RenewDiskResponse
      * @throws TencentCloudSDKException
      */
-    public RenewDiskResponse  RenewDisk(RenewDiskRequest req) throws TencentCloudSDKException{
+    public RenewDiskResponse RenewDisk(RenewDiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewDiskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewDiskResponse>>() {
@@ -452,7 +452,7 @@ public class CbsClient extends AbstractClient{
      * @return ResizeDiskResponse
      * @throws TencentCloudSDKException
      */
-    public ResizeDiskResponse  ResizeDisk(ResizeDiskRequest req) throws TencentCloudSDKException{
+    public ResizeDiskResponse ResizeDisk(ResizeDiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResizeDiskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResizeDiskResponse>>() {
@@ -474,7 +474,7 @@ public class CbsClient extends AbstractClient{
      * @return TerminateDisksResponse
      * @throws TencentCloudSDKException
      */
-    public TerminateDisksResponse  TerminateDisks(TerminateDisksRequest req) throws TencentCloudSDKException{
+    public TerminateDisksResponse TerminateDisks(TerminateDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateDisksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateDisksResponse>>() {

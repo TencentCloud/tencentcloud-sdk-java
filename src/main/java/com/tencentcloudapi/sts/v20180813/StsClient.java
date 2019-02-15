@@ -54,7 +54,7 @@ public class StsClient extends AbstractClient{
      * @return AssumeRoleResponse
      * @throws TencentCloudSDKException
      */
-    public AssumeRoleResponse  AssumeRole(AssumeRoleRequest req) throws TencentCloudSDKException{
+    public AssumeRoleResponse AssumeRole(AssumeRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssumeRoleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AssumeRoleResponse>>() {
@@ -72,7 +72,7 @@ public class StsClient extends AbstractClient{
      * @return GetFederationTokenResponse
      * @throws TencentCloudSDKException
      */
-    public GetFederationTokenResponse  GetFederationToken(GetFederationTokenRequest req) throws TencentCloudSDKException{
+    public GetFederationTokenResponse GetFederationToken(GetFederationTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFederationTokenResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFederationTokenResponse>>() {

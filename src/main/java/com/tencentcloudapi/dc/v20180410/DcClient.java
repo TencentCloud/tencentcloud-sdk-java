@@ -54,7 +54,7 @@ public class DcClient extends AbstractClient{
      * @return AcceptDirectConnectTunnelResponse
      * @throws TencentCloudSDKException
      */
-    public AcceptDirectConnectTunnelResponse  AcceptDirectConnectTunnel(AcceptDirectConnectTunnelRequest req) throws TencentCloudSDKException{
+    public AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(AcceptDirectConnectTunnelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AcceptDirectConnectTunnelResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AcceptDirectConnectTunnelResponse>>() {
@@ -72,7 +72,7 @@ public class DcClient extends AbstractClient{
      * @return CreateDirectConnectTunnelResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDirectConnectTunnelResponse  CreateDirectConnectTunnel(CreateDirectConnectTunnelRequest req) throws TencentCloudSDKException{
+    public CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(CreateDirectConnectTunnelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDirectConnectTunnelResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDirectConnectTunnelResponse>>() {
@@ -90,7 +90,7 @@ public class DcClient extends AbstractClient{
      * @return DeleteDirectConnectTunnelResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteDirectConnectTunnelResponse  DeleteDirectConnectTunnel(DeleteDirectConnectTunnelRequest req) throws TencentCloudSDKException{
+    public DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(DeleteDirectConnectTunnelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDirectConnectTunnelResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectTunnelResponse>>() {
@@ -108,7 +108,7 @@ public class DcClient extends AbstractClient{
      * @return DescribeDirectConnectTunnelsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDirectConnectTunnelsResponse  DescribeDirectConnectTunnels(DescribeDirectConnectTunnelsRequest req) throws TencentCloudSDKException{
+    public DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(DescribeDirectConnectTunnelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDirectConnectTunnelsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectTunnelsResponse>>() {
@@ -126,7 +126,7 @@ public class DcClient extends AbstractClient{
      * @return ModifyDirectConnectTunnelAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDirectConnectTunnelAttributeResponse  ModifyDirectConnectTunnelAttribute(ModifyDirectConnectTunnelAttributeRequest req) throws TencentCloudSDKException{
+    public ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(ModifyDirectConnectTunnelAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse>>() {
@@ -144,7 +144,7 @@ public class DcClient extends AbstractClient{
      * @return RejectDirectConnectTunnelResponse
      * @throws TencentCloudSDKException
      */
-    public RejectDirectConnectTunnelResponse  RejectDirectConnectTunnel(RejectDirectConnectTunnelRequest req) throws TencentCloudSDKException{
+    public RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(RejectDirectConnectTunnelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RejectDirectConnectTunnelResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RejectDirectConnectTunnelResponse>>() {

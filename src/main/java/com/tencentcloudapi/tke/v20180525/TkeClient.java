@@ -54,7 +54,7 @@ public class TkeClient extends AbstractClient{
      * @return AddExistedInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public AddExistedInstancesResponse  AddExistedInstances(AddExistedInstancesRequest req) throws TencentCloudSDKException{
+    public AddExistedInstancesResponse AddExistedInstances(AddExistedInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddExistedInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AddExistedInstancesResponse>>() {
@@ -72,7 +72,7 @@ public class TkeClient extends AbstractClient{
      * @return DeleteClusterInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteClusterInstancesResponse  DeleteClusterInstances(DeleteClusterInstancesRequest req) throws TencentCloudSDKException{
+    public DeleteClusterInstancesResponse DeleteClusterInstances(DeleteClusterInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterInstancesResponse>>() {
@@ -90,7 +90,7 @@ public class TkeClient extends AbstractClient{
      * @return DescribeClusterInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeClusterInstancesResponse  DescribeClusterInstances(DescribeClusterInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeClusterInstancesResponse DescribeClusterInstances(DescribeClusterInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterInstancesResponse>>() {
@@ -108,7 +108,7 @@ public class TkeClient extends AbstractClient{
      * @return DescribeClustersResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeClustersResponse  DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
+    public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClustersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {

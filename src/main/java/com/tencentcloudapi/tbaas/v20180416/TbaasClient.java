@@ -54,7 +54,7 @@ public class TbaasClient extends AbstractClient{
      * @return GetInvokeTxResponse
      * @throws TencentCloudSDKException
      */
-    public GetInvokeTxResponse  GetInvokeTx(GetInvokeTxRequest req) throws TencentCloudSDKException{
+    public GetInvokeTxResponse GetInvokeTx(GetInvokeTxRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetInvokeTxResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetInvokeTxResponse>>() {
@@ -72,7 +72,7 @@ public class TbaasClient extends AbstractClient{
      * @return InvokeResponse
      * @throws TencentCloudSDKException
      */
-    public InvokeResponse  Invoke(InvokeRequest req) throws TencentCloudSDKException{
+    public InvokeResponse Invoke(InvokeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
@@ -90,7 +90,7 @@ public class TbaasClient extends AbstractClient{
      * @return QueryResponse
      * @throws TencentCloudSDKException
      */
-    public QueryResponse  Query(QueryRequest req) throws TencentCloudSDKException{
+    public QueryResponse Query(QueryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryResponse>>() {

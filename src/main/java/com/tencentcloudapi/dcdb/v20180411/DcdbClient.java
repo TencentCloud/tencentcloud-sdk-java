@@ -54,7 +54,7 @@ public class DcdbClient extends AbstractClient{
      * @return CloneAccountResponse
      * @throws TencentCloudSDKException
      */
-    public CloneAccountResponse  CloneAccount(CloneAccountRequest req) throws TencentCloudSDKException{
+    public CloneAccountResponse CloneAccount(CloneAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloneAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CloneAccountResponse>>() {
@@ -72,7 +72,7 @@ public class DcdbClient extends AbstractClient{
      * @return CloseDBExtranetAccessResponse
      * @throws TencentCloudSDKException
      */
-    public CloseDBExtranetAccessResponse  CloseDBExtranetAccess(CloseDBExtranetAccessRequest req) throws TencentCloudSDKException{
+    public CloseDBExtranetAccessResponse CloseDBExtranetAccess(CloseDBExtranetAccessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseDBExtranetAccessResponse>>() {
@@ -91,7 +91,7 @@ public class DcdbClient extends AbstractClient{
      * @return CopyAccountPrivilegesResponse
      * @throws TencentCloudSDKException
      */
-    public CopyAccountPrivilegesResponse  CopyAccountPrivileges(CopyAccountPrivilegesRequest req) throws TencentCloudSDKException{
+    public CopyAccountPrivilegesResponse CopyAccountPrivileges(CopyAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopyAccountPrivilegesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CopyAccountPrivilegesResponse>>() {
@@ -109,7 +109,7 @@ public class DcdbClient extends AbstractClient{
      * @return CreateAccountResponse
      * @throws TencentCloudSDKException
      */
-    public CreateAccountResponse  CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
+    public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
@@ -127,7 +127,7 @@ public class DcdbClient extends AbstractClient{
      * @return CreateDCDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDCDBInstanceResponse  CreateDCDBInstance(CreateDCDBInstanceRequest req) throws TencentCloudSDKException{
+    public CreateDCDBInstanceResponse CreateDCDBInstance(CreateDCDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDCDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDCDBInstanceResponse>>() {
@@ -145,7 +145,7 @@ public class DcdbClient extends AbstractClient{
      * @return DeleteAccountResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteAccountResponse  DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
+    public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccountResponse>>() {
@@ -164,7 +164,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeAccountPrivilegesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAccountPrivilegesResponse  DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req) throws TencentCloudSDKException{
+    public DescribeAccountPrivilegesResponse DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountPrivilegesResponse>>() {
@@ -182,7 +182,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeAccountsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAccountsResponse  DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
+    public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
@@ -200,7 +200,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDBLogFilesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBLogFilesResponse  DescribeDBLogFiles(DescribeDBLogFilesRequest req) throws TencentCloudSDKException{
+    public DescribeDBLogFilesResponse DescribeDBLogFiles(DescribeDBLogFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBLogFilesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBLogFilesResponse>>() {
@@ -218,7 +218,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDBParametersResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBParametersResponse  DescribeDBParameters(DescribeDBParametersRequest req) throws TencentCloudSDKException{
+    public DescribeDBParametersResponse DescribeDBParameters(DescribeDBParametersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBParametersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBParametersResponse>>() {
@@ -236,7 +236,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDBSyncModeResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBSyncModeResponse  DescribeDBSyncMode(DescribeDBSyncModeRequest req) throws TencentCloudSDKException{
+    public DescribeDBSyncModeResponse DescribeDBSyncMode(DescribeDBSyncModeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBSyncModeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSyncModeResponse>>() {
@@ -255,7 +255,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDCDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDCDBInstancesResponse  DescribeDCDBInstances(DescribeDCDBInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeDCDBInstancesResponse DescribeDCDBInstances(DescribeDCDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDCDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDCDBInstancesResponse>>() {
@@ -273,7 +273,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDCDBPriceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDCDBPriceResponse  DescribeDCDBPrice(DescribeDCDBPriceRequest req) throws TencentCloudSDKException{
+    public DescribeDCDBPriceResponse DescribeDCDBPrice(DescribeDCDBPriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDCDBPriceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDCDBPriceResponse>>() {
@@ -291,7 +291,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDCDBRenewalPriceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDCDBRenewalPriceResponse  DescribeDCDBRenewalPrice(DescribeDCDBRenewalPriceRequest req) throws TencentCloudSDKException{
+    public DescribeDCDBRenewalPriceResponse DescribeDCDBRenewalPrice(DescribeDCDBRenewalPriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDCDBRenewalPriceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDCDBRenewalPriceResponse>>() {
@@ -309,7 +309,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDCDBSaleInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDCDBSaleInfoResponse  DescribeDCDBSaleInfo(DescribeDCDBSaleInfoRequest req) throws TencentCloudSDKException{
+    public DescribeDCDBSaleInfoResponse DescribeDCDBSaleInfo(DescribeDCDBSaleInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDCDBSaleInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDCDBSaleInfoResponse>>() {
@@ -327,7 +327,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDCDBShardsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDCDBShardsResponse  DescribeDCDBShards(DescribeDCDBShardsRequest req) throws TencentCloudSDKException{
+    public DescribeDCDBShardsResponse DescribeDCDBShards(DescribeDCDBShardsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDCDBShardsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDCDBShardsResponse>>() {
@@ -345,7 +345,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDCDBUpgradePriceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDCDBUpgradePriceResponse  DescribeDCDBUpgradePrice(DescribeDCDBUpgradePriceRequest req) throws TencentCloudSDKException{
+    public DescribeDCDBUpgradePriceResponse DescribeDCDBUpgradePrice(DescribeDCDBUpgradePriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDCDBUpgradePriceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDCDBUpgradePriceResponse>>() {
@@ -363,7 +363,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDatabaseObjectsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDatabaseObjectsResponse  DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req) throws TencentCloudSDKException{
+    public DescribeDatabaseObjectsResponse DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabaseObjectsResponse>>() {
@@ -381,7 +381,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDatabaseTableResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDatabaseTableResponse  DescribeDatabaseTable(DescribeDatabaseTableRequest req) throws TencentCloudSDKException{
+    public DescribeDatabaseTableResponse DescribeDatabaseTable(DescribeDatabaseTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabaseTableResponse>>() {
@@ -399,7 +399,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeDatabasesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDatabasesResponse  DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
+    public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatabasesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
@@ -417,7 +417,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeOrdersResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeOrdersResponse  DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
+    public DescribeOrdersResponse DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrdersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
@@ -435,7 +435,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeShardSpecResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeShardSpecResponse  DescribeShardSpec(DescribeShardSpecRequest req) throws TencentCloudSDKException{
+    public DescribeShardSpecResponse DescribeShardSpec(DescribeShardSpecRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShardSpecResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShardSpecResponse>>() {
@@ -453,7 +453,7 @@ public class DcdbClient extends AbstractClient{
      * @return DescribeSqlLogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSqlLogsResponse  DescribeSqlLogs(DescribeSqlLogsRequest req) throws TencentCloudSDKException{
+    public DescribeSqlLogsResponse DescribeSqlLogs(DescribeSqlLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSqlLogsResponse>>() {
@@ -472,7 +472,7 @@ public class DcdbClient extends AbstractClient{
      * @return GrantAccountPrivilegesResponse
      * @throws TencentCloudSDKException
      */
-    public GrantAccountPrivilegesResponse  GrantAccountPrivileges(GrantAccountPrivilegesRequest req) throws TencentCloudSDKException{
+    public GrantAccountPrivilegesResponse GrantAccountPrivileges(GrantAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GrantAccountPrivilegesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GrantAccountPrivilegesResponse>>() {
@@ -490,7 +490,7 @@ public class DcdbClient extends AbstractClient{
      * @return InitDCDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public InitDCDBInstancesResponse  InitDCDBInstances(InitDCDBInstancesRequest req) throws TencentCloudSDKException{
+    public InitDCDBInstancesResponse InitDCDBInstances(InitDCDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InitDCDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InitDCDBInstancesResponse>>() {
@@ -509,7 +509,7 @@ public class DcdbClient extends AbstractClient{
      * @return ModifyAccountDescriptionResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyAccountDescriptionResponse  ModifyAccountDescription(ModifyAccountDescriptionRequest req) throws TencentCloudSDKException{
+    public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountDescriptionResponse>>() {
@@ -527,7 +527,7 @@ public class DcdbClient extends AbstractClient{
      * @return ModifyDBInstancesProjectResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBInstancesProjectResponse  ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
+    public ModifyDBInstancesProjectResponse ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
@@ -545,7 +545,7 @@ public class DcdbClient extends AbstractClient{
      * @return ModifyDBParametersResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBParametersResponse  ModifyDBParameters(ModifyDBParametersRequest req) throws TencentCloudSDKException{
+    public ModifyDBParametersResponse ModifyDBParameters(ModifyDBParametersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBParametersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBParametersResponse>>() {
@@ -563,7 +563,7 @@ public class DcdbClient extends AbstractClient{
      * @return ModifyDBSyncModeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBSyncModeResponse  ModifyDBSyncMode(ModifyDBSyncModeRequest req) throws TencentCloudSDKException{
+    public ModifyDBSyncModeResponse ModifyDBSyncMode(ModifyDBSyncModeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBSyncModeResponse>>() {
@@ -581,7 +581,7 @@ public class DcdbClient extends AbstractClient{
      * @return OpenDBExtranetAccessResponse
      * @throws TencentCloudSDKException
      */
-    public OpenDBExtranetAccessResponse  OpenDBExtranetAccess(OpenDBExtranetAccessRequest req) throws TencentCloudSDKException{
+    public OpenDBExtranetAccessResponse OpenDBExtranetAccess(OpenDBExtranetAccessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenDBExtranetAccessResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenDBExtranetAccessResponse>>() {
@@ -599,7 +599,7 @@ public class DcdbClient extends AbstractClient{
      * @return RenewDCDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public RenewDCDBInstanceResponse  RenewDCDBInstance(RenewDCDBInstanceRequest req) throws TencentCloudSDKException{
+    public RenewDCDBInstanceResponse RenewDCDBInstance(RenewDCDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewDCDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewDCDBInstanceResponse>>() {
@@ -618,7 +618,7 @@ public class DcdbClient extends AbstractClient{
      * @return ResetAccountPasswordResponse
      * @throws TencentCloudSDKException
      */
-    public ResetAccountPasswordResponse  ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
+    public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
@@ -636,7 +636,7 @@ public class DcdbClient extends AbstractClient{
      * @return UpgradeDCDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public UpgradeDCDBInstanceResponse  UpgradeDCDBInstance(UpgradeDCDBInstanceRequest req) throws TencentCloudSDKException{
+    public UpgradeDCDBInstanceResponse UpgradeDCDBInstance(UpgradeDCDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDCDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDCDBInstanceResponse>>() {

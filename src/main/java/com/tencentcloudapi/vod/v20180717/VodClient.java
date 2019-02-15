@@ -55,7 +55,7 @@ public class VodClient extends AbstractClient{
      * @return ApplyUploadResponse
      * @throws TencentCloudSDKException
      */
-    public ApplyUploadResponse  ApplyUpload(ApplyUploadRequest req) throws TencentCloudSDKException{
+    public ApplyUploadResponse ApplyUpload(ApplyUploadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyUploadResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyUploadResponse>>() {
@@ -73,7 +73,7 @@ public class VodClient extends AbstractClient{
      * @return CommitUploadResponse
      * @throws TencentCloudSDKException
      */
-    public CommitUploadResponse  CommitUpload(CommitUploadRequest req) throws TencentCloudSDKException{
+    public CommitUploadResponse CommitUpload(CommitUploadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CommitUploadResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CommitUploadResponse>>() {
@@ -94,7 +94,7 @@ public class VodClient extends AbstractClient{
      * @return CreateClassResponse
      * @throws TencentCloudSDKException
      */
-    public CreateClassResponse  CreateClass(CreateClassRequest req) throws TencentCloudSDKException{
+    public CreateClassResponse CreateClass(CreateClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClassResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClassResponse>>() {
@@ -113,7 +113,7 @@ public class VodClient extends AbstractClient{
      * @return DeleteClassResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteClassResponse  DeleteClass(DeleteClassRequest req) throws TencentCloudSDKException{
+    public DeleteClassResponse DeleteClass(DeleteClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClassResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClassResponse>>() {
@@ -132,7 +132,7 @@ public class VodClient extends AbstractClient{
      * @return DeleteMediaResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMediaResponse  DeleteMedia(DeleteMediaRequest req) throws TencentCloudSDKException{
+    public DeleteMediaResponse DeleteMedia(DeleteMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMediaResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMediaResponse>>() {
@@ -150,7 +150,7 @@ public class VodClient extends AbstractClient{
      * @return DescribeAllClassResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAllClassResponse  DescribeAllClass(DescribeAllClassRequest req) throws TencentCloudSDKException{
+    public DescribeAllClassResponse DescribeAllClass(DescribeAllClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllClassResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllClassResponse>>() {
@@ -177,7 +177,7 @@ public class VodClient extends AbstractClient{
      * @return DescribeMediaInfosResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaInfosResponse  DescribeMediaInfos(DescribeMediaInfosRequest req) throws TencentCloudSDKException{
+    public DescribeMediaInfosResponse DescribeMediaInfos(DescribeMediaInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaInfosResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaInfosResponse>>() {
@@ -218,7 +218,7 @@ public class VodClient extends AbstractClient{
      * @return LiveRealTimeClipResponse
      * @throws TencentCloudSDKException
      */
-    public LiveRealTimeClipResponse  LiveRealTimeClip(LiveRealTimeClipRequest req) throws TencentCloudSDKException{
+    public LiveRealTimeClipResponse LiveRealTimeClip(LiveRealTimeClipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LiveRealTimeClipResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<LiveRealTimeClipResponse>>() {
@@ -236,7 +236,7 @@ public class VodClient extends AbstractClient{
      * @return ModifyClassResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyClassResponse  ModifyClass(ModifyClassRequest req) throws TencentCloudSDKException{
+    public ModifyClassResponse ModifyClass(ModifyClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClassResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClassResponse>>() {
@@ -254,7 +254,7 @@ public class VodClient extends AbstractClient{
      * @return ModifyMediaInfoResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMediaInfoResponse  ModifyMediaInfo(ModifyMediaInfoRequest req) throws TencentCloudSDKException{
+    public ModifyMediaInfoResponse ModifyMediaInfo(ModifyMediaInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMediaInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMediaInfoResponse>>() {
@@ -285,7 +285,7 @@ public class VodClient extends AbstractClient{
      * @return SearchMediaResponse
      * @throws TencentCloudSDKException
      */
-    public SearchMediaResponse  SearchMedia(SearchMediaRequest req) throws TencentCloudSDKException{
+    public SearchMediaResponse SearchMedia(SearchMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchMediaResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchMediaResponse>>() {
@@ -305,7 +305,7 @@ public class VodClient extends AbstractClient{
      * @return SimpleHlsClipResponse
      * @throws TencentCloudSDKException
      */
-    public SimpleHlsClipResponse  SimpleHlsClip(SimpleHlsClipRequest req) throws TencentCloudSDKException{
+    public SimpleHlsClipResponse SimpleHlsClip(SimpleHlsClipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SimpleHlsClipResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SimpleHlsClipResponse>>() {

@@ -54,7 +54,7 @@ public class ScfClient extends AbstractClient{
      * @return CreateFunctionResponse
      * @throws TencentCloudSDKException
      */
-    public CreateFunctionResponse  CreateFunction(CreateFunctionRequest req) throws TencentCloudSDKException{
+    public CreateFunctionResponse CreateFunction(CreateFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFunctionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFunctionResponse>>() {
@@ -72,7 +72,7 @@ public class ScfClient extends AbstractClient{
      * @return CreateTriggerResponse
      * @throws TencentCloudSDKException
      */
-    public CreateTriggerResponse  CreateTrigger(CreateTriggerRequest req) throws TencentCloudSDKException{
+    public CreateTriggerResponse CreateTrigger(CreateTriggerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTriggerResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTriggerResponse>>() {
@@ -90,7 +90,7 @@ public class ScfClient extends AbstractClient{
      * @return DeleteFunctionResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteFunctionResponse  DeleteFunction(DeleteFunctionRequest req) throws TencentCloudSDKException{
+    public DeleteFunctionResponse DeleteFunction(DeleteFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFunctionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFunctionResponse>>() {
@@ -108,7 +108,7 @@ public class ScfClient extends AbstractClient{
      * @return DeleteTriggerResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteTriggerResponse  DeleteTrigger(DeleteTriggerRequest req) throws TencentCloudSDKException{
+    public DeleteTriggerResponse DeleteTrigger(DeleteTriggerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTriggerResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTriggerResponse>>() {
@@ -126,7 +126,7 @@ public class ScfClient extends AbstractClient{
      * @return GetFunctionResponse
      * @throws TencentCloudSDKException
      */
-    public GetFunctionResponse  GetFunction(GetFunctionRequest req) throws TencentCloudSDKException{
+    public GetFunctionResponse GetFunction(GetFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFunctionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFunctionResponse>>() {
@@ -144,7 +144,7 @@ public class ScfClient extends AbstractClient{
      * @return GetFunctionLogsResponse
      * @throws TencentCloudSDKException
      */
-    public GetFunctionLogsResponse  GetFunctionLogs(GetFunctionLogsRequest req) throws TencentCloudSDKException{
+    public GetFunctionLogsResponse GetFunctionLogs(GetFunctionLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFunctionLogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFunctionLogsResponse>>() {
@@ -162,7 +162,7 @@ public class ScfClient extends AbstractClient{
      * @return InvokeResponse
      * @throws TencentCloudSDKException
      */
-    public InvokeResponse  Invoke(InvokeRequest req) throws TencentCloudSDKException{
+    public InvokeResponse Invoke(InvokeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
@@ -180,7 +180,7 @@ public class ScfClient extends AbstractClient{
      * @return ListFunctionsResponse
      * @throws TencentCloudSDKException
      */
-    public ListFunctionsResponse  ListFunctions(ListFunctionsRequest req) throws TencentCloudSDKException{
+    public ListFunctionsResponse ListFunctions(ListFunctionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListFunctionsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ListFunctionsResponse>>() {
@@ -198,7 +198,7 @@ public class ScfClient extends AbstractClient{
      * @return UpdateFunctionCodeResponse
      * @throws TencentCloudSDKException
      */
-    public UpdateFunctionCodeResponse  UpdateFunctionCode(UpdateFunctionCodeRequest req) throws TencentCloudSDKException{
+    public UpdateFunctionCodeResponse UpdateFunctionCode(UpdateFunctionCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateFunctionCodeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionCodeResponse>>() {
@@ -216,7 +216,7 @@ public class ScfClient extends AbstractClient{
      * @return UpdateFunctionConfigurationResponse
      * @throws TencentCloudSDKException
      */
-    public UpdateFunctionConfigurationResponse  UpdateFunctionConfiguration(UpdateFunctionConfigurationRequest req) throws TencentCloudSDKException{
+    public UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(UpdateFunctionConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateFunctionConfigurationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionConfigurationResponse>>() {

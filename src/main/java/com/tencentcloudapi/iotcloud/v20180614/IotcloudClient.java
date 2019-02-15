@@ -54,7 +54,7 @@ public class IotcloudClient extends AbstractClient{
      * @return CancelTaskResponse
      * @throws TencentCloudSDKException
      */
-    public CancelTaskResponse  CancelTask(CancelTaskRequest req) throws TencentCloudSDKException{
+    public CancelTaskResponse CancelTask(CancelTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelTaskResponse>>() {
@@ -72,7 +72,7 @@ public class IotcloudClient extends AbstractClient{
      * @return CreateDeviceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDeviceResponse  CreateDevice(CreateDeviceRequest req) throws TencentCloudSDKException{
+    public CreateDeviceResponse CreateDevice(CreateDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDeviceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDeviceResponse>>() {
@@ -90,7 +90,7 @@ public class IotcloudClient extends AbstractClient{
      * @return CreateMultiDeviceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMultiDeviceResponse  CreateMultiDevice(CreateMultiDeviceRequest req) throws TencentCloudSDKException{
+    public CreateMultiDeviceResponse CreateMultiDevice(CreateMultiDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMultiDeviceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMultiDeviceResponse>>() {
@@ -108,7 +108,7 @@ public class IotcloudClient extends AbstractClient{
      * @return CreateProductResponse
      * @throws TencentCloudSDKException
      */
-    public CreateProductResponse  CreateProduct(CreateProductRequest req) throws TencentCloudSDKException{
+    public CreateProductResponse CreateProduct(CreateProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProductResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProductResponse>>() {
@@ -126,7 +126,7 @@ public class IotcloudClient extends AbstractClient{
      * @return CreateTaskResponse
      * @throws TencentCloudSDKException
      */
-    public CreateTaskResponse  CreateTask(CreateTaskRequest req) throws TencentCloudSDKException{
+    public CreateTaskResponse CreateTask(CreateTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTaskResponse>>() {
@@ -144,7 +144,7 @@ public class IotcloudClient extends AbstractClient{
      * @return CreateTopicPolicyResponse
      * @throws TencentCloudSDKException
      */
-    public CreateTopicPolicyResponse  CreateTopicPolicy(CreateTopicPolicyRequest req) throws TencentCloudSDKException{
+    public CreateTopicPolicyResponse CreateTopicPolicy(CreateTopicPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTopicPolicyResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTopicPolicyResponse>>() {
@@ -162,7 +162,7 @@ public class IotcloudClient extends AbstractClient{
      * @return CreateTopicRuleResponse
      * @throws TencentCloudSDKException
      */
-    public CreateTopicRuleResponse  CreateTopicRule(CreateTopicRuleRequest req) throws TencentCloudSDKException{
+    public CreateTopicRuleResponse CreateTopicRule(CreateTopicRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTopicRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTopicRuleResponse>>() {
@@ -180,7 +180,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DeleteDeviceResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteDeviceResponse  DeleteDevice(DeleteDeviceRequest req) throws TencentCloudSDKException{
+    public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDeviceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDeviceResponse>>() {
@@ -198,7 +198,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DeleteProductResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteProductResponse  DeleteProduct(DeleteProductRequest req) throws TencentCloudSDKException{
+    public DeleteProductResponse DeleteProduct(DeleteProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProductResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProductResponse>>() {
@@ -216,7 +216,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DeleteTopicRuleResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteTopicRuleResponse  DeleteTopicRule(DeleteTopicRuleRequest req) throws TencentCloudSDKException{
+    public DeleteTopicRuleResponse DeleteTopicRule(DeleteTopicRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTopicRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTopicRuleResponse>>() {
@@ -234,7 +234,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DescribeDeviceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDeviceResponse  DescribeDevice(DescribeDeviceRequest req) throws TencentCloudSDKException{
+    public DescribeDeviceResponse DescribeDevice(DescribeDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceResponse>>() {
@@ -252,7 +252,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DescribeDeviceShadowResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDeviceShadowResponse  DescribeDeviceShadow(DescribeDeviceShadowRequest req) throws TencentCloudSDKException{
+    public DescribeDeviceShadowResponse DescribeDeviceShadow(DescribeDeviceShadowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceShadowResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceShadowResponse>>() {
@@ -270,7 +270,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DescribeDevicesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDevicesResponse  DescribeDevices(DescribeDevicesRequest req) throws TencentCloudSDKException{
+    public DescribeDevicesResponse DescribeDevices(DescribeDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
@@ -288,7 +288,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DescribeMultiDevTaskResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMultiDevTaskResponse  DescribeMultiDevTask(DescribeMultiDevTaskRequest req) throws TencentCloudSDKException{
+    public DescribeMultiDevTaskResponse DescribeMultiDevTask(DescribeMultiDevTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMultiDevTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMultiDevTaskResponse>>() {
@@ -306,7 +306,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DescribeMultiDevicesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMultiDevicesResponse  DescribeMultiDevices(DescribeMultiDevicesRequest req) throws TencentCloudSDKException{
+    public DescribeMultiDevicesResponse DescribeMultiDevices(DescribeMultiDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMultiDevicesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMultiDevicesResponse>>() {
@@ -324,7 +324,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DescribeProductsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeProductsResponse  DescribeProducts(DescribeProductsRequest req) throws TencentCloudSDKException{
+    public DescribeProductsResponse DescribeProducts(DescribeProductsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductsResponse>>() {
@@ -342,7 +342,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DescribeTaskResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskResponse  DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
+    public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
@@ -360,7 +360,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DescribeTasksResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTasksResponse  DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
+    public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTasksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
@@ -378,7 +378,7 @@ public class IotcloudClient extends AbstractClient{
      * @return DisableTopicRuleResponse
      * @throws TencentCloudSDKException
      */
-    public DisableTopicRuleResponse  DisableTopicRule(DisableTopicRuleRequest req) throws TencentCloudSDKException{
+    public DisableTopicRuleResponse DisableTopicRule(DisableTopicRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableTopicRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableTopicRuleResponse>>() {
@@ -396,7 +396,7 @@ public class IotcloudClient extends AbstractClient{
      * @return EnableTopicRuleResponse
      * @throws TencentCloudSDKException
      */
-    public EnableTopicRuleResponse  EnableTopicRule(EnableTopicRuleRequest req) throws TencentCloudSDKException{
+    public EnableTopicRuleResponse EnableTopicRule(EnableTopicRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableTopicRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableTopicRuleResponse>>() {
@@ -414,7 +414,7 @@ public class IotcloudClient extends AbstractClient{
      * @return PublishMessageResponse
      * @throws TencentCloudSDKException
      */
-    public PublishMessageResponse  PublishMessage(PublishMessageRequest req) throws TencentCloudSDKException{
+    public PublishMessageResponse PublishMessage(PublishMessageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PublishMessageResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<PublishMessageResponse>>() {
@@ -432,7 +432,7 @@ public class IotcloudClient extends AbstractClient{
      * @return ReplaceTopicRuleResponse
      * @throws TencentCloudSDKException
      */
-    public ReplaceTopicRuleResponse  ReplaceTopicRule(ReplaceTopicRuleRequest req) throws TencentCloudSDKException{
+    public ReplaceTopicRuleResponse ReplaceTopicRule(ReplaceTopicRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReplaceTopicRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ReplaceTopicRuleResponse>>() {
@@ -450,7 +450,7 @@ public class IotcloudClient extends AbstractClient{
      * @return UpdateDeviceShadowResponse
      * @throws TencentCloudSDKException
      */
-    public UpdateDeviceShadowResponse  UpdateDeviceShadow(UpdateDeviceShadowRequest req) throws TencentCloudSDKException{
+    public UpdateDeviceShadowResponse UpdateDeviceShadow(UpdateDeviceShadowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateDeviceShadowResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateDeviceShadowResponse>>() {
@@ -468,7 +468,7 @@ public class IotcloudClient extends AbstractClient{
      * @return UpdateTopicPolicyResponse
      * @throws TencentCloudSDKException
      */
-    public UpdateTopicPolicyResponse  UpdateTopicPolicy(UpdateTopicPolicyRequest req) throws TencentCloudSDKException{
+    public UpdateTopicPolicyResponse UpdateTopicPolicy(UpdateTopicPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateTopicPolicyResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateTopicPolicyResponse>>() {

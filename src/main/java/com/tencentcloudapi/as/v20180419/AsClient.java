@@ -55,7 +55,7 @@ public class AsClient extends AbstractClient{
      * @return AttachInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public AttachInstancesResponse  AttachInstances(AttachInstancesRequest req) throws TencentCloudSDKException{
+    public AttachInstancesResponse AttachInstances(AttachInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachInstancesResponse>>() {
@@ -73,7 +73,7 @@ public class AsClient extends AbstractClient{
      * @return CreateAutoScalingGroupResponse
      * @throws TencentCloudSDKException
      */
-    public CreateAutoScalingGroupResponse  CreateAutoScalingGroup(CreateAutoScalingGroupRequest req) throws TencentCloudSDKException{
+    public CreateAutoScalingGroupResponse CreateAutoScalingGroup(CreateAutoScalingGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAutoScalingGroupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAutoScalingGroupResponse>>() {
@@ -96,7 +96,7 @@ public class AsClient extends AbstractClient{
      * @return CreateLaunchConfigurationResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLaunchConfigurationResponse  CreateLaunchConfiguration(CreateLaunchConfigurationRequest req) throws TencentCloudSDKException{
+    public CreateLaunchConfigurationResponse CreateLaunchConfiguration(CreateLaunchConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLaunchConfigurationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLaunchConfigurationResponse>>() {
@@ -114,7 +114,7 @@ public class AsClient extends AbstractClient{
      * @return CreateScheduledActionResponse
      * @throws TencentCloudSDKException
      */
-    public CreateScheduledActionResponse  CreateScheduledAction(CreateScheduledActionRequest req) throws TencentCloudSDKException{
+    public CreateScheduledActionResponse CreateScheduledAction(CreateScheduledActionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateScheduledActionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateScheduledActionResponse>>() {
@@ -132,7 +132,7 @@ public class AsClient extends AbstractClient{
      * @return DeleteAutoScalingGroupResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteAutoScalingGroupResponse  DeleteAutoScalingGroup(DeleteAutoScalingGroupRequest req) throws TencentCloudSDKException{
+    public DeleteAutoScalingGroupResponse DeleteAutoScalingGroup(DeleteAutoScalingGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAutoScalingGroupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAutoScalingGroupResponse>>() {
@@ -153,7 +153,7 @@ public class AsClient extends AbstractClient{
      * @return DeleteLaunchConfigurationResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLaunchConfigurationResponse  DeleteLaunchConfiguration(DeleteLaunchConfigurationRequest req) throws TencentCloudSDKException{
+    public DeleteLaunchConfigurationResponse DeleteLaunchConfiguration(DeleteLaunchConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLaunchConfigurationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLaunchConfigurationResponse>>() {
@@ -171,7 +171,7 @@ public class AsClient extends AbstractClient{
      * @return DeleteScheduledActionResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteScheduledActionResponse  DeleteScheduledAction(DeleteScheduledActionRequest req) throws TencentCloudSDKException{
+    public DeleteScheduledActionResponse DeleteScheduledAction(DeleteScheduledActionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteScheduledActionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteScheduledActionResponse>>() {
@@ -189,7 +189,7 @@ public class AsClient extends AbstractClient{
      * @return DescribeAccountLimitsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAccountLimitsResponse  DescribeAccountLimits(DescribeAccountLimitsRequest req) throws TencentCloudSDKException{
+    public DescribeAccountLimitsResponse DescribeAccountLimits(DescribeAccountLimitsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountLimitsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountLimitsResponse>>() {
@@ -207,7 +207,7 @@ public class AsClient extends AbstractClient{
      * @return DescribeAutoScalingActivitiesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAutoScalingActivitiesResponse  DescribeAutoScalingActivities(DescribeAutoScalingActivitiesRequest req) throws TencentCloudSDKException{
+    public DescribeAutoScalingActivitiesResponse DescribeAutoScalingActivities(DescribeAutoScalingActivitiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoScalingActivitiesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingActivitiesResponse>>() {
@@ -228,7 +228,7 @@ public class AsClient extends AbstractClient{
      * @return DescribeAutoScalingGroupsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAutoScalingGroupsResponse  DescribeAutoScalingGroups(DescribeAutoScalingGroupsRequest req) throws TencentCloudSDKException{
+    public DescribeAutoScalingGroupsResponse DescribeAutoScalingGroups(DescribeAutoScalingGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoScalingGroupsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingGroupsResponse>>() {
@@ -249,7 +249,7 @@ public class AsClient extends AbstractClient{
      * @return DescribeAutoScalingInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAutoScalingInstancesResponse  DescribeAutoScalingInstances(DescribeAutoScalingInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeAutoScalingInstancesResponse DescribeAutoScalingInstances(DescribeAutoScalingInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoScalingInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingInstancesResponse>>() {
@@ -270,7 +270,7 @@ public class AsClient extends AbstractClient{
      * @return DescribeLaunchConfigurationsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLaunchConfigurationsResponse  DescribeLaunchConfigurations(DescribeLaunchConfigurationsRequest req) throws TencentCloudSDKException{
+    public DescribeLaunchConfigurationsResponse DescribeLaunchConfigurations(DescribeLaunchConfigurationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLaunchConfigurationsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLaunchConfigurationsResponse>>() {
@@ -291,7 +291,7 @@ public class AsClient extends AbstractClient{
      * @return DescribeScheduledActionsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeScheduledActionsResponse  DescribeScheduledActions(DescribeScheduledActionsRequest req) throws TencentCloudSDKException{
+    public DescribeScheduledActionsResponse DescribeScheduledActions(DescribeScheduledActionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScheduledActionsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScheduledActionsResponse>>() {
@@ -309,7 +309,7 @@ public class AsClient extends AbstractClient{
      * @return DetachInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DetachInstancesResponse  DetachInstances(DetachInstancesRequest req) throws TencentCloudSDKException{
+    public DetachInstancesResponse DetachInstances(DetachInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachInstancesResponse>>() {
@@ -327,7 +327,7 @@ public class AsClient extends AbstractClient{
      * @return DisableAutoScalingGroupResponse
      * @throws TencentCloudSDKException
      */
-    public DisableAutoScalingGroupResponse  DisableAutoScalingGroup(DisableAutoScalingGroupRequest req) throws TencentCloudSDKException{
+    public DisableAutoScalingGroupResponse DisableAutoScalingGroup(DisableAutoScalingGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableAutoScalingGroupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableAutoScalingGroupResponse>>() {
@@ -345,7 +345,7 @@ public class AsClient extends AbstractClient{
      * @return EnableAutoScalingGroupResponse
      * @throws TencentCloudSDKException
      */
-    public EnableAutoScalingGroupResponse  EnableAutoScalingGroup(EnableAutoScalingGroupRequest req) throws TencentCloudSDKException{
+    public EnableAutoScalingGroupResponse EnableAutoScalingGroup(EnableAutoScalingGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableAutoScalingGroupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableAutoScalingGroupResponse>>() {
@@ -363,7 +363,7 @@ public class AsClient extends AbstractClient{
      * @return ModifyAutoScalingGroupResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyAutoScalingGroupResponse  ModifyAutoScalingGroup(ModifyAutoScalingGroupRequest req) throws TencentCloudSDKException{
+    public ModifyAutoScalingGroupResponse ModifyAutoScalingGroup(ModifyAutoScalingGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAutoScalingGroupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoScalingGroupResponse>>() {
@@ -381,7 +381,7 @@ public class AsClient extends AbstractClient{
      * @return ModifyDesiredCapacityResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDesiredCapacityResponse  ModifyDesiredCapacity(ModifyDesiredCapacityRequest req) throws TencentCloudSDKException{
+    public ModifyDesiredCapacityResponse ModifyDesiredCapacity(ModifyDesiredCapacityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDesiredCapacityResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDesiredCapacityResponse>>() {
@@ -402,7 +402,7 @@ public class AsClient extends AbstractClient{
      * @return ModifyLaunchConfigurationAttributesResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLaunchConfigurationAttributesResponse  ModifyLaunchConfigurationAttributes(ModifyLaunchConfigurationAttributesRequest req) throws TencentCloudSDKException{
+    public ModifyLaunchConfigurationAttributesResponse ModifyLaunchConfigurationAttributes(ModifyLaunchConfigurationAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLaunchConfigurationAttributesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLaunchConfigurationAttributesResponse>>() {
@@ -424,7 +424,7 @@ public class AsClient extends AbstractClient{
      * @return ModifyLoadBalancersResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLoadBalancersResponse  ModifyLoadBalancers(ModifyLoadBalancersRequest req) throws TencentCloudSDKException{
+    public ModifyLoadBalancersResponse ModifyLoadBalancers(ModifyLoadBalancersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLoadBalancersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancersResponse>>() {
@@ -442,7 +442,7 @@ public class AsClient extends AbstractClient{
      * @return ModifyScheduledActionResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyScheduledActionResponse  ModifyScheduledAction(ModifyScheduledActionRequest req) throws TencentCloudSDKException{
+    public ModifyScheduledActionResponse ModifyScheduledAction(ModifyScheduledActionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyScheduledActionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyScheduledActionResponse>>() {
@@ -460,7 +460,7 @@ public class AsClient extends AbstractClient{
      * @return RemoveInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public RemoveInstancesResponse  RemoveInstances(RemoveInstancesRequest req) throws TencentCloudSDKException{
+    public RemoveInstancesResponse RemoveInstances(RemoveInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveInstancesResponse>>() {

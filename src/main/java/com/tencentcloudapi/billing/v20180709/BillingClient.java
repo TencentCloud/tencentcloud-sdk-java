@@ -54,7 +54,7 @@ public class BillingClient extends AbstractClient{
      * @return DescribeAccountBalanceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAccountBalanceResponse  DescribeAccountBalance(DescribeAccountBalanceRequest req) throws TencentCloudSDKException{
+    public DescribeAccountBalanceResponse DescribeAccountBalance(DescribeAccountBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountBalanceResponse>>() {
@@ -72,7 +72,7 @@ public class BillingClient extends AbstractClient{
      * @return DescribeBillDetailResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBillDetailResponse  DescribeBillDetail(DescribeBillDetailRequest req) throws TencentCloudSDKException{
+    public DescribeBillDetailResponse DescribeBillDetail(DescribeBillDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillDetailResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillDetailResponse>>() {
@@ -90,7 +90,7 @@ public class BillingClient extends AbstractClient{
      * @return DescribeBillResourceSummaryResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBillResourceSummaryResponse  DescribeBillResourceSummary(DescribeBillResourceSummaryRequest req) throws TencentCloudSDKException{
+    public DescribeBillResourceSummaryResponse DescribeBillResourceSummary(DescribeBillResourceSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillResourceSummaryResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillResourceSummaryResponse>>() {
@@ -108,7 +108,7 @@ public class BillingClient extends AbstractClient{
      * @return DescribeDealsByCondResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDealsByCondResponse  DescribeDealsByCond(DescribeDealsByCondRequest req) throws TencentCloudSDKException{
+    public DescribeDealsByCondResponse DescribeDealsByCond(DescribeDealsByCondRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDealsByCondResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDealsByCondResponse>>() {
@@ -126,7 +126,7 @@ public class BillingClient extends AbstractClient{
      * @return PayDealsResponse
      * @throws TencentCloudSDKException
      */
-    public PayDealsResponse  PayDeals(PayDealsRequest req) throws TencentCloudSDKException{
+    public PayDealsResponse PayDeals(PayDealsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PayDealsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<PayDealsResponse>>() {

@@ -56,7 +56,7 @@ public class LiveClient extends AbstractClient{
      * @return AddDelayLiveStreamResponse
      * @throws TencentCloudSDKException
      */
-    public AddDelayLiveStreamResponse  AddDelayLiveStream(AddDelayLiveStreamRequest req) throws TencentCloudSDKException{
+    public AddDelayLiveStreamResponse AddDelayLiveStream(AddDelayLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddDelayLiveStreamResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AddDelayLiveStreamResponse>>() {
@@ -74,7 +74,7 @@ public class LiveClient extends AbstractClient{
      * @return AddLiveWatermarkResponse
      * @throws TencentCloudSDKException
      */
-    public AddLiveWatermarkResponse  AddLiveWatermark(AddLiveWatermarkRequest req) throws TencentCloudSDKException{
+    public AddLiveWatermarkResponse AddLiveWatermark(AddLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddLiveWatermarkResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AddLiveWatermarkResponse>>() {
@@ -92,7 +92,7 @@ public class LiveClient extends AbstractClient{
      * @return BindLiveDomainCertResponse
      * @throws TencentCloudSDKException
      */
-    public BindLiveDomainCertResponse  BindLiveDomainCert(BindLiveDomainCertRequest req) throws TencentCloudSDKException{
+    public BindLiveDomainCertResponse BindLiveDomainCert(BindLiveDomainCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindLiveDomainCertResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<BindLiveDomainCertResponse>>() {
@@ -110,7 +110,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveCallbackRuleResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveCallbackRuleResponse  CreateLiveCallbackRule(CreateLiveCallbackRuleRequest req) throws TencentCloudSDKException{
+    public CreateLiveCallbackRuleResponse CreateLiveCallbackRule(CreateLiveCallbackRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveCallbackRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackRuleResponse>>() {
@@ -128,7 +128,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveCallbackTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveCallbackTemplateResponse  CreateLiveCallbackTemplate(CreateLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
+    public CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplate(CreateLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveCallbackTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackTemplateResponse>>() {
@@ -146,7 +146,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveCertResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveCertResponse  CreateLiveCert(CreateLiveCertRequest req) throws TencentCloudSDKException{
+    public CreateLiveCertResponse CreateLiveCert(CreateLiveCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveCertResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveCertResponse>>() {
@@ -176,7 +176,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveRecordResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveRecordResponse  CreateLiveRecord(CreateLiveRecordRequest req) throws TencentCloudSDKException{
+    public CreateLiveRecordResponse CreateLiveRecord(CreateLiveRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveRecordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveRecordResponse>>() {
@@ -194,7 +194,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveRecordRuleResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveRecordRuleResponse  CreateLiveRecordRule(CreateLiveRecordRuleRequest req) throws TencentCloudSDKException{
+    public CreateLiveRecordRuleResponse CreateLiveRecordRule(CreateLiveRecordRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveRecordRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveRecordRuleResponse>>() {
@@ -212,7 +212,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveRecordTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveRecordTemplateResponse  CreateLiveRecordTemplate(CreateLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+    public CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(CreateLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveRecordTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveRecordTemplateResponse>>() {
@@ -230,7 +230,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveSnapshotRuleResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveSnapshotRuleResponse  CreateLiveSnapshotRule(CreateLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
+    public CreateLiveSnapshotRuleResponse CreateLiveSnapshotRule(CreateLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveSnapshotRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotRuleResponse>>() {
@@ -248,7 +248,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveSnapshotTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveSnapshotTemplateResponse  CreateLiveSnapshotTemplate(CreateLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
+    public CreateLiveSnapshotTemplateResponse CreateLiveSnapshotTemplate(CreateLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveSnapshotTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotTemplateResponse>>() {
@@ -266,7 +266,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveTranscodeRuleResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveTranscodeRuleResponse  CreateLiveTranscodeRule(CreateLiveTranscodeRuleRequest req) throws TencentCloudSDKException{
+    public CreateLiveTranscodeRuleResponse CreateLiveTranscodeRule(CreateLiveTranscodeRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveTranscodeRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTranscodeRuleResponse>>() {
@@ -284,7 +284,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveTranscodeTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveTranscodeTemplateResponse  CreateLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
+    public CreateLiveTranscodeTemplateResponse CreateLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveTranscodeTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTranscodeTemplateResponse>>() {
@@ -302,7 +302,7 @@ public class LiveClient extends AbstractClient{
      * @return CreateLiveWatermarkRuleResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLiveWatermarkRuleResponse  CreateLiveWatermarkRule(CreateLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
+    public CreateLiveWatermarkRuleResponse CreateLiveWatermarkRule(CreateLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveWatermarkRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveWatermarkRuleResponse>>() {
@@ -320,7 +320,7 @@ public class LiveClient extends AbstractClient{
      * @return CreatePullStreamConfigResponse
      * @throws TencentCloudSDKException
      */
-    public CreatePullStreamConfigResponse  CreatePullStreamConfig(CreatePullStreamConfigRequest req) throws TencentCloudSDKException{
+    public CreatePullStreamConfigResponse CreatePullStreamConfig(CreatePullStreamConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePullStreamConfigResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePullStreamConfigResponse>>() {
@@ -338,7 +338,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveCallbackRuleResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveCallbackRuleResponse  DeleteLiveCallbackRule(DeleteLiveCallbackRuleRequest req) throws TencentCloudSDKException{
+    public DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(DeleteLiveCallbackRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveCallbackRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackRuleResponse>>() {
@@ -356,7 +356,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveCallbackTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveCallbackTemplateResponse  DeleteLiveCallbackTemplate(DeleteLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
+    public DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(DeleteLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveCallbackTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackTemplateResponse>>() {
@@ -374,7 +374,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveCertResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveCertResponse  DeleteLiveCert(DeleteLiveCertRequest req) throws TencentCloudSDKException{
+    public DeleteLiveCertResponse DeleteLiveCert(DeleteLiveCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveCertResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveCertResponse>>() {
@@ -392,7 +392,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveRecordResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveRecordResponse  DeleteLiveRecord(DeleteLiveRecordRequest req) throws TencentCloudSDKException{
+    public DeleteLiveRecordResponse DeleteLiveRecord(DeleteLiveRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveRecordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordResponse>>() {
@@ -410,7 +410,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveRecordRuleResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveRecordRuleResponse  DeleteLiveRecordRule(DeleteLiveRecordRuleRequest req) throws TencentCloudSDKException{
+    public DeleteLiveRecordRuleResponse DeleteLiveRecordRule(DeleteLiveRecordRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveRecordRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordRuleResponse>>() {
@@ -428,7 +428,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveRecordTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveRecordTemplateResponse  DeleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+    public DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveRecordTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordTemplateResponse>>() {
@@ -446,7 +446,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveSnapshotRuleResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveSnapshotRuleResponse  DeleteLiveSnapshotRule(DeleteLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
+    public DeleteLiveSnapshotRuleResponse DeleteLiveSnapshotRule(DeleteLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveSnapshotRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotRuleResponse>>() {
@@ -464,7 +464,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveSnapshotTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveSnapshotTemplateResponse  DeleteLiveSnapshotTemplate(DeleteLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
+    public DeleteLiveSnapshotTemplateResponse DeleteLiveSnapshotTemplate(DeleteLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveSnapshotTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>() {
@@ -482,7 +482,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveTranscodeRuleResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveTranscodeRuleResponse  DeleteLiveTranscodeRule(DeleteLiveTranscodeRuleRequest req) throws TencentCloudSDKException{
+    public DeleteLiveTranscodeRuleResponse DeleteLiveTranscodeRule(DeleteLiveTranscodeRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveTranscodeRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveTranscodeRuleResponse>>() {
@@ -500,7 +500,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveTranscodeTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveTranscodeTemplateResponse  DeleteLiveTranscodeTemplate(DeleteLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
+    public DeleteLiveTranscodeTemplateResponse DeleteLiveTranscodeTemplate(DeleteLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveTranscodeTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveTranscodeTemplateResponse>>() {
@@ -518,7 +518,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveWatermarkResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveWatermarkResponse  DeleteLiveWatermark(DeleteLiveWatermarkRequest req) throws TencentCloudSDKException{
+    public DeleteLiveWatermarkResponse DeleteLiveWatermark(DeleteLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveWatermarkResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkResponse>>() {
@@ -536,7 +536,7 @@ public class LiveClient extends AbstractClient{
      * @return DeleteLiveWatermarkRuleResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLiveWatermarkRuleResponse  DeleteLiveWatermarkRule(DeleteLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
+    public DeleteLiveWatermarkRuleResponse DeleteLiveWatermarkRule(DeleteLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveWatermarkRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkRuleResponse>>() {
@@ -554,7 +554,7 @@ public class LiveClient extends AbstractClient{
      * @return DeletePullStreamConfigResponse
      * @throws TencentCloudSDKException
      */
-    public DeletePullStreamConfigResponse  DeletePullStreamConfig(DeletePullStreamConfigRequest req) throws TencentCloudSDKException{
+    public DeletePullStreamConfigResponse DeletePullStreamConfig(DeletePullStreamConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePullStreamConfigResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePullStreamConfigResponse>>() {
@@ -572,7 +572,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveCallbackRulesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveCallbackRulesResponse  DescribeLiveCallbackRules(DescribeLiveCallbackRulesRequest req) throws TencentCloudSDKException{
+    public DescribeLiveCallbackRulesResponse DescribeLiveCallbackRules(DescribeLiveCallbackRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCallbackRulesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackRulesResponse>>() {
@@ -590,7 +590,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveCallbackTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveCallbackTemplateResponse  DescribeLiveCallbackTemplate(DescribeLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
+    public DescribeLiveCallbackTemplateResponse DescribeLiveCallbackTemplate(DescribeLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCallbackTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackTemplateResponse>>() {
@@ -608,7 +608,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveCallbackTemplatesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveCallbackTemplatesResponse  DescribeLiveCallbackTemplates(DescribeLiveCallbackTemplatesRequest req) throws TencentCloudSDKException{
+    public DescribeLiveCallbackTemplatesResponse DescribeLiveCallbackTemplates(DescribeLiveCallbackTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCallbackTemplatesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackTemplatesResponse>>() {
@@ -626,7 +626,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveCertResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveCertResponse  DescribeLiveCert(DescribeLiveCertRequest req) throws TencentCloudSDKException{
+    public DescribeLiveCertResponse DescribeLiveCert(DescribeLiveCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCertResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCertResponse>>() {
@@ -644,7 +644,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveCertsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveCertsResponse  DescribeLiveCerts(DescribeLiveCertsRequest req) throws TencentCloudSDKException{
+    public DescribeLiveCertsResponse DescribeLiveCerts(DescribeLiveCertsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCertsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCertsResponse>>() {
@@ -662,7 +662,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveDomainCertResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveDomainCertResponse  DescribeLiveDomainCert(DescribeLiveDomainCertRequest req) throws TencentCloudSDKException{
+    public DescribeLiveDomainCertResponse DescribeLiveDomainCert(DescribeLiveDomainCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainCertResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertResponse>>() {
@@ -680,7 +680,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLivePlayAuthKeyResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLivePlayAuthKeyResponse  DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest req) throws TencentCloudSDKException{
+    public DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePlayAuthKeyResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePlayAuthKeyResponse>>() {
@@ -698,7 +698,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLivePushAuthKeyResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLivePushAuthKeyResponse  DescribeLivePushAuthKey(DescribeLivePushAuthKeyRequest req) throws TencentCloudSDKException{
+    public DescribeLivePushAuthKeyResponse DescribeLivePushAuthKey(DescribeLivePushAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePushAuthKeyResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePushAuthKeyResponse>>() {
@@ -716,7 +716,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveRecordRulesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveRecordRulesResponse  DescribeLiveRecordRules(DescribeLiveRecordRulesRequest req) throws TencentCloudSDKException{
+    public DescribeLiveRecordRulesResponse DescribeLiveRecordRules(DescribeLiveRecordRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordRulesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordRulesResponse>>() {
@@ -734,7 +734,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveRecordTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveRecordTemplateResponse  DescribeLiveRecordTemplate(DescribeLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+    public DescribeLiveRecordTemplateResponse DescribeLiveRecordTemplate(DescribeLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordTemplateResponse>>() {
@@ -752,7 +752,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveRecordTemplatesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveRecordTemplatesResponse  DescribeLiveRecordTemplates(DescribeLiveRecordTemplatesRequest req) throws TencentCloudSDKException{
+    public DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(DescribeLiveRecordTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordTemplatesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordTemplatesResponse>>() {
@@ -770,7 +770,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveSnapshotRulesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveSnapshotRulesResponse  DescribeLiveSnapshotRules(DescribeLiveSnapshotRulesRequest req) throws TencentCloudSDKException{
+    public DescribeLiveSnapshotRulesResponse DescribeLiveSnapshotRules(DescribeLiveSnapshotRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveSnapshotRulesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotRulesResponse>>() {
@@ -788,7 +788,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveSnapshotTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveSnapshotTemplateResponse  DescribeLiveSnapshotTemplate(DescribeLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
+    public DescribeLiveSnapshotTemplateResponse DescribeLiveSnapshotTemplate(DescribeLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveSnapshotTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplateResponse>>() {
@@ -806,7 +806,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveSnapshotTemplatesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveSnapshotTemplatesResponse  DescribeLiveSnapshotTemplates(DescribeLiveSnapshotTemplatesRequest req) throws TencentCloudSDKException{
+    public DescribeLiveSnapshotTemplatesResponse DescribeLiveSnapshotTemplates(DescribeLiveSnapshotTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveSnapshotTemplatesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplatesResponse>>() {
@@ -824,7 +824,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveStreamOnlineInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveStreamOnlineInfoResponse  DescribeLiveStreamOnlineInfo(DescribeLiveStreamOnlineInfoRequest req) throws TencentCloudSDKException{
+    public DescribeLiveStreamOnlineInfoResponse DescribeLiveStreamOnlineInfo(DescribeLiveStreamOnlineInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamOnlineInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamOnlineInfoResponse>>() {
@@ -842,7 +842,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveStreamOnlineListResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveStreamOnlineListResponse  DescribeLiveStreamOnlineList(DescribeLiveStreamOnlineListRequest req) throws TencentCloudSDKException{
+    public DescribeLiveStreamOnlineListResponse DescribeLiveStreamOnlineList(DescribeLiveStreamOnlineListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamOnlineListResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamOnlineListResponse>>() {
@@ -860,7 +860,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveStreamPublishedListResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveStreamPublishedListResponse  DescribeLiveStreamPublishedList(DescribeLiveStreamPublishedListRequest req) throws TencentCloudSDKException{
+    public DescribeLiveStreamPublishedListResponse DescribeLiveStreamPublishedList(DescribeLiveStreamPublishedListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamPublishedListResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamPublishedListResponse>>() {
@@ -878,7 +878,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveStreamStateResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveStreamStateResponse  DescribeLiveStreamState(DescribeLiveStreamStateRequest req) throws TencentCloudSDKException{
+    public DescribeLiveStreamStateResponse DescribeLiveStreamState(DescribeLiveStreamStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamStateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamStateResponse>>() {
@@ -896,7 +896,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveTranscodeRulesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveTranscodeRulesResponse  DescribeLiveTranscodeRules(DescribeLiveTranscodeRulesRequest req) throws TencentCloudSDKException{
+    public DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(DescribeLiveTranscodeRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeRulesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeRulesResponse>>() {
@@ -914,7 +914,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveTranscodeTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveTranscodeTemplateResponse  DescribeLiveTranscodeTemplate(DescribeLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
+    public DescribeLiveTranscodeTemplateResponse DescribeLiveTranscodeTemplate(DescribeLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTemplateResponse>>() {
@@ -932,7 +932,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveTranscodeTemplatesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveTranscodeTemplatesResponse  DescribeLiveTranscodeTemplates(DescribeLiveTranscodeTemplatesRequest req) throws TencentCloudSDKException{
+    public DescribeLiveTranscodeTemplatesResponse DescribeLiveTranscodeTemplates(DescribeLiveTranscodeTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeTemplatesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTemplatesResponse>>() {
@@ -950,7 +950,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveWatermarkResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveWatermarkResponse  DescribeLiveWatermark(DescribeLiveWatermarkRequest req) throws TencentCloudSDKException{
+    public DescribeLiveWatermarkResponse DescribeLiveWatermark(DescribeLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveWatermarkResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarkResponse>>() {
@@ -968,7 +968,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveWatermarkRulesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveWatermarkRulesResponse  DescribeLiveWatermarkRules(DescribeLiveWatermarkRulesRequest req) throws TencentCloudSDKException{
+    public DescribeLiveWatermarkRulesResponse DescribeLiveWatermarkRules(DescribeLiveWatermarkRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveWatermarkRulesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarkRulesResponse>>() {
@@ -986,7 +986,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribeLiveWatermarksResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLiveWatermarksResponse  DescribeLiveWatermarks(DescribeLiveWatermarksRequest req) throws TencentCloudSDKException{
+    public DescribeLiveWatermarksResponse DescribeLiveWatermarks(DescribeLiveWatermarksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveWatermarksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarksResponse>>() {
@@ -1004,7 +1004,7 @@ public class LiveClient extends AbstractClient{
      * @return DescribePullStreamConfigsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePullStreamConfigsResponse  DescribePullStreamConfigs(DescribePullStreamConfigsRequest req) throws TencentCloudSDKException{
+    public DescribePullStreamConfigsResponse DescribePullStreamConfigs(DescribePullStreamConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePullStreamConfigsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePullStreamConfigsResponse>>() {
@@ -1022,7 +1022,7 @@ public class LiveClient extends AbstractClient{
      * @return DropLiveStreamResponse
      * @throws TencentCloudSDKException
      */
-    public DropLiveStreamResponse  DropLiveStream(DropLiveStreamRequest req) throws TencentCloudSDKException{
+    public DropLiveStreamResponse DropLiveStream(DropLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DropLiveStreamResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DropLiveStreamResponse>>() {
@@ -1040,7 +1040,7 @@ public class LiveClient extends AbstractClient{
      * @return ForbidLiveStreamResponse
      * @throws TencentCloudSDKException
      */
-    public ForbidLiveStreamResponse  ForbidLiveStream(ForbidLiveStreamRequest req) throws TencentCloudSDKException{
+    public ForbidLiveStreamResponse ForbidLiveStream(ForbidLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ForbidLiveStreamResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ForbidLiveStreamResponse>>() {
@@ -1058,7 +1058,7 @@ public class LiveClient extends AbstractClient{
      * @return ModifyLiveCallbackTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLiveCallbackTemplateResponse  ModifyLiveCallbackTemplate(ModifyLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
+    public ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(ModifyLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveCallbackTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveCallbackTemplateResponse>>() {
@@ -1076,7 +1076,7 @@ public class LiveClient extends AbstractClient{
      * @return ModifyLiveCertResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLiveCertResponse  ModifyLiveCert(ModifyLiveCertRequest req) throws TencentCloudSDKException{
+    public ModifyLiveCertResponse ModifyLiveCert(ModifyLiveCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveCertResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveCertResponse>>() {
@@ -1094,7 +1094,7 @@ public class LiveClient extends AbstractClient{
      * @return ModifyLiveDomainCertResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLiveDomainCertResponse  ModifyLiveDomainCert(ModifyLiveDomainCertRequest req) throws TencentCloudSDKException{
+    public ModifyLiveDomainCertResponse ModifyLiveDomainCert(ModifyLiveDomainCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveDomainCertResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertResponse>>() {
@@ -1112,7 +1112,7 @@ public class LiveClient extends AbstractClient{
      * @return ModifyLivePlayAuthKeyResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLivePlayAuthKeyResponse  ModifyLivePlayAuthKey(ModifyLivePlayAuthKeyRequest req) throws TencentCloudSDKException{
+    public ModifyLivePlayAuthKeyResponse ModifyLivePlayAuthKey(ModifyLivePlayAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePlayAuthKeyResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePlayAuthKeyResponse>>() {
@@ -1130,7 +1130,7 @@ public class LiveClient extends AbstractClient{
      * @return ModifyLivePushAuthKeyResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLivePushAuthKeyResponse  ModifyLivePushAuthKey(ModifyLivePushAuthKeyRequest req) throws TencentCloudSDKException{
+    public ModifyLivePushAuthKeyResponse ModifyLivePushAuthKey(ModifyLivePushAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePushAuthKeyResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePushAuthKeyResponse>>() {
@@ -1148,7 +1148,7 @@ public class LiveClient extends AbstractClient{
      * @return ModifyLiveRecordTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLiveRecordTemplateResponse  ModifyLiveRecordTemplate(ModifyLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+    public ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(ModifyLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveRecordTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveRecordTemplateResponse>>() {
@@ -1166,7 +1166,7 @@ public class LiveClient extends AbstractClient{
      * @return ModifyLiveSnapshotTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLiveSnapshotTemplateResponse  ModifyLiveSnapshotTemplate(ModifyLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
+    public ModifyLiveSnapshotTemplateResponse ModifyLiveSnapshotTemplate(ModifyLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveSnapshotTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>() {
@@ -1184,7 +1184,7 @@ public class LiveClient extends AbstractClient{
      * @return ModifyLiveTranscodeTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLiveTranscodeTemplateResponse  ModifyLiveTranscodeTemplate(ModifyLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
+    public ModifyLiveTranscodeTemplateResponse ModifyLiveTranscodeTemplate(ModifyLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveTranscodeTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveTranscodeTemplateResponse>>() {
@@ -1202,7 +1202,7 @@ public class LiveClient extends AbstractClient{
      * @return ModifyPullStreamConfigResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyPullStreamConfigResponse  ModifyPullStreamConfig(ModifyPullStreamConfigRequest req) throws TencentCloudSDKException{
+    public ModifyPullStreamConfigResponse ModifyPullStreamConfig(ModifyPullStreamConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPullStreamConfigResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPullStreamConfigResponse>>() {
@@ -1220,7 +1220,7 @@ public class LiveClient extends AbstractClient{
      * @return ModifyPullStreamStatusResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyPullStreamStatusResponse  ModifyPullStreamStatus(ModifyPullStreamStatusRequest req) throws TencentCloudSDKException{
+    public ModifyPullStreamStatusResponse ModifyPullStreamStatus(ModifyPullStreamStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPullStreamStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPullStreamStatusResponse>>() {
@@ -1238,7 +1238,7 @@ public class LiveClient extends AbstractClient{
      * @return ResumeDelayLiveStreamResponse
      * @throws TencentCloudSDKException
      */
-    public ResumeDelayLiveStreamResponse  ResumeDelayLiveStream(ResumeDelayLiveStreamRequest req) throws TencentCloudSDKException{
+    public ResumeDelayLiveStreamResponse ResumeDelayLiveStream(ResumeDelayLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeDelayLiveStreamResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeDelayLiveStreamResponse>>() {
@@ -1256,7 +1256,7 @@ public class LiveClient extends AbstractClient{
      * @return ResumeLiveStreamResponse
      * @throws TencentCloudSDKException
      */
-    public ResumeLiveStreamResponse  ResumeLiveStream(ResumeLiveStreamRequest req) throws TencentCloudSDKException{
+    public ResumeLiveStreamResponse ResumeLiveStream(ResumeLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeLiveStreamResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeLiveStreamResponse>>() {
@@ -1274,7 +1274,7 @@ public class LiveClient extends AbstractClient{
      * @return SetLiveWatermarkStatusResponse
      * @throws TencentCloudSDKException
      */
-    public SetLiveWatermarkStatusResponse  SetLiveWatermarkStatus(SetLiveWatermarkStatusRequest req) throws TencentCloudSDKException{
+    public SetLiveWatermarkStatusResponse SetLiveWatermarkStatus(SetLiveWatermarkStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetLiveWatermarkStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SetLiveWatermarkStatusResponse>>() {
@@ -1292,7 +1292,7 @@ public class LiveClient extends AbstractClient{
      * @return StopLiveRecordResponse
      * @throws TencentCloudSDKException
      */
-    public StopLiveRecordResponse  StopLiveRecord(StopLiveRecordRequest req) throws TencentCloudSDKException{
+    public StopLiveRecordResponse StopLiveRecord(StopLiveRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopLiveRecordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<StopLiveRecordResponse>>() {
@@ -1310,7 +1310,7 @@ public class LiveClient extends AbstractClient{
      * @return UnBindLiveDomainCertResponse
      * @throws TencentCloudSDKException
      */
-    public UnBindLiveDomainCertResponse  UnBindLiveDomainCert(UnBindLiveDomainCertRequest req) throws TencentCloudSDKException{
+    public UnBindLiveDomainCertResponse UnBindLiveDomainCert(UnBindLiveDomainCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindLiveDomainCertResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindLiveDomainCertResponse>>() {
@@ -1328,7 +1328,7 @@ public class LiveClient extends AbstractClient{
      * @return UpdateLiveWatermarkResponse
      * @throws TencentCloudSDKException
      */
-    public UpdateLiveWatermarkResponse  UpdateLiveWatermark(UpdateLiveWatermarkRequest req) throws TencentCloudSDKException{
+    public UpdateLiveWatermarkResponse UpdateLiveWatermark(UpdateLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateLiveWatermarkResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateLiveWatermarkResponse>>() {

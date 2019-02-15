@@ -54,7 +54,7 @@ public class TbmClient extends AbstractClient{
      * @return DescribeBrandCommentCountResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBrandCommentCountResponse  DescribeBrandCommentCount(DescribeBrandCommentCountRequest req) throws TencentCloudSDKException{
+    public DescribeBrandCommentCountResponse DescribeBrandCommentCount(DescribeBrandCommentCountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandCommentCountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandCommentCountResponse>>() {
@@ -72,7 +72,7 @@ public class TbmClient extends AbstractClient{
      * @return DescribeBrandExposureResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBrandExposureResponse  DescribeBrandExposure(DescribeBrandExposureRequest req) throws TencentCloudSDKException{
+    public DescribeBrandExposureResponse DescribeBrandExposure(DescribeBrandExposureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandExposureResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandExposureResponse>>() {
@@ -90,7 +90,7 @@ public class TbmClient extends AbstractClient{
      * @return DescribeBrandMediaReportResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBrandMediaReportResponse  DescribeBrandMediaReport(DescribeBrandMediaReportRequest req) throws TencentCloudSDKException{
+    public DescribeBrandMediaReportResponse DescribeBrandMediaReport(DescribeBrandMediaReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandMediaReportResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandMediaReportResponse>>() {
@@ -108,7 +108,7 @@ public class TbmClient extends AbstractClient{
      * @return DescribeBrandNegCommentsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBrandNegCommentsResponse  DescribeBrandNegComments(DescribeBrandNegCommentsRequest req) throws TencentCloudSDKException{
+    public DescribeBrandNegCommentsResponse DescribeBrandNegComments(DescribeBrandNegCommentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandNegCommentsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandNegCommentsResponse>>() {
@@ -126,7 +126,7 @@ public class TbmClient extends AbstractClient{
      * @return DescribeBrandPosCommentsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBrandPosCommentsResponse  DescribeBrandPosComments(DescribeBrandPosCommentsRequest req) throws TencentCloudSDKException{
+    public DescribeBrandPosCommentsResponse DescribeBrandPosComments(DescribeBrandPosCommentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandPosCommentsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandPosCommentsResponse>>() {
@@ -144,7 +144,7 @@ public class TbmClient extends AbstractClient{
      * @return DescribeBrandSocialOpinionResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBrandSocialOpinionResponse  DescribeBrandSocialOpinion(DescribeBrandSocialOpinionRequest req) throws TencentCloudSDKException{
+    public DescribeBrandSocialOpinionResponse DescribeBrandSocialOpinion(DescribeBrandSocialOpinionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandSocialOpinionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandSocialOpinionResponse>>() {
@@ -162,7 +162,7 @@ public class TbmClient extends AbstractClient{
      * @return DescribeBrandSocialReportResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBrandSocialReportResponse  DescribeBrandSocialReport(DescribeBrandSocialReportRequest req) throws TencentCloudSDKException{
+    public DescribeBrandSocialReportResponse DescribeBrandSocialReport(DescribeBrandSocialReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandSocialReportResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandSocialReportResponse>>() {
@@ -180,7 +180,7 @@ public class TbmClient extends AbstractClient{
      * @return DescribeIndustryNewsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeIndustryNewsResponse  DescribeIndustryNews(DescribeIndustryNewsRequest req) throws TencentCloudSDKException{
+    public DescribeIndustryNewsResponse DescribeIndustryNews(DescribeIndustryNewsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIndustryNewsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIndustryNewsResponse>>() {
@@ -198,7 +198,7 @@ public class TbmClient extends AbstractClient{
      * @return DescribeUserPortraitResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeUserPortraitResponse  DescribeUserPortrait(DescribeUserPortraitRequest req) throws TencentCloudSDKException{
+    public DescribeUserPortraitResponse DescribeUserPortrait(DescribeUserPortraitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserPortraitResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserPortraitResponse>>() {

@@ -172,5 +172,9 @@ public class UploadDataFileRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
 
     }
+
+    protected String [] getBinaryParams() {
+        return new String [] {"File"};
+    }
 }
 

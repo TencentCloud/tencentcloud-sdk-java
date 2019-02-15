@@ -56,7 +56,7 @@ public class DsClient extends AbstractClient{
      * @return CheckVcodeResponse
      * @throws TencentCloudSDKException
      */
-    public CheckVcodeResponse  CheckVcode(CheckVcodeRequest req) throws TencentCloudSDKException{
+    public CheckVcodeResponse CheckVcode(CheckVcodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckVcodeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckVcodeResponse>>() {
@@ -74,7 +74,7 @@ public class DsClient extends AbstractClient{
      * @return CreateContractByUploadResponse
      * @throws TencentCloudSDKException
      */
-    public CreateContractByUploadResponse  CreateContractByUpload(CreateContractByUploadRequest req) throws TencentCloudSDKException{
+    public CreateContractByUploadResponse CreateContractByUpload(CreateContractByUploadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateContractByUploadResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateContractByUploadResponse>>() {
@@ -92,7 +92,7 @@ public class DsClient extends AbstractClient{
      * @return CreateEnterpriseAccountResponse
      * @throws TencentCloudSDKException
      */
-    public CreateEnterpriseAccountResponse  CreateEnterpriseAccount(CreateEnterpriseAccountRequest req) throws TencentCloudSDKException{
+    public CreateEnterpriseAccountResponse CreateEnterpriseAccount(CreateEnterpriseAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEnterpriseAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEnterpriseAccountResponse>>() {
@@ -110,7 +110,7 @@ public class DsClient extends AbstractClient{
      * @return CreatePersonalAccountResponse
      * @throws TencentCloudSDKException
      */
-    public CreatePersonalAccountResponse  CreatePersonalAccount(CreatePersonalAccountRequest req) throws TencentCloudSDKException{
+    public CreatePersonalAccountResponse CreatePersonalAccount(CreatePersonalAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePersonalAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePersonalAccountResponse>>() {
@@ -128,7 +128,7 @@ public class DsClient extends AbstractClient{
      * @return CreateSealResponse
      * @throws TencentCloudSDKException
      */
-    public CreateSealResponse  CreateSeal(CreateSealRequest req) throws TencentCloudSDKException{
+    public CreateSealResponse CreateSeal(CreateSealRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSealResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSealResponse>>() {
@@ -146,7 +146,7 @@ public class DsClient extends AbstractClient{
      * @return DeleteAccountResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteAccountResponse  DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
+    public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccountResponse>>() {
@@ -164,7 +164,7 @@ public class DsClient extends AbstractClient{
      * @return DeleteSealResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteSealResponse  DeleteSeal(DeleteSealRequest req) throws TencentCloudSDKException{
+    public DeleteSealResponse DeleteSeal(DeleteSealRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSealResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSealResponse>>() {
@@ -182,7 +182,7 @@ public class DsClient extends AbstractClient{
      * @return DescribeTaskStatusResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskStatusResponse  DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
+    public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
@@ -200,7 +200,7 @@ public class DsClient extends AbstractClient{
      * @return DownloadContractResponse
      * @throws TencentCloudSDKException
      */
-    public DownloadContractResponse  DownloadContract(DownloadContractRequest req) throws TencentCloudSDKException{
+    public DownloadContractResponse DownloadContract(DownloadContractRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadContractResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadContractResponse>>() {
@@ -218,7 +218,7 @@ public class DsClient extends AbstractClient{
      * @return SendVcodeResponse
      * @throws TencentCloudSDKException
      */
-    public SendVcodeResponse  SendVcode(SendVcodeRequest req) throws TencentCloudSDKException{
+    public SendVcodeResponse SendVcode(SendVcodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendVcodeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SendVcodeResponse>>() {
@@ -236,7 +236,7 @@ public class DsClient extends AbstractClient{
      * @return SignContractByCoordinateResponse
      * @throws TencentCloudSDKException
      */
-    public SignContractByCoordinateResponse  SignContractByCoordinate(SignContractByCoordinateRequest req) throws TencentCloudSDKException{
+    public SignContractByCoordinateResponse SignContractByCoordinate(SignContractByCoordinateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SignContractByCoordinateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SignContractByCoordinateResponse>>() {
@@ -254,7 +254,7 @@ public class DsClient extends AbstractClient{
      * @return SignContractByKeywordResponse
      * @throws TencentCloudSDKException
      */
-    public SignContractByKeywordResponse  SignContractByKeyword(SignContractByKeywordRequest req) throws TencentCloudSDKException{
+    public SignContractByKeywordResponse SignContractByKeyword(SignContractByKeywordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SignContractByKeywordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SignContractByKeywordResponse>>() {

@@ -55,7 +55,7 @@ public class CvmClient extends AbstractClient{
      * @return AllocateHostsResponse
      * @throws TencentCloudSDKException
      */
-    public AllocateHostsResponse  AllocateHosts(AllocateHostsRequest req) throws TencentCloudSDKException{
+    public AllocateHostsResponse AllocateHosts(AllocateHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AllocateHostsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AllocateHostsResponse>>() {
@@ -78,7 +78,7 @@ public class CvmClient extends AbstractClient{
      * @return AssociateInstancesKeyPairsResponse
      * @throws TencentCloudSDKException
      */
-    public AssociateInstancesKeyPairsResponse  AssociateInstancesKeyPairs(AssociateInstancesKeyPairsRequest req) throws TencentCloudSDKException{
+    public AssociateInstancesKeyPairsResponse AssociateInstancesKeyPairs(AssociateInstancesKeyPairsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateInstancesKeyPairsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateInstancesKeyPairsResponse>>() {
@@ -96,7 +96,7 @@ public class CvmClient extends AbstractClient{
      * @return AssociateSecurityGroupsResponse
      * @throws TencentCloudSDKException
      */
-    public AssociateSecurityGroupsResponse  AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+    public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
@@ -114,7 +114,7 @@ public class CvmClient extends AbstractClient{
      * @return CreateDisasterRecoverGroupResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDisasterRecoverGroupResponse  CreateDisasterRecoverGroup(CreateDisasterRecoverGroupRequest req) throws TencentCloudSDKException{
+    public CreateDisasterRecoverGroupResponse CreateDisasterRecoverGroup(CreateDisasterRecoverGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDisasterRecoverGroupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDisasterRecoverGroupResponse>>() {
@@ -132,7 +132,7 @@ public class CvmClient extends AbstractClient{
      * @return CreateImageResponse
      * @throws TencentCloudSDKException
      */
-    public CreateImageResponse  CreateImage(CreateImageRequest req) throws TencentCloudSDKException{
+    public CreateImageResponse CreateImage(CreateImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateImageResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateImageResponse>>() {
@@ -155,7 +155,7 @@ public class CvmClient extends AbstractClient{
      * @return CreateKeyPairResponse
      * @throws TencentCloudSDKException
      */
-    public CreateKeyPairResponse  CreateKeyPair(CreateKeyPairRequest req) throws TencentCloudSDKException{
+    public CreateKeyPairResponse CreateKeyPair(CreateKeyPairRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateKeyPairResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateKeyPairResponse>>() {
@@ -173,7 +173,7 @@ public class CvmClient extends AbstractClient{
      * @return DeleteDisasterRecoverGroupsResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteDisasterRecoverGroupsResponse  DeleteDisasterRecoverGroups(DeleteDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
+    public DeleteDisasterRecoverGroupsResponse DeleteDisasterRecoverGroups(DeleteDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDisasterRecoverGroupsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDisasterRecoverGroupsResponse>>() {
@@ -195,7 +195,7 @@ public class CvmClient extends AbstractClient{
      * @return DeleteImagesResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteImagesResponse  DeleteImages(DeleteImagesRequest req) throws TencentCloudSDKException{
+    public DeleteImagesResponse DeleteImages(DeleteImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteImagesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteImagesResponse>>() {
@@ -216,7 +216,7 @@ public class CvmClient extends AbstractClient{
      * @return DeleteKeyPairsResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteKeyPairsResponse  DeleteKeyPairs(DeleteKeyPairsRequest req) throws TencentCloudSDKException{
+    public DeleteKeyPairsResponse DeleteKeyPairs(DeleteKeyPairsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteKeyPairsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteKeyPairsResponse>>() {
@@ -234,7 +234,7 @@ public class CvmClient extends AbstractClient{
      * @return DescribeDisasterRecoverGroupQuotaResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDisasterRecoverGroupQuotaResponse  DescribeDisasterRecoverGroupQuota(DescribeDisasterRecoverGroupQuotaRequest req) throws TencentCloudSDKException{
+    public DescribeDisasterRecoverGroupQuotaResponse DescribeDisasterRecoverGroupQuota(DescribeDisasterRecoverGroupQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDisasterRecoverGroupQuotaResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDisasterRecoverGroupQuotaResponse>>() {
@@ -252,7 +252,7 @@ public class CvmClient extends AbstractClient{
      * @return DescribeDisasterRecoverGroupsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDisasterRecoverGroupsResponse  DescribeDisasterRecoverGroups(DescribeDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
+    public DescribeDisasterRecoverGroupsResponse DescribeDisasterRecoverGroups(DescribeDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDisasterRecoverGroupsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDisasterRecoverGroupsResponse>>() {
@@ -270,7 +270,7 @@ public class CvmClient extends AbstractClient{
      * @return DescribeHostsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeHostsResponse  DescribeHosts(DescribeHostsRequest req) throws TencentCloudSDKException{
+    public DescribeHostsResponse DescribeHosts(DescribeHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHostsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHostsResponse>>() {
@@ -288,7 +288,7 @@ public class CvmClient extends AbstractClient{
      * @return DescribeImageQuotaResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeImageQuotaResponse  DescribeImageQuota(DescribeImageQuotaRequest req) throws TencentCloudSDKException{
+    public DescribeImageQuotaResponse DescribeImageQuota(DescribeImageQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageQuotaResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageQuotaResponse>>() {
@@ -306,7 +306,7 @@ public class CvmClient extends AbstractClient{
      * @return DescribeImageSharePermissionResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeImageSharePermissionResponse  DescribeImageSharePermission(DescribeImageSharePermissionRequest req) throws TencentCloudSDKException{
+    public DescribeImageSharePermissionResponse DescribeImageSharePermission(DescribeImageSharePermissionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageSharePermissionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageSharePermissionResponse>>() {
@@ -327,7 +327,7 @@ public class CvmClient extends AbstractClient{
      * @return DescribeImagesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeImagesResponse  DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
+    public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImagesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
@@ -345,7 +345,7 @@ public class CvmClient extends AbstractClient{
      * @return DescribeImportImageOsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeImportImageOsResponse  DescribeImportImageOs(DescribeImportImageOsRequest req) throws TencentCloudSDKException{
+    public DescribeImportImageOsResponse DescribeImportImageOs(DescribeImportImageOsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImportImageOsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImportImageOsResponse>>() {
@@ -363,7 +363,7 @@ public class CvmClient extends AbstractClient{
      * @return DescribeInstanceFamilyConfigsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstanceFamilyConfigsResponse  DescribeInstanceFamilyConfigs(DescribeInstanceFamilyConfigsRequest req) throws TencentCloudSDKException{
+    public DescribeInstanceFamilyConfigsResponse DescribeInstanceFamilyConfigs(DescribeInstanceFamilyConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceFamilyConfigsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceFamilyConfigsResponse>>() {
@@ -384,7 +384,7 @@ public class CvmClient extends AbstractClient{
      * @return DescribeInstanceInternetBandwidthConfigsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstanceInternetBandwidthConfigsResponse  DescribeInstanceInternetBandwidthConfigs(DescribeInstanceInternetBandwidthConfigsRequest req) throws TencentCloudSDKException{
+    public DescribeInstanceInternetBandwidthConfigsResponse DescribeInstanceInternetBandwidthConfigs(DescribeInstanceInternetBandwidthConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceInternetBandwidthConfigsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceInternetBandwidthConfigsResponse>>() {
@@ -405,7 +405,7 @@ public class CvmClient extends AbstractClient{
      * @return DescribeInstanceTypeConfigsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstanceTypeConfigsResponse  DescribeInstanceTypeConfigs(DescribeInstanceTypeConfigsRequest req) throws TencentCloudSDKException{
+    public DescribeInstanceTypeConfigsResponse DescribeInstanceTypeConfigs(DescribeInstanceTypeConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceTypeConfigsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceTypeConfigsResponse>>() {
@@ -437,7 +437,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return DescribeInstanceVncUrlResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstanceVncUrlResponse  DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest req) throws TencentCloudSDKException{
+    public DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceVncUrlResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceVncUrlResponse>>() {
@@ -458,7 +458,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstancesResponse  DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
@@ -479,7 +479,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return DescribeInstancesStatusResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstancesStatusResponse  DescribeInstancesStatus(DescribeInstancesStatusRequest req) throws TencentCloudSDKException{
+    public DescribeInstancesStatusResponse DescribeInstancesStatus(DescribeInstancesStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesStatusResponse>>() {
@@ -497,7 +497,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return DescribeInternetChargeTypeConfigsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInternetChargeTypeConfigsResponse  DescribeInternetChargeTypeConfigs(DescribeInternetChargeTypeConfigsRequest req) throws TencentCloudSDKException{
+    public DescribeInternetChargeTypeConfigsResponse DescribeInternetChargeTypeConfigs(DescribeInternetChargeTypeConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInternetChargeTypeConfigsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInternetChargeTypeConfigsResponse>>() {
@@ -517,7 +517,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return DescribeKeyPairsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeKeyPairsResponse  DescribeKeyPairs(DescribeKeyPairsRequest req) throws TencentCloudSDKException{
+    public DescribeKeyPairsResponse DescribeKeyPairs(DescribeKeyPairsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKeyPairsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKeyPairsResponse>>() {
@@ -535,7 +535,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return DescribeRegionsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeRegionsResponse  DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
+    public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
@@ -553,7 +553,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return DescribeZoneInstanceConfigInfosResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZoneInstanceConfigInfosResponse  DescribeZoneInstanceConfigInfos(DescribeZoneInstanceConfigInfosRequest req) throws TencentCloudSDKException{
+    public DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(DescribeZoneInstanceConfigInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneInstanceConfigInfosResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneInstanceConfigInfosResponse>>() {
@@ -571,7 +571,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZonesResponse  DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
+    public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZonesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
@@ -594,7 +594,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return DisassociateInstancesKeyPairsResponse
      * @throws TencentCloudSDKException
      */
-    public DisassociateInstancesKeyPairsResponse  DisassociateInstancesKeyPairs(DisassociateInstancesKeyPairsRequest req) throws TencentCloudSDKException{
+    public DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(DisassociateInstancesKeyPairsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateInstancesKeyPairsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateInstancesKeyPairsResponse>>() {
@@ -612,7 +612,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return DisassociateSecurityGroupsResponse
      * @throws TencentCloudSDKException
      */
-    public DisassociateSecurityGroupsResponse  DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+    public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
@@ -630,7 +630,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ImportImageResponse
      * @throws TencentCloudSDKException
      */
-    public ImportImageResponse  ImportImage(ImportImageRequest req) throws TencentCloudSDKException{
+    public ImportImageResponse ImportImage(ImportImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportImageResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportImageResponse>>() {
@@ -652,7 +652,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ImportKeyPairResponse
      * @throws TencentCloudSDKException
      */
-    public ImportKeyPairResponse  ImportKeyPair(ImportKeyPairRequest req) throws TencentCloudSDKException{
+    public ImportKeyPairResponse ImportKeyPair(ImportKeyPairRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportKeyPairResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportKeyPairResponse>>() {
@@ -673,7 +673,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return InquiryPriceModifyInstancesChargeTypeResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceModifyInstancesChargeTypeResponse  InquiryPriceModifyInstancesChargeType(InquiryPriceModifyInstancesChargeTypeRequest req) throws TencentCloudSDKException{
+    public InquiryPriceModifyInstancesChargeTypeResponse InquiryPriceModifyInstancesChargeType(InquiryPriceModifyInstancesChargeTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceModifyInstancesChargeTypeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceModifyInstancesChargeTypeResponse>>() {
@@ -693,7 +693,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return InquiryPriceRenewInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceRenewInstancesResponse  InquiryPriceRenewInstances(InquiryPriceRenewInstancesRequest req) throws TencentCloudSDKException{
+    public InquiryPriceRenewInstancesResponse InquiryPriceRenewInstances(InquiryPriceRenewInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceRenewInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewInstancesResponse>>() {
@@ -711,7 +711,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return InquiryPriceResetInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceResetInstanceResponse  InquiryPriceResetInstance(InquiryPriceResetInstanceRequest req) throws TencentCloudSDKException{
+    public InquiryPriceResetInstanceResponse InquiryPriceResetInstance(InquiryPriceResetInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResetInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResetInstanceResponse>>() {
@@ -736,7 +736,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return InquiryPriceResetInstancesInternetMaxBandwidthResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceResetInstancesInternetMaxBandwidthResponse  InquiryPriceResetInstancesInternetMaxBandwidth(InquiryPriceResetInstancesInternetMaxBandwidthRequest req) throws TencentCloudSDKException{
+    public InquiryPriceResetInstancesInternetMaxBandwidthResponse InquiryPriceResetInstancesInternetMaxBandwidth(InquiryPriceResetInstancesInternetMaxBandwidthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResetInstancesInternetMaxBandwidthResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResetInstancesInternetMaxBandwidthResponse>>() {
@@ -759,7 +759,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return InquiryPriceResetInstancesTypeResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceResetInstancesTypeResponse  InquiryPriceResetInstancesType(InquiryPriceResetInstancesTypeRequest req) throws TencentCloudSDKException{
+    public InquiryPriceResetInstancesTypeResponse InquiryPriceResetInstancesType(InquiryPriceResetInstancesTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResetInstancesTypeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResetInstancesTypeResponse>>() {
@@ -780,7 +780,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return InquiryPriceResizeInstanceDisksResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceResizeInstanceDisksResponse  InquiryPriceResizeInstanceDisks(InquiryPriceResizeInstanceDisksRequest req) throws TencentCloudSDKException{
+    public InquiryPriceResizeInstanceDisksResponse InquiryPriceResizeInstanceDisks(InquiryPriceResizeInstanceDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResizeInstanceDisksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResizeInstanceDisksResponse>>() {
@@ -798,7 +798,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return InquiryPriceRunInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceRunInstancesResponse  InquiryPriceRunInstances(InquiryPriceRunInstancesRequest req) throws TencentCloudSDKException{
+    public InquiryPriceRunInstancesResponse InquiryPriceRunInstances(InquiryPriceRunInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceRunInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRunInstancesResponse>>() {
@@ -816,7 +816,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ModifyDisasterRecoverGroupAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDisasterRecoverGroupAttributeResponse  ModifyDisasterRecoverGroupAttribute(ModifyDisasterRecoverGroupAttributeRequest req) throws TencentCloudSDKException{
+    public ModifyDisasterRecoverGroupAttributeResponse ModifyDisasterRecoverGroupAttribute(ModifyDisasterRecoverGroupAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDisasterRecoverGroupAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDisasterRecoverGroupAttributeResponse>>() {
@@ -834,7 +834,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ModifyHostsAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyHostsAttributeResponse  ModifyHostsAttribute(ModifyHostsAttributeRequest req) throws TencentCloudSDKException{
+    public ModifyHostsAttributeResponse ModifyHostsAttribute(ModifyHostsAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyHostsAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyHostsAttributeResponse>>() {
@@ -854,7 +854,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ModifyImageAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyImageAttributeResponse  ModifyImageAttribute(ModifyImageAttributeRequest req) throws TencentCloudSDKException{
+    public ModifyImageAttributeResponse ModifyImageAttribute(ModifyImageAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyImageAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyImageAttributeResponse>>() {
@@ -878,7 +878,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ModifyImageSharePermissionResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyImageSharePermissionResponse  ModifyImageSharePermission(ModifyImageSharePermissionRequest req) throws TencentCloudSDKException{
+    public ModifyImageSharePermissionResponse ModifyImageSharePermission(ModifyImageSharePermissionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyImageSharePermissionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyImageSharePermissionResponse>>() {
@@ -900,7 +900,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ModifyInstancesAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyInstancesAttributeResponse  ModifyInstancesAttribute(ModifyInstancesAttributeRequest req) throws TencentCloudSDKException{
+    public ModifyInstancesAttributeResponse ModifyInstancesAttribute(ModifyInstancesAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstancesAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancesAttributeResponse>>() {
@@ -921,7 +921,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ModifyInstancesChargeTypeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyInstancesChargeTypeResponse  ModifyInstancesChargeType(ModifyInstancesChargeTypeRequest req) throws TencentCloudSDKException{
+    public ModifyInstancesChargeTypeResponse ModifyInstancesChargeType(ModifyInstancesChargeTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstancesChargeTypeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancesChargeTypeResponse>>() {
@@ -944,7 +944,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ModifyInstancesProjectResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyInstancesProjectResponse  ModifyInstancesProject(ModifyInstancesProjectRequest req) throws TencentCloudSDKException{
+    public ModifyInstancesProjectResponse ModifyInstancesProject(ModifyInstancesProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstancesProjectResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancesProjectResponse>>() {
@@ -965,7 +965,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ModifyInstancesRenewFlagResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyInstancesRenewFlagResponse  ModifyInstancesRenewFlag(ModifyInstancesRenewFlagRequest req) throws TencentCloudSDKException{
+    public ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(ModifyInstancesRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstancesRenewFlagResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancesRenewFlagResponse>>() {
@@ -985,7 +985,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ModifyInstancesVpcAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyInstancesVpcAttributeResponse  ModifyInstancesVpcAttribute(ModifyInstancesVpcAttributeRequest req) throws TencentCloudSDKException{
+    public ModifyInstancesVpcAttributeResponse ModifyInstancesVpcAttribute(ModifyInstancesVpcAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstancesVpcAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancesVpcAttributeResponse>>() {
@@ -1007,7 +1007,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ModifyKeyPairAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyKeyPairAttributeResponse  ModifyKeyPairAttribute(ModifyKeyPairAttributeRequest req) throws TencentCloudSDKException{
+    public ModifyKeyPairAttributeResponse ModifyKeyPairAttribute(ModifyKeyPairAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyKeyPairAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyKeyPairAttributeResponse>>() {
@@ -1030,7 +1030,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return RebootInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public RebootInstancesResponse  RebootInstances(RebootInstancesRequest req) throws TencentCloudSDKException{
+    public RebootInstancesResponse RebootInstances(RebootInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RebootInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RebootInstancesResponse>>() {
@@ -1051,7 +1051,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return RenewHostsResponse
      * @throws TencentCloudSDKException
      */
-    public RenewHostsResponse  RenewHosts(RenewHostsRequest req) throws TencentCloudSDKException{
+    public RenewHostsResponse RenewHosts(RenewHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewHostsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewHostsResponse>>() {
@@ -1072,7 +1072,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return RenewInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public RenewInstancesResponse  RenewInstances(RenewInstancesRequest req) throws TencentCloudSDKException{
+    public RenewInstancesResponse RenewInstances(RenewInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewInstancesResponse>>() {
@@ -1097,7 +1097,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ResetInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public ResetInstanceResponse  ResetInstance(ResetInstanceRequest req) throws TencentCloudSDKException{
+    public ResetInstanceResponse ResetInstance(ResetInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetInstanceResponse>>() {
@@ -1122,7 +1122,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ResetInstancesInternetMaxBandwidthResponse
      * @throws TencentCloudSDKException
      */
-    public ResetInstancesInternetMaxBandwidthResponse  ResetInstancesInternetMaxBandwidth(ResetInstancesInternetMaxBandwidthRequest req) throws TencentCloudSDKException{
+    public ResetInstancesInternetMaxBandwidthResponse ResetInstancesInternetMaxBandwidth(ResetInstancesInternetMaxBandwidthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetInstancesInternetMaxBandwidthResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetInstancesInternetMaxBandwidthResponse>>() {
@@ -1144,7 +1144,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ResetInstancesPasswordResponse
      * @throws TencentCloudSDKException
      */
-    public ResetInstancesPasswordResponse  ResetInstancesPassword(ResetInstancesPasswordRequest req) throws TencentCloudSDKException{
+    public ResetInstancesPasswordResponse ResetInstancesPassword(ResetInstancesPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetInstancesPasswordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetInstancesPasswordResponse>>() {
@@ -1164,7 +1164,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ResetInstancesTypeResponse
      * @throws TencentCloudSDKException
      */
-    public ResetInstancesTypeResponse  ResetInstancesType(ResetInstancesTypeRequest req) throws TencentCloudSDKException{
+    public ResetInstancesTypeResponse ResetInstancesType(ResetInstancesTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetInstancesTypeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetInstancesTypeResponse>>() {
@@ -1187,7 +1187,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return ResizeInstanceDisksResponse
      * @throws TencentCloudSDKException
      */
-    public ResizeInstanceDisksResponse  ResizeInstanceDisks(ResizeInstanceDisksRequest req) throws TencentCloudSDKException{
+    public ResizeInstanceDisksResponse ResizeInstanceDisks(ResizeInstanceDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResizeInstanceDisksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResizeInstanceDisksResponse>>() {
@@ -1210,7 +1210,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return RunInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public RunInstancesResponse  RunInstances(RunInstancesRequest req) throws TencentCloudSDKException{
+    public RunInstancesResponse RunInstances(RunInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RunInstancesResponse>>() {
@@ -1232,7 +1232,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return StartInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public StartInstancesResponse  StartInstances(StartInstancesRequest req) throws TencentCloudSDKException{
+    public StartInstancesResponse StartInstances(StartInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<StartInstancesResponse>>() {
@@ -1255,7 +1255,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return StopInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public StopInstancesResponse  StopInstances(StopInstancesRequest req) throws TencentCloudSDKException{
+    public StopInstancesResponse StopInstances(StopInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<StopInstancesResponse>>() {
@@ -1277,7 +1277,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return SyncImagesResponse
      * @throws TencentCloudSDKException
      */
-    public SyncImagesResponse  SyncImages(SyncImagesRequest req) throws TencentCloudSDKException{
+    public SyncImagesResponse SyncImages(SyncImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncImagesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncImagesResponse>>() {
@@ -1299,7 +1299,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
      * @return TerminateInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public TerminateInstancesResponse  TerminateInstances(TerminateInstancesRequest req) throws TencentCloudSDKException{
+    public TerminateInstancesResponse TerminateInstances(TerminateInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateInstancesResponse>>() {

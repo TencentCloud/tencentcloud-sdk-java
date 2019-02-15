@@ -54,7 +54,7 @@ public class MonitorClient extends AbstractClient{
      * @return DescribeBaseMetricsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBaseMetricsResponse  DescribeBaseMetrics(DescribeBaseMetricsRequest req) throws TencentCloudSDKException{
+    public DescribeBaseMetricsResponse DescribeBaseMetrics(DescribeBaseMetricsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBaseMetricsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBaseMetricsResponse>>() {
@@ -74,7 +74,7 @@ public class MonitorClient extends AbstractClient{
      * @return GetMonitorDataResponse
      * @throws TencentCloudSDKException
      */
-    public GetMonitorDataResponse  GetMonitorData(GetMonitorDataRequest req) throws TencentCloudSDKException{
+    public GetMonitorDataResponse GetMonitorData(GetMonitorDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetMonitorDataResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetMonitorDataResponse>>() {

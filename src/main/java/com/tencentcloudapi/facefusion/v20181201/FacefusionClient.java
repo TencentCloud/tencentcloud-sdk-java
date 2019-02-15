@@ -56,7 +56,7 @@ public class FacefusionClient extends AbstractClient{
      * @return FaceFusionResponse
      * @throws TencentCloudSDKException
      */
-    public FaceFusionResponse  FaceFusion(FaceFusionRequest req) throws TencentCloudSDKException{
+    public FaceFusionResponse FaceFusion(FaceFusionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FaceFusionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<FaceFusionResponse>>() {

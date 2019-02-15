@@ -54,7 +54,7 @@ public class SqlserverClient extends AbstractClient{
      * @return CreateAccountResponse
      * @throws TencentCloudSDKException
      */
-    public CreateAccountResponse  CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
+    public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
@@ -72,7 +72,7 @@ public class SqlserverClient extends AbstractClient{
      * @return CreateBackupResponse
      * @throws TencentCloudSDKException
      */
-    public CreateBackupResponse  CreateBackup(CreateBackupRequest req) throws TencentCloudSDKException{
+    public CreateBackupResponse CreateBackup(CreateBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBackupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBackupResponse>>() {
@@ -90,7 +90,7 @@ public class SqlserverClient extends AbstractClient{
      * @return CreateDBResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDBResponse  CreateDB(CreateDBRequest req) throws TencentCloudSDKException{
+    public CreateDBResponse CreateDB(CreateDBRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBResponse>>() {
@@ -108,7 +108,7 @@ public class SqlserverClient extends AbstractClient{
      * @return CreateDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDBInstancesResponse  CreateDBInstances(CreateDBInstancesRequest req) throws TencentCloudSDKException{
+    public CreateDBInstancesResponse CreateDBInstances(CreateDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstancesResponse>>() {
@@ -126,7 +126,7 @@ public class SqlserverClient extends AbstractClient{
      * @return CreateMigrationResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMigrationResponse  CreateMigration(CreateMigrationRequest req) throws TencentCloudSDKException{
+    public CreateMigrationResponse CreateMigration(CreateMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMigrationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMigrationResponse>>() {
@@ -144,7 +144,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DeleteAccountResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteAccountResponse  DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
+    public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccountResponse>>() {
@@ -162,7 +162,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DeleteDBResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteDBResponse  DeleteDB(DeleteDBRequest req) throws TencentCloudSDKException{
+    public DeleteDBResponse DeleteDB(DeleteDBRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDBResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDBResponse>>() {
@@ -180,7 +180,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DeleteMigrationResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMigrationResponse  DeleteMigration(DeleteMigrationRequest req) throws TencentCloudSDKException{
+    public DeleteMigrationResponse DeleteMigration(DeleteMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMigrationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMigrationResponse>>() {
@@ -198,7 +198,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeAccountsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAccountsResponse  DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
+    public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
@@ -216,7 +216,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeBackupsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBackupsResponse  DescribeBackups(DescribeBackupsRequest req) throws TencentCloudSDKException{
+    public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupsResponse>>() {
@@ -234,7 +234,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBInstancesResponse  DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
@@ -252,7 +252,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeDBsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBsResponse  DescribeDBs(DescribeDBsRequest req) throws TencentCloudSDKException{
+    public DescribeDBsResponse DescribeDBs(DescribeDBsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBsResponse>>() {
@@ -270,7 +270,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeFlowStatusResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeFlowStatusResponse  DescribeFlowStatus(DescribeFlowStatusRequest req) throws TencentCloudSDKException{
+    public DescribeFlowStatusResponse DescribeFlowStatus(DescribeFlowStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowStatusResponse>>() {
@@ -288,7 +288,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeMigrationDetailResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMigrationDetailResponse  DescribeMigrationDetail(DescribeMigrationDetailRequest req) throws TencentCloudSDKException{
+    public DescribeMigrationDetailResponse DescribeMigrationDetail(DescribeMigrationDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrationDetailResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrationDetailResponse>>() {
@@ -306,7 +306,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeMigrationsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMigrationsResponse  DescribeMigrations(DescribeMigrationsRequest req) throws TencentCloudSDKException{
+    public DescribeMigrationsResponse DescribeMigrations(DescribeMigrationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrationsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrationsResponse>>() {
@@ -324,7 +324,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeOrdersResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeOrdersResponse  DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
+    public DescribeOrdersResponse DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrdersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
@@ -342,7 +342,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeProductConfigResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeProductConfigResponse  DescribeProductConfig(DescribeProductConfigRequest req) throws TencentCloudSDKException{
+    public DescribeProductConfigResponse DescribeProductConfig(DescribeProductConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductConfigResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductConfigResponse>>() {
@@ -360,7 +360,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeRegionsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeRegionsResponse  DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
+    public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
@@ -378,7 +378,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeRollbackTimeResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeRollbackTimeResponse  DescribeRollbackTime(DescribeRollbackTimeRequest req) throws TencentCloudSDKException{
+    public DescribeRollbackTimeResponse DescribeRollbackTime(DescribeRollbackTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRollbackTimeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRollbackTimeResponse>>() {
@@ -396,7 +396,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeSlowlogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSlowlogsResponse  DescribeSlowlogs(DescribeSlowlogsRequest req) throws TencentCloudSDKException{
+    public DescribeSlowlogsResponse DescribeSlowlogs(DescribeSlowlogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSlowlogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowlogsResponse>>() {
@@ -414,7 +414,7 @@ public class SqlserverClient extends AbstractClient{
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZonesResponse  DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
+    public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZonesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
@@ -432,7 +432,7 @@ public class SqlserverClient extends AbstractClient{
      * @return InquiryPriceCreateDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceCreateDBInstancesResponse  InquiryPriceCreateDBInstances(InquiryPriceCreateDBInstancesRequest req) throws TencentCloudSDKException{
+    public InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstances(InquiryPriceCreateDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateDBInstancesResponse>>() {
@@ -450,7 +450,7 @@ public class SqlserverClient extends AbstractClient{
      * @return InquiryPriceRenewDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceRenewDBInstanceResponse  InquiryPriceRenewDBInstance(InquiryPriceRenewDBInstanceRequest req) throws TencentCloudSDKException{
+    public InquiryPriceRenewDBInstanceResponse InquiryPriceRenewDBInstance(InquiryPriceRenewDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceRenewDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewDBInstanceResponse>>() {
@@ -468,7 +468,7 @@ public class SqlserverClient extends AbstractClient{
      * @return InquiryPriceUpgradeDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceUpgradeDBInstanceResponse  InquiryPriceUpgradeDBInstance(InquiryPriceUpgradeDBInstanceRequest req) throws TencentCloudSDKException{
+    public InquiryPriceUpgradeDBInstanceResponse InquiryPriceUpgradeDBInstance(InquiryPriceUpgradeDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse>>() {
@@ -486,7 +486,7 @@ public class SqlserverClient extends AbstractClient{
      * @return ModifyAccountPrivilegeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyAccountPrivilegeResponse  ModifyAccountPrivilege(ModifyAccountPrivilegeRequest req) throws TencentCloudSDKException{
+    public ModifyAccountPrivilegeResponse ModifyAccountPrivilege(ModifyAccountPrivilegeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountPrivilegeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountPrivilegeResponse>>() {
@@ -504,7 +504,7 @@ public class SqlserverClient extends AbstractClient{
      * @return ModifyAccountRemarkResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyAccountRemarkResponse  ModifyAccountRemark(ModifyAccountRemarkRequest req) throws TencentCloudSDKException{
+    public ModifyAccountRemarkResponse ModifyAccountRemark(ModifyAccountRemarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountRemarkResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountRemarkResponse>>() {
@@ -522,7 +522,7 @@ public class SqlserverClient extends AbstractClient{
      * @return ModifyDBInstanceNameResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBInstanceNameResponse  ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
+    public ModifyDBInstanceNameResponse ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNameResponse>>() {
@@ -540,7 +540,7 @@ public class SqlserverClient extends AbstractClient{
      * @return ModifyDBInstanceProjectResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBInstanceProjectResponse  ModifyDBInstanceProject(ModifyDBInstanceProjectRequest req) throws TencentCloudSDKException{
+    public ModifyDBInstanceProjectResponse ModifyDBInstanceProject(ModifyDBInstanceProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceProjectResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceProjectResponse>>() {
@@ -558,7 +558,7 @@ public class SqlserverClient extends AbstractClient{
      * @return ModifyDBInstanceRenewFlagResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBInstanceRenewFlagResponse  ModifyDBInstanceRenewFlag(ModifyDBInstanceRenewFlagRequest req) throws TencentCloudSDKException{
+    public ModifyDBInstanceRenewFlagResponse ModifyDBInstanceRenewFlag(ModifyDBInstanceRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceRenewFlagResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceRenewFlagResponse>>() {
@@ -576,7 +576,7 @@ public class SqlserverClient extends AbstractClient{
      * @return ModifyDBNameResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBNameResponse  ModifyDBName(ModifyDBNameRequest req) throws TencentCloudSDKException{
+    public ModifyDBNameResponse ModifyDBName(ModifyDBNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBNameResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBNameResponse>>() {
@@ -594,7 +594,7 @@ public class SqlserverClient extends AbstractClient{
      * @return ModifyDBRemarkResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBRemarkResponse  ModifyDBRemark(ModifyDBRemarkRequest req) throws TencentCloudSDKException{
+    public ModifyDBRemarkResponse ModifyDBRemark(ModifyDBRemarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBRemarkResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBRemarkResponse>>() {
@@ -612,7 +612,7 @@ public class SqlserverClient extends AbstractClient{
      * @return ModifyMigrationResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMigrationResponse  ModifyMigration(ModifyMigrationRequest req) throws TencentCloudSDKException{
+    public ModifyMigrationResponse ModifyMigration(ModifyMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMigrationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationResponse>>() {
@@ -630,7 +630,7 @@ public class SqlserverClient extends AbstractClient{
      * @return RenewDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public RenewDBInstanceResponse  RenewDBInstance(RenewDBInstanceRequest req) throws TencentCloudSDKException{
+    public RenewDBInstanceResponse RenewDBInstance(RenewDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewDBInstanceResponse>>() {
@@ -648,7 +648,7 @@ public class SqlserverClient extends AbstractClient{
      * @return ResetAccountPasswordResponse
      * @throws TencentCloudSDKException
      */
-    public ResetAccountPasswordResponse  ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
+    public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
@@ -666,7 +666,7 @@ public class SqlserverClient extends AbstractClient{
      * @return RestartDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public RestartDBInstanceResponse  RestartDBInstance(RestartDBInstanceRequest req) throws TencentCloudSDKException{
+    public RestartDBInstanceResponse RestartDBInstance(RestartDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartDBInstanceResponse>>() {
@@ -684,7 +684,7 @@ public class SqlserverClient extends AbstractClient{
      * @return RestoreInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public RestoreInstanceResponse  RestoreInstance(RestoreInstanceRequest req) throws TencentCloudSDKException{
+    public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestoreInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RestoreInstanceResponse>>() {
@@ -702,7 +702,7 @@ public class SqlserverClient extends AbstractClient{
      * @return RollbackInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public RollbackInstanceResponse  RollbackInstance(RollbackInstanceRequest req) throws TencentCloudSDKException{
+    public RollbackInstanceResponse RollbackInstance(RollbackInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RollbackInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RollbackInstanceResponse>>() {
@@ -720,7 +720,7 @@ public class SqlserverClient extends AbstractClient{
      * @return RunMigrationResponse
      * @throws TencentCloudSDKException
      */
-    public RunMigrationResponse  RunMigration(RunMigrationRequest req) throws TencentCloudSDKException{
+    public RunMigrationResponse RunMigration(RunMigrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunMigrationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RunMigrationResponse>>() {
@@ -738,7 +738,7 @@ public class SqlserverClient extends AbstractClient{
      * @return UpgradeDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public UpgradeDBInstanceResponse  UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
+    public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {

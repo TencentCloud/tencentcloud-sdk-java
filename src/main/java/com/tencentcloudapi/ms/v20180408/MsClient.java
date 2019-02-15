@@ -54,7 +54,7 @@ public class MsClient extends AbstractClient{
      * @return CreateBindInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateBindInstanceResponse  CreateBindInstance(CreateBindInstanceRequest req) throws TencentCloudSDKException{
+    public CreateBindInstanceResponse CreateBindInstance(CreateBindInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBindInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBindInstanceResponse>>() {
@@ -72,7 +72,7 @@ public class MsClient extends AbstractClient{
      * @return CreateCosSecKeyInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateCosSecKeyInstanceResponse  CreateCosSecKeyInstance(CreateCosSecKeyInstanceRequest req) throws TencentCloudSDKException{
+    public CreateCosSecKeyInstanceResponse CreateCosSecKeyInstance(CreateCosSecKeyInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCosSecKeyInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCosSecKeyInstanceResponse>>() {
@@ -90,7 +90,7 @@ public class MsClient extends AbstractClient{
      * @return CreateResourceInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public CreateResourceInstancesResponse  CreateResourceInstances(CreateResourceInstancesRequest req) throws TencentCloudSDKException{
+    public CreateResourceInstancesResponse CreateResourceInstances(CreateResourceInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateResourceInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateResourceInstancesResponse>>() {
@@ -108,7 +108,7 @@ public class MsClient extends AbstractClient{
      * @return CreateScanInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public CreateScanInstancesResponse  CreateScanInstances(CreateScanInstancesRequest req) throws TencentCloudSDKException{
+    public CreateScanInstancesResponse CreateScanInstances(CreateScanInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateScanInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateScanInstancesResponse>>() {
@@ -126,7 +126,7 @@ public class MsClient extends AbstractClient{
      * @return CreateShieldInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateShieldInstanceResponse  CreateShieldInstance(CreateShieldInstanceRequest req) throws TencentCloudSDKException{
+    public CreateShieldInstanceResponse CreateShieldInstance(CreateShieldInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateShieldInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateShieldInstanceResponse>>() {
@@ -144,7 +144,7 @@ public class MsClient extends AbstractClient{
      * @return CreateShieldPlanInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateShieldPlanInstanceResponse  CreateShieldPlanInstance(CreateShieldPlanInstanceRequest req) throws TencentCloudSDKException{
+    public CreateShieldPlanInstanceResponse CreateShieldPlanInstance(CreateShieldPlanInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateShieldPlanInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateShieldPlanInstanceResponse>>() {
@@ -162,7 +162,7 @@ public class MsClient extends AbstractClient{
      * @return DeleteScanInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteScanInstancesResponse  DeleteScanInstances(DeleteScanInstancesRequest req) throws TencentCloudSDKException{
+    public DeleteScanInstancesResponse DeleteScanInstances(DeleteScanInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteScanInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteScanInstancesResponse>>() {
@@ -180,7 +180,7 @@ public class MsClient extends AbstractClient{
      * @return DeleteShieldInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteShieldInstancesResponse  DeleteShieldInstances(DeleteShieldInstancesRequest req) throws TencentCloudSDKException{
+    public DeleteShieldInstancesResponse DeleteShieldInstances(DeleteShieldInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteShieldInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteShieldInstancesResponse>>() {
@@ -198,7 +198,7 @@ public class MsClient extends AbstractClient{
      * @return DescribeResourceInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeResourceInstancesResponse  DescribeResourceInstances(DescribeResourceInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeResourceInstancesResponse DescribeResourceInstances(DescribeResourceInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceInstancesResponse>>() {
@@ -217,7 +217,7 @@ public class MsClient extends AbstractClient{
      * @return DescribeScanInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeScanInstancesResponse  DescribeScanInstances(DescribeScanInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeScanInstancesResponse DescribeScanInstances(DescribeScanInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanInstancesResponse>>() {
@@ -235,7 +235,7 @@ public class MsClient extends AbstractClient{
      * @return DescribeScanResultsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeScanResultsResponse  DescribeScanResults(DescribeScanResultsRequest req) throws TencentCloudSDKException{
+    public DescribeScanResultsResponse DescribeScanResults(DescribeScanResultsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanResultsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanResultsResponse>>() {
@@ -255,7 +255,7 @@ public class MsClient extends AbstractClient{
      * @return DescribeShieldInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeShieldInstancesResponse  DescribeShieldInstances(DescribeShieldInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeShieldInstancesResponse DescribeShieldInstances(DescribeShieldInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShieldInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShieldInstancesResponse>>() {
@@ -273,7 +273,7 @@ public class MsClient extends AbstractClient{
      * @return DescribeShieldPlanInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeShieldPlanInstanceResponse  DescribeShieldPlanInstance(DescribeShieldPlanInstanceRequest req) throws TencentCloudSDKException{
+    public DescribeShieldPlanInstanceResponse DescribeShieldPlanInstance(DescribeShieldPlanInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShieldPlanInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShieldPlanInstanceResponse>>() {
@@ -291,7 +291,7 @@ public class MsClient extends AbstractClient{
      * @return DescribeShieldResultResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeShieldResultResponse  DescribeShieldResult(DescribeShieldResultRequest req) throws TencentCloudSDKException{
+    public DescribeShieldResultResponse DescribeShieldResult(DescribeShieldResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShieldResultResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShieldResultResponse>>() {
@@ -309,7 +309,7 @@ public class MsClient extends AbstractClient{
      * @return DescribeUserBaseInfoInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeUserBaseInfoInstanceResponse  DescribeUserBaseInfoInstance(DescribeUserBaseInfoInstanceRequest req) throws TencentCloudSDKException{
+    public DescribeUserBaseInfoInstanceResponse DescribeUserBaseInfoInstance(DescribeUserBaseInfoInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserBaseInfoInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserBaseInfoInstanceResponse>>() {

@@ -54,7 +54,7 @@ public class TmtClient extends AbstractClient{
      * @return ImageTranslateResponse
      * @throws TencentCloudSDKException
      */
-    public ImageTranslateResponse  ImageTranslate(ImageTranslateRequest req) throws TencentCloudSDKException{
+    public ImageTranslateResponse ImageTranslate(ImageTranslateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageTranslateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageTranslateResponse>>() {
@@ -72,7 +72,7 @@ public class TmtClient extends AbstractClient{
      * @return LanguageDetectResponse
      * @throws TencentCloudSDKException
      */
-    public LanguageDetectResponse  LanguageDetect(LanguageDetectRequest req) throws TencentCloudSDKException{
+    public LanguageDetectResponse LanguageDetect(LanguageDetectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LanguageDetectResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<LanguageDetectResponse>>() {
@@ -92,7 +92,7 @@ public class TmtClient extends AbstractClient{
      * @return SpeechTranslateResponse
      * @throws TencentCloudSDKException
      */
-    public SpeechTranslateResponse  SpeechTranslate(SpeechTranslateRequest req) throws TencentCloudSDKException{
+    public SpeechTranslateResponse SpeechTranslate(SpeechTranslateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SpeechTranslateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SpeechTranslateResponse>>() {
@@ -111,7 +111,7 @@ public class TmtClient extends AbstractClient{
      * @return TextTranslateResponse
      * @throws TencentCloudSDKException
      */
-    public TextTranslateResponse  TextTranslate(TextTranslateRequest req) throws TencentCloudSDKException{
+    public TextTranslateResponse TextTranslate(TextTranslateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextTranslateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TextTranslateResponse>>() {

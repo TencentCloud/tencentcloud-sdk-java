@@ -54,7 +54,7 @@ public class AaiClient extends AbstractClient{
      * @return ChatResponse
      * @throws TencentCloudSDKException
      */
-    public ChatResponse  Chat(ChatRequest req) throws TencentCloudSDKException{
+    public ChatResponse Chat(ChatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChatResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ChatResponse>>() {
@@ -72,7 +72,7 @@ public class AaiClient extends AbstractClient{
      * @return SentenceRecognitionResponse
      * @throws TencentCloudSDKException
      */
-    public SentenceRecognitionResponse  SentenceRecognition(SentenceRecognitionRequest req) throws TencentCloudSDKException{
+    public SentenceRecognitionResponse SentenceRecognition(SentenceRecognitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SentenceRecognitionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SentenceRecognitionResponse>>() {
@@ -90,7 +90,7 @@ public class AaiClient extends AbstractClient{
      * @return SimultaneousInterpretingResponse
      * @throws TencentCloudSDKException
      */
-    public SimultaneousInterpretingResponse  SimultaneousInterpreting(SimultaneousInterpretingRequest req) throws TencentCloudSDKException{
+    public SimultaneousInterpretingResponse SimultaneousInterpreting(SimultaneousInterpretingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SimultaneousInterpretingResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SimultaneousInterpretingResponse>>() {
@@ -110,7 +110,7 @@ public class AaiClient extends AbstractClient{
      * @return TextToVoiceResponse
      * @throws TencentCloudSDKException
      */
-    public TextToVoiceResponse  TextToVoice(TextToVoiceRequest req) throws TencentCloudSDKException{
+    public TextToVoiceResponse TextToVoice(TextToVoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextToVoiceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TextToVoiceResponse>>() {

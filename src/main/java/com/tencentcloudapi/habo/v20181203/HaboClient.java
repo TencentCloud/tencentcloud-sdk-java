@@ -54,7 +54,7 @@ public class HaboClient extends AbstractClient{
      * @return DescribeStatusResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeStatusResponse  DescribeStatus(DescribeStatusRequest req) throws TencentCloudSDKException{
+    public DescribeStatusResponse DescribeStatus(DescribeStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStatusResponse>>() {
@@ -72,7 +72,7 @@ public class HaboClient extends AbstractClient{
      * @return StartAnalyseResponse
      * @throws TencentCloudSDKException
      */
-    public StartAnalyseResponse  StartAnalyse(StartAnalyseRequest req) throws TencentCloudSDKException{
+    public StartAnalyseResponse StartAnalyse(StartAnalyseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartAnalyseResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<StartAnalyseResponse>>() {

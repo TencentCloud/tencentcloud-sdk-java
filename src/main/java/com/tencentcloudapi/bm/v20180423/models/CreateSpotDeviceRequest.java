@@ -30,7 +30,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     private String Zone;
 
     /**
-    * 计算单元类型
+    * 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
     */
     @SerializedName("ComputeType")
     @Expose
@@ -102,16 +102,16 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计算单元类型
-     * @return ComputeType 计算单元类型
+     * 获取计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
+     * @return ComputeType 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
      */
     public String getComputeType() {
         return this.ComputeType;
     }
 
     /**
-     * 设置计算单元类型
-     * @param ComputeType 计算单元类型
+     * 设置计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
+     * @param ComputeType 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
      */
     public void setComputeType(String ComputeType) {
         this.ComputeType = ComputeType;

@@ -54,7 +54,7 @@ public class SoeClient extends AbstractClient{
      * @return InitOralProcessResponse
      * @throws TencentCloudSDKException
      */
-    public InitOralProcessResponse  InitOralProcess(InitOralProcessRequest req) throws TencentCloudSDKException{
+    public InitOralProcessResponse InitOralProcess(InitOralProcessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InitOralProcessResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InitOralProcessResponse>>() {
@@ -72,7 +72,7 @@ public class SoeClient extends AbstractClient{
      * @return TransmitOralProcessResponse
      * @throws TencentCloudSDKException
      */
-    public TransmitOralProcessResponse  TransmitOralProcess(TransmitOralProcessRequest req) throws TencentCloudSDKException{
+    public TransmitOralProcessResponse TransmitOralProcess(TransmitOralProcessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransmitOralProcessResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TransmitOralProcessResponse>>() {
@@ -90,7 +90,7 @@ public class SoeClient extends AbstractClient{
      * @return TransmitOralProcessWithInitResponse
      * @throws TencentCloudSDKException
      */
-    public TransmitOralProcessWithInitResponse  TransmitOralProcessWithInit(TransmitOralProcessWithInitRequest req) throws TencentCloudSDKException{
+    public TransmitOralProcessWithInitResponse TransmitOralProcessWithInit(TransmitOralProcessWithInitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransmitOralProcessWithInitResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TransmitOralProcessWithInitResponse>>() {

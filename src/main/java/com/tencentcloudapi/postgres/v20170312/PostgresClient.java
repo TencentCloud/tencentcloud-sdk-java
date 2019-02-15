@@ -54,7 +54,7 @@ public class PostgresClient extends AbstractClient{
      * @return CloseDBExtranetAccessResponse
      * @throws TencentCloudSDKException
      */
-    public CloseDBExtranetAccessResponse  CloseDBExtranetAccess(CloseDBExtranetAccessRequest req) throws TencentCloudSDKException{
+    public CloseDBExtranetAccessResponse CloseDBExtranetAccess(CloseDBExtranetAccessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseDBExtranetAccessResponse>>() {
@@ -72,7 +72,7 @@ public class PostgresClient extends AbstractClient{
      * @return CreateDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDBInstancesResponse  CreateDBInstances(CreateDBInstancesRequest req) throws TencentCloudSDKException{
+    public CreateDBInstancesResponse CreateDBInstances(CreateDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstancesResponse>>() {
@@ -90,7 +90,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeAccountsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAccountsResponse  DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
+    public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
@@ -108,7 +108,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeDBBackupsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBBackupsResponse  DescribeDBBackups(DescribeDBBackupsRequest req) throws TencentCloudSDKException{
+    public DescribeDBBackupsResponse DescribeDBBackups(DescribeDBBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBBackupsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBBackupsResponse>>() {
@@ -126,7 +126,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeDBErrlogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBErrlogsResponse  DescribeDBErrlogs(DescribeDBErrlogsRequest req) throws TencentCloudSDKException{
+    public DescribeDBErrlogsResponse DescribeDBErrlogs(DescribeDBErrlogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBErrlogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBErrlogsResponse>>() {
@@ -144,7 +144,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeDBInstanceAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBInstanceAttributeResponse  DescribeDBInstanceAttribute(DescribeDBInstanceAttributeRequest req) throws TencentCloudSDKException{
+    public DescribeDBInstanceAttributeResponse DescribeDBInstanceAttribute(DescribeDBInstanceAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstanceAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceAttributeResponse>>() {
@@ -162,7 +162,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBInstancesResponse  DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
@@ -180,7 +180,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeDBSlowlogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBSlowlogsResponse  DescribeDBSlowlogs(DescribeDBSlowlogsRequest req) throws TencentCloudSDKException{
+    public DescribeDBSlowlogsResponse DescribeDBSlowlogs(DescribeDBSlowlogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBSlowlogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSlowlogsResponse>>() {
@@ -198,7 +198,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeDBXlogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBXlogsResponse  DescribeDBXlogs(DescribeDBXlogsRequest req) throws TencentCloudSDKException{
+    public DescribeDBXlogsResponse DescribeDBXlogs(DescribeDBXlogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBXlogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBXlogsResponse>>() {
@@ -216,7 +216,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeOrdersResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeOrdersResponse  DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
+    public DescribeOrdersResponse DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrdersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
@@ -234,7 +234,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeProductConfigResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeProductConfigResponse  DescribeProductConfig(DescribeProductConfigRequest req) throws TencentCloudSDKException{
+    public DescribeProductConfigResponse DescribeProductConfig(DescribeProductConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductConfigResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductConfigResponse>>() {
@@ -252,7 +252,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeRegionsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeRegionsResponse  DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
+    public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
@@ -270,7 +270,7 @@ public class PostgresClient extends AbstractClient{
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZonesResponse  DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
+    public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZonesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
@@ -288,7 +288,7 @@ public class PostgresClient extends AbstractClient{
      * @return InitDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public InitDBInstancesResponse  InitDBInstances(InitDBInstancesRequest req) throws TencentCloudSDKException{
+    public InitDBInstancesResponse InitDBInstances(InitDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InitDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InitDBInstancesResponse>>() {
@@ -306,7 +306,7 @@ public class PostgresClient extends AbstractClient{
      * @return InquiryPriceCreateDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceCreateDBInstancesResponse  InquiryPriceCreateDBInstances(InquiryPriceCreateDBInstancesRequest req) throws TencentCloudSDKException{
+    public InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstances(InquiryPriceCreateDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateDBInstancesResponse>>() {
@@ -324,7 +324,7 @@ public class PostgresClient extends AbstractClient{
      * @return InquiryPriceRenewDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceRenewDBInstanceResponse  InquiryPriceRenewDBInstance(InquiryPriceRenewDBInstanceRequest req) throws TencentCloudSDKException{
+    public InquiryPriceRenewDBInstanceResponse InquiryPriceRenewDBInstance(InquiryPriceRenewDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceRenewDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewDBInstanceResponse>>() {
@@ -342,7 +342,7 @@ public class PostgresClient extends AbstractClient{
      * @return InquiryPriceUpgradeDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceUpgradeDBInstanceResponse  InquiryPriceUpgradeDBInstance(InquiryPriceUpgradeDBInstanceRequest req) throws TencentCloudSDKException{
+    public InquiryPriceUpgradeDBInstanceResponse InquiryPriceUpgradeDBInstance(InquiryPriceUpgradeDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse>>() {
@@ -360,7 +360,7 @@ public class PostgresClient extends AbstractClient{
      * @return ModifyAccountRemarkResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyAccountRemarkResponse  ModifyAccountRemark(ModifyAccountRemarkRequest req) throws TencentCloudSDKException{
+    public ModifyAccountRemarkResponse ModifyAccountRemark(ModifyAccountRemarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountRemarkResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountRemarkResponse>>() {
@@ -378,7 +378,7 @@ public class PostgresClient extends AbstractClient{
      * @return ModifyDBInstanceNameResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBInstanceNameResponse  ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
+    public ModifyDBInstanceNameResponse ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNameResponse>>() {
@@ -396,7 +396,7 @@ public class PostgresClient extends AbstractClient{
      * @return ModifyDBInstancesProjectResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBInstancesProjectResponse  ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
+    public ModifyDBInstancesProjectResponse ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
@@ -414,7 +414,7 @@ public class PostgresClient extends AbstractClient{
      * @return OpenDBExtranetAccessResponse
      * @throws TencentCloudSDKException
      */
-    public OpenDBExtranetAccessResponse  OpenDBExtranetAccess(OpenDBExtranetAccessRequest req) throws TencentCloudSDKException{
+    public OpenDBExtranetAccessResponse OpenDBExtranetAccess(OpenDBExtranetAccessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenDBExtranetAccessResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenDBExtranetAccessResponse>>() {
@@ -432,7 +432,7 @@ public class PostgresClient extends AbstractClient{
      * @return RenewInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public RenewInstanceResponse  RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
+    public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewInstanceResponse>>() {
@@ -450,7 +450,7 @@ public class PostgresClient extends AbstractClient{
      * @return ResetAccountPasswordResponse
      * @throws TencentCloudSDKException
      */
-    public ResetAccountPasswordResponse  ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
+    public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
@@ -468,7 +468,7 @@ public class PostgresClient extends AbstractClient{
      * @return RestartDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public RestartDBInstanceResponse  RestartDBInstance(RestartDBInstanceRequest req) throws TencentCloudSDKException{
+    public RestartDBInstanceResponse RestartDBInstance(RestartDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartDBInstanceResponse>>() {
@@ -486,7 +486,7 @@ public class PostgresClient extends AbstractClient{
      * @return SetAutoRenewFlagResponse
      * @throws TencentCloudSDKException
      */
-    public SetAutoRenewFlagResponse  SetAutoRenewFlag(SetAutoRenewFlagRequest req) throws TencentCloudSDKException{
+    public SetAutoRenewFlagResponse SetAutoRenewFlag(SetAutoRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetAutoRenewFlagResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SetAutoRenewFlagResponse>>() {
@@ -504,7 +504,7 @@ public class PostgresClient extends AbstractClient{
      * @return UpgradeDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public UpgradeDBInstanceResponse  UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
+    public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {

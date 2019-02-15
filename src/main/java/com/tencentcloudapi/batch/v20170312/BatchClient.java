@@ -54,7 +54,7 @@ public class BatchClient extends AbstractClient{
      * @return CreateComputeEnvResponse
      * @throws TencentCloudSDKException
      */
-    public CreateComputeEnvResponse  CreateComputeEnv(CreateComputeEnvRequest req) throws TencentCloudSDKException{
+    public CreateComputeEnvResponse CreateComputeEnv(CreateComputeEnvRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateComputeEnvResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateComputeEnvResponse>>() {
@@ -72,7 +72,7 @@ public class BatchClient extends AbstractClient{
      * @return CreateTaskTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public CreateTaskTemplateResponse  CreateTaskTemplate(CreateTaskTemplateRequest req) throws TencentCloudSDKException{
+    public CreateTaskTemplateResponse CreateTaskTemplate(CreateTaskTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTaskTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTaskTemplateResponse>>() {
@@ -90,7 +90,7 @@ public class BatchClient extends AbstractClient{
      * @return DeleteComputeEnvResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteComputeEnvResponse  DeleteComputeEnv(DeleteComputeEnvRequest req) throws TencentCloudSDKException{
+    public DeleteComputeEnvResponse DeleteComputeEnv(DeleteComputeEnvRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteComputeEnvResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteComputeEnvResponse>>() {
@@ -110,7 +110,7 @@ public class BatchClient extends AbstractClient{
      * @return DeleteJobResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteJobResponse  DeleteJob(DeleteJobRequest req) throws TencentCloudSDKException{
+    public DeleteJobResponse DeleteJob(DeleteJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteJobResponse>>() {
@@ -128,7 +128,7 @@ public class BatchClient extends AbstractClient{
      * @return DeleteTaskTemplatesResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteTaskTemplatesResponse  DeleteTaskTemplates(DeleteTaskTemplatesRequest req) throws TencentCloudSDKException{
+    public DeleteTaskTemplatesResponse DeleteTaskTemplates(DeleteTaskTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTaskTemplatesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTaskTemplatesResponse>>() {
@@ -146,7 +146,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeAvailableCvmInstanceTypesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAvailableCvmInstanceTypesResponse  DescribeAvailableCvmInstanceTypes(DescribeAvailableCvmInstanceTypesRequest req) throws TencentCloudSDKException{
+    public DescribeAvailableCvmInstanceTypesResponse DescribeAvailableCvmInstanceTypes(DescribeAvailableCvmInstanceTypesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAvailableCvmInstanceTypesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableCvmInstanceTypesResponse>>() {
@@ -164,7 +164,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeComputeEnvResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeComputeEnvResponse  DescribeComputeEnv(DescribeComputeEnvRequest req) throws TencentCloudSDKException{
+    public DescribeComputeEnvResponse DescribeComputeEnv(DescribeComputeEnvRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComputeEnvResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvResponse>>() {
@@ -182,7 +182,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeComputeEnvActivitiesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeComputeEnvActivitiesResponse  DescribeComputeEnvActivities(DescribeComputeEnvActivitiesRequest req) throws TencentCloudSDKException{
+    public DescribeComputeEnvActivitiesResponse DescribeComputeEnvActivities(DescribeComputeEnvActivitiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComputeEnvActivitiesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvActivitiesResponse>>() {
@@ -200,7 +200,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeComputeEnvCreateInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeComputeEnvCreateInfoResponse  DescribeComputeEnvCreateInfo(DescribeComputeEnvCreateInfoRequest req) throws TencentCloudSDKException{
+    public DescribeComputeEnvCreateInfoResponse DescribeComputeEnvCreateInfo(DescribeComputeEnvCreateInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComputeEnvCreateInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvCreateInfoResponse>>() {
@@ -218,7 +218,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeComputeEnvCreateInfosResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeComputeEnvCreateInfosResponse  DescribeComputeEnvCreateInfos(DescribeComputeEnvCreateInfosRequest req) throws TencentCloudSDKException{
+    public DescribeComputeEnvCreateInfosResponse DescribeComputeEnvCreateInfos(DescribeComputeEnvCreateInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComputeEnvCreateInfosResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvCreateInfosResponse>>() {
@@ -236,7 +236,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeComputeEnvsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeComputeEnvsResponse  DescribeComputeEnvs(DescribeComputeEnvsRequest req) throws TencentCloudSDKException{
+    public DescribeComputeEnvsResponse DescribeComputeEnvs(DescribeComputeEnvsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComputeEnvsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComputeEnvsResponse>>() {
@@ -254,7 +254,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeCvmZoneInstanceConfigInfosResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeCvmZoneInstanceConfigInfosResponse  DescribeCvmZoneInstanceConfigInfos(DescribeCvmZoneInstanceConfigInfosRequest req) throws TencentCloudSDKException{
+    public DescribeCvmZoneInstanceConfigInfosResponse DescribeCvmZoneInstanceConfigInfos(DescribeCvmZoneInstanceConfigInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse>>() {
@@ -272,7 +272,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeJobResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeJobResponse  DescribeJob(DescribeJobRequest req) throws TencentCloudSDKException{
+    public DescribeJobResponse DescribeJob(DescribeJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJobResponse>>() {
@@ -290,7 +290,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeJobSubmitInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeJobSubmitInfoResponse  DescribeJobSubmitInfo(DescribeJobSubmitInfoRequest req) throws TencentCloudSDKException{
+    public DescribeJobSubmitInfoResponse DescribeJobSubmitInfo(DescribeJobSubmitInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJobSubmitInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJobSubmitInfoResponse>>() {
@@ -308,7 +308,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeJobsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeJobsResponse  DescribeJobs(DescribeJobsRequest req) throws TencentCloudSDKException{
+    public DescribeJobsResponse DescribeJobs(DescribeJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJobsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJobsResponse>>() {
@@ -326,7 +326,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeTaskResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskResponse  DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
+    public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
@@ -344,7 +344,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeTaskLogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskLogsResponse  DescribeTaskLogs(DescribeTaskLogsRequest req) throws TencentCloudSDKException{
+    public DescribeTaskLogsResponse DescribeTaskLogs(DescribeTaskLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskLogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskLogsResponse>>() {
@@ -362,7 +362,7 @@ public class BatchClient extends AbstractClient{
      * @return DescribeTaskTemplatesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskTemplatesResponse  DescribeTaskTemplates(DescribeTaskTemplatesRequest req) throws TencentCloudSDKException{
+    public DescribeTaskTemplatesResponse DescribeTaskTemplates(DescribeTaskTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskTemplatesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskTemplatesResponse>>() {
@@ -380,7 +380,7 @@ public class BatchClient extends AbstractClient{
      * @return ModifyComputeEnvResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyComputeEnvResponse  ModifyComputeEnv(ModifyComputeEnvRequest req) throws TencentCloudSDKException{
+    public ModifyComputeEnvResponse ModifyComputeEnv(ModifyComputeEnvRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyComputeEnvResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyComputeEnvResponse>>() {
@@ -398,7 +398,7 @@ public class BatchClient extends AbstractClient{
      * @return ModifyTaskTemplateResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyTaskTemplateResponse  ModifyTaskTemplate(ModifyTaskTemplateRequest req) throws TencentCloudSDKException{
+    public ModifyTaskTemplateResponse ModifyTaskTemplate(ModifyTaskTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTaskTemplateResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTaskTemplateResponse>>() {
@@ -417,7 +417,7 @@ public class BatchClient extends AbstractClient{
      * @return RetryJobsResponse
      * @throws TencentCloudSDKException
      */
-    public RetryJobsResponse  RetryJobs(RetryJobsRequest req) throws TencentCloudSDKException{
+    public RetryJobsResponse RetryJobs(RetryJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RetryJobsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RetryJobsResponse>>() {
@@ -435,7 +435,7 @@ public class BatchClient extends AbstractClient{
      * @return SubmitJobResponse
      * @throws TencentCloudSDKException
      */
-    public SubmitJobResponse  SubmitJob(SubmitJobRequest req) throws TencentCloudSDKException{
+    public SubmitJobResponse SubmitJob(SubmitJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitJobResponse>>() {
@@ -454,7 +454,7 @@ public class BatchClient extends AbstractClient{
      * @return TerminateComputeNodeResponse
      * @throws TencentCloudSDKException
      */
-    public TerminateComputeNodeResponse  TerminateComputeNode(TerminateComputeNodeRequest req) throws TencentCloudSDKException{
+    public TerminateComputeNodeResponse TerminateComputeNode(TerminateComputeNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateComputeNodeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateComputeNodeResponse>>() {
@@ -472,7 +472,7 @@ public class BatchClient extends AbstractClient{
      * @return TerminateComputeNodesResponse
      * @throws TencentCloudSDKException
      */
-    public TerminateComputeNodesResponse  TerminateComputeNodes(TerminateComputeNodesRequest req) throws TencentCloudSDKException{
+    public TerminateComputeNodesResponse TerminateComputeNodes(TerminateComputeNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateComputeNodesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateComputeNodesResponse>>() {
@@ -492,7 +492,7 @@ public class BatchClient extends AbstractClient{
      * @return TerminateJobResponse
      * @throws TencentCloudSDKException
      */
-    public TerminateJobResponse  TerminateJob(TerminateJobRequest req) throws TencentCloudSDKException{
+    public TerminateJobResponse TerminateJob(TerminateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateJobResponse>>() {
@@ -514,7 +514,7 @@ public class BatchClient extends AbstractClient{
      * @return TerminateTaskInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public TerminateTaskInstanceResponse  TerminateTaskInstance(TerminateTaskInstanceRequest req) throws TencentCloudSDKException{
+    public TerminateTaskInstanceResponse TerminateTaskInstance(TerminateTaskInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateTaskInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateTaskInstanceResponse>>() {

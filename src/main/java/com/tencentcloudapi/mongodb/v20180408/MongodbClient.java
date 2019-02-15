@@ -54,7 +54,7 @@ public class MongodbClient extends AbstractClient{
      * @return CreateDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDBInstanceResponse  CreateDBInstance(CreateDBInstanceRequest req) throws TencentCloudSDKException{
+    public CreateDBInstanceResponse CreateDBInstance(CreateDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceResponse>>() {
@@ -72,7 +72,7 @@ public class MongodbClient extends AbstractClient{
      * @return CreateDBInstanceHourResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDBInstanceHourResponse  CreateDBInstanceHour(CreateDBInstanceHourRequest req) throws TencentCloudSDKException{
+    public CreateDBInstanceHourResponse CreateDBInstanceHour(CreateDBInstanceHourRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstanceHourResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceHourResponse>>() {
@@ -90,7 +90,7 @@ public class MongodbClient extends AbstractClient{
      * @return TerminateDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public TerminateDBInstanceResponse  TerminateDBInstance(TerminateDBInstanceRequest req) throws TencentCloudSDKException{
+    public TerminateDBInstanceResponse TerminateDBInstance(TerminateDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateDBInstanceResponse>>() {
@@ -108,7 +108,7 @@ public class MongodbClient extends AbstractClient{
      * @return UpgradeDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public UpgradeDBInstanceResponse  UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
+    public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {
@@ -126,7 +126,7 @@ public class MongodbClient extends AbstractClient{
      * @return UpgradeDBInstanceHourResponse
      * @throws TencentCloudSDKException
      */
-    public UpgradeDBInstanceHourResponse  UpgradeDBInstanceHour(UpgradeDBInstanceHourRequest req) throws TencentCloudSDKException{
+    public UpgradeDBInstanceHourResponse UpgradeDBInstanceHour(UpgradeDBInstanceHourRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDBInstanceHourResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceHourResponse>>() {

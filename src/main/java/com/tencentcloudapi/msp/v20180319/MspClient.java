@@ -54,7 +54,7 @@ public class MspClient extends AbstractClient{
      * @return DeregisterMigrationTaskResponse
      * @throws TencentCloudSDKException
      */
-    public DeregisterMigrationTaskResponse  DeregisterMigrationTask(DeregisterMigrationTaskRequest req) throws TencentCloudSDKException{
+    public DeregisterMigrationTaskResponse DeregisterMigrationTask(DeregisterMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeregisterMigrationTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeregisterMigrationTaskResponse>>() {
@@ -72,7 +72,7 @@ public class MspClient extends AbstractClient{
      * @return DescribeMigrationTaskResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMigrationTaskResponse  DescribeMigrationTask(DescribeMigrationTaskRequest req) throws TencentCloudSDKException{
+    public DescribeMigrationTaskResponse DescribeMigrationTask(DescribeMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrationTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrationTaskResponse>>() {
@@ -90,7 +90,7 @@ public class MspClient extends AbstractClient{
      * @return ListMigrationProjectResponse
      * @throws TencentCloudSDKException
      */
-    public ListMigrationProjectResponse  ListMigrationProject(ListMigrationProjectRequest req) throws TencentCloudSDKException{
+    public ListMigrationProjectResponse ListMigrationProject(ListMigrationProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListMigrationProjectResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ListMigrationProjectResponse>>() {
@@ -108,7 +108,7 @@ public class MspClient extends AbstractClient{
      * @return ListMigrationTaskResponse
      * @throws TencentCloudSDKException
      */
-    public ListMigrationTaskResponse  ListMigrationTask(ListMigrationTaskRequest req) throws TencentCloudSDKException{
+    public ListMigrationTaskResponse ListMigrationTask(ListMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListMigrationTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ListMigrationTaskResponse>>() {
@@ -126,7 +126,7 @@ public class MspClient extends AbstractClient{
      * @return ModifyMigrationTaskBelongToProjectResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMigrationTaskBelongToProjectResponse  ModifyMigrationTaskBelongToProject(ModifyMigrationTaskBelongToProjectRequest req) throws TencentCloudSDKException{
+    public ModifyMigrationTaskBelongToProjectResponse ModifyMigrationTaskBelongToProject(ModifyMigrationTaskBelongToProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMigrationTaskBelongToProjectResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationTaskBelongToProjectResponse>>() {
@@ -144,7 +144,7 @@ public class MspClient extends AbstractClient{
      * @return ModifyMigrationTaskStatusResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMigrationTaskStatusResponse  ModifyMigrationTaskStatus(ModifyMigrationTaskStatusRequest req) throws TencentCloudSDKException{
+    public ModifyMigrationTaskStatusResponse ModifyMigrationTaskStatus(ModifyMigrationTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMigrationTaskStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationTaskStatusResponse>>() {
@@ -162,7 +162,7 @@ public class MspClient extends AbstractClient{
      * @return RegisterMigrationTaskResponse
      * @throws TencentCloudSDKException
      */
-    public RegisterMigrationTaskResponse  RegisterMigrationTask(RegisterMigrationTaskRequest req) throws TencentCloudSDKException{
+    public RegisterMigrationTaskResponse RegisterMigrationTask(RegisterMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterMigrationTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterMigrationTaskResponse>>() {

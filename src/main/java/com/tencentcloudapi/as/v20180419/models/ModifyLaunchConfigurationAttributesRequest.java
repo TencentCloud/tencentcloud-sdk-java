@@ -64,7 +64,7 @@ public class ModifyLaunchConfigurationAttributesRequest  extends AbstractModel{
     private String LaunchConfigurationName;
 
     /**
-    * 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
+    * 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串
     */
     @SerializedName("UserData")
     @Expose
@@ -175,16 +175,16 @@ public class ModifyLaunchConfigurationAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
-     * @return UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
+     * 获取经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串
+     * @return UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * 设置经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
-     * @param UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
+     * 设置经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串
+     * @param UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;

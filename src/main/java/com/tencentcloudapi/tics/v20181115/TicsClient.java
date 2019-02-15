@@ -54,7 +54,7 @@ public class TicsClient extends AbstractClient{
      * @return DescribeDomainInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDomainInfoResponse  DescribeDomainInfo(DescribeDomainInfoRequest req) throws TencentCloudSDKException{
+    public DescribeDomainInfoResponse DescribeDomainInfo(DescribeDomainInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainInfoResponse>>() {
@@ -72,7 +72,7 @@ public class TicsClient extends AbstractClient{
      * @return DescribeFileInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeFileInfoResponse  DescribeFileInfo(DescribeFileInfoRequest req) throws TencentCloudSDKException{
+    public DescribeFileInfoResponse DescribeFileInfo(DescribeFileInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileInfoResponse>>() {
@@ -90,7 +90,7 @@ public class TicsClient extends AbstractClient{
      * @return DescribeIpInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeIpInfoResponse  DescribeIpInfo(DescribeIpInfoRequest req) throws TencentCloudSDKException{
+    public DescribeIpInfoResponse DescribeIpInfo(DescribeIpInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIpInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIpInfoResponse>>() {
@@ -108,7 +108,7 @@ public class TicsClient extends AbstractClient{
      * @return DescribeThreatInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeThreatInfoResponse  DescribeThreatInfo(DescribeThreatInfoRequest req) throws TencentCloudSDKException{
+    public DescribeThreatInfoResponse DescribeThreatInfo(DescribeThreatInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeThreatInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeThreatInfoResponse>>() {

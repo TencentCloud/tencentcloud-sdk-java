@@ -55,7 +55,7 @@ public class ClbClient extends AbstractClient{
      * @return CreateListenerResponse
      * @throws TencentCloudSDKException
      */
-    public CreateListenerResponse  CreateListener(CreateListenerRequest req) throws TencentCloudSDKException{
+    public CreateListenerResponse CreateListener(CreateListenerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateListenerResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateListenerResponse>>() {
@@ -74,7 +74,7 @@ public class ClbClient extends AbstractClient{
      * @return CreateLoadBalancerResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLoadBalancerResponse  CreateLoadBalancer(CreateLoadBalancerRequest req) throws TencentCloudSDKException{
+    public CreateLoadBalancerResponse CreateLoadBalancer(CreateLoadBalancerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLoadBalancerResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLoadBalancerResponse>>() {
@@ -93,7 +93,7 @@ public class ClbClient extends AbstractClient{
      * @return CreateRuleResponse
      * @throws TencentCloudSDKException
      */
-    public CreateRuleResponse  CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
+    public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
@@ -112,7 +112,7 @@ public class ClbClient extends AbstractClient{
      * @return DeleteListenerResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteListenerResponse  DeleteListener(DeleteListenerRequest req) throws TencentCloudSDKException{
+    public DeleteListenerResponse DeleteListener(DeleteListenerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteListenerResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteListenerResponse>>() {
@@ -131,7 +131,7 @@ public class ClbClient extends AbstractClient{
      * @return DeleteLoadBalancerResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteLoadBalancerResponse  DeleteLoadBalancer(DeleteLoadBalancerRequest req) throws TencentCloudSDKException{
+    public DeleteLoadBalancerResponse DeleteLoadBalancer(DeleteLoadBalancerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLoadBalancerResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerResponse>>() {
@@ -150,7 +150,7 @@ public class ClbClient extends AbstractClient{
      * @return DeleteRuleResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteRuleResponse  DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
+    public DeleteRuleResponse DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
@@ -169,7 +169,7 @@ public class ClbClient extends AbstractClient{
      * @return DeregisterTargetsResponse
      * @throws TencentCloudSDKException
      */
-    public DeregisterTargetsResponse  DeregisterTargets(DeregisterTargetsRequest req) throws TencentCloudSDKException{
+    public DeregisterTargetsResponse DeregisterTargets(DeregisterTargetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeregisterTargetsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeregisterTargetsResponse>>() {
@@ -187,7 +187,7 @@ public class ClbClient extends AbstractClient{
      * @return DeregisterTargetsFromClassicalLBResponse
      * @throws TencentCloudSDKException
      */
-    public DeregisterTargetsFromClassicalLBResponse  DeregisterTargetsFromClassicalLB(DeregisterTargetsFromClassicalLBRequest req) throws TencentCloudSDKException{
+    public DeregisterTargetsFromClassicalLBResponse DeregisterTargetsFromClassicalLB(DeregisterTargetsFromClassicalLBRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeregisterTargetsFromClassicalLBResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeregisterTargetsFromClassicalLBResponse>>() {
@@ -205,7 +205,7 @@ public class ClbClient extends AbstractClient{
      * @return DescribeClassicalLBByInstanceIdResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeClassicalLBByInstanceIdResponse  DescribeClassicalLBByInstanceId(DescribeClassicalLBByInstanceIdRequest req) throws TencentCloudSDKException{
+    public DescribeClassicalLBByInstanceIdResponse DescribeClassicalLBByInstanceId(DescribeClassicalLBByInstanceIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClassicalLBByInstanceIdResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBByInstanceIdResponse>>() {
@@ -223,7 +223,7 @@ public class ClbClient extends AbstractClient{
      * @return DescribeClassicalLBHealthStatusResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeClassicalLBHealthStatusResponse  DescribeClassicalLBHealthStatus(DescribeClassicalLBHealthStatusRequest req) throws TencentCloudSDKException{
+    public DescribeClassicalLBHealthStatusResponse DescribeClassicalLBHealthStatus(DescribeClassicalLBHealthStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClassicalLBHealthStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBHealthStatusResponse>>() {
@@ -241,7 +241,7 @@ public class ClbClient extends AbstractClient{
      * @return DescribeClassicalLBListenersResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeClassicalLBListenersResponse  DescribeClassicalLBListeners(DescribeClassicalLBListenersRequest req) throws TencentCloudSDKException{
+    public DescribeClassicalLBListenersResponse DescribeClassicalLBListeners(DescribeClassicalLBListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClassicalLBListenersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBListenersResponse>>() {
@@ -259,7 +259,7 @@ public class ClbClient extends AbstractClient{
      * @return DescribeClassicalLBTargetsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeClassicalLBTargetsResponse  DescribeClassicalLBTargets(DescribeClassicalLBTargetsRequest req) throws TencentCloudSDKException{
+    public DescribeClassicalLBTargetsResponse DescribeClassicalLBTargets(DescribeClassicalLBTargetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClassicalLBTargetsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBTargetsResponse>>() {
@@ -277,7 +277,7 @@ public class ClbClient extends AbstractClient{
      * @return DescribeListenersResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeListenersResponse  DescribeListeners(DescribeListenersRequest req) throws TencentCloudSDKException{
+    public DescribeListenersResponse DescribeListeners(DescribeListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListenersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListenersResponse>>() {
@@ -296,7 +296,7 @@ public class ClbClient extends AbstractClient{
      * @return DescribeLoadBalancersResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLoadBalancersResponse  DescribeLoadBalancers(DescribeLoadBalancersRequest req) throws TencentCloudSDKException{
+    public DescribeLoadBalancersResponse DescribeLoadBalancers(DescribeLoadBalancersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLoadBalancersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancersResponse>>() {
@@ -314,7 +314,7 @@ public class ClbClient extends AbstractClient{
      * @return DescribeTargetsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTargetsResponse  DescribeTargets(DescribeTargetsRequest req) throws TencentCloudSDKException{
+    public DescribeTargetsResponse DescribeTargets(DescribeTargetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTargetsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTargetsResponse>>() {
@@ -332,7 +332,7 @@ public class ClbClient extends AbstractClient{
      * @return DescribeTaskStatusResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskStatusResponse  DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
+    public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
@@ -351,7 +351,7 @@ public class ClbClient extends AbstractClient{
      * @return ModifyDomainResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDomainResponse  ModifyDomain(ModifyDomainRequest req) throws TencentCloudSDKException{
+    public ModifyDomainResponse ModifyDomain(ModifyDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainResponse>>() {
@@ -370,7 +370,7 @@ public class ClbClient extends AbstractClient{
      * @return ModifyListenerResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyListenerResponse  ModifyListener(ModifyListenerRequest req) throws TencentCloudSDKException{
+    public ModifyListenerResponse ModifyListener(ModifyListenerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyListenerResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyListenerResponse>>() {
@@ -389,7 +389,7 @@ public class ClbClient extends AbstractClient{
      * @return ModifyLoadBalancerAttributesResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLoadBalancerAttributesResponse  ModifyLoadBalancerAttributes(ModifyLoadBalancerAttributesRequest req) throws TencentCloudSDKException{
+    public ModifyLoadBalancerAttributesResponse ModifyLoadBalancerAttributes(ModifyLoadBalancerAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLoadBalancerAttributesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerAttributesResponse>>() {
@@ -408,7 +408,7 @@ public class ClbClient extends AbstractClient{
      * @return ModifyRuleResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyRuleResponse  ModifyRule(ModifyRuleRequest req) throws TencentCloudSDKException{
+    public ModifyRuleResponse ModifyRule(ModifyRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRuleResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRuleResponse>>() {
@@ -427,7 +427,7 @@ public class ClbClient extends AbstractClient{
      * @return ModifyTargetPortResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyTargetPortResponse  ModifyTargetPort(ModifyTargetPortRequest req) throws TencentCloudSDKException{
+    public ModifyTargetPortResponse ModifyTargetPort(ModifyTargetPortRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTargetPortResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTargetPortResponse>>() {
@@ -446,7 +446,7 @@ public class ClbClient extends AbstractClient{
      * @return ModifyTargetWeightResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyTargetWeightResponse  ModifyTargetWeight(ModifyTargetWeightRequest req) throws TencentCloudSDKException{
+    public ModifyTargetWeightResponse ModifyTargetWeight(ModifyTargetWeightRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTargetWeightResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTargetWeightResponse>>() {
@@ -465,7 +465,7 @@ public class ClbClient extends AbstractClient{
      * @return RegisterTargetsResponse
      * @throws TencentCloudSDKException
      */
-    public RegisterTargetsResponse  RegisterTargets(RegisterTargetsRequest req) throws TencentCloudSDKException{
+    public RegisterTargetsResponse RegisterTargets(RegisterTargetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterTargetsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterTargetsResponse>>() {
@@ -483,7 +483,7 @@ public class ClbClient extends AbstractClient{
      * @return RegisterTargetsWithClassicalLBResponse
      * @throws TencentCloudSDKException
      */
-    public RegisterTargetsWithClassicalLBResponse  RegisterTargetsWithClassicalLB(RegisterTargetsWithClassicalLBRequest req) throws TencentCloudSDKException{
+    public RegisterTargetsWithClassicalLBResponse RegisterTargetsWithClassicalLB(RegisterTargetsWithClassicalLBRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterTargetsWithClassicalLBResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterTargetsWithClassicalLBResponse>>() {

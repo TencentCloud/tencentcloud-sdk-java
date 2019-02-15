@@ -54,7 +54,7 @@ public class BmClient extends AbstractClient{
      * @return BindPsaTagResponse
      * @throws TencentCloudSDKException
      */
-    public BindPsaTagResponse  BindPsaTag(BindPsaTagRequest req) throws TencentCloudSDKException{
+    public BindPsaTagResponse BindPsaTag(BindPsaTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindPsaTagResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<BindPsaTagResponse>>() {
@@ -67,12 +67,49 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *购买黑石物理机
+     * @param req BuyDevicesRequest
+     * @return BuyDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public BuyDevicesResponse BuyDevices(BuyDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BuyDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BuyDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BuyDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建自定义镜像<br>
+每个AppId在每个可用区最多保留20个自定义镜像
+     * @param req CreateCustomImageRequest
+     * @return CreateCustomImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomImageResponse CreateCustomImage(CreateCustomImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomImageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomImageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCustomImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建预授权规则
      * @param req CreatePsaRegulationRequest
      * @return CreatePsaRegulationResponse
      * @throws TencentCloudSDKException
      */
-    public CreatePsaRegulationResponse  CreatePsaRegulation(CreatePsaRegulationRequest req) throws TencentCloudSDKException{
+    public CreatePsaRegulationResponse CreatePsaRegulation(CreatePsaRegulationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePsaRegulationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePsaRegulationResponse>>() {
@@ -90,7 +127,7 @@ public class BmClient extends AbstractClient{
      * @return CreateSpotDeviceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateSpotDeviceResponse  CreateSpotDevice(CreateSpotDeviceRequest req) throws TencentCloudSDKException{
+    public CreateSpotDeviceResponse CreateSpotDevice(CreateSpotDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSpotDeviceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSpotDeviceResponse>>() {
@@ -108,7 +145,7 @@ public class BmClient extends AbstractClient{
      * @return CreateUserCmdResponse
      * @throws TencentCloudSDKException
      */
-    public CreateUserCmdResponse  CreateUserCmd(CreateUserCmdRequest req) throws TencentCloudSDKException{
+    public CreateUserCmdResponse CreateUserCmd(CreateUserCmdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserCmdResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserCmdResponse>>() {
@@ -121,12 +158,31 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *删除自定义镜像<br>
+正用于部署或重装中的镜像被删除后，镜像文件将保留一段时间，直到部署或重装结束
+     * @param req DeleteCustomImagesRequest
+     * @return DeleteCustomImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomImagesResponse DeleteCustomImages(DeleteCustomImagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCustomImagesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCustomImagesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteCustomImages"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除预授权规则
      * @param req DeletePsaRegulationRequest
      * @return DeletePsaRegulationResponse
      * @throws TencentCloudSDKException
      */
-    public DeletePsaRegulationResponse  DeletePsaRegulation(DeletePsaRegulationRequest req) throws TencentCloudSDKException{
+    public DeletePsaRegulationResponse DeletePsaRegulation(DeletePsaRegulationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePsaRegulationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePsaRegulationResponse>>() {
@@ -144,7 +200,7 @@ public class BmClient extends AbstractClient{
      * @return DeleteUserCmdsResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteUserCmdsResponse  DeleteUserCmds(DeleteUserCmdsRequest req) throws TencentCloudSDKException{
+    public DeleteUserCmdsResponse DeleteUserCmds(DeleteUserCmdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserCmdsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserCmdsResponse>>() {
@@ -157,12 +213,48 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *查询自定义镜像制作进度
+     * @param req DescribeCustomImageProcessRequest
+     * @return DescribeCustomImageProcessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomImageProcessResponse DescribeCustomImageProcess(DescribeCustomImageProcessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomImageProcessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomImageProcessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCustomImageProcess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看自定义镜像列表
+     * @param req DescribeCustomImagesRequest
+     * @return DescribeCustomImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomImagesResponse DescribeCustomImages(DescribeCustomImagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomImagesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomImagesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCustomImages"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取获取设备类型
      * @param req DescribeDeviceClassRequest
      * @return DescribeDeviceClassResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDeviceClassResponse  DescribeDeviceClass(DescribeDeviceClassRequest req) throws TencentCloudSDKException{
+    public DescribeDeviceClassResponse DescribeDeviceClass(DescribeDeviceClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceClassResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceClassResponse>>() {
@@ -175,12 +267,30 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *查询机型支持的RAID方式， 并返回系统盘的分区和逻辑盘的列表
+     * @param req DescribeDeviceClassPartitionRequest
+     * @return DescribeDeviceClassPartitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceClassPartitionResponse DescribeDeviceClassPartition(DescribeDeviceClassPartitionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceClassPartitionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceClassPartitionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDeviceClassPartition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询设备库存
      * @param req DescribeDeviceInventoryRequest
      * @return DescribeDeviceInventoryResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDeviceInventoryResponse  DescribeDeviceInventory(DescribeDeviceInventoryRequest req) throws TencentCloudSDKException{
+    public DescribeDeviceInventoryResponse DescribeDeviceInventory(DescribeDeviceInventoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceInventoryResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceInventoryResponse>>() {
@@ -198,7 +308,7 @@ public class BmClient extends AbstractClient{
      * @return DescribeDeviceOperationLogResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDeviceOperationLogResponse  DescribeDeviceOperationLog(DescribeDeviceOperationLogRequest req) throws TencentCloudSDKException{
+    public DescribeDeviceOperationLogResponse DescribeDeviceOperationLog(DescribeDeviceOperationLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceOperationLogResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceOperationLogResponse>>() {
@@ -211,12 +321,30 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *获取物理机的分区格式
+     * @param req DescribeDevicePartitionRequest
+     * @return DescribeDevicePartitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDevicePartitionResponse DescribeDevicePartition(DescribeDevicePartitionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDevicePartitionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDevicePartitionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDevicePartition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询服务器所在的位置，如机架，上联交换机等信息
      * @param req DescribeDevicePositionRequest
      * @return DescribeDevicePositionResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDevicePositionResponse  DescribeDevicePosition(DescribeDevicePositionRequest req) throws TencentCloudSDKException{
+    public DescribeDevicePositionResponse DescribeDevicePosition(DescribeDevicePositionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicePositionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicePositionResponse>>() {
@@ -234,7 +362,7 @@ public class BmClient extends AbstractClient{
      * @return DescribeDevicePriceInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDevicePriceInfoResponse  DescribeDevicePriceInfo(DescribeDevicePriceInfoRequest req) throws TencentCloudSDKException{
+    public DescribeDevicePriceInfoResponse DescribeDevicePriceInfo(DescribeDevicePriceInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicePriceInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicePriceInfoResponse>>() {
@@ -252,7 +380,7 @@ public class BmClient extends AbstractClient{
      * @return DescribeDevicesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDevicesResponse  DescribeDevices(DescribeDevicesRequest req) throws TencentCloudSDKException{
+    public DescribeDevicesResponse DescribeDevices(DescribeDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
@@ -265,12 +393,30 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *获取异步操作状态的完成状态
+     * @param req DescribeOperationResultRequest
+     * @return DescribeOperationResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOperationResultResponse DescribeOperationResult(DescribeOperationResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOperationResultResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOperationResultResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeOperationResult"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询指定机型所支持的操作系统
      * @param req DescribeOsInfoRequest
      * @return DescribeOsInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeOsInfoResponse  DescribeOsInfo(DescribeOsInfoRequest req) throws TencentCloudSDKException{
+    public DescribeOsInfoResponse DescribeOsInfo(DescribeOsInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOsInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOsInfoResponse>>() {
@@ -288,7 +434,7 @@ public class BmClient extends AbstractClient{
      * @return DescribePsaRegulationsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePsaRegulationsResponse  DescribePsaRegulations(DescribePsaRegulationsRequest req) throws TencentCloudSDKException{
+    public DescribePsaRegulationsResponse DescribePsaRegulations(DescribePsaRegulationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePsaRegulationsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePsaRegulationsResponse>>() {
@@ -306,7 +452,7 @@ public class BmClient extends AbstractClient{
      * @return DescribeRepairTaskConstantResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeRepairTaskConstantResponse  DescribeRepairTaskConstant(DescribeRepairTaskConstantRequest req) throws TencentCloudSDKException{
+    public DescribeRepairTaskConstantResponse DescribeRepairTaskConstant(DescribeRepairTaskConstantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRepairTaskConstantResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRepairTaskConstantResponse>>() {
@@ -332,7 +478,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
      * @return DescribeTaskInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskInfoResponse  DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
+    public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
@@ -350,7 +496,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
      * @return DescribeTaskOperationLogResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskOperationLogResponse  DescribeTaskOperationLog(DescribeTaskOperationLogRequest req) throws TencentCloudSDKException{
+    public DescribeTaskOperationLogResponse DescribeTaskOperationLog(DescribeTaskOperationLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskOperationLogResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskOperationLogResponse>>() {
@@ -368,7 +514,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
      * @return DescribeUserCmdTaskInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeUserCmdTaskInfoResponse  DescribeUserCmdTaskInfo(DescribeUserCmdTaskInfoRequest req) throws TencentCloudSDKException{
+    public DescribeUserCmdTaskInfoResponse DescribeUserCmdTaskInfo(DescribeUserCmdTaskInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserCmdTaskInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserCmdTaskInfoResponse>>() {
@@ -386,7 +532,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
      * @return DescribeUserCmdTasksResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeUserCmdTasksResponse  DescribeUserCmdTasks(DescribeUserCmdTasksRequest req) throws TencentCloudSDKException{
+    public DescribeUserCmdTasksResponse DescribeUserCmdTasks(DescribeUserCmdTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserCmdTasksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserCmdTasksResponse>>() {
@@ -404,7 +550,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
      * @return DescribeUserCmdsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeUserCmdsResponse  DescribeUserCmds(DescribeUserCmdsRequest req) throws TencentCloudSDKException{
+    public DescribeUserCmdsResponse DescribeUserCmds(DescribeUserCmdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserCmdsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserCmdsResponse>>() {
@@ -417,12 +563,30 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     }
 
     /**
+     *用于修改自定义镜像名或描述
+     * @param req ModifyCustomImageAttributeRequest
+     * @return ModifyCustomImageAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomImageAttributeResponse ModifyCustomImageAttribute(ModifyCustomImageAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomImageAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomImageAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyCustomImageAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改服务器名称
      * @param req ModifyDeviceAliasesRequest
      * @return ModifyDeviceAliasesResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDeviceAliasesResponse  ModifyDeviceAliases(ModifyDeviceAliasesRequest req) throws TencentCloudSDKException{
+    public ModifyDeviceAliasesResponse ModifyDeviceAliases(ModifyDeviceAliasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDeviceAliasesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceAliasesResponse>>() {
@@ -440,7 +604,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
      * @return ModifyDeviceAutoRenewFlagResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDeviceAutoRenewFlagResponse  ModifyDeviceAutoRenewFlag(ModifyDeviceAutoRenewFlagRequest req) throws TencentCloudSDKException{
+    public ModifyDeviceAutoRenewFlagResponse ModifyDeviceAutoRenewFlag(ModifyDeviceAutoRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDeviceAutoRenewFlagResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceAutoRenewFlagResponse>>() {
@@ -453,12 +617,30 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     }
 
     /**
+     *修改物理机内网IP（不重装系统）
+     * @param req ModifyLanIpRequest
+     * @return ModifyLanIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLanIpResponse ModifyLanIp(ModifyLanIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLanIpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLanIpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLanIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *将设备的预付费模式修改为后付费计费模式，支持批量转换。（前提是客户要加入黑石物理机后付费计费的白名单，申请黑石物理机后付费可以联系腾讯云客服）
      * @param req ModifyPayModePre2PostRequest
      * @return ModifyPayModePre2PostResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyPayModePre2PostResponse  ModifyPayModePre2Post(ModifyPayModePre2PostRequest req) throws TencentCloudSDKException{
+    public ModifyPayModePre2PostResponse ModifyPayModePre2Post(ModifyPayModePre2PostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPayModePre2PostResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPayModePre2PostResponse>>() {
@@ -476,7 +658,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
      * @return ModifyPsaRegulationResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyPsaRegulationResponse  ModifyPsaRegulation(ModifyPsaRegulationRequest req) throws TencentCloudSDKException{
+    public ModifyPsaRegulationResponse ModifyPsaRegulation(ModifyPsaRegulationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPsaRegulationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPsaRegulationResponse>>() {
@@ -494,7 +676,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
      * @return ModifyUserCmdResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyUserCmdResponse  ModifyUserCmd(ModifyUserCmdRequest req) throws TencentCloudSDKException{
+    public ModifyUserCmdResponse ModifyUserCmd(ModifyUserCmdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUserCmdResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUserCmdResponse>>() {
@@ -512,7 +694,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
      * @return OfflineDevicesResponse
      * @throws TencentCloudSDKException
      */
-    public OfflineDevicesResponse  OfflineDevices(OfflineDevicesRequest req) throws TencentCloudSDKException{
+    public OfflineDevicesResponse OfflineDevices(OfflineDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OfflineDevicesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<OfflineDevicesResponse>>() {
@@ -530,7 +712,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
      * @return RebootDevicesResponse
      * @throws TencentCloudSDKException
      */
-    public RebootDevicesResponse  RebootDevices(RebootDevicesRequest req) throws TencentCloudSDKException{
+    public RebootDevicesResponse RebootDevices(RebootDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RebootDevicesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RebootDevicesResponse>>() {
@@ -568,7 +750,7 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
      * @return RepairTaskControlResponse
      * @throws TencentCloudSDKException
      */
-    public RepairTaskControlResponse  RepairTaskControl(RepairTaskControlRequest req) throws TencentCloudSDKException{
+    public RepairTaskControlResponse RepairTaskControl(RepairTaskControlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RepairTaskControlResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RepairTaskControlResponse>>() {
@@ -586,7 +768,7 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
      * @return ResetDevicePasswordResponse
      * @throws TencentCloudSDKException
      */
-    public ResetDevicePasswordResponse  ResetDevicePassword(ResetDevicePasswordRequest req) throws TencentCloudSDKException{
+    public ResetDevicePasswordResponse ResetDevicePassword(ResetDevicePasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetDevicePasswordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetDevicePasswordResponse>>() {
@@ -604,7 +786,7 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
      * @return RunUserCmdResponse
      * @throws TencentCloudSDKException
      */
-    public RunUserCmdResponse  RunUserCmd(RunUserCmdRequest req) throws TencentCloudSDKException{
+    public RunUserCmdResponse RunUserCmd(RunUserCmdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunUserCmdResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RunUserCmdResponse>>() {
@@ -622,7 +804,7 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
      * @return SetOutBandVpnAuthPasswordResponse
      * @throws TencentCloudSDKException
      */
-    public SetOutBandVpnAuthPasswordResponse  SetOutBandVpnAuthPassword(SetOutBandVpnAuthPasswordRequest req) throws TencentCloudSDKException{
+    public SetOutBandVpnAuthPasswordResponse SetOutBandVpnAuthPassword(SetOutBandVpnAuthPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetOutBandVpnAuthPasswordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SetOutBandVpnAuthPasswordResponse>>() {
@@ -635,12 +817,30 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
     }
 
     /**
+     *关闭服务器
+     * @param req ShutdownDevicesRequest
+     * @return ShutdownDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ShutdownDevicesResponse ShutdownDevices(ShutdownDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ShutdownDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ShutdownDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ShutdownDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *解除标签与预授权规则的绑定
      * @param req UnbindPsaTagRequest
      * @return UnbindPsaTagResponse
      * @throws TencentCloudSDKException
      */
-    public UnbindPsaTagResponse  UnbindPsaTag(UnbindPsaTagRequest req) throws TencentCloudSDKException{
+    public UnbindPsaTagResponse UnbindPsaTag(UnbindPsaTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindPsaTagResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindPsaTagResponse>>() {

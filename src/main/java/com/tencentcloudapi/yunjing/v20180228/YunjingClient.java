@@ -54,7 +54,7 @@ public class YunjingClient extends AbstractClient{
      * @return CloseProVersionResponse
      * @throws TencentCloudSDKException
      */
-    public CloseProVersionResponse  CloseProVersion(CloseProVersionRequest req) throws TencentCloudSDKException{
+    public CloseProVersionResponse CloseProVersion(CloseProVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseProVersionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseProVersionResponse>>() {
@@ -72,7 +72,7 @@ public class YunjingClient extends AbstractClient{
      * @return CreateProcessTaskResponse
      * @throws TencentCloudSDKException
      */
-    public CreateProcessTaskResponse  CreateProcessTask(CreateProcessTaskRequest req) throws TencentCloudSDKException{
+    public CreateProcessTaskResponse CreateProcessTask(CreateProcessTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProcessTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProcessTaskResponse>>() {
@@ -90,7 +90,7 @@ public class YunjingClient extends AbstractClient{
      * @return CreateUsualLoginPlacesResponse
      * @throws TencentCloudSDKException
      */
-    public CreateUsualLoginPlacesResponse  CreateUsualLoginPlaces(CreateUsualLoginPlacesRequest req) throws TencentCloudSDKException{
+    public CreateUsualLoginPlacesResponse CreateUsualLoginPlaces(CreateUsualLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUsualLoginPlacesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUsualLoginPlacesResponse>>() {
@@ -108,7 +108,7 @@ public class YunjingClient extends AbstractClient{
      * @return DeleteBruteAttacksResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteBruteAttacksResponse  DeleteBruteAttacks(DeleteBruteAttacksRequest req) throws TencentCloudSDKException{
+    public DeleteBruteAttacksResponse DeleteBruteAttacks(DeleteBruteAttacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBruteAttacksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBruteAttacksResponse>>() {
@@ -126,7 +126,7 @@ public class YunjingClient extends AbstractClient{
      * @return DeleteMachineResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMachineResponse  DeleteMachine(DeleteMachineRequest req) throws TencentCloudSDKException{
+    public DeleteMachineResponse DeleteMachine(DeleteMachineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMachineResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMachineResponse>>() {
@@ -144,7 +144,7 @@ public class YunjingClient extends AbstractClient{
      * @return DeleteMaliciousRequestsResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMaliciousRequestsResponse  DeleteMaliciousRequests(DeleteMaliciousRequestsRequest req) throws TencentCloudSDKException{
+    public DeleteMaliciousRequestsResponse DeleteMaliciousRequests(DeleteMaliciousRequestsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMaliciousRequestsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMaliciousRequestsResponse>>() {
@@ -162,7 +162,7 @@ public class YunjingClient extends AbstractClient{
      * @return DeleteMalwaresResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMalwaresResponse  DeleteMalwares(DeleteMalwaresRequest req) throws TencentCloudSDKException{
+    public DeleteMalwaresResponse DeleteMalwares(DeleteMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMalwaresResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMalwaresResponse>>() {
@@ -180,7 +180,7 @@ public class YunjingClient extends AbstractClient{
      * @return DeleteNonlocalLoginPlacesResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteNonlocalLoginPlacesResponse  DeleteNonlocalLoginPlaces(DeleteNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
+    public DeleteNonlocalLoginPlacesResponse DeleteNonlocalLoginPlaces(DeleteNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNonlocalLoginPlacesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNonlocalLoginPlacesResponse>>() {
@@ -198,7 +198,7 @@ public class YunjingClient extends AbstractClient{
      * @return DeleteUsualLoginPlacesResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteUsualLoginPlacesResponse  DeleteUsualLoginPlaces(DeleteUsualLoginPlacesRequest req) throws TencentCloudSDKException{
+    public DeleteUsualLoginPlacesResponse DeleteUsualLoginPlaces(DeleteUsualLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUsualLoginPlacesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUsualLoginPlacesResponse>>() {
@@ -216,7 +216,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeAccountStatisticsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAccountStatisticsResponse  DescribeAccountStatistics(DescribeAccountStatisticsRequest req) throws TencentCloudSDKException{
+    public DescribeAccountStatisticsResponse DescribeAccountStatistics(DescribeAccountStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountStatisticsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountStatisticsResponse>>() {
@@ -234,7 +234,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeAccountsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAccountsResponse  DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
+    public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
@@ -252,7 +252,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeAgentVulsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAgentVulsResponse  DescribeAgentVuls(DescribeAgentVulsRequest req) throws TencentCloudSDKException{
+    public DescribeAgentVulsResponse DescribeAgentVuls(DescribeAgentVulsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentVulsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentVulsResponse>>() {
@@ -270,7 +270,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeAlarmAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAlarmAttributeResponse  DescribeAlarmAttribute(DescribeAlarmAttributeRequest req) throws TencentCloudSDKException{
+    public DescribeAlarmAttributeResponse DescribeAlarmAttribute(DescribeAlarmAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmAttributeResponse>>() {
@@ -288,7 +288,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeBruteAttacksResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBruteAttacksResponse  DescribeBruteAttacks(DescribeBruteAttacksRequest req) throws TencentCloudSDKException{
+    public DescribeBruteAttacksResponse DescribeBruteAttacks(DescribeBruteAttacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBruteAttacksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBruteAttacksResponse>>() {
@@ -306,7 +306,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeComponentInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeComponentInfoResponse  DescribeComponentInfo(DescribeComponentInfoRequest req) throws TencentCloudSDKException{
+    public DescribeComponentInfoResponse DescribeComponentInfo(DescribeComponentInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComponentInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComponentInfoResponse>>() {
@@ -324,7 +324,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeComponentStatisticsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeComponentStatisticsResponse  DescribeComponentStatistics(DescribeComponentStatisticsRequest req) throws TencentCloudSDKException{
+    public DescribeComponentStatisticsResponse DescribeComponentStatistics(DescribeComponentStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComponentStatisticsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComponentStatisticsResponse>>() {
@@ -342,7 +342,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeComponentsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeComponentsResponse  DescribeComponents(DescribeComponentsRequest req) throws TencentCloudSDKException{
+    public DescribeComponentsResponse DescribeComponents(DescribeComponentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComponentsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComponentsResponse>>() {
@@ -360,7 +360,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeHistoryAccountsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeHistoryAccountsResponse  DescribeHistoryAccounts(DescribeHistoryAccountsRequest req) throws TencentCloudSDKException{
+    public DescribeHistoryAccountsResponse DescribeHistoryAccounts(DescribeHistoryAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHistoryAccountsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHistoryAccountsResponse>>() {
@@ -378,7 +378,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeImpactedHostsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeImpactedHostsResponse  DescribeImpactedHosts(DescribeImpactedHostsRequest req) throws TencentCloudSDKException{
+    public DescribeImpactedHostsResponse DescribeImpactedHosts(DescribeImpactedHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImpactedHostsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImpactedHostsResponse>>() {
@@ -396,7 +396,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeMachineInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMachineInfoResponse  DescribeMachineInfo(DescribeMachineInfoRequest req) throws TencentCloudSDKException{
+    public DescribeMachineInfoResponse DescribeMachineInfo(DescribeMachineInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMachineInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMachineInfoResponse>>() {
@@ -414,7 +414,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeMachinesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMachinesResponse  DescribeMachines(DescribeMachinesRequest req) throws TencentCloudSDKException{
+    public DescribeMachinesResponse DescribeMachines(DescribeMachinesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMachinesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMachinesResponse>>() {
@@ -432,7 +432,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeMaliciousRequestsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMaliciousRequestsResponse  DescribeMaliciousRequests(DescribeMaliciousRequestsRequest req) throws TencentCloudSDKException{
+    public DescribeMaliciousRequestsResponse DescribeMaliciousRequests(DescribeMaliciousRequestsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMaliciousRequestsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMaliciousRequestsResponse>>() {
@@ -450,7 +450,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeMalwaresResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMalwaresResponse  DescribeMalwares(DescribeMalwaresRequest req) throws TencentCloudSDKException{
+    public DescribeMalwaresResponse DescribeMalwares(DescribeMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMalwaresResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMalwaresResponse>>() {
@@ -468,7 +468,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeNonlocalLoginPlacesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeNonlocalLoginPlacesResponse  DescribeNonlocalLoginPlaces(DescribeNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
+    public DescribeNonlocalLoginPlacesResponse DescribeNonlocalLoginPlaces(DescribeNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNonlocalLoginPlacesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNonlocalLoginPlacesResponse>>() {
@@ -486,7 +486,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeOpenPortStatisticsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeOpenPortStatisticsResponse  DescribeOpenPortStatistics(DescribeOpenPortStatisticsRequest req) throws TencentCloudSDKException{
+    public DescribeOpenPortStatisticsResponse DescribeOpenPortStatistics(DescribeOpenPortStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOpenPortStatisticsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOpenPortStatisticsResponse>>() {
@@ -505,7 +505,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeOpenPortsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeOpenPortsResponse  DescribeOpenPorts(DescribeOpenPortsRequest req) throws TencentCloudSDKException{
+    public DescribeOpenPortsResponse DescribeOpenPorts(DescribeOpenPortsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOpenPortsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOpenPortsResponse>>() {
@@ -523,7 +523,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeOverviewStatisticsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeOverviewStatisticsResponse  DescribeOverviewStatistics(DescribeOverviewStatisticsRequest req) throws TencentCloudSDKException{
+    public DescribeOverviewStatisticsResponse DescribeOverviewStatistics(DescribeOverviewStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOverviewStatisticsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOverviewStatisticsResponse>>() {
@@ -541,7 +541,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeProVersionInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeProVersionInfoResponse  DescribeProVersionInfo(DescribeProVersionInfoRequest req) throws TencentCloudSDKException{
+    public DescribeProVersionInfoResponse DescribeProVersionInfo(DescribeProVersionInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProVersionInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProVersionInfoResponse>>() {
@@ -559,7 +559,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeProcessStatisticsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeProcessStatisticsResponse  DescribeProcessStatistics(DescribeProcessStatisticsRequest req) throws TencentCloudSDKException{
+    public DescribeProcessStatisticsResponse DescribeProcessStatistics(DescribeProcessStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProcessStatisticsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProcessStatisticsResponse>>() {
@@ -577,7 +577,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeProcessTaskStatusResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeProcessTaskStatusResponse  DescribeProcessTaskStatus(DescribeProcessTaskStatusRequest req) throws TencentCloudSDKException{
+    public DescribeProcessTaskStatusResponse DescribeProcessTaskStatus(DescribeProcessTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProcessTaskStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProcessTaskStatusResponse>>() {
@@ -595,7 +595,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeProcessesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeProcessesResponse  DescribeProcesses(DescribeProcessesRequest req) throws TencentCloudSDKException{
+    public DescribeProcessesResponse DescribeProcesses(DescribeProcessesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProcessesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProcessesResponse>>() {
@@ -613,7 +613,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeSecurityDynamicsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSecurityDynamicsResponse  DescribeSecurityDynamics(DescribeSecurityDynamicsRequest req) throws TencentCloudSDKException{
+    public DescribeSecurityDynamicsResponse DescribeSecurityDynamics(DescribeSecurityDynamicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityDynamicsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityDynamicsResponse>>() {
@@ -631,7 +631,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeSecurityTrendsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSecurityTrendsResponse  DescribeSecurityTrends(DescribeSecurityTrendsRequest req) throws TencentCloudSDKException{
+    public DescribeSecurityTrendsResponse DescribeSecurityTrends(DescribeSecurityTrendsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityTrendsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityTrendsResponse>>() {
@@ -649,7 +649,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeUsualLoginPlacesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeUsualLoginPlacesResponse  DescribeUsualLoginPlaces(DescribeUsualLoginPlacesRequest req) throws TencentCloudSDKException{
+    public DescribeUsualLoginPlacesResponse DescribeUsualLoginPlaces(DescribeUsualLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsualLoginPlacesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsualLoginPlacesResponse>>() {
@@ -667,7 +667,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeVulInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeVulInfoResponse  DescribeVulInfo(DescribeVulInfoRequest req) throws TencentCloudSDKException{
+    public DescribeVulInfoResponse DescribeVulInfo(DescribeVulInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulInfoResponse>>() {
@@ -686,7 +686,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeVulScanResultResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeVulScanResultResponse  DescribeVulScanResult(DescribeVulScanResultRequest req) throws TencentCloudSDKException{
+    public DescribeVulScanResultResponse DescribeVulScanResult(DescribeVulScanResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulScanResultResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulScanResultResponse>>() {
@@ -704,7 +704,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeVulsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeVulsResponse  DescribeVuls(DescribeVulsRequest req) throws TencentCloudSDKException{
+    public DescribeVulsResponse DescribeVuls(DescribeVulsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulsResponse>>() {
@@ -722,7 +722,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeWeeklyReportBruteAttacksResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeWeeklyReportBruteAttacksResponse  DescribeWeeklyReportBruteAttacks(DescribeWeeklyReportBruteAttacksRequest req) throws TencentCloudSDKException{
+    public DescribeWeeklyReportBruteAttacksResponse DescribeWeeklyReportBruteAttacks(DescribeWeeklyReportBruteAttacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportBruteAttacksResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportBruteAttacksResponse>>() {
@@ -740,7 +740,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeWeeklyReportInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeWeeklyReportInfoResponse  DescribeWeeklyReportInfo(DescribeWeeklyReportInfoRequest req) throws TencentCloudSDKException{
+    public DescribeWeeklyReportInfoResponse DescribeWeeklyReportInfo(DescribeWeeklyReportInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportInfoResponse>>() {
@@ -758,7 +758,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeWeeklyReportMalwaresResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeWeeklyReportMalwaresResponse  DescribeWeeklyReportMalwares(DescribeWeeklyReportMalwaresRequest req) throws TencentCloudSDKException{
+    public DescribeWeeklyReportMalwaresResponse DescribeWeeklyReportMalwares(DescribeWeeklyReportMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportMalwaresResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportMalwaresResponse>>() {
@@ -776,7 +776,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeWeeklyReportNonlocalLoginPlacesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeWeeklyReportNonlocalLoginPlacesResponse  DescribeWeeklyReportNonlocalLoginPlaces(DescribeWeeklyReportNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
+    public DescribeWeeklyReportNonlocalLoginPlacesResponse DescribeWeeklyReportNonlocalLoginPlaces(DescribeWeeklyReportNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportNonlocalLoginPlacesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportNonlocalLoginPlacesResponse>>() {
@@ -795,7 +795,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeWeeklyReportVulsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeWeeklyReportVulsResponse  DescribeWeeklyReportVuls(DescribeWeeklyReportVulsRequest req) throws TencentCloudSDKException{
+    public DescribeWeeklyReportVulsResponse DescribeWeeklyReportVuls(DescribeWeeklyReportVulsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportVulsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportVulsResponse>>() {
@@ -813,7 +813,7 @@ public class YunjingClient extends AbstractClient{
      * @return DescribeWeeklyReportsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeWeeklyReportsResponse  DescribeWeeklyReports(DescribeWeeklyReportsRequest req) throws TencentCloudSDKException{
+    public DescribeWeeklyReportsResponse DescribeWeeklyReports(DescribeWeeklyReportsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWeeklyReportsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportsResponse>>() {
@@ -831,7 +831,7 @@ public class YunjingClient extends AbstractClient{
      * @return ExportMaliciousRequestsResponse
      * @throws TencentCloudSDKException
      */
-    public ExportMaliciousRequestsResponse  ExportMaliciousRequests(ExportMaliciousRequestsRequest req) throws TencentCloudSDKException{
+    public ExportMaliciousRequestsResponse ExportMaliciousRequests(ExportMaliciousRequestsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExportMaliciousRequestsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ExportMaliciousRequestsResponse>>() {
@@ -849,7 +849,7 @@ public class YunjingClient extends AbstractClient{
      * @return IgnoreImpactedHostsResponse
      * @throws TencentCloudSDKException
      */
-    public IgnoreImpactedHostsResponse  IgnoreImpactedHosts(IgnoreImpactedHostsRequest req) throws TencentCloudSDKException{
+    public IgnoreImpactedHostsResponse IgnoreImpactedHosts(IgnoreImpactedHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IgnoreImpactedHostsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<IgnoreImpactedHostsResponse>>() {
@@ -867,7 +867,7 @@ public class YunjingClient extends AbstractClient{
      * @return InquiryPriceOpenProVersionPrepaidResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceOpenProVersionPrepaidResponse  InquiryPriceOpenProVersionPrepaid(InquiryPriceOpenProVersionPrepaidRequest req) throws TencentCloudSDKException{
+    public InquiryPriceOpenProVersionPrepaidResponse InquiryPriceOpenProVersionPrepaid(InquiryPriceOpenProVersionPrepaidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse>>() {
@@ -885,7 +885,7 @@ public class YunjingClient extends AbstractClient{
      * @return MisAlarmNonlocalLoginPlacesResponse
      * @throws TencentCloudSDKException
      */
-    public MisAlarmNonlocalLoginPlacesResponse  MisAlarmNonlocalLoginPlaces(MisAlarmNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
+    public MisAlarmNonlocalLoginPlacesResponse MisAlarmNonlocalLoginPlaces(MisAlarmNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MisAlarmNonlocalLoginPlacesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<MisAlarmNonlocalLoginPlacesResponse>>() {
@@ -903,7 +903,7 @@ public class YunjingClient extends AbstractClient{
      * @return ModifyAlarmAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyAlarmAttributeResponse  ModifyAlarmAttribute(ModifyAlarmAttributeRequest req) throws TencentCloudSDKException{
+    public ModifyAlarmAttributeResponse ModifyAlarmAttribute(ModifyAlarmAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAlarmAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAlarmAttributeResponse>>() {
@@ -921,7 +921,7 @@ public class YunjingClient extends AbstractClient{
      * @return ModifyAutoOpenProVersionConfigResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyAutoOpenProVersionConfigResponse  ModifyAutoOpenProVersionConfig(ModifyAutoOpenProVersionConfigRequest req) throws TencentCloudSDKException{
+    public ModifyAutoOpenProVersionConfigResponse ModifyAutoOpenProVersionConfig(ModifyAutoOpenProVersionConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAutoOpenProVersionConfigResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoOpenProVersionConfigResponse>>() {
@@ -939,7 +939,7 @@ public class YunjingClient extends AbstractClient{
      * @return ModifyProVersionRenewFlagResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyProVersionRenewFlagResponse  ModifyProVersionRenewFlag(ModifyProVersionRenewFlagRequest req) throws TencentCloudSDKException{
+    public ModifyProVersionRenewFlagResponse ModifyProVersionRenewFlag(ModifyProVersionRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProVersionRenewFlagResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProVersionRenewFlagResponse>>() {
@@ -957,7 +957,7 @@ public class YunjingClient extends AbstractClient{
      * @return OpenProVersionPrepaidResponse
      * @throws TencentCloudSDKException
      */
-    public OpenProVersionPrepaidResponse  OpenProVersionPrepaid(OpenProVersionPrepaidRequest req) throws TencentCloudSDKException{
+    public OpenProVersionPrepaidResponse OpenProVersionPrepaid(OpenProVersionPrepaidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenProVersionPrepaidResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenProVersionPrepaidResponse>>() {
@@ -975,7 +975,7 @@ public class YunjingClient extends AbstractClient{
      * @return RecoverMalwaresResponse
      * @throws TencentCloudSDKException
      */
-    public RecoverMalwaresResponse  RecoverMalwares(RecoverMalwaresRequest req) throws TencentCloudSDKException{
+    public RecoverMalwaresResponse RecoverMalwares(RecoverMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecoverMalwaresResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RecoverMalwaresResponse>>() {
@@ -993,7 +993,7 @@ public class YunjingClient extends AbstractClient{
      * @return RenewProVersionResponse
      * @throws TencentCloudSDKException
      */
-    public RenewProVersionResponse  RenewProVersion(RenewProVersionRequest req) throws TencentCloudSDKException{
+    public RenewProVersionResponse RenewProVersion(RenewProVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewProVersionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewProVersionResponse>>() {
@@ -1011,7 +1011,7 @@ public class YunjingClient extends AbstractClient{
      * @return RescanImpactedHostResponse
      * @throws TencentCloudSDKException
      */
-    public RescanImpactedHostResponse  RescanImpactedHost(RescanImpactedHostRequest req) throws TencentCloudSDKException{
+    public RescanImpactedHostResponse RescanImpactedHost(RescanImpactedHostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RescanImpactedHostResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RescanImpactedHostResponse>>() {
@@ -1029,7 +1029,7 @@ public class YunjingClient extends AbstractClient{
      * @return SeparateMalwaresResponse
      * @throws TencentCloudSDKException
      */
-    public SeparateMalwaresResponse  SeparateMalwares(SeparateMalwaresRequest req) throws TencentCloudSDKException{
+    public SeparateMalwaresResponse SeparateMalwares(SeparateMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SeparateMalwaresResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SeparateMalwaresResponse>>() {
@@ -1047,7 +1047,7 @@ public class YunjingClient extends AbstractClient{
      * @return TrustMaliciousRequestResponse
      * @throws TencentCloudSDKException
      */
-    public TrustMaliciousRequestResponse  TrustMaliciousRequest(TrustMaliciousRequestRequest req) throws TencentCloudSDKException{
+    public TrustMaliciousRequestResponse TrustMaliciousRequest(TrustMaliciousRequestRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TrustMaliciousRequestResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TrustMaliciousRequestResponse>>() {
@@ -1065,7 +1065,7 @@ public class YunjingClient extends AbstractClient{
      * @return TrustMalwaresResponse
      * @throws TencentCloudSDKException
      */
-    public TrustMalwaresResponse  TrustMalwares(TrustMalwaresRequest req) throws TencentCloudSDKException{
+    public TrustMalwaresResponse TrustMalwares(TrustMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TrustMalwaresResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<TrustMalwaresResponse>>() {
@@ -1083,7 +1083,7 @@ public class YunjingClient extends AbstractClient{
      * @return UntrustMaliciousRequestResponse
      * @throws TencentCloudSDKException
      */
-    public UntrustMaliciousRequestResponse  UntrustMaliciousRequest(UntrustMaliciousRequestRequest req) throws TencentCloudSDKException{
+    public UntrustMaliciousRequestResponse UntrustMaliciousRequest(UntrustMaliciousRequestRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UntrustMaliciousRequestResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UntrustMaliciousRequestResponse>>() {
@@ -1101,7 +1101,7 @@ public class YunjingClient extends AbstractClient{
      * @return UntrustMalwaresResponse
      * @throws TencentCloudSDKException
      */
-    public UntrustMalwaresResponse  UntrustMalwares(UntrustMalwaresRequest req) throws TencentCloudSDKException{
+    public UntrustMalwaresResponse UntrustMalwares(UntrustMalwaresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UntrustMalwaresResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UntrustMalwaresResponse>>() {

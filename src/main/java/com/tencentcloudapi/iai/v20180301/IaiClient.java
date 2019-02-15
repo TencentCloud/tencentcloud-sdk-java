@@ -54,7 +54,7 @@ public class IaiClient extends AbstractClient{
      * @return AnalyzeFaceResponse
      * @throws TencentCloudSDKException
      */
-    public AnalyzeFaceResponse  AnalyzeFace(AnalyzeFaceRequest req) throws TencentCloudSDKException{
+    public AnalyzeFaceResponse AnalyzeFace(AnalyzeFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AnalyzeFaceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AnalyzeFaceResponse>>() {
@@ -76,7 +76,7 @@ public class IaiClient extends AbstractClient{
      * @return CompareFaceResponse
      * @throws TencentCloudSDKException
      */
-    public CompareFaceResponse  CompareFace(CompareFaceRequest req) throws TencentCloudSDKException{
+    public CompareFaceResponse CompareFace(CompareFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CompareFaceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CompareFaceResponse>>() {
@@ -94,7 +94,7 @@ public class IaiClient extends AbstractClient{
      * @return CopyPersonResponse
      * @throws TencentCloudSDKException
      */
-    public CopyPersonResponse  CopyPerson(CopyPersonRequest req) throws TencentCloudSDKException{
+    public CopyPersonResponse CopyPerson(CopyPersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopyPersonResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CopyPersonResponse>>() {
@@ -114,7 +114,7 @@ public class IaiClient extends AbstractClient{
      * @return CreateFaceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateFaceResponse  CreateFace(CreateFaceRequest req) throws TencentCloudSDKException{
+    public CreateFaceResponse CreateFace(CreateFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFaceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFaceResponse>>() {
@@ -132,7 +132,7 @@ public class IaiClient extends AbstractClient{
      * @return CreateGroupResponse
      * @throws TencentCloudSDKException
      */
-    public CreateGroupResponse  CreateGroup(CreateGroupRequest req) throws TencentCloudSDKException{
+    public CreateGroupResponse CreateGroup(CreateGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGroupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGroupResponse>>() {
@@ -152,7 +152,7 @@ public class IaiClient extends AbstractClient{
      * @return CreatePersonResponse
      * @throws TencentCloudSDKException
      */
-    public CreatePersonResponse  CreatePerson(CreatePersonRequest req) throws TencentCloudSDKException{
+    public CreatePersonResponse CreatePerson(CreatePersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePersonResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePersonResponse>>() {
@@ -170,7 +170,7 @@ public class IaiClient extends AbstractClient{
      * @return DeleteFaceResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteFaceResponse  DeleteFace(DeleteFaceRequest req) throws TencentCloudSDKException{
+    public DeleteFaceResponse DeleteFace(DeleteFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFaceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFaceResponse>>() {
@@ -188,7 +188,7 @@ public class IaiClient extends AbstractClient{
      * @return DeleteGroupResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteGroupResponse  DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
+    public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGroupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
@@ -206,7 +206,7 @@ public class IaiClient extends AbstractClient{
      * @return DeletePersonResponse
      * @throws TencentCloudSDKException
      */
-    public DeletePersonResponse  DeletePerson(DeletePersonRequest req) throws TencentCloudSDKException{
+    public DeletePersonResponse DeletePerson(DeletePersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePersonResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePersonResponse>>() {
@@ -224,7 +224,7 @@ public class IaiClient extends AbstractClient{
      * @return DeletePersonFromGroupResponse
      * @throws TencentCloudSDKException
      */
-    public DeletePersonFromGroupResponse  DeletePersonFromGroup(DeletePersonFromGroupRequest req) throws TencentCloudSDKException{
+    public DeletePersonFromGroupResponse DeletePersonFromGroup(DeletePersonFromGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePersonFromGroupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePersonFromGroupResponse>>() {
@@ -255,7 +255,7 @@ public class IaiClient extends AbstractClient{
      * @return DetectFaceResponse
      * @throws TencentCloudSDKException
      */
-    public DetectFaceResponse  DetectFace(DetectFaceRequest req) throws TencentCloudSDKException{
+    public DetectFaceResponse DetectFace(DetectFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetectFaceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DetectFaceResponse>>() {
@@ -275,7 +275,7 @@ public class IaiClient extends AbstractClient{
      * @return DetectLiveFaceResponse
      * @throws TencentCloudSDKException
      */
-    public DetectLiveFaceResponse  DetectLiveFace(DetectLiveFaceRequest req) throws TencentCloudSDKException{
+    public DetectLiveFaceResponse DetectLiveFace(DetectLiveFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetectLiveFaceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DetectLiveFaceResponse>>() {
@@ -293,7 +293,7 @@ public class IaiClient extends AbstractClient{
      * @return GetGroupListResponse
      * @throws TencentCloudSDKException
      */
-    public GetGroupListResponse  GetGroupList(GetGroupListRequest req) throws TencentCloudSDKException{
+    public GetGroupListResponse GetGroupList(GetGroupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetGroupListResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetGroupListResponse>>() {
@@ -311,7 +311,7 @@ public class IaiClient extends AbstractClient{
      * @return GetPersonBaseInfoResponse
      * @throws TencentCloudSDKException
      */
-    public GetPersonBaseInfoResponse  GetPersonBaseInfo(GetPersonBaseInfoRequest req) throws TencentCloudSDKException{
+    public GetPersonBaseInfoResponse GetPersonBaseInfo(GetPersonBaseInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPersonBaseInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPersonBaseInfoResponse>>() {
@@ -329,7 +329,7 @@ public class IaiClient extends AbstractClient{
      * @return GetPersonGroupInfoResponse
      * @throws TencentCloudSDKException
      */
-    public GetPersonGroupInfoResponse  GetPersonGroupInfo(GetPersonGroupInfoRequest req) throws TencentCloudSDKException{
+    public GetPersonGroupInfoResponse GetPersonGroupInfo(GetPersonGroupInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPersonGroupInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPersonGroupInfoResponse>>() {
@@ -347,7 +347,7 @@ public class IaiClient extends AbstractClient{
      * @return GetPersonListResponse
      * @throws TencentCloudSDKException
      */
-    public GetPersonListResponse  GetPersonList(GetPersonListRequest req) throws TencentCloudSDKException{
+    public GetPersonListResponse GetPersonList(GetPersonListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPersonListResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPersonListResponse>>() {
@@ -365,7 +365,7 @@ public class IaiClient extends AbstractClient{
      * @return GetPersonListNumResponse
      * @throws TencentCloudSDKException
      */
-    public GetPersonListNumResponse  GetPersonListNum(GetPersonListNumRequest req) throws TencentCloudSDKException{
+    public GetPersonListNumResponse GetPersonListNum(GetPersonListNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPersonListNumResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPersonListNumResponse>>() {
@@ -383,7 +383,7 @@ public class IaiClient extends AbstractClient{
      * @return ModifyGroupResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyGroupResponse  ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
+    public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGroupResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGroupResponse>>() {
@@ -401,7 +401,7 @@ public class IaiClient extends AbstractClient{
      * @return ModifyPersonBaseInfoResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyPersonBaseInfoResponse  ModifyPersonBaseInfo(ModifyPersonBaseInfoRequest req) throws TencentCloudSDKException{
+    public ModifyPersonBaseInfoResponse ModifyPersonBaseInfo(ModifyPersonBaseInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonBaseInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonBaseInfoResponse>>() {
@@ -419,7 +419,7 @@ public class IaiClient extends AbstractClient{
      * @return ModifyPersonGroupInfoResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyPersonGroupInfoResponse  ModifyPersonGroupInfo(ModifyPersonGroupInfoRequest req) throws TencentCloudSDKException{
+    public ModifyPersonGroupInfoResponse ModifyPersonGroupInfo(ModifyPersonGroupInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonGroupInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonGroupInfoResponse>>() {
@@ -438,7 +438,7 @@ public class IaiClient extends AbstractClient{
      * @return SearchFacesResponse
      * @throws TencentCloudSDKException
      */
-    public SearchFacesResponse  SearchFaces(SearchFacesRequest req) throws TencentCloudSDKException{
+    public SearchFacesResponse SearchFaces(SearchFacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchFacesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchFacesResponse>>() {
@@ -456,7 +456,7 @@ public class IaiClient extends AbstractClient{
      * @return VerifyFaceResponse
      * @throws TencentCloudSDKException
      */
-    public VerifyFaceResponse  VerifyFace(VerifyFaceRequest req) throws TencentCloudSDKException{
+    public VerifyFaceResponse VerifyFace(VerifyFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyFaceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyFaceResponse>>() {

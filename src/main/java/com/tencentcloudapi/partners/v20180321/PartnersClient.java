@@ -54,7 +54,7 @@ public class PartnersClient extends AbstractClient{
      * @return AgentPayDealsResponse
      * @throws TencentCloudSDKException
      */
-    public AgentPayDealsResponse  AgentPayDeals(AgentPayDealsRequest req) throws TencentCloudSDKException{
+    public AgentPayDealsResponse AgentPayDeals(AgentPayDealsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AgentPayDealsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AgentPayDealsResponse>>() {
@@ -72,7 +72,7 @@ public class PartnersClient extends AbstractClient{
      * @return AgentTransferMoneyResponse
      * @throws TencentCloudSDKException
      */
-    public AgentTransferMoneyResponse  AgentTransferMoney(AgentTransferMoneyRequest req) throws TencentCloudSDKException{
+    public AgentTransferMoneyResponse AgentTransferMoney(AgentTransferMoneyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AgentTransferMoneyResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AgentTransferMoneyResponse>>() {
@@ -90,7 +90,7 @@ public class PartnersClient extends AbstractClient{
      * @return AuditApplyClientResponse
      * @throws TencentCloudSDKException
      */
-    public AuditApplyClientResponse  AuditApplyClient(AuditApplyClientRequest req) throws TencentCloudSDKException{
+    public AuditApplyClientResponse AuditApplyClient(AuditApplyClientRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AuditApplyClientResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<AuditApplyClientResponse>>() {
@@ -108,7 +108,7 @@ public class PartnersClient extends AbstractClient{
      * @return DescribeAgentAuditedClientsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAgentAuditedClientsResponse  DescribeAgentAuditedClients(DescribeAgentAuditedClientsRequest req) throws TencentCloudSDKException{
+    public DescribeAgentAuditedClientsResponse DescribeAgentAuditedClients(DescribeAgentAuditedClientsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentAuditedClientsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentAuditedClientsResponse>>() {
@@ -126,7 +126,7 @@ public class PartnersClient extends AbstractClient{
      * @return DescribeAgentBillsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAgentBillsResponse  DescribeAgentBills(DescribeAgentBillsRequest req) throws TencentCloudSDKException{
+    public DescribeAgentBillsResponse DescribeAgentBills(DescribeAgentBillsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentBillsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentBillsResponse>>() {
@@ -144,7 +144,7 @@ public class PartnersClient extends AbstractClient{
      * @return DescribeAgentClientsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAgentClientsResponse  DescribeAgentClients(DescribeAgentClientsRequest req) throws TencentCloudSDKException{
+    public DescribeAgentClientsResponse DescribeAgentClients(DescribeAgentClientsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentClientsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentClientsResponse>>() {
@@ -162,7 +162,7 @@ public class PartnersClient extends AbstractClient{
      * @return DescribeClientBalanceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeClientBalanceResponse  DescribeClientBalance(DescribeClientBalanceRequest req) throws TencentCloudSDKException{
+    public DescribeClientBalanceResponse DescribeClientBalance(DescribeClientBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClientBalanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClientBalanceResponse>>() {
@@ -180,7 +180,7 @@ public class PartnersClient extends AbstractClient{
      * @return DescribeRebateInfosResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeRebateInfosResponse  DescribeRebateInfos(DescribeRebateInfosRequest req) throws TencentCloudSDKException{
+    public DescribeRebateInfosResponse DescribeRebateInfos(DescribeRebateInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRebateInfosResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRebateInfosResponse>>() {
@@ -198,7 +198,7 @@ public class PartnersClient extends AbstractClient{
      * @return ModifyClientRemarkResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyClientRemarkResponse  ModifyClientRemark(ModifyClientRemarkRequest req) throws TencentCloudSDKException{
+    public ModifyClientRemarkResponse ModifyClientRemark(ModifyClientRemarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClientRemarkResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClientRemarkResponse>>() {

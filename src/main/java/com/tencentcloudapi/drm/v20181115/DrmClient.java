@@ -55,7 +55,7 @@ public class DrmClient extends AbstractClient{
      * @return CreateLicenseResponse
      * @throws TencentCloudSDKException
      */
-    public CreateLicenseResponse  CreateLicense(CreateLicenseRequest req) throws TencentCloudSDKException{
+    public CreateLicenseResponse CreateLicense(CreateLicenseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLicenseResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLicenseResponse>>() {
@@ -75,7 +75,7 @@ public class DrmClient extends AbstractClient{
      * @return DescribeKeysResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeKeysResponse  DescribeKeys(DescribeKeysRequest req) throws TencentCloudSDKException{
+    public DescribeKeysResponse DescribeKeys(DescribeKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKeysResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKeysResponse>>() {
@@ -93,7 +93,7 @@ public class DrmClient extends AbstractClient{
      * @return StartEncryptionResponse
      * @throws TencentCloudSDKException
      */
-    public StartEncryptionResponse  StartEncryption(StartEncryptionRequest req) throws TencentCloudSDKException{
+    public StartEncryptionResponse StartEncryption(StartEncryptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartEncryptionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<StartEncryptionResponse>>() {

@@ -54,7 +54,7 @@ public class HcmClient extends AbstractClient{
      * @return EvaluationResponse
      * @throws TencentCloudSDKException
      */
-    public EvaluationResponse  Evaluation(EvaluationRequest req) throws TencentCloudSDKException{
+    public EvaluationResponse Evaluation(EvaluationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EvaluationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<EvaluationResponse>>() {

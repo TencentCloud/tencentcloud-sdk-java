@@ -54,7 +54,7 @@ public class BmeipClient extends AbstractClient{
      * @return BindEipAclsResponse
      * @throws TencentCloudSDKException
      */
-    public BindEipAclsResponse  BindEipAcls(BindEipAclsRequest req) throws TencentCloudSDKException{
+    public BindEipAclsResponse BindEipAcls(BindEipAclsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindEipAclsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<BindEipAclsResponse>>() {
@@ -72,7 +72,7 @@ public class BmeipClient extends AbstractClient{
      * @return BindHostedResponse
      * @throws TencentCloudSDKException
      */
-    public BindHostedResponse  BindHosted(BindHostedRequest req) throws TencentCloudSDKException{
+    public BindHostedResponse BindHosted(BindHostedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindHostedResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<BindHostedResponse>>() {
@@ -90,7 +90,7 @@ public class BmeipClient extends AbstractClient{
      * @return BindRsResponse
      * @throws TencentCloudSDKException
      */
-    public BindRsResponse  BindRs(BindRsRequest req) throws TencentCloudSDKException{
+    public BindRsResponse BindRs(BindRsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindRsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<BindRsResponse>>() {
@@ -108,7 +108,7 @@ public class BmeipClient extends AbstractClient{
      * @return BindVpcIpResponse
      * @throws TencentCloudSDKException
      */
-    public BindVpcIpResponse  BindVpcIp(BindVpcIpRequest req) throws TencentCloudSDKException{
+    public BindVpcIpResponse BindVpcIp(BindVpcIpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindVpcIpResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<BindVpcIpResponse>>() {
@@ -126,7 +126,7 @@ public class BmeipClient extends AbstractClient{
      * @return CreateEipResponse
      * @throws TencentCloudSDKException
      */
-    public CreateEipResponse  CreateEip(CreateEipRequest req) throws TencentCloudSDKException{
+    public CreateEipResponse CreateEip(CreateEipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEipResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEipResponse>>() {
@@ -144,7 +144,7 @@ public class BmeipClient extends AbstractClient{
      * @return CreateEipAclResponse
      * @throws TencentCloudSDKException
      */
-    public CreateEipAclResponse  CreateEipAcl(CreateEipAclRequest req) throws TencentCloudSDKException{
+    public CreateEipAclResponse CreateEipAcl(CreateEipAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEipAclResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEipAclResponse>>() {
@@ -162,7 +162,7 @@ public class BmeipClient extends AbstractClient{
      * @return DeleteEipResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteEipResponse  DeleteEip(DeleteEipRequest req) throws TencentCloudSDKException{
+    public DeleteEipResponse DeleteEip(DeleteEipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEipResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEipResponse>>() {
@@ -180,7 +180,7 @@ public class BmeipClient extends AbstractClient{
      * @return DeleteEipAclResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteEipAclResponse  DeleteEipAcl(DeleteEipAclRequest req) throws TencentCloudSDKException{
+    public DeleteEipAclResponse DeleteEipAcl(DeleteEipAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEipAclResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEipAclResponse>>() {
@@ -198,7 +198,7 @@ public class BmeipClient extends AbstractClient{
      * @return DescribeEipAclsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeEipAclsResponse  DescribeEipAcls(DescribeEipAclsRequest req) throws TencentCloudSDKException{
+    public DescribeEipAclsResponse DescribeEipAcls(DescribeEipAclsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEipAclsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEipAclsResponse>>() {
@@ -216,7 +216,7 @@ public class BmeipClient extends AbstractClient{
      * @return DescribeEipQuotaResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeEipQuotaResponse  DescribeEipQuota(DescribeEipQuotaRequest req) throws TencentCloudSDKException{
+    public DescribeEipQuotaResponse DescribeEipQuota(DescribeEipQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEipQuotaResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEipQuotaResponse>>() {
@@ -234,7 +234,7 @@ public class BmeipClient extends AbstractClient{
      * @return DescribeEipTaskResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeEipTaskResponse  DescribeEipTask(DescribeEipTaskRequest req) throws TencentCloudSDKException{
+    public DescribeEipTaskResponse DescribeEipTask(DescribeEipTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEipTaskResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEipTaskResponse>>() {
@@ -252,7 +252,7 @@ public class BmeipClient extends AbstractClient{
      * @return DescribeEipsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeEipsResponse  DescribeEips(DescribeEipsRequest req) throws TencentCloudSDKException{
+    public DescribeEipsResponse DescribeEips(DescribeEipsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEipsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEipsResponse>>() {
@@ -270,7 +270,7 @@ public class BmeipClient extends AbstractClient{
      * @return ModifyEipAclResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyEipAclResponse  ModifyEipAcl(ModifyEipAclRequest req) throws TencentCloudSDKException{
+    public ModifyEipAclResponse ModifyEipAcl(ModifyEipAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyEipAclResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyEipAclResponse>>() {
@@ -288,7 +288,7 @@ public class BmeipClient extends AbstractClient{
      * @return ModifyEipChargeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyEipChargeResponse  ModifyEipCharge(ModifyEipChargeRequest req) throws TencentCloudSDKException{
+    public ModifyEipChargeResponse ModifyEipCharge(ModifyEipChargeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyEipChargeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyEipChargeResponse>>() {
@@ -306,7 +306,7 @@ public class BmeipClient extends AbstractClient{
      * @return ModifyEipNameResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyEipNameResponse  ModifyEipName(ModifyEipNameRequest req) throws TencentCloudSDKException{
+    public ModifyEipNameResponse ModifyEipName(ModifyEipNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyEipNameResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyEipNameResponse>>() {
@@ -324,7 +324,7 @@ public class BmeipClient extends AbstractClient{
      * @return UnbindEipAclsResponse
      * @throws TencentCloudSDKException
      */
-    public UnbindEipAclsResponse  UnbindEipAcls(UnbindEipAclsRequest req) throws TencentCloudSDKException{
+    public UnbindEipAclsResponse UnbindEipAcls(UnbindEipAclsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindEipAclsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindEipAclsResponse>>() {
@@ -342,7 +342,7 @@ public class BmeipClient extends AbstractClient{
      * @return UnbindHostedResponse
      * @throws TencentCloudSDKException
      */
-    public UnbindHostedResponse  UnbindHosted(UnbindHostedRequest req) throws TencentCloudSDKException{
+    public UnbindHostedResponse UnbindHosted(UnbindHostedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindHostedResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindHostedResponse>>() {
@@ -360,7 +360,7 @@ public class BmeipClient extends AbstractClient{
      * @return UnbindRsResponse
      * @throws TencentCloudSDKException
      */
-    public UnbindRsResponse  UnbindRs(UnbindRsRequest req) throws TencentCloudSDKException{
+    public UnbindRsResponse UnbindRs(UnbindRsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindRsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindRsResponse>>() {
@@ -378,7 +378,7 @@ public class BmeipClient extends AbstractClient{
      * @return UnbindVpcIpResponse
      * @throws TencentCloudSDKException
      */
-    public UnbindVpcIpResponse  UnbindVpcIp(UnbindVpcIpRequest req) throws TencentCloudSDKException{
+    public UnbindVpcIpResponse UnbindVpcIp(UnbindVpcIpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindVpcIpResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindVpcIpResponse>>() {

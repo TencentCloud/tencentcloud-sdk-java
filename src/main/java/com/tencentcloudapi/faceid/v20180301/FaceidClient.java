@@ -54,7 +54,7 @@ public class FaceidClient extends AbstractClient{
      * @return DetectAuthResponse
      * @throws TencentCloudSDKException
      */
-    public DetectAuthResponse  DetectAuth(DetectAuthRequest req) throws TencentCloudSDKException{
+    public DetectAuthResponse DetectAuth(DetectAuthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetectAuthResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DetectAuthResponse>>() {
@@ -72,7 +72,7 @@ public class FaceidClient extends AbstractClient{
      * @return GetActionSequenceResponse
      * @throws TencentCloudSDKException
      */
-    public GetActionSequenceResponse  GetActionSequence(GetActionSequenceRequest req) throws TencentCloudSDKException{
+    public GetActionSequenceResponse GetActionSequence(GetActionSequenceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetActionSequenceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetActionSequenceResponse>>() {
@@ -90,7 +90,7 @@ public class FaceidClient extends AbstractClient{
      * @return GetDetectInfoResponse
      * @throws TencentCloudSDKException
      */
-    public GetDetectInfoResponse  GetDetectInfo(GetDetectInfoRequest req) throws TencentCloudSDKException{
+    public GetDetectInfoResponse GetDetectInfo(GetDetectInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDetectInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDetectInfoResponse>>() {
@@ -108,7 +108,7 @@ public class FaceidClient extends AbstractClient{
      * @return GetLiveCodeResponse
      * @throws TencentCloudSDKException
      */
-    public GetLiveCodeResponse  GetLiveCode(GetLiveCodeRequest req) throws TencentCloudSDKException{
+    public GetLiveCodeResponse GetLiveCode(GetLiveCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLiveCodeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLiveCodeResponse>>() {
@@ -126,7 +126,7 @@ public class FaceidClient extends AbstractClient{
      * @return ImageRecognitionResponse
      * @throws TencentCloudSDKException
      */
-    public ImageRecognitionResponse  ImageRecognition(ImageRecognitionRequest req) throws TencentCloudSDKException{
+    public ImageRecognitionResponse ImageRecognition(ImageRecognitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageRecognitionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageRecognitionResponse>>() {
@@ -144,7 +144,7 @@ public class FaceidClient extends AbstractClient{
      * @return LivenessCompareResponse
      * @throws TencentCloudSDKException
      */
-    public LivenessCompareResponse  LivenessCompare(LivenessCompareRequest req) throws TencentCloudSDKException{
+    public LivenessCompareResponse LivenessCompare(LivenessCompareRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LivenessCompareResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<LivenessCompareResponse>>() {
@@ -162,7 +162,7 @@ public class FaceidClient extends AbstractClient{
      * @return LivenessRecognitionResponse
      * @throws TencentCloudSDKException
      */
-    public LivenessRecognitionResponse  LivenessRecognition(LivenessRecognitionRequest req) throws TencentCloudSDKException{
+    public LivenessRecognitionResponse LivenessRecognition(LivenessRecognitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LivenessRecognitionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<LivenessRecognitionResponse>>() {

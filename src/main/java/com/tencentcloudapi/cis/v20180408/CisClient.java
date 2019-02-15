@@ -54,7 +54,7 @@ public class CisClient extends AbstractClient{
      * @return CreateContainerInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateContainerInstanceResponse  CreateContainerInstance(CreateContainerInstanceRequest req) throws TencentCloudSDKException{
+    public CreateContainerInstanceResponse CreateContainerInstance(CreateContainerInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateContainerInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateContainerInstanceResponse>>() {
@@ -72,7 +72,7 @@ public class CisClient extends AbstractClient{
      * @return DeleteContainerInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteContainerInstanceResponse  DeleteContainerInstance(DeleteContainerInstanceRequest req) throws TencentCloudSDKException{
+    public DeleteContainerInstanceResponse DeleteContainerInstance(DeleteContainerInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteContainerInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteContainerInstanceResponse>>() {
@@ -90,7 +90,7 @@ public class CisClient extends AbstractClient{
      * @return DescribeContainerInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeContainerInstanceResponse  DescribeContainerInstance(DescribeContainerInstanceRequest req) throws TencentCloudSDKException{
+    public DescribeContainerInstanceResponse DescribeContainerInstance(DescribeContainerInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerInstanceResponse>>() {
@@ -108,7 +108,7 @@ public class CisClient extends AbstractClient{
      * @return DescribeContainerInstanceEventsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeContainerInstanceEventsResponse  DescribeContainerInstanceEvents(DescribeContainerInstanceEventsRequest req) throws TencentCloudSDKException{
+    public DescribeContainerInstanceEventsResponse DescribeContainerInstanceEvents(DescribeContainerInstanceEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerInstanceEventsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerInstanceEventsResponse>>() {
@@ -126,7 +126,7 @@ public class CisClient extends AbstractClient{
      * @return DescribeContainerInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeContainerInstancesResponse  DescribeContainerInstances(DescribeContainerInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeContainerInstancesResponse DescribeContainerInstances(DescribeContainerInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerInstancesResponse>>() {
@@ -144,7 +144,7 @@ public class CisClient extends AbstractClient{
      * @return DescribeContainerLogResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeContainerLogResponse  DescribeContainerLog(DescribeContainerLogRequest req) throws TencentCloudSDKException{
+    public DescribeContainerLogResponse DescribeContainerLog(DescribeContainerLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerLogResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerLogResponse>>() {
@@ -162,7 +162,7 @@ public class CisClient extends AbstractClient{
      * @return InquiryPriceCreateCisResponse
      * @throws TencentCloudSDKException
      */
-    public InquiryPriceCreateCisResponse  InquiryPriceCreateCis(InquiryPriceCreateCisRequest req) throws TencentCloudSDKException{
+    public InquiryPriceCreateCisResponse InquiryPriceCreateCis(InquiryPriceCreateCisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateCisResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateCisResponse>>() {

@@ -118,21 +118,21 @@ public class AutoScalingGroup  extends AbstractModel{
     */
     @SerializedName("MaxSize")
     @Expose
-    private Integer [] MaxSize;
+    private Integer MaxSize;
 
     /**
     * 最小实例数
     */
     @SerializedName("MinSize")
     @Expose
-    private Integer [] MinSize;
+    private Integer MinSize;
 
     /**
     * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer [] ProjectId;
+    private Integer ProjectId;
 
     /**
     * 子网ID列表
@@ -381,7 +381,7 @@ public class AutoScalingGroup  extends AbstractModel{
      * 获取最大实例数
      * @return MaxSize 最大实例数
      */
-    public Integer [] getMaxSize() {
+    public Integer getMaxSize() {
         return this.MaxSize;
     }
 
@@ -389,7 +389,7 @@ public class AutoScalingGroup  extends AbstractModel{
      * 设置最大实例数
      * @param MaxSize 最大实例数
      */
-    public void setMaxSize(Integer [] MaxSize) {
+    public void setMaxSize(Integer MaxSize) {
         this.MaxSize = MaxSize;
     }
 
@@ -397,7 +397,7 @@ public class AutoScalingGroup  extends AbstractModel{
      * 获取最小实例数
      * @return MinSize 最小实例数
      */
-    public Integer [] getMinSize() {
+    public Integer getMinSize() {
         return this.MinSize;
     }
 
@@ -405,7 +405,7 @@ public class AutoScalingGroup  extends AbstractModel{
      * 设置最小实例数
      * @param MinSize 最小实例数
      */
-    public void setMinSize(Integer [] MinSize) {
+    public void setMinSize(Integer MinSize) {
         this.MinSize = MinSize;
     }
 
@@ -413,7 +413,7 @@ public class AutoScalingGroup  extends AbstractModel{
      * 获取项目ID
      * @return ProjectId 项目ID
      */
-    public Integer [] getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -421,7 +421,7 @@ public class AutoScalingGroup  extends AbstractModel{
      * 设置项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Integer [] ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -522,9 +522,9 @@ public class AutoScalingGroup  extends AbstractModel{
         this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
         this.setParamSimple(map, prefix + "LaunchConfigurationName", this.LaunchConfigurationName);
         this.setParamArraySimple(map, prefix + "LoadBalancerIdSet.", this.LoadBalancerIdSet);
-        this.setParamArraySimple(map, prefix + "MaxSize.", this.MaxSize);
-        this.setParamArraySimple(map, prefix + "MinSize.", this.MinSize);
-        this.setParamArraySimple(map, prefix + "ProjectId.", this.ProjectId);
+        this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
+        this.setParamSimple(map, prefix + "MinSize", this.MinSize);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "SubnetIdSet.", this.SubnetIdSet);
         this.setParamArraySimple(map, prefix + "TerminationPolicySet.", this.TerminationPolicySet);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

@@ -56,7 +56,7 @@ public class DtsClient extends AbstractClient{
      * @return CompleteMigrateJobResponse
      * @throws TencentCloudSDKException
      */
-    public CompleteMigrateJobResponse  CompleteMigrateJob(CompleteMigrateJobRequest req) throws TencentCloudSDKException{
+    public CompleteMigrateJobResponse CompleteMigrateJob(CompleteMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CompleteMigrateJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CompleteMigrateJobResponse>>() {
@@ -76,7 +76,7 @@ public class DtsClient extends AbstractClient{
      * @return CreateMigrateCheckJobResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMigrateCheckJobResponse  CreateMigrateCheckJob(CreateMigrateCheckJobRequest req) throws TencentCloudSDKException{
+    public CreateMigrateCheckJobResponse CreateMigrateCheckJob(CreateMigrateCheckJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMigrateCheckJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMigrateCheckJobResponse>>() {
@@ -96,7 +96,7 @@ public class DtsClient extends AbstractClient{
      * @return CreateMigrateJobResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMigrateJobResponse  CreateMigrateJob(CreateMigrateJobRequest req) throws TencentCloudSDKException{
+    public CreateMigrateJobResponse CreateMigrateJob(CreateMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMigrateJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMigrateJobResponse>>() {
@@ -115,7 +115,7 @@ public class DtsClient extends AbstractClient{
      * @return CreateSyncCheckJobResponse
      * @throws TencentCloudSDKException
      */
-    public CreateSyncCheckJobResponse  CreateSyncCheckJob(CreateSyncCheckJobRequest req) throws TencentCloudSDKException{
+    public CreateSyncCheckJobResponse CreateSyncCheckJob(CreateSyncCheckJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSyncCheckJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSyncCheckJobResponse>>() {
@@ -133,7 +133,7 @@ public class DtsClient extends AbstractClient{
      * @return CreateSyncJobResponse
      * @throws TencentCloudSDKException
      */
-    public CreateSyncJobResponse  CreateSyncJob(CreateSyncJobRequest req) throws TencentCloudSDKException{
+    public CreateSyncJobResponse CreateSyncJob(CreateSyncJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSyncJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSyncJobResponse>>() {
@@ -151,7 +151,7 @@ public class DtsClient extends AbstractClient{
      * @return DeleteMigrateJobResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMigrateJobResponse  DeleteMigrateJob(DeleteMigrateJobRequest req) throws TencentCloudSDKException{
+    public DeleteMigrateJobResponse DeleteMigrateJob(DeleteMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMigrateJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMigrateJobResponse>>() {
@@ -169,7 +169,7 @@ public class DtsClient extends AbstractClient{
      * @return DeleteSyncJobResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteSyncJobResponse  DeleteSyncJob(DeleteSyncJobRequest req) throws TencentCloudSDKException{
+    public DeleteSyncJobResponse DeleteSyncJob(DeleteSyncJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSyncJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSyncJobResponse>>() {
@@ -189,7 +189,7 @@ public class DtsClient extends AbstractClient{
      * @return DescribeMigrateCheckJobResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMigrateCheckJobResponse  DescribeMigrateCheckJob(DescribeMigrateCheckJobRequest req) throws TencentCloudSDKException{
+    public DescribeMigrateCheckJobResponse DescribeMigrateCheckJob(DescribeMigrateCheckJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrateCheckJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrateCheckJobResponse>>() {
@@ -208,7 +208,7 @@ public class DtsClient extends AbstractClient{
      * @return DescribeMigrateJobsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMigrateJobsResponse  DescribeMigrateJobs(DescribeMigrateJobsRequest req) throws TencentCloudSDKException{
+    public DescribeMigrateJobsResponse DescribeMigrateJobs(DescribeMigrateJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrateJobsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrateJobsResponse>>() {
@@ -228,7 +228,7 @@ public class DtsClient extends AbstractClient{
      * @return DescribeSyncCheckJobResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSyncCheckJobResponse  DescribeSyncCheckJob(DescribeSyncCheckJobRequest req) throws TencentCloudSDKException{
+    public DescribeSyncCheckJobResponse DescribeSyncCheckJob(DescribeSyncCheckJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSyncCheckJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSyncCheckJobResponse>>() {
@@ -246,7 +246,7 @@ public class DtsClient extends AbstractClient{
      * @return DescribeSyncJobsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSyncJobsResponse  DescribeSyncJobs(DescribeSyncJobsRequest req) throws TencentCloudSDKException{
+    public DescribeSyncJobsResponse DescribeSyncJobs(DescribeSyncJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSyncJobsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSyncJobsResponse>>() {
@@ -268,7 +268,7 @@ public class DtsClient extends AbstractClient{
      * @return ModifyMigrateJobResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMigrateJobResponse  ModifyMigrateJob(ModifyMigrateJobRequest req) throws TencentCloudSDKException{
+    public ModifyMigrateJobResponse ModifyMigrateJob(ModifyMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMigrateJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrateJobResponse>>() {
@@ -288,7 +288,7 @@ public class DtsClient extends AbstractClient{
      * @return ModifySyncJobResponse
      * @throws TencentCloudSDKException
      */
-    public ModifySyncJobResponse  ModifySyncJob(ModifySyncJobRequest req) throws TencentCloudSDKException{
+    public ModifySyncJobResponse ModifySyncJob(ModifySyncJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySyncJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySyncJobResponse>>() {
@@ -307,7 +307,7 @@ public class DtsClient extends AbstractClient{
      * @return StartMigrateJobResponse
      * @throws TencentCloudSDKException
      */
-    public StartMigrateJobResponse  StartMigrateJob(StartMigrateJobRequest req) throws TencentCloudSDKException{
+    public StartMigrateJobResponse StartMigrateJob(StartMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartMigrateJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<StartMigrateJobResponse>>() {
@@ -325,7 +325,7 @@ public class DtsClient extends AbstractClient{
      * @return StartSyncJobResponse
      * @throws TencentCloudSDKException
      */
-    public StartSyncJobResponse  StartSyncJob(StartSyncJobRequest req) throws TencentCloudSDKException{
+    public StartSyncJobResponse StartSyncJob(StartSyncJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartSyncJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<StartSyncJobResponse>>() {
@@ -344,7 +344,7 @@ public class DtsClient extends AbstractClient{
      * @return StopMigrateJobResponse
      * @throws TencentCloudSDKException
      */
-    public StopMigrateJobResponse  StopMigrateJob(StopMigrateJobRequest req) throws TencentCloudSDKException{
+    public StopMigrateJobResponse StopMigrateJob(StopMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopMigrateJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<StopMigrateJobResponse>>() {
@@ -362,7 +362,7 @@ public class DtsClient extends AbstractClient{
      * @return SwitchDrToMasterResponse
      * @throws TencentCloudSDKException
      */
-    public SwitchDrToMasterResponse  SwitchDrToMaster(SwitchDrToMasterRequest req) throws TencentCloudSDKException{
+    public SwitchDrToMasterResponse SwitchDrToMaster(SwitchDrToMasterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchDrToMasterResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchDrToMasterResponse>>() {

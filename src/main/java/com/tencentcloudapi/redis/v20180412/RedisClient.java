@@ -54,7 +54,7 @@ public class RedisClient extends AbstractClient{
      * @return ClearInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public ClearInstanceResponse  ClearInstance(ClearInstanceRequest req) throws TencentCloudSDKException{
+    public ClearInstanceResponse ClearInstance(ClearInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClearInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ClearInstanceResponse>>() {
@@ -72,7 +72,7 @@ public class RedisClient extends AbstractClient{
      * @return CreateInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public CreateInstancesResponse  CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
+    public CreateInstancesResponse CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstancesResponse>>() {
@@ -90,7 +90,7 @@ public class RedisClient extends AbstractClient{
      * @return DescribeAutoBackupConfigResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAutoBackupConfigResponse  DescribeAutoBackupConfig(DescribeAutoBackupConfigRequest req) throws TencentCloudSDKException{
+    public DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(DescribeAutoBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoBackupConfigResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoBackupConfigResponse>>() {
@@ -108,7 +108,7 @@ public class RedisClient extends AbstractClient{
      * @return DescribeInstanceBackupsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstanceBackupsResponse  DescribeInstanceBackups(DescribeInstanceBackupsRequest req) throws TencentCloudSDKException{
+    public DescribeInstanceBackupsResponse DescribeInstanceBackups(DescribeInstanceBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceBackupsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceBackupsResponse>>() {
@@ -126,7 +126,7 @@ public class RedisClient extends AbstractClient{
      * @return DescribeInstanceDealDetailResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstanceDealDetailResponse  DescribeInstanceDealDetail(DescribeInstanceDealDetailRequest req) throws TencentCloudSDKException{
+    public DescribeInstanceDealDetailResponse DescribeInstanceDealDetail(DescribeInstanceDealDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceDealDetailResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceDealDetailResponse>>() {
@@ -144,7 +144,7 @@ public class RedisClient extends AbstractClient{
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstancesResponse  DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
@@ -162,7 +162,7 @@ public class RedisClient extends AbstractClient{
      * @return DescribeProductInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeProductInfoResponse  DescribeProductInfo(DescribeProductInfoRequest req) throws TencentCloudSDKException{
+    public DescribeProductInfoResponse DescribeProductInfo(DescribeProductInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductInfoResponse>>() {
@@ -180,7 +180,7 @@ public class RedisClient extends AbstractClient{
      * @return DescribeTaskInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskInfoResponse  DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
+    public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
@@ -198,7 +198,7 @@ public class RedisClient extends AbstractClient{
      * @return ManualBackupInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public ManualBackupInstanceResponse  ManualBackupInstance(ManualBackupInstanceRequest req) throws TencentCloudSDKException{
+    public ManualBackupInstanceResponse ManualBackupInstance(ManualBackupInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ManualBackupInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ManualBackupInstanceResponse>>() {
@@ -216,7 +216,7 @@ public class RedisClient extends AbstractClient{
      * @return ModfiyInstancePasswordResponse
      * @throws TencentCloudSDKException
      */
-    public ModfiyInstancePasswordResponse  ModfiyInstancePassword(ModfiyInstancePasswordRequest req) throws TencentCloudSDKException{
+    public ModfiyInstancePasswordResponse ModfiyInstancePassword(ModfiyInstancePasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModfiyInstancePasswordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModfiyInstancePasswordResponse>>() {
@@ -234,7 +234,7 @@ public class RedisClient extends AbstractClient{
      * @return ModifyAutoBackupConfigResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyAutoBackupConfigResponse  ModifyAutoBackupConfig(ModifyAutoBackupConfigRequest req) throws TencentCloudSDKException{
+    public ModifyAutoBackupConfigResponse ModifyAutoBackupConfig(ModifyAutoBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAutoBackupConfigResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoBackupConfigResponse>>() {
@@ -252,7 +252,7 @@ public class RedisClient extends AbstractClient{
      * @return ModifyInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyInstanceResponse  ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
+    public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
@@ -270,7 +270,7 @@ public class RedisClient extends AbstractClient{
      * @return RenewInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public RenewInstanceResponse  RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
+    public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewInstanceResponse>>() {
@@ -288,7 +288,7 @@ public class RedisClient extends AbstractClient{
      * @return ResetPasswordResponse
      * @throws TencentCloudSDKException
      */
-    public ResetPasswordResponse  ResetPassword(ResetPasswordRequest req) throws TencentCloudSDKException{
+    public ResetPasswordResponse ResetPassword(ResetPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetPasswordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetPasswordResponse>>() {
@@ -306,7 +306,7 @@ public class RedisClient extends AbstractClient{
      * @return UpgradeInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public UpgradeInstanceResponse  UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
+    public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeInstanceResponse>>() {

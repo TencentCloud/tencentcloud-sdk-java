@@ -54,7 +54,7 @@ public class CrClient extends AbstractClient{
      * @return ApplyBlackListResponse
      * @throws TencentCloudSDKException
      */
-    public ApplyBlackListResponse  ApplyBlackList(ApplyBlackListRequest req) throws TencentCloudSDKException{
+    public ApplyBlackListResponse ApplyBlackList(ApplyBlackListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyBlackListResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyBlackListResponse>>() {
@@ -72,7 +72,7 @@ public class CrClient extends AbstractClient{
      * @return DescribeRecordsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeRecordsResponse  DescribeRecords(DescribeRecordsRequest req) throws TencentCloudSDKException{
+    public DescribeRecordsResponse DescribeRecords(DescribeRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordsResponse>>() {
@@ -90,7 +90,7 @@ public class CrClient extends AbstractClient{
      * @return DescribeTaskStatusResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTaskStatusResponse  DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
+    public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
@@ -108,7 +108,7 @@ public class CrClient extends AbstractClient{
      * @return DownloadReportResponse
      * @throws TencentCloudSDKException
      */
-    public DownloadReportResponse  DownloadReport(DownloadReportRequest req) throws TencentCloudSDKException{
+    public DownloadReportResponse DownloadReport(DownloadReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadReportResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadReportResponse>>() {
@@ -126,7 +126,7 @@ public class CrClient extends AbstractClient{
      * @return UploadDataFileResponse
      * @throws TencentCloudSDKException
      */
-    public UploadDataFileResponse  UploadDataFile(UploadDataFileRequest req) throws TencentCloudSDKException{
+    public UploadDataFileResponse UploadDataFile(UploadDataFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadDataFileResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadDataFileResponse>>() {
@@ -144,7 +144,7 @@ public class CrClient extends AbstractClient{
      * @return UploadFileResponse
      * @throws TencentCloudSDKException
      */
-    public UploadFileResponse  UploadFile(UploadFileRequest req) throws TencentCloudSDKException{
+    public UploadFileResponse UploadFile(UploadFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadFileResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadFileResponse>>() {

@@ -54,7 +54,7 @@ public class YoumallClient extends AbstractClient{
      * @return CreateAccountResponse
      * @throws TencentCloudSDKException
      */
-    public CreateAccountResponse  CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
+    public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
@@ -72,7 +72,7 @@ public class YoumallClient extends AbstractClient{
      * @return CreateFacePictureResponse
      * @throws TencentCloudSDKException
      */
-    public CreateFacePictureResponse  CreateFacePicture(CreateFacePictureRequest req) throws TencentCloudSDKException{
+    public CreateFacePictureResponse CreateFacePicture(CreateFacePictureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFacePictureResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFacePictureResponse>>() {
@@ -90,7 +90,7 @@ public class YoumallClient extends AbstractClient{
      * @return DeletePersonFeatureResponse
      * @throws TencentCloudSDKException
      */
-    public DeletePersonFeatureResponse  DeletePersonFeature(DeletePersonFeatureRequest req) throws TencentCloudSDKException{
+    public DeletePersonFeatureResponse DeletePersonFeature(DeletePersonFeatureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePersonFeatureResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePersonFeatureResponse>>() {
@@ -108,7 +108,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeCameraPersonResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeCameraPersonResponse  DescribeCameraPerson(DescribeCameraPersonRequest req) throws TencentCloudSDKException{
+    public DescribeCameraPersonResponse DescribeCameraPerson(DescribeCameraPersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCameraPersonResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCameraPersonResponse>>() {
@@ -126,7 +126,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeClusterPersonArrivedMallResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeClusterPersonArrivedMallResponse  DescribeClusterPersonArrivedMall(DescribeClusterPersonArrivedMallRequest req) throws TencentCloudSDKException{
+    public DescribeClusterPersonArrivedMallResponse DescribeClusterPersonArrivedMall(DescribeClusterPersonArrivedMallRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterPersonArrivedMallResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterPersonArrivedMallResponse>>() {
@@ -144,7 +144,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeClusterPersonTraceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeClusterPersonTraceResponse  DescribeClusterPersonTrace(DescribeClusterPersonTraceRequest req) throws TencentCloudSDKException{
+    public DescribeClusterPersonTraceResponse DescribeClusterPersonTrace(DescribeClusterPersonTraceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterPersonTraceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterPersonTraceResponse>>() {
@@ -162,7 +162,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeFaceIdByTempIdResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeFaceIdByTempIdResponse  DescribeFaceIdByTempId(DescribeFaceIdByTempIdRequest req) throws TencentCloudSDKException{
+    public DescribeFaceIdByTempIdResponse DescribeFaceIdByTempId(DescribeFaceIdByTempIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFaceIdByTempIdResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFaceIdByTempIdResponse>>() {
@@ -180,7 +180,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeHistoryNetworkInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeHistoryNetworkInfoResponse  DescribeHistoryNetworkInfo(DescribeHistoryNetworkInfoRequest req) throws TencentCloudSDKException{
+    public DescribeHistoryNetworkInfoResponse DescribeHistoryNetworkInfo(DescribeHistoryNetworkInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHistoryNetworkInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHistoryNetworkInfoResponse>>() {
@@ -198,7 +198,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeNetworkInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeNetworkInfoResponse  DescribeNetworkInfo(DescribeNetworkInfoRequest req) throws TencentCloudSDKException{
+    public DescribeNetworkInfoResponse DescribeNetworkInfo(DescribeNetworkInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNetworkInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNetworkInfoResponse>>() {
@@ -216,7 +216,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribePersonResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePersonResponse  DescribePerson(DescribePersonRequest req) throws TencentCloudSDKException{
+    public DescribePersonResponse DescribePerson(DescribePersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonResponse>>() {
@@ -236,7 +236,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribePersonArrivedMallResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePersonArrivedMallResponse  DescribePersonArrivedMall(DescribePersonArrivedMallRequest req) throws TencentCloudSDKException{
+    public DescribePersonArrivedMallResponse DescribePersonArrivedMall(DescribePersonArrivedMallRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonArrivedMallResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonArrivedMallResponse>>() {
@@ -254,7 +254,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribePersonInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePersonInfoResponse  DescribePersonInfo(DescribePersonInfoRequest req) throws TencentCloudSDKException{
+    public DescribePersonInfoResponse DescribePersonInfo(DescribePersonInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonInfoResponse>>() {
@@ -272,7 +272,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribePersonInfoByFacePictureResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePersonInfoByFacePictureResponse  DescribePersonInfoByFacePicture(DescribePersonInfoByFacePictureRequest req) throws TencentCloudSDKException{
+    public DescribePersonInfoByFacePictureResponse DescribePersonInfoByFacePicture(DescribePersonInfoByFacePictureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonInfoByFacePictureResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonInfoByFacePictureResponse>>() {
@@ -290,7 +290,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribePersonTraceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePersonTraceResponse  DescribePersonTrace(DescribePersonTraceRequest req) throws TencentCloudSDKException{
+    public DescribePersonTraceResponse DescribePersonTrace(DescribePersonTraceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonTraceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonTraceResponse>>() {
@@ -308,7 +308,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribePersonTraceDetailResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePersonTraceDetailResponse  DescribePersonTraceDetail(DescribePersonTraceDetailRequest req) throws TencentCloudSDKException{
+    public DescribePersonTraceDetailResponse DescribePersonTraceDetail(DescribePersonTraceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonTraceDetailResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonTraceDetailResponse>>() {
@@ -326,7 +326,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribePersonVisitInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePersonVisitInfoResponse  DescribePersonVisitInfo(DescribePersonVisitInfoRequest req) throws TencentCloudSDKException{
+    public DescribePersonVisitInfoResponse DescribePersonVisitInfo(DescribePersonVisitInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonVisitInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonVisitInfoResponse>>() {
@@ -344,7 +344,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeShopHourTrafficInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeShopHourTrafficInfoResponse  DescribeShopHourTrafficInfo(DescribeShopHourTrafficInfoRequest req) throws TencentCloudSDKException{
+    public DescribeShopHourTrafficInfoResponse DescribeShopHourTrafficInfo(DescribeShopHourTrafficInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShopHourTrafficInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShopHourTrafficInfoResponse>>() {
@@ -362,7 +362,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeShopInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeShopInfoResponse  DescribeShopInfo(DescribeShopInfoRequest req) throws TencentCloudSDKException{
+    public DescribeShopInfoResponse DescribeShopInfo(DescribeShopInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShopInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShopInfoResponse>>() {
@@ -380,7 +380,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeShopTrafficInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeShopTrafficInfoResponse  DescribeShopTrafficInfo(DescribeShopTrafficInfoRequest req) throws TencentCloudSDKException{
+    public DescribeShopTrafficInfoResponse DescribeShopTrafficInfo(DescribeShopTrafficInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShopTrafficInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShopTrafficInfoResponse>>() {
@@ -398,7 +398,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeTrajectoryDataResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeTrajectoryDataResponse  DescribeTrajectoryData(DescribeTrajectoryDataRequest req) throws TencentCloudSDKException{
+    public DescribeTrajectoryDataResponse DescribeTrajectoryData(DescribeTrajectoryDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrajectoryDataResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrajectoryDataResponse>>() {
@@ -416,7 +416,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeZoneFlowAgeInfoByZoneIdResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZoneFlowAgeInfoByZoneIdResponse  DescribeZoneFlowAgeInfoByZoneId(DescribeZoneFlowAgeInfoByZoneIdRequest req) throws TencentCloudSDKException{
+    public DescribeZoneFlowAgeInfoByZoneIdResponse DescribeZoneFlowAgeInfoByZoneId(DescribeZoneFlowAgeInfoByZoneIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowAgeInfoByZoneIdResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowAgeInfoByZoneIdResponse>>() {
@@ -434,7 +434,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeZoneFlowAndStayTimeResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZoneFlowAndStayTimeResponse  DescribeZoneFlowAndStayTime(DescribeZoneFlowAndStayTimeRequest req) throws TencentCloudSDKException{
+    public DescribeZoneFlowAndStayTimeResponse DescribeZoneFlowAndStayTime(DescribeZoneFlowAndStayTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowAndStayTimeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowAndStayTimeResponse>>() {
@@ -452,7 +452,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeZoneFlowDailyByZoneIdResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZoneFlowDailyByZoneIdResponse  DescribeZoneFlowDailyByZoneId(DescribeZoneFlowDailyByZoneIdRequest req) throws TencentCloudSDKException{
+    public DescribeZoneFlowDailyByZoneIdResponse DescribeZoneFlowDailyByZoneId(DescribeZoneFlowDailyByZoneIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowDailyByZoneIdResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowDailyByZoneIdResponse>>() {
@@ -470,7 +470,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse  DescribeZoneFlowGenderAvrStayTimeByZoneId(DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest req) throws TencentCloudSDKException{
+    public DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse DescribeZoneFlowGenderAvrStayTimeByZoneId(DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse>>() {
@@ -488,7 +488,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeZoneFlowGenderInfoByZoneIdResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZoneFlowGenderInfoByZoneIdResponse  DescribeZoneFlowGenderInfoByZoneId(DescribeZoneFlowGenderInfoByZoneIdRequest req) throws TencentCloudSDKException{
+    public DescribeZoneFlowGenderInfoByZoneIdResponse DescribeZoneFlowGenderInfoByZoneId(DescribeZoneFlowGenderInfoByZoneIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowGenderInfoByZoneIdResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowGenderInfoByZoneIdResponse>>() {
@@ -506,7 +506,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeZoneFlowHourlyByZoneIdResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZoneFlowHourlyByZoneIdResponse  DescribeZoneFlowHourlyByZoneId(DescribeZoneFlowHourlyByZoneIdRequest req) throws TencentCloudSDKException{
+    public DescribeZoneFlowHourlyByZoneIdResponse DescribeZoneFlowHourlyByZoneId(DescribeZoneFlowHourlyByZoneIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowHourlyByZoneIdResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowHourlyByZoneIdResponse>>() {
@@ -524,7 +524,7 @@ public class YoumallClient extends AbstractClient{
      * @return DescribeZoneTrafficInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeZoneTrafficInfoResponse  DescribeZoneTrafficInfo(DescribeZoneTrafficInfoRequest req) throws TencentCloudSDKException{
+    public DescribeZoneTrafficInfoResponse DescribeZoneTrafficInfo(DescribeZoneTrafficInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneTrafficInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneTrafficInfoResponse>>() {
@@ -542,7 +542,7 @@ public class YoumallClient extends AbstractClient{
      * @return ModifyPersonFeatureInfoResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyPersonFeatureInfoResponse  ModifyPersonFeatureInfo(ModifyPersonFeatureInfoRequest req) throws TencentCloudSDKException{
+    public ModifyPersonFeatureInfoResponse ModifyPersonFeatureInfo(ModifyPersonFeatureInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonFeatureInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonFeatureInfoResponse>>() {
@@ -561,7 +561,7 @@ public class YoumallClient extends AbstractClient{
      * @return ModifyPersonTagInfoResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyPersonTagInfoResponse  ModifyPersonTagInfo(ModifyPersonTagInfoRequest req) throws TencentCloudSDKException{
+    public ModifyPersonTagInfoResponse ModifyPersonTagInfo(ModifyPersonTagInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonTagInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonTagInfoResponse>>() {
@@ -579,7 +579,7 @@ public class YoumallClient extends AbstractClient{
      * @return ModifyPersonTypeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyPersonTypeResponse  ModifyPersonType(ModifyPersonTypeRequest req) throws TencentCloudSDKException{
+    public ModifyPersonTypeResponse ModifyPersonType(ModifyPersonTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonTypeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonTypeResponse>>() {
@@ -597,7 +597,7 @@ public class YoumallClient extends AbstractClient{
      * @return RegisterCallbackResponse
      * @throws TencentCloudSDKException
      */
-    public RegisterCallbackResponse  RegisterCallback(RegisterCallbackRequest req) throws TencentCloudSDKException{
+    public RegisterCallbackResponse RegisterCallback(RegisterCallbackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterCallbackResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterCallbackResponse>>() {

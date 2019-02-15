@@ -54,7 +54,7 @@ public class CwsClient extends AbstractClient{
      * @return CreateMonitorsResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMonitorsResponse  CreateMonitors(CreateMonitorsRequest req) throws TencentCloudSDKException{
+    public CreateMonitorsResponse CreateMonitors(CreateMonitorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMonitorsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMonitorsResponse>>() {
@@ -72,7 +72,7 @@ public class CwsClient extends AbstractClient{
      * @return CreateSitesResponse
      * @throws TencentCloudSDKException
      */
-    public CreateSitesResponse  CreateSites(CreateSitesRequest req) throws TencentCloudSDKException{
+    public CreateSitesResponse CreateSites(CreateSitesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSitesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSitesResponse>>() {
@@ -90,7 +90,7 @@ public class CwsClient extends AbstractClient{
      * @return CreateSitesScansResponse
      * @throws TencentCloudSDKException
      */
-    public CreateSitesScansResponse  CreateSitesScans(CreateSitesScansRequest req) throws TencentCloudSDKException{
+    public CreateSitesScansResponse CreateSitesScans(CreateSitesScansRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSitesScansResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSitesScansResponse>>() {
@@ -108,7 +108,7 @@ public class CwsClient extends AbstractClient{
      * @return CreateVulsMisinformationResponse
      * @throws TencentCloudSDKException
      */
-    public CreateVulsMisinformationResponse  CreateVulsMisinformation(CreateVulsMisinformationRequest req) throws TencentCloudSDKException{
+    public CreateVulsMisinformationResponse CreateVulsMisinformation(CreateVulsMisinformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVulsMisinformationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVulsMisinformationResponse>>() {
@@ -126,7 +126,7 @@ public class CwsClient extends AbstractClient{
      * @return CreateVulsReportResponse
      * @throws TencentCloudSDKException
      */
-    public CreateVulsReportResponse  CreateVulsReport(CreateVulsReportRequest req) throws TencentCloudSDKException{
+    public CreateVulsReportResponse CreateVulsReport(CreateVulsReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVulsReportResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVulsReportResponse>>() {
@@ -144,7 +144,7 @@ public class CwsClient extends AbstractClient{
      * @return DeleteMonitorsResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMonitorsResponse  DeleteMonitors(DeleteMonitorsRequest req) throws TencentCloudSDKException{
+    public DeleteMonitorsResponse DeleteMonitors(DeleteMonitorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMonitorsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMonitorsResponse>>() {
@@ -162,7 +162,7 @@ public class CwsClient extends AbstractClient{
      * @return DeleteSitesResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteSitesResponse  DeleteSites(DeleteSitesRequest req) throws TencentCloudSDKException{
+    public DeleteSitesResponse DeleteSites(DeleteSitesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSitesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSitesResponse>>() {
@@ -180,7 +180,7 @@ public class CwsClient extends AbstractClient{
      * @return DescribeConfigResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeConfigResponse  DescribeConfig(DescribeConfigRequest req) throws TencentCloudSDKException{
+    public DescribeConfigResponse DescribeConfig(DescribeConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigResponse>>() {
@@ -198,7 +198,7 @@ public class CwsClient extends AbstractClient{
      * @return DescribeMonitorsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMonitorsResponse  DescribeMonitors(DescribeMonitorsRequest req) throws TencentCloudSDKException{
+    public DescribeMonitorsResponse DescribeMonitors(DescribeMonitorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMonitorsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMonitorsResponse>>() {
@@ -216,7 +216,7 @@ public class CwsClient extends AbstractClient{
      * @return DescribeSiteQuotaResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSiteQuotaResponse  DescribeSiteQuota(DescribeSiteQuotaRequest req) throws TencentCloudSDKException{
+    public DescribeSiteQuotaResponse DescribeSiteQuota(DescribeSiteQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSiteQuotaResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSiteQuotaResponse>>() {
@@ -234,7 +234,7 @@ public class CwsClient extends AbstractClient{
      * @return DescribeSitesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSitesResponse  DescribeSites(DescribeSitesRequest req) throws TencentCloudSDKException{
+    public DescribeSitesResponse DescribeSites(DescribeSitesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSitesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSitesResponse>>() {
@@ -252,7 +252,7 @@ public class CwsClient extends AbstractClient{
      * @return DescribeSitesVerificationResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSitesVerificationResponse  DescribeSitesVerification(DescribeSitesVerificationRequest req) throws TencentCloudSDKException{
+    public DescribeSitesVerificationResponse DescribeSitesVerification(DescribeSitesVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSitesVerificationResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSitesVerificationResponse>>() {
@@ -270,7 +270,7 @@ public class CwsClient extends AbstractClient{
      * @return DescribeVulsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeVulsResponse  DescribeVuls(DescribeVulsRequest req) throws TencentCloudSDKException{
+    public DescribeVulsResponse DescribeVuls(DescribeVulsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulsResponse>>() {
@@ -288,7 +288,7 @@ public class CwsClient extends AbstractClient{
      * @return DescribeVulsNumberResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeVulsNumberResponse  DescribeVulsNumber(DescribeVulsNumberRequest req) throws TencentCloudSDKException{
+    public DescribeVulsNumberResponse DescribeVulsNumber(DescribeVulsNumberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulsNumberResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulsNumberResponse>>() {
@@ -306,7 +306,7 @@ public class CwsClient extends AbstractClient{
      * @return DescribeVulsNumberTimelineResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeVulsNumberTimelineResponse  DescribeVulsNumberTimeline(DescribeVulsNumberTimelineRequest req) throws TencentCloudSDKException{
+    public DescribeVulsNumberTimelineResponse DescribeVulsNumberTimeline(DescribeVulsNumberTimelineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulsNumberTimelineResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulsNumberTimelineResponse>>() {
@@ -324,7 +324,7 @@ public class CwsClient extends AbstractClient{
      * @return ModifyConfigAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyConfigAttributeResponse  ModifyConfigAttribute(ModifyConfigAttributeRequest req) throws TencentCloudSDKException{
+    public ModifyConfigAttributeResponse ModifyConfigAttribute(ModifyConfigAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyConfigAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyConfigAttributeResponse>>() {
@@ -342,7 +342,7 @@ public class CwsClient extends AbstractClient{
      * @return ModifyMonitorAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMonitorAttributeResponse  ModifyMonitorAttribute(ModifyMonitorAttributeRequest req) throws TencentCloudSDKException{
+    public ModifyMonitorAttributeResponse ModifyMonitorAttribute(ModifyMonitorAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMonitorAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMonitorAttributeResponse>>() {
@@ -360,7 +360,7 @@ public class CwsClient extends AbstractClient{
      * @return ModifySiteAttributeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifySiteAttributeResponse  ModifySiteAttribute(ModifySiteAttributeRequest req) throws TencentCloudSDKException{
+    public ModifySiteAttributeResponse ModifySiteAttribute(ModifySiteAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySiteAttributeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySiteAttributeResponse>>() {
@@ -378,7 +378,7 @@ public class CwsClient extends AbstractClient{
      * @return VerifySitesResponse
      * @throws TencentCloudSDKException
      */
-    public VerifySitesResponse  VerifySites(VerifySitesRequest req) throws TencentCloudSDKException{
+    public VerifySitesResponse VerifySites(VerifySitesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifySitesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifySitesResponse>>() {

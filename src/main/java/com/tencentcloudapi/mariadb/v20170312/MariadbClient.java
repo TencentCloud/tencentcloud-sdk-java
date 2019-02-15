@@ -54,7 +54,7 @@ public class MariadbClient extends AbstractClient{
      * @return CloneAccountResponse
      * @throws TencentCloudSDKException
      */
-    public CloneAccountResponse  CloneAccount(CloneAccountRequest req) throws TencentCloudSDKException{
+    public CloneAccountResponse CloneAccount(CloneAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloneAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CloneAccountResponse>>() {
@@ -72,7 +72,7 @@ public class MariadbClient extends AbstractClient{
      * @return CloseDBExtranetAccessResponse
      * @throws TencentCloudSDKException
      */
-    public CloseDBExtranetAccessResponse  CloseDBExtranetAccess(CloseDBExtranetAccessRequest req) throws TencentCloudSDKException{
+    public CloseDBExtranetAccessResponse CloseDBExtranetAccess(CloseDBExtranetAccessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseDBExtranetAccessResponse>>() {
@@ -91,7 +91,7 @@ public class MariadbClient extends AbstractClient{
      * @return CopyAccountPrivilegesResponse
      * @throws TencentCloudSDKException
      */
-    public CopyAccountPrivilegesResponse  CopyAccountPrivileges(CopyAccountPrivilegesRequest req) throws TencentCloudSDKException{
+    public CopyAccountPrivilegesResponse CopyAccountPrivileges(CopyAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopyAccountPrivilegesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CopyAccountPrivilegesResponse>>() {
@@ -109,7 +109,7 @@ public class MariadbClient extends AbstractClient{
      * @return CreateAccountResponse
      * @throws TencentCloudSDKException
      */
-    public CreateAccountResponse  CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
+    public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
@@ -127,7 +127,7 @@ public class MariadbClient extends AbstractClient{
      * @return CreateDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateDBInstanceResponse  CreateDBInstance(CreateDBInstanceRequest req) throws TencentCloudSDKException{
+    public CreateDBInstanceResponse CreateDBInstance(CreateDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceResponse>>() {
@@ -145,7 +145,7 @@ public class MariadbClient extends AbstractClient{
      * @return DeleteAccountResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteAccountResponse  DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
+    public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccountResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccountResponse>>() {
@@ -164,7 +164,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeAccountPrivilegesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAccountPrivilegesResponse  DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req) throws TencentCloudSDKException{
+    public DescribeAccountPrivilegesResponse DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountPrivilegesResponse>>() {
@@ -182,7 +182,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeAccountsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAccountsResponse  DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
+    public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
@@ -200,7 +200,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeBackupTimeResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeBackupTimeResponse  DescribeBackupTime(DescribeBackupTimeRequest req) throws TencentCloudSDKException{
+    public DescribeBackupTimeResponse DescribeBackupTime(DescribeBackupTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupTimeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupTimeResponse>>() {
@@ -218,7 +218,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeDBInstanceSpecsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBInstanceSpecsResponse  DescribeDBInstanceSpecs(DescribeDBInstanceSpecsRequest req) throws TencentCloudSDKException{
+    public DescribeDBInstanceSpecsResponse DescribeDBInstanceSpecs(DescribeDBInstanceSpecsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstanceSpecsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceSpecsResponse>>() {
@@ -237,7 +237,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBInstancesResponse  DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
@@ -255,7 +255,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeDBLogFilesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBLogFilesResponse  DescribeDBLogFiles(DescribeDBLogFilesRequest req) throws TencentCloudSDKException{
+    public DescribeDBLogFilesResponse DescribeDBLogFiles(DescribeDBLogFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBLogFilesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBLogFilesResponse>>() {
@@ -273,7 +273,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeDBParametersResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBParametersResponse  DescribeDBParameters(DescribeDBParametersRequest req) throws TencentCloudSDKException{
+    public DescribeDBParametersResponse DescribeDBParameters(DescribeDBParametersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBParametersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBParametersResponse>>() {
@@ -291,7 +291,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeDBPerformanceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBPerformanceResponse  DescribeDBPerformance(DescribeDBPerformanceRequest req) throws TencentCloudSDKException{
+    public DescribeDBPerformanceResponse DescribeDBPerformance(DescribeDBPerformanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBPerformanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBPerformanceResponse>>() {
@@ -309,7 +309,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeDBPerformanceDetailsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBPerformanceDetailsResponse  DescribeDBPerformanceDetails(DescribeDBPerformanceDetailsRequest req) throws TencentCloudSDKException{
+    public DescribeDBPerformanceDetailsResponse DescribeDBPerformanceDetails(DescribeDBPerformanceDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBPerformanceDetailsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBPerformanceDetailsResponse>>() {
@@ -327,7 +327,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeDBResourceUsageResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBResourceUsageResponse  DescribeDBResourceUsage(DescribeDBResourceUsageRequest req) throws TencentCloudSDKException{
+    public DescribeDBResourceUsageResponse DescribeDBResourceUsage(DescribeDBResourceUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBResourceUsageResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBResourceUsageResponse>>() {
@@ -345,7 +345,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeDBResourceUsageDetailsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBResourceUsageDetailsResponse  DescribeDBResourceUsageDetails(DescribeDBResourceUsageDetailsRequest req) throws TencentCloudSDKException{
+    public DescribeDBResourceUsageDetailsResponse DescribeDBResourceUsageDetails(DescribeDBResourceUsageDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBResourceUsageDetailsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBResourceUsageDetailsResponse>>() {
@@ -363,7 +363,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeDBSlowLogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeDBSlowLogsResponse  DescribeDBSlowLogs(DescribeDBSlowLogsRequest req) throws TencentCloudSDKException{
+    public DescribeDBSlowLogsResponse DescribeDBSlowLogs(DescribeDBSlowLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSlowLogsResponse>>() {
@@ -381,7 +381,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeFlowResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeFlowResponse  DescribeFlow(DescribeFlowRequest req) throws TencentCloudSDKException{
+    public DescribeFlowResponse DescribeFlow(DescribeFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowResponse>>() {
@@ -399,7 +399,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeLogFileRetentionPeriodResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeLogFileRetentionPeriodResponse  DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
+    public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>() {
@@ -417,7 +417,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeOrdersResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeOrdersResponse  DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
+    public DescribeOrdersResponse DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrdersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
@@ -435,7 +435,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribePriceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePriceResponse  DescribePrice(DescribePriceRequest req) throws TencentCloudSDKException{
+    public DescribePriceResponse DescribePrice(DescribePriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePriceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePriceResponse>>() {
@@ -453,7 +453,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeRenewalPriceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeRenewalPriceResponse  DescribeRenewalPrice(DescribeRenewalPriceRequest req) throws TencentCloudSDKException{
+    public DescribeRenewalPriceResponse DescribeRenewalPrice(DescribeRenewalPriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRenewalPriceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRenewalPriceResponse>>() {
@@ -471,7 +471,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeSaleInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSaleInfoResponse  DescribeSaleInfo(DescribeSaleInfoRequest req) throws TencentCloudSDKException{
+    public DescribeSaleInfoResponse DescribeSaleInfo(DescribeSaleInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSaleInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSaleInfoResponse>>() {
@@ -489,7 +489,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeSqlLogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSqlLogsResponse  DescribeSqlLogs(DescribeSqlLogsRequest req) throws TencentCloudSDKException{
+    public DescribeSqlLogsResponse DescribeSqlLogs(DescribeSqlLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSqlLogsResponse>>() {
@@ -507,7 +507,7 @@ public class MariadbClient extends AbstractClient{
      * @return DescribeUpgradePriceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeUpgradePriceResponse  DescribeUpgradePrice(DescribeUpgradePriceRequest req) throws TencentCloudSDKException{
+    public DescribeUpgradePriceResponse DescribeUpgradePrice(DescribeUpgradePriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUpgradePriceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUpgradePriceResponse>>() {
@@ -526,7 +526,7 @@ public class MariadbClient extends AbstractClient{
      * @return GrantAccountPrivilegesResponse
      * @throws TencentCloudSDKException
      */
-    public GrantAccountPrivilegesResponse  GrantAccountPrivileges(GrantAccountPrivilegesRequest req) throws TencentCloudSDKException{
+    public GrantAccountPrivilegesResponse GrantAccountPrivileges(GrantAccountPrivilegesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GrantAccountPrivilegesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<GrantAccountPrivilegesResponse>>() {
@@ -544,7 +544,7 @@ public class MariadbClient extends AbstractClient{
      * @return InitDBInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public InitDBInstancesResponse  InitDBInstances(InitDBInstancesRequest req) throws TencentCloudSDKException{
+    public InitDBInstancesResponse InitDBInstances(InitDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InitDBInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InitDBInstancesResponse>>() {
@@ -563,7 +563,7 @@ public class MariadbClient extends AbstractClient{
      * @return ModifyAccountDescriptionResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyAccountDescriptionResponse  ModifyAccountDescription(ModifyAccountDescriptionRequest req) throws TencentCloudSDKException{
+    public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountDescriptionResponse>>() {
@@ -581,7 +581,7 @@ public class MariadbClient extends AbstractClient{
      * @return ModifyBackupTimeResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyBackupTimeResponse  ModifyBackupTime(ModifyBackupTimeRequest req) throws TencentCloudSDKException{
+    public ModifyBackupTimeResponse ModifyBackupTime(ModifyBackupTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBackupTimeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupTimeResponse>>() {
@@ -599,7 +599,7 @@ public class MariadbClient extends AbstractClient{
      * @return ModifyDBInstanceNameResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBInstanceNameResponse  ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
+    public ModifyDBInstanceNameResponse ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNameResponse>>() {
@@ -617,7 +617,7 @@ public class MariadbClient extends AbstractClient{
      * @return ModifyDBInstancesProjectResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBInstancesProjectResponse  ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
+    public ModifyDBInstancesProjectResponse ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
@@ -635,7 +635,7 @@ public class MariadbClient extends AbstractClient{
      * @return ModifyDBParametersResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyDBParametersResponse  ModifyDBParameters(ModifyDBParametersRequest req) throws TencentCloudSDKException{
+    public ModifyDBParametersResponse ModifyDBParameters(ModifyDBParametersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBParametersResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBParametersResponse>>() {
@@ -653,7 +653,7 @@ public class MariadbClient extends AbstractClient{
      * @return ModifyLogFileRetentionPeriodResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLogFileRetentionPeriodResponse  ModifyLogFileRetentionPeriod(ModifyLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
+    public ModifyLogFileRetentionPeriodResponse ModifyLogFileRetentionPeriod(ModifyLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLogFileRetentionPeriodResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLogFileRetentionPeriodResponse>>() {
@@ -671,7 +671,7 @@ public class MariadbClient extends AbstractClient{
      * @return OpenDBExtranetAccessResponse
      * @throws TencentCloudSDKException
      */
-    public OpenDBExtranetAccessResponse  OpenDBExtranetAccess(OpenDBExtranetAccessRequest req) throws TencentCloudSDKException{
+    public OpenDBExtranetAccessResponse OpenDBExtranetAccess(OpenDBExtranetAccessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenDBExtranetAccessResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenDBExtranetAccessResponse>>() {
@@ -689,7 +689,7 @@ public class MariadbClient extends AbstractClient{
      * @return RenewDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public RenewDBInstanceResponse  RenewDBInstance(RenewDBInstanceRequest req) throws TencentCloudSDKException{
+    public RenewDBInstanceResponse RenewDBInstance(RenewDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewDBInstanceResponse>>() {
@@ -708,7 +708,7 @@ public class MariadbClient extends AbstractClient{
      * @return ResetAccountPasswordResponse
      * @throws TencentCloudSDKException
      */
-    public ResetAccountPasswordResponse  ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
+    public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
@@ -726,7 +726,7 @@ public class MariadbClient extends AbstractClient{
      * @return UpgradeDBInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public UpgradeDBInstanceResponse  UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
+    public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {

@@ -54,7 +54,7 @@ public class EsClient extends AbstractClient{
      * @return CreateInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public CreateInstanceResponse  CreateInstance(CreateInstanceRequest req) throws TencentCloudSDKException{
+    public CreateInstanceResponse CreateInstance(CreateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstanceResponse>>() {
@@ -72,7 +72,7 @@ public class EsClient extends AbstractClient{
      * @return DeleteInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteInstanceResponse  DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
+    public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteInstanceResponse>>() {
@@ -90,7 +90,7 @@ public class EsClient extends AbstractClient{
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeInstancesResponse  DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
@@ -108,7 +108,7 @@ public class EsClient extends AbstractClient{
      * @return RestartInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public RestartInstanceResponse  RestartInstance(RestartInstanceRequest req) throws TencentCloudSDKException{
+    public RestartInstanceResponse RestartInstance(RestartInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartInstanceResponse>>() {
@@ -126,7 +126,7 @@ public class EsClient extends AbstractClient{
      * @return UpdateInstanceResponse
      * @throws TencentCloudSDKException
      */
-    public UpdateInstanceResponse  UpdateInstance(UpdateInstanceRequest req) throws TencentCloudSDKException{
+    public UpdateInstanceResponse UpdateInstance(UpdateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateInstanceResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateInstanceResponse>>() {

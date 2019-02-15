@@ -63,7 +63,7 @@ public class CdnClient extends AbstractClient{
      * @return DescribeCdnDataResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeCdnDataResponse  DescribeCdnData(DescribeCdnDataRequest req) throws TencentCloudSDKException{
+    public DescribeCdnDataResponse DescribeCdnData(DescribeCdnDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCdnDataResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCdnDataResponse>>() {
@@ -84,7 +84,7 @@ public class CdnClient extends AbstractClient{
      * @return DescribeIpVisitResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeIpVisitResponse  DescribeIpVisit(DescribeIpVisitRequest req) throws TencentCloudSDKException{
+    public DescribeIpVisitResponse DescribeIpVisit(DescribeIpVisitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIpVisitResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIpVisitResponse>>() {
@@ -102,7 +102,7 @@ public class CdnClient extends AbstractClient{
      * @return DescribeMapInfoResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMapInfoResponse  DescribeMapInfo(DescribeMapInfoRequest req) throws TencentCloudSDKException{
+    public DescribeMapInfoResponse DescribeMapInfo(DescribeMapInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMapInfoResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMapInfoResponse>>() {
@@ -130,7 +130,7 @@ public class CdnClient extends AbstractClient{
      * @return DescribeOriginDataResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeOriginDataResponse  DescribeOriginData(DescribeOriginDataRequest req) throws TencentCloudSDKException{
+    public DescribeOriginDataResponse DescribeOriginData(DescribeOriginDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOriginDataResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOriginDataResponse>>() {
@@ -148,7 +148,7 @@ public class CdnClient extends AbstractClient{
      * @return DescribePayTypeResponse
      * @throws TencentCloudSDKException
      */
-    public DescribePayTypeResponse  DescribePayType(DescribePayTypeRequest req) throws TencentCloudSDKException{
+    public DescribePayTypeResponse DescribePayType(DescribePayTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePayTypeResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePayTypeResponse>>() {
@@ -172,7 +172,7 @@ public class CdnClient extends AbstractClient{
      * @return ListTopDataResponse
      * @throws TencentCloudSDKException
      */
-    public ListTopDataResponse  ListTopData(ListTopDataRequest req) throws TencentCloudSDKException{
+    public ListTopDataResponse ListTopData(ListTopDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListTopDataResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ListTopDataResponse>>() {

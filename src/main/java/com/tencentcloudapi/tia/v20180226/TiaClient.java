@@ -54,7 +54,7 @@ public class TiaClient extends AbstractClient{
      * @return CreateJobResponse
      * @throws TencentCloudSDKException
      */
-    public CreateJobResponse  CreateJob(CreateJobRequest req) throws TencentCloudSDKException{
+    public CreateJobResponse CreateJob(CreateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateJobResponse>>() {
@@ -72,7 +72,7 @@ public class TiaClient extends AbstractClient{
      * @return CreateModelResponse
      * @throws TencentCloudSDKException
      */
-    public CreateModelResponse  CreateModel(CreateModelRequest req) throws TencentCloudSDKException{
+    public CreateModelResponse CreateModel(CreateModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateModelResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateModelResponse>>() {
@@ -90,7 +90,7 @@ public class TiaClient extends AbstractClient{
      * @return DeleteJobResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteJobResponse  DeleteJob(DeleteJobRequest req) throws TencentCloudSDKException{
+    public DeleteJobResponse DeleteJob(DeleteJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteJobResponse>>() {
@@ -108,7 +108,7 @@ public class TiaClient extends AbstractClient{
      * @return DeleteModelResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteModelResponse  DeleteModel(DeleteModelRequest req) throws TencentCloudSDKException{
+    public DeleteModelResponse DeleteModel(DeleteModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteModelResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteModelResponse>>() {
@@ -126,7 +126,7 @@ public class TiaClient extends AbstractClient{
      * @return DescribeJobResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeJobResponse  DescribeJob(DescribeJobRequest req) throws TencentCloudSDKException{
+    public DescribeJobResponse DescribeJob(DescribeJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJobResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJobResponse>>() {
@@ -144,7 +144,7 @@ public class TiaClient extends AbstractClient{
      * @return DescribeModelResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeModelResponse  DescribeModel(DescribeModelRequest req) throws TencentCloudSDKException{
+    public DescribeModelResponse DescribeModel(DescribeModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelResponse>>() {
@@ -162,7 +162,7 @@ public class TiaClient extends AbstractClient{
      * @return InstallAgentResponse
      * @throws TencentCloudSDKException
      */
-    public InstallAgentResponse  InstallAgent(InstallAgentRequest req) throws TencentCloudSDKException{
+    public InstallAgentResponse InstallAgent(InstallAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InstallAgentResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<InstallAgentResponse>>() {
@@ -180,7 +180,7 @@ public class TiaClient extends AbstractClient{
      * @return ListJobsResponse
      * @throws TencentCloudSDKException
      */
-    public ListJobsResponse  ListJobs(ListJobsRequest req) throws TencentCloudSDKException{
+    public ListJobsResponse ListJobs(ListJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListJobsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ListJobsResponse>>() {
@@ -198,7 +198,7 @@ public class TiaClient extends AbstractClient{
      * @return ListModelsResponse
      * @throws TencentCloudSDKException
      */
-    public ListModelsResponse  ListModels(ListModelsRequest req) throws TencentCloudSDKException{
+    public ListModelsResponse ListModels(ListModelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListModelsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<ListModelsResponse>>() {
@@ -216,7 +216,7 @@ public class TiaClient extends AbstractClient{
      * @return QueryLogsResponse
      * @throws TencentCloudSDKException
      */
-    public QueryLogsResponse  QueryLogs(QueryLogsRequest req) throws TencentCloudSDKException{
+    public QueryLogsResponse QueryLogs(QueryLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryLogsResponse> rsp = null;
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryLogsResponse>>() {
