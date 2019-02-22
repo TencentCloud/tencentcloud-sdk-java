@@ -53,9 +53,9 @@ public class ClusterNetworkSettings  extends AbstractModel{
     /**
     * 是否启用IPVS(默认不开启)
     */
-    @SerializedName("IPVS")
+    @SerializedName("Ipvs")
     @Expose
-    private Boolean IPVS;
+    private Boolean Ipvs;
 
     /**
     * 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
@@ -130,18 +130,18 @@ public class ClusterNetworkSettings  extends AbstractModel{
 
     /**
      * 获取是否启用IPVS(默认不开启)
-     * @return IPVS 是否启用IPVS(默认不开启)
+     * @return Ipvs 是否启用IPVS(默认不开启)
      */
-    public Boolean getIPVS() {
-        return this.IPVS;
+    public Boolean getIpvs() {
+        return this.Ipvs;
     }
 
     /**
      * 设置是否启用IPVS(默认不开启)
-     * @param IPVS 是否启用IPVS(默认不开启)
+     * @param Ipvs 是否启用IPVS(默认不开启)
      */
-    public void setIPVS(Boolean IPVS) {
-        this.IPVS = IPVS;
+    public void setIpvs(Boolean Ipvs) {
+        this.Ipvs = Ipvs;
     }
 
     /**
@@ -168,7 +168,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
         this.setParamSimple(map, prefix + "IgnoreClusterCIDRConflict", this.IgnoreClusterCIDRConflict);
         this.setParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
         this.setParamSimple(map, prefix + "MaxClusterServiceNum", this.MaxClusterServiceNum);
-        this.setParamSimple(map, prefix + "IPVS", this.IPVS);
+        this.setParamSimple(map, prefix + "Ipvs", this.Ipvs);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }

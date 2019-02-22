@@ -67,7 +67,7 @@ public class TiaClient extends AbstractClient{
     }
 
     /**
-     *在指定的集群上部署一个模型，用以提供服务。
+     *部署模型，用以对外提供服务。有两种部署模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。
      * @param req CreateModelRequest
      * @return CreateModelResponse
      * @throws TencentCloudSDKException
@@ -103,7 +103,7 @@ public class TiaClient extends AbstractClient{
     }
 
     /**
-     *删除一个指定的Model
+     *删除指定的部署模型。模型有两种部署模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。
      * @param req DeleteModelRequest
      * @return DeleteModelResponse
      * @throws TencentCloudSDKException
@@ -139,7 +139,7 @@ public class TiaClient extends AbstractClient{
     }
 
     /**
-     *描述Model
+     *描述已经部署的某个模型。而模型部署有两种模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。
      * @param req DescribeModelRequest
      * @return DescribeModelResponse
      * @throws TencentCloudSDKException
@@ -193,7 +193,7 @@ public class TiaClient extends AbstractClient{
     }
 
     /**
-     *列举某个指定集群上运行的模型。
+     *用以列举已经部署的模型。而部署有两种模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。不同部署模式下的模型分开列出。
      * @param req ListModelsRequest
      * @return ListModelsResponse
      * @throws TencentCloudSDKException
@@ -211,7 +211,7 @@ public class TiaClient extends AbstractClient{
     }
 
     /**
-     *查询日志
+     *查询 TI-A 训练任务的日志
      * @param req QueryLogsRequest
      * @return QueryLogsResponse
      * @throws TencentCloudSDKException

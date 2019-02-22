@@ -114,6 +114,27 @@ public class Model  extends AbstractModel{
     private Integer Replicas;
 
     /**
+    * 模型Id
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * 创建任务的Uin
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
+    * 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+    */
+    @SerializedName("DelTime")
+    @Expose
+    private String DelTime;
+
+    /**
      * 获取模型名称
      * @return Name 模型名称
      */
@@ -322,6 +343,54 @@ public class Model  extends AbstractModel{
     }
 
     /**
+     * 获取模型Id
+     * @return Id 模型Id
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * 设置模型Id
+     * @param Id 模型Id
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * 获取创建任务的Uin
+     * @return Uin 创建任务的Uin
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * 设置创建任务的Uin
+     * @param Uin 创建任务的Uin
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * 获取模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * @return DelTime 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     */
+    public String getDelTime() {
+        return this.DelTime;
+    }
+
+    /**
+     * 设置模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * @param DelTime 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     */
+    public void setDelTime(String DelTime) {
+        this.DelTime = DelTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +407,9 @@ public class Model  extends AbstractModel{
         this.setParamSimple(map, prefix + "ServType", this.ServType);
         this.setParamSimple(map, prefix + "Expose", this.Expose);
         this.setParamSimple(map, prefix + "Replicas", this.Replicas);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "DelTime", this.DelTime);
 
     }
 }

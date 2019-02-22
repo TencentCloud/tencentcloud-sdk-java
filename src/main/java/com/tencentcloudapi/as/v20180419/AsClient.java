@@ -109,6 +109,42 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateNotificationConfiguration）用于创建通知。
+     * @param req CreateNotificationConfigurationRequest
+     * @return CreateNotificationConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNotificationConfigurationResponse CreateNotificationConfiguration(CreateNotificationConfigurationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNotificationConfigurationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNotificationConfigurationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNotificationConfiguration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateScalingPolicy）用于创建告警触发策略。
+     * @param req CreateScalingPolicyRequest
+     * @return CreateScalingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScalingPolicyResponse CreateScalingPolicy(CreateScalingPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScalingPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScalingPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateScalingPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateScheduledAction）用于创建定时任务。
      * @param req CreateScheduledActionRequest
      * @return CreateScheduledActionResponse
@@ -159,6 +195,42 @@ public class AsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteLaunchConfigurationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteLaunchConfiguration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteNotificationConfiguration）用于删除特定的通知。
+     * @param req DeleteNotificationConfigurationRequest
+     * @return DeleteNotificationConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNotificationConfigurationResponse DeleteNotificationConfiguration(DeleteNotificationConfigurationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNotificationConfigurationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNotificationConfigurationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNotificationConfiguration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteScalingPolicy）用于删除告警触发策略。
+     * @param req DeleteScalingPolicyRequest
+     * @return DeleteScalingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteScalingPolicyResponse DeleteScalingPolicy(DeleteScalingPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteScalingPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteScalingPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteScalingPolicy"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -276,6 +348,45 @@ public class AsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeLaunchConfigurationsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeLaunchConfigurations"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeNotificationConfigurations) 用于查询一个或多个通知的详细信息。
+
+可以根据通知ID、伸缩组ID等信息来查询通知的详细信息。过滤信息详细请见过滤器`Filter`。
+如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的通知。
+     * @param req DescribeNotificationConfigurationsRequest
+     * @return DescribeNotificationConfigurationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotificationConfigurationsResponse DescribeNotificationConfigurations(DescribeNotificationConfigurationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotificationConfigurationsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotificationConfigurationsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNotificationConfigurations"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeScalingPolicies）用于查询告警触发策略。
+     * @param req DescribeScalingPoliciesRequest
+     * @return DescribeScalingPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScalingPoliciesResponse DescribeScalingPolicies(DescribeScalingPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScalingPoliciesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScalingPoliciesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeScalingPolicies"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -437,6 +548,42 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyNotificationConfiguration）用于修改通知。
+     * @param req ModifyNotificationConfigurationRequest
+     * @return ModifyNotificationConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNotificationConfigurationResponse ModifyNotificationConfiguration(ModifyNotificationConfigurationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNotificationConfigurationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNotificationConfigurationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNotificationConfiguration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyScalingPolicy）用于修改告警触发策略。
+     * @param req ModifyScalingPolicyRequest
+     * @return ModifyScalingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyScalingPolicyResponse ModifyScalingPolicy(ModifyScalingPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyScalingPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyScalingPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyScalingPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyScheduledAction）用于修改定时任务。
      * @param req ModifyScheduledActionRequest
      * @return ModifyScheduledActionResponse
@@ -466,6 +613,25 @@ public class AsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RemoveInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RemoveInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（SetInstancesProtection）用于设置实例移除保护。
+子机设置为移除保护之后，当发生不健康替换、报警策略、期望值变更等触发缩容时，将不对此子机缩容操作。
+     * @param req SetInstancesProtectionRequest
+     * @return SetInstancesProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetInstancesProtectionResponse SetInstancesProtection(SetInstancesProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetInstancesProtectionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetInstancesProtectionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetInstancesProtection"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

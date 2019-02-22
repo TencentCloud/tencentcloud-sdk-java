@@ -30,14 +30,14 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用[查询可创建规格（支持可用区、配置自定义）](https://cloud.tencent.com/document/api/253/6109)接口获取可升级的内存规格
+    * 升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口获取可升级的内存规格
     */
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
 
     /**
-    * 升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用[查询可创建规格（支持可用区、配置自定义）](https://cloud.tencent.com/document/api/253/6109)接口获取可升级的硬盘范围
+    * 升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口获取可升级的硬盘范围
     */
     @SerializedName("Volume")
     @Expose
@@ -58,7 +58,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     private Integer DeployMode;
 
     /**
-    * 备库1的可用区信息，默认为实例的Zone，升级主实例为多可用区部署时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过<a href='/document/product/236/6921' title='查询云数据库可售卖规格'>查询云数据库可售卖规格</a>查询支持的可用区
+    * 备库1的可用区信息，默认和实例的Zone参数一致，升级主实例为多可用区部署时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口查询支持的可用区
     */
     @SerializedName("SlaveZone")
     @Expose
@@ -72,7 +72,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     private String EngineVersion;
 
     /**
-    * 切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/api/403/4392)触发该流程
+    * 切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
     */
     @SerializedName("WaitSwitch")
     @Expose
@@ -109,32 +109,32 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用[查询可创建规格（支持可用区、配置自定义）](https://cloud.tencent.com/document/api/253/6109)接口获取可升级的内存规格
-     * @return Memory 升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用[查询可创建规格（支持可用区、配置自定义）](https://cloud.tencent.com/document/api/253/6109)接口获取可升级的内存规格
+     * 获取升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口获取可升级的内存规格
+     * @return Memory 升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口获取可升级的内存规格
      */
     public Integer getMemory() {
         return this.Memory;
     }
 
     /**
-     * 设置升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用[查询可创建规格（支持可用区、配置自定义）](https://cloud.tencent.com/document/api/253/6109)接口获取可升级的内存规格
-     * @param Memory 升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用[查询可创建规格（支持可用区、配置自定义）](https://cloud.tencent.com/document/api/253/6109)接口获取可升级的内存规格
+     * 设置升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口获取可升级的内存规格
+     * @param Memory 升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口获取可升级的内存规格
      */
     public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * 获取升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用[查询可创建规格（支持可用区、配置自定义）](https://cloud.tencent.com/document/api/253/6109)接口获取可升级的硬盘范围
-     * @return Volume 升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用[查询可创建规格（支持可用区、配置自定义）](https://cloud.tencent.com/document/api/253/6109)接口获取可升级的硬盘范围
+     * 获取升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口获取可升级的硬盘范围
+     * @return Volume 升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口获取可升级的硬盘范围
      */
     public Integer getVolume() {
         return this.Volume;
     }
 
     /**
-     * 设置升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用[查询可创建规格（支持可用区、配置自定义）](https://cloud.tencent.com/document/api/253/6109)接口获取可升级的硬盘范围
-     * @param Volume 升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用[查询可创建规格（支持可用区、配置自定义）](https://cloud.tencent.com/document/api/253/6109)接口获取可升级的硬盘范围
+     * 设置升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口获取可升级的硬盘范围
+     * @param Volume 升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口获取可升级的硬盘范围
      */
     public void setVolume(Integer Volume) {
         this.Volume = Volume;
@@ -173,16 +173,16 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备库1的可用区信息，默认为实例的Zone，升级主实例为多可用区部署时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过<a href='/document/product/236/6921' title='查询云数据库可售卖规格'>查询云数据库可售卖规格</a>查询支持的可用区
-     * @return SlaveZone 备库1的可用区信息，默认为实例的Zone，升级主实例为多可用区部署时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过<a href='/document/product/236/6921' title='查询云数据库可售卖规格'>查询云数据库可售卖规格</a>查询支持的可用区
+     * 获取备库1的可用区信息，默认和实例的Zone参数一致，升级主实例为多可用区部署时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口查询支持的可用区
+     * @return SlaveZone 备库1的可用区信息，默认和实例的Zone参数一致，升级主实例为多可用区部署时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口查询支持的可用区
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * 设置备库1的可用区信息，默认为实例的Zone，升级主实例为多可用区部署时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过<a href='/document/product/236/6921' title='查询云数据库可售卖规格'>查询云数据库可售卖规格</a>查询支持的可用区
-     * @param SlaveZone 备库1的可用区信息，默认为实例的Zone，升级主实例为多可用区部署时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过<a href='/document/product/236/6921' title='查询云数据库可售卖规格'>查询云数据库可售卖规格</a>查询支持的可用区
+     * 设置备库1的可用区信息，默认和实例的Zone参数一致，升级主实例为多可用区部署时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口查询支持的可用区
+     * @param SlaveZone 备库1的可用区信息，默认和实例的Zone参数一致，升级主实例为多可用区部署时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。可通过[获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229)接口查询支持的可用区
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
@@ -205,16 +205,16 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/api/403/4392)触发该流程
-     * @return WaitSwitch 切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/api/403/4392)触发该流程
+     * 获取切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
+     * @return WaitSwitch 切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
      */
     public Integer getWaitSwitch() {
         return this.WaitSwitch;
     }
 
     /**
-     * 设置切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/api/403/4392)触发该流程
-     * @param WaitSwitch 切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/api/403/4392)触发该流程
+     * 设置切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
+     * @param WaitSwitch 切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
      */
     public void setWaitSwitch(Integer WaitSwitch) {
         this.WaitSwitch = WaitSwitch;

@@ -30,14 +30,14 @@ public class DeleteModelRequest  extends AbstractModel{
     private String Name;
 
     /**
-    * 要删除的模型所在的集群名称
+    * 要删除的模型所在的集群名称，`集群模式` 必填
     */
     @SerializedName("Cluster")
     @Expose
     private String Cluster;
 
     /**
-    * 模型类型
+    * 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
     */
     @SerializedName("ServType")
     @Expose
@@ -60,32 +60,32 @@ public class DeleteModelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要删除的模型所在的集群名称
-     * @return Cluster 要删除的模型所在的集群名称
+     * 获取要删除的模型所在的集群名称，`集群模式` 必填
+     * @return Cluster 要删除的模型所在的集群名称，`集群模式` 必填
      */
     public String getCluster() {
         return this.Cluster;
     }
 
     /**
-     * 设置要删除的模型所在的集群名称
-     * @param Cluster 要删除的模型所在的集群名称
+     * 设置要删除的模型所在的集群名称，`集群模式` 必填
+     * @param Cluster 要删除的模型所在的集群名称，`集群模式` 必填
      */
     public void setCluster(String Cluster) {
         this.Cluster = Cluster;
     }
 
     /**
-     * 获取模型类型
-     * @return ServType 模型类型
+     * 获取模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
+     * @return ServType 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
      */
     public String getServType() {
         return this.ServType;
     }
 
     /**
-     * 设置模型类型
-     * @param ServType 模型类型
+     * 设置模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
+     * @param ServType 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
      */
     public void setServType(String ServType) {
         this.ServType = ServType;

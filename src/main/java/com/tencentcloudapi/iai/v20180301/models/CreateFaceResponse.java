@@ -37,7 +37,7 @@ public class CreateFaceResponse  extends AbstractModel{
     private String [] SucFaceIds;
 
     /**
-    * 每张人脸图片添加结果的返回码
+    * 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
     */
     @SerializedName("RetCode")
     @Expose
@@ -83,16 +83,16 @@ public class CreateFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每张人脸图片添加结果的返回码
-     * @return RetCode 每张人脸图片添加结果的返回码
+     * 获取每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
+     * @return RetCode 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
      */
     public Integer [] getRetCode() {
         return this.RetCode;
     }
 
     /**
-     * 设置每张人脸图片添加结果的返回码
-     * @param RetCode 每张人脸图片添加结果的返回码
+     * 设置每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
+     * @param RetCode 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
      */
     public void setRetCode(Integer [] RetCode) {
         this.RetCode = RetCode;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceVipVportResponse  extends AbstractModel{
 
     /**
-    * 异步任务ID，可使用[查询任务列表](https://cloud.tencent.com/document/api/236/8010)获取其执行情况。
+    * 异步任务ID。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyDBInstanceVipVportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取异步任务ID，可使用[查询任务列表](https://cloud.tencent.com/document/api/236/8010)获取其执行情况。
-     * @return AsyncRequestId 异步任务ID，可使用[查询任务列表](https://cloud.tencent.com/document/api/236/8010)获取其执行情况。
+     * 获取异步任务ID。
+     * @return AsyncRequestId 异步任务ID。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * 设置异步任务ID，可使用[查询任务列表](https://cloud.tencent.com/document/api/236/8010)获取其执行情况。
-     * @param AsyncRequestId 异步任务ID，可使用[查询任务列表](https://cloud.tencent.com/document/api/236/8010)获取其执行情况。
+     * 设置异步任务ID。
+     * @param AsyncRequestId 异步任务ID。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

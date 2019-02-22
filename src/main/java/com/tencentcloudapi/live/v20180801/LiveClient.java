@@ -165,7 +165,7 @@ public class LiveClient extends AbstractClient{
 
 - 模式说明
   该接口支持两种录制模式：
-  1. 定时录制模式。
+  1. 定时录制模式【默认模式】。
     需要传入开始时间与结束时间，录制任务根据时间自动开始与结束。
   2. 实时视频录制模式。
     忽略传入的开始时间，在录制任务创建后立即开始录制，录制时长支持最大为30分钟，如果传入的结束时间与当前时间差大于30分钟，则按30分钟计算，实时视频录制主要用于录制精彩视频场景，时长建议控制在5分钟以内。
@@ -675,6 +675,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *获取禁推流列表
+     * @param req DescribeLiveForbidStreamListRequest
+     * @return DescribeLiveForbidStreamListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(DescribeLiveForbidStreamListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveForbidStreamListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveForbidStreamListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveForbidStreamList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询播放鉴权key
      * @param req DescribeLivePlayAuthKeyRequest
      * @return DescribeLivePlayAuthKeyResponse
@@ -812,6 +830,24 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveSnapshotTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询推断流事件
+     * @param req DescribeLiveStreamEventListRequest
+     * @return DescribeLiveStreamEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveStreamEventListResponse DescribeLiveStreamEventList(DescribeLiveStreamEventListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveStreamEventListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamEventListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveStreamEventList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

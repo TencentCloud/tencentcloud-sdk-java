@@ -121,11 +121,18 @@ public class Snapshot  extends AbstractModel{
     private Boolean CopyFromRemote;
 
     /**
-    * 快照关联的镜像ID列表。
+    * 快照关联的镜像列表。
     */
-    @SerializedName("ImageIds")
+    @SerializedName("Images")
     @Expose
-    private String [] ImageIds;
+    private Image [] Images;
+
+    /**
+    * 快照关联的镜像个数。
+    */
+    @SerializedName("ImageCount")
+    @Expose
+    private Integer ImageCount;
 
     /**
      * 获取快照ID。
@@ -352,19 +359,35 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照关联的镜像ID列表。
-     * @return ImageIds 快照关联的镜像ID列表。
+     * 获取快照关联的镜像列表。
+     * @return Images 快照关联的镜像列表。
      */
-    public String [] getImageIds() {
-        return this.ImageIds;
+    public Image [] getImages() {
+        return this.Images;
     }
 
     /**
-     * 设置快照关联的镜像ID列表。
-     * @param ImageIds 快照关联的镜像ID列表。
+     * 设置快照关联的镜像列表。
+     * @param Images 快照关联的镜像列表。
      */
-    public void setImageIds(String [] ImageIds) {
-        this.ImageIds = ImageIds;
+    public void setImages(Image [] Images) {
+        this.Images = Images;
+    }
+
+    /**
+     * 获取快照关联的镜像个数。
+     * @return ImageCount 快照关联的镜像个数。
+     */
+    public Integer getImageCount() {
+        return this.ImageCount;
+    }
+
+    /**
+     * 设置快照关联的镜像个数。
+     * @param ImageCount 快照关联的镜像个数。
+     */
+    public void setImageCount(Integer ImageCount) {
+        this.ImageCount = ImageCount;
     }
 
     /**
@@ -385,7 +408,8 @@ public class Snapshot  extends AbstractModel{
         this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
         this.setParamArraySimple(map, prefix + "CopyingToRegions.", this.CopyingToRegions);
         this.setParamSimple(map, prefix + "CopyFromRemote", this.CopyFromRemote);
-        this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+        this.setParamArrayObj(map, prefix + "Images.", this.Images);
+        this.setParamSimple(map, prefix + "ImageCount", this.ImageCount);
 
     }
 }

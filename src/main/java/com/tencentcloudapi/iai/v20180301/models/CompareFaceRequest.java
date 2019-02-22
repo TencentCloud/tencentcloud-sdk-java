@@ -23,14 +23,18 @@ import java.util.HashMap;
 public class CompareFaceRequest  extends AbstractModel{
 
     /**
-    * A 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+    * A 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
     @SerializedName("ImageA")
     @Expose
     private String ImageA;
 
     /**
-    * B 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+    * B 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
     @SerializedName("ImageB")
     @Expose
@@ -40,6 +44,7 @@ public class CompareFaceRequest  extends AbstractModel{
     * A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
     @SerializedName("UrlA")
@@ -50,6 +55,7 @@ public class CompareFaceRequest  extends AbstractModel{
     * B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
     @SerializedName("UrlB")
@@ -57,32 +63,48 @@ public class CompareFaceRequest  extends AbstractModel{
     private String UrlB;
 
     /**
-     * 获取A 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @return ImageA A 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * 获取A 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @return ImageA A 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public String getImageA() {
         return this.ImageA;
     }
 
     /**
-     * 设置A 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param ImageA A 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * 设置A 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param ImageA A 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public void setImageA(String ImageA) {
         this.ImageA = ImageA;
     }
 
     /**
-     * 获取B 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @return ImageB B 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * 获取B 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @return ImageB B 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public String getImageB() {
         return this.ImageB;
     }
 
     /**
-     * 设置B 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param ImageB B 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * 设置B 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param ImageB B 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public void setImageB(String ImageB) {
         this.ImageB = ImageB;
@@ -92,10 +114,12 @@ public class CompareFaceRequest  extends AbstractModel{
      * 获取A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @return UrlA A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public String getUrlA() {
@@ -106,10 +130,12 @@ public class CompareFaceRequest  extends AbstractModel{
      * 设置A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param UrlA A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public void setUrlA(String UrlA) {
@@ -120,10 +146,12 @@ public class CompareFaceRequest  extends AbstractModel{
      * 获取B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @return UrlB B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public String getUrlB() {
@@ -134,10 +162,12 @@ public class CompareFaceRequest  extends AbstractModel{
      * 设置B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param UrlB B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public void setUrlB(String UrlB) {

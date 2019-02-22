@@ -44,38 +44,42 @@ public class CreateLiveRecordRequest  extends AbstractModel{
     private String DomainName;
 
     /**
-    * 录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+    * 录制开始时间。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
+    * 录制结束时间。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 录制类型。不区分大小写。
+    * 录制类型。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
     */
     @SerializedName("RecordType")
     @Expose
     private String RecordType;
 
     /**
-    * 录制文件格式。不区分大小写。其值为：
+    * 录制文件格式。其值为：
 “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
     */
     @SerializedName("FileFormat")
     @Expose
     private String FileFormat;
 
     /**
-    * 开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
+    * 开启实时视频录制模式标志。0：不开启实时视频录制模式，即采用定时录制模式【默认】；1：开启实时视频录制模式。
     */
     @SerializedName("Highlight")
     @Expose
@@ -83,6 +87,7 @@ public class CreateLiveRecordRequest  extends AbstractModel{
 
     /**
     * 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+在定时录制模式或实时视频录制模式下，该参数均有效。
     */
     @SerializedName("MixStream")
     @Expose
@@ -92,8 +97,9 @@ public class CreateLiveRecordRequest  extends AbstractModel{
     * 录制流参数。当前支持以下参数：
 record_interval - 录制分片时长，单位 秒，1800 - 7200
 storage_time - 录制文件存储时长，单位 秒
-eg. record_interval=3600&storage_time=7200
+eg. record_interval=3600&storage_time=2592000
 注：参数需要url encode。
+在定时录制模式或实时视频录制模式下，该参数均有效。
     */
     @SerializedName("StreamParam")
     @Expose
@@ -148,92 +154,108 @@ eg. record_interval=3600&storage_time=7200
     }
 
     /**
-     * 获取录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
-     * @return StartTime 录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+     * 获取录制开始时间。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
+     * @return StartTime 录制开始时间。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * 设置录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
-     * @param StartTime 录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+     * 设置录制开始时间。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
+     * @param StartTime 录制开始时间。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * 获取录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
-     * @return EndTime 录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
+     * 获取录制结束时间。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
+     * @return EndTime 录制结束时间。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * 设置录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
-     * @param EndTime 录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
+     * 设置录制结束时间。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
+     * @param EndTime 录制结束时间。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * 获取录制类型。不区分大小写。
+     * 获取录制类型。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
-     * @return RecordType 录制类型。不区分大小写。
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
+     * @return RecordType 录制类型。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
      */
     public String getRecordType() {
         return this.RecordType;
     }
 
     /**
-     * 设置录制类型。不区分大小写。
+     * 设置录制类型。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
-     * @param RecordType 录制类型。不区分大小写。
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
+     * @param RecordType 录制类型。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
      */
     public void setRecordType(String RecordType) {
         this.RecordType = RecordType;
     }
 
     /**
-     * 获取录制文件格式。不区分大小写。其值为：
+     * 获取录制文件格式。其值为：
 “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
-     * @return FileFormat 录制文件格式。不区分大小写。其值为：
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
+     * @return FileFormat 录制文件格式。其值为：
 “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
      */
     public String getFileFormat() {
         return this.FileFormat;
     }
 
     /**
-     * 设置录制文件格式。不区分大小写。其值为：
+     * 设置录制文件格式。其值为：
 “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
-     * @param FileFormat 录制文件格式。不区分大小写。其值为：
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
+     * @param FileFormat 录制文件格式。其值为：
 “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
      */
     public void setFileFormat(String FileFormat) {
         this.FileFormat = FileFormat;
     }
 
     /**
-     * 获取开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
-     * @return Highlight 开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
+     * 获取开启实时视频录制模式标志。0：不开启实时视频录制模式，即采用定时录制模式【默认】；1：开启实时视频录制模式。
+     * @return Highlight 开启实时视频录制模式标志。0：不开启实时视频录制模式，即采用定时录制模式【默认】；1：开启实时视频录制模式。
      */
     public Integer getHighlight() {
         return this.Highlight;
     }
 
     /**
-     * 设置开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
-     * @param Highlight 开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
+     * 设置开启实时视频录制模式标志。0：不开启实时视频录制模式，即采用定时录制模式【默认】；1：开启实时视频录制模式。
+     * @param Highlight 开启实时视频录制模式标志。0：不开启实时视频录制模式，即采用定时录制模式【默认】；1：开启实时视频录制模式。
      */
     public void setHighlight(Integer Highlight) {
         this.Highlight = Highlight;
@@ -241,7 +263,9 @@ eg. record_interval=3600&storage_time=7200
 
     /**
      * 获取开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+在定时录制模式或实时视频录制模式下，该参数均有效。
      * @return MixStream 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+在定时录制模式或实时视频录制模式下，该参数均有效。
      */
     public Integer getMixStream() {
         return this.MixStream;
@@ -249,7 +273,9 @@ eg. record_interval=3600&storage_time=7200
 
     /**
      * 设置开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+在定时录制模式或实时视频录制模式下，该参数均有效。
      * @param MixStream 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+在定时录制模式或实时视频录制模式下，该参数均有效。
      */
     public void setMixStream(Integer MixStream) {
         this.MixStream = MixStream;
@@ -259,13 +285,15 @@ eg. record_interval=3600&storage_time=7200
      * 获取录制流参数。当前支持以下参数：
 record_interval - 录制分片时长，单位 秒，1800 - 7200
 storage_time - 录制文件存储时长，单位 秒
-eg. record_interval=3600&storage_time=7200
+eg. record_interval=3600&storage_time=2592000
 注：参数需要url encode。
+在定时录制模式或实时视频录制模式下，该参数均有效。
      * @return StreamParam 录制流参数。当前支持以下参数：
 record_interval - 录制分片时长，单位 秒，1800 - 7200
 storage_time - 录制文件存储时长，单位 秒
-eg. record_interval=3600&storage_time=7200
+eg. record_interval=3600&storage_time=2592000
 注：参数需要url encode。
+在定时录制模式或实时视频录制模式下，该参数均有效。
      */
     public String getStreamParam() {
         return this.StreamParam;
@@ -275,13 +303,15 @@ eg. record_interval=3600&storage_time=7200
      * 设置录制流参数。当前支持以下参数：
 record_interval - 录制分片时长，单位 秒，1800 - 7200
 storage_time - 录制文件存储时长，单位 秒
-eg. record_interval=3600&storage_time=7200
+eg. record_interval=3600&storage_time=2592000
 注：参数需要url encode。
+在定时录制模式或实时视频录制模式下，该参数均有效。
      * @param StreamParam 录制流参数。当前支持以下参数：
 record_interval - 录制分片时长，单位 秒，1800 - 7200
 storage_time - 录制文件存储时长，单位 秒
-eg. record_interval=3600&storage_time=7200
+eg. record_interval=3600&storage_time=2592000
 注：参数需要url encode。
+在定时录制模式或实时视频录制模式下，该参数均有效。
      */
     public void setStreamParam(String StreamParam) {
         this.StreamParam = StreamParam;

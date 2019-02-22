@@ -275,6 +275,20 @@ public class InstanceInfo  extends AbstractModel{
     private Integer Cpu;
 
     /**
+    * 每秒查询数量
+    */
+    @SerializedName("Qps")
+    @Expose
+    private Integer Qps;
+
+    /**
+    * 可用区中文名称
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
+
+    /**
      * 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -851,6 +865,38 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取每秒查询数量
+     * @return Qps 每秒查询数量
+     */
+    public Integer getQps() {
+        return this.Qps;
+    }
+
+    /**
+     * 设置每秒查询数量
+     * @param Qps 每秒查询数量
+     */
+    public void setQps(Integer Qps) {
+        this.Qps = Qps;
+    }
+
+    /**
+     * 获取可用区中文名称
+     * @return ZoneName 可用区中文名称
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * 设置可用区中文名称
+     * @param ZoneName 可用区中文名称
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -890,6 +936,8 @@ public class InstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "PhysicalId", this.PhysicalId);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Qps", this.Qps);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
 
     }
 }

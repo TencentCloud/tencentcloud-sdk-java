@@ -30,7 +30,7 @@ public class ProductProperties  extends AbstractModel{
     private String ProductDescription;
 
     /**
-    * 加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
+    * 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
     */
     @SerializedName("EncryptionType")
     @Expose
@@ -44,7 +44,8 @@ public class ProductProperties  extends AbstractModel{
     private String Region;
 
     /**
-    * 产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
+    * 产品类型，各个类型值代表的节点-类型如下：
+0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
     */
     @SerializedName("ProductType")
     @Expose
@@ -86,6 +87,13 @@ public class ProductProperties  extends AbstractModel{
     private String ModelName;
 
     /**
+    * 产品秘钥，suite产品才会有
+    */
+    @SerializedName("ProductKey")
+    @Expose
+    private String ProductKey;
+
+    /**
      * 获取产品描述
      * @return ProductDescription 产品描述
      */
@@ -102,16 +110,16 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
-     * @return EncryptionType 加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
+     * 获取加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
+     * @return EncryptionType 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
      */
     public String getEncryptionType() {
         return this.EncryptionType;
     }
 
     /**
-     * 设置加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
-     * @param EncryptionType 加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
+     * 设置加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
+     * @param EncryptionType 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
      */
     public void setEncryptionType(String EncryptionType) {
         this.EncryptionType = EncryptionType;
@@ -134,16 +142,20 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
-     * @return ProductType 产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
+     * 获取产品类型，各个类型值代表的节点-类型如下：
+0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
+     * @return ProductType 产品类型，各个类型值代表的节点-类型如下：
+0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
      */
     public Integer getProductType() {
         return this.ProductType;
     }
 
     /**
-     * 设置产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
-     * @param ProductType 产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
+     * 设置产品类型，各个类型值代表的节点-类型如下：
+0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
+     * @param ProductType 产品类型，各个类型值代表的节点-类型如下：
+0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
      */
     public void setProductType(Integer ProductType) {
         this.ProductType = ProductType;
@@ -230,6 +242,22 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
+     * 获取产品秘钥，suite产品才会有
+     * @return ProductKey 产品秘钥，suite产品才会有
+     */
+    public String getProductKey() {
+        return this.ProductKey;
+    }
+
+    /**
+     * 设置产品秘钥，suite产品才会有
+     * @param ProductKey 产品秘钥，suite产品才会有
+     */
+    public void setProductKey(String ProductKey) {
+        this.ProductKey = ProductKey;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +270,7 @@ public class ProductProperties  extends AbstractModel{
         this.setParamSimple(map, prefix + "Appeui", this.Appeui);
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
+        this.setParamSimple(map, prefix + "ProductKey", this.ProductKey);
 
     }
 }

@@ -37,14 +37,14 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-    * 周期类型，byUsedTime按计费周期/byPayTime按扣费周期
+    * 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。
     */
     @SerializedName("PeriodType")
     @Expose
     private String PeriodType;
 
     /**
-    * 月份，格式为yyyy-mm
+    * 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
     */
     @SerializedName("Month")
     @Expose
@@ -83,32 +83,32 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期
-     * @return PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期
+     * 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。
+     * @return PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。
      */
     public String getPeriodType() {
         return this.PeriodType;
     }
 
     /**
-     * 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期
-     * @param PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期
+     * 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。
+     * @param PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。
      */
     public void setPeriodType(String PeriodType) {
         this.PeriodType = PeriodType;
     }
 
     /**
-     * 获取月份，格式为yyyy-mm
-     * @return Month 月份，格式为yyyy-mm
+     * 获取月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @return Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * 设置月份，格式为yyyy-mm
-     * @param Month 月份，格式为yyyy-mm
+     * 设置月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @param Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public void setMonth(String Month) {
         this.Month = Month;

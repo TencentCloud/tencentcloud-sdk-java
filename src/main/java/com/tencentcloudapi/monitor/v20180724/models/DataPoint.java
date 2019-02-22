@@ -34,7 +34,7 @@ public class DataPoint  extends AbstractModel{
     */
     @SerializedName("Timestamps")
     @Expose
-    private Float [] Timestamps;
+    private Long [] Timestamps;
 
     /**
     * 监控值数组，该数组和Timestamps一一对应
@@ -63,7 +63,7 @@ public class DataPoint  extends AbstractModel{
      * 获取时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
      * @return Timestamps 时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
      */
-    public Float [] getTimestamps() {
+    public Long [] getTimestamps() {
         return this.Timestamps;
     }
 
@@ -71,7 +71,7 @@ public class DataPoint  extends AbstractModel{
      * 设置时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
      * @param Timestamps 时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
      */
-    public void setTimestamps(Float [] Timestamps) {
+    public void setTimestamps(Long [] Timestamps) {
         this.Timestamps = Timestamps;
     }
 

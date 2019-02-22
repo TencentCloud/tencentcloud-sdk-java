@@ -41,7 +41,7 @@ public class Cluster  extends AbstractModel{
     */
     @SerializedName("ClusterDescription")
     @Expose
-    private String [] ClusterDescription;
+    private String ClusterDescription;
 
     /**
     * 集群版本（默认值为1.10.5）
@@ -70,6 +70,13 @@ public class Cluster  extends AbstractModel{
     @SerializedName("ClusterNetworkSettings")
     @Expose
     private ClusterNetworkSettings ClusterNetworkSettings;
+
+    /**
+    * 集群当前node数量
+    */
+    @SerializedName("ClusterNodeNum")
+    @Expose
+    private Integer ClusterNodeNum;
 
     /**
      * 获取集群ID
@@ -107,7 +114,7 @@ public class Cluster  extends AbstractModel{
      * 获取集群描述
      * @return ClusterDescription 集群描述
      */
-    public String [] getClusterDescription() {
+    public String getClusterDescription() {
         return this.ClusterDescription;
     }
 
@@ -115,7 +122,7 @@ public class Cluster  extends AbstractModel{
      * 设置集群描述
      * @param ClusterDescription 集群描述
      */
-    public void setClusterDescription(String [] ClusterDescription) {
+    public void setClusterDescription(String ClusterDescription) {
         this.ClusterDescription = ClusterDescription;
     }
 
@@ -184,16 +191,33 @@ public class Cluster  extends AbstractModel{
     }
 
     /**
+     * 获取集群当前node数量
+     * @return ClusterNodeNum 集群当前node数量
+     */
+    public Integer getClusterNodeNum() {
+        return this.ClusterNodeNum;
+    }
+
+    /**
+     * 设置集群当前node数量
+     * @param ClusterNodeNum 集群当前node数量
+     */
+    public void setClusterNodeNum(Integer ClusterNodeNum) {
+        this.ClusterNodeNum = ClusterNodeNum;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
-        this.setParamArraySimple(map, prefix + "ClusterDescription.", this.ClusterDescription);
+        this.setParamSimple(map, prefix + "ClusterDescription", this.ClusterDescription);
         this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         this.setParamSimple(map, prefix + "ClusterOs", this.ClusterOs);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamObj(map, prefix + "ClusterNetworkSettings.", this.ClusterNetworkSettings);
+        this.setParamSimple(map, prefix + "ClusterNodeNum", this.ClusterNodeNum);
 
     }
 }

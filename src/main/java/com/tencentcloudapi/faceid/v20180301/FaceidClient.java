@@ -121,6 +121,24 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *传入姓名和身份证号，校验两者的真实性和一致性。
+     * @param req IdCardVerificationRequest
+     * @return IdCardVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public IdCardVerificationResponse IdCardVerification(IdCardVerificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IdCardVerificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<IdCardVerificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "IdCardVerification"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *传入照片和身份信息，判断该照片与公安权威库的证件照是否属于同一个人。
      * @param req ImageRecognitionRequest
      * @return ImageRecognitionResponse

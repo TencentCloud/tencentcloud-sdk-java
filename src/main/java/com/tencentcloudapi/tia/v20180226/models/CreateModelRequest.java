@@ -30,7 +30,7 @@ public class CreateModelRequest  extends AbstractModel{
     private String Name;
 
     /**
-    * 要部署模型的路径名
+    * 要部署的模型文件路径名
     */
     @SerializedName("Model")
     @Expose
@@ -44,42 +44,42 @@ public class CreateModelRequest  extends AbstractModel{
     private String Description;
 
     /**
-    * 指定集群的名称（集群模式下必填）
+    * 部署目标集群的名称，`集群模式` 必填
     */
     @SerializedName("Cluster")
     @Expose
     private String Cluster;
 
     /**
-    * 运行环境镜像的标签
+    * 运行环境镜像的标签，详见 [Serving 环境](https://cloud.tencent.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
     */
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
 
     /**
-    * 要部署的模型副本数目（集群模式下选填）
+    * 要部署的模型副本数目，`集群模式` 选填
     */
     @SerializedName("Replicas")
     @Expose
     private Integer Replicas;
 
     /**
-    * 暴露外网或内网，默认暴露外网（集群模式下选填）
+    * 暴露外网或内网，默认暴露外网，`集群模式` 选填
     */
     @SerializedName("Expose")
     @Expose
     private String Expose;
 
     /**
-    * 部署模式（无服务器函数模式/集群模式）
+    * 部署模式，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式` 下服务的运行规模，形如 `2U4G1P`，详见 [自定义的训练规模](https://cloud.tencent.com/document/product/851/17319#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E8.AE.AD.E7.BB.83.E8.A7.84.E6.A8.A1)
     */
     @SerializedName("ServType")
     @Expose
     private String ServType;
 
     /**
-    * 部署模型的其他配置信息
+    * `无服务器模式` 可选的其他配置信息，详见 [利用无服务器函数部署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
     */
     @SerializedName("RuntimeConf")
     @Expose
@@ -102,16 +102,16 @@ public class CreateModelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要部署模型的路径名
-     * @return Model 要部署模型的路径名
+     * 获取要部署的模型文件路径名
+     * @return Model 要部署的模型文件路径名
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * 设置要部署模型的路径名
-     * @param Model 要部署模型的路径名
+     * 设置要部署的模型文件路径名
+     * @param Model 要部署的模型文件路径名
      */
     public void setModel(String Model) {
         this.Model = Model;
@@ -134,96 +134,96 @@ public class CreateModelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定集群的名称（集群模式下必填）
-     * @return Cluster 指定集群的名称（集群模式下必填）
+     * 获取部署目标集群的名称，`集群模式` 必填
+     * @return Cluster 部署目标集群的名称，`集群模式` 必填
      */
     public String getCluster() {
         return this.Cluster;
     }
 
     /**
-     * 设置指定集群的名称（集群模式下必填）
-     * @param Cluster 指定集群的名称（集群模式下必填）
+     * 设置部署目标集群的名称，`集群模式` 必填
+     * @param Cluster 部署目标集群的名称，`集群模式` 必填
      */
     public void setCluster(String Cluster) {
         this.Cluster = Cluster;
     }
 
     /**
-     * 获取运行环境镜像的标签
-     * @return RuntimeVersion 运行环境镜像的标签
+     * 获取运行环境镜像的标签，详见 [Serving 环境](https://cloud.tencent.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
+     * @return RuntimeVersion 运行环境镜像的标签，详见 [Serving 环境](https://cloud.tencent.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
     }
 
     /**
-     * 设置运行环境镜像的标签
-     * @param RuntimeVersion 运行环境镜像的标签
+     * 设置运行环境镜像的标签，详见 [Serving 环境](https://cloud.tencent.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
+     * @param RuntimeVersion 运行环境镜像的标签，详见 [Serving 环境](https://cloud.tencent.com/document/product/851/17320#serving-.E7.8E.AF.E5.A2.83)
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;
     }
 
     /**
-     * 获取要部署的模型副本数目（集群模式下选填）
-     * @return Replicas 要部署的模型副本数目（集群模式下选填）
+     * 获取要部署的模型副本数目，`集群模式` 选填
+     * @return Replicas 要部署的模型副本数目，`集群模式` 选填
      */
     public Integer getReplicas() {
         return this.Replicas;
     }
 
     /**
-     * 设置要部署的模型副本数目（集群模式下选填）
-     * @param Replicas 要部署的模型副本数目（集群模式下选填）
+     * 设置要部署的模型副本数目，`集群模式` 选填
+     * @param Replicas 要部署的模型副本数目，`集群模式` 选填
      */
     public void setReplicas(Integer Replicas) {
         this.Replicas = Replicas;
     }
 
     /**
-     * 获取暴露外网或内网，默认暴露外网（集群模式下选填）
-     * @return Expose 暴露外网或内网，默认暴露外网（集群模式下选填）
+     * 获取暴露外网或内网，默认暴露外网，`集群模式` 选填
+     * @return Expose 暴露外网或内网，默认暴露外网，`集群模式` 选填
      */
     public String getExpose() {
         return this.Expose;
     }
 
     /**
-     * 设置暴露外网或内网，默认暴露外网（集群模式下选填）
-     * @param Expose 暴露外网或内网，默认暴露外网（集群模式下选填）
+     * 设置暴露外网或内网，默认暴露外网，`集群模式` 选填
+     * @param Expose 暴露外网或内网，默认暴露外网，`集群模式` 选填
      */
     public void setExpose(String Expose) {
         this.Expose = Expose;
     }
 
     /**
-     * 获取部署模式（无服务器函数模式/集群模式）
-     * @return ServType 部署模式（无服务器函数模式/集群模式）
+     * 获取部署模式，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式` 下服务的运行规模，形如 `2U4G1P`，详见 [自定义的训练规模](https://cloud.tencent.com/document/product/851/17319#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E8.AE.AD.E7.BB.83.E8.A7.84.E6.A8.A1)
+     * @return ServType 部署模式，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式` 下服务的运行规模，形如 `2U4G1P`，详见 [自定义的训练规模](https://cloud.tencent.com/document/product/851/17319#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E8.AE.AD.E7.BB.83.E8.A7.84.E6.A8.A1)
      */
     public String getServType() {
         return this.ServType;
     }
 
     /**
-     * 设置部署模式（无服务器函数模式/集群模式）
-     * @param ServType 部署模式（无服务器函数模式/集群模式）
+     * 设置部署模式，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式` 下服务的运行规模，形如 `2U4G1P`，详见 [自定义的训练规模](https://cloud.tencent.com/document/product/851/17319#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E8.AE.AD.E7.BB.83.E8.A7.84.E6.A8.A1)
+     * @param ServType 部署模式，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式` 下服务的运行规模，形如 `2U4G1P`，详见 [自定义的训练规模](https://cloud.tencent.com/document/product/851/17319#.E8.87.AA.E5.AE.9A.E4.B9.89.E7.9A.84.E8.AE.AD.E7.BB.83.E8.A7.84.E6.A8.A1)
      */
     public void setServType(String ServType) {
         this.ServType = ServType;
     }
 
     /**
-     * 获取部署模型的其他配置信息
-     * @return RuntimeConf 部署模型的其他配置信息
+     * 获取`无服务器模式` 可选的其他配置信息，详见 [利用无服务器函数部署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
+     * @return RuntimeConf `无服务器模式` 可选的其他配置信息，详见 [利用无服务器函数部署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
      */
     public String [] getRuntimeConf() {
         return this.RuntimeConf;
     }
 
     /**
-     * 设置部署模型的其他配置信息
-     * @param RuntimeConf 部署模型的其他配置信息
+     * 设置`无服务器模式` 可选的其他配置信息，详见 [利用无服务器函数部署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
+     * @param RuntimeConf `无服务器模式` 可选的其他配置信息，详见 [利用无服务器函数部署](https://cloud.tencent.com/document/product/851/17049#.E5.88.A9.E7.94.A8.E6.97.A0.E6.9C.8D.E5.8A.A1.E5.99.A8.E5.87.BD.E6.95.B0.E9.83.A8.E7.BD.B2)
      */
     public void setRuntimeConf(String [] RuntimeConf) {
         this.RuntimeConf = RuntimeConf;

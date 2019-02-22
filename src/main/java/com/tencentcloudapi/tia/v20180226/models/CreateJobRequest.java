@@ -30,21 +30,21 @@ public class CreateJobRequest  extends AbstractModel{
     private String Name;
 
     /**
-    * 运行任务的集群
+    * 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
     */
     @SerializedName("Cluster")
     @Expose
     private String Cluster;
 
     /**
-    * 运行任务的环境
+    * 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
     */
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
 
     /**
-    * 挂载的路径，支持nfs,cos(cos只在tia运行环境中支持)
+    * 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
     */
     @SerializedName("PackageDir")
     @Expose
@@ -65,49 +65,49 @@ public class CreateJobRequest  extends AbstractModel{
     private String [] Args;
 
     /**
-    * 运行任务的配置信息
+    * 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
     */
     @SerializedName("ScaleTier")
     @Expose
     private String ScaleTier;
 
     /**
-    * （ScaleTier为Custom时）master机器类型
+    * Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
     */
     @SerializedName("MasterType")
     @Expose
     private String MasterType;
 
     /**
-    * （ScaleTier为Custom时）worker机器类型
+    * Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
     */
     @SerializedName("WorkerType")
     @Expose
     private String WorkerType;
 
     /**
-    * （ScaleTier为Custom时）parameter server机器类型
+    * Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
     */
     @SerializedName("ParameterServerType")
     @Expose
     private String ParameterServerType;
 
     /**
-    * （ScaleTier为Custom时）worker机器数量
+    * Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
     */
     @SerializedName("WorkerCount")
     @Expose
     private Integer WorkerCount;
 
     /**
-    * （ScaleTier为Custom时）parameter server机器数量
+    * Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
     */
     @SerializedName("ParameterServerCount")
     @Expose
     private Integer ParameterServerCount;
 
     /**
-    * 启动debug mode，默认为false
+    * 启动 debug 模式，默认为 false
     */
     @SerializedName("Debug")
     @Expose
@@ -137,48 +137,48 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行任务的集群
-     * @return Cluster 运行任务的集群
+     * 获取运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
+     * @return Cluster 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
      */
     public String getCluster() {
         return this.Cluster;
     }
 
     /**
-     * 设置运行任务的集群
-     * @param Cluster 运行任务的集群
+     * 设置运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
+     * @param Cluster 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
      */
     public void setCluster(String Cluster) {
         this.Cluster = Cluster;
     }
 
     /**
-     * 获取运行任务的环境
-     * @return RuntimeVersion 运行任务的环境
+     * 获取运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
+     * @return RuntimeVersion 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
     }
 
     /**
-     * 设置运行任务的环境
-     * @param RuntimeVersion 运行任务的环境
+     * 设置运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
+     * @param RuntimeVersion 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;
     }
 
     /**
-     * 获取挂载的路径，支持nfs,cos(cos只在tia运行环境中支持)
-     * @return PackageDir 挂载的路径，支持nfs,cos(cos只在tia运行环境中支持)
+     * 获取挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
+     * @return PackageDir 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
      */
     public String [] getPackageDir() {
         return this.PackageDir;
     }
 
     /**
-     * 设置挂载的路径，支持nfs,cos(cos只在tia运行环境中支持)
-     * @param PackageDir 挂载的路径，支持nfs,cos(cos只在tia运行环境中支持)
+     * 设置挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
+     * @param PackageDir 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
      */
     public void setPackageDir(String [] PackageDir) {
         this.PackageDir = PackageDir;
@@ -217,112 +217,112 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行任务的配置信息
-     * @return ScaleTier 运行任务的配置信息
+     * 获取运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @return ScaleTier 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public String getScaleTier() {
         return this.ScaleTier;
     }
 
     /**
-     * 设置运行任务的配置信息
-     * @param ScaleTier 运行任务的配置信息
+     * 设置运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param ScaleTier 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setScaleTier(String ScaleTier) {
         this.ScaleTier = ScaleTier;
     }
 
     /**
-     * 获取（ScaleTier为Custom时）master机器类型
-     * @return MasterType （ScaleTier为Custom时）master机器类型
+     * 获取Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @return MasterType Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public String getMasterType() {
         return this.MasterType;
     }
 
     /**
-     * 设置（ScaleTier为Custom时）master机器类型
-     * @param MasterType （ScaleTier为Custom时）master机器类型
+     * 设置Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param MasterType Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setMasterType(String MasterType) {
         this.MasterType = MasterType;
     }
 
     /**
-     * 获取（ScaleTier为Custom时）worker机器类型
-     * @return WorkerType （ScaleTier为Custom时）worker机器类型
+     * 获取Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @return WorkerType Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public String getWorkerType() {
         return this.WorkerType;
     }
 
     /**
-     * 设置（ScaleTier为Custom时）worker机器类型
-     * @param WorkerType （ScaleTier为Custom时）worker机器类型
+     * 设置Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param WorkerType Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setWorkerType(String WorkerType) {
         this.WorkerType = WorkerType;
     }
 
     /**
-     * 获取（ScaleTier为Custom时）parameter server机器类型
-     * @return ParameterServerType （ScaleTier为Custom时）parameter server机器类型
+     * 获取Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @return ParameterServerType Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public String getParameterServerType() {
         return this.ParameterServerType;
     }
 
     /**
-     * 设置（ScaleTier为Custom时）parameter server机器类型
-     * @param ParameterServerType （ScaleTier为Custom时）parameter server机器类型
+     * 设置Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param ParameterServerType Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setParameterServerType(String ParameterServerType) {
         this.ParameterServerType = ParameterServerType;
     }
 
     /**
-     * 获取（ScaleTier为Custom时）worker机器数量
-     * @return WorkerCount （ScaleTier为Custom时）worker机器数量
+     * 获取Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @return WorkerCount Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public Integer getWorkerCount() {
         return this.WorkerCount;
     }
 
     /**
-     * 设置（ScaleTier为Custom时）worker机器数量
-     * @param WorkerCount （ScaleTier为Custom时）worker机器数量
+     * 设置Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param WorkerCount Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setWorkerCount(Integer WorkerCount) {
         this.WorkerCount = WorkerCount;
     }
 
     /**
-     * 获取（ScaleTier为Custom时）parameter server机器数量
-     * @return ParameterServerCount （ScaleTier为Custom时）parameter server机器数量
+     * 获取Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @return ParameterServerCount Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public Integer getParameterServerCount() {
         return this.ParameterServerCount;
     }
 
     /**
-     * 设置（ScaleTier为Custom时）parameter server机器数量
-     * @param ParameterServerCount （ScaleTier为Custom时）parameter server机器数量
+     * 设置Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * @param ParameterServerCount Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setParameterServerCount(Integer ParameterServerCount) {
         this.ParameterServerCount = ParameterServerCount;
     }
 
     /**
-     * 获取启动debug mode，默认为false
-     * @return Debug 启动debug mode，默认为false
+     * 获取启动 debug 模式，默认为 false
+     * @return Debug 启动 debug 模式，默认为 false
      */
     public Boolean getDebug() {
         return this.Debug;
     }
 
     /**
-     * 设置启动debug mode，默认为false
-     * @param Debug 启动debug mode，默认为false
+     * 设置启动 debug 模式，默认为 false
+     * @param Debug 启动 debug 模式，默认为 false
      */
     public void setDebug(Boolean Debug) {
         this.Debug = Debug;

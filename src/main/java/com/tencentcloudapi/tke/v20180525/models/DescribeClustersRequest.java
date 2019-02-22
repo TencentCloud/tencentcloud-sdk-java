@@ -45,6 +45,13 @@ public class DescribeClustersRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
+    * 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * 获取集群ID列表(为空时，
 表示获取账号下所有集群)
      * @return ClusterIds 集群ID列表(为空时，
@@ -97,12 +104,29 @@ public class DescribeClustersRequest  extends AbstractModel{
     }
 
     /**
+     * 获取过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * @return Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * 设置过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * @param Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

@@ -37,28 +37,28 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-    * 周期类型，byPayTime按扣费周期/byUsedTime按计费周期
+    * 周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。
     */
     @SerializedName("PeriodType")
     @Expose
     private String PeriodType;
 
     /**
-    * 月份，格式为yyyy-mm
+    * 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+    * 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+    * 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
     */
     @SerializedName("EndTime")
     @Expose
@@ -97,64 +97,64 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取周期类型，byPayTime按扣费周期/byUsedTime按计费周期
-     * @return PeriodType 周期类型，byPayTime按扣费周期/byUsedTime按计费周期
+     * 获取周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。
+     * @return PeriodType 周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。
      */
     public String getPeriodType() {
         return this.PeriodType;
     }
 
     /**
-     * 设置周期类型，byPayTime按扣费周期/byUsedTime按计费周期
-     * @param PeriodType 周期类型，byPayTime按扣费周期/byUsedTime按计费周期
+     * 设置周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。
+     * @param PeriodType 周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。
      */
     public void setPeriodType(String PeriodType) {
         this.PeriodType = PeriodType;
     }
 
     /**
-     * 获取月份，格式为yyyy-mm
-     * @return Month 月份，格式为yyyy-mm
+     * 获取月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @return Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * 设置月份，格式为yyyy-mm
-     * @param Month 月份，格式为yyyy-mm
+     * 设置月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @param Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * 获取周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
-     * @return BeginTime 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+     * 获取周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @return BeginTime 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * 设置周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
-     * @param BeginTime 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+     * 设置周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @param BeginTime 周期开始时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * 获取周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
-     * @return EndTime 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+     * 获取周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @return EndTime 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * 设置周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
-     * @param EndTime 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传
+     * 设置周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @param EndTime 周期结束时间，格式为Y-m-d H:i:s，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

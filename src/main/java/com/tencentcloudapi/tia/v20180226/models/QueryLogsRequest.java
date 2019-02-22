@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class QueryLogsRequest  extends AbstractModel{
 
     /**
-    * 任务名称
+    * 任务的名称
     */
     @SerializedName("JobName")
     @Expose
     private String JobName;
 
     /**
-    * 集群名称
+    * 任务所在集群的名称
     */
     @SerializedName("Cluster")
     @Expose
     private String Cluster;
 
     /**
-    * 查询日志的开始时间
+    * 查询日志的开始时间，格式：2019-01-01 00:00:00
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询日志的结束时间
+    * 查询日志的结束时间，格式：2019-01-01 00:00:00
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 单次要返回的日志条数
+    * 单次要返回的日志条数上限
     */
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
 
     /**
-    * 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
+    * 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-     * 获取任务名称
-     * @return JobName 任务名称
+     * 获取任务的名称
+     * @return JobName 任务的名称
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * 设置任务名称
-     * @param JobName 任务名称
+     * 设置任务的名称
+     * @param JobName 任务的名称
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * 获取集群名称
-     * @return Cluster 集群名称
+     * 获取任务所在集群的名称
+     * @return Cluster 任务所在集群的名称
      */
     public String getCluster() {
         return this.Cluster;
     }
 
     /**
-     * 设置集群名称
-     * @param Cluster 集群名称
+     * 设置任务所在集群的名称
+     * @param Cluster 任务所在集群的名称
      */
     public void setCluster(String Cluster) {
         this.Cluster = Cluster;
     }
 
     /**
-     * 获取查询日志的开始时间
-     * @return StartTime 查询日志的开始时间
+     * 获取查询日志的开始时间，格式：2019-01-01 00:00:00
+     * @return StartTime 查询日志的开始时间，格式：2019-01-01 00:00:00
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * 设置查询日志的开始时间
-     * @param StartTime 查询日志的开始时间
+     * 设置查询日志的开始时间，格式：2019-01-01 00:00:00
+     * @param StartTime 查询日志的开始时间，格式：2019-01-01 00:00:00
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * 获取查询日志的结束时间
-     * @return EndTime 查询日志的结束时间
+     * 获取查询日志的结束时间，格式：2019-01-01 00:00:00
+     * @return EndTime 查询日志的结束时间，格式：2019-01-01 00:00:00
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * 设置查询日志的结束时间
-     * @param EndTime 查询日志的结束时间
+     * 设置查询日志的结束时间，格式：2019-01-01 00:00:00
+     * @param EndTime 查询日志的结束时间，格式：2019-01-01 00:00:00
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * 获取单次要返回的日志条数
-     * @return Limit 单次要返回的日志条数
+     * 获取单次要返回的日志条数上限
+     * @return Limit 单次要返回的日志条数上限
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置单次要返回的日志条数
-     * @param Limit 单次要返回的日志条数
+     * 设置单次要返回的日志条数上限
+     * @param Limit 单次要返回的日志条数上限
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
-     * @return Context 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
+     * 获取加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
+     * @return Context 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * 设置加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
-     * @param Context 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
+     * 设置加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
+     * @param Context 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
      */
     public void setContext(String Context) {
         this.Context = Context;

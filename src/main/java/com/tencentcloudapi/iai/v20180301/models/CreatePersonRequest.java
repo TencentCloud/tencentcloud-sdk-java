@@ -58,7 +58,9 @@ public class CreatePersonRequest  extends AbstractModel{
     private PersonExDescriptionInfo [] PersonExDescriptionInfos;
 
     /**
-    * 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+    * 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
     @SerializedName("Image")
     @Expose
@@ -68,6 +70,7 @@ public class CreatePersonRequest  extends AbstractModel{
     * 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
     @SerializedName("Url")
@@ -155,16 +158,24 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @return Image 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * 获取图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @return Image 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * 设置图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param Image 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * 设置图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param Image 图片 base64 数据。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public void setImage(String Image) {
         this.Image = Image;
@@ -174,10 +185,12 @@ public class CreatePersonRequest  extends AbstractModel{
      * 获取图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @return Url 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public String getUrl() {
@@ -188,10 +201,12 @@ public class CreatePersonRequest  extends AbstractModel{
      * 设置图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param Url 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
+若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public void setUrl(String Url) {
