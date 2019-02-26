@@ -199,5 +199,6 @@ public class UploadDataFileRequest  extends AbstractModel{
         }
         return map;
     }
+
 }
 
