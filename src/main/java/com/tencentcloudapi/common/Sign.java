@@ -84,7 +84,7 @@ public class Sign {
         }
         return retStr;
     }
-    
+
     public static String sha256Hex(String s) throws TencentCloudSDKException {
         MessageDigest md;
         try {
@@ -93,6 +93,17 @@ public class Sign {
             throw new TencentCloudSDKException("SHA-256 is not supported." + e.getMessage());
         }
         byte[] d = md.digest(s.getBytes(UTF8));
+        return DatatypeConverter.printHexBinary(d).toLowerCase();
+    }
+
+    public static String sha256Hex(byte[] b) throws TencentCloudSDKException {
+        MessageDigest md;
+        try {
+            md = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException e) {
+            throw new TencentCloudSDKException("SHA-256 is not supported." + e.getMessage());
+        }
+        byte[] d = md.digest(b);
         return DatatypeConverter.printHexBinary(d).toLowerCase();
     }
     

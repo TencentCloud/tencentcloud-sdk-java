@@ -28,6 +28,8 @@ import java.util.UUID;
 import javax.crypto.Mac;
 import javax.net.ssl.SSLContext;
 import javax.xml.bind.DatatypeConverter;
+
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
@@ -210,7 +212,7 @@ abstract public class AbstractClient {
             throw new TencentCloudSDKException("Request method should not be null, can only be GET or POST");
         }
         String contentType = "application/x-www-form-urlencoded";
-        String requestPayload = "";
+        byte [] requestPayload = "".getBytes();
         HashMap<String, String> params = new HashMap<String, String>();
         request.toMap(params, "");
         String [] binaryParams = request.getBinaryParams();
@@ -220,9 +222,13 @@ abstract public class AbstractClient {
             // okhttp always set charset even we don't specify it,
             // to ensure signature be correct, we have to set it here as well.
             contentType = "multipart/form-data; charset=utf-8" + "; boundary=" + boundary;
-            requestPayload = getMultipartPayload(params, binaryParams, boundary);
+            try {
+                requestPayload = getMultipartPayload(request, boundary);
+            } catch (Exception e) {
+                throw new TencentCloudSDKException("Failed to generate multipart. because: " + e);
+            }
         } else if (httpRequestMethod.equals(HttpProfile.REQ_POST)) {
-            requestPayload = AbstractModel.toJsonString(request);
+            requestPayload = AbstractModel.toJsonString(request).getBytes();
             // okhttp always set charset even we don't specify it,
             // to ensure signature be correct, we have to set it here as well.
             contentType = "application/json; charset=utf-8";
@@ -234,7 +240,7 @@ abstract public class AbstractClient {
 
         String hashedRequestPayload = "";
         if (this.profile.isUnsignedPayload()) {
-            hashedRequestPayload = Sign.sha256Hex("UNSIGNED-PAYLOAD");
+            hashedRequestPayload = Sign.sha256Hex("UNSIGNED-PAYLOAD".getBytes());
         } else {
             hashedRequestPayload = Sign.sha256Hex(requestPayload);
         }
@@ -247,7 +253,7 @@ abstract public class AbstractClient {
         String date = sdf.format(new Date(Long.valueOf(timestamp + "000")));
         String service = endpoint.split("\\.")[0];
         String credentialScope = date + "/" + service + "/" + "tc3_request";
-        String hashedCanonicalRequest = Sign.sha256Hex(canonicalRequest);
+        String hashedCanonicalRequest = Sign.sha256Hex(canonicalRequest.getBytes());
         String stringToSign = "TC3-HMAC-SHA256\n" + timestamp + "\n" + credentialScope + "\n" + hashedCanonicalRequest;
         
         String secretId = this.credential.getSecretId();
@@ -291,23 +297,34 @@ abstract public class AbstractClient {
         }
     }
 
-    private String getMultipartPayload(HashMap<String, String> params, String [] binaryParams, String boundary) {
-        StringBuilder sb = new StringBuilder();
-        for (Map.Entry<String, String> entry : params.entrySet()) {
-            sb.append("--").append(boundary).append("\r\n");
-            sb.append("Content-Disposition: form-data; name=\"").append(entry.getKey());
+    private byte [] getMultipartPayload(AbstractModel request, String boundary) throws Exception {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        String [] binaryParams = request.getBinaryParams();
+        for (Map.Entry<String, byte []> entry : request.getMultipartRequestParams().entrySet()) {
+            baos.write("--".getBytes());
+            baos.write(boundary.getBytes());
+            baos.write("\r\n".getBytes());
+            baos.write("Content-Disposition: form-data; name=\"".getBytes());
+            baos.write(entry.getKey().getBytes());
             if (Arrays.asList(binaryParams).contains(entry.getKey())) {
-                sb.append("\"; filename=\"").append(entry.getKey()).append("\"\r\n");
+                baos.write("\"; filename=\"".getBytes());
+                baos.write(entry.getKey().getBytes());
+                baos.write("\"\r\n".getBytes());
             } else {
-                sb.append("\"\r\n");
+                baos.write("\"\r\n".getBytes());
             }
-            sb.append("\r\n").append(entry.getValue()).append("\r\n");
+            baos.write("\r\n".getBytes());
+            baos.write(entry.getValue());
+            baos.write("\r\n".getBytes());
         }
-        if (sb.length() != 0) {
-            sb.append("--").append(boundary).append("--\r\n");
+        if (baos.size() != 0) {
+            baos.write("--".getBytes());
+            baos.write(boundary.getBytes());
+            baos.write("--\r\n".getBytes());
         }
-
-        return sb.toString();
+        byte [] bytes = baos.toByteArray();
+        baos.close();
+        return bytes;
     }
 
     private String getCanonicalQueryString(HashMap<String, String> params, String method) throws TencentCloudSDKException {

@@ -1,4 +1,3 @@
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -21,8 +20,8 @@ public class UploadDataFile {
             UploadDataFileRequest udfreq = new UploadDataFileRequest();
             udfreq.setModule("Data");
             udfreq.setOperation("Upload");
-            udfreq.setFileName("data.xlsx");
-            udfreq.setFile(new String(Files.readAllBytes(Paths.get("E:\\data.xlsx")), StandardCharsets.UTF_8));
+            udfreq.setFileName("中文文件名unicodeFileName.xlsx");
+            udfreq.setFile(Files.readAllBytes(Paths.get("E:\\data.xlsx"));
             UploadDataFileResponse udfresp = crclient.UploadDataFile(udfreq);
 
             System.out.println(UploadDataFileResponse.toJsonString(udfresp));

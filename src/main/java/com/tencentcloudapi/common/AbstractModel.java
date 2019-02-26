@@ -28,14 +28,21 @@ import java.util.HashMap;
 abstract public class AbstractModel {
 	
 	protected abstract void toMap(HashMap<String, String> map, String prefix);
-	
+
 	/*
-	 * valid only when its a request object.
+	 * valid only when it's a request object.
 	 * some actions can only be posted in multipart format,
 	 * this method is used to mark which parameters are binary type.
 	 */
 	protected String [] getBinaryParams() {
 	    return new String[0];
+	}
+
+	/*
+	 * valid only when it's a multipart request object.
+	 */
+	protected HashMap<String, byte []> getMultipartRequestParams() {
+	    return new HashMap<String, byte []>();
 	}
 
     protected <V> void setParamSimple(HashMap<String, String> map, String key, V value) {

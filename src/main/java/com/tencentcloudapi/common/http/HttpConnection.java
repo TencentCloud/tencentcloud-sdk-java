@@ -113,5 +113,21 @@ public class HttpConnection {
 
         return this.doRequest(request);         
     }
+
+    public Response postRequest(String url, byte [] body, Headers headers) throws TencentCloudSDKException {
+        MediaType contentType = MediaType.parse(headers.get("Content-Type"));
+        Request request = null;
+        try {
+            request = new Request.Builder()
+                    .url(url)
+                    .post(RequestBody.create(contentType, body))
+                    .headers(headers)
+                    .build();
+        } catch (IllegalArgumentException e) {
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+        }
+
+        return this.doRequest(request);
+    }
 }
 

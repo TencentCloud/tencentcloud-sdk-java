@@ -55,7 +55,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     */
     @SerializedName("File")
     @Expose
-    private String File;
+    private byte [] File;
 
     /**
     * 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
@@ -132,7 +132,7 @@ public class UploadDataFileRequest  extends AbstractModel{
      * 获取文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      * @return File 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      */
-    public String getFile() {
+    public byte [] getFile() {
         return this.File;
     }
 
@@ -140,7 +140,7 @@ public class UploadDataFileRequest  extends AbstractModel{
      * 设置文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      * @param File 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      */
-    public void setFile(String File) {
+    public void setFile(byte [] File) {
         this.File = File;
     }
 
@@ -175,6 +175,29 @@ public class UploadDataFileRequest  extends AbstractModel{
 
     protected String [] getBinaryParams() {
         return new String [] {"File"};
+    }
+
+    protected HashMap<String, byte []> getMultipartRequestParams() {
+        HashMap<String, byte []> map = new HashMap<String, byte []>();
+        if (this.Module != null) {
+            map.put("Module", this.Module.getBytes());
+        }
+        if (this.Operation != null) {
+            map.put("Operation", this.Operation.getBytes());
+        }
+        if (this.FileName != null) {
+            map.put("FileName", this.FileName.getBytes());
+        }
+        if (this.UploadModel != null) {
+            map.put("UploadModel", this.UploadModel.getBytes());
+        }
+        if (this.File != null) {
+            map.put("File", this.File);
+        }
+        if (this.FileUrl != null) {
+            map.put("FileUrl", this.FileUrl.getBytes());
+        }
+        return map;
     }
 }
 
