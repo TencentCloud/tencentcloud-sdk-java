@@ -65,8 +65,22 @@ public class DescribeZones
 } 
 ```
 
-# 更多示例
+## 更多示例
+
 您可以在[github](https://github.com/tencentcloud/tencentcloud-sdk-java)中examples目录下找到更详细的示例。
+
+# 相关配置
+
+## 代理
+
+目前 Java SDK 不支持指定代理，只能读取系统的代理。您可以在代码中请求发起前设置：
+
+```
+System.setProperty("https.proxyHost", "真实代理ip");
+System.setProperty("https.proxyPort", "真实代理端口");
+```
+
+或者运行程序时在启动参数中设置。
 
 # 旧版SDK
 我们推荐您使用新版SDK， 如果需要旧版SDK，请在您的Maven pom.xml 添加以下依赖项即可：
