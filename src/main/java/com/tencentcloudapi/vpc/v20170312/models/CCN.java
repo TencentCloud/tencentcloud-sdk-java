@@ -72,6 +72,20 @@ public class CCN  extends AbstractModel{
     private String QosLevel;
 
     /**
+    * 付费类型，PREPAID为预付费，POSTPAID为后付费。
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
+    * 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+    */
+    @SerializedName("BandwidthLimitType")
+    @Expose
+    private String BandwidthLimitType;
+
+    /**
      * 获取云联网唯一ID
      * @return CcnId 云联网唯一ID
      */
@@ -184,6 +198,38 @@ public class CCN  extends AbstractModel{
     }
 
     /**
+     * 获取付费类型，PREPAID为预付费，POSTPAID为后付费。
+     * @return InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * 设置付费类型，PREPAID为预付费，POSTPAID为后付费。
+     * @param InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * 获取限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     * @return BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     */
+    public String getBandwidthLimitType() {
+        return this.BandwidthLimitType;
+    }
+
+    /**
+     * 设置限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     * @param BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     */
+    public void setBandwidthLimitType(String BandwidthLimitType) {
+        this.BandwidthLimitType = BandwidthLimitType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class CCN  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
 
     }
 }

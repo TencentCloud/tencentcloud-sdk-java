@@ -40,7 +40,7 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
 
     /**
     * <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
     */
     @SerializedName("NetworkInstanceId")
     @Expose
@@ -97,9 +97,9 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
 
     /**
      * 获取<li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
      * @return NetworkInstanceId <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
      */
     public String getNetworkInstanceId() {
         return this.NetworkInstanceId;
@@ -107,9 +107,9 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
 
     /**
      * 设置<li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
      * @param NetworkInstanceId <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
      */
     public void setNetworkInstanceId(String NetworkInstanceId) {
         this.NetworkInstanceId = NetworkInstanceId;

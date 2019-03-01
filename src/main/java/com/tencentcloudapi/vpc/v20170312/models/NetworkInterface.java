@@ -119,6 +119,13 @@ public class NetworkInterface  extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * `IPv6`地址列表。
+    */
+    @SerializedName("Ipv6AddressSet")
+    @Expose
+    private Ipv6Address [] Ipv6AddressSet;
+
+    /**
      * 获取弹性网卡实例ID，例如：eni-f1xjkw1b。
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
@@ -347,6 +354,22 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
+     * 获取`IPv6`地址列表。
+     * @return Ipv6AddressSet `IPv6`地址列表。
+     */
+    public Ipv6Address [] getIpv6AddressSet() {
+        return this.Ipv6AddressSet;
+    }
+
+    /**
+     * 设置`IPv6`地址列表。
+     * @param Ipv6AddressSet `IPv6`地址列表。
+     */
+    public void setIpv6AddressSet(Ipv6Address [] Ipv6AddressSet) {
+        this.Ipv6AddressSet = Ipv6AddressSet;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -363,6 +386,7 @@ public class NetworkInterface  extends AbstractModel{
         this.setParamObj(map, prefix + "Attachment.", this.Attachment);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
 
     }
 }

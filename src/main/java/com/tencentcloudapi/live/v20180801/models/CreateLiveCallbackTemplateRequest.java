@@ -37,35 +37,40 @@ public class CreateLiveCallbackTemplateRequest  extends AbstractModel{
     private String Description;
 
     /**
-    * 开播回调URL。
+    * 开播回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
     */
     @SerializedName("StreamBeginNotifyUrl")
     @Expose
     private String StreamBeginNotifyUrl;
 
     /**
-    * 断流回调URL。
+    * 断流回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
     */
     @SerializedName("StreamEndNotifyUrl")
     @Expose
     private String StreamEndNotifyUrl;
 
     /**
-    * 录制回调URL。
+    * 录制回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
     */
     @SerializedName("RecordNotifyUrl")
     @Expose
     private String RecordNotifyUrl;
 
     /**
-    * 截图回调URL。
+    * 截图回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
     */
     @SerializedName("SnapshotNotifyUrl")
     @Expose
     private String SnapshotNotifyUrl;
 
     /**
-    * 鉴黄回调URL。
+    * 鉴黄回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32741)。
     */
     @SerializedName("PornCensorshipNotifyUrl")
     @Expose
@@ -104,80 +109,100 @@ public class CreateLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开播回调URL。
-     * @return StreamBeginNotifyUrl 开播回调URL。
+     * 获取开播回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @return StreamBeginNotifyUrl 开播回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public String getStreamBeginNotifyUrl() {
         return this.StreamBeginNotifyUrl;
     }
 
     /**
-     * 设置开播回调URL。
-     * @param StreamBeginNotifyUrl 开播回调URL。
+     * 设置开播回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param StreamBeginNotifyUrl 开播回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public void setStreamBeginNotifyUrl(String StreamBeginNotifyUrl) {
         this.StreamBeginNotifyUrl = StreamBeginNotifyUrl;
     }
 
     /**
-     * 获取断流回调URL。
-     * @return StreamEndNotifyUrl 断流回调URL。
+     * 获取断流回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @return StreamEndNotifyUrl 断流回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public String getStreamEndNotifyUrl() {
         return this.StreamEndNotifyUrl;
     }
 
     /**
-     * 设置断流回调URL。
-     * @param StreamEndNotifyUrl 断流回调URL。
+     * 设置断流回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param StreamEndNotifyUrl 断流回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public void setStreamEndNotifyUrl(String StreamEndNotifyUrl) {
         this.StreamEndNotifyUrl = StreamEndNotifyUrl;
     }
 
     /**
-     * 获取录制回调URL。
-     * @return RecordNotifyUrl 录制回调URL。
+     * 获取录制回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @return RecordNotifyUrl 录制回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public String getRecordNotifyUrl() {
         return this.RecordNotifyUrl;
     }
 
     /**
-     * 设置录制回调URL。
-     * @param RecordNotifyUrl 录制回调URL。
+     * 设置录制回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param RecordNotifyUrl 录制回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public void setRecordNotifyUrl(String RecordNotifyUrl) {
         this.RecordNotifyUrl = RecordNotifyUrl;
     }
 
     /**
-     * 获取截图回调URL。
-     * @return SnapshotNotifyUrl 截图回调URL。
+     * 获取截图回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @return SnapshotNotifyUrl 截图回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public String getSnapshotNotifyUrl() {
         return this.SnapshotNotifyUrl;
     }
 
     /**
-     * 设置截图回调URL。
-     * @param SnapshotNotifyUrl 截图回调URL。
+     * 设置截图回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param SnapshotNotifyUrl 截图回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public void setSnapshotNotifyUrl(String SnapshotNotifyUrl) {
         this.SnapshotNotifyUrl = SnapshotNotifyUrl;
     }
 
     /**
-     * 获取鉴黄回调URL。
-     * @return PornCensorshipNotifyUrl 鉴黄回调URL。
+     * 获取鉴黄回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32741)。
+     * @return PornCensorshipNotifyUrl 鉴黄回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32741)。
      */
     public String getPornCensorshipNotifyUrl() {
         return this.PornCensorshipNotifyUrl;
     }
 
     /**
-     * 设置鉴黄回调URL。
-     * @param PornCensorshipNotifyUrl 鉴黄回调URL。
+     * 设置鉴黄回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32741)。
+     * @param PornCensorshipNotifyUrl 鉴黄回调URL，
+相关协议文档：[事件消息通知](/document/product/267/32741)。
      */
     public void setPornCensorshipNotifyUrl(String PornCensorshipNotifyUrl) {
         this.PornCensorshipNotifyUrl = PornCensorshipNotifyUrl;

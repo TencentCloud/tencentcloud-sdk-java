@@ -30,6 +30,13 @@ public class CreateLicenseResponse  extends AbstractModel{
     private String License;
 
     /**
+    * 加密内容的内容ID
+    */
+    @SerializedName("ContentId")
+    @Expose
+    private String ContentId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class CreateLicenseResponse  extends AbstractModel{
     }
 
     /**
+     * 获取加密内容的内容ID
+     * @return ContentId 加密内容的内容ID
+     */
+    public String getContentId() {
+        return this.ContentId;
+    }
+
+    /**
+     * 设置加密内容的内容ID
+     * @param ContentId 加密内容的内容ID
+     */
+    public void setContentId(String ContentId) {
+        this.ContentId = ContentId;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class CreateLicenseResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "License", this.License);
+        this.setParamSimple(map, prefix + "ContentId", this.ContentId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

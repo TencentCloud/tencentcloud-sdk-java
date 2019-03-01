@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class Subnet  extends AbstractModel{
 
     /**
-    * VPC实例ID。
+    * `VPC`实例`ID`。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网实例ID，例如：subnet-bthucmmy。
+    * 子网实例`ID`，例如：subnet-bthucmmy。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -44,7 +44,7 @@ public class Subnet  extends AbstractModel{
     private String SubnetName;
 
     /**
-    * 子网的CIDR。
+    * 子网的 `IPv4` `CIDR`。
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -86,39 +86,46 @@ public class Subnet  extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * 可用IP数。
+    * 可用`IP`数。
     */
     @SerializedName("AvailableIpAddressCount")
     @Expose
     private Integer AvailableIpAddressCount;
 
     /**
-     * 获取VPC实例ID。
-     * @return VpcId VPC实例ID。
+    * 子网的 `IPv6` `CIDR`。
+    */
+    @SerializedName("Ipv6CidrBlock")
+    @Expose
+    private String Ipv6CidrBlock;
+
+    /**
+     * 获取`VPC`实例`ID`。
+     * @return VpcId `VPC`实例`ID`。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * 设置`VPC`实例`ID`。
+     * @param VpcId `VPC`实例`ID`。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * 获取子网实例ID，例如：subnet-bthucmmy。
-     * @return SubnetId 子网实例ID，例如：subnet-bthucmmy。
+     * 获取子网实例`ID`，例如：subnet-bthucmmy。
+     * @return SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * 设置子网实例ID，例如：subnet-bthucmmy。
-     * @param SubnetId 子网实例ID，例如：subnet-bthucmmy。
+     * 设置子网实例`ID`，例如：subnet-bthucmmy。
+     * @param SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -141,16 +148,16 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取子网的CIDR。
-     * @return CidrBlock 子网的CIDR。
+     * 获取子网的 `IPv4` `CIDR`。
+     * @return CidrBlock 子网的 `IPv4` `CIDR`。
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * 设置子网的CIDR。
-     * @param CidrBlock 子网的CIDR。
+     * 设置子网的 `IPv4` `CIDR`。
+     * @param CidrBlock 子网的 `IPv4` `CIDR`。
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
@@ -237,19 +244,35 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取可用IP数。
-     * @return AvailableIpAddressCount 可用IP数。
+     * 获取可用`IP`数。
+     * @return AvailableIpAddressCount 可用`IP`数。
      */
     public Integer getAvailableIpAddressCount() {
         return this.AvailableIpAddressCount;
     }
 
     /**
-     * 设置可用IP数。
-     * @param AvailableIpAddressCount 可用IP数。
+     * 设置可用`IP`数。
+     * @param AvailableIpAddressCount 可用`IP`数。
      */
     public void setAvailableIpAddressCount(Integer AvailableIpAddressCount) {
         this.AvailableIpAddressCount = AvailableIpAddressCount;
+    }
+
+    /**
+     * 获取子网的 `IPv6` `CIDR`。
+     * @return Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
+     */
+    public String getIpv6CidrBlock() {
+        return this.Ipv6CidrBlock;
+    }
+
+    /**
+     * 设置子网的 `IPv6` `CIDR`。
+     * @param Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
+     */
+    public void setIpv6CidrBlock(String Ipv6CidrBlock) {
+        this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
     /**
@@ -266,6 +289,7 @@ public class Subnet  extends AbstractModel{
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "AvailableIpAddressCount", this.AvailableIpAddressCount);
+        this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
 
     }
 }

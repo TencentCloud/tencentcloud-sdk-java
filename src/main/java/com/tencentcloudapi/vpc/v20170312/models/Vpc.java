@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class Vpc  extends AbstractModel{
 
     /**
-    * Vpc名称。
+    * `VPC`名称。
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * VPC实例ID，例如：vpc-azd4dt1c。
+    * `VPC`实例`ID`，例如：vpc-azd4dt1c。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
+    * `VPC`的`IPv4` `CIDR`。
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * 是否默认VPC。
+    * 是否默认`VPC`。
     */
     @SerializedName("IsDefault")
     @Expose
@@ -65,92 +65,99 @@ public class Vpc  extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * DNS列表
+    * `DNS`列表。
     */
     @SerializedName("DnsServerSet")
     @Expose
     private String [] DnsServerSet;
 
     /**
-    * DHCP域名选项值
+    * `DHCP`域名选项值。
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * DHCP选项集ID
+    * `DHCP`选项集`ID`。
     */
     @SerializedName("DhcpOptionsId")
     @Expose
     private String DhcpOptionsId;
 
     /**
-    * 是否开启DHCP。
+    * 是否开启`DHCP`。
     */
     @SerializedName("EnableDhcp")
     @Expose
     private Boolean EnableDhcp;
 
     /**
-     * 获取Vpc名称。
-     * @return VpcName Vpc名称。
+    * `VPC`的`IPv6` `CIDR`。
+    */
+    @SerializedName("Ipv6CidrBlock")
+    @Expose
+    private String Ipv6CidrBlock;
+
+    /**
+     * 获取`VPC`名称。
+     * @return VpcName `VPC`名称。
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * 设置Vpc名称。
-     * @param VpcName Vpc名称。
+     * 设置`VPC`名称。
+     * @param VpcName `VPC`名称。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * 获取VPC实例ID，例如：vpc-azd4dt1c。
-     * @return VpcId VPC实例ID，例如：vpc-azd4dt1c。
+     * 获取`VPC`实例`ID`，例如：vpc-azd4dt1c。
+     * @return VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置VPC实例ID，例如：vpc-azd4dt1c。
-     * @param VpcId VPC实例ID，例如：vpc-azd4dt1c。
+     * 设置`VPC`实例`ID`，例如：vpc-azd4dt1c。
+     * @param VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * 获取VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
-     * @return CidrBlock VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
+     * 获取`VPC`的`IPv4` `CIDR`。
+     * @return CidrBlock `VPC`的`IPv4` `CIDR`。
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * 设置VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
-     * @param CidrBlock VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
+     * 设置`VPC`的`IPv4` `CIDR`。
+     * @param CidrBlock `VPC`的`IPv4` `CIDR`。
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * 获取是否默认VPC。
-     * @return IsDefault 是否默认VPC。
+     * 获取是否默认`VPC`。
+     * @return IsDefault 是否默认`VPC`。
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * 设置是否默认VPC。
-     * @param IsDefault 是否默认VPC。
+     * 设置是否默认`VPC`。
+     * @param IsDefault 是否默认`VPC`。
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
@@ -189,67 +196,83 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取DNS列表
-     * @return DnsServerSet DNS列表
+     * 获取`DNS`列表。
+     * @return DnsServerSet `DNS`列表。
      */
     public String [] getDnsServerSet() {
         return this.DnsServerSet;
     }
 
     /**
-     * 设置DNS列表
-     * @param DnsServerSet DNS列表
+     * 设置`DNS`列表。
+     * @param DnsServerSet `DNS`列表。
      */
     public void setDnsServerSet(String [] DnsServerSet) {
         this.DnsServerSet = DnsServerSet;
     }
 
     /**
-     * 获取DHCP域名选项值
-     * @return DomainName DHCP域名选项值
+     * 获取`DHCP`域名选项值。
+     * @return DomainName `DHCP`域名选项值。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * 设置DHCP域名选项值
-     * @param DomainName DHCP域名选项值
+     * 设置`DHCP`域名选项值。
+     * @param DomainName `DHCP`域名选项值。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * 获取DHCP选项集ID
-     * @return DhcpOptionsId DHCP选项集ID
+     * 获取`DHCP`选项集`ID`。
+     * @return DhcpOptionsId `DHCP`选项集`ID`。
      */
     public String getDhcpOptionsId() {
         return this.DhcpOptionsId;
     }
 
     /**
-     * 设置DHCP选项集ID
-     * @param DhcpOptionsId DHCP选项集ID
+     * 设置`DHCP`选项集`ID`。
+     * @param DhcpOptionsId `DHCP`选项集`ID`。
      */
     public void setDhcpOptionsId(String DhcpOptionsId) {
         this.DhcpOptionsId = DhcpOptionsId;
     }
 
     /**
-     * 获取是否开启DHCP。
-     * @return EnableDhcp 是否开启DHCP。
+     * 获取是否开启`DHCP`。
+     * @return EnableDhcp 是否开启`DHCP`。
      */
     public Boolean getEnableDhcp() {
         return this.EnableDhcp;
     }
 
     /**
-     * 设置是否开启DHCP。
-     * @param EnableDhcp 是否开启DHCP。
+     * 设置是否开启`DHCP`。
+     * @param EnableDhcp 是否开启`DHCP`。
      */
     public void setEnableDhcp(Boolean EnableDhcp) {
         this.EnableDhcp = EnableDhcp;
+    }
+
+    /**
+     * 获取`VPC`的`IPv6` `CIDR`。
+     * @return Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
+     */
+    public String getIpv6CidrBlock() {
+        return this.Ipv6CidrBlock;
+    }
+
+    /**
+     * 设置`VPC`的`IPv6` `CIDR`。
+     * @param Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
+     */
+    public void setIpv6CidrBlock(String Ipv6CidrBlock) {
+        this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
     /**
@@ -266,6 +289,7 @@ public class Vpc  extends AbstractModel{
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "DhcpOptionsId", this.DhcpOptionsId);
         this.setParamSimple(map, prefix + "EnableDhcp", this.EnableDhcp);
+        this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
 
     }
 }

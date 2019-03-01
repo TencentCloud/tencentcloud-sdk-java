@@ -86,6 +86,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     ** 开发者调用拉取事件通知，获取到事件后，必须调用该接口来确认消息已经收到；
+* 开发者获取到事件句柄后，等待确认的有效时间为 30 秒，超出 30 秒会报参数错误（4000）；
+* 更多参考[服务端事件通知](https://cloud.tencent.com/document/product/266/7829)。
+     * @param req ConfirmEventsRequest
+     * @return ConfirmEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfirmEventsResponse ConfirmEvents(ConfirmEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ConfirmEventsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ConfirmEventsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ConfirmEvents"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 用于对媒体进行分类管理；
 * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
 * 分类层次不可超过 4 层。
@@ -190,6 +210,44 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）
+     * @param req DescribeTaskDetailRequest
+     * @return DescribeTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     ** 该接口用于查询任务列表；
+* 当列表数据比较多时，单次接口调用无法拉取整个列表，可通过 ScrollToken 参数，分批拉取；
+* 只能查询到最近三天（72 小时）内的任务。
+     * @param req DescribeTasksRequest
+     * @return DescribeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTasksResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTasks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
 
 腾讯云点播支持两种即时剪辑模式：
@@ -260,6 +318,74 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyMediaInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyMediaInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对点播中的音视频媒体发起处理任务，功能包括：
+1. 视频转码（带水印）；
+2. 视频转动图；
+3. 对视频按指定时间点截图；
+4. 对视频采样截图；
+5. 对视频截图雪碧图；
+6. 对视频截取一张图做封面；
+7. 智能内容审核（鉴黄、鉴恐、鉴政）；
+8. 智能内容分析（标签、分类、封面）。
+     * @param req ProcessMediaRequest
+     * @return ProcessMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessMediaResponse ProcessMedia(ProcessMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ProcessMediaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ProcessMediaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ProcessMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对来源为 URL 的音视频媒体发起处理任务，功能包括：
+
+1. 智能内容审核（鉴黄、鉴恐、鉴政）；
+2. 智能内容分析（标签、分类、封面）。
+     * @param req ProcessMediaByUrlRequest
+     * @return ProcessMediaByUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessMediaByUrlResponse ProcessMediaByUrl(ProcessMediaByUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ProcessMediaByUrlResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ProcessMediaByUrlResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ProcessMediaByUrl"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     ** 该接口用于从点播服务端获取事件通知，详见[服务端事件通知](https://cloud.tencent.com/document/product/266/7829)；
+* 接口为长轮询模式，即：如果服务端存在未消费事件，则立即返回给请求方；如果服务端没有未消费事件，则后台会将请求挂起，直到有新的事件产生为止；
+* 请求最多挂起 5 秒，建议请求方将超时时间设置为 10 秒；
+* 若该接口有事件返回，调用方必须再调用[确认事件通知]接口，确认事件通知已经处理，否则该事件通知后续会再次被拉取到。
+     * @param req PullEventsRequest
+     * @return PullEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public PullEventsResponse PullEvents(PullEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PullEventsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PullEventsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PullEvents"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

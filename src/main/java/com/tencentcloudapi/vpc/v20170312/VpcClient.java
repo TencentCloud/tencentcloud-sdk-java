@@ -1333,6 +1333,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeGatewayFlowMonitorDetail）用于查询网关流量监控明细。
+* 只支持单个网关实例查询。即入参 `VpnId` `DirectConnectGatewayId` `PeeringConnectionId` `NatId` 最多只支持传一个，且必须传一个。
+* 如果网关有流量，但调用本接口没有返回数据，请在控制台对应网关详情页确认是否开启网关流量监控。
+     * @param req DescribeGatewayFlowMonitorDetailRequest
+     * @return DescribeGatewayFlowMonitorDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewayFlowMonitorDetailResponse DescribeGatewayFlowMonitorDetail(DescribeGatewayFlowMonitorDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGatewayFlowMonitorDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGatewayFlowMonitorDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeGatewayFlowMonitorDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeHaVips）用于查询高可用虚拟IP（HAVIP）列表。
      * @param req DescribeHaVipsRequest
      * @return DescribeHaVipsResponse

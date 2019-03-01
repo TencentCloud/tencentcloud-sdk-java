@@ -44,6 +44,13 @@ public class ApplyBlackListRequest  extends AbstractModel{
     private SingleBlackApply [] BlackList;
 
     /**
+    * 实例ID，不传默认为系统分配的初始实例
+    */
+    @SerializedName("InstId")
+    @Expose
+    private String InstId;
+
+    /**
      * 获取模块
      * @return Module 模块
      */
@@ -92,12 +99,29 @@ public class ApplyBlackListRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例ID，不传默认为系统分配的初始实例
+     * @return InstId 实例ID，不传默认为系统分配的初始实例
+     */
+    public String getInstId() {
+        return this.InstId;
+    }
+
+    /**
+     * 设置实例ID，不传默认为系统分配的初始实例
+     * @param InstId 实例ID，不传默认为系统分配的初始实例
+     */
+    public void setInstId(String InstId) {
+        this.InstId = InstId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamArrayObj(map, prefix + "BlackList.", this.BlackList);
+        this.setParamSimple(map, prefix + "InstId", this.InstId);
 
     }
 }

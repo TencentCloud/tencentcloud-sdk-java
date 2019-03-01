@@ -114,6 +114,13 @@ public class ZoneSellConf  extends AbstractModel{
     private ZoneConf ZoneConf;
 
     /**
+    * 可支持的灾备可用区信息
+    */
+    @SerializedName("DrZone")
+    @Expose
+    private String [] DrZone;
+
+    /**
      * 获取可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      * @return Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      */
@@ -322,6 +329,22 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
+     * 获取可支持的灾备可用区信息
+     * @return DrZone 可支持的灾备可用区信息
+     */
+    public String [] getDrZone() {
+        return this.DrZone;
+    }
+
+    /**
+     * 设置可支持的灾备可用区信息
+     * @param DrZone 可支持的灾备可用区信息
+     */
+    public void setDrZone(String [] DrZone) {
+        this.DrZone = DrZone;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class ZoneSellConf  extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "SellType.", this.SellType);
         this.setParamObj(map, prefix + "ZoneConf.", this.ZoneConf);
+        this.setParamArraySimple(map, prefix + "DrZone.", this.DrZone);
 
     }
 }

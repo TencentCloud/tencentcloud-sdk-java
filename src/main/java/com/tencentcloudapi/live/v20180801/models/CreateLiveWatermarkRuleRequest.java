@@ -44,7 +44,7 @@ public class CreateLiveWatermarkRuleRequest  extends AbstractModel{
     private String StreamName;
 
     /**
-    * 水印Id。
+    * 水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -99,16 +99,16 @@ public class CreateLiveWatermarkRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印Id。
-     * @return TemplateId 水印Id。
+     * 获取水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
+     * @return TemplateId 水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
      */
     public Integer getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * 设置水印Id。
-     * @param TemplateId 水印Id。
+     * 设置水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
+     * @param TemplateId 水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
      */
     public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;

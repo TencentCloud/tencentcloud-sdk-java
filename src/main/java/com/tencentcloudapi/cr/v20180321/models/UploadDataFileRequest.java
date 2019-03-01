@@ -65,6 +65,13 @@ public class UploadDataFileRequest  extends AbstractModel{
     private String FileUrl;
 
     /**
+    * 实例ID，不传默认为系统分配的初始实例。
+    */
+    @SerializedName("InstId")
+    @Expose
+    private String InstId;
+
+    /**
      * 获取模块名
      * @return Module 模块名
      */
@@ -161,6 +168,22 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例ID，不传默认为系统分配的初始实例。
+     * @return InstId 实例ID，不传默认为系统分配的初始实例。
+     */
+    public String getInstId() {
+        return this.InstId;
+    }
+
+    /**
+     * 设置实例ID，不传默认为系统分配的初始实例。
+     * @param InstId 实例ID，不传默认为系统分配的初始实例。
+     */
+    public void setInstId(String InstId) {
+        this.InstId = InstId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class UploadDataFileRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "UploadModel", this.UploadModel);
         this.setParamSimple(map, prefix + "File", this.File);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
+        this.setParamSimple(map, prefix + "InstId", this.InstId);
 
     }
 
@@ -196,6 +220,9 @@ public class UploadDataFileRequest  extends AbstractModel{
         }
         if (this.FileUrl != null) {
             map.put("FileUrl", this.FileUrl.getBytes());
+        }
+        if (this.InstId != null) {
+            map.put("InstId", this.InstId.getBytes());
         }
         return map;
     }

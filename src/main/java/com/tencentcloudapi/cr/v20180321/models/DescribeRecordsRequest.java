@@ -86,6 +86,13 @@ public class DescribeRecordsRequest  extends AbstractModel{
     private String Limit;
 
     /**
+    * 实例ID，不传默认为系统分配的初始实例
+    */
+    @SerializedName("InstId")
+    @Expose
+    private String InstId;
+
+    /**
      * 获取模块
      * @return Module 模块
      */
@@ -230,6 +237,22 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例ID，不传默认为系统分配的初始实例
+     * @return InstId 实例ID，不传默认为系统分配的初始实例
+     */
+    public String getInstId() {
+        return this.InstId;
+    }
+
+    /**
+     * 设置实例ID，不传默认为系统分配的初始实例
+     * @param InstId 实例ID，不传默认为系统分配的初始实例
+     */
+    public void setInstId(String InstId) {
+        this.InstId = InstId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "EndBizDate", this.EndBizDate);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "InstId", this.InstId);
 
     }
 }

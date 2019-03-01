@@ -69,7 +69,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *添加水印
+     *添加水印，成功返回水印id后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印id绑定到流使用。
      * @param req AddLiveWatermarkRequest
      * @return AddLiveWatermarkResponse
      * @throws TencentCloudSDKException
@@ -105,7 +105,8 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *创建回调规则
+     *创建回调规则，需要先调用[CreateLiveCallbackTemplate](/document/product/267/32637)接口创建回调模板，将返回的模板id绑定到域名/路径进行使用。
+<br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
      * @param req CreateLiveCallbackRuleRequest
      * @return CreateLiveCallbackRuleResponse
      * @throws TencentCloudSDKException
@@ -123,7 +124,8 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *创建回调模板
+     *创建回调模板，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板id绑定到域名/路径使用。
+<br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
      * @param req CreateLiveCallbackTemplateRequest
      * @return CreateLiveCallbackTemplateResponse
      * @throws TencentCloudSDKException
@@ -189,7 +191,8 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *创建录制规则
+     *创建录制规则，需要先调用[CreateLiveRecordTemplate](/document/product/267/32614)接口创建录制模板，将返回的模板id绑定到流使用。
+<br>录制相关文档：[直播录制](/document/product/267/32739)。
      * @param req CreateLiveRecordRuleRequest
      * @return CreateLiveRecordRuleResponse
      * @throws TencentCloudSDKException
@@ -207,7 +210,8 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *创建录制模板
+     *创建录制模板，成功返回模板id后，需要调用[CreateLiveRecordRule](/document/product/267/32615)接口，将模板id绑定到流进行使用。
+<br>录制相关文档：[直播录制](/document/product/267/32739)。
      * @param req CreateLiveRecordTemplateRequest
      * @return CreateLiveRecordTemplateResponse
      * @throws TencentCloudSDKException
@@ -225,7 +229,8 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *创建截图规则
+     *创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板id绑定到流进行使用。
+<br>截图相关文档：[直播截图](/document/product/267/32737)。
      * @param req CreateLiveSnapshotRuleRequest
      * @return CreateLiveSnapshotRuleResponse
      * @throws TencentCloudSDKException
@@ -243,7 +248,8 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *创建截图模板
+     *创建截图模板，成功返回模板id后，需要调用[CreateLiveSnapshotRule](/document/product/267/32625)接口，将模板id绑定到流使用。
+<br>截图相关文档：[直播截图](/document/product/267/32737)。
      * @param req CreateLiveSnapshotTemplateRequest
      * @return CreateLiveSnapshotTemplateResponse
      * @throws TencentCloudSDKException
@@ -261,7 +267,8 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *创建转码规则
+     *创建转码规则，需要先调用[CreateLiveTranscodeTemplate](/document/product/267/32646)接口创建转码模板，将返回的模板id绑定到流使用。
+<br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
      * @param req CreateLiveTranscodeRuleRequest
      * @return CreateLiveTranscodeRuleResponse
      * @throws TencentCloudSDKException
@@ -279,7 +286,8 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *创建转码模板
+     *创建转码模板，成功返回模板id后，需要调用[CreateLiveTranscodeRule](/document/product/267/32647)接口，将返回的模板id绑定到流使用。
+<br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
      * @param req CreateLiveTranscodeTemplateRequest
      * @return CreateLiveTranscodeTemplateResponse
      * @throws TencentCloudSDKException
@@ -297,7 +305,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *创建水印规则
+     *创建水印规则，需要先调用[AddLiveWatermark](/document/product/267/30154)接口添加水印，将返回的水印id绑定到流使用。
      * @param req CreateLiveWatermarkRuleRequest
      * @return CreateLiveWatermarkRuleResponse
      * @throws TencentCloudSDKException
