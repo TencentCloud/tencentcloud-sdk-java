@@ -53,6 +53,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
     * 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -60,6 +61,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
     * 负载均衡实例的 VIP 列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerVips")
     @Expose
@@ -68,6 +70,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     /**
     * 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -75,6 +78,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
     * 负载均衡实例的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -82,6 +86,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
     * 负载均衡实例的上次状态转换时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusTime")
     @Expose
@@ -96,6 +101,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
     * 私有网络的 ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -103,6 +109,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
     * 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenBgp")
     @Expose
@@ -110,6 +117,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
     * 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Snat")
     @Expose
@@ -117,6 +125,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
     * 0：表示未被隔离，1：表示被隔离。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Isolation")
     @Expose
@@ -124,6 +133,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
     * 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Log")
     @Expose
@@ -131,6 +141,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
     * 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -206,7 +217,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 获取负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Domain 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -214,7 +227,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 设置负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -222,7 +237,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 获取负载均衡实例的 VIP 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return LoadBalancerVips 负载均衡实例的 VIP 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLoadBalancerVips() {
         return this.LoadBalancerVips;
@@ -230,7 +247,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 设置负载均衡实例的 VIP 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerVips 负载均衡实例的 VIP 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerVips(String [] LoadBalancerVips) {
         this.LoadBalancerVips = LoadBalancerVips;
@@ -239,8 +258,10 @@ OPEN：公网属性， INTERNAL：内网属性。
     /**
      * 获取负载均衡实例的状态，包括
 0：创建中，1：正常运行。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Status 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getStatus() {
         return this.Status;
@@ -249,8 +270,10 @@ OPEN：公网属性， INTERNAL：内网属性。
     /**
      * 设置负载均衡实例的状态，包括
 0：创建中，1：正常运行。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Integer Status) {
         this.Status = Status;
@@ -258,7 +281,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 获取负载均衡实例的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CreateTime 负载均衡实例的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -266,7 +291,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 设置负载均衡实例的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 负载均衡实例的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -274,7 +301,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 获取负载均衡实例的上次状态转换时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return StatusTime 负载均衡实例的上次状态转换时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusTime() {
         return this.StatusTime;
@@ -282,7 +311,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 设置负载均衡实例的上次状态转换时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusTime 负载均衡实例的上次状态转换时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusTime(String StatusTime) {
         this.StatusTime = StatusTime;
@@ -306,7 +337,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 获取私有网络的 ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @return VpcId 私有网络的 ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -314,7 +347,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 设置私有网络的 ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络的 ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -322,7 +357,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 获取高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return OpenBgp 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getOpenBgp() {
         return this.OpenBgp;
@@ -330,7 +367,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 设置高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenBgp 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenBgp(Integer OpenBgp) {
         this.OpenBgp = OpenBgp;
@@ -338,7 +377,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 获取在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Snat 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSnat() {
         return this.Snat;
@@ -346,7 +387,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 设置在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Snat 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnat(Boolean Snat) {
         this.Snat = Snat;
@@ -354,7 +397,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 获取0：表示未被隔离，1：表示被隔离。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Isolation 0：表示未被隔离，1：表示被隔离。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getIsolation() {
         return this.Isolation;
@@ -362,7 +407,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 设置0：表示未被隔离，1：表示被隔离。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Isolation 0：表示未被隔离，1：表示被隔离。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolation(Integer Isolation) {
         this.Isolation = Isolation;
@@ -370,7 +417,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 获取用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Log 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLog() {
         return this.Log;
@@ -378,7 +427,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 设置用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Log 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLog(String Log) {
         this.Log = Log;
@@ -386,7 +437,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 获取负载均衡实例所在的子网（仅对内网VPC型LB有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SubnetId 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -394,7 +447,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * 设置负载均衡实例所在的子网（仅对内网VPC型LB有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

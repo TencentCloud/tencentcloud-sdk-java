@@ -45,6 +45,7 @@ public class ListenerBackend  extends AbstractModel{
 
     /**
     * 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rules")
     @Expose
@@ -52,6 +53,7 @@ public class ListenerBackend  extends AbstractModel{
 
     /**
     * 监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Targets")
     @Expose
@@ -107,7 +109,9 @@ public class ListenerBackend  extends AbstractModel{
 
     /**
      * 获取监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Rules 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleTargets [] getRules() {
         return this.Rules;
@@ -115,7 +119,9 @@ public class ListenerBackend  extends AbstractModel{
 
     /**
      * 设置监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Rules 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRules(RuleTargets [] Rules) {
         this.Rules = Rules;
@@ -123,7 +129,9 @@ public class ListenerBackend  extends AbstractModel{
 
     /**
      * 获取监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Targets 监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Backend [] getTargets() {
         return this.Targets;
@@ -131,7 +139,9 @@ public class ListenerBackend  extends AbstractModel{
 
     /**
      * 设置监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Targets 监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargets(Backend [] Targets) {
         this.Targets = Targets;

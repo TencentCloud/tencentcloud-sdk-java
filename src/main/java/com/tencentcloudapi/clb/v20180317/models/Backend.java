@@ -52,6 +52,7 @@ public class Backend  extends AbstractModel{
 
     /**
     * 云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -59,6 +60,7 @@ public class Backend  extends AbstractModel{
 
     /**
     * 云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
@@ -66,6 +68,7 @@ public class Backend  extends AbstractModel{
 
     /**
     * 云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -73,6 +76,7 @@ public class Backend  extends AbstractModel{
 
     /**
     * 云服务器被绑定到监听器的时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisteredTime")
     @Expose
@@ -144,7 +148,9 @@ public class Backend  extends AbstractModel{
 
     /**
      * 获取云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @return PublicIpAddresses 云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
@@ -152,7 +158,9 @@ public class Backend  extends AbstractModel{
 
     /**
      * 设置云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
@@ -160,7 +168,9 @@ public class Backend  extends AbstractModel{
 
     /**
      * 获取云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @return PrivateIpAddresses 云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
@@ -168,7 +178,9 @@ public class Backend  extends AbstractModel{
 
     /**
      * 设置云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIpAddresses 云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;
@@ -176,7 +188,9 @@ public class Backend  extends AbstractModel{
 
     /**
      * 获取云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @return InstanceName 云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -184,7 +198,9 @@ public class Backend  extends AbstractModel{
 
     /**
      * 设置云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -192,7 +208,9 @@ public class Backend  extends AbstractModel{
 
     /**
      * 获取云服务器被绑定到监听器的时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @return RegisteredTime 云服务器被绑定到监听器的时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegisteredTime() {
         return this.RegisteredTime;
@@ -200,7 +218,9 @@ public class Backend  extends AbstractModel{
 
     /**
      * 设置云服务器被绑定到监听器的时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisteredTime 云服务器被绑定到监听器的时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisteredTime(String RegisteredTime) {
         this.RegisteredTime = RegisteredTime;

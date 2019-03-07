@@ -24,6 +24,7 @@ public class DescribeClassicalLBHealthStatusResponse  extends AbstractModel{
 
     /**
     * 后端健康状态列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthList")
     @Expose
@@ -38,7 +39,9 @@ public class DescribeClassicalLBHealthStatusResponse  extends AbstractModel{
 
     /**
      * 获取后端健康状态列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @return HealthList 后端健康状态列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClassicalHealth [] getHealthList() {
         return this.HealthList;
@@ -46,7 +49,9 @@ public class DescribeClassicalLBHealthStatusResponse  extends AbstractModel{
 
     /**
      * 设置后端健康状态列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthList 后端健康状态列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthList(ClassicalHealth [] HealthList) {
         this.HealthList = HealthList;

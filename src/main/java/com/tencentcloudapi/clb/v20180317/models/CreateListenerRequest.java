@@ -37,7 +37,7 @@ public class CreateListenerRequest  extends AbstractModel{
     private Integer [] Ports;
 
     /**
-    * 监听器协议：HTTP | HTTPS | TCP | TCP_SSL
+    * 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
     */
     @SerializedName("Protocol")
     @Expose
@@ -119,16 +119,16 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议：HTTP | HTTPS | TCP | TCP_SSL
-     * @return Protocol 监听器协议：HTTP | HTTPS | TCP | TCP_SSL
+     * 获取监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
+     * @return Protocol 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * 设置监听器协议：HTTP | HTTPS | TCP | TCP_SSL
-     * @param Protocol 监听器协议：HTTP | HTTPS | TCP | TCP_SSL
+     * 设置监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
+     * @param Protocol 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

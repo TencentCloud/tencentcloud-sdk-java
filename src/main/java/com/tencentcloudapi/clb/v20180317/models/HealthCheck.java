@@ -31,6 +31,7 @@ public class HealthCheck  extends AbstractModel{
 
     /**
     * 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeOut")
     @Expose
@@ -38,6 +39,7 @@ public class HealthCheck  extends AbstractModel{
 
     /**
     * 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntervalTime")
     @Expose
@@ -45,6 +47,7 @@ public class HealthCheck  extends AbstractModel{
 
     /**
     * 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthNum")
     @Expose
@@ -52,6 +55,7 @@ public class HealthCheck  extends AbstractModel{
 
     /**
     * 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnHealthNum")
     @Expose
@@ -60,6 +64,7 @@ public class HealthCheck  extends AbstractModel{
     /**
     * 健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
 1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpCode")
     @Expose
@@ -67,6 +72,7 @@ public class HealthCheck  extends AbstractModel{
 
     /**
     * 健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpCheckPath")
     @Expose
@@ -74,6 +80,7 @@ public class HealthCheck  extends AbstractModel{
 
     /**
     * 健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpCheckDomain")
     @Expose
@@ -81,6 +88,7 @@ public class HealthCheck  extends AbstractModel{
 
     /**
     * 健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpCheckMethod")
     @Expose
@@ -104,7 +112,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 获取健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return TimeOut 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getTimeOut() {
         return this.TimeOut;
@@ -112,7 +122,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 设置健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeOut 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeOut(Integer TimeOut) {
         this.TimeOut = TimeOut;
@@ -120,7 +132,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 获取健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return IntervalTime 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getIntervalTime() {
         return this.IntervalTime;
@@ -128,7 +142,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 设置健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IntervalTime 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntervalTime(Integer IntervalTime) {
         this.IntervalTime = IntervalTime;
@@ -136,7 +152,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 获取健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return HealthNum 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getHealthNum() {
         return this.HealthNum;
@@ -144,7 +162,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 设置健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthNum 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthNum(Integer HealthNum) {
         this.HealthNum = HealthNum;
@@ -152,7 +172,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 获取不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return UnHealthNum 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getUnHealthNum() {
         return this.UnHealthNum;
@@ -160,7 +182,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 设置不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UnHealthNum 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnHealthNum(Integer UnHealthNum) {
         this.UnHealthNum = UnHealthNum;
@@ -169,8 +193,10 @@ public class HealthCheck  extends AbstractModel{
     /**
      * 获取健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
 1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return HttpCode 健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
 1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getHttpCode() {
         return this.HttpCode;
@@ -179,8 +205,10 @@ public class HealthCheck  extends AbstractModel{
     /**
      * 设置健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
 1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpCode 健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
 1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpCode(Integer HttpCode) {
         this.HttpCode = HttpCode;
@@ -188,7 +216,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 获取健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return HttpCheckPath 健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpCheckPath() {
         return this.HttpCheckPath;
@@ -196,7 +226,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 设置健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpCheckPath 健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpCheckPath(String HttpCheckPath) {
         this.HttpCheckPath = HttpCheckPath;
@@ -204,7 +236,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 获取健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpCheckDomain() {
         return this.HttpCheckDomain;
@@ -212,7 +246,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 设置健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
         this.HttpCheckDomain = HttpCheckDomain;
@@ -220,7 +256,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 获取健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return HttpCheckMethod 健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpCheckMethod() {
         return this.HttpCheckMethod;
@@ -228,7 +266,9 @@ public class HealthCheck  extends AbstractModel{
 
     /**
      * 设置健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpCheckMethod 健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpCheckMethod(String HttpCheckMethod) {
         this.HttpCheckMethod = HttpCheckMethod;

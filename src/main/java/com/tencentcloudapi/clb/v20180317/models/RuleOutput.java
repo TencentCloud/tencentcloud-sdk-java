@@ -31,6 +31,7 @@ public class RuleOutput  extends AbstractModel{
 
     /**
     * 转发规则的域名。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -38,6 +39,7 @@ public class RuleOutput  extends AbstractModel{
 
     /**
     * 转发规则的路径。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -52,6 +54,7 @@ public class RuleOutput  extends AbstractModel{
 
     /**
     * 健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -59,6 +62,7 @@ public class RuleOutput  extends AbstractModel{
 
     /**
     * 证书信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Certificate")
     @Expose
@@ -89,7 +93,9 @@ public class RuleOutput  extends AbstractModel{
 
     /**
      * 获取转发规则的域名。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Domain 转发规则的域名。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -97,7 +103,9 @@ public class RuleOutput  extends AbstractModel{
 
     /**
      * 设置转发规则的域名。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 转发规则的域名。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -105,7 +113,9 @@ public class RuleOutput  extends AbstractModel{
 
     /**
      * 获取转发规则的路径。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Url 转发规则的路径。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -113,7 +123,9 @@ public class RuleOutput  extends AbstractModel{
 
     /**
      * 设置转发规则的路径。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 转发规则的路径。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -137,7 +149,9 @@ public class RuleOutput  extends AbstractModel{
 
     /**
      * 获取健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return HealthCheck 健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
@@ -145,7 +159,9 @@ public class RuleOutput  extends AbstractModel{
 
     /**
      * 设置健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheck 健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
@@ -153,7 +169,9 @@ public class RuleOutput  extends AbstractModel{
 
     /**
      * 获取证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Certificate 证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CertificateOutput getCertificate() {
         return this.Certificate;
@@ -161,7 +179,9 @@ public class RuleOutput  extends AbstractModel{
 
     /**
      * 设置证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Certificate 证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificate(CertificateOutput Certificate) {
         this.Certificate = Certificate;

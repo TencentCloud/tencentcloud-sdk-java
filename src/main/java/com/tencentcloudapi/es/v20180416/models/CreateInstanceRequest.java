@@ -151,6 +151,34 @@ CLOUD_SSD: SSD云硬盘
     private String [] VoucherIds;
 
     /**
+    * 是否创建专用主节点
+    */
+    @SerializedName("EnableDedicatedMaster")
+    @Expose
+    private Boolean EnableDedicatedMaster;
+
+    /**
+    * 专用主节点个数
+    */
+    @SerializedName("MasterNodeNum")
+    @Expose
+    private Integer MasterNodeNum;
+
+    /**
+    * 专用主节点类型
+    */
+    @SerializedName("MasterNodeType")
+    @Expose
+    private String MasterNodeType;
+
+    /**
+    * 专用主节点磁盘大小
+    */
+    @SerializedName("MasterNodeDiskSize")
+    @Expose
+    private Integer MasterNodeDiskSize;
+
+    /**
      * 获取可用区
      * @return Zone 可用区
      */
@@ -471,6 +499,70 @@ CLOUD_SSD: SSD云硬盘
     }
 
     /**
+     * 获取是否创建专用主节点
+     * @return EnableDedicatedMaster 是否创建专用主节点
+     */
+    public Boolean getEnableDedicatedMaster() {
+        return this.EnableDedicatedMaster;
+    }
+
+    /**
+     * 设置是否创建专用主节点
+     * @param EnableDedicatedMaster 是否创建专用主节点
+     */
+    public void setEnableDedicatedMaster(Boolean EnableDedicatedMaster) {
+        this.EnableDedicatedMaster = EnableDedicatedMaster;
+    }
+
+    /**
+     * 获取专用主节点个数
+     * @return MasterNodeNum 专用主节点个数
+     */
+    public Integer getMasterNodeNum() {
+        return this.MasterNodeNum;
+    }
+
+    /**
+     * 设置专用主节点个数
+     * @param MasterNodeNum 专用主节点个数
+     */
+    public void setMasterNodeNum(Integer MasterNodeNum) {
+        this.MasterNodeNum = MasterNodeNum;
+    }
+
+    /**
+     * 获取专用主节点类型
+     * @return MasterNodeType 专用主节点类型
+     */
+    public String getMasterNodeType() {
+        return this.MasterNodeType;
+    }
+
+    /**
+     * 设置专用主节点类型
+     * @param MasterNodeType 专用主节点类型
+     */
+    public void setMasterNodeType(String MasterNodeType) {
+        this.MasterNodeType = MasterNodeType;
+    }
+
+    /**
+     * 获取专用主节点磁盘大小
+     * @return MasterNodeDiskSize 专用主节点磁盘大小
+     */
+    public Integer getMasterNodeDiskSize() {
+        return this.MasterNodeDiskSize;
+    }
+
+    /**
+     * 设置专用主节点磁盘大小
+     * @param MasterNodeDiskSize 专用主节点磁盘大小
+     */
+    public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
+        this.MasterNodeDiskSize = MasterNodeDiskSize;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -490,6 +582,10 @@ CLOUD_SSD: SSD云硬盘
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+        this.setParamSimple(map, prefix + "EnableDedicatedMaster", this.EnableDedicatedMaster);
+        this.setParamSimple(map, prefix + "MasterNodeNum", this.MasterNodeNum);
+        this.setParamSimple(map, prefix + "MasterNodeType", this.MasterNodeType);
+        this.setParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
 
     }
 }

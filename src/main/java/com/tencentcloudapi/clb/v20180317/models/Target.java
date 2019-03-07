@@ -24,6 +24,7 @@ public class Target  extends AbstractModel{
 
     /**
     * 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -31,6 +32,7 @@ public class Target  extends AbstractModel{
 
     /**
     * 后端云服务器监听端口
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -38,6 +40,7 @@ public class Target  extends AbstractModel{
 
     /**
     * 转发目标的类型，目前仅可取值为 CVM
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -52,7 +55,9 @@ public class Target  extends AbstractModel{
 
     /**
      * 获取云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+注意：此字段可能返回 null，表示取不到有效值。
      * @return InstanceId 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -60,7 +65,9 @@ public class Target  extends AbstractModel{
 
     /**
      * 设置云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -68,7 +75,9 @@ public class Target  extends AbstractModel{
 
     /**
      * 获取后端云服务器监听端口
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Port 后端云服务器监听端口
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getPort() {
         return this.Port;
@@ -76,7 +85,9 @@ public class Target  extends AbstractModel{
 
     /**
      * 设置后端云服务器监听端口
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 后端云服务器监听端口
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Integer Port) {
         this.Port = Port;
@@ -84,7 +95,9 @@ public class Target  extends AbstractModel{
 
     /**
      * 获取转发目标的类型，目前仅可取值为 CVM
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Type 转发目标的类型，目前仅可取值为 CVM
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -92,7 +105,9 @@ public class Target  extends AbstractModel{
 
     /**
      * 设置转发目标的类型，目前仅可取值为 CVM
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 转发目标的类型，目前仅可取值为 CVM
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

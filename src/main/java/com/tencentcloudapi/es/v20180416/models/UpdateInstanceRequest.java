@@ -85,6 +85,34 @@ ES.S1.4XLARGE64: 16 核 64G
     private String NodeType;
 
     /**
+    * 专用主节点个数
+    */
+    @SerializedName("MasterNodeNum")
+    @Expose
+    private Integer MasterNodeNum;
+
+    /**
+    * 专用主节点规格
+    */
+    @SerializedName("MasterNodeType")
+    @Expose
+    private String MasterNodeType;
+
+    /**
+    * 专用主节点磁盘大小
+    */
+    @SerializedName("MasterNodeDiskSize")
+    @Expose
+    private Integer MasterNodeDiskSize;
+
+    /**
+    * 更新配置时是否强制重启
+    */
+    @SerializedName("ForceRestart")
+    @Expose
+    private Boolean ForceRestart;
+
+    /**
      * 获取要操作的实例ID
      * @return InstanceId 要操作的实例ID
      */
@@ -237,6 +265,70 @@ ES.S1.4XLARGE64: 16 核 64G
     }
 
     /**
+     * 获取专用主节点个数
+     * @return MasterNodeNum 专用主节点个数
+     */
+    public Integer getMasterNodeNum() {
+        return this.MasterNodeNum;
+    }
+
+    /**
+     * 设置专用主节点个数
+     * @param MasterNodeNum 专用主节点个数
+     */
+    public void setMasterNodeNum(Integer MasterNodeNum) {
+        this.MasterNodeNum = MasterNodeNum;
+    }
+
+    /**
+     * 获取专用主节点规格
+     * @return MasterNodeType 专用主节点规格
+     */
+    public String getMasterNodeType() {
+        return this.MasterNodeType;
+    }
+
+    /**
+     * 设置专用主节点规格
+     * @param MasterNodeType 专用主节点规格
+     */
+    public void setMasterNodeType(String MasterNodeType) {
+        this.MasterNodeType = MasterNodeType;
+    }
+
+    /**
+     * 获取专用主节点磁盘大小
+     * @return MasterNodeDiskSize 专用主节点磁盘大小
+     */
+    public Integer getMasterNodeDiskSize() {
+        return this.MasterNodeDiskSize;
+    }
+
+    /**
+     * 设置专用主节点磁盘大小
+     * @param MasterNodeDiskSize 专用主节点磁盘大小
+     */
+    public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
+        this.MasterNodeDiskSize = MasterNodeDiskSize;
+    }
+
+    /**
+     * 获取更新配置时是否强制重启
+     * @return ForceRestart 更新配置时是否强制重启
+     */
+    public Boolean getForceRestart() {
+        return this.ForceRestart;
+    }
+
+    /**
+     * 设置更新配置时是否强制重启
+     * @param ForceRestart 更新配置时是否强制重启
+     */
+    public void setForceRestart(Boolean ForceRestart) {
+        this.ForceRestart = ForceRestart;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -248,6 +340,10 @@ ES.S1.4XLARGE64: 16 核 64G
         this.setParamObj(map, prefix + "EsAcl.", this.EsAcl);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "MasterNodeNum", this.MasterNodeNum);
+        this.setParamSimple(map, prefix + "MasterNodeType", this.MasterNodeType);
+        this.setParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
+        this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
 
     }
 }

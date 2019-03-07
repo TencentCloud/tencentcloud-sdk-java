@@ -45,6 +45,7 @@ public class Listener  extends AbstractModel{
 
     /**
     * 监听器绑定的证书信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Certificate")
     @Expose
@@ -52,6 +53,7 @@ public class Listener  extends AbstractModel{
 
     /**
     * 监听器的健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -59,6 +61,7 @@ public class Listener  extends AbstractModel{
 
     /**
     * 请求调度方式
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scheduler")
     @Expose
@@ -66,6 +69,7 @@ public class Listener  extends AbstractModel{
 
     /**
     * 会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionExpireTime")
     @Expose
@@ -73,6 +77,7 @@ public class Listener  extends AbstractModel{
 
     /**
     * 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SniSwitch")
     @Expose
@@ -80,6 +85,7 @@ public class Listener  extends AbstractModel{
 
     /**
     * 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rules")
     @Expose
@@ -87,6 +93,7 @@ public class Listener  extends AbstractModel{
 
     /**
     * 监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListenerName")
     @Expose
@@ -142,7 +149,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 获取监听器绑定的证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Certificate 监听器绑定的证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CertificateOutput getCertificate() {
         return this.Certificate;
@@ -150,7 +159,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 设置监听器绑定的证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Certificate 监听器绑定的证书信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificate(CertificateOutput Certificate) {
         this.Certificate = Certificate;
@@ -158,7 +169,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 获取监听器的健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return HealthCheck 监听器的健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
@@ -166,7 +179,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 设置监听器的健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheck 监听器的健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
@@ -174,7 +189,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 获取请求调度方式
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Scheduler 请求调度方式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduler() {
         return this.Scheduler;
@@ -182,7 +199,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 设置请求调度方式
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Scheduler 请求调度方式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -190,7 +209,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 获取会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SessionExpireTime 会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getSessionExpireTime() {
         return this.SessionExpireTime;
@@ -198,7 +219,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 设置会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionExpireTime 会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionExpireTime(Integer SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
@@ -206,7 +229,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 获取是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getSniSwitch() {
         return this.SniSwitch;
@@ -214,7 +239,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 设置是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSniSwitch(Integer SniSwitch) {
         this.SniSwitch = SniSwitch;
@@ -222,7 +249,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 获取监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Rules 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleOutput [] getRules() {
         return this.Rules;
@@ -230,7 +259,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 设置监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Rules 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRules(RuleOutput [] Rules) {
         this.Rules = Rules;
@@ -238,7 +269,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 获取监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ListenerName 监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListenerName() {
         return this.ListenerName;
@@ -246,7 +279,9 @@ public class Listener  extends AbstractModel{
 
     /**
      * 设置监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ListenerName 监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;

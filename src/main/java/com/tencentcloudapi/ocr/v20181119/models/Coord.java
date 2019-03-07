@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.es.v20180416.models;
+package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RestartInstanceRequest  extends AbstractModel{
+public class Coord  extends AbstractModel{
 
     /**
-    * 要重启的实例ID
+    * 横坐标
     */
-    @SerializedName("InstanceId")
+    @SerializedName("X")
     @Expose
-    private String InstanceId;
+    private Integer X;
 
     /**
-    * 是否强制重启
+    * 纵坐标
     */
-    @SerializedName("ForceRestart")
+    @SerializedName("Y")
     @Expose
-    private Boolean ForceRestart;
+    private Integer Y;
 
     /**
-     * 获取要重启的实例ID
-     * @return InstanceId 要重启的实例ID
+     * 获取横坐标
+     * @return X 横坐标
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public Integer getX() {
+        return this.X;
     }
 
     /**
-     * 设置要重启的实例ID
-     * @param InstanceId 要重启的实例ID
+     * 设置横坐标
+     * @param X 横坐标
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setX(Integer X) {
+        this.X = X;
     }
 
     /**
-     * 获取是否强制重启
-     * @return ForceRestart 是否强制重启
+     * 获取纵坐标
+     * @return Y 纵坐标
      */
-    public Boolean getForceRestart() {
-        return this.ForceRestart;
+    public Integer getY() {
+        return this.Y;
     }
 
     /**
-     * 设置是否强制重启
-     * @param ForceRestart 是否强制重启
+     * 设置纵坐标
+     * @param Y 纵坐标
      */
-    public void setForceRestart(Boolean ForceRestart) {
-        this.ForceRestart = ForceRestart;
+    public void setY(Integer Y) {
+        this.Y = Y;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+        this.setParamSimple(map, prefix + "X", this.X);
+        this.setParamSimple(map, prefix + "Y", this.Y);
 
     }
 }

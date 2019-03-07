@@ -45,6 +45,7 @@ public class ClassicalTarget  extends AbstractModel{
 
     /**
     * 云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -52,6 +53,7 @@ public class ClassicalTarget  extends AbstractModel{
 
     /**
     * 云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
@@ -59,6 +61,7 @@ public class ClassicalTarget  extends AbstractModel{
 
     /**
     * 云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -67,6 +70,7 @@ public class ClassicalTarget  extends AbstractModel{
     /**
     * 云服务器状态
 1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunFlag")
     @Expose
@@ -122,7 +126,9 @@ public class ClassicalTarget  extends AbstractModel{
 
     /**
      * 获取云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @return PublicIpAddresses 云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
@@ -130,7 +136,9 @@ public class ClassicalTarget  extends AbstractModel{
 
     /**
      * 设置云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 云服务器的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
@@ -138,7 +146,9 @@ public class ClassicalTarget  extends AbstractModel{
 
     /**
      * 获取云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @return PrivateIpAddresses 云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
@@ -146,7 +156,9 @@ public class ClassicalTarget  extends AbstractModel{
 
     /**
      * 设置云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIpAddresses 云服务器的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;
@@ -154,7 +166,9 @@ public class ClassicalTarget  extends AbstractModel{
 
     /**
      * 获取云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @return InstanceName 云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -162,7 +176,9 @@ public class ClassicalTarget  extends AbstractModel{
 
     /**
      * 设置云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 云服务器实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -171,8 +187,10 @@ public class ClassicalTarget  extends AbstractModel{
     /**
      * 获取云服务器状态
 1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
+注意：此字段可能返回 null，表示取不到有效值。
      * @return RunFlag 云服务器状态
 1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getRunFlag() {
         return this.RunFlag;
@@ -181,8 +199,10 @@ public class ClassicalTarget  extends AbstractModel{
     /**
      * 设置云服务器状态
 1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RunFlag 云服务器状态
 1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunFlag(Integer RunFlag) {
         this.RunFlag = RunFlag;

@@ -24,6 +24,7 @@ public class DescribeClassicalLBTargetsResponse  extends AbstractModel{
 
     /**
     * 后端服务列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Targets")
     @Expose
@@ -38,7 +39,9 @@ public class DescribeClassicalLBTargetsResponse  extends AbstractModel{
 
     /**
      * 获取后端服务列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Targets 后端服务列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClassicalTarget [] getTargets() {
         return this.Targets;
@@ -46,7 +49,9 @@ public class DescribeClassicalLBTargetsResponse  extends AbstractModel{
 
     /**
      * 设置后端服务列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Targets 后端服务列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargets(ClassicalTarget [] Targets) {
         this.Targets = Targets;

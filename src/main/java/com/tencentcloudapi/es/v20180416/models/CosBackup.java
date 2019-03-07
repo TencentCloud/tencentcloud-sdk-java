@@ -20,60 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RestartInstanceRequest  extends AbstractModel{
+public class CosBackup  extends AbstractModel{
 
     /**
-    * 要重启的实例ID
+    * 是否开启cos自动备份
     */
-    @SerializedName("InstanceId")
+    @SerializedName("IsAutoBackup")
     @Expose
-    private String InstanceId;
+    private Boolean IsAutoBackup;
 
     /**
-    * 是否强制重启
+    * 自动备份时间
     */
-    @SerializedName("ForceRestart")
+    @SerializedName("BackupTime")
     @Expose
-    private Boolean ForceRestart;
+    private String BackupTime;
 
     /**
-     * 获取要重启的实例ID
-     * @return InstanceId 要重启的实例ID
+     * 获取是否开启cos自动备份
+     * @return IsAutoBackup 是否开启cos自动备份
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public Boolean getIsAutoBackup() {
+        return this.IsAutoBackup;
     }
 
     /**
-     * 设置要重启的实例ID
-     * @param InstanceId 要重启的实例ID
+     * 设置是否开启cos自动备份
+     * @param IsAutoBackup 是否开启cos自动备份
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setIsAutoBackup(Boolean IsAutoBackup) {
+        this.IsAutoBackup = IsAutoBackup;
     }
 
     /**
-     * 获取是否强制重启
-     * @return ForceRestart 是否强制重启
+     * 获取自动备份时间
+     * @return BackupTime 自动备份时间
      */
-    public Boolean getForceRestart() {
-        return this.ForceRestart;
+    public String getBackupTime() {
+        return this.BackupTime;
     }
 
     /**
-     * 设置是否强制重启
-     * @param ForceRestart 是否强制重启
+     * 设置自动备份时间
+     * @param BackupTime 自动备份时间
      */
-    public void setForceRestart(Boolean ForceRestart) {
-        this.ForceRestart = ForceRestart;
+    public void setBackupTime(String BackupTime) {
+        this.BackupTime = BackupTime;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+        this.setParamSimple(map, prefix + "IsAutoBackup", this.IsAutoBackup);
+        this.setParamSimple(map, prefix + "BackupTime", this.BackupTime);
 
     }
 }

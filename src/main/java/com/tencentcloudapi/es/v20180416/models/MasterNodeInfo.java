@@ -65,6 +65,13 @@ public class MasterNodeInfo  extends AbstractModel{
     private Integer MasterNodeDiskSize;
 
     /**
+    * 专用主节点磁盘类型
+    */
+    @SerializedName("MasterNodeDiskType")
+    @Expose
+    private String MasterNodeDiskType;
+
+    /**
      * 获取是否启用了专用主节点
      * @return EnableDedicatedMaster 是否启用了专用主节点
      */
@@ -161,6 +168,22 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
+     * 获取专用主节点磁盘类型
+     * @return MasterNodeDiskType 专用主节点磁盘类型
+     */
+    public String getMasterNodeDiskType() {
+        return this.MasterNodeDiskType;
+    }
+
+    /**
+     * 设置专用主节点磁盘类型
+     * @param MasterNodeDiskType 专用主节点磁盘类型
+     */
+    public void setMasterNodeDiskType(String MasterNodeDiskType) {
+        this.MasterNodeDiskType = MasterNodeDiskType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class MasterNodeInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "MasterNodeCpuNum", this.MasterNodeCpuNum);
         this.setParamSimple(map, prefix + "MasterNodeMemSize", this.MasterNodeMemSize);
         this.setParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
+        this.setParamSimple(map, prefix + "MasterNodeDiskType", this.MasterNodeDiskType);
 
     }
 }

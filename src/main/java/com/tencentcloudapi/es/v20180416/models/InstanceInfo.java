@@ -240,6 +240,20 @@ public class InstanceInfo  extends AbstractModel{
     private MasterNodeInfo MasterNodeInfo;
 
     /**
+    * cos自动备份配置
+    */
+    @SerializedName("CosBackup")
+    @Expose
+    private CosBackup CosBackup;
+
+    /**
+    * 是否允许cos自动备份
+    */
+    @SerializedName("AllowCosBackup")
+    @Expose
+    private Boolean AllowCosBackup;
+
+    /**
      * 获取实例ID
      * @return InstanceId 实例ID
      */
@@ -736,6 +750,38 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取cos自动备份配置
+     * @return CosBackup cos自动备份配置
+     */
+    public CosBackup getCosBackup() {
+        return this.CosBackup;
+    }
+
+    /**
+     * 设置cos自动备份配置
+     * @param CosBackup cos自动备份配置
+     */
+    public void setCosBackup(CosBackup CosBackup) {
+        this.CosBackup = CosBackup;
+    }
+
+    /**
+     * 获取是否允许cos自动备份
+     * @return AllowCosBackup 是否允许cos自动备份
+     */
+    public Boolean getAllowCosBackup() {
+        return this.AllowCosBackup;
+    }
+
+    /**
+     * 设置是否允许cos自动备份
+     * @param AllowCosBackup 是否允许cos自动备份
+     */
+    public void setAllowCosBackup(Boolean AllowCosBackup) {
+        this.AllowCosBackup = AllowCosBackup;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -770,6 +816,8 @@ public class InstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamObj(map, prefix + "IkConfig.", this.IkConfig);
         this.setParamObj(map, prefix + "MasterNodeInfo.", this.MasterNodeInfo);
+        this.setParamObj(map, prefix + "CosBackup.", this.CosBackup);
+        this.setParamSimple(map, prefix + "AllowCosBackup", this.AllowCosBackup);
 
     }
 }

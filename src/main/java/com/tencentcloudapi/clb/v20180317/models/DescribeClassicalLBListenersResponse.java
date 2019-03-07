@@ -24,6 +24,7 @@ public class DescribeClassicalLBListenersResponse  extends AbstractModel{
 
     /**
     * 监听器列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Listeners")
     @Expose
@@ -38,7 +39,9 @@ public class DescribeClassicalLBListenersResponse  extends AbstractModel{
 
     /**
      * 获取监听器列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Listeners 监听器列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClassicalListener [] getListeners() {
         return this.Listeners;
@@ -46,7 +49,9 @@ public class DescribeClassicalLBListenersResponse  extends AbstractModel{
 
     /**
      * 设置监听器列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Listeners 监听器列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListeners(ClassicalListener [] Listeners) {
         this.Listeners = Listeners;

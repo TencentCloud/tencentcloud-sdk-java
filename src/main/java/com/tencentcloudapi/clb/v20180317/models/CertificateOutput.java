@@ -38,6 +38,7 @@ public class CertificateOutput  extends AbstractModel{
 
     /**
     * 客户端证书的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertCaId")
     @Expose
@@ -77,7 +78,9 @@ public class CertificateOutput  extends AbstractModel{
 
     /**
      * 获取客户端证书的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CertCaId 客户端证书的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertCaId() {
         return this.CertCaId;
@@ -85,7 +88,9 @@ public class CertificateOutput  extends AbstractModel{
 
     /**
      * 设置客户端证书的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CertCaId 客户端证书的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertCaId(String CertCaId) {
         this.CertCaId = CertCaId;

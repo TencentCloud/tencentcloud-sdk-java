@@ -44,14 +44,14 @@ public class RoGroup  extends AbstractModel{
     private String RoGroupName;
 
     /**
-    * 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阀值，只读实例将被隔离。可选值：1-启用；0-不启用
+    * 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
     */
     @SerializedName("RoOfflineDelay")
     @Expose
     private Integer RoOfflineDelay;
 
     /**
-    * 延迟阀值
+    * 延迟阈值
     */
     @SerializedName("RoMaxDelayTime")
     @Expose
@@ -148,32 +148,32 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阀值，只读实例将被隔离。可选值：1-启用；0-不启用
-     * @return RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阀值，只读实例将被隔离。可选值：1-启用；0-不启用
+     * 获取是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
+     * @return RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
      */
     public Integer getRoOfflineDelay() {
         return this.RoOfflineDelay;
     }
 
     /**
-     * 设置是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阀值，只读实例将被隔离。可选值：1-启用；0-不启用
-     * @param RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阀值，只读实例将被隔离。可选值：1-启用；0-不启用
+     * 设置是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
+     * @param RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
      */
     public void setRoOfflineDelay(Integer RoOfflineDelay) {
         this.RoOfflineDelay = RoOfflineDelay;
     }
 
     /**
-     * 获取延迟阀值
-     * @return RoMaxDelayTime 延迟阀值
+     * 获取延迟阈值
+     * @return RoMaxDelayTime 延迟阈值
      */
     public Integer getRoMaxDelayTime() {
         return this.RoMaxDelayTime;
     }
 
     /**
-     * 设置延迟阀值
-     * @param RoMaxDelayTime 延迟阀值
+     * 设置延迟阈值
+     * @param RoMaxDelayTime 延迟阈值
      */
     public void setRoMaxDelayTime(Integer RoMaxDelayTime) {
         this.RoMaxDelayTime = RoMaxDelayTime;
