@@ -24,6 +24,7 @@ public class MediaKeyFrameDescInfo  extends AbstractModel{
 
     /**
     * 视频打点信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyFrameDescSet")
     @Expose
@@ -31,7 +32,9 @@ public class MediaKeyFrameDescInfo  extends AbstractModel{
 
     /**
      * 获取视频打点信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return KeyFrameDescSet 视频打点信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaKeyFrameDescItem [] getKeyFrameDescSet() {
         return this.KeyFrameDescSet;
@@ -39,7 +42,9 @@ public class MediaKeyFrameDescInfo  extends AbstractModel{
 
     /**
      * 设置视频打点信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyFrameDescSet 视频打点信息数组。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyFrameDescSet(MediaKeyFrameDescItem [] KeyFrameDescSet) {
         this.KeyFrameDescSet = KeyFrameDescSet;

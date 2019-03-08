@@ -24,6 +24,7 @@ public class ItemPrice  extends AbstractModel{
 
     /**
     * 后续单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -31,6 +32,7 @@ public class ItemPrice  extends AbstractModel{
 
     /**
     * 后续计价单元，可取值范围： <br><li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）：<br><li>GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeUnit")
     @Expose
@@ -38,6 +40,7 @@ public class ItemPrice  extends AbstractModel{
 
     /**
     * 预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalPrice")
     @Expose
@@ -45,6 +48,7 @@ public class ItemPrice  extends AbstractModel{
 
     /**
     * 预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountPrice")
     @Expose
@@ -52,7 +56,9 @@ public class ItemPrice  extends AbstractModel{
 
     /**
      * 获取后续单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return UnitPrice 后续单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
@@ -60,7 +66,9 @@ public class ItemPrice  extends AbstractModel{
 
     /**
      * 设置后续单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPrice 后续单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
@@ -68,7 +76,9 @@ public class ItemPrice  extends AbstractModel{
 
     /**
      * 获取后续计价单元，可取值范围： <br><li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）：<br><li>GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ChargeUnit 后续计价单元，可取值范围： <br><li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）：<br><li>GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeUnit() {
         return this.ChargeUnit;
@@ -76,7 +86,9 @@ public class ItemPrice  extends AbstractModel{
 
     /**
      * 设置后续计价单元，可取值范围： <br><li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）：<br><li>GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeUnit 后续计价单元，可取值范围： <br><li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）：<br><li>GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeUnit(String ChargeUnit) {
         this.ChargeUnit = ChargeUnit;
@@ -84,7 +96,9 @@ public class ItemPrice  extends AbstractModel{
 
     /**
      * 获取预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return OriginalPrice 预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
@@ -92,7 +106,9 @@ public class ItemPrice  extends AbstractModel{
 
     /**
      * 设置预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalPrice 预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
@@ -100,7 +116,9 @@ public class ItemPrice  extends AbstractModel{
 
     /**
      * 获取预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return DiscountPrice 预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
@@ -108,7 +126,9 @@ public class ItemPrice  extends AbstractModel{
 
     /**
      * 设置预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountPrice 预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;

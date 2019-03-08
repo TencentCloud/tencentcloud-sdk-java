@@ -79,7 +79,7 @@ public class CreateImageRequest  extends AbstractModel{
     private String [] SnapshotIds;
 
     /**
-    * DryRun
+    * 检测请求的合法性，但不会对操作的资源产生任何影响
     */
     @SerializedName("DryRun")
     @Expose
@@ -214,16 +214,16 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取DryRun
-     * @return DryRun DryRun
+     * 获取检测请求的合法性，但不会对操作的资源产生任何影响
+     * @return DryRun 检测请求的合法性，但不会对操作的资源产生任何影响
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * 设置DryRun
-     * @param DryRun DryRun
+     * 设置检测请求的合法性，但不会对操作的资源产生任何影响
+     * @param DryRun 检测请求的合法性，但不会对操作的资源产生任何影响
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

@@ -87,7 +87,7 @@ public class ProductProperties  extends AbstractModel{
     private String ModelName;
 
     /**
-    * 产品秘钥，suite产品才会有
+    * 产品密钥，suite产品才会有
     */
     @SerializedName("ProductKey")
     @Expose
@@ -242,16 +242,16 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取产品秘钥，suite产品才会有
-     * @return ProductKey 产品秘钥，suite产品才会有
+     * 获取产品密钥，suite产品才会有
+     * @return ProductKey 产品密钥，suite产品才会有
      */
     public String getProductKey() {
         return this.ProductKey;
     }
 
     /**
-     * 设置产品秘钥，suite产品才会有
-     * @param ProductKey 产品秘钥，suite产品才会有
+     * 设置产品密钥，suite产品才会有
+     * @param ProductKey 产品密钥，suite产品才会有
      */
     public void setProductKey(String ProductKey) {
         this.ProductKey = ProductKey;

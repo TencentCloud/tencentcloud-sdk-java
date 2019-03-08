@@ -24,6 +24,7 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
 
     /**
     * Asr 文字涉政、敏感评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -34,6 +35,7 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -41,6 +43,7 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
 
     /**
     * Asr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -48,7 +51,9 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
 
     /**
      * 获取Asr 文字涉政、敏感评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Confidence Asr 文字涉政、敏感评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -56,7 +61,9 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
 
     /**
      * 设置Asr 文字涉政、敏感评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence Asr 文字涉政、敏感评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -67,10 +74,12 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Suggestion Asr 文字涉政、敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -81,10 +90,12 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion Asr 文字涉政、敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
@@ -92,7 +103,9 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
 
     /**
      * 获取Asr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SegmentSet Asr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -100,7 +113,9 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
 
     /**
      * 设置Asr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentSet Asr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

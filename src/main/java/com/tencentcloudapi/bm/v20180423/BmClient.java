@@ -285,6 +285,24 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *查询设备硬件配置信息，如 CPU 型号，内存大小，磁盘大小和数量
+     * @param req DescribeDeviceHardwareInfoRequest
+     * @return DescribeDeviceHardwareInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceHardwareInfoResponse DescribeDeviceHardwareInfo(DescribeDeviceHardwareInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceHardwareInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceHardwareInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDeviceHardwareInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询设备库存
      * @param req DescribeDeviceInventoryRequest
      * @return DescribeDeviceInventoryResponse
@@ -393,6 +411,42 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *查询自定义机型部件信息，包括CpuId对应的型号，DiskTypeId对应的磁盘类型
+     * @param req DescribeHardwareSpecificationRequest
+     * @return DescribeHardwareSpecificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHardwareSpecificationResponse DescribeHardwareSpecification(DescribeHardwareSpecificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHardwareSpecificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHardwareSpecificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeHardwareSpecification"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询托管设备带外信息
+     * @param req DescribeHostedDeviceOutBandInfoRequest
+     * @return DescribeHostedDeviceOutBandInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostedDeviceOutBandInfoResponse DescribeHostedDeviceOutBandInfo(DescribeHostedDeviceOutBandInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostedDeviceOutBandInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostedDeviceOutBandInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeHostedDeviceOutBandInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取异步操作状态的完成状态
      * @param req DescribeOperationResultRequest
      * @return DescribeOperationResultResponse
@@ -440,6 +494,24 @@ public class BmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePsaRegulationsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribePsaRegulations"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询地域以及可用区
+     * @param req DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRegions"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -689,7 +761,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     }
 
     /**
-     *用于销毁可退还的服务器
+     *销毁黑石物理机实例：可以销毁物理机列表中的竞价实例，或回收站列表中所有计费模式的实例
      * @param req OfflineDevicesRequest
      * @return OfflineDevicesResponse
      * @throws TencentCloudSDKException
@@ -718,6 +790,24 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
                 Type type = new TypeToken<JsonResponseModel<RebootDevicesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RebootDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *恢复回收站中的物理机（仅限后付费的物理机）
+     * @param req RecoverDevicesRequest
+     * @return RecoverDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecoverDevicesResponse RecoverDevices(RecoverDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecoverDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecoverDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RecoverDevices"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -774,6 +864,24 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
                 Type type = new TypeToken<JsonResponseModel<ResetDevicePasswordResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ResetDevicePassword"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *退回物理机至回收站，支持批量退还不同计费模式的物理机（包括预付费、后付费、预付费转后付费）
+     * @param req ReturnDevicesRequest
+     * @return ReturnDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReturnDevicesResponse ReturnDevices(ReturnDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReturnDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReturnDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReturnDevices"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -241,6 +241,7 @@ public class DBInstance  extends AbstractModel{
 
     /**
     * 付费模式
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Paymode")
     @Expose
@@ -248,6 +249,7 @@ public class DBInstance  extends AbstractModel{
 
     /**
     * 实例处于异步任务时的异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Locker")
     @Expose
@@ -255,6 +257,7 @@ public class DBInstance  extends AbstractModel{
 
     /**
     * 实例目前运行状态描述
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusDesc")
     @Expose
@@ -266,6 +269,20 @@ public class DBInstance  extends AbstractModel{
     @SerializedName("WanStatus")
     @Expose
     private Integer WanStatus;
+
+    /**
+    * 该实例是否支持审计。1-支持；0-不支持
+    */
+    @SerializedName("IsAuditSupported")
+    @Expose
+    private Integer IsAuditSupported;
+
+    /**
+    * 机器型号
+    */
+    @SerializedName("Machine")
+    @Expose
+    private String Machine;
 
     /**
      * 获取实例 Id，唯一标识一个 TDSQL 实例
@@ -765,7 +782,9 @@ public class DBInstance  extends AbstractModel{
 
     /**
      * 获取付费模式
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Paymode 付费模式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPaymode() {
         return this.Paymode;
@@ -773,7 +792,9 @@ public class DBInstance  extends AbstractModel{
 
     /**
      * 设置付费模式
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Paymode 付费模式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaymode(String Paymode) {
         this.Paymode = Paymode;
@@ -781,7 +802,9 @@ public class DBInstance  extends AbstractModel{
 
     /**
      * 获取实例处于异步任务时的异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Locker 实例处于异步任务时的异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getLocker() {
         return this.Locker;
@@ -789,7 +812,9 @@ public class DBInstance  extends AbstractModel{
 
     /**
      * 设置实例处于异步任务时的异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Locker 实例处于异步任务时的异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocker(Integer Locker) {
         this.Locker = Locker;
@@ -797,7 +822,9 @@ public class DBInstance  extends AbstractModel{
 
     /**
      * 获取实例目前运行状态描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @return StatusDesc 实例目前运行状态描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusDesc() {
         return this.StatusDesc;
@@ -805,7 +832,9 @@ public class DBInstance  extends AbstractModel{
 
     /**
      * 设置实例目前运行状态描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusDesc 实例目前运行状态描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
@@ -825,6 +854,38 @@ public class DBInstance  extends AbstractModel{
      */
     public void setWanStatus(Integer WanStatus) {
         this.WanStatus = WanStatus;
+    }
+
+    /**
+     * 获取该实例是否支持审计。1-支持；0-不支持
+     * @return IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
+     */
+    public Integer getIsAuditSupported() {
+        return this.IsAuditSupported;
+    }
+
+    /**
+     * 设置该实例是否支持审计。1-支持；0-不支持
+     * @param IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
+     */
+    public void setIsAuditSupported(Integer IsAuditSupported) {
+        this.IsAuditSupported = IsAuditSupported;
+    }
+
+    /**
+     * 获取机器型号
+     * @return Machine 机器型号
+     */
+    public String getMachine() {
+        return this.Machine;
+    }
+
+    /**
+     * 设置机器型号
+     * @param Machine 机器型号
+     */
+    public void setMachine(String Machine) {
+        this.Machine = Machine;
     }
 
     /**
@@ -866,6 +927,8 @@ public class DBInstance  extends AbstractModel{
         this.setParamSimple(map, prefix + "Locker", this.Locker);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
+        this.setParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
+        this.setParamSimple(map, prefix + "Machine", this.Machine);
 
     }
 }

@@ -66,6 +66,7 @@ public class DBAccount  extends AbstractModel{
 
     /**
     * 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelayThresh")
     @Expose
@@ -169,7 +170,9 @@ public class DBAccount  extends AbstractModel{
 
     /**
      * 获取该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+注意：此字段可能返回 null，表示取不到有效值。
      * @return DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getDelayThresh() {
         return this.DelayThresh;
@@ -177,7 +180,9 @@ public class DBAccount  extends AbstractModel{
 
     /**
      * 设置该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelayThresh(Integer DelayThresh) {
         this.DelayThresh = DelayThresh;

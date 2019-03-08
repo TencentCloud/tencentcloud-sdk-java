@@ -24,6 +24,7 @@ public class Price  extends AbstractModel{
 
     /**
     * 预付费云盘预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalPrice")
     @Expose
@@ -31,6 +32,7 @@ public class Price  extends AbstractModel{
 
     /**
     * 预付费云盘预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountPrice")
     @Expose
@@ -38,6 +40,7 @@ public class Price  extends AbstractModel{
 
     /**
     * 后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -45,6 +48,7 @@ public class Price  extends AbstractModel{
 
     /**
     * 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeUnit")
     @Expose
@@ -52,6 +56,7 @@ public class Price  extends AbstractModel{
 
     /**
     * 后付费云盘折扣单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
@@ -59,7 +64,9 @@ public class Price  extends AbstractModel{
 
     /**
      * 获取预付费云盘预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return OriginalPrice 预付费云盘预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
@@ -67,7 +74,9 @@ public class Price  extends AbstractModel{
 
     /**
      * 设置预付费云盘预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalPrice 预付费云盘预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
@@ -75,7 +84,9 @@ public class Price  extends AbstractModel{
 
     /**
      * 获取预付费云盘预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return DiscountPrice 预付费云盘预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
@@ -83,7 +94,9 @@ public class Price  extends AbstractModel{
 
     /**
      * 设置预付费云盘预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountPrice 预付费云盘预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
@@ -91,7 +104,9 @@ public class Price  extends AbstractModel{
 
     /**
      * 获取后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return UnitPrice 后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
@@ -99,7 +114,9 @@ public class Price  extends AbstractModel{
 
     /**
      * 设置后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPrice 后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
@@ -107,7 +124,9 @@ public class Price  extends AbstractModel{
 
     /**
      * 获取后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeUnit() {
         return this.ChargeUnit;
@@ -115,7 +134,9 @@ public class Price  extends AbstractModel{
 
     /**
      * 设置后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeUnit(String ChargeUnit) {
         this.ChargeUnit = ChargeUnit;
@@ -123,7 +144,9 @@ public class Price  extends AbstractModel{
 
     /**
      * 获取后付费云盘折扣单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return UnitPriceDiscount 后付费云盘折扣单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
@@ -131,7 +154,9 @@ public class Price  extends AbstractModel{
 
     /**
      * 设置后付费云盘折扣单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPriceDiscount 后付费云盘折扣单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPriceDiscount(Float UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;

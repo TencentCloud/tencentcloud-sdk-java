@@ -49,6 +49,7 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
 
     /**
     * 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WatermarkSet")
     @Expose
@@ -120,7 +121,9 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
 
     /**
      * 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
@@ -128,7 +131,9 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
 
     /**
      * 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;

@@ -32,6 +32,7 @@ public class SearchMediaResponse  extends AbstractModel{
 
     /**
     * 媒体文件信息列表，只包含基础信息（BasicInfo）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaInfoSet")
     @Expose
@@ -66,7 +67,9 @@ public class SearchMediaResponse  extends AbstractModel{
 
     /**
      * 获取媒体文件信息列表，只包含基础信息（BasicInfo）
+注意：此字段可能返回 null，表示取不到有效值。
      * @return MediaInfoSet 媒体文件信息列表，只包含基础信息（BasicInfo）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInfo [] getMediaInfoSet() {
         return this.MediaInfoSet;
@@ -74,7 +77,9 @@ public class SearchMediaResponse  extends AbstractModel{
 
     /**
      * 设置媒体文件信息列表，只包含基础信息（BasicInfo）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaInfoSet 媒体文件信息列表，只包含基础信息（BasicInfo）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {
         this.MediaInfoSet = MediaInfoSet;

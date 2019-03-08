@@ -31,6 +31,7 @@ public class SpotMarketOptions  extends AbstractModel{
 
     /**
     * 竞价请求类型，当前仅支持类型：one-time，默认值为one-time
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpotInstanceType")
     @Expose
@@ -54,7 +55,9 @@ public class SpotMarketOptions  extends AbstractModel{
 
     /**
      * 获取竞价请求类型，当前仅支持类型：one-time，默认值为one-time
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SpotInstanceType 竞价请求类型，当前仅支持类型：one-time，默认值为one-time
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpotInstanceType() {
         return this.SpotInstanceType;
@@ -62,7 +65,9 @@ public class SpotMarketOptions  extends AbstractModel{
 
     /**
      * 设置竞价请求类型，当前仅支持类型：one-time，默认值为one-time
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SpotInstanceType 竞价请求类型，当前仅支持类型：one-time，默认值为one-time
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpotInstanceType(String SpotInstanceType) {
         this.SpotInstanceType = SpotInstanceType;

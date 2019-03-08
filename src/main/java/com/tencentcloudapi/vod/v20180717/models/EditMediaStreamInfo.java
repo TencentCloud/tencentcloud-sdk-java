@@ -31,6 +31,7 @@ public class EditMediaStreamInfo  extends AbstractModel{
 
     /**
     * 流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -38,6 +39,7 @@ public class EditMediaStreamInfo  extends AbstractModel{
 
     /**
     * 流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -61,7 +63,9 @@ public class EditMediaStreamInfo  extends AbstractModel{
 
     /**
      * 获取流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return StartTime 流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -69,7 +73,9 @@ public class EditMediaStreamInfo  extends AbstractModel{
 
     /**
      * 设置流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -77,7 +83,9 @@ public class EditMediaStreamInfo  extends AbstractModel{
 
     /**
      * 获取流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return EndTime 流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -85,7 +93,9 @@ public class EditMediaStreamInfo  extends AbstractModel{
 
     /**
      * 设置流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

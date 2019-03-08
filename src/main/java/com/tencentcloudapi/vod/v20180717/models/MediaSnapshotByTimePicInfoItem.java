@@ -24,6 +24,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
 
     /**
     * 该张截图对应视频文件中的时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeOffset")
     @Expose
@@ -31,6 +32,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
 
     /**
     * 该张截图的 URL 地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -38,6 +40,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
 
     /**
     * 截图如果被打上了水印，被打水印的模板 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaterMarkDefinition")
     @Expose
@@ -45,7 +48,9 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
 
     /**
      * 获取该张截图对应视频文件中的时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return TimeOffset 该张截图对应视频文件中的时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTimeOffset() {
         return this.TimeOffset;
@@ -53,7 +58,9 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
 
     /**
      * 设置该张截图对应视频文件中的时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeOffset 该张截图对应视频文件中的时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeOffset(Float TimeOffset) {
         this.TimeOffset = TimeOffset;
@@ -61,7 +68,9 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
 
     /**
      * 获取该张截图的 URL 地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Url 该张截图的 URL 地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -69,7 +78,9 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
 
     /**
      * 设置该张截图的 URL 地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 该张截图的 URL 地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -77,7 +88,9 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
 
     /**
      * 获取截图如果被打上了水印，被打水印的模板 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer [] getWaterMarkDefinition() {
         return this.WaterMarkDefinition;
@@ -85,7 +98,9 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
 
     /**
      * 设置截图如果被打上了水印，被打水印的模板 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaterMarkDefinition(Integer [] WaterMarkDefinition) {
         this.WaterMarkDefinition = WaterMarkDefinition;

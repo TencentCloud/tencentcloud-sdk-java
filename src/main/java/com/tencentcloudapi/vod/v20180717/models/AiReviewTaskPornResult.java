@@ -31,6 +31,7 @@ public class AiReviewTaskPornResult  extends AbstractModel{
 
     /**
     * 错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -38,6 +39,7 @@ public class AiReviewTaskPornResult  extends AbstractModel{
 
     /**
     * 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -52,6 +54,7 @@ public class AiReviewTaskPornResult  extends AbstractModel{
 
     /**
     * 内容审核鉴黄任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -75,7 +78,9 @@ public class AiReviewTaskPornResult  extends AbstractModel{
 
     /**
      * 获取错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ErrCode 错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getErrCode() {
         return this.ErrCode;
@@ -83,7 +88,9 @@ public class AiReviewTaskPornResult  extends AbstractModel{
 
     /**
      * 设置错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码，0：成功，其他值：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Integer ErrCode) {
         this.ErrCode = ErrCode;
@@ -91,7 +98,9 @@ public class AiReviewTaskPornResult  extends AbstractModel{
 
     /**
      * 获取错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -99,7 +108,9 @@ public class AiReviewTaskPornResult  extends AbstractModel{
 
     /**
      * 设置错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -123,7 +134,9 @@ public class AiReviewTaskPornResult  extends AbstractModel{
 
     /**
      * 获取内容审核鉴黄任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Output 内容审核鉴黄任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewPornTaskOutput getOutput() {
         return this.Output;
@@ -131,7 +144,9 @@ public class AiReviewTaskPornResult  extends AbstractModel{
 
     /**
      * 设置内容审核鉴黄任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 内容审核鉴黄任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiReviewPornTaskOutput Output) {
         this.Output = Output;

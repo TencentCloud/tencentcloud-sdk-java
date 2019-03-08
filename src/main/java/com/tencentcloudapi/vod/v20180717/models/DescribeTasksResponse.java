@@ -24,6 +24,7 @@ public class DescribeTasksResponse  extends AbstractModel{
 
     /**
     * 任务概要列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskSet")
     @Expose
@@ -31,6 +32,7 @@ public class DescribeTasksResponse  extends AbstractModel{
 
     /**
     * 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScrollToken")
     @Expose
@@ -45,7 +47,9 @@ public class DescribeTasksResponse  extends AbstractModel{
 
     /**
      * 获取任务概要列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return TaskSet 任务概要列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskSimpleInfo [] getTaskSet() {
         return this.TaskSet;
@@ -53,7 +57,9 @@ public class DescribeTasksResponse  extends AbstractModel{
 
     /**
      * 设置任务概要列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskSet 任务概要列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskSet(TaskSimpleInfo [] TaskSet) {
         this.TaskSet = TaskSet;
@@ -61,7 +67,9 @@ public class DescribeTasksResponse  extends AbstractModel{
 
     /**
      * 获取翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScrollToken() {
         return this.ScrollToken;
@@ -69,7 +77,9 @@ public class DescribeTasksResponse  extends AbstractModel{
 
     /**
      * 设置翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;

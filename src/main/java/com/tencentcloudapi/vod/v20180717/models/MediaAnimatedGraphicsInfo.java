@@ -24,6 +24,7 @@ public class MediaAnimatedGraphicsInfo  extends AbstractModel{
 
     /**
     * 视频转动图结果信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnimatedGraphicsSet")
     @Expose
@@ -31,7 +32,9 @@ public class MediaAnimatedGraphicsInfo  extends AbstractModel{
 
     /**
      * 获取视频转动图结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return AnimatedGraphicsSet 视频转动图结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaAnimatedGraphicsItem [] getAnimatedGraphicsSet() {
         return this.AnimatedGraphicsSet;
@@ -39,7 +42,9 @@ public class MediaAnimatedGraphicsInfo  extends AbstractModel{
 
     /**
      * 设置视频转动图结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicsSet 视频转动图结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnimatedGraphicsSet(MediaAnimatedGraphicsItem [] AnimatedGraphicsSet) {
         this.AnimatedGraphicsSet = AnimatedGraphicsSet;

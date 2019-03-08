@@ -37,7 +37,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     private Integer Online;
 
     /**
-    * 设备登陆时间
+    * 设备登录时间
     */
     @SerializedName("LoginTime")
     @Expose
@@ -167,16 +167,16 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备登陆时间
-     * @return LoginTime 设备登陆时间
+     * 获取设备登录时间
+     * @return LoginTime 设备登录时间
      */
     public Integer getLoginTime() {
         return this.LoginTime;
     }
 
     /**
-     * 设置设备登陆时间
-     * @param LoginTime 设备登陆时间
+     * 设置设备登录时间
+     * @param LoginTime 设备登录时间
      */
     public void setLoginTime(Integer LoginTime) {
         this.LoginTime = LoginTime;

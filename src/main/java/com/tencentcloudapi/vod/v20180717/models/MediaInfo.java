@@ -24,6 +24,7 @@ public class MediaInfo  extends AbstractModel{
 
     /**
     * 基础信息。包括视频名称、大小、时长、封面图片等。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BasicInfo")
     @Expose
@@ -31,6 +32,7 @@ public class MediaInfo  extends AbstractModel{
 
     /**
     * 元信息。包括视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaData")
     @Expose
@@ -38,6 +40,7 @@ public class MediaInfo  extends AbstractModel{
 
     /**
     * 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeInfo")
     @Expose
@@ -45,6 +48,7 @@ public class MediaInfo  extends AbstractModel{
 
     /**
     * 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnimatedGraphicsInfo")
     @Expose
@@ -52,6 +56,7 @@ public class MediaInfo  extends AbstractModel{
 
     /**
     * 采样截图信息。对视频采样截图后，相关截图信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleSnapshotInfo")
     @Expose
@@ -59,6 +64,7 @@ public class MediaInfo  extends AbstractModel{
 
     /**
     * 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageSpriteInfo")
     @Expose
@@ -66,6 +72,7 @@ public class MediaInfo  extends AbstractModel{
 
     /**
     * 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotByTimeOffsetInfo")
     @Expose
@@ -73,6 +80,7 @@ public class MediaInfo  extends AbstractModel{
 
     /**
     * 视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyFrameDescInfo")
     @Expose
@@ -87,7 +95,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 获取基础信息。包括视频名称、大小、时长、封面图片等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return BasicInfo 基础信息。包括视频名称、大小、时长、封面图片等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaBasicInfo getBasicInfo() {
         return this.BasicInfo;
@@ -95,7 +105,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 设置基础信息。包括视频名称、大小、时长、封面图片等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BasicInfo 基础信息。包括视频名称、大小、时长、封面图片等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBasicInfo(MediaBasicInfo BasicInfo) {
         this.BasicInfo = BasicInfo;
@@ -103,7 +115,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 获取元信息。包括视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return MetaData 元信息。包括视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
@@ -111,7 +125,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 设置元信息。包括视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaData 元信息。包括视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
@@ -119,7 +135,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 获取转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return TranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaTranscodeInfo getTranscodeInfo() {
         return this.TranscodeInfo;
@@ -127,7 +145,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 设置转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeInfo(MediaTranscodeInfo TranscodeInfo) {
         this.TranscodeInfo = TranscodeInfo;
@@ -135,7 +155,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 获取转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return AnimatedGraphicsInfo 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaAnimatedGraphicsInfo getAnimatedGraphicsInfo() {
         return this.AnimatedGraphicsInfo;
@@ -143,7 +165,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 设置转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicsInfo 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnimatedGraphicsInfo(MediaAnimatedGraphicsInfo AnimatedGraphicsInfo) {
         this.AnimatedGraphicsInfo = AnimatedGraphicsInfo;
@@ -151,7 +175,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 获取采样截图信息。对视频采样截图后，相关截图信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SampleSnapshotInfo 采样截图信息。对视频采样截图后，相关截图信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaSampleSnapshotInfo getSampleSnapshotInfo() {
         return this.SampleSnapshotInfo;
@@ -159,7 +185,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 设置采样截图信息。对视频采样截图后，相关截图信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleSnapshotInfo 采样截图信息。对视频采样截图后，相关截图信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleSnapshotInfo(MediaSampleSnapshotInfo SampleSnapshotInfo) {
         this.SampleSnapshotInfo = SampleSnapshotInfo;
@@ -167,7 +195,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 获取雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ImageSpriteInfo 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaImageSpriteInfo getImageSpriteInfo() {
         return this.ImageSpriteInfo;
@@ -175,7 +205,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 设置雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageSpriteInfo 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageSpriteInfo(MediaImageSpriteInfo ImageSpriteInfo) {
         this.ImageSpriteInfo = ImageSpriteInfo;
@@ -183,7 +215,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 获取指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaSnapshotByTimeOffsetInfo getSnapshotByTimeOffsetInfo() {
         return this.SnapshotByTimeOffsetInfo;
@@ -191,7 +225,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 设置指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotByTimeOffsetInfo(MediaSnapshotByTimeOffsetInfo SnapshotByTimeOffsetInfo) {
         this.SnapshotByTimeOffsetInfo = SnapshotByTimeOffsetInfo;
@@ -199,7 +235,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 获取视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return KeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaKeyFrameDescInfo getKeyFrameDescInfo() {
         return this.KeyFrameDescInfo;
@@ -207,7 +245,9 @@ public class MediaInfo  extends AbstractModel{
 
     /**
      * 设置视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyFrameDescInfo(MediaKeyFrameDescInfo KeyFrameDescInfo) {
         this.KeyFrameDescInfo = KeyFrameDescInfo;

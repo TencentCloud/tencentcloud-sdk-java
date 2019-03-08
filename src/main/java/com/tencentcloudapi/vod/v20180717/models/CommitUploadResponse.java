@@ -31,6 +31,7 @@ public class CommitUploadResponse  extends AbstractModel{
 
     /**
     * 媒体播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaUrl")
     @Expose
@@ -38,6 +39,7 @@ public class CommitUploadResponse  extends AbstractModel{
 
     /**
     * 媒体封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -68,7 +70,9 @@ public class CommitUploadResponse  extends AbstractModel{
 
     /**
      * 获取媒体播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return MediaUrl 媒体播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMediaUrl() {
         return this.MediaUrl;
@@ -76,7 +80,9 @@ public class CommitUploadResponse  extends AbstractModel{
 
     /**
      * 设置媒体播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaUrl 媒体播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
@@ -84,7 +90,9 @@ public class CommitUploadResponse  extends AbstractModel{
 
     /**
      * 获取媒体封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CoverUrl 媒体封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCoverUrl() {
         return this.CoverUrl;
@@ -92,7 +100,9 @@ public class CommitUploadResponse  extends AbstractModel{
 
     /**
      * 设置媒体封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverUrl 媒体封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;

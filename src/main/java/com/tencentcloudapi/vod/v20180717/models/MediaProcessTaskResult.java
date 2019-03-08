@@ -37,6 +37,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
     * 视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeTask")
     @Expose
@@ -44,6 +45,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
     * 视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnimatedGraphicTask")
     @Expose
@@ -51,6 +53,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
     * 对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
@@ -58,6 +61,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
     * 对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleSnapshotTask")
     @Expose
@@ -65,6 +69,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
     * 对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageSpriteTask")
     @Expose
@@ -72,6 +77,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
     * 对视频截图做封面任务的查询结果，当任务类型为 CoverBySnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoverBySnapshotTask")
     @Expose
@@ -119,7 +125,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 获取视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return TranscodeTask 视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaProcessTaskTranscodeResult getTranscodeTask() {
         return this.TranscodeTask;
@@ -127,7 +135,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 设置视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTask 视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeTask(MediaProcessTaskTranscodeResult TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
@@ -135,7 +145,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 获取视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return AnimatedGraphicTask 视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() {
         return this.AnimatedGraphicTask;
@@ -143,7 +155,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 设置视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicTask 视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask) {
         this.AnimatedGraphicTask = AnimatedGraphicTask;
@@ -151,7 +165,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 获取对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SnapshotByTimeOffsetTask 对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
@@ -159,7 +175,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 设置对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetTask 对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
@@ -167,7 +185,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 获取对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SampleSnapshotTask 对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() {
         return this.SampleSnapshotTask;
@@ -175,7 +195,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 设置对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleSnapshotTask 对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult SampleSnapshotTask) {
         this.SampleSnapshotTask = SampleSnapshotTask;
@@ -183,7 +205,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 获取对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ImageSpriteTask 对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaProcessTaskImageSpriteResult getImageSpriteTask() {
         return this.ImageSpriteTask;
@@ -191,7 +215,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 设置对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageSpriteTask 对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageSpriteTask(MediaProcessTaskImageSpriteResult ImageSpriteTask) {
         this.ImageSpriteTask = ImageSpriteTask;
@@ -199,7 +225,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 获取对视频截图做封面任务的查询结果，当任务类型为 CoverBySnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CoverBySnapshotTask 对视频截图做封面任务的查询结果，当任务类型为 CoverBySnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaProcessTaskCoverBySnapshotResult getCoverBySnapshotTask() {
         return this.CoverBySnapshotTask;
@@ -207,7 +235,9 @@ public class MediaProcessTaskResult  extends AbstractModel{
 
     /**
      * 设置对视频截图做封面任务的查询结果，当任务类型为 CoverBySnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverBySnapshotTask 对视频截图做封面任务的查询结果，当任务类型为 CoverBySnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoverBySnapshotTask(MediaProcessTaskCoverBySnapshotResult CoverBySnapshotTask) {
         this.CoverBySnapshotTask = CoverBySnapshotTask;

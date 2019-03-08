@@ -24,6 +24,7 @@ public class MediaSampleSnapshotInfo  extends AbstractModel{
 
     /**
     * 特定规格的采样截图信息集合，每个元素代表一套相同规格的采样截图。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleSnapshotSet")
     @Expose
@@ -31,7 +32,9 @@ public class MediaSampleSnapshotInfo  extends AbstractModel{
 
     /**
      * 获取特定规格的采样截图信息集合，每个元素代表一套相同规格的采样截图。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SampleSnapshotSet 特定规格的采样截图信息集合，每个元素代表一套相同规格的采样截图。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaSampleSnapshotItem [] getSampleSnapshotSet() {
         return this.SampleSnapshotSet;
@@ -39,7 +42,9 @@ public class MediaSampleSnapshotInfo  extends AbstractModel{
 
     /**
      * 设置特定规格的采样截图信息集合，每个元素代表一套相同规格的采样截图。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleSnapshotSet 特定规格的采样截图信息集合，每个元素代表一套相同规格的采样截图。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleSnapshotSet(MediaSampleSnapshotItem [] SampleSnapshotSet) {
         this.SampleSnapshotSet = SampleSnapshotSet;

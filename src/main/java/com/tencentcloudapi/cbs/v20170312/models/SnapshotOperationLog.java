@@ -24,6 +24,7 @@ public class SnapshotOperationLog  extends AbstractModel{
 
     /**
     * 操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -76,7 +77,9 @@ PROCESSING :表示操作中。
 
     /**
      * 获取操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Operator 操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -84,7 +87,9 @@ PROCESSING :表示操作中。
 
     /**
      * 设置操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

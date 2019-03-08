@@ -101,6 +101,7 @@ public class Instance  extends AbstractModel{
 
     /**
     * 实例主网卡的公网`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -369,7 +370,9 @@ public class Instance  extends AbstractModel{
 
     /**
      * 获取实例主网卡的公网`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return PublicIpAddresses 实例主网卡的公网`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
@@ -377,7 +380,9 @@ public class Instance  extends AbstractModel{
 
     /**
      * 设置实例主网卡的公网`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 实例主网卡的公网`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;

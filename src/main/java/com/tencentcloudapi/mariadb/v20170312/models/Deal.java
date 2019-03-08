@@ -52,6 +52,7 @@ public class Deal  extends AbstractModel{
 
     /**
     * 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -130,7 +131,9 @@ public class Deal  extends AbstractModel{
 
     /**
      * 获取只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return InstanceIds 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -138,7 +141,9 @@ public class Deal  extends AbstractModel{
 
     /**
      * 设置只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIds 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

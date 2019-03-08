@@ -64,6 +64,7 @@ public class FaceInfo  extends AbstractModel{
 
     /**
     * 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceQualityInfo")
     @Expose
@@ -171,7 +172,9 @@ public class FaceInfo  extends AbstractModel{
 
     /**
      * 获取人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public FaceQualityInfo getFaceQualityInfo() {
         return this.FaceQualityInfo;
@@ -179,7 +182,9 @@ public class FaceInfo  extends AbstractModel{
 
     /**
      * 设置人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceQualityInfo(FaceQualityInfo FaceQualityInfo) {
         this.FaceQualityInfo = FaceQualityInfo;

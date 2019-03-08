@@ -24,6 +24,7 @@ public class EditMediaTaskOutput  extends AbstractModel{
 
     /**
     * 文件类型，例如 mp4、flv 等。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileType")
     @Expose
@@ -31,6 +32,7 @@ public class EditMediaTaskOutput  extends AbstractModel{
 
     /**
     * 媒体文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -38,6 +40,7 @@ public class EditMediaTaskOutput  extends AbstractModel{
 
     /**
     * 媒体文件播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileUrl")
     @Expose
@@ -45,7 +48,9 @@ public class EditMediaTaskOutput  extends AbstractModel{
 
     /**
      * 获取文件类型，例如 mp4、flv 等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return FileType 文件类型，例如 mp4、flv 等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileType() {
         return this.FileType;
@@ -53,7 +58,9 @@ public class EditMediaTaskOutput  extends AbstractModel{
 
     /**
      * 设置文件类型，例如 mp4、flv 等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 文件类型，例如 mp4、flv 等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
@@ -61,7 +68,9 @@ public class EditMediaTaskOutput  extends AbstractModel{
 
     /**
      * 获取媒体文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return FileId 媒体文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -69,7 +78,9 @@ public class EditMediaTaskOutput  extends AbstractModel{
 
     /**
      * 设置媒体文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 媒体文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -77,7 +88,9 @@ public class EditMediaTaskOutput  extends AbstractModel{
 
     /**
      * 获取媒体文件播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return FileUrl 媒体文件播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileUrl() {
         return this.FileUrl;
@@ -85,7 +98,9 @@ public class EditMediaTaskOutput  extends AbstractModel{
 
     /**
      * 设置媒体文件播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileUrl 媒体文件播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;

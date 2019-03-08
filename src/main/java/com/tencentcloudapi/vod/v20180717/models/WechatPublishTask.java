@@ -43,6 +43,7 @@ FINISH：已完成。
     * 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -50,6 +51,7 @@ FINISH：已完成。
 
     /**
     * 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -57,6 +59,7 @@ FINISH：已完成。
 
     /**
     * 发布视频文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -64,6 +67,7 @@ FINISH：已完成。
 
     /**
     * 微信发布模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Definition")
     @Expose
@@ -71,6 +75,7 @@ FINISH：已完成。
 
     /**
     * 发布视频所对应的转码模板 ID，为 0 代表原始视频。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceDefinition")
     @Expose
@@ -82,6 +87,7 @@ FINISH：已完成。
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
 <li>NOTTRIGGERED：尚未发起微信发布。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatStatus")
     @Expose
@@ -89,6 +95,7 @@ FINISH：已完成。
 
     /**
     * 微信 Vid。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatVid")
     @Expose
@@ -96,6 +103,7 @@ FINISH：已完成。
 
     /**
     * 微信地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatUrl")
     @Expose
@@ -149,9 +157,11 @@ FINISH：已完成。
      * 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getErrCode() {
         return this.ErrCode;
@@ -161,9 +171,11 @@ FINISH：已完成。
      * 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Integer ErrCode) {
         this.ErrCode = ErrCode;
@@ -171,7 +183,9 @@ FINISH：已完成。
 
     /**
      * 获取错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -179,7 +193,9 @@ FINISH：已完成。
 
     /**
      * 设置错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -187,7 +203,9 @@ FINISH：已完成。
 
     /**
      * 获取发布视频文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return FileId 发布视频文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -195,7 +213,9 @@ FINISH：已完成。
 
     /**
      * 设置发布视频文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 发布视频文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -203,7 +223,9 @@ FINISH：已完成。
 
     /**
      * 获取微信发布模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Definition 微信发布模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getDefinition() {
         return this.Definition;
@@ -211,7 +233,9 @@ FINISH：已完成。
 
     /**
      * 设置微信发布模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Definition 微信发布模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefinition(Integer Definition) {
         this.Definition = Definition;
@@ -219,7 +243,9 @@ FINISH：已完成。
 
     /**
      * 获取发布视频所对应的转码模板 ID，为 0 代表原始视频。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getSourceDefinition() {
         return this.SourceDefinition;
@@ -227,7 +253,9 @@ FINISH：已完成。
 
     /**
      * 设置发布视频所对应的转码模板 ID，为 0 代表原始视频。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceDefinition(Integer SourceDefinition) {
         this.SourceDefinition = SourceDefinition;
@@ -239,11 +267,13 @@ FINISH：已完成。
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
 <li>NOTTRIGGERED：尚未发起微信发布。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return WechatStatus 微信发布状态，取值：
 <li>FAIL：失败；</li>
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
 <li>NOTTRIGGERED：尚未发起微信发布。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWechatStatus() {
         return this.WechatStatus;
@@ -255,11 +285,13 @@ FINISH：已完成。
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
 <li>NOTTRIGGERED：尚未发起微信发布。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatStatus 微信发布状态，取值：
 <li>FAIL：失败；</li>
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
 <li>NOTTRIGGERED：尚未发起微信发布。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatStatus(String WechatStatus) {
         this.WechatStatus = WechatStatus;
@@ -267,7 +299,9 @@ FINISH：已完成。
 
     /**
      * 获取微信 Vid。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return WechatVid 微信 Vid。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWechatVid() {
         return this.WechatVid;
@@ -275,7 +309,9 @@ FINISH：已完成。
 
     /**
      * 设置微信 Vid。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatVid 微信 Vid。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatVid(String WechatVid) {
         this.WechatVid = WechatVid;
@@ -283,7 +319,9 @@ FINISH：已完成。
 
     /**
      * 获取微信地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return WechatUrl 微信地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWechatUrl() {
         return this.WechatUrl;
@@ -291,7 +329,9 @@ FINISH：已完成。
 
     /**
      * 设置微信地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatUrl 微信地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatUrl(String WechatUrl) {
         this.WechatUrl = WechatUrl;

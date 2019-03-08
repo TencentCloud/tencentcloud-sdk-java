@@ -41,6 +41,7 @@ public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
 
     /**
     * Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -92,7 +93,9 @@ public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
 
     /**
      * 获取Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SegmentSet Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -100,7 +103,9 @@ public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
 
     /**
      * 设置Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentSet Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

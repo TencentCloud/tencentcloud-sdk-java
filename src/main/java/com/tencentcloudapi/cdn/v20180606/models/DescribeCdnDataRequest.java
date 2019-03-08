@@ -46,11 +46,11 @@ flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
 fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
+statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
     */
     @SerializedName("Metric")
@@ -126,6 +126,16 @@ https：指定查询 HTTPS 对应指标
     private String DataSource;
 
     /**
+    * 指定IP协议查询，不填充表示查询所有协议
+all：所有协议
+ipv4：指定查询 ipv4对应指标
+ipv6：指定查询 ipv6 对应指标
+    */
+    @SerializedName("IpProtocol")
+    @Expose
+    private String IpProtocol;
+
+    /**
      * 获取查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 根据指定时间粒度不同，会进行向前归整，如 2018-09-04 10:40:00 在按 1 小时的时间粒度查询时，返回的第一个数据对应时间点为 2018-09-04 10:00:00
 起始时间与结束时间间隔小于等于 90 天
@@ -179,22 +189,22 @@ flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
 fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
+statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
      * @return Metric 指定查询指标，支持的类型有：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
 fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
+statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
      */
     public String getMetric() {
@@ -207,22 +217,22 @@ flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
 fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
+statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
      * @param Metric 指定查询指标，支持的类型有：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
 fluxHitRate：流量命中率，单位为 %
-statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
+statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
      */
     public void setMetric(String Metric) {
@@ -406,6 +416,34 @@ https：指定查询 HTTPS 对应指标
     }
 
     /**
+     * 获取指定IP协议查询，不填充表示查询所有协议
+all：所有协议
+ipv4：指定查询 ipv4对应指标
+ipv6：指定查询 ipv6 对应指标
+     * @return IpProtocol 指定IP协议查询，不填充表示查询所有协议
+all：所有协议
+ipv4：指定查询 ipv4对应指标
+ipv6：指定查询 ipv6 对应指标
+     */
+    public String getIpProtocol() {
+        return this.IpProtocol;
+    }
+
+    /**
+     * 设置指定IP协议查询，不填充表示查询所有协议
+all：所有协议
+ipv4：指定查询 ipv4对应指标
+ipv6：指定查询 ipv6 对应指标
+     * @param IpProtocol 指定IP协议查询，不填充表示查询所有协议
+all：所有协议
+ipv4：指定查询 ipv4对应指标
+ipv6：指定查询 ipv6 对应指标
+     */
+    public void setIpProtocol(String IpProtocol) {
+        this.IpProtocol = IpProtocol;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -420,6 +458,7 @@ https：指定查询 HTTPS 对应指标
         this.setParamSimple(map, prefix + "District", this.District);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
+        this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
 
     }
 }

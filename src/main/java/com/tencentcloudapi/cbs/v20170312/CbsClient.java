@@ -92,6 +92,48 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口（BindAutoSnapshotPolicy）用于绑定云硬盘到指定的定期快照策略。
+
+* 每个地域下的定期快照策略配额限制请参考文档[定期快照](/document/product/362/8191)。
+* 当已绑定定期快照策略的云硬盘处于未使用状态（即弹性云盘未挂载或非弹性云盘的主机处于关机状态）将不会创建定期快照。
+     * @param req BindAutoSnapshotPolicyRequest
+     * @return BindAutoSnapshotPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(BindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindAutoSnapshotPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindAutoSnapshotPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BindAutoSnapshotPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateAutoSnapshotPolicy）用于创建定期快照策略。
+
+* 每个地域可创建的定期快照策略数量限制请参考文档[定期快照](/document/product/362/8191)。
+* 每个地域可创建的快照有数量和容量的限制，具体请见腾讯云控制台快照页面提示，如果快照超配额，定期快照创建会失败。
+     * @param req CreateAutoSnapshotPolicyRequest
+     * @return CreateAutoSnapshotPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAutoSnapshotPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAutoSnapshotPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAutoSnapshotPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateDisks）用于创建云硬盘。
 
 * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。
@@ -135,6 +177,26 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteAutoSnapshotPolicies）用于删除定期快照策略。
+
+*  支持批量操作。如果多个定期快照策略存在无法删除的，则操作不执行，以特定错误码返回。
+     * @param req DeleteAutoSnapshotPoliciesRequest
+     * @return DeleteAutoSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAutoSnapshotPoliciesResponse DeleteAutoSnapshotPolicies(DeleteAutoSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAutoSnapshotPoliciesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAutoSnapshotPoliciesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAutoSnapshotPolicies"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteSnapshots）用于删除快照。
 
 * 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
@@ -149,6 +211,46 @@ public class CbsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSnapshotsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteSnapshots"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeAutoSnapshotPolicies）用于查询定期快照策略。
+
+* 可以根据定期快照策略ID、名称或者状态等信息来查询定期快照策略的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
+* 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的定期快照策略表。
+
+     * @param req DescribeAutoSnapshotPoliciesRequest
+     * @return DescribeAutoSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAutoSnapshotPoliciesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAutoSnapshotPoliciesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAutoSnapshotPolicies"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDiskAssociatedAutoSnapshotPolicy）用于查询云盘绑定的定期快照策略。
+     * @param req DescribeDiskAssociatedAutoSnapshotPolicyRequest
+     * @return DescribeDiskAssociatedAutoSnapshotPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiskAssociatedAutoSnapshotPolicyResponse DescribeDiskAssociatedAutoSnapshotPolicy(DescribeDiskAssociatedAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDiskAssociatedAutoSnapshotPolicy"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -364,11 +466,6 @@ public class CbsClient extends AbstractClient{
      ** 只支持修改弹性云盘的项目ID。随云主机创建的云硬盘项目ID与云主机联动。可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。
 * “云硬盘名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行云盘管理操作的依据。
 * 支持批量操作，如果传入多个云盘ID，则所有云盘修改为同一属性。如果存在不允许操作的云盘，则操作不执行，以特定错误码返回。
-* 支持修改弹性云盘的云盘类型，不支持非弹性云盘（[DescribeDisks](/document/product/362/16315)接口的返回字段Portable为true表示弹性云盘），且当前仅支持云盘类型升级，不支持降级，具体如下:
-    * CLOUD_BASIC变更为CLOUD_PREMIUM；
-    * CLOUD_BASIC变更为CLOUD_SSD；
-    * CLOUD_PREMIUM变更为CLOUD_SSD。
-* 云盘处于“迁移中”不影响正常的读写以及读写速率，在云盘容量较大的情况下，整个迁移任务耗时较长，目前不支持任务成功发起后取消任务。
      * @param req ModifyDiskAttributesRequest
      * @return ModifyDiskAttributesResponse
      * @throws TencentCloudSDKException
@@ -482,6 +579,27 @@ public class CbsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<TerminateDisksResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "TerminateDisks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UnbindAutoSnapshotPolicy）用于解除云硬盘绑定的定期快照策略。
+
+* 支持批量操作，可一次解除多个云盘与同一定期快照策略的绑定。 
+* 如果传入的云盘未绑定到当前定期快照策略，接口将自动跳过，仅解绑与当前定期快照策略绑定的云盘。
+     * @param req UnbindAutoSnapshotPolicyRequest
+     * @return UnbindAutoSnapshotPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(UnbindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindAutoSnapshotPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindAutoSnapshotPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UnbindAutoSnapshotPolicy"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

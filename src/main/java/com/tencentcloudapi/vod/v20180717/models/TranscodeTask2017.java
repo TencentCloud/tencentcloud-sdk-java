@@ -33,6 +33,7 @@ public class TranscodeTask2017  extends AbstractModel{
     * 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -40,6 +41,7 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
     * 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -47,6 +49,7 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
     * 被转码文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -54,6 +57,7 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
     * 被转码文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -61,6 +65,7 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
     * 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -68,6 +73,7 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
     * 封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -75,6 +81,7 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
     * 视频转码后生成的播放信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlayInfoSet")
     @Expose
@@ -100,9 +107,11 @@ public class TranscodeTask2017  extends AbstractModel{
      * 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getErrCode() {
         return this.ErrCode;
@@ -112,9 +121,11 @@ public class TranscodeTask2017  extends AbstractModel{
      * 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Integer ErrCode) {
         this.ErrCode = ErrCode;
@@ -122,7 +133,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 获取错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -130,7 +143,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 设置错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -138,7 +153,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 获取被转码文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return FileId 被转码文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -146,7 +163,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 设置被转码文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 被转码文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -154,7 +173,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 获取被转码文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return FileName 被转码文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -162,7 +183,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 设置被转码文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 被转码文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -170,7 +193,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 获取视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Duration 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getDuration() {
         return this.Duration;
@@ -178,7 +203,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 设置视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Integer Duration) {
         this.Duration = Duration;
@@ -186,7 +213,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 获取封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CoverUrl 封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCoverUrl() {
         return this.CoverUrl;
@@ -194,7 +223,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 设置封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverUrl 封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
@@ -202,7 +233,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 获取视频转码后生成的播放信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return PlayInfoSet 视频转码后生成的播放信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TranscodePlayInfo2017 [] getPlayInfoSet() {
         return this.PlayInfoSet;
@@ -210,7 +243,9 @@ public class TranscodeTask2017  extends AbstractModel{
 
     /**
      * 设置视频转码后生成的播放信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PlayInfoSet 视频转码后生成的播放信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlayInfoSet(TranscodePlayInfo2017 [] PlayInfoSet) {
         this.PlayInfoSet = PlayInfoSet;

@@ -31,6 +31,7 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
 
     /**
     * 市场选项类型，当前只支持取值：spot
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarketType")
     @Expose
@@ -54,7 +55,9 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
 
     /**
      * 获取市场选项类型，当前只支持取值：spot
+注意：此字段可能返回 null，表示取不到有效值。
      * @return MarketType 市场选项类型，当前只支持取值：spot
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMarketType() {
         return this.MarketType;
@@ -62,7 +65,9 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
 
     /**
      * 设置市场选项类型，当前只支持取值：spot
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MarketType 市场选项类型，当前只支持取值：spot
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarketType(String MarketType) {
         this.MarketType = MarketType;

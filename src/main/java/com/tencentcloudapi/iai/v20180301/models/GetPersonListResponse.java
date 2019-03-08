@@ -31,6 +31,7 @@ public class GetPersonListResponse  extends AbstractModel{
 
     /**
     * 该人员库的人员数量
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PersonNum")
     @Expose
@@ -38,6 +39,7 @@ public class GetPersonListResponse  extends AbstractModel{
 
     /**
     * 该人员库的人脸数量
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceNum")
     @Expose
@@ -68,7 +70,9 @@ public class GetPersonListResponse  extends AbstractModel{
 
     /**
      * 获取该人员库的人员数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @return PersonNum 该人员库的人员数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getPersonNum() {
         return this.PersonNum;
@@ -76,7 +80,9 @@ public class GetPersonListResponse  extends AbstractModel{
 
     /**
      * 设置该人员库的人员数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PersonNum 该人员库的人员数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPersonNum(Integer PersonNum) {
         this.PersonNum = PersonNum;
@@ -84,7 +90,9 @@ public class GetPersonListResponse  extends AbstractModel{
 
     /**
      * 获取该人员库的人脸数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @return FaceNum 该人员库的人脸数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getFaceNum() {
         return this.FaceNum;
@@ -92,7 +100,9 @@ public class GetPersonListResponse  extends AbstractModel{
 
     /**
      * 设置该人员库的人脸数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceNum 该人员库的人脸数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceNum(Integer FaceNum) {
         this.FaceNum = FaceNum;

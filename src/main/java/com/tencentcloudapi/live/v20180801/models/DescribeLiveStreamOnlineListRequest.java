@@ -45,7 +45,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
 
     /**
     * 每页大小，最大100。 
-取值：1~100之前的任意整数。
+取值：10~100之间的任意整数。
 默认值：10。
     */
     @SerializedName("PageSize")
@@ -109,10 +109,10 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
 
     /**
      * 获取每页大小，最大100。 
-取值：1~100之前的任意整数。
+取值：10~100之间的任意整数。
 默认值：10。
      * @return PageSize 每页大小，最大100。 
-取值：1~100之前的任意整数。
+取值：10~100之间的任意整数。
 默认值：10。
      */
     public Integer getPageSize() {
@@ -121,10 +121,10 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
 
     /**
      * 设置每页大小，最大100。 
-取值：1~100之前的任意整数。
+取值：10~100之间的任意整数。
 默认值：10。
      * @param PageSize 每页大小，最大100。 
-取值：1~100之前的任意整数。
+取值：10~100之间的任意整数。
 默认值：10。
      */
     public void setPageSize(Integer PageSize) {

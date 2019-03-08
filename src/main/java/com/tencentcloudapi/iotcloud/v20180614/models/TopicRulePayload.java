@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TopicRulePayload  extends AbstractModel{
 
     /**
-    * 规则的SQL语句，base64编码
+    * 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
     */
     @SerializedName("Sql")
     @Expose
@@ -45,23 +45,23 @@ public class TopicRulePayload  extends AbstractModel{
     private String Description;
 
     /**
-    * 规则不生效
+    * 是否禁用规则
     */
     @SerializedName("RuleDisabled")
     @Expose
     private Boolean RuleDisabled;
 
     /**
-     * 获取规则的SQL语句，base64编码
-     * @return Sql 规则的SQL语句，base64编码
+     * 获取规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
+     * @return Sql 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
      */
     public String getSql() {
         return this.Sql;
     }
 
     /**
-     * 设置规则的SQL语句，base64编码
-     * @param Sql 规则的SQL语句，base64编码
+     * 设置规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
+     * @param Sql 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
      */
     public void setSql(String Sql) {
         this.Sql = Sql;
@@ -104,16 +104,16 @@ public class TopicRulePayload  extends AbstractModel{
     }
 
     /**
-     * 获取规则不生效
-     * @return RuleDisabled 规则不生效
+     * 获取是否禁用规则
+     * @return RuleDisabled 是否禁用规则
      */
     public Boolean getRuleDisabled() {
         return this.RuleDisabled;
     }
 
     /**
-     * 设置规则不生效
-     * @param RuleDisabled 规则不生效
+     * 设置是否禁用规则
+     * @param RuleDisabled 是否禁用规则
      */
     public void setRuleDisabled(Boolean RuleDisabled) {
         this.RuleDisabled = RuleDisabled;

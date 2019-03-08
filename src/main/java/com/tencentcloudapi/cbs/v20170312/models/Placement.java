@@ -38,6 +38,7 @@ public class Placement  extends AbstractModel{
 
     /**
     * 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -45,6 +46,7 @@ public class Placement  extends AbstractModel{
 
     /**
     * 围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CageId")
     @Expose
@@ -52,6 +54,7 @@ public class Placement  extends AbstractModel{
 
     /**
     * 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcName")
     @Expose
@@ -91,7 +94,9 @@ public class Placement  extends AbstractModel{
 
     /**
      * 获取实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CdcId 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -99,7 +104,9 @@ public class Placement  extends AbstractModel{
 
     /**
      * 设置实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
@@ -107,7 +114,9 @@ public class Placement  extends AbstractModel{
 
     /**
      * 获取围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CageId 围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCageId() {
         return this.CageId;
@@ -115,7 +124,9 @@ public class Placement  extends AbstractModel{
 
     /**
      * 设置围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CageId 围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCageId(String CageId) {
         this.CageId = CageId;
@@ -123,7 +134,9 @@ public class Placement  extends AbstractModel{
 
     /**
      * 获取独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CdcName 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcName() {
         return this.CdcName;
@@ -131,7 +144,9 @@ public class Placement  extends AbstractModel{
 
     /**
      * 设置独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcName 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcName(String CdcName) {
         this.CdcName = CdcName;

@@ -143,6 +143,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlagError")
     @Expose
@@ -150,6 +151,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -157,6 +159,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadlineError")
     @Expose
@@ -164,6 +167,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsReturnable")
     @Expose
@@ -171,6 +175,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnFailCode")
     @Expose
@@ -178,6 +183,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoSnapshotPolicyIds")
     @Expose
@@ -185,6 +191,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 与云盘绑定的标签，云盘未绑定标签则取值为空。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -192,6 +199,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteWithInstance")
     @Expose
@@ -199,6 +207,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DifferDaysOfDeadline")
     @Expose
@@ -206,6 +215,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Migrating")
     @Expose
@@ -213,6 +223,7 @@ public class Disk  extends AbstractModel{
 
     /**
     * 云盘类型变更的迁移进度，取值0到100。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MigratePercent")
     @Expose
@@ -492,7 +503,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return AutoRenewFlagError 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoRenewFlagError() {
         return this.AutoRenewFlagError;
@@ -500,7 +513,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlagError 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置<br><li>false：云盘自动续费标识正常。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlagError(Boolean AutoRenewFlagError) {
         this.AutoRenewFlagError = AutoRenewFlagError;
@@ -508,7 +523,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRenewFlag() {
         return this.RenewFlag;
@@ -516,7 +533,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -524,7 +543,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return DeadlineError 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeadlineError() {
         return this.DeadlineError;
@@ -532,7 +553,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadlineError 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。<br><li>false：云盘到期时间晚于实例。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadlineError(Boolean DeadlineError) {
         this.DeadlineError = DeadlineError;
@@ -540,7 +563,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return IsReturnable 判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsReturnable() {
         return this.IsReturnable;
@@ -548,7 +573,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IsReturnable 判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还<br><li>false:不支持主动退还。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsReturnable(Boolean IsReturnable) {
         this.IsReturnable = IsReturnable;
@@ -556,7 +583,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getReturnFailCode() {
         return this.ReturnFailCode;
@@ -564,7 +593,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnFailCode(Integer ReturnFailCode) {
         this.ReturnFailCode = ReturnFailCode;
@@ -572,7 +603,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAutoSnapshotPolicyIds() {
         return this.AutoSnapshotPolicyIds;
@@ -580,7 +613,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoSnapshotPolicyIds(String [] AutoSnapshotPolicyIds) {
         this.AutoSnapshotPolicyIds = AutoSnapshotPolicyIds;
@@ -588,7 +623,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取与云盘绑定的标签，云盘未绑定标签则取值为空。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -596,7 +633,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置与云盘绑定的标签，云盘未绑定标签则取值为空。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -604,7 +643,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
@@ -612,7 +653,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
@@ -620,7 +663,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取当前时间距离盘到期的天数（仅对预付费盘有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getDifferDaysOfDeadline() {
         return this.DifferDaysOfDeadline;
@@ -628,7 +673,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置当前时间距离盘到期的天数（仅对预付费盘有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDifferDaysOfDeadline(Integer DifferDaysOfDeadline) {
         this.DifferDaysOfDeadline = DifferDaysOfDeadline;
@@ -636,7 +683,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Migrating 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getMigrating() {
         return this.Migrating;
@@ -644,7 +693,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Migrating 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMigrating(Boolean Migrating) {
         this.Migrating = Migrating;
@@ -652,7 +703,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 获取云盘类型变更的迁移进度，取值0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return MigratePercent 云盘类型变更的迁移进度，取值0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getMigratePercent() {
         return this.MigratePercent;
@@ -660,7 +713,9 @@ public class Disk  extends AbstractModel{
 
     /**
      * 设置云盘类型变更的迁移进度，取值0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MigratePercent 云盘类型变更的迁移进度，取值0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMigratePercent(Integer MigratePercent) {
         this.MigratePercent = MigratePercent;

@@ -24,6 +24,7 @@ public class StorageBlock  extends AbstractModel{
 
     /**
     * HDD本地存储类型，值为：LOCAL_PRO.
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -31,6 +32,7 @@ public class StorageBlock  extends AbstractModel{
 
     /**
     * HDD本地存储的最小容量
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinSize")
     @Expose
@@ -38,6 +40,7 @@ public class StorageBlock  extends AbstractModel{
 
     /**
     * HDD本地存储的最大容量
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxSize")
     @Expose
@@ -45,7 +48,9 @@ public class StorageBlock  extends AbstractModel{
 
     /**
      * 获取HDD本地存储类型，值为：LOCAL_PRO.
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Type HDD本地存储类型，值为：LOCAL_PRO.
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -53,7 +58,9 @@ public class StorageBlock  extends AbstractModel{
 
     /**
      * 设置HDD本地存储类型，值为：LOCAL_PRO.
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Type HDD本地存储类型，值为：LOCAL_PRO.
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -61,7 +68,9 @@ public class StorageBlock  extends AbstractModel{
 
     /**
      * 获取HDD本地存储的最小容量
+注意：此字段可能返回 null，表示取不到有效值。
      * @return MinSize HDD本地存储的最小容量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getMinSize() {
         return this.MinSize;
@@ -69,7 +78,9 @@ public class StorageBlock  extends AbstractModel{
 
     /**
      * 设置HDD本地存储的最小容量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MinSize HDD本地存储的最小容量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinSize(Integer MinSize) {
         this.MinSize = MinSize;
@@ -77,7 +88,9 @@ public class StorageBlock  extends AbstractModel{
 
     /**
      * 获取HDD本地存储的最大容量
+注意：此字段可能返回 null，表示取不到有效值。
      * @return MaxSize HDD本地存储的最大容量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getMaxSize() {
         return this.MaxSize;
@@ -85,7 +98,9 @@ public class StorageBlock  extends AbstractModel{
 
     /**
      * 设置HDD本地存储的最大容量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxSize HDD本地存储的最大容量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxSize(Integer MaxSize) {
         this.MaxSize = MaxSize;

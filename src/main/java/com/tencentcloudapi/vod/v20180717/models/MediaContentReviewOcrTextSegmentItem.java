@@ -24,6 +24,7 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
     * 嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -31,6 +32,7 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
     * 嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -38,6 +40,7 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
     * 嫌疑片段置信度。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -48,6 +51,7 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -55,6 +59,7 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
     * 嫌疑关键词列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeywordSet")
     @Expose
@@ -62,6 +67,7 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
     * 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AreaCoordSet")
     @Expose
@@ -69,7 +75,9 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
      * 获取嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
@@ -77,7 +85,9 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
      * 设置嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
@@ -85,7 +95,9 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
      * 获取嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
@@ -93,7 +105,9 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
      * 设置嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
@@ -101,7 +115,9 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
      * 获取嫌疑片段置信度。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Confidence 嫌疑片段置信度。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -109,7 +125,9 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
      * 设置嫌疑片段置信度。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 嫌疑片段置信度。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -120,10 +138,12 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Suggestion 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -134,10 +154,12 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
@@ -145,7 +167,9 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
      * 获取嫌疑关键词列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return KeywordSet 嫌疑关键词列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
@@ -153,7 +177,9 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
      * 设置嫌疑关键词列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param KeywordSet 嫌疑关键词列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;
@@ -161,7 +187,9 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
      * 获取嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return AreaCoordSet 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer [] getAreaCoordSet() {
         return this.AreaCoordSet;
@@ -169,7 +197,9 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
 
     /**
      * 设置嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AreaCoordSet 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAreaCoordSet(Integer [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

@@ -83,6 +83,7 @@ public class FaceAttributesInfo  extends AbstractModel{
 
     /**
     * 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hat")
     @Expose
@@ -90,6 +91,7 @@ public class FaceAttributesInfo  extends AbstractModel{
 
     /**
     * 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mask")
     @Expose
@@ -97,6 +99,7 @@ public class FaceAttributesInfo  extends AbstractModel{
 
     /**
     * 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hair")
     @Expose
@@ -244,7 +247,9 @@ public class FaceAttributesInfo  extends AbstractModel{
 
     /**
      * 获取是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Hat 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHat() {
         return this.Hat;
@@ -252,7 +257,9 @@ public class FaceAttributesInfo  extends AbstractModel{
 
     /**
      * 设置是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Hat 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHat(Boolean Hat) {
         this.Hat = Hat;
@@ -260,7 +267,9 @@ public class FaceAttributesInfo  extends AbstractModel{
 
     /**
      * 获取是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Mask 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getMask() {
         return this.Mask;
@@ -268,7 +277,9 @@ public class FaceAttributesInfo  extends AbstractModel{
 
     /**
      * 设置是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Mask 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMask(Boolean Mask) {
         this.Mask = Mask;
@@ -276,7 +287,9 @@ public class FaceAttributesInfo  extends AbstractModel{
 
     /**
      * 获取头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Hair 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public FaceHairAttributesInfo getHair() {
         return this.Hair;
@@ -284,7 +297,9 @@ public class FaceAttributesInfo  extends AbstractModel{
 
     /**
      * 设置头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Hair 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHair(FaceHairAttributesInfo Hair) {
         this.Hair = Hair;

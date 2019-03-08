@@ -31,6 +31,7 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
 
     /**
     * 备机1资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Slave1")
     @Expose
@@ -38,6 +39,7 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
 
     /**
     * 备机2资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Slave2")
     @Expose
@@ -68,7 +70,9 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
 
     /**
      * 获取备机1资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Slave1 备机1资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceUsageMonitorSet getSlave1() {
         return this.Slave1;
@@ -76,7 +80,9 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
 
     /**
      * 设置备机1资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Slave1 备机1资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlave1(ResourceUsageMonitorSet Slave1) {
         this.Slave1 = Slave1;
@@ -84,7 +90,9 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
 
     /**
      * 获取备机2资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Slave2 备机2资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceUsageMonitorSet getSlave2() {
         return this.Slave2;
@@ -92,7 +100,9 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
 
     /**
      * 设置备机2资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Slave2 备机2资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlave2(ResourceUsageMonitorSet Slave2) {
         this.Slave2 = Slave2;

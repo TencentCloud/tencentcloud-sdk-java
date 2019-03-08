@@ -31,6 +31,7 @@ public class GetGroupListResponse  extends AbstractModel{
 
     /**
     * 人员库总数量
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupNum")
     @Expose
@@ -61,7 +62,9 @@ public class GetGroupListResponse  extends AbstractModel{
 
     /**
      * 获取人员库总数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @return GroupNum 人员库总数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getGroupNum() {
         return this.GroupNum;
@@ -69,7 +72,9 @@ public class GetGroupListResponse  extends AbstractModel{
 
     /**
      * 设置人员库总数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupNum 人员库总数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupNum(Integer GroupNum) {
         this.GroupNum = GroupNum;

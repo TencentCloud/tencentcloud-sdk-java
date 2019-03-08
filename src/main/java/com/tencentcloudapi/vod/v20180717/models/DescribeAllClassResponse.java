@@ -24,6 +24,7 @@ public class DescribeAllClassResponse  extends AbstractModel{
 
     /**
     * 分类信息集合
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClassInfoSet")
     @Expose
@@ -38,7 +39,9 @@ public class DescribeAllClassResponse  extends AbstractModel{
 
     /**
      * 获取分类信息集合
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ClassInfoSet 分类信息集合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaClassInfo [] getClassInfoSet() {
         return this.ClassInfoSet;
@@ -46,7 +49,9 @@ public class DescribeAllClassResponse  extends AbstractModel{
 
     /**
      * 设置分类信息集合
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ClassInfoSet 分类信息集合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassInfoSet(MediaClassInfo [] ClassInfoSet) {
         this.ClassInfoSet = ClassInfoSet;

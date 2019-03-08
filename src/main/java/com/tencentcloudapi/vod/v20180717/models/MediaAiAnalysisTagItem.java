@@ -24,6 +24,7 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
 
     /**
     * 标签名称。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -31,6 +32,7 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
 
     /**
     * 标签的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -38,7 +40,9 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
 
     /**
      * 获取标签名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Tag 标签名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
         return this.Tag;
@@ -46,7 +50,9 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
 
     /**
      * 设置标签名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 标签名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
@@ -54,7 +60,9 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
 
     /**
      * 获取标签的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Confidence 标签的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -62,7 +70,9 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
 
     /**
      * 设置标签的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 标签的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

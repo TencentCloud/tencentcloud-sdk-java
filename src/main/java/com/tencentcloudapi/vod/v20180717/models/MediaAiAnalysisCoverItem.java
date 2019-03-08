@@ -24,6 +24,7 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
 
     /**
     * 智能封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -31,6 +32,7 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
 
     /**
     * 智能封面的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -38,7 +40,9 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
 
     /**
      * 获取智能封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CoverUrl 智能封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCoverUrl() {
         return this.CoverUrl;
@@ -46,7 +50,9 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
 
     /**
      * 设置智能封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverUrl 智能封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
@@ -54,7 +60,9 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
 
     /**
      * 获取智能封面的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Confidence 智能封面的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -62,7 +70,9 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
 
     /**
      * 设置智能封面的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 智能封面的可信度，取值范围是 0 到 100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

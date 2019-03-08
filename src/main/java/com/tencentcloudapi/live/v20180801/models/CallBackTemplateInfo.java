@@ -86,6 +86,13 @@ public class CallBackTemplateInfo  extends AbstractModel{
     private String PornCensorshipNotifyUrl;
 
     /**
+    * 回调的鉴权key
+    */
+    @SerializedName("CallbackKey")
+    @Expose
+    private String CallbackKey;
+
+    /**
      * 获取模板Id。
      * @return TemplateId 模板Id。
      */
@@ -230,6 +237,22 @@ public class CallBackTemplateInfo  extends AbstractModel{
     }
 
     /**
+     * 获取回调的鉴权key
+     * @return CallbackKey 回调的鉴权key
+     */
+    public String getCallbackKey() {
+        return this.CallbackKey;
+    }
+
+    /**
+     * 设置回调的鉴权key
+     * @param CallbackKey 回调的鉴权key
+     */
+    public void setCallbackKey(String CallbackKey) {
+        this.CallbackKey = CallbackKey;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class CallBackTemplateInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "RecordNotifyUrl", this.RecordNotifyUrl);
         this.setParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
+        this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
 
     }
 }

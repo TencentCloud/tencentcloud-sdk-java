@@ -24,6 +24,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 
     /**
     * 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Definition")
     @Expose
@@ -33,6 +34,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     * 采样方式，取值范围：
 <li>Percent：根据百分比间隔采样。</li>
 <li>Time：根据时间间隔采样。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleType")
     @Expose
@@ -42,6 +44,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     * 采样间隔
 <li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
 <li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interval")
     @Expose
@@ -49,6 +52,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 
     /**
     * 生成的截图 url 列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageUrlSet")
     @Expose
@@ -56,6 +60,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 
     /**
     * 截图如果被打上了水印，被打水印的模板 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaterMarkDefinition")
     @Expose
@@ -63,7 +68,9 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 
     /**
      * 获取采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Definition 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getDefinition() {
         return this.Definition;
@@ -71,7 +78,9 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 
     /**
      * 设置采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Definition 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefinition(Integer Definition) {
         this.Definition = Definition;
@@ -81,9 +90,11 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
      * 获取采样方式，取值范围：
 <li>Percent：根据百分比间隔采样。</li>
 <li>Time：根据时间间隔采样。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SampleType 采样方式，取值范围：
 <li>Percent：根据百分比间隔采样。</li>
 <li>Time：根据时间间隔采样。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSampleType() {
         return this.SampleType;
@@ -93,9 +104,11 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
      * 设置采样方式，取值范围：
 <li>Percent：根据百分比间隔采样。</li>
 <li>Time：根据时间间隔采样。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleType 采样方式，取值范围：
 <li>Percent：根据百分比间隔采样。</li>
 <li>Time：根据时间间隔采样。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleType(String SampleType) {
         this.SampleType = SampleType;
@@ -105,9 +118,11 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
      * 获取采样间隔
 <li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
 <li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Interval 采样间隔
 <li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
 <li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getInterval() {
         return this.Interval;
@@ -117,9 +132,11 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
      * 设置采样间隔
 <li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
 <li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Interval 采样间隔
 <li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
 <li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterval(Integer Interval) {
         this.Interval = Interval;
@@ -127,7 +144,9 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 
     /**
      * 获取生成的截图 url 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ImageUrlSet 生成的截图 url 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getImageUrlSet() {
         return this.ImageUrlSet;
@@ -135,7 +154,9 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 
     /**
      * 设置生成的截图 url 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageUrlSet 生成的截图 url 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageUrlSet(String [] ImageUrlSet) {
         this.ImageUrlSet = ImageUrlSet;
@@ -143,7 +164,9 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 
     /**
      * 获取截图如果被打上了水印，被打水印的模板 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer [] getWaterMarkDefinition() {
         return this.WaterMarkDefinition;
@@ -151,7 +174,9 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 
     /**
      * 设置截图如果被打上了水印，被打水印的模板 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaterMarkDefinition(Integer [] WaterMarkDefinition) {
         this.WaterMarkDefinition = WaterMarkDefinition;

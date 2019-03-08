@@ -24,6 +24,7 @@ public class MediaTranscodeInfo  extends AbstractModel{
 
     /**
     * 各规格的转码信息集合，每个元素代表一个规格的转码结果。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeSet")
     @Expose
@@ -31,7 +32,9 @@ public class MediaTranscodeInfo  extends AbstractModel{
 
     /**
      * 获取各规格的转码信息集合，每个元素代表一个规格的转码结果。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return TranscodeSet 各规格的转码信息集合，每个元素代表一个规格的转码结果。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaTranscodeItem [] getTranscodeSet() {
         return this.TranscodeSet;
@@ -39,7 +42,9 @@ public class MediaTranscodeInfo  extends AbstractModel{
 
     /**
      * 设置各规格的转码信息集合，每个元素代表一个规格的转码结果。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeSet 各规格的转码信息集合，每个元素代表一个规格的转码结果。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeSet(MediaTranscodeItem [] TranscodeSet) {
         this.TranscodeSet = TranscodeSet;

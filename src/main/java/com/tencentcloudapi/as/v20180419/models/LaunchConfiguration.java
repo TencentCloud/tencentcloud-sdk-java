@@ -94,6 +94,7 @@ public class LaunchConfiguration  extends AbstractModel{
 
     /**
     * 自定义数据。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserData")
     @Expose
@@ -138,6 +139,7 @@ public class LaunchConfiguration  extends AbstractModel{
 
     /**
     * 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceMarketOptions")
     @Expose
@@ -312,7 +314,9 @@ public class LaunchConfiguration  extends AbstractModel{
 
     /**
      * 获取自定义数据。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return UserData 自定义数据。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserData() {
         return this.UserData;
@@ -320,7 +324,9 @@ public class LaunchConfiguration  extends AbstractModel{
 
     /**
      * 设置自定义数据。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UserData 自定义数据。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;
@@ -416,7 +422,9 @@ public class LaunchConfiguration  extends AbstractModel{
 
     /**
      * 获取实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceMarketOptionsRequest getInstanceMarketOptions() {
         return this.InstanceMarketOptions;
@@ -424,7 +432,9 @@ public class LaunchConfiguration  extends AbstractModel{
 
     /**
      * 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
         this.InstanceMarketOptions = InstanceMarketOptions;

@@ -24,6 +24,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
     * 视频转码任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeTaskSet")
     @Expose
@@ -31,6 +32,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
     * 视频转动图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnimatedGraphicTaskSet")
     @Expose
@@ -38,6 +40,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
     * 对视频按时间点截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotByTimeOffsetTaskSet")
     @Expose
@@ -45,6 +48,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
     * 对视频采样截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleSnapshotTaskSet")
     @Expose
@@ -52,6 +56,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
     * 对视频截雪碧图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageSpriteTaskSet")
     @Expose
@@ -59,6 +64,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
     * 对视频截图做封面任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoverBySnapshotTaskSet")
     @Expose
@@ -66,7 +72,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 获取视频转码任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return TranscodeTaskSet 视频转码任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TranscodeTaskInput [] getTranscodeTaskSet() {
         return this.TranscodeTaskSet;
@@ -74,7 +82,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 设置视频转码任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTaskSet 视频转码任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeTaskSet(TranscodeTaskInput [] TranscodeTaskSet) {
         this.TranscodeTaskSet = TranscodeTaskSet;
@@ -82,7 +92,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 获取视频转动图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return AnimatedGraphicTaskSet 视频转动图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnimatedGraphicTaskInput [] getAnimatedGraphicTaskSet() {
         return this.AnimatedGraphicTaskSet;
@@ -90,7 +102,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 设置视频转动图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicTaskSet 视频转动图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnimatedGraphicTaskSet(AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet) {
         this.AnimatedGraphicTaskSet = AnimatedGraphicTaskSet;
@@ -98,7 +112,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 获取对视频按时间点截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SnapshotByTimeOffsetTaskSet 对视频按时间点截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SnapshotByTimeOffsetTaskInput [] getSnapshotByTimeOffsetTaskSet() {
         return this.SnapshotByTimeOffsetTaskSet;
@@ -106,7 +122,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 设置对视频按时间点截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetTaskSet 对视频按时间点截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotByTimeOffsetTaskSet(SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet) {
         this.SnapshotByTimeOffsetTaskSet = SnapshotByTimeOffsetTaskSet;
@@ -114,7 +132,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 获取对视频采样截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SampleSnapshotTaskSet 对视频采样截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SampleSnapshotTaskInput [] getSampleSnapshotTaskSet() {
         return this.SampleSnapshotTaskSet;
@@ -122,7 +142,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 设置对视频采样截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleSnapshotTaskSet 对视频采样截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleSnapshotTaskSet(SampleSnapshotTaskInput [] SampleSnapshotTaskSet) {
         this.SampleSnapshotTaskSet = SampleSnapshotTaskSet;
@@ -130,7 +152,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 获取对视频截雪碧图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ImageSpriteTaskSet 对视频截雪碧图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageSpriteTaskInput [] getImageSpriteTaskSet() {
         return this.ImageSpriteTaskSet;
@@ -138,7 +162,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 设置对视频截雪碧图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageSpriteTaskSet 对视频截雪碧图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageSpriteTaskSet(ImageSpriteTaskInput [] ImageSpriteTaskSet) {
         this.ImageSpriteTaskSet = ImageSpriteTaskSet;
@@ -146,7 +172,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 获取对视频截图做封面任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CoverBySnapshotTaskSet 对视频截图做封面任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CoverBySnapshotTaskInput [] getCoverBySnapshotTaskSet() {
         return this.CoverBySnapshotTaskSet;
@@ -154,7 +182,9 @@ public class MediaProcessTaskInput  extends AbstractModel{
 
     /**
      * 设置对视频截图做封面任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverBySnapshotTaskSet 对视频截图做封面任务列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoverBySnapshotTaskSet(CoverBySnapshotTaskInput [] CoverBySnapshotTaskSet) {
         this.CoverBySnapshotTaskSet = CoverBySnapshotTaskSet;

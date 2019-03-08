@@ -24,6 +24,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 
     /**
     * 视频暴恐评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -34,6 +35,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -49,6 +51,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -56,6 +59,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 
     /**
     * 有暴恐嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -63,7 +67,9 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 
     /**
      * 获取视频暴恐评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Confidence 视频暴恐评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -71,7 +77,9 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 
     /**
      * 设置视频暴恐评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 视频暴恐评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -82,10 +90,12 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Suggestion 暴恐结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -96,10 +106,12 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 暴恐结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
@@ -115,6 +127,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Label 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
@@ -124,6 +137,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -139,6 +153,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
@@ -148,6 +163,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -155,7 +171,9 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 
     /**
      * 获取有暴恐嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SegmentSet 有暴恐嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaContentReviewSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -163,7 +181,9 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 
     /**
      * 设置有暴恐嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentSet 有暴恐嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentSet(MediaContentReviewSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

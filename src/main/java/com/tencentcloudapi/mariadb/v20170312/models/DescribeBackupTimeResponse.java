@@ -31,6 +31,7 @@ public class DescribeBackupTimeResponse  extends AbstractModel{
 
     /**
     * 实例备份时间配置信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -61,7 +62,9 @@ public class DescribeBackupTimeResponse  extends AbstractModel{
 
     /**
      * 获取实例备份时间配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Items 实例备份时间配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DBBackupTimeConfig getItems() {
         return this.Items;
@@ -69,7 +72,9 @@ public class DescribeBackupTimeResponse  extends AbstractModel{
 
     /**
      * 设置实例备份时间配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 实例备份时间配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DBBackupTimeConfig Items) {
         this.Items = Items;

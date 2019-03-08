@@ -24,6 +24,7 @@ public class ImageOsList  extends AbstractModel{
 
     /**
     * 支持的windows操作系统。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Windows")
     @Expose
@@ -31,6 +32,7 @@ public class ImageOsList  extends AbstractModel{
 
     /**
     * 支持的linux操作系统
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Linux")
     @Expose
@@ -38,7 +40,9 @@ public class ImageOsList  extends AbstractModel{
 
     /**
      * 获取支持的windows操作系统。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Windows 支持的windows操作系统。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getWindows() {
         return this.Windows;
@@ -46,7 +50,9 @@ public class ImageOsList  extends AbstractModel{
 
     /**
      * 设置支持的windows操作系统。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Windows 支持的windows操作系统。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWindows(String [] Windows) {
         this.Windows = Windows;
@@ -54,7 +60,9 @@ public class ImageOsList  extends AbstractModel{
 
     /**
      * 获取支持的linux操作系统
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Linux 支持的linux操作系统
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLinux() {
         return this.Linux;
@@ -62,7 +70,9 @@ public class ImageOsList  extends AbstractModel{
 
     /**
      * 设置支持的linux操作系统
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Linux 支持的linux操作系统
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinux(String [] Linux) {
         this.Linux = Linux;

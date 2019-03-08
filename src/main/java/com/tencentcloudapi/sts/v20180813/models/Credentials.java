@@ -30,14 +30,14 @@ public class Credentials  extends AbstractModel{
     private String Token;
 
     /**
-    * 临时证书秘钥ID
+    * 临时证书密钥ID
     */
     @SerializedName("TmpSecretId")
     @Expose
     private String TmpSecretId;
 
     /**
-    * 临时证书秘钥Key
+    * 临时证书密钥Key
     */
     @SerializedName("TmpSecretKey")
     @Expose
@@ -60,32 +60,32 @@ public class Credentials  extends AbstractModel{
     }
 
     /**
-     * 获取临时证书秘钥ID
-     * @return TmpSecretId 临时证书秘钥ID
+     * 获取临时证书密钥ID
+     * @return TmpSecretId 临时证书密钥ID
      */
     public String getTmpSecretId() {
         return this.TmpSecretId;
     }
 
     /**
-     * 设置临时证书秘钥ID
-     * @param TmpSecretId 临时证书秘钥ID
+     * 设置临时证书密钥ID
+     * @param TmpSecretId 临时证书密钥ID
      */
     public void setTmpSecretId(String TmpSecretId) {
         this.TmpSecretId = TmpSecretId;
     }
 
     /**
-     * 获取临时证书秘钥Key
-     * @return TmpSecretKey 临时证书秘钥Key
+     * 获取临时证书密钥Key
+     * @return TmpSecretKey 临时证书密钥Key
      */
     public String getTmpSecretKey() {
         return this.TmpSecretKey;
     }
 
     /**
-     * 设置临时证书秘钥Key
-     * @param TmpSecretKey 临时证书秘钥Key
+     * 设置临时证书密钥Key
+     * @param TmpSecretKey 临时证书密钥Key
      */
     public void setTmpSecretKey(String TmpSecretKey) {
         this.TmpSecretKey = TmpSecretKey;

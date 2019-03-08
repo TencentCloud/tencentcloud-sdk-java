@@ -37,6 +37,7 @@ public class AiAnalysisResult  extends AbstractModel{
 
     /**
     * 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClassificationTask")
     @Expose
@@ -44,6 +45,7 @@ public class AiAnalysisResult  extends AbstractModel{
 
     /**
     * 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoverTask")
     @Expose
@@ -51,6 +53,7 @@ public class AiAnalysisResult  extends AbstractModel{
 
     /**
     * 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagTask")
     @Expose
@@ -98,7 +101,9 @@ public class AiAnalysisResult  extends AbstractModel{
 
     /**
      * 获取视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskClassificationResult getClassificationTask() {
         return this.ClassificationTask;
@@ -106,7 +111,9 @@ public class AiAnalysisResult  extends AbstractModel{
 
     /**
      * 设置视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassificationTask(AiAnalysisTaskClassificationResult ClassificationTask) {
         this.ClassificationTask = ClassificationTask;
@@ -114,7 +121,9 @@ public class AiAnalysisResult  extends AbstractModel{
 
     /**
      * 获取视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CoverTask 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskCoverResult getCoverTask() {
         return this.CoverTask;
@@ -122,7 +131,9 @@ public class AiAnalysisResult  extends AbstractModel{
 
     /**
      * 设置视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverTask 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoverTask(AiAnalysisTaskCoverResult CoverTask) {
         this.CoverTask = CoverTask;
@@ -130,7 +141,9 @@ public class AiAnalysisResult  extends AbstractModel{
 
     /**
      * 获取视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return TagTask 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskTagResult getTagTask() {
         return this.TagTask;
@@ -138,7 +151,9 @@ public class AiAnalysisResult  extends AbstractModel{
 
     /**
      * 设置视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TagTask 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagTask(AiAnalysisTaskTagResult TagTask) {
         this.TagTask = TagTask;

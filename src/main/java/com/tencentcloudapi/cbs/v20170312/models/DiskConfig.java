@@ -73,6 +73,7 @@ public class DiskConfig  extends AbstractModel{
 
     /**
     * 实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceClass")
     @Expose
@@ -80,6 +81,7 @@ public class DiskConfig  extends AbstractModel{
 
     /**
     * 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceFamily")
     @Expose
@@ -199,7 +201,9 @@ public class DiskConfig  extends AbstractModel{
 
     /**
      * 获取实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return DeviceClass 实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceClass() {
         return this.DeviceClass;
@@ -207,7 +211,9 @@ public class DiskConfig  extends AbstractModel{
 
     /**
      * 设置实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceClass 实例机型。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceClass(String DeviceClass) {
         this.DeviceClass = DeviceClass;
@@ -215,7 +221,9 @@ public class DiskConfig  extends AbstractModel{
 
     /**
      * 获取实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
      * @return InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceFamily() {
         return this.InstanceFamily;
@@ -223,7 +231,9 @@ public class DiskConfig  extends AbstractModel{
 
     /**
      * 设置实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceFamily(String InstanceFamily) {
         this.InstanceFamily = InstanceFamily;

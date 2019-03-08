@@ -24,6 +24,7 @@ public class PullEventsResponse  extends AbstractModel{
 
     /**
     * 事件列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventSet")
     @Expose
@@ -38,7 +39,9 @@ public class PullEventsResponse  extends AbstractModel{
 
     /**
      * 获取事件列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return EventSet 事件列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventContent [] getEventSet() {
         return this.EventSet;
@@ -46,7 +49,9 @@ public class PullEventsResponse  extends AbstractModel{
 
     /**
      * 设置事件列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EventSet 事件列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventSet(EventContent [] EventSet) {
         this.EventSet = EventSet;

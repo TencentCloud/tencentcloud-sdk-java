@@ -55,10 +55,10 @@ public class CdnClient extends AbstractClient{
 + 带宽（单位为 bps）
 + 请求数（单位为 次）
 + 流量命中率（单位为 %，小数点后保留两位）
-+ 状态码 2XX 汇总及各 2 开头状态码明细（单位为 个）
-+ 状态码 3XX 汇总及各 3 开头状态码明细（单位为 个）
-+ 状态码 4XX 汇总及各 4 开头状态码明细（单位为 个）
-+ 状态码 5XX 汇总及各 5 开头状态码明细（单位为 个）
++ 状态码 2xx 汇总及各 2 开头状态码明细（单位为 个）
++ 状态码 3xx 汇总及各 3 开头状态码明细（单位为 个）
++ 状态码 4xx 汇总及各 4 开头状态码明细（单位为 个）
++ 状态码 5xx 汇总及各 5 开头状态码明细（单位为 个）
      * @param req DescribeCdnDataRequest
      * @return DescribeCdnDataResponse
      * @throws TencentCloudSDKException
@@ -122,10 +122,10 @@ public class CdnClient extends AbstractClient{
 + 回源请求数（单位为 次）
 + 回源失败请求数（单位为 次）
 + 回源失败率（单位为 %，小数点后保留两位）
-+ 回源状态码 2XX 汇总及各 2 开头回源状态码明细（单位为 个）
-+ 回源状态码 3XX 汇总及各 3 开头回源状态码明细（单位为 个）
-+ 回源状态码 4XX 汇总及各 4 开头回源状态码明细（单位为 个）
-+ 回源状态码 5XX 汇总及各 5 开头回源状态码明细（单位为 个）
++ 回源状态码 2xx 汇总及各 2 开头回源状态码明细（单位为 个）
++ 回源状态码 3xx 汇总及各 3 开头回源状态码明细（单位为 个）
++ 回源状态码 4xx 汇总及各 4 开头回源状态码明细（单位为 个）
++ 回源状态码 5xx 汇总及各 5 开头回源状态码明细（单位为 个）
      * @param req DescribeOriginDataRequest
      * @return DescribeOriginDataResponse
      * @throws TencentCloudSDKException
@@ -161,12 +161,66 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，全网访问会直接返回 403。（接口尚在内测中，暂未全量开放使用）
+     * @param req DisableCachesRequest
+     * @return DisableCachesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableCachesResponse DisableCaches(DisableCachesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableCachesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableCachesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableCaches"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。（接口尚在内测中，暂未全量开放使用）
+     * @param req EnableCachesRequest
+     * @return EnableCachesResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableCachesResponse EnableCaches(EnableCachesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableCachesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableCachesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableCaches"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *GetDisableRecords 用户查询资源禁用历史，及 URL 当前状态。（接口尚在内测中，暂未全量开放使用）
+     * @param req GetDisableRecordsRequest
+     * @return GetDisableRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDisableRecordsResponse GetDisableRecords(GetDisableRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDisableRecordsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDisableRecordsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetDisableRecords"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *ListTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
 
 + 依据总流量、总请求数对访问 URL 排序，从大至小返回 TOP 1000 URL
-+ 依据总流量、总请求数对客户端省份排序，从大至小返回省份列表
++ 依据总流量、总请求数对客户端省份排序，从大至小返回省份列表
 + 依据总流量、总请求数对客户端运营商排序，从大至小返回运营商列表
-+ 依据总流量、峰值带宽、总请求数、平均命中率、2XX/3XX/4XX/5XX 状态码对域名排序，从大至小返回域名列表
++ 依据总流量、峰值带宽、总请求数、平均命中率、2XX/3XX/4XX/5XX 状态码对域名排序，从大至小返回域名列表
 + 依据总回源流量、回源峰值带宽、总回源请求数、平均回源失败率、2XX/3XX/4XX/5XX 回源状态码对域名排序，从大至小返回域名列表
      * @param req ListTopDataRequest
      * @return ListTopDataResponse

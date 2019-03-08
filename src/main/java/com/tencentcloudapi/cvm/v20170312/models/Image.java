@@ -108,6 +108,7 @@ public class Image  extends AbstractModel{
 
     /**
     * 同步百分比
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncPercent")
     @Expose
@@ -115,6 +116,7 @@ public class Image  extends AbstractModel{
 
     /**
     * 镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportCloudinit")
     @Expose
@@ -314,7 +316,9 @@ public class Image  extends AbstractModel{
 
     /**
      * 获取同步百分比
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SyncPercent 同步百分比
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getSyncPercent() {
         return this.SyncPercent;
@@ -322,7 +326,9 @@ public class Image  extends AbstractModel{
 
     /**
      * 设置同步百分比
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncPercent 同步百分比
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncPercent(Integer SyncPercent) {
         this.SyncPercent = SyncPercent;
@@ -330,7 +336,9 @@ public class Image  extends AbstractModel{
 
     /**
      * 获取镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。
      * @return IsSupportCloudinit 镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsSupportCloudinit() {
         return this.IsSupportCloudinit;
@@ -338,7 +346,9 @@ public class Image  extends AbstractModel{
 
     /**
      * 设置镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportCloudinit 镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportCloudinit(Boolean IsSupportCloudinit) {
         this.IsSupportCloudinit = IsSupportCloudinit;

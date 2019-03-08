@@ -33,6 +33,7 @@ public class EditMediaTask  extends AbstractModel{
     * 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -42,6 +43,7 @@ public class EditMediaTask  extends AbstractModel{
     * 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -49,6 +51,7 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
     * 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -56,6 +59,7 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
     * 视频编辑任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Input")
     @Expose
@@ -63,6 +67,7 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
     * 视频编辑任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -70,6 +75,7 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
     * 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcedureTaskId")
     @Expose
@@ -95,9 +101,11 @@ public class EditMediaTask  extends AbstractModel{
      * 获取任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -107,9 +115,11 @@ public class EditMediaTask  extends AbstractModel{
      * 设置任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -119,9 +129,11 @@ public class EditMediaTask  extends AbstractModel{
      * 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getErrCode() {
         return this.ErrCode;
@@ -131,9 +143,11 @@ public class EditMediaTask  extends AbstractModel{
      * 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Integer ErrCode) {
         this.ErrCode = ErrCode;
@@ -141,7 +155,9 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
      * 获取错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -149,7 +165,9 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
      * 设置错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -157,7 +175,9 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
      * 获取视频编辑任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Input 视频编辑任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public EditMediaTaskInput getInput() {
         return this.Input;
@@ -165,7 +185,9 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
      * 设置视频编辑任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Input 视频编辑任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInput(EditMediaTaskInput Input) {
         this.Input = Input;
@@ -173,7 +195,9 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
      * 获取视频编辑任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Output 视频编辑任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public EditMediaTaskOutput getOutput() {
         return this.Output;
@@ -181,7 +205,9 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
      * 设置视频编辑任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 视频编辑任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(EditMediaTaskOutput Output) {
         this.Output = Output;
@@ -189,7 +215,9 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
      * 获取若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ProcedureTaskId 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcedureTaskId() {
         return this.ProcedureTaskId;
@@ -197,7 +225,9 @@ public class EditMediaTask  extends AbstractModel{
 
     /**
      * 设置若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcedureTaskId 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcedureTaskId(String ProcedureTaskId) {
         this.ProcedureTaskId = ProcedureTaskId;

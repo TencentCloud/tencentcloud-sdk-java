@@ -33,6 +33,7 @@ public class PullFileTask  extends AbstractModel{
     * 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -40,6 +41,7 @@ public class PullFileTask  extends AbstractModel{
 
     /**
     * 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -47,6 +49,7 @@ public class PullFileTask  extends AbstractModel{
 
     /**
     * 转拉上传完成后生成的视频 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -54,6 +57,7 @@ public class PullFileTask  extends AbstractModel{
 
     /**
     * 转拉上传完成后生成的播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileUrl")
     @Expose
@@ -61,6 +65,7 @@ public class PullFileTask  extends AbstractModel{
 
     /**
     * 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcedureTaskId")
     @Expose
@@ -86,9 +91,11 @@ public class PullFileTask  extends AbstractModel{
      * 获取错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getErrCode() {
         return this.ErrCode;
@@ -98,9 +105,11 @@ public class PullFileTask  extends AbstractModel{
      * 设置错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Integer ErrCode) {
         this.ErrCode = ErrCode;
@@ -108,7 +117,9 @@ public class PullFileTask  extends AbstractModel{
 
     /**
      * 获取错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -116,7 +127,9 @@ public class PullFileTask  extends AbstractModel{
 
     /**
      * 设置错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -124,7 +137,9 @@ public class PullFileTask  extends AbstractModel{
 
     /**
      * 获取转拉上传完成后生成的视频 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return FileId 转拉上传完成后生成的视频 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -132,7 +147,9 @@ public class PullFileTask  extends AbstractModel{
 
     /**
      * 设置转拉上传完成后生成的视频 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 转拉上传完成后生成的视频 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -140,7 +157,9 @@ public class PullFileTask  extends AbstractModel{
 
     /**
      * 获取转拉上传完成后生成的播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return FileUrl 转拉上传完成后生成的播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileUrl() {
         return this.FileUrl;
@@ -148,7 +167,9 @@ public class PullFileTask  extends AbstractModel{
 
     /**
      * 设置转拉上传完成后生成的播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileUrl 转拉上传完成后生成的播放地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
@@ -156,7 +177,9 @@ public class PullFileTask  extends AbstractModel{
 
     /**
      * 获取若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ProcedureTaskId 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcedureTaskId() {
         return this.ProcedureTaskId;
@@ -164,7 +187,9 @@ public class PullFileTask  extends AbstractModel{
 
     /**
      * 设置若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcedureTaskId 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcedureTaskId(String ProcedureTaskId) {
         this.ProcedureTaskId = ProcedureTaskId;

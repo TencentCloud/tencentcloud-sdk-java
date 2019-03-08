@@ -24,6 +24,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 转码后的视频文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -31,6 +32,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Definition")
     @Expose
@@ -38,6 +40,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bitrate")
     @Expose
@@ -45,6 +48,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 视频流高度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
@@ -52,6 +56,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 视频流宽度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -59,6 +64,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -66,6 +72,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -73,6 +80,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 容器类型，例如 m4a，mp4 等。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Container")
     @Expose
@@ -80,6 +88,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 视频的 md5 值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Md5")
     @Expose
@@ -87,6 +96,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 音频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioStreamSet")
     @Expose
@@ -94,6 +104,7 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
     * 视频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoStreamSet")
     @Expose
@@ -101,7 +112,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取转码后的视频文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Url 转码后的视频文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -109,7 +122,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置转码后的视频文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 转码后的视频文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -117,7 +132,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getDefinition() {
         return this.Definition;
@@ -125,7 +142,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefinition(Integer Definition) {
         this.Definition = Definition;
@@ -133,7 +152,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取视频流码率平均值与音频流码率平均值之和， 单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getBitrate() {
         return this.Bitrate;
@@ -141,7 +162,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置视频流码率平均值与音频流码率平均值之和， 单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBitrate(Integer Bitrate) {
         this.Bitrate = Bitrate;
@@ -149,7 +172,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取视频流高度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Height 视频流高度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getHeight() {
         return this.Height;
@@ -157,7 +182,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置视频流高度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 视频流高度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Integer Height) {
         this.Height = Height;
@@ -165,7 +192,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取视频流宽度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Width 视频流宽度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getWidth() {
         return this.Width;
@@ -173,7 +202,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置视频流宽度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 视频流宽度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Integer Width) {
         this.Width = Width;
@@ -181,7 +212,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Size 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getSize() {
         return this.Size;
@@ -189,7 +222,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Integer Size) {
         this.Size = Size;
@@ -197,7 +232,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Duration 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDuration() {
         return this.Duration;
@@ -205,7 +242,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
@@ -213,7 +252,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取容器类型，例如 m4a，mp4 等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Container 容器类型，例如 m4a，mp4 等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainer() {
         return this.Container;
@@ -221,7 +262,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置容器类型，例如 m4a，mp4 等。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Container 容器类型，例如 m4a，mp4 等。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainer(String Container) {
         this.Container = Container;
@@ -229,7 +272,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取视频的 md5 值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Md5 视频的 md5 值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMd5() {
         return this.Md5;
@@ -237,7 +282,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置视频的 md5 值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5 视频的 md5 值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
@@ -245,7 +292,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取音频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return AudioStreamSet 音频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaAudioStreamItem [] getAudioStreamSet() {
         return this.AudioStreamSet;
@@ -253,7 +302,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置音频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioStreamSet 音频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
         this.AudioStreamSet = AudioStreamSet;
@@ -261,7 +312,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 获取视频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return VideoStreamSet 视频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaVideoStreamItem [] getVideoStreamSet() {
         return this.VideoStreamSet;
@@ -269,7 +322,9 @@ public class MediaTranscodeItem  extends AbstractModel{
 
     /**
      * 设置视频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoStreamSet 视频流信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
         this.VideoStreamSet = VideoStreamSet;

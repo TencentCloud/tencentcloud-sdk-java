@@ -24,6 +24,7 @@ public class RunMonitorServiceEnabled  extends AbstractModel{
 
     /**
     * 是否开启[云监控](https://cloud.tencent.com/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -31,7 +32,9 @@ public class RunMonitorServiceEnabled  extends AbstractModel{
 
     /**
      * 获取是否开启[云监控](https://cloud.tencent.com/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Enabled 是否开启[云监控](https://cloud.tencent.com/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnabled() {
         return this.Enabled;
@@ -39,7 +42,9 @@ public class RunMonitorServiceEnabled  extends AbstractModel{
 
     /**
      * 设置是否开启[云监控](https://cloud.tencent.com/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否开启[云监控](https://cloud.tencent.com/document/product/248)服务。取值范围：<br><li>TRUE：表示开启云监控服务<br><li>FALSE：表示不开启云监控服务<br><br>默认取值：TRUE。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;

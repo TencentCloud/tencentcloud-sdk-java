@@ -37,7 +37,7 @@ public class AutoScalingGroup  extends AbstractModel{
     private String AutoScalingGroupName;
 
     /**
-    * 伸缩组状态
+    * 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
     */
     @SerializedName("AutoScalingGroupStatus")
     @Expose
@@ -170,6 +170,13 @@ public class AutoScalingGroup  extends AbstractModel{
     private String RetryPolicy;
 
     /**
+    * 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+    */
+    @SerializedName("InActivityStatus")
+    @Expose
+    private String InActivityStatus;
+
+    /**
      * 获取伸缩组ID
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -202,16 +209,16 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组状态
-     * @return AutoScalingGroupStatus 伸缩组状态
+     * 获取伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
+     * @return AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
      */
     public String getAutoScalingGroupStatus() {
         return this.AutoScalingGroupStatus;
     }
 
     /**
-     * 设置伸缩组状态
-     * @param AutoScalingGroupStatus 伸缩组状态
+     * 设置伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
+     * @param AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
      */
     public void setAutoScalingGroupStatus(String AutoScalingGroupStatus) {
         this.AutoScalingGroupStatus = AutoScalingGroupStatus;
@@ -506,6 +513,22 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
+     * 获取伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+     * @return InActivityStatus 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+     */
+    public String getInActivityStatus() {
+        return this.InActivityStatus;
+    }
+
+    /**
+     * 设置伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+     * @param InActivityStatus 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+     */
+    public void setInActivityStatus(String InActivityStatus) {
+        this.InActivityStatus = InActivityStatus;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -530,6 +553,7 @@ public class AutoScalingGroup  extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArraySimple(map, prefix + "ZoneSet.", this.ZoneSet);
         this.setParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
+        this.setParamSimple(map, prefix + "InActivityStatus", this.InActivityStatus);
 
     }
 }

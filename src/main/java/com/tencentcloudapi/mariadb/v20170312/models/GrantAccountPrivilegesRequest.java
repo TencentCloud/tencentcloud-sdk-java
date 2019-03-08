@@ -44,7 +44,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     private String Host;
 
     /**
-    * 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
+    * 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。
     */
     @SerializedName("DbName")
     @Expose
@@ -131,16 +131,16 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
-     * @return DbName 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
+     * 获取数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。
+     * @return DbName 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * 设置数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
-     * @param DbName 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
+     * 设置数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。
+     * @param DbName 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;

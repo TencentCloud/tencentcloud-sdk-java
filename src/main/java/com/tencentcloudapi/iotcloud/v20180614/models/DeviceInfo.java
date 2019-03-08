@@ -128,6 +128,38 @@ public class DeviceInfo  extends AbstractModel{
     private Integer LoraMoteType;
 
     /**
+    * 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirstOnlineTime")
+    @Expose
+    private Integer FirstOnlineTime;
+
+    /**
+    * 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastOfflineTime")
+    @Expose
+    private Integer LastOfflineTime;
+
+    /**
+    * 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Integer CreateTime;
+
+    /**
+    * 设备日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogLevel")
+    @Expose
+    private Integer LogLevel;
+
+    /**
      * 获取设备名
      * @return DeviceName 设备名
      */
@@ -368,6 +400,86 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return FirstOnlineTime 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getFirstOnlineTime() {
+        return this.FirstOnlineTime;
+    }
+
+    /**
+     * 设置首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirstOnlineTime 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirstOnlineTime(Integer FirstOnlineTime) {
+        this.FirstOnlineTime = FirstOnlineTime;
+    }
+
+    /**
+     * 获取最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LastOfflineTime 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getLastOfflineTime() {
+        return this.LastOfflineTime;
+    }
+
+    /**
+     * 设置最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastOfflineTime 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastOfflineTime(Integer LastOfflineTime) {
+        this.LastOfflineTime = LastOfflineTime;
+    }
+
+    /**
+     * 获取设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CreateTime 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * 设置设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Integer CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * 获取设备日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LogLevel 设备日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getLogLevel() {
+        return this.LogLevel;
+    }
+
+    /**
+     * 设置设备日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogLevel 设备日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogLevel(Integer LogLevel) {
+        this.LogLevel = LogLevel;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +498,10 @@ public class DeviceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         this.setParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
         this.setParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
+        this.setParamSimple(map, prefix + "FirstOnlineTime", this.FirstOnlineTime);
+        this.setParamSimple(map, prefix + "LastOfflineTime", this.LastOfflineTime);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
 
     }
 }

@@ -30,7 +30,7 @@ public class SetOutBandVpnAuthPasswordRequest  extends AbstractModel{
     private String Password;
 
     /**
-    * 操作字段，取值为：create（创建）或update（修改）
+    * 操作字段，取值为：Create（创建）或Update（修改）
     */
     @SerializedName("Operate")
     @Expose
@@ -53,16 +53,16 @@ public class SetOutBandVpnAuthPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作字段，取值为：create（创建）或update（修改）
-     * @return Operate 操作字段，取值为：create（创建）或update（修改）
+     * 获取操作字段，取值为：Create（创建）或Update（修改）
+     * @return Operate 操作字段，取值为：Create（创建）或Update（修改）
      */
     public String getOperate() {
         return this.Operate;
     }
 
     /**
-     * 设置操作字段，取值为：create（创建）或update（修改）
-     * @param Operate 操作字段，取值为：create（创建）或update（修改）
+     * 设置操作字段，取值为：Create（创建）或Update（修改）
+     * @param Operate 操作字段，取值为：Create（创建）或Update（修改）
      */
     public void setOperate(String Operate) {
         this.Operate = Operate;

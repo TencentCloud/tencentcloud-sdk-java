@@ -24,6 +24,7 @@ public class AiAnalysisTaskTagOutput  extends AbstractModel{
 
     /**
     * 视频智能标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -31,7 +32,9 @@ public class AiAnalysisTaskTagOutput  extends AbstractModel{
 
     /**
      * 获取视频智能标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return TagSet 视频智能标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaAiAnalysisTagItem getTagSet() {
         return this.TagSet;
@@ -39,7 +42,9 @@ public class AiAnalysisTaskTagOutput  extends AbstractModel{
 
     /**
      * 设置视频智能标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 视频智能标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(MediaAiAnalysisTagItem TagSet) {
         this.TagSet = TagSet;

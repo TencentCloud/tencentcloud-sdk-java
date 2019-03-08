@@ -38,6 +38,7 @@ public class GroupInfo  extends AbstractModel{
 
     /**
     * 人员库自定义描述字段
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupExDescriptions")
     @Expose
@@ -45,6 +46,7 @@ public class GroupInfo  extends AbstractModel{
 
     /**
     * 人员库信息备注
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -84,7 +86,9 @@ public class GroupInfo  extends AbstractModel{
 
     /**
      * 获取人员库自定义描述字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @return GroupExDescriptions 人员库自定义描述字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getGroupExDescriptions() {
         return this.GroupExDescriptions;
@@ -92,7 +96,9 @@ public class GroupInfo  extends AbstractModel{
 
     /**
      * 设置人员库自定义描述字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupExDescriptions 人员库自定义描述字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupExDescriptions(String [] GroupExDescriptions) {
         this.GroupExDescriptions = GroupExDescriptions;
@@ -100,7 +106,9 @@ public class GroupInfo  extends AbstractModel{
 
     /**
      * 获取人员库信息备注
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Tag 人员库信息备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
         return this.Tag;
@@ -108,7 +116,9 @@ public class GroupInfo  extends AbstractModel{
 
     /**
      * 设置人员库信息备注
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 人员库信息备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

@@ -71,6 +71,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
     * 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcedureTask")
     @Expose
@@ -78,6 +79,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
     * 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EditMediaTask")
     @Expose
@@ -85,6 +87,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
     * 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatPublishTask")
     @Expose
@@ -92,6 +95,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
     * 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeTask")
     @Expose
@@ -99,6 +103,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
     * 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
@@ -106,6 +111,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
     * 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConcatTask")
     @Expose
@@ -113,6 +119,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
     * 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClipTask")
     @Expose
@@ -120,6 +127,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
     * 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateImageSpriteTask")
     @Expose
@@ -262,7 +270,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 获取视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ProcedureTask 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcedureTask getProcedureTask() {
         return this.ProcedureTask;
@@ -270,7 +280,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 设置视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcedureTask 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcedureTask(ProcedureTask ProcedureTask) {
         this.ProcedureTask = ProcedureTask;
@@ -278,7 +290,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 获取视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public EditMediaTask getEditMediaTask() {
         return this.EditMediaTask;
@@ -286,7 +300,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 设置视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditMediaTask(EditMediaTask EditMediaTask) {
         this.EditMediaTask = EditMediaTask;
@@ -294,7 +310,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 获取微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return WechatPublishTask 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public WechatPublishTask getWechatPublishTask() {
         return this.WechatPublishTask;
@@ -302,7 +320,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 设置微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatPublishTask 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatPublishTask(WechatPublishTask WechatPublishTask) {
         this.WechatPublishTask = WechatPublishTask;
@@ -310,7 +330,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 获取视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return TranscodeTask 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TranscodeTask2017 getTranscodeTask() {
         return this.TranscodeTask;
@@ -318,7 +340,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 设置视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTask 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeTask(TranscodeTask2017 TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
@@ -326,7 +350,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 获取视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
@@ -334,7 +360,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 设置视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
@@ -342,7 +370,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 获取视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ConcatTask 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConcatTask2017 getConcatTask() {
         return this.ConcatTask;
@@ -350,7 +380,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 设置视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConcatTask 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConcatTask(ConcatTask2017 ConcatTask) {
         this.ConcatTask = ConcatTask;
@@ -358,7 +390,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 获取视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ClipTask 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClipTask2017 getClipTask() {
         return this.ClipTask;
@@ -366,7 +400,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 设置视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ClipTask 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClipTask(ClipTask2017 ClipTask) {
         this.ClipTask = ClipTask;
@@ -374,7 +410,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 获取截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return CreateImageSpriteTask 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateImageSpriteTask2017 getCreateImageSpriteTask() {
         return this.CreateImageSpriteTask;
@@ -382,7 +420,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
      * 设置截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateImageSpriteTask 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateImageSpriteTask(CreateImageSpriteTask2017 CreateImageSpriteTask) {
         this.CreateImageSpriteTask = CreateImageSpriteTask;

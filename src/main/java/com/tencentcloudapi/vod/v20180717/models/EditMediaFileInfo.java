@@ -31,6 +31,7 @@ public class EditMediaFileInfo  extends AbstractModel{
 
     /**
     * 视频剪辑的起始偏移时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -38,6 +39,7 @@ public class EditMediaFileInfo  extends AbstractModel{
 
     /**
     * 视频剪辑的起始结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -61,7 +63,9 @@ public class EditMediaFileInfo  extends AbstractModel{
 
     /**
      * 获取视频剪辑的起始偏移时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return StartTimeOffset 视频剪辑的起始偏移时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
@@ -69,7 +73,9 @@ public class EditMediaFileInfo  extends AbstractModel{
 
     /**
      * 设置视频剪辑的起始偏移时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeOffset 视频剪辑的起始偏移时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
@@ -77,7 +83,9 @@ public class EditMediaFileInfo  extends AbstractModel{
 
     /**
      * 获取视频剪辑的起始结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return EndTimeOffset 视频剪辑的起始结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
@@ -85,7 +93,9 @@ public class EditMediaFileInfo  extends AbstractModel{
 
     /**
      * 设置视频剪辑的起始结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTimeOffset 视频剪辑的起始结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

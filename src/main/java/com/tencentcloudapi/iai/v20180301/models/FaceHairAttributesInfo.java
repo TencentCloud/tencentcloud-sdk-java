@@ -24,6 +24,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
 
     /**
     * 0：光头，1：短发，2：中发，3：长发，4：绑发
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Length")
     @Expose
@@ -31,6 +32,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
 
     /**
     * 0：有刘海，1：无刘海
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bang")
     @Expose
@@ -38,6 +40,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
 
     /**
     * 0：黑色，1：金色，2：棕色，3：灰白色
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Color")
     @Expose
@@ -45,7 +48,9 @@ public class FaceHairAttributesInfo  extends AbstractModel{
 
     /**
      * 获取0：光头，1：短发，2：中发，3：长发，4：绑发
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Length 0：光头，1：短发，2：中发，3：长发，4：绑发
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getLength() {
         return this.Length;
@@ -53,7 +58,9 @@ public class FaceHairAttributesInfo  extends AbstractModel{
 
     /**
      * 设置0：光头，1：短发，2：中发，3：长发，4：绑发
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Length 0：光头，1：短发，2：中发，3：长发，4：绑发
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLength(Integer Length) {
         this.Length = Length;
@@ -61,7 +68,9 @@ public class FaceHairAttributesInfo  extends AbstractModel{
 
     /**
      * 获取0：有刘海，1：无刘海
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Bang 0：有刘海，1：无刘海
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getBang() {
         return this.Bang;
@@ -69,7 +78,9 @@ public class FaceHairAttributesInfo  extends AbstractModel{
 
     /**
      * 设置0：有刘海，1：无刘海
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Bang 0：有刘海，1：无刘海
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBang(Integer Bang) {
         this.Bang = Bang;
@@ -77,7 +88,9 @@ public class FaceHairAttributesInfo  extends AbstractModel{
 
     /**
      * 获取0：黑色，1：金色，2：棕色，3：灰白色
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Color 0：黑色，1：金色，2：棕色，3：灰白色
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getColor() {
         return this.Color;
@@ -85,7 +98,9 @@ public class FaceHairAttributesInfo  extends AbstractModel{
 
     /**
      * 设置0：黑色，1：金色，2：棕色，3：灰白色
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Color 0：黑色，1：金色，2：棕色，3：灰白色
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColor(Integer Color) {
         this.Color = Color;
