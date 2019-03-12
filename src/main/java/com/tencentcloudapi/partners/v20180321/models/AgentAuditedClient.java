@@ -100,6 +100,20 @@ public class AgentAuditedClient  extends AbstractModel{
     private Integer HasOverdueBill;
 
     /**
+    * 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+    */
+    @SerializedName("ClientType")
+    @Expose
+    private String ClientType;
+
+    /**
+    * 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+    */
+    @SerializedName("ProjectType")
+    @Expose
+    private String ProjectType;
+
+    /**
      * 获取代理商账号ID
      * @return Uin 代理商账号ID
      */
@@ -276,6 +290,38 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
+     * 获取客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * @return ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     */
+    public String getClientType() {
+        return this.ClientType;
+    }
+
+    /**
+     * 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * @param ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     */
+    public void setClientType(String ClientType) {
+        this.ClientType = ClientType;
+    }
+
+    /**
+     * 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     * @return ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     */
+    public String getProjectType() {
+        return this.ProjectType;
+    }
+
+    /**
+     * 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     * @param ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     */
+    public void setProjectType(String ProjectType) {
+        this.ProjectType = ProjectType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +336,8 @@ public class AgentAuditedClient  extends AbstractModel{
         this.setParamSimple(map, prefix + "LastMonthAmt", this.LastMonthAmt);
         this.setParamSimple(map, prefix + "ThisMonthAmt", this.ThisMonthAmt);
         this.setParamSimple(map, prefix + "HasOverdueBill", this.HasOverdueBill);
+        this.setParamSimple(map, prefix + "ClientType", this.ClientType);
+        this.setParamSimple(map, prefix + "ProjectType", this.ProjectType);
 
     }
 }
