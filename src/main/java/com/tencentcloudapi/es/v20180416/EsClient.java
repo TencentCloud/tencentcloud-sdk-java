@@ -85,6 +85,42 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *查询用户该地域下符合条件的ES集群的日志
+     * @param req DescribeInstanceLogsRequest
+     * @return DescribeInstanceLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceLogsResponse DescribeInstanceLogs(DescribeInstanceLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例指定条件下的操作记录
+     * @param req DescribeInstanceOperationsRequest
+     * @return DescribeInstanceOperationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceOperationsResponse DescribeInstanceOperations(DescribeInstanceOperationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceOperationsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceOperationsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceOperations"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询用户该地域下符合条件的所有实例
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -121,7 +157,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
-     *对已存在的集群进行扩缩容，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作
+     *对集群进行扩缩容，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作。参数中InstanceId为必传参数，ForceRestart为选填参数，剩余参数传递组合及含义如下：<br>
+  InstanceName：修改实例名称(仅用于标识实例)<br>
+  NodeNum：集群数据节点横向扩缩容<br>
+  NodeType, DiskSize：集群数据节点纵向扩缩容<br>
+  MasterNodeNum: 集群专用主节点横向扩缩容<br>
+  MasterNodeType, MasterNodeDiskSize: 集群专用主节点纵向扩缩容<br>
+  EsConfig：修改集群配置<br>
+  Password：修改集群密码<br>
+  EsAcl：修改Kibana密码<br>
+  CosBackUp: 设置集群COS自动备份信息<br>
+以上参数组合只能传递一种，多传或少传均会导致请求失败<br>
      * @param req UpdateInstanceRequest
      * @return UpdateInstanceResponse
      * @throws TencentCloudSDKException

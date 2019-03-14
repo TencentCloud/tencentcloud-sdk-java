@@ -44,7 +44,10 @@ public class UpdateInstanceRequest  extends AbstractModel{
     private Integer NodeNum;
 
     /**
-    * 修改后的配置项, JSON格式字符串
+    * 修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
+action.destructive_requires_name
+indices.fielddata.cache.size
+indices.query.bool.max_clause_count
     */
     @SerializedName("EsConfig")
     @Expose
@@ -92,14 +95,14 @@ ES.S1.4XLARGE64: 16 核 64G
     private Integer MasterNodeNum;
 
     /**
-    * 专用主节点规格
+    * 专用主节点规格，与NodeType支持的规格相同
     */
     @SerializedName("MasterNodeType")
     @Expose
     private String MasterNodeType;
 
     /**
-    * 专用主节点磁盘大小
+    * 专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
@@ -111,6 +114,13 @@ ES.S1.4XLARGE64: 16 核 64G
     @SerializedName("ForceRestart")
     @Expose
     private Boolean ForceRestart;
+
+    /**
+    * COS自动备份信息
+    */
+    @SerializedName("CosBackup")
+    @Expose
+    private CosBackup CosBackup;
 
     /**
      * 获取要操作的实例ID
@@ -161,16 +171,28 @@ ES.S1.4XLARGE64: 16 核 64G
     }
 
     /**
-     * 获取修改后的配置项, JSON格式字符串
-     * @return EsConfig 修改后的配置项, JSON格式字符串
+     * 获取修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
+action.destructive_requires_name
+indices.fielddata.cache.size
+indices.query.bool.max_clause_count
+     * @return EsConfig 修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
+action.destructive_requires_name
+indices.fielddata.cache.size
+indices.query.bool.max_clause_count
      */
     public String getEsConfig() {
         return this.EsConfig;
     }
 
     /**
-     * 设置修改后的配置项, JSON格式字符串
-     * @param EsConfig 修改后的配置项, JSON格式字符串
+     * 设置修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
+action.destructive_requires_name
+indices.fielddata.cache.size
+indices.query.bool.max_clause_count
+     * @param EsConfig 修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
+action.destructive_requires_name
+indices.fielddata.cache.size
+indices.query.bool.max_clause_count
      */
     public void setEsConfig(String EsConfig) {
         this.EsConfig = EsConfig;
@@ -281,32 +303,32 @@ ES.S1.4XLARGE64: 16 核 64G
     }
 
     /**
-     * 获取专用主节点规格
-     * @return MasterNodeType 专用主节点规格
+     * 获取专用主节点规格，与NodeType支持的规格相同
+     * @return MasterNodeType 专用主节点规格，与NodeType支持的规格相同
      */
     public String getMasterNodeType() {
         return this.MasterNodeType;
     }
 
     /**
-     * 设置专用主节点规格
-     * @param MasterNodeType 专用主节点规格
+     * 设置专用主节点规格，与NodeType支持的规格相同
+     * @param MasterNodeType 专用主节点规格，与NodeType支持的规格相同
      */
     public void setMasterNodeType(String MasterNodeType) {
         this.MasterNodeType = MasterNodeType;
     }
 
     /**
-     * 获取专用主节点磁盘大小
-     * @return MasterNodeDiskSize 专用主节点磁盘大小
+     * 获取专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
+     * @return MasterNodeDiskSize 专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
      */
     public Integer getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
     /**
-     * 设置专用主节点磁盘大小
-     * @param MasterNodeDiskSize 专用主节点磁盘大小
+     * 设置专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
+     * @param MasterNodeDiskSize 专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
      */
     public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
@@ -329,6 +351,22 @@ ES.S1.4XLARGE64: 16 核 64G
     }
 
     /**
+     * 获取COS自动备份信息
+     * @return CosBackup COS自动备份信息
+     */
+    public CosBackup getCosBackup() {
+        return this.CosBackup;
+    }
+
+    /**
+     * 设置COS自动备份信息
+     * @param CosBackup COS自动备份信息
+     */
+    public void setCosBackup(CosBackup CosBackup) {
+        this.CosBackup = CosBackup;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -344,6 +382,7 @@ ES.S1.4XLARGE64: 16 核 64G
         this.setParamSimple(map, prefix + "MasterNodeType", this.MasterNodeType);
         this.setParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+        this.setParamObj(map, prefix + "CosBackup.", this.CosBackup);
 
     }
 }

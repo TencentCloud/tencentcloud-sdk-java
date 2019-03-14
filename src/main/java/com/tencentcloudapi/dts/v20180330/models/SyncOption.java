@@ -37,14 +37,14 @@ public class SyncOption  extends AbstractModel{
     private Integer RunMode;
 
     /**
-    * 同步模式， 3-增量同步
+    * 同步模式， 3-全量且增量同步
     */
     @SerializedName("SyncType")
     @Expose
     private Integer SyncType;
 
     /**
-    * 数据一致性检测， 1-不配置
+    * 数据一致性检测， 1-无需配置
     */
     @SerializedName("ConsistencyType")
     @Expose
@@ -83,32 +83,32 @@ public class SyncOption  extends AbstractModel{
     }
 
     /**
-     * 获取同步模式， 3-增量同步
-     * @return SyncType 同步模式， 3-增量同步
+     * 获取同步模式， 3-全量且增量同步
+     * @return SyncType 同步模式， 3-全量且增量同步
      */
     public Integer getSyncType() {
         return this.SyncType;
     }
 
     /**
-     * 设置同步模式， 3-增量同步
-     * @param SyncType 同步模式， 3-增量同步
+     * 设置同步模式， 3-全量且增量同步
+     * @param SyncType 同步模式， 3-全量且增量同步
      */
     public void setSyncType(Integer SyncType) {
         this.SyncType = SyncType;
     }
 
     /**
-     * 获取数据一致性检测， 1-不配置
-     * @return ConsistencyType 数据一致性检测， 1-不配置
+     * 获取数据一致性检测， 1-无需配置
+     * @return ConsistencyType 数据一致性检测， 1-无需配置
      */
     public Integer getConsistencyType() {
         return this.ConsistencyType;
     }
 
     /**
-     * 设置数据一致性检测， 1-不配置
-     * @param ConsistencyType 数据一致性检测， 1-不配置
+     * 设置数据一致性检测， 1-无需配置
+     * @param ConsistencyType 数据一致性检测， 1-无需配置
      */
     public void setConsistencyType(Integer ConsistencyType) {
         this.ConsistencyType = ConsistencyType;

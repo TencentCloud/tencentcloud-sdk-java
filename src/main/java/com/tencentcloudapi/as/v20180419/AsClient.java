@@ -415,7 +415,7 @@ public class AsClient extends AbstractClient{
     }
 
     /**
-     *本接口（DettachInstances）用于从伸缩组移出 CVM 实例，本接口不会被销毁实例。
+     *本接口（DetachInstances）用于从伸缩组移出 CVM 实例，本接口不会销毁实例。
      * @param req DetachInstancesRequest
      * @return DetachInstancesResponse
      * @throws TencentCloudSDKException

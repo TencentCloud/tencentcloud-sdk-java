@@ -72,6 +72,13 @@ public class SpeechTranslateResponse  extends AbstractModel{
     private String Target;
 
     /**
+    * 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
+    */
+    @SerializedName("VadSeq")
+    @Expose
+    private Integer VadSeq;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -191,6 +198,22 @@ public class SpeechTranslateResponse  extends AbstractModel{
     }
 
     /**
+     * 获取当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
+     * @return VadSeq 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
+     */
+    public Integer getVadSeq() {
+        return this.VadSeq;
+    }
+
+    /**
+     * 设置当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
+     * @param VadSeq 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
+     */
+    public void setVadSeq(Integer VadSeq) {
+        this.VadSeq = VadSeq;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -217,6 +240,7 @@ public class SpeechTranslateResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "Seq", this.Seq);
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Target", this.Target);
+        this.setParamSimple(map, prefix + "VadSeq", this.VadSeq);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

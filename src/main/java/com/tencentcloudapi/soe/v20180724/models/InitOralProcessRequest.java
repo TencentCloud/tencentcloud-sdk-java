@@ -100,6 +100,13 @@ public class InitOralProcessRequest  extends AbstractModel{
     private Integer IsAsync;
 
     /**
+    * 输入文本模式，0: 普通文本，1: 音素结构文本
+    */
+    @SerializedName("TextMode")
+    @Expose
+    private Integer TextMode;
+
+    /**
      * 获取语音段唯一标识，一段语音一个SessionId
      * @return SessionId 语音段唯一标识，一段语音一个SessionId
      */
@@ -276,6 +283,22 @@ public class InitOralProcessRequest  extends AbstractModel{
     }
 
     /**
+     * 获取输入文本模式，0: 普通文本，1: 音素结构文本
+     * @return TextMode 输入文本模式，0: 普通文本，1: 音素结构文本
+     */
+    public Integer getTextMode() {
+        return this.TextMode;
+    }
+
+    /**
+     * 设置输入文本模式，0: 普通文本，1: 音素结构文本
+     * @param TextMode 输入文本模式，0: 普通文本，1: 音素结构文本
+     */
+    public void setTextMode(Integer TextMode) {
+        this.TextMode = TextMode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class InitOralProcessRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "SentenceInfoEnabled", this.SentenceInfoEnabled);
         this.setParamSimple(map, prefix + "ServerType", this.ServerType);
         this.setParamSimple(map, prefix + "IsAsync", this.IsAsync);
+        this.setParamSimple(map, prefix + "TextMode", this.TextMode);
 
     }
 }

@@ -135,6 +135,13 @@ public class TransmitOralProcessWithInitRequest  extends AbstractModel{
     private Integer IsQuery;
 
     /**
+    * 输入文本模式，0: 普通文本，1: 音素结构文本
+    */
+    @SerializedName("TextMode")
+    @Expose
+    private Integer TextMode;
+
+    /**
      * 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      */
@@ -391,6 +398,22 @@ public class TransmitOralProcessWithInitRequest  extends AbstractModel{
     }
 
     /**
+     * 获取输入文本模式，0: 普通文本，1: 音素结构文本
+     * @return TextMode 输入文本模式，0: 普通文本，1: 音素结构文本
+     */
+    public Integer getTextMode() {
+        return this.TextMode;
+    }
+
+    /**
+     * 设置输入文本模式，0: 普通文本，1: 音素结构文本
+     * @param TextMode 输入文本模式，0: 普通文本，1: 音素结构文本
+     */
+    public void setTextMode(Integer TextMode) {
+        this.TextMode = TextMode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class TransmitOralProcessWithInitRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ServerType", this.ServerType);
         this.setParamSimple(map, prefix + "IsAsync", this.IsAsync);
         this.setParamSimple(map, prefix + "IsQuery", this.IsQuery);
+        this.setParamSimple(map, prefix + "TextMode", this.TextMode);
 
     }
 }

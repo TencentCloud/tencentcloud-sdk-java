@@ -37,7 +37,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     private Integer NodeNum;
 
     /**
-    * 实例版本,当前只支持5.6.4
+    * 实例版本,支持"5.6.4"、"6.4.3"
     */
     @SerializedName("EsVersion")
     @Expose
@@ -118,10 +118,7 @@ RENEW_FLAG_MANUAL：不自动续费，用户手动续费
     private String RenewFlag;
 
     /**
-    * 节点存储类型,取值范围:  
-LOCAL_BASIC: 本地硬盘  
-LOCAL_SSD: 本地SSD硬盘，默认值  
-CLOUD_BASIC: 普通云硬盘  
+    * 节点存储类型,取值范围:    
 CLOUD_PREMIUM: 高硬能云硬盘  
 CLOUD_SSD: SSD云硬盘
     */
@@ -165,18 +162,25 @@ CLOUD_SSD: SSD云硬盘
     private Integer MasterNodeNum;
 
     /**
-    * 专用主节点类型
+    * 专用主节点类型，与NodeType支持的规格相同
     */
     @SerializedName("MasterNodeType")
     @Expose
     private String MasterNodeType;
 
     /**
-    * 专用主节点磁盘大小
+    * 专用主节点磁盘大小，单位GB（系统默认配置50GB，暂不支持自定义）
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
     private Integer MasterNodeDiskSize;
+
+    /**
+    * 配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+    */
+    @SerializedName("ClusterNameInConf")
+    @Expose
+    private String ClusterNameInConf;
 
     /**
      * 获取可用区
@@ -211,16 +215,16 @@ CLOUD_SSD: SSD云硬盘
     }
 
     /**
-     * 获取实例版本,当前只支持5.6.4
-     * @return EsVersion 实例版本,当前只支持5.6.4
+     * 获取实例版本,支持"5.6.4"、"6.4.3"
+     * @return EsVersion 实例版本,支持"5.6.4"、"6.4.3"
      */
     public String getEsVersion() {
         return this.EsVersion;
     }
 
     /**
-     * 设置实例版本,当前只支持5.6.4
-     * @param EsVersion 实例版本,当前只支持5.6.4
+     * 设置实例版本,支持"5.6.4"、"6.4.3"
+     * @param EsVersion 实例版本,支持"5.6.4"、"6.4.3"
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;
@@ -415,16 +419,10 @@ RENEW_FLAG_MANUAL：不自动续费，用户手动续费
     }
 
     /**
-     * 获取节点存储类型,取值范围:  
-LOCAL_BASIC: 本地硬盘  
-LOCAL_SSD: 本地SSD硬盘，默认值  
-CLOUD_BASIC: 普通云硬盘  
+     * 获取节点存储类型,取值范围:    
 CLOUD_PREMIUM: 高硬能云硬盘  
 CLOUD_SSD: SSD云硬盘
-     * @return DiskType 节点存储类型,取值范围:  
-LOCAL_BASIC: 本地硬盘  
-LOCAL_SSD: 本地SSD硬盘，默认值  
-CLOUD_BASIC: 普通云硬盘  
+     * @return DiskType 节点存储类型,取值范围:    
 CLOUD_PREMIUM: 高硬能云硬盘  
 CLOUD_SSD: SSD云硬盘
      */
@@ -433,16 +431,10 @@ CLOUD_SSD: SSD云硬盘
     }
 
     /**
-     * 设置节点存储类型,取值范围:  
-LOCAL_BASIC: 本地硬盘  
-LOCAL_SSD: 本地SSD硬盘，默认值  
-CLOUD_BASIC: 普通云硬盘  
+     * 设置节点存储类型,取值范围:    
 CLOUD_PREMIUM: 高硬能云硬盘  
 CLOUD_SSD: SSD云硬盘
-     * @param DiskType 节点存储类型,取值范围:  
-LOCAL_BASIC: 本地硬盘  
-LOCAL_SSD: 本地SSD硬盘，默认值  
-CLOUD_BASIC: 普通云硬盘  
+     * @param DiskType 节点存储类型,取值范围:    
 CLOUD_PREMIUM: 高硬能云硬盘  
 CLOUD_SSD: SSD云硬盘
      */
@@ -531,35 +523,51 @@ CLOUD_SSD: SSD云硬盘
     }
 
     /**
-     * 获取专用主节点类型
-     * @return MasterNodeType 专用主节点类型
+     * 获取专用主节点类型，与NodeType支持的规格相同
+     * @return MasterNodeType 专用主节点类型，与NodeType支持的规格相同
      */
     public String getMasterNodeType() {
         return this.MasterNodeType;
     }
 
     /**
-     * 设置专用主节点类型
-     * @param MasterNodeType 专用主节点类型
+     * 设置专用主节点类型，与NodeType支持的规格相同
+     * @param MasterNodeType 专用主节点类型，与NodeType支持的规格相同
      */
     public void setMasterNodeType(String MasterNodeType) {
         this.MasterNodeType = MasterNodeType;
     }
 
     /**
-     * 获取专用主节点磁盘大小
-     * @return MasterNodeDiskSize 专用主节点磁盘大小
+     * 获取专用主节点磁盘大小，单位GB（系统默认配置50GB，暂不支持自定义）
+     * @return MasterNodeDiskSize 专用主节点磁盘大小，单位GB（系统默认配置50GB，暂不支持自定义）
      */
     public Integer getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
     /**
-     * 设置专用主节点磁盘大小
-     * @param MasterNodeDiskSize 专用主节点磁盘大小
+     * 设置专用主节点磁盘大小，单位GB（系统默认配置50GB，暂不支持自定义）
+     * @param MasterNodeDiskSize 专用主节点磁盘大小，单位GB（系统默认配置50GB，暂不支持自定义）
      */
     public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
+    }
+
+    /**
+     * 获取配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+     * @return ClusterNameInConf 配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+     */
+    public String getClusterNameInConf() {
+        return this.ClusterNameInConf;
+    }
+
+    /**
+     * 设置配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+     * @param ClusterNameInConf 配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+     */
+    public void setClusterNameInConf(String ClusterNameInConf) {
+        this.ClusterNameInConf = ClusterNameInConf;
     }
 
     /**
@@ -586,6 +594,7 @@ CLOUD_SSD: SSD云硬盘
         this.setParamSimple(map, prefix + "MasterNodeNum", this.MasterNodeNum);
         this.setParamSimple(map, prefix + "MasterNodeType", this.MasterNodeType);
         this.setParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
+        this.setParamSimple(map, prefix + "ClusterNameInConf", this.ClusterNameInConf);
 
     }
 }

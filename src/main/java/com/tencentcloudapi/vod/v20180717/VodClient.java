@@ -127,6 +127,42 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建用户自定义转码模板，数量上限：1000。
+     * @param req CreateTranscodeTemplateRequest
+     * @return CreateTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTranscodeTemplateResponse CreateTranscodeTemplate(CreateTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTranscodeTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTranscodeTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTranscodeTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建用户自定义水印模板，数量上限：1000。
+     * @param req CreateWatermarkTemplateRequest
+     * @return CreateWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWatermarkTemplateResponse CreateWatermarkTemplate(CreateWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWatermarkTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWatermarkTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateWatermarkTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 仅当待删分类无子分类且无媒体关联情况下，可删除分类；
 * 否则，请先执行[删除媒体](/document/product/266/31764)及子分类，再删除该分类；
      * @param req DeleteClassRequest
@@ -158,6 +194,42 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteMediaResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户自定义转码模板。
+     * @param req DeleteTranscodeTemplateRequest
+     * @return DeleteTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(DeleteTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTranscodeTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTranscodeTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTranscodeTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户自定义水印模板。
+     * @param req DeleteWatermarkTemplateRequest
+     * @return DeleteWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(DeleteWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteWatermarkTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteWatermarkTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteWatermarkTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -248,6 +320,42 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * @param req DescribeTranscodeTemplatesRequest
+     * @return DescribeTranscodeTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(DescribeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTranscodeTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTranscodeTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户自定义水印模板，支持根据条件，分页查询。
+     * @param req DescribeWatermarkTemplatesRequest
+     * @return DescribeWatermarkTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(DescribeWatermarkTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWatermarkTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWatermarkTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWatermarkTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
 
 腾讯云点播支持两种即时剪辑模式：
@@ -318,6 +426,42 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyMediaInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyMediaInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户自定义转码模板信息。
+     * @param req ModifyTranscodeTemplateRequest
+     * @return ModifyTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(ModifyTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTranscodeTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTranscodeTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTranscodeTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户自定义水印模板，水印类型不允许修改。
+     * @param req ModifyWatermarkTemplateRequest
+     * @return ModifyWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(ModifyWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyWatermarkTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyWatermarkTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyWatermarkTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

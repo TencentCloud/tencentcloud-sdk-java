@@ -37,7 +37,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     private String Scene;
 
     /**
-    * 图片数据的Base64字符串
+    * 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
     */
     @SerializedName("Data")
     @Expose
@@ -97,16 +97,16 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片数据的Base64字符串
-     * @return Data 图片数据的Base64字符串
+     * 获取图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
+     * @return Data 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * 设置图片数据的Base64字符串
-     * @param Data 图片数据的Base64字符串
+     * 设置图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
+     * @param Data 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
      */
     public void setData(String Data) {
         this.Data = Data;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSyncCheckJobResponse  extends AbstractModel{
 
     /**
-    * 任务校验状态
+    * 任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
     */
     @SerializedName("Status")
     @Expose
@@ -51,30 +51,30 @@ public class DescribeSyncCheckJobResponse  extends AbstractModel{
     private SyncCheckStepInfo [] StepInfo;
 
     /**
-    * 校验标志
+    * 校验标志：0（尚未校验成功） ， 1（校验成功）
     */
     @SerializedName("CheckFlag")
     @Expose
     private Integer CheckFlag;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * 获取任务校验状态
-     * @return Status 任务校验状态
+     * 获取任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
+     * @return Status 任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置任务校验状态
-     * @param Status 任务校验状态
+     * 设置任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
+     * @param Status 任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -129,32 +129,32 @@ public class DescribeSyncCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 获取校验标志
-     * @return CheckFlag 校验标志
+     * 获取校验标志：0（尚未校验成功） ， 1（校验成功）
+     * @return CheckFlag 校验标志：0（尚未校验成功） ， 1（校验成功）
      */
     public Integer getCheckFlag() {
         return this.CheckFlag;
     }
 
     /**
-     * 设置校验标志
-     * @param CheckFlag 校验标志
+     * 设置校验标志：0（尚未校验成功） ， 1（校验成功）
+     * @param CheckFlag 校验标志：0（尚未校验成功） ， 1（校验成功）
      */
     public void setCheckFlag(Integer CheckFlag) {
         this.CheckFlag = CheckFlag;
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
