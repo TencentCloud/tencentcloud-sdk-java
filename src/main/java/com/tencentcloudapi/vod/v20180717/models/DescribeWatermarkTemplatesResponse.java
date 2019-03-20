@@ -27,7 +27,7 @@ public class DescribeWatermarkTemplatesResponse  extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 水印模板详情列表。
@@ -48,7 +48,7 @@ public class DescribeWatermarkTemplatesResponse  extends AbstractModel{
      * 获取符合过滤条件的记录总数。
      * @return TotalCount 符合过滤条件的记录总数。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -56,7 +56,7 @@ public class DescribeWatermarkTemplatesResponse  extends AbstractModel{
      * 设置符合过滤条件的记录总数。
      * @param TotalCount 符合过滤条件的记录总数。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

@@ -80,7 +80,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
     */
     @SerializedName("PicUrlExpireTimeStamp")
     @Expose
-    private Integer PicUrlExpireTimeStamp;
+    private Long PicUrlExpireTimeStamp;
 
     /**
      * 获取嫌疑片段起始的偏移时间，单位：秒。
@@ -224,7 +224,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
      * @return PicUrlExpireTimeStamp 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getPicUrlExpireTimeStamp() {
+    public Long getPicUrlExpireTimeStamp() {
         return this.PicUrlExpireTimeStamp;
     }
 
@@ -234,7 +234,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
      * @param PicUrlExpireTimeStamp 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPicUrlExpireTimeStamp(Integer PicUrlExpireTimeStamp) {
+    public void setPicUrlExpireTimeStamp(Long PicUrlExpireTimeStamp) {
         this.PicUrlExpireTimeStamp = PicUrlExpireTimeStamp;
     }
 

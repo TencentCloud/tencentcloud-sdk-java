@@ -27,7 +27,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg。其中，mp3、flac、ogg 为纯音频文件。
@@ -57,7 +57,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
     */
     @SerializedName("RemoveVideo")
     @Expose
-    private Integer RemoveVideo;
+    private Long RemoveVideo;
 
     /**
     * 是否去除音频数据，可选值：
@@ -66,7 +66,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
     */
     @SerializedName("RemoveAudio")
     @Expose
-    private Integer RemoveAudio;
+    private Long RemoveAudio;
 
     /**
     * 视频流配置参数。
@@ -87,13 +87,13 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
     */
     @SerializedName("SubAppId")
     @Expose
-    private Integer SubAppId;
+    private Long SubAppId;
 
     /**
      * 获取转码模板唯一标识。
      * @return Definition 转码模板唯一标识。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -101,7 +101,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
      * 设置转码模板唯一标识。
      * @param Definition 转码模板唯一标识。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
@@ -161,7 +161,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
 <li>0：保留</li>
 <li>1：去除</li>
      */
-    public Integer getRemoveVideo() {
+    public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
@@ -173,7 +173,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
 <li>0：保留</li>
 <li>1：去除</li>
      */
-    public void setRemoveVideo(Integer RemoveVideo) {
+    public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
@@ -185,7 +185,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
 <li>0：保留</li>
 <li>1：去除</li>
      */
-    public Integer getRemoveAudio() {
+    public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
@@ -197,7 +197,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
 <li>0：保留</li>
 <li>1：去除</li>
      */
-    public void setRemoveAudio(Integer RemoveAudio) {
+    public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
@@ -237,7 +237,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
      * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public Integer getSubAppId() {
+    public Long getSubAppId() {
         return this.SubAppId;
     }
 
@@ -245,7 +245,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
      * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public void setSubAppId(Integer SubAppId) {
+    public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 

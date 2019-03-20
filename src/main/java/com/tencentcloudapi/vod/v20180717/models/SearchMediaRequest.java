@@ -43,7 +43,7 @@ public class SearchMediaRequest  extends AbstractModel{
     */
     @SerializedName("ClassIds")
     @Expose
-    private Integer [] ClassIds;
+    private Long [] ClassIds;
 
     /**
     * 创建时间的开始时间。
@@ -100,21 +100,21 @@ public class SearchMediaRequest  extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回记录条数，默认值：10。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
     @Expose
-    private Integer SubAppId;
+    private Long SubAppId;
 
     /**
      * 获取搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
@@ -160,7 +160,7 @@ public class SearchMediaRequest  extends AbstractModel{
      * 获取分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。数组长度限制：10。
      * @return ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。数组长度限制：10。
      */
-    public Integer [] getClassIds() {
+    public Long [] getClassIds() {
         return this.ClassIds;
     }
 
@@ -168,7 +168,7 @@ public class SearchMediaRequest  extends AbstractModel{
      * 设置分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。数组长度限制：10。
      * @param ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。数组长度限制：10。
      */
-    public void setClassIds(Integer [] ClassIds) {
+    public void setClassIds(Long [] ClassIds) {
         this.ClassIds = ClassIds;
     }
 
@@ -300,7 +300,7 @@ public class SearchMediaRequest  extends AbstractModel{
 <li>默认值：0。</li>
 <li>取值范围：Offset + Limit 不超过 5000。</li>
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -312,7 +312,7 @@ public class SearchMediaRequest  extends AbstractModel{
 <li>默认值：0。</li>
 <li>取值范围：Offset + Limit 不超过 5000。</li>
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -320,7 +320,7 @@ public class SearchMediaRequest  extends AbstractModel{
      * 获取返回记录条数，默认值：10。
      * @return Limit 返回记录条数，默认值：10。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -328,7 +328,7 @@ public class SearchMediaRequest  extends AbstractModel{
      * 设置返回记录条数，默认值：10。
      * @param Limit 返回记录条数，默认值：10。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -336,7 +336,7 @@ public class SearchMediaRequest  extends AbstractModel{
      * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public Integer getSubAppId() {
+    public Long getSubAppId() {
         return this.SubAppId;
     }
 
@@ -344,7 +344,7 @@ public class SearchMediaRequest  extends AbstractModel{
      * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public void setSubAppId(Integer SubAppId) {
+    public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 

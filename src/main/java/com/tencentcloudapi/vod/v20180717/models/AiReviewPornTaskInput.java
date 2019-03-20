@@ -27,13 +27,13 @@ public class AiReviewPornTaskInput  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
      * 获取鉴黄模板 ID。
      * @return Definition 鉴黄模板 ID。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -41,7 +41,7 @@ public class AiReviewPornTaskInput  extends AbstractModel{
      * 设置鉴黄模板 ID。
      * @param Definition 鉴黄模板 ID。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 

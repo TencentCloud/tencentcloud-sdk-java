@@ -27,7 +27,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 动图在视频中的开始时间，单位为秒。
@@ -47,7 +47,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
      * 获取视频转动图模板 ID
      * @return Definition 视频转动图模板 ID
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -55,7 +55,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
      * 设置视频转动图模板 ID
      * @param Definition 视频转动图模板 ID
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 

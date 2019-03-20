@@ -70,7 +70,7 @@ public class ApplyUploadRequest  extends AbstractModel{
     */
     @SerializedName("ClassId")
     @Expose
-    private Integer ClassId;
+    private Long ClassId;
 
     /**
     * 来源上下文，用于透传用户请求信息，上传回调接口将返回该字段值，最长 250 个字符。
@@ -84,7 +84,7 @@ public class ApplyUploadRequest  extends AbstractModel{
     */
     @SerializedName("SubAppId")
     @Expose
-    private Integer SubAppId;
+    private Long SubAppId;
 
     /**
      * 获取媒体类型，可选值请参考[上传能力综述](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
@@ -188,7 +188,7 @@ public class ApplyUploadRequest  extends AbstractModel{
      * @return ClassId 分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
      */
-    public Integer getClassId() {
+    public Long getClassId() {
         return this.ClassId;
     }
 
@@ -198,7 +198,7 @@ public class ApplyUploadRequest  extends AbstractModel{
      * @param ClassId 分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
      */
-    public void setClassId(Integer ClassId) {
+    public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
@@ -222,7 +222,7 @@ public class ApplyUploadRequest  extends AbstractModel{
      * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public Integer getSubAppId() {
+    public Long getSubAppId() {
         return this.SubAppId;
     }
 
@@ -230,7 +230,7 @@ public class ApplyUploadRequest  extends AbstractModel{
      * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public void setSubAppId(Integer SubAppId) {
+    public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 

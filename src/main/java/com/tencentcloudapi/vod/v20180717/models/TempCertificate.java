@@ -48,7 +48,7 @@ public class TempCertificate  extends AbstractModel{
     */
     @SerializedName("ExpiredTime")
     @Expose
-    private Integer ExpiredTime;
+    private Long ExpiredTime;
 
     /**
      * 获取临时安全证书 Id。
@@ -102,7 +102,7 @@ public class TempCertificate  extends AbstractModel{
      * 获取证书无效的时间，返回 Unix 时间戳，精确到秒。
      * @return ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒。
      */
-    public Integer getExpiredTime() {
+    public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
@@ -110,7 +110,7 @@ public class TempCertificate  extends AbstractModel{
      * 设置证书无效的时间，返回 Unix 时间戳，精确到秒。
      * @param ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒。
      */
-    public void setExpiredTime(Integer ExpiredTime) {
+    public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 

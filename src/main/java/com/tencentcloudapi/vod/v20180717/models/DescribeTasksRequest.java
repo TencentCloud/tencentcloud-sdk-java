@@ -41,7 +41,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
@@ -55,7 +55,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     */
     @SerializedName("SubAppId")
     @Expose
-    private Integer SubAppId;
+    private Long SubAppId;
 
     /**
      * 获取过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
@@ -93,7 +93,7 @@ public class DescribeTasksRequest  extends AbstractModel{
      * 获取返回记录条数，默认值：10，最大值：100。
      * @return Limit 返回记录条数，默认值：10，最大值：100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -101,7 +101,7 @@ public class DescribeTasksRequest  extends AbstractModel{
      * 设置返回记录条数，默认值：10，最大值：100。
      * @param Limit 返回记录条数，默认值：10，最大值：100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -125,7 +125,7 @@ public class DescribeTasksRequest  extends AbstractModel{
      * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public Integer getSubAppId() {
+    public Long getSubAppId() {
         return this.SubAppId;
     }
 
@@ -133,7 +133,7 @@ public class DescribeTasksRequest  extends AbstractModel{
      * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public void setSubAppId(Integer SubAppId) {
+    public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 

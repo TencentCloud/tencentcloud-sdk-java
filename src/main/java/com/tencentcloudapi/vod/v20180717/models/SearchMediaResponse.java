@@ -28,7 +28,7 @@ public class SearchMediaResponse  extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 媒体文件信息列表，只包含基础信息（BasicInfo）
@@ -51,7 +51,7 @@ public class SearchMediaResponse  extends AbstractModel{
      * @return TotalCount 符合搜索条件的记录总数
 <li>最大值：5000，即，当命中记录数超过 5000，该字段将返回 5000，而非实际命中总数。</li>
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -61,7 +61,7 @@ public class SearchMediaResponse  extends AbstractModel{
      * @param TotalCount 符合搜索条件的记录总数
 <li>最大值：5000，即，当命中记录数超过 5000，该字段将返回 5000，而非实际命中总数。</li>
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

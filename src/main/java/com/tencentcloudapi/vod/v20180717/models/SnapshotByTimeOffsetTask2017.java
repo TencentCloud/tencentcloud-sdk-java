@@ -41,7 +41,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 截图结果信息。
@@ -86,7 +86,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
      * 获取截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E6.8C.87.E5.AE.9A.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @return Definition 截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E6.8C.87.E5.AE.9A.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -94,7 +94,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
      * 设置截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E6.8C.87.E5.AE.9A.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @param Definition 截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E6.8C.87.E5.AE.9A.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 

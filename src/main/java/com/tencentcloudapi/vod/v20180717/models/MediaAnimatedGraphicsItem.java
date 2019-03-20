@@ -36,7 +36,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 动图格式，如 gif。
@@ -52,7 +52,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
     * 动图的宽度，单位：px。
@@ -60,7 +60,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
     * 动图码率，单位：bps。
@@ -68,7 +68,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     */
     @SerializedName("Bitrate")
     @Expose
-    private Integer Bitrate;
+    private Long Bitrate;
 
     /**
     * 动图大小，单位：字节。
@@ -76,7 +76,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
     * 动图的md5值。
@@ -128,7 +128,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
      * @return Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -138,7 +138,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
      * @param Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
@@ -168,7 +168,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
      * @return Height 动图的高度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -178,7 +178,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
      * @param Height 动图的高度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 
@@ -188,7 +188,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
      * @return Width 动图的宽度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -198,7 +198,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
      * @param Width 动图的宽度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 
@@ -208,7 +208,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
      * @return Bitrate 动图码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getBitrate() {
+    public Long getBitrate() {
         return this.Bitrate;
     }
 
@@ -218,7 +218,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
      * @param Bitrate 动图码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBitrate(Integer Bitrate) {
+    public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
@@ -228,7 +228,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
      * @return Size 动图大小，单位：字节。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -238,7 +238,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
      * @param Size 动图大小，单位：字节。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 

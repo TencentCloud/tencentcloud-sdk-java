@@ -68,7 +68,7 @@ public class MediaBasicInfo  extends AbstractModel{
     */
     @SerializedName("ClassId")
     @Expose
-    private Integer ClassId;
+    private Long ClassId;
 
     /**
     * 媒体文件的分类名称。
@@ -248,7 +248,7 @@ public class MediaBasicInfo  extends AbstractModel{
      * @return ClassId 媒体文件的分类 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getClassId() {
+    public Long getClassId() {
         return this.ClassId;
     }
 
@@ -258,7 +258,7 @@ public class MediaBasicInfo  extends AbstractModel{
      * @param ClassId 媒体文件的分类 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setClassId(Integer ClassId) {
+    public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 

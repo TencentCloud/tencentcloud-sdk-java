@@ -27,7 +27,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 水印列表，支持多张图片或文字水印，最大可支持 10 张。
@@ -41,7 +41,7 @@ public class TranscodeTaskInput  extends AbstractModel{
      * 获取视频转码模板 ID。
      * @return Definition 视频转码模板 ID。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -49,7 +49,7 @@ public class TranscodeTaskInput  extends AbstractModel{
      * 设置视频转码模板 ID。
      * @param Definition 视频转码模板 ID。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 

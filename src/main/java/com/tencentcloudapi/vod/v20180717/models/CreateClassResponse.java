@@ -27,7 +27,7 @@ public class CreateClassResponse  extends AbstractModel{
     */
     @SerializedName("ClassId")
     @Expose
-    private Integer ClassId;
+    private Long ClassId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateClassResponse  extends AbstractModel{
      * 获取分类 ID
      * @return ClassId 分类 ID
      */
-    public Integer getClassId() {
+    public Long getClassId() {
         return this.ClassId;
     }
 
@@ -48,7 +48,7 @@ public class CreateClassResponse  extends AbstractModel{
      * 设置分类 ID
      * @param ClassId 分类 ID
      */
-    public void setClassId(Integer ClassId) {
+    public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 

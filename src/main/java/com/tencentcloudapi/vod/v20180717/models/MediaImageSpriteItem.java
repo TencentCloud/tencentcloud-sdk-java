@@ -28,7 +28,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 雪碧图小图的高度。
@@ -36,7 +36,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
     * 雪碧图小图的宽度。
@@ -44,7 +44,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
     * 每一张雪碧图大图里小图的数量。
@@ -52,7 +52,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 每一张雪碧图大图的地址。
@@ -76,7 +76,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
      * @return Definition 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -86,7 +86,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
      * @param Definition 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
@@ -96,7 +96,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
      * @return Height 雪碧图小图的高度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -106,7 +106,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
      * @param Height 雪碧图小图的高度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 
@@ -116,7 +116,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
      * @return Width 雪碧图小图的宽度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -126,7 +126,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
      * @param Width 雪碧图小图的宽度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 
@@ -136,7 +136,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
      * @return TotalCount 每一张雪碧图大图里小图的数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -146,7 +146,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
      * @param TotalCount 每一张雪碧图大图里小图的数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

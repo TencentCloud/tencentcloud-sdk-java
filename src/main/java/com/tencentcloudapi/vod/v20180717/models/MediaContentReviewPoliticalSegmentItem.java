@@ -88,7 +88,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     */
     @SerializedName("AreaCoordSet")
     @Expose
-    private Integer [] AreaCoordSet;
+    private Long [] AreaCoordSet;
 
     /**
     * 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -96,7 +96,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     */
     @SerializedName("PicUrlExpireTimeStamp")
     @Expose
-    private Integer PicUrlExpireTimeStamp;
+    private Long PicUrlExpireTimeStamp;
 
     /**
      * 获取嫌疑片段起始的偏移时间，单位：秒。
@@ -260,7 +260,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
      * @return AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer [] getAreaCoordSet() {
+    public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
@@ -270,7 +270,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
      * @param AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAreaCoordSet(Integer [] AreaCoordSet) {
+    public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
@@ -280,7 +280,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
      * @return PicUrlExpireTimeStamp 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getPicUrlExpireTimeStamp() {
+    public Long getPicUrlExpireTimeStamp() {
         return this.PicUrlExpireTimeStamp;
     }
 
@@ -290,7 +290,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
      * @param PicUrlExpireTimeStamp 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPicUrlExpireTimeStamp(Integer PicUrlExpireTimeStamp) {
+    public void setPicUrlExpireTimeStamp(Long PicUrlExpireTimeStamp) {
         this.PicUrlExpireTimeStamp = PicUrlExpireTimeStamp;
     }
 

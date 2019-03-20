@@ -27,7 +27,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 截图时间点列表，单位为秒。
@@ -49,7 +49,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
      * 获取指定时间点截图模板 ID。
      * @return Definition 指定时间点截图模板 ID。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -57,7 +57,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
      * 设置指定时间点截图模板 ID。
      * @param Definition 指定时间点截图模板 ID。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 

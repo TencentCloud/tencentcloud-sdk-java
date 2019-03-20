@@ -27,7 +27,7 @@ public class CreateTranscodeTemplateResponse  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateTranscodeTemplateResponse  extends AbstractModel{
      * 获取转码模板唯一标识。
      * @return Definition 转码模板唯一标识。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -48,7 +48,7 @@ public class CreateTranscodeTemplateResponse  extends AbstractModel{
      * 设置转码模板唯一标识。
      * @param Definition 转码模板唯一标识。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 

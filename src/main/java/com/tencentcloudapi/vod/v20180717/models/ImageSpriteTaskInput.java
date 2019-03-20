@@ -27,13 +27,13 @@ public class ImageSpriteTaskInput  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
      * 获取雪碧图模板 ID。
      * @return Definition 雪碧图模板 ID。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -41,7 +41,7 @@ public class ImageSpriteTaskInput  extends AbstractModel{
      * 设置雪碧图模板 ID。
      * @param Definition 雪碧图模板 ID。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 

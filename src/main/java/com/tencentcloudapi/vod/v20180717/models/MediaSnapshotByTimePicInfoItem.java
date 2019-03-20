@@ -44,7 +44,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
     */
     @SerializedName("WaterMarkDefinition")
     @Expose
-    private Integer [] WaterMarkDefinition;
+    private Long [] WaterMarkDefinition;
 
     /**
      * 获取该张截图对应视频文件中的时间偏移，单位：秒。
@@ -92,7 +92,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
      * @return WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer [] getWaterMarkDefinition() {
+    public Long [] getWaterMarkDefinition() {
         return this.WaterMarkDefinition;
     }
 
@@ -102,7 +102,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
      * @param WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWaterMarkDefinition(Integer [] WaterMarkDefinition) {
+    public void setWaterMarkDefinition(Long [] WaterMarkDefinition) {
         this.WaterMarkDefinition = WaterMarkDefinition;
     }
 

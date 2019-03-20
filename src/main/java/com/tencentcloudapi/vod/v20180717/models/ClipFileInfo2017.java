@@ -30,7 +30,7 @@ public class ClipFileInfo2017  extends AbstractModel{
     */
     @SerializedName("ErrCode")
     @Expose
-    private Integer ErrCode;
+    private Long ErrCode;
 
     /**
     * 错误描述。
@@ -74,7 +74,7 @@ public class ClipFileInfo2017  extends AbstractModel{
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getErrCode() {
+    public Long getErrCode() {
         return this.ErrCode;
     }
 
@@ -88,7 +88,7 @@ public class ClipFileInfo2017  extends AbstractModel{
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setErrCode(Integer ErrCode) {
+    public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 

@@ -27,7 +27,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     */
     @SerializedName("Definitions")
     @Expose
-    private Integer [] Definitions;
+    private Long [] Definitions;
 
     /**
     * 水印类型过滤条件，可选值：
@@ -43,7 +43,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回记录条数
@@ -52,20 +52,20 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
     @Expose
-    private Integer SubAppId;
+    private Long SubAppId;
 
     /**
      * 获取水印模板唯一标识过滤条件，数组长度限制：100。
      * @return Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
      */
-    public Integer [] getDefinitions() {
+    public Long [] getDefinitions() {
         return this.Definitions;
     }
 
@@ -73,7 +73,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
      * 设置水印模板唯一标识过滤条件，数组长度限制：100。
      * @param Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
      */
-    public void setDefinitions(Integer [] Definitions) {
+    public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
@@ -105,7 +105,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
      * 获取分页偏移量，默认值：0。
      * @return Offset 分页偏移量，默认值：0。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -113,7 +113,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
      * 设置分页偏移量，默认值：0。
      * @param Offset 分页偏移量，默认值：0。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -125,7 +125,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
 <li>默认值：10；</li>
 <li>最大值：100。</li>
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -137,7 +137,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
 <li>默认值：10；</li>
 <li>最大值：100。</li>
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -145,7 +145,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
      * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public Integer getSubAppId() {
+    public Long getSubAppId() {
         return this.SubAppId;
     }
 
@@ -153,7 +153,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
      * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public void setSubAppId(Integer SubAppId) {
+    public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 

@@ -28,7 +28,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 采样方式，取值范围：
@@ -48,7 +48,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     */
     @SerializedName("Interval")
     @Expose
-    private Integer Interval;
+    private Long Interval;
 
     /**
     * 生成的截图 url 列表。
@@ -64,7 +64,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     */
     @SerializedName("WaterMarkDefinition")
     @Expose
-    private Integer [] WaterMarkDefinition;
+    private Long [] WaterMarkDefinition;
 
     /**
      * 获取采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
@@ -72,7 +72,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
      * @return Definition 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -82,7 +82,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
      * @param Definition 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/11702#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
@@ -124,7 +124,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 <li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getInterval() {
+    public Long getInterval() {
         return this.Interval;
     }
 
@@ -138,7 +138,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
 <li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setInterval(Integer Interval) {
+    public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
@@ -168,7 +168,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
      * @return WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer [] getWaterMarkDefinition() {
+    public Long [] getWaterMarkDefinition() {
         return this.WaterMarkDefinition;
     }
 
@@ -178,7 +178,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
      * @param WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWaterMarkDefinition(Integer [] WaterMarkDefinition) {
+    public void setWaterMarkDefinition(Long [] WaterMarkDefinition) {
         this.WaterMarkDefinition = WaterMarkDefinition;
     }
 

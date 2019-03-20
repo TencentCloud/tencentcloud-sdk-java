@@ -27,14 +27,14 @@ public class MediaClassInfo  extends AbstractModel{
     */
     @SerializedName("ClassId")
     @Expose
-    private Integer ClassId;
+    private Long ClassId;
 
     /**
     * 父类 ID，一级分类的父类 ID 为 -1。
     */
     @SerializedName("ParentId")
     @Expose
-    private Integer ParentId;
+    private Long ParentId;
 
     /**
     * 分类名称
@@ -48,7 +48,7 @@ public class MediaClassInfo  extends AbstractModel{
     */
     @SerializedName("Level")
     @Expose
-    private Integer Level;
+    private Long Level;
 
     /**
     * 当前分类的第一级子类 ID 集合
@@ -56,13 +56,13 @@ public class MediaClassInfo  extends AbstractModel{
     */
     @SerializedName("SubClassIdSet")
     @Expose
-    private Integer [] SubClassIdSet;
+    private Long [] SubClassIdSet;
 
     /**
      * 获取分类 ID
      * @return ClassId 分类 ID
      */
-    public Integer getClassId() {
+    public Long getClassId() {
         return this.ClassId;
     }
 
@@ -70,7 +70,7 @@ public class MediaClassInfo  extends AbstractModel{
      * 设置分类 ID
      * @param ClassId 分类 ID
      */
-    public void setClassId(Integer ClassId) {
+    public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
@@ -78,7 +78,7 @@ public class MediaClassInfo  extends AbstractModel{
      * 获取父类 ID，一级分类的父类 ID 为 -1。
      * @return ParentId 父类 ID，一级分类的父类 ID 为 -1。
      */
-    public Integer getParentId() {
+    public Long getParentId() {
         return this.ParentId;
     }
 
@@ -86,7 +86,7 @@ public class MediaClassInfo  extends AbstractModel{
      * 设置父类 ID，一级分类的父类 ID 为 -1。
      * @param ParentId 父类 ID，一级分类的父类 ID 为 -1。
      */
-    public void setParentId(Integer ParentId) {
+    public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
@@ -110,7 +110,7 @@ public class MediaClassInfo  extends AbstractModel{
      * 获取分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
      * @return Level 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
      */
-    public Integer getLevel() {
+    public Long getLevel() {
         return this.Level;
     }
 
@@ -118,7 +118,7 @@ public class MediaClassInfo  extends AbstractModel{
      * 设置分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
      * @param Level 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
      */
-    public void setLevel(Integer Level) {
+    public void setLevel(Long Level) {
         this.Level = Level;
     }
 
@@ -128,7 +128,7 @@ public class MediaClassInfo  extends AbstractModel{
      * @return SubClassIdSet 当前分类的第一级子类 ID 集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer [] getSubClassIdSet() {
+    public Long [] getSubClassIdSet() {
         return this.SubClassIdSet;
     }
 
@@ -138,7 +138,7 @@ public class MediaClassInfo  extends AbstractModel{
      * @param SubClassIdSet 当前分类的第一级子类 ID 集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSubClassIdSet(Integer [] SubClassIdSet) {
+    public void setSubClassIdSet(Long [] SubClassIdSet) {
         this.SubClassIdSet = SubClassIdSet;
     }
 

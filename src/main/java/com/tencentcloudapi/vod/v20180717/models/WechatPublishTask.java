@@ -47,7 +47,7 @@ FINISH：已完成。
     */
     @SerializedName("ErrCode")
     @Expose
-    private Integer ErrCode;
+    private Long ErrCode;
 
     /**
     * 错误信息。
@@ -71,7 +71,7 @@ FINISH：已完成。
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 发布视频所对应的转码模板 ID，为 0 代表原始视频。
@@ -79,7 +79,7 @@ FINISH：已完成。
     */
     @SerializedName("SourceDefinition")
     @Expose
-    private Integer SourceDefinition;
+    private Long SourceDefinition;
 
     /**
     * 微信发布状态，取值：
@@ -163,7 +163,7 @@ FINISH：已完成。
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getErrCode() {
+    public Long getErrCode() {
         return this.ErrCode;
     }
 
@@ -177,7 +177,7 @@ FINISH：已完成。
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setErrCode(Integer ErrCode) {
+    public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
@@ -227,7 +227,7 @@ FINISH：已完成。
      * @return Definition 微信发布模板 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -237,7 +237,7 @@ FINISH：已完成。
      * @param Definition 微信发布模板 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
@@ -247,7 +247,7 @@ FINISH：已完成。
      * @return SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getSourceDefinition() {
+    public Long getSourceDefinition() {
         return this.SourceDefinition;
     }
 
@@ -257,7 +257,7 @@ FINISH：已完成。
      * @param SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSourceDefinition(Integer SourceDefinition) {
+    public void setSourceDefinition(Long SourceDefinition) {
         this.SourceDefinition = SourceDefinition;
     }
 

@@ -65,7 +65,7 @@ public class TrafficMirror  extends AbstractModel{
     private Integer HealthNum;
 
     /**
-    * 不健康阀值。
+    * 不健康阈值。
     */
     @SerializedName("UnhealthNum")
     @Expose
@@ -217,16 +217,16 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取不健康阀值。
-     * @return UnhealthNum 不健康阀值。
+     * 获取不健康阈值。
+     * @return UnhealthNum 不健康阈值。
      */
     public Integer getUnhealthNum() {
         return this.UnhealthNum;
     }
 
     /**
-     * 设置不健康阀值。
-     * @param UnhealthNum 不健康阀值。
+     * 设置不健康阈值。
+     * @param UnhealthNum 不健康阈值。
      */
     public void setUnhealthNum(Integer UnhealthNum) {
         this.UnhealthNum = UnhealthNum;

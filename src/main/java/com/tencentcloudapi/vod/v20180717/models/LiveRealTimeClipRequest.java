@@ -48,7 +48,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     */
     @SerializedName("IsPersistence")
     @Expose
-    private Integer IsPersistence;
+    private Long IsPersistence;
 
     /**
     * 剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
@@ -116,7 +116,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
      * 获取是否固化。0 不固化，1 固化。默认不固化。
      * @return IsPersistence 是否固化。0 不固化，1 固化。默认不固化。
      */
-    public Integer getIsPersistence() {
+    public Long getIsPersistence() {
         return this.IsPersistence;
     }
 
@@ -124,7 +124,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
      * 设置是否固化。0 不固化，1 固化。默认不固化。
      * @param IsPersistence 是否固化。0 不固化，1 固化。默认不固化。
      */
-    public void setIsPersistence(Integer IsPersistence) {
+    public void setIsPersistence(Long IsPersistence) {
         this.IsPersistence = IsPersistence;
     }
 

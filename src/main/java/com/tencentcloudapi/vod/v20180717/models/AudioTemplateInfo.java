@@ -38,7 +38,7 @@ public class AudioTemplateInfo  extends AbstractModel{
     */
     @SerializedName("Bitrate")
     @Expose
-    private Integer Bitrate;
+    private Long Bitrate;
 
     /**
     * 音频流的采样率，可选值：
@@ -49,7 +49,7 @@ public class AudioTemplateInfo  extends AbstractModel{
     */
     @SerializedName("SampleRate")
     @Expose
-    private Integer SampleRate;
+    private Long SampleRate;
 
     /**
     * 音频通道方式，可选值：
@@ -60,7 +60,7 @@ public class AudioTemplateInfo  extends AbstractModel{
     */
     @SerializedName("AudioChannel")
     @Expose
-    private Integer AudioChannel;
+    private Long AudioChannel;
 
     /**
      * 获取音频流的编码格式，可选值：
@@ -96,7 +96,7 @@ public class AudioTemplateInfo  extends AbstractModel{
      * @return Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
      */
-    public Integer getBitrate() {
+    public Long getBitrate() {
         return this.Bitrate;
     }
 
@@ -106,7 +106,7 @@ public class AudioTemplateInfo  extends AbstractModel{
      * @param Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
      */
-    public void setBitrate(Integer Bitrate) {
+    public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
@@ -122,7 +122,7 @@ public class AudioTemplateInfo  extends AbstractModel{
 <li>48000</li>
 单位：Hz。
      */
-    public Integer getSampleRate() {
+    public Long getSampleRate() {
         return this.SampleRate;
     }
 
@@ -138,7 +138,7 @@ public class AudioTemplateInfo  extends AbstractModel{
 <li>48000</li>
 单位：Hz。
      */
-    public void setSampleRate(Integer SampleRate) {
+    public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
@@ -154,7 +154,7 @@ public class AudioTemplateInfo  extends AbstractModel{
 <li>6：立体声</li>
 默认值：2。
      */
-    public Integer getAudioChannel() {
+    public Long getAudioChannel() {
         return this.AudioChannel;
     }
 
@@ -170,7 +170,7 @@ public class AudioTemplateInfo  extends AbstractModel{
 <li>6：立体声</li>
 默认值：2。
      */
-    public void setAudioChannel(Integer AudioChannel) {
+    public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;
     }
 

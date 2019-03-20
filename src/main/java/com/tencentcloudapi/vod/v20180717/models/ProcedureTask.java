@@ -46,7 +46,7 @@ public class ProcedureTask  extends AbstractModel{
     */
     @SerializedName("ErrCode")
     @Expose
-    private Integer ErrCode;
+    private Long ErrCode;
 
     /**
     * 错误信息。
@@ -122,7 +122,7 @@ public class ProcedureTask  extends AbstractModel{
     */
     @SerializedName("TasksPriority")
     @Expose
-    private Integer TasksPriority;
+    private Long TasksPriority;
 
     /**
     * 任务流状态变更通知模式。
@@ -185,7 +185,7 @@ public class ProcedureTask  extends AbstractModel{
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getErrCode() {
+    public Long getErrCode() {
         return this.ErrCode;
     }
 
@@ -199,7 +199,7 @@ public class ProcedureTask  extends AbstractModel{
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setErrCode(Integer ErrCode) {
+    public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
@@ -385,7 +385,7 @@ public class ProcedureTask  extends AbstractModel{
      * @return TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getTasksPriority() {
+    public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
@@ -395,7 +395,7 @@ public class ProcedureTask  extends AbstractModel{
      * @param TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTasksPriority(Integer TasksPriority) {
+    public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 

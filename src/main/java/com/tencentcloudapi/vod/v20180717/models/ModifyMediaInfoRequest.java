@@ -48,7 +48,7 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
     */
     @SerializedName("ClassId")
     @Expose
-    private Integer ClassId;
+    private Long ClassId;
 
     /**
     * 媒体文件过期时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。
@@ -84,7 +84,7 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
     */
     @SerializedName("ClearKeyFrameDescs")
     @Expose
-    private Integer ClearKeyFrameDescs;
+    private Long ClearKeyFrameDescs;
 
     /**
     * 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 16 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
@@ -106,14 +106,14 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
     */
     @SerializedName("ClearTags")
     @Expose
-    private Integer ClearTags;
+    private Long ClearTags;
 
     /**
     * 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
     @Expose
-    private Integer SubAppId;
+    private Long SubAppId;
 
     /**
      * 获取媒体文件唯一标识。
@@ -167,7 +167,7 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
      * 获取媒体文件分类 ID。
      * @return ClassId 媒体文件分类 ID。
      */
-    public Integer getClassId() {
+    public Long getClassId() {
         return this.ClassId;
     }
 
@@ -175,7 +175,7 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
      * 设置媒体文件分类 ID。
      * @param ClassId 媒体文件分类 ID。
      */
-    public void setClassId(Integer ClassId) {
+    public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
@@ -249,7 +249,7 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
      * @return ClearKeyFrameDescs 取值 1 表示清空视频打点信息，其他值无意义。
 同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。
      */
-    public Integer getClearKeyFrameDescs() {
+    public Long getClearKeyFrameDescs() {
         return this.ClearKeyFrameDescs;
     }
 
@@ -259,7 +259,7 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
      * @param ClearKeyFrameDescs 取值 1 表示清空视频打点信息，其他值无意义。
 同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。
      */
-    public void setClearKeyFrameDescs(Integer ClearKeyFrameDescs) {
+    public void setClearKeyFrameDescs(Long ClearKeyFrameDescs) {
         this.ClearKeyFrameDescs = ClearKeyFrameDescs;
     }
 
@@ -301,7 +301,7 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
      * @return ClearTags 取值 1 表示清空媒体文件所有标签，其他值无意义。
 同一个请求里，ClearTags 与 AddTags 不能同时出现。
      */
-    public Integer getClearTags() {
+    public Long getClearTags() {
         return this.ClearTags;
     }
 
@@ -311,7 +311,7 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
      * @param ClearTags 取值 1 表示清空媒体文件所有标签，其他值无意义。
 同一个请求里，ClearTags 与 AddTags 不能同时出现。
      */
-    public void setClearTags(Integer ClearTags) {
+    public void setClearTags(Long ClearTags) {
         this.ClearTags = ClearTags;
     }
 
@@ -319,7 +319,7 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
      * 获取点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public Integer getSubAppId() {
+    public Long getSubAppId() {
         return this.SubAppId;
     }
 
@@ -327,7 +327,7 @@ public class ModifyMediaInfoRequest  extends AbstractModel{
      * 设置点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public void setSubAppId(Integer SubAppId) {
+    public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 

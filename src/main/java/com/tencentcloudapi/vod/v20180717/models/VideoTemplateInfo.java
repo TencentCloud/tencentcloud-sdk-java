@@ -38,7 +38,7 @@ public class VideoTemplateInfo  extends AbstractModel{
     */
     @SerializedName("Fps")
     @Expose
-    private Integer Fps;
+    private Long Fps;
 
     /**
     * 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
@@ -46,7 +46,7 @@ public class VideoTemplateInfo  extends AbstractModel{
     */
     @SerializedName("Bitrate")
     @Expose
-    private Integer Bitrate;
+    private Long Bitrate;
 
     /**
     * 分辨率自适应，可选值：
@@ -70,7 +70,7 @@ public class VideoTemplateInfo  extends AbstractModel{
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
     * 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
@@ -83,7 +83,7 @@ public class VideoTemplateInfo  extends AbstractModel{
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
      * 获取视频流的编码格式，可选值：
@@ -119,7 +119,7 @@ public class VideoTemplateInfo  extends AbstractModel{
      * @return Fps 视频帧率，取值范围：[0, 60],单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      */
-    public Integer getFps() {
+    public Long getFps() {
         return this.Fps;
     }
 
@@ -129,7 +129,7 @@ public class VideoTemplateInfo  extends AbstractModel{
      * @param Fps 视频帧率，取值范围：[0, 60],单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      */
-    public void setFps(Integer Fps) {
+    public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
@@ -139,7 +139,7 @@ public class VideoTemplateInfo  extends AbstractModel{
      * @return Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      */
-    public Integer getBitrate() {
+    public Long getBitrate() {
         return this.Bitrate;
     }
 
@@ -149,7 +149,7 @@ public class VideoTemplateInfo  extends AbstractModel{
      * @param Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      */
-    public void setBitrate(Integer Bitrate) {
+    public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
@@ -201,7 +201,7 @@ public class VideoTemplateInfo  extends AbstractModel{
 默认值：0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -221,7 +221,7 @@ public class VideoTemplateInfo  extends AbstractModel{
 默认值：0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 
@@ -241,7 +241,7 @@ public class VideoTemplateInfo  extends AbstractModel{
 默认值：0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -261,7 +261,7 @@ public class VideoTemplateInfo  extends AbstractModel{
 默认值：0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 

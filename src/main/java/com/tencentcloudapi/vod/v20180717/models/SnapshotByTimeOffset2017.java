@@ -38,7 +38,7 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
     */
     @SerializedName("TimeOffset")
     @Expose
-    private Integer TimeOffset;
+    private Long TimeOffset;
 
     /**
     * 截图输出文件地址。
@@ -82,7 +82,7 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
      * @return TimeOffset 截图的具体时间点，单位：毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getTimeOffset() {
+    public Long getTimeOffset() {
         return this.TimeOffset;
     }
 
@@ -92,7 +92,7 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
      * @param TimeOffset 截图的具体时间点，单位：毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTimeOffset(Integer TimeOffset) {
+    public void setTimeOffset(Long TimeOffset) {
         this.TimeOffset = TimeOffset;
     }
 

@@ -27,7 +27,7 @@ public class WatermarkTemplate  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 水印类型，取值：
@@ -116,7 +116,7 @@ public class WatermarkTemplate  extends AbstractModel{
      * 获取水印模板唯一标识。
      * @return Definition 水印模板唯一标识。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -124,7 +124,7 @@ public class WatermarkTemplate  extends AbstractModel{
      * 设置水印模板唯一标识。
      * @param Definition 水印模板唯一标识。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 

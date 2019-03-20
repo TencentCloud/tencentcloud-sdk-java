@@ -28,7 +28,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     */
     @SerializedName("Bitrate")
     @Expose
-    private Integer Bitrate;
+    private Long Bitrate;
 
     /**
     * 视频流的高度，单位：px。
@@ -36,7 +36,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
     * 视频流的宽度，单位：px。
@@ -44,7 +44,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
     * 视频流的编码格式，例如 h264。
@@ -60,7 +60,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     */
     @SerializedName("Fps")
     @Expose
-    private Integer Fps;
+    private Long Fps;
 
     /**
      * 获取视频流的码率，单位：bps。
@@ -68,7 +68,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
      * @return Bitrate 视频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getBitrate() {
+    public Long getBitrate() {
         return this.Bitrate;
     }
 
@@ -78,7 +78,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
      * @param Bitrate 视频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBitrate(Integer Bitrate) {
+    public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
@@ -88,7 +88,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
      * @return Height 视频流的高度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -98,7 +98,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
      * @param Height 视频流的高度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 
@@ -108,7 +108,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
      * @return Width 视频流的宽度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -118,7 +118,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
      * @param Width 视频流的宽度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 
@@ -148,7 +148,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
      * @return Fps 帧率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getFps() {
+    public Long getFps() {
         return this.Fps;
     }
 
@@ -158,7 +158,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
      * @param Fps 帧率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFps(Integer Fps) {
+    public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 

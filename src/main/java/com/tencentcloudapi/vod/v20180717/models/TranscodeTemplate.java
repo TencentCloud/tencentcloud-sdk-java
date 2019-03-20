@@ -68,7 +68,7 @@ public class TranscodeTemplate  extends AbstractModel{
     */
     @SerializedName("RemoveVideo")
     @Expose
-    private Integer RemoveVideo;
+    private Long RemoveVideo;
 
     /**
     * 是否去除音频数据，取值：
@@ -77,7 +77,7 @@ public class TranscodeTemplate  extends AbstractModel{
     */
     @SerializedName("RemoveAudio")
     @Expose
-    private Integer RemoveAudio;
+    private Long RemoveAudio;
 
     /**
     * 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
@@ -222,7 +222,7 @@ public class TranscodeTemplate  extends AbstractModel{
 <li>0：保留；</li>
 <li>1：去除。</li>
      */
-    public Integer getRemoveVideo() {
+    public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
@@ -234,7 +234,7 @@ public class TranscodeTemplate  extends AbstractModel{
 <li>0：保留；</li>
 <li>1：去除。</li>
      */
-    public void setRemoveVideo(Integer RemoveVideo) {
+    public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
@@ -246,7 +246,7 @@ public class TranscodeTemplate  extends AbstractModel{
 <li>0：保留；</li>
 <li>1：去除。</li>
      */
-    public Integer getRemoveAudio() {
+    public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
@@ -258,7 +258,7 @@ public class TranscodeTemplate  extends AbstractModel{
 <li>0：保留；</li>
 <li>1：去除。</li>
      */
-    public void setRemoveAudio(Integer RemoveAudio) {
+    public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 

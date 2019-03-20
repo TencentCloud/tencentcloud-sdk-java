@@ -27,7 +27,7 @@ public class WatermarkInput  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
@@ -40,7 +40,7 @@ public class WatermarkInput  extends AbstractModel{
      * 获取水印模板 ID。
      * @return Definition 水印模板 ID。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -48,7 +48,7 @@ public class WatermarkInput  extends AbstractModel{
      * 设置水印模板 ID。
      * @param Definition 水印模板 ID。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 

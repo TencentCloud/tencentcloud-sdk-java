@@ -51,7 +51,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     */
     @SerializedName("RemoveVideo")
     @Expose
-    private Integer RemoveVideo;
+    private Long RemoveVideo;
 
     /**
     * 是否去除音频数据，可选值：
@@ -61,7 +61,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     */
     @SerializedName("RemoveAudio")
     @Expose
-    private Integer RemoveAudio;
+    private Long RemoveAudio;
 
     /**
     * 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
@@ -82,7 +82,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     */
     @SerializedName("SubAppId")
     @Expose
-    private Integer SubAppId;
+    private Long SubAppId;
 
     /**
      * 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg。其中，mp3、flac、ogg 为纯音频文件。
@@ -142,7 +142,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
 <li>1：去除</li>
 默认值：0。
      */
-    public Integer getRemoveVideo() {
+    public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
@@ -156,7 +156,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
 <li>1：去除</li>
 默认值：0。
      */
-    public void setRemoveVideo(Integer RemoveVideo) {
+    public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
@@ -170,7 +170,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
 <li>1：去除</li>
 默认值：0。
      */
-    public Integer getRemoveAudio() {
+    public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
@@ -184,7 +184,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
 <li>1：去除</li>
 默认值：0。
      */
-    public void setRemoveAudio(Integer RemoveAudio) {
+    public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
@@ -224,7 +224,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
      * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public Integer getSubAppId() {
+    public Long getSubAppId() {
         return this.SubAppId;
     }
 
@@ -232,7 +232,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
      * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
-    public void setSubAppId(Integer SubAppId) {
+    public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 

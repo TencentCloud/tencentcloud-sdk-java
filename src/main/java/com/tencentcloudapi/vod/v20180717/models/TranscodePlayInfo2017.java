@@ -34,28 +34,28 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 视频流码率平均值与音频流码率平均值之和， 单位：bps。
     */
     @SerializedName("Bitrate")
     @Expose
-    private Integer Bitrate;
+    private Long Bitrate;
 
     /**
     * 视频流高度的最大值，单位：px。
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
     * 视频流宽度的最大值，单位：px。
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
      * 获取播放地址。
@@ -77,7 +77,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
      * 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -85,7 +85,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
      * 设置转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/11701#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
@@ -93,7 +93,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
      * 获取视频流码率平均值与音频流码率平均值之和， 单位：bps。
      * @return Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
      */
-    public Integer getBitrate() {
+    public Long getBitrate() {
         return this.Bitrate;
     }
 
@@ -101,7 +101,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
      * 设置视频流码率平均值与音频流码率平均值之和， 单位：bps。
      * @param Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
      */
-    public void setBitrate(Integer Bitrate) {
+    public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
@@ -109,7 +109,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
      * 获取视频流高度的最大值，单位：px。
      * @return Height 视频流高度的最大值，单位：px。
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -117,7 +117,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
      * 设置视频流高度的最大值，单位：px。
      * @param Height 视频流高度的最大值，单位：px。
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 
@@ -125,7 +125,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
      * 获取视频流宽度的最大值，单位：px。
      * @return Width 视频流宽度的最大值，单位：px。
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -133,7 +133,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
      * 设置视频流宽度的最大值，单位：px。
      * @param Width 视频流宽度的最大值，单位：px。
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 

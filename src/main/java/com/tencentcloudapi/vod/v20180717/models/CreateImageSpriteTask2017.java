@@ -37,7 +37,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     */
     @SerializedName("ErrCode")
     @Expose
-    private Integer ErrCode;
+    private Long ErrCode;
 
     /**
     * 错误信息。
@@ -61,7 +61,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 雪碧图小图总数量。
@@ -69,7 +69,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 截取雪碧图输出的地址。
@@ -113,7 +113,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getErrCode() {
+    public Long getErrCode() {
         return this.ErrCode;
     }
 
@@ -127,7 +127,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setErrCode(Integer ErrCode) {
+    public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
@@ -177,7 +177,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
      * @return Definition 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/11702#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -187,7 +187,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
      * @param Definition 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/11702#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
@@ -197,7 +197,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
      * @return TotalCount 雪碧图小图总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -207,7 +207,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
      * @param TotalCount 雪碧图小图总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

@@ -37,7 +37,7 @@ public class TranscodeTask2017  extends AbstractModel{
     */
     @SerializedName("ErrCode")
     @Expose
-    private Integer ErrCode;
+    private Long ErrCode;
 
     /**
     * 错误信息。
@@ -69,7 +69,7 @@ public class TranscodeTask2017  extends AbstractModel{
     */
     @SerializedName("Duration")
     @Expose
-    private Integer Duration;
+    private Long Duration;
 
     /**
     * 封面地址。
@@ -113,7 +113,7 @@ public class TranscodeTask2017  extends AbstractModel{
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getErrCode() {
+    public Long getErrCode() {
         return this.ErrCode;
     }
 
@@ -127,7 +127,7 @@ public class TranscodeTask2017  extends AbstractModel{
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setErrCode(Integer ErrCode) {
+    public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
@@ -197,7 +197,7 @@ public class TranscodeTask2017  extends AbstractModel{
      * @return Duration 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getDuration() {
+    public Long getDuration() {
         return this.Duration;
     }
 
@@ -207,7 +207,7 @@ public class TranscodeTask2017  extends AbstractModel{
      * @param Duration 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDuration(Integer Duration) {
+    public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 

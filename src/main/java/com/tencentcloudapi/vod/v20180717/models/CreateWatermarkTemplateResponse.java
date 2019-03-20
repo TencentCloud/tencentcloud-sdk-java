@@ -27,7 +27,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
     */
     @SerializedName("Definition")
     @Expose
-    private Integer Definition;
+    private Long Definition;
 
     /**
     * 水印图片地址，仅当 Type 为 image，该字段有值。
@@ -48,7 +48,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
      * 获取水印模板唯一标识。
      * @return Definition 水印模板唯一标识。
      */
-    public Integer getDefinition() {
+    public Long getDefinition() {
         return this.Definition;
     }
 
@@ -56,7 +56,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
      * 设置水印模板唯一标识。
      * @param Definition 水印模板唯一标识。
      */
-    public void setDefinition(Integer Definition) {
+    public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 

@@ -28,7 +28,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
     */
     @SerializedName("Bitrate")
     @Expose
-    private Integer Bitrate;
+    private Long Bitrate;
 
     /**
     * 音频流的采样率，单位：hz。
@@ -36,7 +36,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
     */
     @SerializedName("SamplingRate")
     @Expose
-    private Integer SamplingRate;
+    private Long SamplingRate;
 
     /**
     * 音频流的编码格式，例如 aac。
@@ -52,7 +52,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
      * @return Bitrate 音频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getBitrate() {
+    public Long getBitrate() {
         return this.Bitrate;
     }
 
@@ -62,7 +62,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
      * @param Bitrate 音频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBitrate(Integer Bitrate) {
+    public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
@@ -72,7 +72,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
      * @return SamplingRate 音频流的采样率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getSamplingRate() {
+    public Long getSamplingRate() {
         return this.SamplingRate;
     }
 
@@ -82,7 +82,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
      * @param SamplingRate 音频流的采样率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSamplingRate(Integer SamplingRate) {
+    public void setSamplingRate(Long SamplingRate) {
         this.SamplingRate = SamplingRate;
     }
 

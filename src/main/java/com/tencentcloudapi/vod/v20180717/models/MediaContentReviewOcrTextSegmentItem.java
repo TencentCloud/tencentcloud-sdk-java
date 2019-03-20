@@ -71,7 +71,7 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
     */
     @SerializedName("AreaCoordSet")
     @Expose
-    private Integer [] AreaCoordSet;
+    private Long [] AreaCoordSet;
 
     /**
      * 获取嫌疑片段起始的偏移时间，单位：秒。
@@ -191,7 +191,7 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
      * @return AreaCoordSet 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer [] getAreaCoordSet() {
+    public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
@@ -201,7 +201,7 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
      * @param AreaCoordSet 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAreaCoordSet(Integer [] AreaCoordSet) {
+    public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
