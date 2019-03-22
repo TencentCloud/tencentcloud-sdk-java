@@ -49,6 +49,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(AddTimeWindow)用于添加云数据库实例的维护时间窗口，以指定实例在哪些时间段可以自动执行切换访问操作。
+     * @param req AddTimeWindowRequest
+     * @return AddTimeWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddTimeWindowResponse AddTimeWindow(AddTimeWindowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddTimeWindowResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddTimeWindowResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddTimeWindow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(AssociateSecurityGroups)用于安全组批量绑定实例。
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -258,6 +276,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteParamTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteParamTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DeleteTimeWindow)用于删除云数据库实例的维护时间窗口。删除实例维护时间窗口之后，默认的维护时间窗为 03:00-04:00，即当选择在维护时间窗口内切换访问新实例时，默认会在03:00-04:00点进行切换访问新实例。
+     * @param req DeleteTimeWindowRequest
+     * @return DeleteTimeWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTimeWindowResponse DeleteTimeWindow(DeleteTimeWindowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTimeWindowResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTimeWindowResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTimeWindow"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -843,6 +879,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeTimeWindow)用于查询云数据库实例的维护时间窗口。
+     * @param req DescribeTimeWindowRequest
+     * @return DescribeTimeWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimeWindowResponse DescribeTimeWindow(DescribeTimeWindowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimeWindowResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimeWindowResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTimeWindow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeUploadedFiles)用于查询用户导入的SQL文件列表。
      * @param req DescribeUploadedFilesRequest
      * @return DescribeUploadedFilesResponse
@@ -1142,6 +1196,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyParamTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyTimeWindow)用于更新云数据库实例的维护时间窗口。
+     * @param req ModifyTimeWindowRequest
+     * @return ModifyTimeWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTimeWindowResponse ModifyTimeWindow(ModifyTimeWindowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTimeWindowResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTimeWindowResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTimeWindow"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

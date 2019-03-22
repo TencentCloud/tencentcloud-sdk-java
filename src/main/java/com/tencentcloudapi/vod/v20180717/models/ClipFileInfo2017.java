@@ -38,7 +38,7 @@ public class ClipFileInfo2017  extends AbstractModel{
     */
     @SerializedName("Message")
     @Expose
-    private Float Message;
+    private String Message;
 
     /**
     * 输出目标文件的文件 ID。
@@ -98,7 +98,7 @@ public class ClipFileInfo2017  extends AbstractModel{
      * @return Message 错误描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Float getMessage() {
+    public String getMessage() {
         return this.Message;
     }
 
@@ -108,7 +108,7 @@ public class ClipFileInfo2017  extends AbstractModel{
      * @param Message 错误描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMessage(Float Message) {
+    public void setMessage(String Message) {
         this.Message = Message;
     }
 

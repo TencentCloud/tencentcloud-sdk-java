@@ -65,6 +65,20 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     private String Procedure;
 
     /**
+    * 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
+    */
+    @SerializedName("MetaDataRequired")
+    @Expose
+    private Long MetaDataRequired;
+
+    /**
+    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
      * 获取推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
      * @return StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
      */
@@ -161,6 +175,38 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
+     * @return MetaDataRequired 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
+     */
+    public Long getMetaDataRequired() {
+        return this.MetaDataRequired;
+    }
+
+    /**
+     * 设置是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
+     * @param MetaDataRequired 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
+     */
+    public void setMetaDataRequired(Long MetaDataRequired) {
+        this.MetaDataRequired = MetaDataRequired;
+    }
+
+    /**
+     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +216,8 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "Procedure", this.Procedure);
+        this.setParamSimple(map, prefix + "MetaDataRequired", this.MetaDataRequired);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

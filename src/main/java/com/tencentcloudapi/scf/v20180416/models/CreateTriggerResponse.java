@@ -23,23 +23,46 @@ import java.util.HashMap;
 public class CreateTriggerResponse  extends AbstractModel{
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 触发器信息
+    */
+    @SerializedName("TriggerInfo")
+    @Expose
+    private Trigger TriggerInfo;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取触发器信息
+     * @return TriggerInfo 触发器信息
+     */
+    public Trigger getTriggerInfo() {
+        return this.TriggerInfo;
+    }
+
+    /**
+     * 设置触发器信息
+     * @param TriggerInfo 触发器信息
+     */
+    public void setTriggerInfo(Trigger TriggerInfo) {
+        this.TriggerInfo = TriggerInfo;
+    }
+
+    /**
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -49,6 +72,7 @@ public class CreateTriggerResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "TriggerInfo.", this.TriggerInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

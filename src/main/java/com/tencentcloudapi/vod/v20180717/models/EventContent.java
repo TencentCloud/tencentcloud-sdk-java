@@ -92,9 +92,9 @@ public class EventContent  extends AbstractModel{
     * 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("WechatPublishComplete")
+    @SerializedName("WechatPublishCompleteEvent")
     @Expose
-    private WechatPublishTask WechatPublishComplete;
+    private WechatPublishTask WechatPublishCompleteEvent;
 
     /**
     * 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
@@ -319,21 +319,21 @@ public class EventContent  extends AbstractModel{
     /**
      * 获取微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return WechatPublishComplete 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+     * @return WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public WechatPublishTask getWechatPublishComplete() {
-        return this.WechatPublishComplete;
+    public WechatPublishTask getWechatPublishCompleteEvent() {
+        return this.WechatPublishCompleteEvent;
     }
 
     /**
      * 设置微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatPublishComplete 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+     * @param WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWechatPublishComplete(WechatPublishTask WechatPublishComplete) {
-        this.WechatPublishComplete = WechatPublishComplete;
+    public void setWechatPublishCompleteEvent(WechatPublishTask WechatPublishCompleteEvent) {
+        this.WechatPublishCompleteEvent = WechatPublishCompleteEvent;
     }
 
     /**
@@ -447,7 +447,7 @@ public class EventContent  extends AbstractModel{
         this.setParamObj(map, prefix + "FileDeleteEvent.", this.FileDeleteEvent);
         this.setParamObj(map, prefix + "PullCompleteEvent.", this.PullCompleteEvent);
         this.setParamObj(map, prefix + "EditMediaCompleteEvent.", this.EditMediaCompleteEvent);
-        this.setParamObj(map, prefix + "WechatPublishComplete.", this.WechatPublishComplete);
+        this.setParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
         this.setParamObj(map, prefix + "TranscodeCompleteEvent.", this.TranscodeCompleteEvent);
         this.setParamObj(map, prefix + "ConcatCompleteEvent.", this.ConcatCompleteEvent);
         this.setParamObj(map, prefix + "ClipCompleteEvent.", this.ClipCompleteEvent);

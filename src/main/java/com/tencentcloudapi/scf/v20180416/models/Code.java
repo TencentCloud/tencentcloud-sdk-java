@@ -51,6 +51,20 @@ public class Code  extends AbstractModel{
     private String CosBucketRegion;
 
     /**
+    * 如果是通过Demo创建的话，需要传入DemoId
+    */
+    @SerializedName("DemoId")
+    @Expose
+    private String DemoId;
+
+    /**
+    * 如果是从TempCos创建的话，需要传入TempCosObjectName
+    */
+    @SerializedName("TempCosObjectName")
+    @Expose
+    private String TempCosObjectName;
+
+    /**
      * 获取对象存储桶名称
      * @return CosBucketName 对象存储桶名称
      */
@@ -115,6 +129,38 @@ public class Code  extends AbstractModel{
     }
 
     /**
+     * 获取如果是通过Demo创建的话，需要传入DemoId
+     * @return DemoId 如果是通过Demo创建的话，需要传入DemoId
+     */
+    public String getDemoId() {
+        return this.DemoId;
+    }
+
+    /**
+     * 设置如果是通过Demo创建的话，需要传入DemoId
+     * @param DemoId 如果是通过Demo创建的话，需要传入DemoId
+     */
+    public void setDemoId(String DemoId) {
+        this.DemoId = DemoId;
+    }
+
+    /**
+     * 获取如果是从TempCos创建的话，需要传入TempCosObjectName
+     * @return TempCosObjectName 如果是从TempCos创建的话，需要传入TempCosObjectName
+     */
+    public String getTempCosObjectName() {
+        return this.TempCosObjectName;
+    }
+
+    /**
+     * 设置如果是从TempCos创建的话，需要传入TempCosObjectName
+     * @param TempCosObjectName 如果是从TempCos创建的话，需要传入TempCosObjectName
+     */
+    public void setTempCosObjectName(String TempCosObjectName) {
+        this.TempCosObjectName = TempCosObjectName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +168,8 @@ public class Code  extends AbstractModel{
         this.setParamSimple(map, prefix + "CosObjectName", this.CosObjectName);
         this.setParamSimple(map, prefix + "ZipFile", this.ZipFile);
         this.setParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+        this.setParamSimple(map, prefix + "DemoId", this.DemoId);
+        this.setParamSimple(map, prefix + "TempCosObjectName", this.TempCosObjectName);
 
     }
 }

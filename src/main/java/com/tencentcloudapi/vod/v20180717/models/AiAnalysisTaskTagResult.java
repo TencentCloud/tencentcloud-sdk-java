@@ -58,7 +58,7 @@ public class AiAnalysisTaskTagResult  extends AbstractModel{
     */
     @SerializedName("Output")
     @Expose
-    private AiAnalysisTaskTagOutput [] Output;
+    private AiAnalysisTaskTagOutput Output;
 
     /**
      * 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
@@ -138,7 +138,7 @@ public class AiAnalysisTaskTagResult  extends AbstractModel{
      * @return Output 智能标签任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AiAnalysisTaskTagOutput [] getOutput() {
+    public AiAnalysisTaskTagOutput getOutput() {
         return this.Output;
     }
 
@@ -148,7 +148,7 @@ public class AiAnalysisTaskTagResult  extends AbstractModel{
      * @param Output 智能标签任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setOutput(AiAnalysisTaskTagOutput [] Output) {
+    public void setOutput(AiAnalysisTaskTagOutput Output) {
         this.Output = Output;
     }
 
@@ -160,7 +160,7 @@ public class AiAnalysisTaskTagResult  extends AbstractModel{
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
-        this.setParamArrayObj(map, prefix + "Output.", this.Output);
+        this.setParamObj(map, prefix + "Output.", this.Output);
 
     }
 }

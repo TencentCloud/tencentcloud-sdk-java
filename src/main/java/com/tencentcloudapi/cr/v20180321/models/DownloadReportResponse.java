@@ -23,25 +23,52 @@ import java.util.HashMap;
 public class DownloadReportResponse  extends AbstractModel{
 
     /**
-    * 日报下载地址
+    * 催收日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DailyReportUrl")
     @Expose
     private String DailyReportUrl;
 
     /**
-    * 结果下载地址
+    * 催收结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultReportUrl")
     @Expose
     private String ResultReportUrl;
 
     /**
-    * 明细下载地址
+    * 催收明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetailReportUrl")
     @Expose
     private String DetailReportUrl;
+
+    /**
+    * 回访日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CallbackDailyReportUrl")
+    @Expose
+    private String CallbackDailyReportUrl;
+
+    /**
+    * 回访结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CallbackResultReportUrl")
+    @Expose
+    private String CallbackResultReportUrl;
+
+    /**
+    * 回访明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CallbackDetailReportUrl")
+    @Expose
+    private String CallbackDetailReportUrl;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +78,123 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日报下载地址
-     * @return DailyReportUrl 日报下载地址
+     * 获取催收日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return DailyReportUrl 催收日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDailyReportUrl() {
         return this.DailyReportUrl;
     }
 
     /**
-     * 设置日报下载地址
-     * @param DailyReportUrl 日报下载地址
+     * 设置催收日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DailyReportUrl 催收日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDailyReportUrl(String DailyReportUrl) {
         this.DailyReportUrl = DailyReportUrl;
     }
 
     /**
-     * 获取结果下载地址
-     * @return ResultReportUrl 结果下载地址
+     * 获取催收结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ResultReportUrl 催收结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultReportUrl() {
         return this.ResultReportUrl;
     }
 
     /**
-     * 设置结果下载地址
-     * @param ResultReportUrl 结果下载地址
+     * 设置催收结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResultReportUrl 催收结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultReportUrl(String ResultReportUrl) {
         this.ResultReportUrl = ResultReportUrl;
     }
 
     /**
-     * 获取明细下载地址
-     * @return DetailReportUrl 明细下载地址
+     * 获取催收明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return DetailReportUrl 催收明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetailReportUrl() {
         return this.DetailReportUrl;
     }
 
     /**
-     * 设置明细下载地址
-     * @param DetailReportUrl 明细下载地址
+     * 设置催收明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetailReportUrl 催收明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetailReportUrl(String DetailReportUrl) {
         this.DetailReportUrl = DetailReportUrl;
+    }
+
+    /**
+     * 获取回访日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CallbackDailyReportUrl 回访日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCallbackDailyReportUrl() {
+        return this.CallbackDailyReportUrl;
+    }
+
+    /**
+     * 设置回访日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CallbackDailyReportUrl 回访日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCallbackDailyReportUrl(String CallbackDailyReportUrl) {
+        this.CallbackDailyReportUrl = CallbackDailyReportUrl;
+    }
+
+    /**
+     * 获取回访结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CallbackResultReportUrl 回访结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCallbackResultReportUrl() {
+        return this.CallbackResultReportUrl;
+    }
+
+    /**
+     * 设置回访结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CallbackResultReportUrl 回访结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCallbackResultReportUrl(String CallbackResultReportUrl) {
+        this.CallbackResultReportUrl = CallbackResultReportUrl;
+    }
+
+    /**
+     * 获取回访明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CallbackDetailReportUrl 回访明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCallbackDetailReportUrl() {
+        return this.CallbackDetailReportUrl;
+    }
+
+    /**
+     * 设置回访明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CallbackDetailReportUrl 回访明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCallbackDetailReportUrl(String CallbackDetailReportUrl) {
+        this.CallbackDetailReportUrl = CallbackDetailReportUrl;
     }
 
     /**
@@ -121,6 +220,9 @@ public class DownloadReportResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
         this.setParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
         this.setParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+        this.setParamSimple(map, prefix + "CallbackDailyReportUrl", this.CallbackDailyReportUrl);
+        this.setParamSimple(map, prefix + "CallbackResultReportUrl", this.CallbackResultReportUrl);
+        this.setParamSimple(map, prefix + "CallbackDetailReportUrl", this.CallbackDetailReportUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

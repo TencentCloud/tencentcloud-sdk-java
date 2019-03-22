@@ -58,6 +58,23 @@ public class ListFunctionsRequest  extends AbstractModel{
     private String SearchKey;
 
     /**
+    * 函数描述，支持模糊搜索
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 过滤条件。
+- tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * 获取以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      * @return Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      */
@@ -138,6 +155,50 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数描述，支持模糊搜索
+     * @return Description 函数描述，支持模糊搜索
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * 设置函数描述，支持模糊搜索
+     * @param Description 函数描述，支持模糊搜索
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * 获取过滤条件。
+- tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
+     * @return Filters 过滤条件。
+- tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * 设置过滤条件。
+- tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
+     * @param Filters 过滤条件。
+- tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+
+每次请求的Filters的上限为10，Filter.Values的上限为5。
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +207,8 @@ public class ListFunctionsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

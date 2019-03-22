@@ -156,7 +156,56 @@ public class GetFunctionResponse  extends AbstractModel{
     private String Role;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 是否自动安装依赖
+    */
+    @SerializedName("InstallDependency")
+    @Expose
+    private String InstallDependency;
+
+    /**
+    * 函数状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 状态描述
+    */
+    @SerializedName("StatusDesc")
+    @Expose
+    private String StatusDesc;
+
+    /**
+    * 日志投递到的Cls日志集
+    */
+    @SerializedName("ClsLogsetId")
+    @Expose
+    private String ClsLogsetId;
+
+    /**
+    * 日志投递到的Cls Topic
+    */
+    @SerializedName("ClsTopicId")
+    @Expose
+    private String ClsTopicId;
+
+    /**
+    * 函数ID
+    */
+    @SerializedName("FunctionId")
+    @Expose
+    private String FunctionId;
+
+    /**
+    * 函数的标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -467,16 +516,128 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取是否自动安装依赖
+     * @return InstallDependency 是否自动安装依赖
+     */
+    public String getInstallDependency() {
+        return this.InstallDependency;
+    }
+
+    /**
+     * 设置是否自动安装依赖
+     * @param InstallDependency 是否自动安装依赖
+     */
+    public void setInstallDependency(String InstallDependency) {
+        this.InstallDependency = InstallDependency;
+    }
+
+    /**
+     * 获取函数状态
+     * @return Status 函数状态
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * 设置函数状态
+     * @param Status 函数状态
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * 获取状态描述
+     * @return StatusDesc 状态描述
+     */
+    public String getStatusDesc() {
+        return this.StatusDesc;
+    }
+
+    /**
+     * 设置状态描述
+     * @param StatusDesc 状态描述
+     */
+    public void setStatusDesc(String StatusDesc) {
+        this.StatusDesc = StatusDesc;
+    }
+
+    /**
+     * 获取日志投递到的Cls日志集
+     * @return ClsLogsetId 日志投递到的Cls日志集
+     */
+    public String getClsLogsetId() {
+        return this.ClsLogsetId;
+    }
+
+    /**
+     * 设置日志投递到的Cls日志集
+     * @param ClsLogsetId 日志投递到的Cls日志集
+     */
+    public void setClsLogsetId(String ClsLogsetId) {
+        this.ClsLogsetId = ClsLogsetId;
+    }
+
+    /**
+     * 获取日志投递到的Cls Topic
+     * @return ClsTopicId 日志投递到的Cls Topic
+     */
+    public String getClsTopicId() {
+        return this.ClsTopicId;
+    }
+
+    /**
+     * 设置日志投递到的Cls Topic
+     * @param ClsTopicId 日志投递到的Cls Topic
+     */
+    public void setClsTopicId(String ClsTopicId) {
+        this.ClsTopicId = ClsTopicId;
+    }
+
+    /**
+     * 获取函数ID
+     * @return FunctionId 函数ID
+     */
+    public String getFunctionId() {
+        return this.FunctionId;
+    }
+
+    /**
+     * 设置函数ID
+     * @param FunctionId 函数ID
+     */
+    public void setFunctionId(String FunctionId) {
+        this.FunctionId = FunctionId;
+    }
+
+    /**
+     * 获取函数的标签列表
+     * @return Tags 函数的标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置函数的标签列表
+     * @param Tags 函数的标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -505,6 +666,13 @@ public class GetFunctionResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "ErrNo", this.ErrNo);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+        this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
+        this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -44,14 +44,14 @@ public class GetFunctionLogsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-    * 以升序还是降序的方式对日志进行排序，可选值 desc和 acs
+    * 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 根据某个字段排序日志,支持以下字段：startTime、functionName、requestId、duration和 memUsage
+    * 根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
     */
     @SerializedName("OrderBy")
     @Expose
@@ -62,7 +62,7 @@ public class GetFunctionLogsRequest  extends AbstractModel{
     */
     @SerializedName("Filter")
     @Expose
-    private Filter Filter;
+    private LogFilter Filter;
 
     /**
     * 函数的版本
@@ -141,32 +141,32 @@ public class GetFunctionLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取以升序还是降序的方式对日志进行排序，可选值 desc和 acs
-     * @return Order 以升序还是降序的方式对日志进行排序，可选值 desc和 acs
+     * 获取以升序还是降序的方式对日志进行排序，可选值 desc和 asc
+     * @return Order 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * 设置以升序还是降序的方式对日志进行排序，可选值 desc和 acs
-     * @param Order 以升序还是降序的方式对日志进行排序，可选值 desc和 acs
+     * 设置以升序还是降序的方式对日志进行排序，可选值 desc和 asc
+     * @param Order 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * 获取根据某个字段排序日志,支持以下字段：startTime、functionName、requestId、duration和 memUsage
-     * @return OrderBy 根据某个字段排序日志,支持以下字段：startTime、functionName、requestId、duration和 memUsage
+     * 获取根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
+     * @return OrderBy 根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * 设置根据某个字段排序日志,支持以下字段：startTime、functionName、requestId、duration和 memUsage
-     * @param OrderBy 根据某个字段排序日志,支持以下字段：startTime、functionName、requestId、duration和 memUsage
+     * 设置根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
+     * @param OrderBy 根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
@@ -176,7 +176,7 @@ public class GetFunctionLogsRequest  extends AbstractModel{
      * 获取日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
      * @return Filter 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
      */
-    public Filter getFilter() {
+    public LogFilter getFilter() {
         return this.Filter;
     }
 
@@ -184,7 +184,7 @@ public class GetFunctionLogsRequest  extends AbstractModel{
      * 设置日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
      * @param Filter 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
      */
-    public void setFilter(Filter Filter) {
+    public void setFilter(LogFilter Filter) {
         this.Filter = Filter;
     }
 

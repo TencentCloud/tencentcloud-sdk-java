@@ -46,6 +46,14 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     private String VodTaskId;
 
     /**
+    * 剪辑后的视频元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -109,6 +117,26 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
+     * 获取剪辑后的视频元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return MetaData 剪辑后的视频元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * 设置剪辑后的视频元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetaData 剪辑后的视频元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +159,7 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "VodTaskId", this.VodTaskId);
+        this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

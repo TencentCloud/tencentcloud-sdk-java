@@ -58,7 +58,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     private String ZipFile;
 
     /**
-    * 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+    * 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
     */
     @SerializedName("CosBucketRegion")
     @Expose
@@ -145,16 +145,16 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
-     * @return CosBucketRegion 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+     * 获取对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
+     * @return CosBucketRegion 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      */
     public String getCosBucketRegion() {
         return this.CosBucketRegion;
     }
 
     /**
-     * 设置对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
-     * @param CosBucketRegion 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+     * 设置对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
+     * @param CosBucketRegion 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      */
     public void setCosBucketRegion(String CosBucketRegion) {
         this.CosBucketRegion = CosBucketRegion;

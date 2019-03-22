@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TagSpecification  extends AbstractModel{
 
     /**
-    * 标签绑定的资源类型，当前仅支持类型："instance"
+    * 标签绑定的资源类型，当前支持类型："instance"和"host"
     */
     @SerializedName("ResourceType")
     @Expose
@@ -37,16 +37,16 @@ public class TagSpecification  extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * 获取标签绑定的资源类型，当前仅支持类型："instance"
-     * @return ResourceType 标签绑定的资源类型，当前仅支持类型："instance"
+     * 获取标签绑定的资源类型，当前支持类型："instance"和"host"
+     * @return ResourceType 标签绑定的资源类型，当前支持类型："instance"和"host"
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * 设置标签绑定的资源类型，当前仅支持类型："instance"
-     * @param ResourceType 标签绑定的资源类型，当前仅支持类型："instance"
+     * 设置标签绑定的资源类型，当前支持类型："instance"和"host"
+     * @param ResourceType 标签绑定的资源类型，当前支持类型："instance"和"host"
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

@@ -93,6 +93,22 @@ public class AgentBillElem  extends AbstractModel{
     private String PayerMode;
 
     /**
+    * 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientType")
+    @Expose
+    private String ClientType;
+
+    /**
+    * 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectType")
+    @Expose
+    private String ProjectType;
+
+    /**
      * 获取代理商账号ID
      * @return Uin 代理商账号ID
      */
@@ -253,6 +269,46 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
+     * 获取客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClientType() {
+        return this.ClientType;
+    }
+
+    /**
+     * 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientType(String ClientType) {
+        this.ClientType = ClientType;
+    }
+
+    /**
+     * 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectType() {
+        return this.ProjectType;
+    }
+
+    /**
+     * 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectType(String ProjectType) {
+        this.ProjectType = ProjectType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +322,8 @@ public class AgentBillElem  extends AbstractModel{
         this.setParamSimple(map, prefix + "SettleMonth", this.SettleMonth);
         this.setParamSimple(map, prefix + "Amt", this.Amt);
         this.setParamSimple(map, prefix + "PayerMode", this.PayerMode);
+        this.setParamSimple(map, prefix + "ClientType", this.ClientType);
+        this.setParamSimple(map, prefix + "ProjectType", this.ProjectType);
 
     }
 }

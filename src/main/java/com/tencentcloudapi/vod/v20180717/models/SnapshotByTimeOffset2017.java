@@ -30,7 +30,7 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
     */
     @SerializedName("ErrCode")
     @Expose
-    private String ErrCode;
+    private Long ErrCode;
 
     /**
     * 截图的具体时间点，单位：毫秒。
@@ -58,7 +58,7 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getErrCode() {
+    public Long getErrCode() {
         return this.ErrCode;
     }
 
@@ -72,7 +72,7 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setErrCode(String ErrCode) {
+    public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 

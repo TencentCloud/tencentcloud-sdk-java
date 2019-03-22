@@ -49,6 +49,24 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *银行卡核验
+     * @param req BankCardVerificationRequest
+     * @return BankCardVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public BankCardVerificationResponse BankCardVerification(BankCardVerificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BankCardVerificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BankCardVerificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BankCardVerification"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *每次开始核身前，需先调用本接口获取BizToken，用来串联核身流程，在核身完成后，用于获取验证结果信息。
      * @param req DetectAuthRequest
      * @return DetectAuthResponse

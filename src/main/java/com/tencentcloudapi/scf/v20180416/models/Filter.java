@@ -23,33 +23,57 @@ import java.util.HashMap;
 public class Filter  extends AbstractModel{
 
     /**
-    * filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+    * 需要过滤的字段。
     */
-    @SerializedName("RetCode")
+    @SerializedName("Name")
     @Expose
-    private String RetCode;
+    private String Name;
 
     /**
-     * 获取filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
-     * @return RetCode filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+    * 字段的过滤值。
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
+
+    /**
+     * 获取需要过滤的字段。
+     * @return Name 需要过滤的字段。
      */
-    public String getRetCode() {
-        return this.RetCode;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * 设置filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
-     * @param RetCode filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+     * 设置需要过滤的字段。
+     * @param Name 需要过滤的字段。
      */
-    public void setRetCode(String RetCode) {
-        this.RetCode = RetCode;
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * 获取字段的过滤值。
+     * @return Values 字段的过滤值。
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * 设置字段的过滤值。
+     * @param Values 字段的过滤值。
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RetCode", this.RetCode);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

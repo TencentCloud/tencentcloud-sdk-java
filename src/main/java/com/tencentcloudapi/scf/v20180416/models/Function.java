@@ -65,6 +65,34 @@ public class Function  extends AbstractModel{
     private String Namespace;
 
     /**
+    * 函数状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 函数状态详情
+    */
+    @SerializedName("StatusDesc")
+    @Expose
+    private String StatusDesc;
+
+    /**
+    * 函数描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 函数标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * 获取修改时间
      * @return ModTime 修改时间
      */
@@ -161,6 +189,70 @@ public class Function  extends AbstractModel{
     }
 
     /**
+     * 获取函数状态
+     * @return Status 函数状态
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * 设置函数状态
+     * @param Status 函数状态
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * 获取函数状态详情
+     * @return StatusDesc 函数状态详情
+     */
+    public String getStatusDesc() {
+        return this.StatusDesc;
+    }
+
+    /**
+     * 设置函数状态详情
+     * @param StatusDesc 函数状态详情
+     */
+    public void setStatusDesc(String StatusDesc) {
+        this.StatusDesc = StatusDesc;
+    }
+
+    /**
+     * 获取函数描述
+     * @return Description 函数描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * 设置函数描述
+     * @param Description 函数描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * 获取函数标签
+     * @return Tags 函数标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置函数标签
+     * @param Tags 函数标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +262,10 @@ public class Function  extends AbstractModel{
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
         this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -66,6 +66,7 @@ public class SingleRecord  extends AbstractModel{
 
     /**
     * 产品ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -73,6 +74,7 @@ public class SingleRecord  extends AbstractModel{
 
     /**
     * 录音下载链接。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordCosUrl")
     @Expose
@@ -176,7 +178,9 @@ public class SingleRecord  extends AbstractModel{
 
     /**
      * 获取产品ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return ProductId 产品ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductId() {
         return this.ProductId;
@@ -184,7 +188,9 @@ public class SingleRecord  extends AbstractModel{
 
     /**
      * 设置产品ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 产品ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
@@ -192,7 +198,9 @@ public class SingleRecord  extends AbstractModel{
 
     /**
      * 获取录音下载链接。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return RecordCosUrl 录音下载链接。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordCosUrl() {
         return this.RecordCosUrl;
@@ -200,7 +208,9 @@ public class SingleRecord  extends AbstractModel{
 
     /**
      * 设置录音下载链接。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordCosUrl 录音下载链接。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordCosUrl(String RecordCosUrl) {
         this.RecordCosUrl = RecordCosUrl;

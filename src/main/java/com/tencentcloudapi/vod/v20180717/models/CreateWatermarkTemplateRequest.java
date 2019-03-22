@@ -47,11 +47,11 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
 
     /**
     * 原点位置，可选值：
-<li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
-<li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
-<li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：topLeft。目前，当 Type 为 image，该字段仅支持 topLeft。
+<li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
+默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
     */
     @SerializedName("CoordinateOrigin")
     @Expose
@@ -89,7 +89,14 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     */
     @SerializedName("TextTemplate")
     @Expose
-    private TextWatermarkTemplate TextTemplate;
+    private TextWatermarkTemplateInput TextTemplate;
+
+    /**
+    * SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+    */
+    @SerializedName("SvgTemplate")
+    @Expose
+    private SvgWatermarkInput SvgTemplate;
 
     /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -156,17 +163,17 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
 
     /**
      * 获取原点位置，可选值：
-<li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
-<li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
-<li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：topLeft。目前，当 Type 为 image，该字段仅支持 topLeft。
+<li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
+默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
      * @return CoordinateOrigin 原点位置，可选值：
-<li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
-<li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
-<li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：topLeft。目前，当 Type 为 image，该字段仅支持 topLeft。
+<li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
+默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
      */
     public String getCoordinateOrigin() {
         return this.CoordinateOrigin;
@@ -174,17 +181,17 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
 
     /**
      * 设置原点位置，可选值：
-<li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
-<li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
-<li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：topLeft。目前，当 Type 为 image，该字段仅支持 topLeft。
+<li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
+默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
      * @param CoordinateOrigin 原点位置，可选值：
-<li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
-<li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
-<li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：topLeft。目前，当 Type 为 image，该字段仅支持 topLeft。
+<li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
+默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
      */
     public void setCoordinateOrigin(String CoordinateOrigin) {
         this.CoordinateOrigin = CoordinateOrigin;
@@ -266,7 +273,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
      * 获取文字水印模板，当 Type 为 text，该字段必填。当 Type 为 image，该字段无效。
      * @return TextTemplate 文字水印模板，当 Type 为 text，该字段必填。当 Type 为 image，该字段无效。
      */
-    public TextWatermarkTemplate getTextTemplate() {
+    public TextWatermarkTemplateInput getTextTemplate() {
         return this.TextTemplate;
     }
 
@@ -274,8 +281,24 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
      * 设置文字水印模板，当 Type 为 text，该字段必填。当 Type 为 image，该字段无效。
      * @param TextTemplate 文字水印模板，当 Type 为 text，该字段必填。当 Type 为 image，该字段无效。
      */
-    public void setTextTemplate(TextWatermarkTemplate TextTemplate) {
+    public void setTextTemplate(TextWatermarkTemplateInput TextTemplate) {
         this.TextTemplate = TextTemplate;
+    }
+
+    /**
+     * 获取SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+     * @return SvgTemplate SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+     */
+    public SvgWatermarkInput getSvgTemplate() {
+        return this.SvgTemplate;
+    }
+
+    /**
+     * 设置SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+     * @param SvgTemplate SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+     */
+    public void setSvgTemplate(SvgWatermarkInput SvgTemplate) {
+        this.SvgTemplate = SvgTemplate;
     }
 
     /**
@@ -306,6 +329,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "YPos", this.YPos);
         this.setParamObj(map, prefix + "ImageTemplate.", this.ImageTemplate);
         this.setParamObj(map, prefix + "TextTemplate.", this.TextTemplate);
+        this.setParamObj(map, prefix + "SvgTemplate.", this.SvgTemplate);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

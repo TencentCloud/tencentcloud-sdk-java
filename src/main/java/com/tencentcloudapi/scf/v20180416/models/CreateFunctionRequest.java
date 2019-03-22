@@ -86,6 +86,20 @@ public class CreateFunctionRequest  extends AbstractModel{
     private VpcConfig VpcConfig;
 
     /**
+    * 函数日志投递到的CLS LogsetID
+    */
+    @SerializedName("ClsLogsetId")
+    @Expose
+    private String ClsLogsetId;
+
+    /**
+    * 函数日志投递到的CLS TopicID
+    */
+    @SerializedName("ClsTopicId")
+    @Expose
+    private String ClsTopicId;
+
+    /**
      * 获取创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      * @return FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      */
@@ -230,6 +244,38 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数日志投递到的CLS LogsetID
+     * @return ClsLogsetId 函数日志投递到的CLS LogsetID
+     */
+    public String getClsLogsetId() {
+        return this.ClsLogsetId;
+    }
+
+    /**
+     * 设置函数日志投递到的CLS LogsetID
+     * @param ClsLogsetId 函数日志投递到的CLS LogsetID
+     */
+    public void setClsLogsetId(String ClsLogsetId) {
+        this.ClsLogsetId = ClsLogsetId;
+    }
+
+    /**
+     * 获取函数日志投递到的CLS TopicID
+     * @return ClsTopicId 函数日志投递到的CLS TopicID
+     */
+    public String getClsTopicId() {
+        return this.ClsTopicId;
+    }
+
+    /**
+     * 设置函数日志投递到的CLS TopicID
+     * @param ClsTopicId 函数日志投递到的CLS TopicID
+     */
+    public void setClsTopicId(String ClsTopicId) {
+        this.ClsTopicId = ClsTopicId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +288,8 @@ public class CreateFunctionRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "Environment.", this.Environment);
         this.setParamSimple(map, prefix + "Runtime", this.Runtime);
         this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
+        this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+        this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
 
     }
 }

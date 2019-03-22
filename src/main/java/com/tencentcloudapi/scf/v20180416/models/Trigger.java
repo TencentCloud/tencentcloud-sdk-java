@@ -58,6 +58,20 @@ public class Trigger  extends AbstractModel{
     private String AddTime;
 
     /**
+    * 使能开关
+    */
+    @SerializedName("Enable")
+    @Expose
+    private Integer Enable;
+
+    /**
+    * 客户自定义参数
+    */
+    @SerializedName("CustomArgument")
+    @Expose
+    private String CustomArgument;
+
+    /**
      * 获取触发器最后修改时间
      * @return ModTime 触发器最后修改时间
      */
@@ -138,6 +152,38 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
+     * 获取使能开关
+     * @return Enable 使能开关
+     */
+    public Integer getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * 设置使能开关
+     * @param Enable 使能开关
+     */
+    public void setEnable(Integer Enable) {
+        this.Enable = Enable;
+    }
+
+    /**
+     * 获取客户自定义参数
+     * @return CustomArgument 客户自定义参数
+     */
+    public String getCustomArgument() {
+        return this.CustomArgument;
+    }
+
+    /**
+     * 设置客户自定义参数
+     * @param CustomArgument 客户自定义参数
+     */
+    public void setCustomArgument(String CustomArgument) {
+        this.CustomArgument = CustomArgument;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class Trigger  extends AbstractModel{
         this.setParamSimple(map, prefix + "TriggerDesc", this.TriggerDesc);
         this.setParamSimple(map, prefix + "TriggerName", this.TriggerName);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
 
     }
 }

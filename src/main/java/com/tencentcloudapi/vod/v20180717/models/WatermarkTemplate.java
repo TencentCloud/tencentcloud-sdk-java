@@ -85,7 +85,7 @@ public class WatermarkTemplate  extends AbstractModel{
     */
     @SerializedName("TextTemplate")
     @Expose
-    private TextWatermarkTemplate TextTemplate;
+    private TextWatermarkTemplateInput TextTemplate;
 
     /**
     * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -262,7 +262,7 @@ public class WatermarkTemplate  extends AbstractModel{
      * @return TextTemplate 文字水印模板，仅当 Type 为 text，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TextWatermarkTemplate getTextTemplate() {
+    public TextWatermarkTemplateInput getTextTemplate() {
         return this.TextTemplate;
     }
 
@@ -272,7 +272,7 @@ public class WatermarkTemplate  extends AbstractModel{
      * @param TextTemplate 文字水印模板，仅当 Type 为 text，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTextTemplate(TextWatermarkTemplate TextTemplate) {
+    public void setTextTemplate(TextWatermarkTemplateInput TextTemplate) {
         this.TextTemplate = TextTemplate;
     }
 

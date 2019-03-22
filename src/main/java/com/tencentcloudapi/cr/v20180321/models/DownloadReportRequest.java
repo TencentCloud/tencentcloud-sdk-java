@@ -44,6 +44,13 @@ public class DownloadReportRequest  extends AbstractModel{
     private String ReportDate;
 
     /**
+    * 实例ID，不传默认为系统分配的初始实例。
+    */
+    @SerializedName("InstId")
+    @Expose
+    private String InstId;
+
+    /**
      * 获取模块名
      * @return Module 模块名
      */
@@ -92,12 +99,29 @@ public class DownloadReportRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例ID，不传默认为系统分配的初始实例。
+     * @return InstId 实例ID，不传默认为系统分配的初始实例。
+     */
+    public String getInstId() {
+        return this.InstId;
+    }
+
+    /**
+     * 设置实例ID，不传默认为系统分配的初始实例。
+     * @param InstId 实例ID，不传默认为系统分配的初始实例。
+     */
+    public void setInstId(String InstId) {
+        this.InstId = InstId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "ReportDate", this.ReportDate);
+        this.setParamSimple(map, prefix + "InstId", this.InstId);
 
     }
 }

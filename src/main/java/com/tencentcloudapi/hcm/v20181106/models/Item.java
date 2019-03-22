@@ -44,6 +44,13 @@ public class Item  extends AbstractModel{
     private ItemCoord ItemCoord;
 
     /**
+    * 推荐的答案
+    */
+    @SerializedName("Answer")
+    @Expose
+    private String Answer;
+
+    /**
      * 获取识别的算式是否正确
      * @return Item 识别的算式是否正确
      */
@@ -92,12 +99,29 @@ public class Item  extends AbstractModel{
     }
 
     /**
+     * 获取推荐的答案
+     * @return Answer 推荐的答案
+     */
+    public String getAnswer() {
+        return this.Answer;
+    }
+
+    /**
+     * 设置推荐的答案
+     * @param Answer 推荐的答案
+     */
+    public void setAnswer(String Answer) {
+        this.Answer = Answer;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Item", this.Item);
         this.setParamSimple(map, prefix + "ItemString", this.ItemString);
         this.setParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
+        this.setParamSimple(map, prefix + "Answer", this.Answer);
 
     }
 }

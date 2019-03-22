@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextWatermarkTemplate  extends AbstractModel{
+public class TextWatermarkTemplateInput  extends AbstractModel{
 
     /**
     * 字体类型，目前仅支持 arial.ttf。

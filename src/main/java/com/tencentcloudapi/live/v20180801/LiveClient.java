@@ -69,6 +69,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *添加域名，一次只能提交一个域名。域名必须已备案。
+     * @param req AddLiveDomainRequest
+     * @return AddLiveDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddLiveDomainResponse AddLiveDomain(AddLiveDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddLiveDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddLiveDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddLiveDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加水印，成功返回水印id后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印id绑定到流使用。
      * @param req AddLiveWatermarkRequest
      * @return AddLiveWatermarkResponse
@@ -154,6 +172,24 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateLiveCertResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于新增直播推流和播放的域名映射
+     * @param req CreateLiveDomainStrategyRequest
+     * @return CreateLiveDomainStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveDomainStrategyResponse CreateLiveDomainStrategy(CreateLiveDomainStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveDomainStrategyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveDomainStrategyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveDomainStrategy"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -388,6 +424,42 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveCertResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除已添加的直播域名
+     * @param req DeleteLiveDomainRequest
+     * @return DeleteLiveDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveDomainResponse DeleteLiveDomain(DeleteLiveDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于删除已新增的播放和推流域名映射关系
+     * @param req DeleteLiveDomainStrategyRequest
+     * @return DeleteLiveDomainStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveDomainStrategyResponse DeleteLiveDomainStrategy(DeleteLiveDomainStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveDomainStrategyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveDomainStrategyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveDomainStrategy"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -665,6 +737,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *查询直播域名信息
+     * @param req DescribeLiveDomainRequest
+     * @return DescribeLiveDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainResponse DescribeLiveDomain(DescribeLiveDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取域名证书信息
      * @param req DescribeLiveDomainCertRequest
      * @return DescribeLiveDomainCertResponse
@@ -676,6 +766,42 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDomainCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于查询已有域名策略
+     * @param req DescribeLiveDomainStrategysRequest
+     * @return DescribeLiveDomainStrategysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainStrategysResponse DescribeLiveDomainStrategys(DescribeLiveDomainStrategysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainStrategysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainStrategysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDomainStrategys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据域名状态、类型等信息查询用户的域名信息
+     * @param req DescribeLiveDomainsRequest
+     * @return DescribeLiveDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainsResponse DescribeLiveDomains(DescribeLiveDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDomains"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -935,6 +1061,25 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *支持查询某天的转码详细信息。
+注意：当前只支持查询近30天内某天的详细数据。
+     * @param req DescribeLiveTranscodeDetailInfoRequest
+     * @return DescribeLiveTranscodeDetailInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(DescribeLiveTranscodeDetailInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveTranscodeDetailInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取转码规则列表
      * @param req DescribeLiveTranscodeRulesRequest
      * @return DescribeLiveTranscodeRulesResponse
@@ -1061,6 +1206,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据。
+     * @param req DescribeStreamPlayInfoListRequest
+     * @return DescribeStreamPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(DescribeStreamPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamPlayInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamPlayInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeStreamPlayInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *断开推流连接，但可以重新推流
      * @param req DropLiveStreamRequest
      * @return DropLiveStreamResponse
@@ -1072,6 +1235,42 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DropLiveStreamResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DropLiveStream"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用状态为停用的直播域名
+     * @param req EnableLiveDomainRequest
+     * @return EnableLiveDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableLiveDomainResponse EnableLiveDomain(EnableLiveDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableLiveDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableLiveDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableLiveDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停用使用某个直播域名
+     * @param req ForbidLiveDomainRequest
+     * @return ForbidLiveDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ForbidLiveDomainResponse ForbidLiveDomain(ForbidLiveDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ForbidLiveDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ForbidLiveDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ForbidLiveDomain"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1162,6 +1361,24 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePlayAuthKeyResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyLivePlayAuthKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改播放域名信息
+     * @param req ModifyLivePlayDomainRequest
+     * @return ModifyLivePlayDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLivePlayDomainResponse ModifyLivePlayDomain(ModifyLivePlayDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLivePlayDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLivePlayDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLivePlayDomain"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

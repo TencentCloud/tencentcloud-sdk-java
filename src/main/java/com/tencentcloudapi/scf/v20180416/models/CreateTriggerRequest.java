@@ -37,7 +37,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     private String TriggerName;
 
     /**
-    * 触发器类型，目前支持 cos 、cmq、 timers、 ckafka类型
+    * 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
     */
     @SerializedName("Type")
     @Expose
@@ -56,6 +56,13 @@ public class CreateTriggerRequest  extends AbstractModel{
     @SerializedName("Qualifier")
     @Expose
     private String Qualifier;
+
+    /**
+    * 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+    */
+    @SerializedName("Enable")
+    @Expose
+    private String Enable;
 
     /**
      * 获取新建触发器绑定的函数名称
@@ -90,16 +97,16 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取触发器类型，目前支持 cos 、cmq、 timers、 ckafka类型
-     * @return Type 触发器类型，目前支持 cos 、cmq、 timers、 ckafka类型
+     * 获取触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
+     * @return Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * 设置触发器类型，目前支持 cos 、cmq、 timers、 ckafka类型
-     * @param Type 触发器类型，目前支持 cos 、cmq、 timers、 ckafka类型
+     * 设置触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
+     * @param Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -138,6 +145,22 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
+     * 获取触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+     * @return Enable 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+     */
+    public String getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * 设置触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+     * @param Enable 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+     */
+    public void setEnable(String Enable) {
+        this.Enable = Enable;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateTriggerRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "TriggerDesc", this.TriggerDesc);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
 
     }
 }

@@ -24,6 +24,7 @@ public class DescribeRecordsResponse  extends AbstractModel{
 
     /**
     * 录音列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordList")
     @Expose
@@ -45,7 +46,9 @@ public class DescribeRecordsResponse  extends AbstractModel{
 
     /**
      * 获取录音列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return RecordList 录音列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SingleRecord [] getRecordList() {
         return this.RecordList;
@@ -53,7 +56,9 @@ public class DescribeRecordsResponse  extends AbstractModel{
 
     /**
      * 设置录音列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordList 录音列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordList(SingleRecord [] RecordList) {
         this.RecordList = RecordList;

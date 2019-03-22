@@ -30,6 +30,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 <li>SampleSnapshot：采样截图</li>
 <li>ImageSprites：雪碧图</li>
 <li>CoverBySnapshot：截图做封面</li>
+<li>AdaptiveDynamicStreaming：自适应码流</li>
     */
     @SerializedName("Type")
     @Expose
@@ -84,6 +85,14 @@ public class MediaProcessTaskResult  extends AbstractModel{
     private MediaProcessTaskCoverBySnapshotResult CoverBySnapshotTask;
 
     /**
+    * 对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdaptiveDynamicStreamingTask")
+    @Expose
+    private MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask;
+
+    /**
      * 获取任务的类型，可以取的值有：
 <li>Transcode：转码</li>
 <li>AnimatedGraphics：转动图</li>
@@ -91,6 +100,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 <li>SampleSnapshot：采样截图</li>
 <li>ImageSprites：雪碧图</li>
 <li>CoverBySnapshot：截图做封面</li>
+<li>AdaptiveDynamicStreaming：自适应码流</li>
      * @return Type 任务的类型，可以取的值有：
 <li>Transcode：转码</li>
 <li>AnimatedGraphics：转动图</li>
@@ -98,6 +108,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 <li>SampleSnapshot：采样截图</li>
 <li>ImageSprites：雪碧图</li>
 <li>CoverBySnapshot：截图做封面</li>
+<li>AdaptiveDynamicStreaming：自适应码流</li>
      */
     public String getType() {
         return this.Type;
@@ -111,6 +122,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 <li>SampleSnapshot：采样截图</li>
 <li>ImageSprites：雪碧图</li>
 <li>CoverBySnapshot：截图做封面</li>
+<li>AdaptiveDynamicStreaming：自适应码流</li>
      * @param Type 任务的类型，可以取的值有：
 <li>Transcode：转码</li>
 <li>AnimatedGraphics：转动图</li>
@@ -118,6 +130,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
 <li>SampleSnapshot：采样截图</li>
 <li>ImageSprites：雪碧图</li>
 <li>CoverBySnapshot：截图做封面</li>
+<li>AdaptiveDynamicStreaming：自适应码流</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -244,6 +257,26 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
+     * 获取对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AdaptiveDynamicStreamingTask 对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() {
+        return this.AdaptiveDynamicStreamingTask;
+    }
+
+    /**
+     * 设置对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdaptiveDynamicStreamingTask 对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask) {
+        this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -254,6 +287,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
         this.setParamObj(map, prefix + "SampleSnapshotTask.", this.SampleSnapshotTask);
         this.setParamObj(map, prefix + "ImageSpriteTask.", this.ImageSpriteTask);
         this.setParamObj(map, prefix + "CoverBySnapshotTask.", this.CoverBySnapshotTask);
+        this.setParamObj(map, prefix + "AdaptiveDynamicStreamingTask.", this.AdaptiveDynamicStreamingTask);
 
     }
 }

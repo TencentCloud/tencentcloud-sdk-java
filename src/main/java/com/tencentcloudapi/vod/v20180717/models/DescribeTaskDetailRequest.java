@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeTaskDetailRequest  extends AbstractModel{
 
     /**
-    * 视频处理任务的任务 ID
+    * 视频处理任务的任务 ID。
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeTaskDetailRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取视频处理任务的任务 ID
-     * @return TaskId 视频处理任务的任务 ID
+     * 获取视频处理任务的任务 ID。
+     * @return TaskId 视频处理任务的任务 ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置视频处理任务的任务 ID
-     * @param TaskId 视频处理任务的任务 ID
+     * 设置视频处理任务的任务 ID。
+     * @param TaskId 视频处理任务的任务 ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

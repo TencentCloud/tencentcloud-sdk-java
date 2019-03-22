@@ -69,6 +69,42 @@ public class CrClient extends AbstractClient{
     }
 
     /**
+     *提交信审外呼申请，返回当次请求日期。
+     * @param req ApplyCreditAuditRequest
+     * @return ApplyCreditAuditResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyCreditAuditResponse ApplyCreditAudit(ApplyCreditAuditRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyCreditAuditResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyCreditAuditResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ApplyCreditAudit"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据信审任务ID和请求日期，获取相关信审结果。
+     * @param req DescribeCreditResultRequest
+     * @return DescribeCreditResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCreditResultResponse DescribeCreditResult(DescribeCreditResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCreditResultResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCreditResultResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCreditResult"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于获取指定案件的录音地址，次日早上8:00后可查询前日录音。
      * @param req DescribeRecordsRequest
      * @return DescribeRecordsResponse
@@ -105,7 +141,7 @@ public class CrClient extends AbstractClient{
     }
 
     /**
-     *用于下载当日催收结果报表，当日23:00后，可获取当日催收结果。
+     *用于下载当日催收和回访结果报表。当日23:00后，可获取当日催收结果，次日00:30后，可获取昨日回访结果。
      * @param req DownloadReportRequest
      * @return DownloadReportResponse
      * @throws TencentCloudSDKException

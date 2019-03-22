@@ -30,8 +30,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
     private Long Definition;
 
     /**
-    * 水印图片地址，仅当 Type 为 image，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 水印图片地址，仅当 Type 为 image，该字段有效。
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -61,20 +60,16 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
     }
 
     /**
-     * 获取水印图片地址，仅当 Type 为 image，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return ImageUrl 水印图片地址，仅当 Type 为 image，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * 获取水印图片地址，仅当 Type 为 image，该字段有效。
+     * @return ImageUrl 水印图片地址，仅当 Type 为 image，该字段有效。
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * 设置水印图片地址，仅当 Type 为 image，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageUrl 水印图片地址，仅当 Type 为 image，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * 设置水印图片地址，仅当 Type 为 image，该字段有效。
+     * @param ImageUrl 水印图片地址，仅当 Type 为 image，该字段有效。
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
