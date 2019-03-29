@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveDomainStrategysRequest  extends AbstractModel{
+public class DetailPoint  extends AbstractModel{
 
     /**
-    * 查询某个域名的鉴权规则
+    * 时间
     */
-    @SerializedName("DomainName")
+    @SerializedName("Time")
     @Expose
-    private String DomainName;
+    private String Time;
 
     /**
-     * 获取查询某个域名的鉴权规则
-     * @return DomainName 查询某个域名的鉴权规则
+    * 值
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * 获取时间
+     * @return Time 时间
      */
-    public String getDomainName() {
-        return this.DomainName;
+    public String getTime() {
+        return this.Time;
     }
 
     /**
-     * 设置查询某个域名的鉴权规则
-     * @param DomainName 查询某个域名的鉴权规则
+     * 设置时间
+     * @param Time 时间
      */
-    public void setDomainName(String DomainName) {
-        this.DomainName = DomainName;
+    public void setTime(String Time) {
+        this.Time = Time;
+    }
+
+    /**
+     * 获取值
+     * @return Value 值
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * 设置值
+     * @param Value 值
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

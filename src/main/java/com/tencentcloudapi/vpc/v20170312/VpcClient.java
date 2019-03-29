@@ -232,7 +232,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *创建IP地址模版
+     *本接口（CreateAddressTemplate）用于创建IP地址模版
      * @param req CreateAddressTemplateRequest
      * @return CreateAddressTemplateResponse
      * @throws TencentCloudSDKException
@@ -250,7 +250,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *创建IP地址模版集合
+     *本接口（CreateAddressTemplateGroup）用于创建IP地址模版集合
      * @param req CreateAddressTemplateGroupRequest
      * @return CreateAddressTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -529,7 +529,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *创建协议端口模板
+     *本接口（CreateServiceTemplate）用于创建协议端口模板
      * @param req CreateServiceTemplateRequest
      * @return CreateServiceTemplateResponse
      * @throws TencentCloudSDKException
@@ -547,7 +547,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *创建协议端口模板集合
+     *本接口（CreateServiceTemplateGroup）用于创建协议端口模板集合
      * @param req CreateServiceTemplateGroupRequest
      * @return CreateServiceTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -667,7 +667,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *删除IP地址模板
+     *本接口（DeleteAddressTemplate）用于删除IP地址模板
      * @param req DeleteAddressTemplateRequest
      * @return DeleteAddressTemplateResponse
      * @throws TencentCloudSDKException
@@ -685,7 +685,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *删除IP地址模板集合
+     *本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合
      * @param req DeleteAddressTemplateGroupRequest
      * @return DeleteAddressTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -933,7 +933,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *删除协议端口模板
+     *本接口（DeleteServiceTemplate）用于删除协议端口模板
      * @param req DeleteServiceTemplateRequest
      * @return DeleteServiceTemplateResponse
      * @throws TencentCloudSDKException
@@ -951,7 +951,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *删除协议端口模板集合
+     *本接口（DeleteServiceTemplateGroup）用于删除协议端口模板集合
      * @param req DeleteServiceTemplateGroupRequest
      * @return DeleteServiceTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -1080,7 +1080,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *查询IP地址模板集合
+     *本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合
      * @param req DescribeAddressTemplateGroupsRequest
      * @return DescribeAddressTemplateGroupsResponse
      * @throws TencentCloudSDKException
@@ -1098,7 +1098,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *查询IP地址模板
+     *本接口（DescribeAddressTemplates）用于查询IP地址模板
      * @param req DescribeAddressTemplatesRequest
      * @return DescribeAddressTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1516,7 +1516,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *查询协议端口模板集合
+     *本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合
      * @param req DescribeServiceTemplateGroupsRequest
      * @return DescribeServiceTemplateGroupsResponse
      * @throws TencentCloudSDKException
@@ -1534,7 +1534,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *查询协议端口模板
+     *本接口（DescribeServiceTemplates）用于查询协议端口模板
      * @param req DescribeServiceTemplatesRequest
      * @return DescribeServiceTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1961,7 +1961,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *修改IP地址模板
+     *本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板
      * @param req ModifyAddressTemplateAttributeRequest
      * @return ModifyAddressTemplateAttributeResponse
      * @throws TencentCloudSDKException
@@ -1979,7 +1979,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *修改IP地址模板集合
+     *本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合
      * @param req ModifyAddressTemplateGroupAttributeRequest
      * @return ModifyAddressTemplateGroupAttributeResponse
      * @throws TencentCloudSDKException
@@ -1997,7 +1997,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *接口用于调整[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)(简称EIP)带宽，包括后付费EIP, 预付费EIP和带宽包EIP
+     *本接口（ModifyAddressesBandwidth）用于调整[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)(简称EIP)带宽，包括后付费EIP, 预付费EIP和带宽包EIP
      * @param req ModifyAddressesBandwidthRequest
      * @return ModifyAddressesBandwidthResponse
      * @throws TencentCloudSDKException
@@ -2241,7 +2241,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *修改协议端口模板
+     *本接口（ModifyServiceTemplateAttribute）用于修改协议端口模板
      * @param req ModifyServiceTemplateAttributeRequest
      * @return ModifyServiceTemplateAttributeResponse
      * @throws TencentCloudSDKException

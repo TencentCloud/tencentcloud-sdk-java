@@ -67,7 +67,7 @@ public class CreateLiveTranscodeTemplateRequest  extends AbstractModel{
     private String Description;
 
     /**
-    * 高，默认0。
+    * 款，默认0。
     */
     @SerializedName("Width")
     @Expose
@@ -90,7 +90,7 @@ public class CreateLiveTranscodeTemplateRequest  extends AbstractModel{
     private Integer NeedAudio;
 
     /**
-    * 宽，默认0。
+    * 高，默认0。
     */
     @SerializedName("Height")
     @Expose
@@ -251,16 +251,16 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取高，默认0。
-     * @return Width 高，默认0。
+     * 获取款，默认0。
+     * @return Width 款，默认0。
      */
     public Integer getWidth() {
         return this.Width;
     }
 
     /**
-     * 设置高，默认0。
-     * @param Width 高，默认0。
+     * 设置款，默认0。
+     * @param Width 款，默认0。
      */
     public void setWidth(Integer Width) {
         this.Width = Width;
@@ -307,16 +307,16 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取宽，默认0。
-     * @return Height 宽，默认0。
+     * 获取高，默认0。
+     * @return Height 高，默认0。
      */
     public Integer getHeight() {
         return this.Height;
     }
 
     /**
-     * 设置宽，默认0。
-     * @param Height 宽，默认0。
+     * 设置高，默认0。
+     * @param Height 高，默认0。
      */
     public void setHeight(Integer Height) {
         this.Height = Height;

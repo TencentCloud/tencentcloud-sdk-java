@@ -1,0 +1,227 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.billing.v20180709.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeDosageDetailByDateRequest  extends AbstractModel{
+
+    /**
+    * 查询账单开始日期，如 2019-01-01
+    */
+    @SerializedName("StartDate")
+    @Expose
+    private String StartDate;
+
+    /**
+    * 查询账单结束日期，如 2019-01-01
+    */
+    @SerializedName("EndDate")
+    @Expose
+    private String EndDate;
+
+    /**
+    * 视频业务：
+10194   互动直播-核心机房           :
+10195   互动直播-边缘机房
+
+cdn业务：
+10180：CDN静态加速流量(国内)
+10181：CDN静态加速带宽(国内)
+10182：CDN静态加速普通流量
+10183：CDN静态加速普通带宽
+10231：CDN静态加速流量(海外)
+10232：CDN静态加速带宽(海外)
+
+100967：弹性公网IP-按流量计费
+101065：公网负载均衡-按流量计费
+    */
+    @SerializedName("ProductCode")
+    @Expose
+    private String ProductCode;
+
+    /**
+    * 查询域名 例如 www.qq.com
+非CDN业务查询时可以设置为空
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * 1、如果为空，则返回EIP或CLB所有实例的明细；
+2、如果传入实例名，则返回该实例明细
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
+     * 获取查询账单开始日期，如 2019-01-01
+     * @return StartDate 查询账单开始日期，如 2019-01-01
+     */
+    public String getStartDate() {
+        return this.StartDate;
+    }
+
+    /**
+     * 设置查询账单开始日期，如 2019-01-01
+     * @param StartDate 查询账单开始日期，如 2019-01-01
+     */
+    public void setStartDate(String StartDate) {
+        this.StartDate = StartDate;
+    }
+
+    /**
+     * 获取查询账单结束日期，如 2019-01-01
+     * @return EndDate 查询账单结束日期，如 2019-01-01
+     */
+    public String getEndDate() {
+        return this.EndDate;
+    }
+
+    /**
+     * 设置查询账单结束日期，如 2019-01-01
+     * @param EndDate 查询账单结束日期，如 2019-01-01
+     */
+    public void setEndDate(String EndDate) {
+        this.EndDate = EndDate;
+    }
+
+    /**
+     * 获取视频业务：
+10194   互动直播-核心机房           :
+10195   互动直播-边缘机房
+
+cdn业务：
+10180：CDN静态加速流量(国内)
+10181：CDN静态加速带宽(国内)
+10182：CDN静态加速普通流量
+10183：CDN静态加速普通带宽
+10231：CDN静态加速流量(海外)
+10232：CDN静态加速带宽(海外)
+
+100967：弹性公网IP-按流量计费
+101065：公网负载均衡-按流量计费
+     * @return ProductCode 视频业务：
+10194   互动直播-核心机房           :
+10195   互动直播-边缘机房
+
+cdn业务：
+10180：CDN静态加速流量(国内)
+10181：CDN静态加速带宽(国内)
+10182：CDN静态加速普通流量
+10183：CDN静态加速普通带宽
+10231：CDN静态加速流量(海外)
+10232：CDN静态加速带宽(海外)
+
+100967：弹性公网IP-按流量计费
+101065：公网负载均衡-按流量计费
+     */
+    public String getProductCode() {
+        return this.ProductCode;
+    }
+
+    /**
+     * 设置视频业务：
+10194   互动直播-核心机房           :
+10195   互动直播-边缘机房
+
+cdn业务：
+10180：CDN静态加速流量(国内)
+10181：CDN静态加速带宽(国内)
+10182：CDN静态加速普通流量
+10183：CDN静态加速普通带宽
+10231：CDN静态加速流量(海外)
+10232：CDN静态加速带宽(海外)
+
+100967：弹性公网IP-按流量计费
+101065：公网负载均衡-按流量计费
+     * @param ProductCode 视频业务：
+10194   互动直播-核心机房           :
+10195   互动直播-边缘机房
+
+cdn业务：
+10180：CDN静态加速流量(国内)
+10181：CDN静态加速带宽(国内)
+10182：CDN静态加速普通流量
+10183：CDN静态加速普通带宽
+10231：CDN静态加速流量(海外)
+10232：CDN静态加速带宽(海外)
+
+100967：弹性公网IP-按流量计费
+101065：公网负载均衡-按流量计费
+     */
+    public void setProductCode(String ProductCode) {
+        this.ProductCode = ProductCode;
+    }
+
+    /**
+     * 获取查询域名 例如 www.qq.com
+非CDN业务查询时可以设置为空
+     * @return Domain 查询域名 例如 www.qq.com
+非CDN业务查询时可以设置为空
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * 设置查询域名 例如 www.qq.com
+非CDN业务查询时可以设置为空
+     * @param Domain 查询域名 例如 www.qq.com
+非CDN业务查询时可以设置为空
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * 获取1、如果为空，则返回EIP或CLB所有实例的明细；
+2、如果传入实例名，则返回该实例明细
+     * @return InstanceID 1、如果为空，则返回EIP或CLB所有实例的明细；
+2、如果传入实例名，则返回该实例明细
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * 设置1、如果为空，则返回EIP或CLB所有实例的明细；
+2、如果传入实例名，则返回该实例明细
+     * @param InstanceID 1、如果为空，则返回EIP或CLB所有实例的明细；
+2、如果传入实例名，则返回该实例明细
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "StartDate", this.StartDate);
+        this.setParamSimple(map, prefix + "EndDate", this.EndDate);
+        this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+
+    }
+}
+

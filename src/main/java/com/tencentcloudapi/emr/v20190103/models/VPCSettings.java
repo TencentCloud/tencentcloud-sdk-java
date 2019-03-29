@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLiveDomainStrategyResponse  extends AbstractModel{
+public class VPCSettings  extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * VPC ID
     */
-    @SerializedName("RequestId")
+    @SerializedName("VpcId")
     @Expose
-    private String RequestId;
+    private String VpcId;
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * Subnet ID
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+     * 获取VPC ID
+     * @return VpcId VPC ID
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getVpcId() {
+        return this.VpcId;
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * 设置VPC ID
+     * @param VpcId VPC ID
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * 获取Subnet ID
+     * @return SubnetId Subnet ID
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * 设置Subnet ID
+     * @param SubnetId Subnet ID
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

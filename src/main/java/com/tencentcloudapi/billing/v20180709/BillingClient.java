@@ -121,6 +121,24 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *按日期获取产品用量明细
+     * @param req DescribeDosageDetailByDateRequest
+     * @return DescribeDosageDetailByDateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDosageDetailByDateResponse DescribeDosageDetailByDate(DescribeDosageDetailByDateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDosageDetailByDateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDosageDetailByDateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDosageDetailByDate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *支付订单
      * @param req PayDealsRequest
      * @return PayDealsResponse

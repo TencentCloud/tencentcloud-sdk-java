@@ -20,14 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveDomainStrategysResponse  extends AbstractModel{
+public class DescribeProvinceIspPlayInfoListResponse  extends AbstractModel{
 
     /**
-    * 域名策略信息。
+    * 播放信息列表。
     */
-    @SerializedName("StrategyList")
+    @SerializedName("DataInfoList")
     @Expose
-    private StrategyInfo [] StrategyList;
+    private PlayStatInfo [] DataInfoList;
+
+    /**
+    * 统计的类型，和输入参数保持一致。
+    */
+    @SerializedName("StatType")
+    @Expose
+    private String StatType;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeLiveDomainStrategysResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取域名策略信息。
-     * @return StrategyList 域名策略信息。
+     * 获取播放信息列表。
+     * @return DataInfoList 播放信息列表。
      */
-    public StrategyInfo [] getStrategyList() {
-        return this.StrategyList;
+    public PlayStatInfo [] getDataInfoList() {
+        return this.DataInfoList;
     }
 
     /**
-     * 设置域名策略信息。
-     * @param StrategyList 域名策略信息。
+     * 设置播放信息列表。
+     * @param DataInfoList 播放信息列表。
      */
-    public void setStrategyList(StrategyInfo [] StrategyList) {
-        this.StrategyList = StrategyList;
+    public void setDataInfoList(PlayStatInfo [] DataInfoList) {
+        this.DataInfoList = DataInfoList;
+    }
+
+    /**
+     * 获取统计的类型，和输入参数保持一致。
+     * @return StatType 统计的类型，和输入参数保持一致。
+     */
+    public String getStatType() {
+        return this.StatType;
+    }
+
+    /**
+     * 设置统计的类型，和输入参数保持一致。
+     * @param StatType 统计的类型，和输入参数保持一致。
+     */
+    public void setStatType(String StatType) {
+        this.StatType = StatType;
     }
 
     /**
@@ -72,7 +95,8 @@ public class DescribeLiveDomainStrategysResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "StrategyList.", this.StrategyList);
+        this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
+        this.setParamSimple(map, prefix + "StatType", this.StatType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

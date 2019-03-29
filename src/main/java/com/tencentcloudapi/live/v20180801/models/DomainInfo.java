@@ -73,6 +73,14 @@ public class DomainInfo  extends AbstractModel{
     private Integer PlayType;
 
     /**
+    * 0：普通直播，
+1：慢直播。
+    */
+    @SerializedName("IsDelayLive")
+    @Expose
+    private Integer IsDelayLive;
+
+    /**
      * 获取直播域名
      * @return Name 直播域名
      */
@@ -189,6 +197,26 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
+     * 获取0：普通直播，
+1：慢直播。
+     * @return IsDelayLive 0：普通直播，
+1：慢直播。
+     */
+    public Integer getIsDelayLive() {
+        return this.IsDelayLive;
+    }
+
+    /**
+     * 设置0：普通直播，
+1：慢直播。
+     * @param IsDelayLive 0：普通直播，
+1：慢直播。
+     */
+    public void setIsDelayLive(Integer IsDelayLive) {
+        this.IsDelayLive = IsDelayLive;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -199,6 +227,7 @@ public class DomainInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "BCName", this.BCName);
         this.setParamSimple(map, prefix + "TargetDomain", this.TargetDomain);
         this.setParamSimple(map, prefix + "PlayType", this.PlayType);
+        this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
 
     }
 }

@@ -31,6 +31,9 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
 
     /**
     * 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
+<li>customer-gateway-id - String - （过滤条件）用户网关唯一ID形如：`cgw-mgp33pll`。</li>
+<li>customer-gateway-name - String - （过滤条件）用户网关名称形如：`test-cgw`。</li>
+<li>ip-address - String - （过滤条件）公网地址形如：`58.211.1.12`。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -68,7 +71,13 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
 
     /**
      * 获取过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
+<li>customer-gateway-id - String - （过滤条件）用户网关唯一ID形如：`cgw-mgp33pll`。</li>
+<li>customer-gateway-name - String - （过滤条件）用户网关名称形如：`test-cgw`。</li>
+<li>ip-address - String - （过滤条件）公网地址形如：`58.211.1.12`。</li>
      * @return Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
+<li>customer-gateway-id - String - （过滤条件）用户网关唯一ID形如：`cgw-mgp33pll`。</li>
+<li>customer-gateway-name - String - （过滤条件）用户网关名称形如：`test-cgw`。</li>
+<li>ip-address - String - （过滤条件）公网地址形如：`58.211.1.12`。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -76,7 +85,13 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
 
     /**
      * 设置过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
+<li>customer-gateway-id - String - （过滤条件）用户网关唯一ID形如：`cgw-mgp33pll`。</li>
+<li>customer-gateway-name - String - （过滤条件）用户网关名称形如：`test-cgw`。</li>
+<li>ip-address - String - （过滤条件）公网地址形如：`58.211.1.12`。</li>
      * @param Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
+<li>customer-gateway-id - String - （过滤条件）用户网关唯一ID形如：`cgw-mgp33pll`。</li>
+<li>customer-gateway-name - String - （过滤条件）用户网关名称形如：`test-cgw`。</li>
+<li>ip-address - String - （过滤条件）公网地址形如：`58.211.1.12`。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

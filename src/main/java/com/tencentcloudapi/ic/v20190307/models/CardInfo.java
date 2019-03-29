@@ -208,7 +208,7 @@ public class CardInfo  extends AbstractModel{
     private Integer AllowArrears;
 
     /**
-    * 是否开通短息
+    * 是否开通短信0:未开短信 1:开通短信
     */
     @SerializedName("NeedSms")
     @Expose
@@ -674,16 +674,16 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否开通短息
-     * @return NeedSms 是否开通短息
+     * 获取是否开通短信0:未开短信 1:开通短信
+     * @return NeedSms 是否开通短信0:未开短信 1:开通短信
      */
     public Integer getNeedSms() {
         return this.NeedSms;
     }
 
     /**
-     * 设置是否开通短息
-     * @param NeedSms 是否开通短息
+     * 设置是否开通短信0:未开短信 1:开通短信
+     * @param NeedSms 是否开通短信0:未开短信 1:开通短信
      */
     public void setNeedSms(Integer NeedSms) {
         this.NeedSms = NeedSms;

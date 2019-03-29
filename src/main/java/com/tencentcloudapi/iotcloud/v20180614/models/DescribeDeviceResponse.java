@@ -104,7 +104,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     */
     @SerializedName("ConnIP")
     @Expose
-    private Integer ConnIP;
+    private Long ConnIP;
 
     /**
     * NB IoT运营商处的DeviceID
@@ -314,7 +314,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
      * 获取IP地址
      * @return ConnIP IP地址
      */
-    public Integer getConnIP() {
+    public Long getConnIP() {
         return this.ConnIP;
     }
 
@@ -322,7 +322,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
      * 设置IP地址
      * @param ConnIP IP地址
      */
-    public void setConnIP(Integer ConnIP) {
+    public void setConnIP(Long ConnIP) {
         this.ConnIP = ConnIP;
     }
 

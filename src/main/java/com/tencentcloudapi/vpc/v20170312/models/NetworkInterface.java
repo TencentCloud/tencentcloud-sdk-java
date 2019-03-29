@@ -99,6 +99,7 @@ public class NetworkInterface  extends AbstractModel{
 
     /**
     * 绑定的云服务器对象。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Attachment")
     @Expose
@@ -307,7 +308,9 @@ public class NetworkInterface  extends AbstractModel{
 
     /**
      * 获取绑定的云服务器对象。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Attachment 绑定的云服务器对象。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetworkInterfaceAttachment getAttachment() {
         return this.Attachment;
@@ -315,7 +318,9 @@ public class NetworkInterface  extends AbstractModel{
 
     /**
      * 设置绑定的云服务器对象。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Attachment 绑定的云服务器对象。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachment(NetworkInterfaceAttachment Attachment) {
         this.Attachment = Attachment;

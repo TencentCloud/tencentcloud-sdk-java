@@ -179,24 +179,6 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *该接口用于新增直播推流和播放的域名映射
-     * @param req CreateLiveDomainStrategyRequest
-     * @return CreateLiveDomainStrategyResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateLiveDomainStrategyResponse CreateLiveDomainStrategy(CreateLiveDomainStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveDomainStrategyResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveDomainStrategyResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveDomainStrategy"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *- 使用前提
   1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
   2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 [对应文档](https://cloud.tencent.com/document/product/266/2838)。
@@ -442,24 +424,6 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveDomainResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveDomain"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *该接口用于删除已新增的播放和推流域名映射关系
-     * @param req DeleteLiveDomainStrategyRequest
-     * @return DeleteLiveDomainStrategyResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteLiveDomainStrategyResponse DeleteLiveDomainStrategy(DeleteLiveDomainStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveDomainStrategyResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveDomainStrategyResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveDomainStrategy"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -773,24 +737,6 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *该接口用于查询已有域名策略
-     * @param req DescribeLiveDomainStrategysRequest
-     * @return DescribeLiveDomainStrategysResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLiveDomainStrategysResponse DescribeLiveDomainStrategys(DescribeLiveDomainStrategysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveDomainStrategysResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainStrategysResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDomainStrategys"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *根据域名状态、类型等信息查询用户的域名信息
      * @param req DescribeLiveDomainsRequest
      * @return DescribeLiveDomainsResponse
@@ -1043,6 +989,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *查询所有实时流的推流信息，包括客户端IP，服务端IP，帧率，码率，域名，开始推流时间。
+     * @param req DescribeLiveStreamPushInfoListRequest
+     * @return DescribeLiveStreamPushInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(DescribeLiveStreamPushInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveStreamPushInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamPushInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveStreamPushInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *返回直播中、无推流或者禁播等状态
      * @param req DescribeLiveStreamStateRequest
      * @return DescribeLiveStreamStateResponse
@@ -1188,6 +1152,42 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *查询某段时间内每个省份每个运营商的平均每秒流量，总流量，总请求数信息。
+     * @param req DescribeProIspPlaySumInfoListRequest
+     * @return DescribeProIspPlaySumInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProIspPlaySumInfoListResponse DescribeProIspPlaySumInfoList(DescribeProIspPlaySumInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProIspPlaySumInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProIspPlaySumInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProIspPlaySumInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询某省份某运营商下行播放数据，包括带宽，流量，请求数，并发连接数信息。
+     * @param req DescribeProvinceIspPlayInfoListRequest
+     * @return DescribeProvinceIspPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProvinceIspPlayInfoListResponse DescribeProvinceIspPlayInfoList(DescribeProvinceIspPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProvinceIspPlayInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProvinceIspPlayInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProvinceIspPlayInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询拉流配置
      * @param req DescribePullStreamConfigsRequest
      * @return DescribePullStreamConfigsResponse
@@ -1199,6 +1199,24 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePullStreamConfigsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribePullStreamConfigs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询天维度每条流的播放数据，包括总流量等。
+     * @param req DescribeStreamDayPlayInfoListRequest
+     * @return DescribeStreamDayPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoList(DescribeStreamDayPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamDayPlayInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamDayPlayInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeStreamDayPlayInfoList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

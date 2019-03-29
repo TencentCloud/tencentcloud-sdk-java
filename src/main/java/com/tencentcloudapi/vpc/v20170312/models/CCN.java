@@ -73,6 +73,7 @@ public class CCN  extends AbstractModel{
 
     /**
     * 付费类型，PREPAID为预付费，POSTPAID为后付费。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -80,6 +81,7 @@ public class CCN  extends AbstractModel{
 
     /**
     * 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthLimitType")
     @Expose
@@ -199,7 +201,9 @@ public class CCN  extends AbstractModel{
 
     /**
      * 获取付费类型，PREPAID为预付费，POSTPAID为后付费。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
@@ -207,7 +211,9 @@ public class CCN  extends AbstractModel{
 
     /**
      * 设置付费类型，PREPAID为预付费，POSTPAID为后付费。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -215,7 +221,9 @@ public class CCN  extends AbstractModel{
 
     /**
      * 获取限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBandwidthLimitType() {
         return this.BandwidthLimitType;
@@ -223,7 +231,9 @@ public class CCN  extends AbstractModel{
 
     /**
      * 设置限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthLimitType(String BandwidthLimitType) {
         this.BandwidthLimitType = BandwidthLimitType;

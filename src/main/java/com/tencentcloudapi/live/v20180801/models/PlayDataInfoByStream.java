@@ -20,60 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLiveDomainStrategyRequest  extends AbstractModel{
+public class PlayDataInfoByStream  extends AbstractModel{
 
     /**
-    * 推流域名。
+    * 流名称。
     */
-    @SerializedName("PushDomainName")
+    @SerializedName("StreamName")
     @Expose
-    private String PushDomainName;
+    private String StreamName;
 
     /**
-    * 播放域名。
+    * 总流量（单位MB）。
     */
-    @SerializedName("PlayDomainName")
+    @SerializedName("TotalFlux")
     @Expose
-    private String PlayDomainName;
+    private Float TotalFlux;
 
     /**
-     * 获取推流域名。
-     * @return PushDomainName 推流域名。
+     * 获取流名称。
+     * @return StreamName 流名称。
      */
-    public String getPushDomainName() {
-        return this.PushDomainName;
+    public String getStreamName() {
+        return this.StreamName;
     }
 
     /**
-     * 设置推流域名。
-     * @param PushDomainName 推流域名。
+     * 设置流名称。
+     * @param StreamName 流名称。
      */
-    public void setPushDomainName(String PushDomainName) {
-        this.PushDomainName = PushDomainName;
+    public void setStreamName(String StreamName) {
+        this.StreamName = StreamName;
     }
 
     /**
-     * 获取播放域名。
-     * @return PlayDomainName 播放域名。
+     * 获取总流量（单位MB）。
+     * @return TotalFlux 总流量（单位MB）。
      */
-    public String getPlayDomainName() {
-        return this.PlayDomainName;
+    public Float getTotalFlux() {
+        return this.TotalFlux;
     }
 
     /**
-     * 设置播放域名。
-     * @param PlayDomainName 播放域名。
+     * 设置总流量（单位MB）。
+     * @param TotalFlux 总流量（单位MB）。
      */
-    public void setPlayDomainName(String PlayDomainName) {
-        this.PlayDomainName = PlayDomainName;
+    public void setTotalFlux(Float TotalFlux) {
+        this.TotalFlux = TotalFlux;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PushDomainName", this.PushDomainName);
-        this.setParamSimple(map, prefix + "PlayDomainName", this.PlayDomainName);
+        this.setParamSimple(map, prefix + "StreamName", this.StreamName);
+        this.setParamSimple(map, prefix + "TotalFlux", this.TotalFlux);
 
     }
 }

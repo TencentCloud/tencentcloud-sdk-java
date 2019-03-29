@@ -69,7 +69,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     */
     @SerializedName("InstanceStatistics")
     @Expose
-    private String [] InstanceStatistics;
+    private InstanceStatistic [] InstanceStatistics;
 
     /**
      * 获取安全组实例ID。
@@ -171,7 +171,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
      * 获取全量实例的绑定统计。
      * @return InstanceStatistics 全量实例的绑定统计。
      */
-    public String [] getInstanceStatistics() {
+    public InstanceStatistic [] getInstanceStatistics() {
         return this.InstanceStatistics;
     }
 
@@ -179,7 +179,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
      * 设置全量实例的绑定统计。
      * @param InstanceStatistics 全量实例的绑定统计。
      */
-    public void setInstanceStatistics(String [] InstanceStatistics) {
+    public void setInstanceStatistics(InstanceStatistic [] InstanceStatistics) {
         this.InstanceStatistics = InstanceStatistics;
     }
 
@@ -193,7 +193,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
         this.setParamSimple(map, prefix + "ENI", this.ENI);
         this.setParamSimple(map, prefix + "SG", this.SG);
         this.setParamSimple(map, prefix + "CLB", this.CLB);
-        this.setParamArraySimple(map, prefix + "InstanceStatistics.", this.InstanceStatistics);
+        this.setParamArrayObj(map, prefix + "InstanceStatistics.", this.InstanceStatistics);
 
     }
 }

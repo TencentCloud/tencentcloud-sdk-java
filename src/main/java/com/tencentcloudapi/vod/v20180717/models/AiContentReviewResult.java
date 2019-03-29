@@ -53,7 +53,7 @@ public class AiContentReviewResult  extends AbstractModel{
     private AiReviewTaskTerrorismResult TerrorismTask;
 
     /**
-    * 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+    * 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoliticalTask")
@@ -177,9 +177,9 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+     * 获取视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return PoliticalTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+     * @return PoliticalTask 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiReviewTaskPoliticalResult getPoliticalTask() {
@@ -187,9 +187,9 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+     * 设置视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PoliticalTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+     * @param PoliticalTask 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoliticalTask(AiReviewTaskPoliticalResult PoliticalTask) {
