@@ -107,6 +107,14 @@ public class HostItem  extends AbstractModel{
     private HostResource HostResource;
 
     /**
+    * 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CageId")
+    @Expose
+    private String CageId;
+
+    /**
      * 获取cdh实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @return Placement cdh实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
@@ -299,6 +307,26 @@ public class HostItem  extends AbstractModel{
     }
 
     /**
+     * 获取专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CageId 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCageId() {
+        return this.CageId;
+    }
+
+    /**
+     * 设置专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CageId 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCageId(String CageId) {
+        this.CageId = CageId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +342,7 @@ public class HostItem  extends AbstractModel{
         this.setParamSimple(map, prefix + "HostState", this.HostState);
         this.setParamSimple(map, prefix + "HostIp", this.HostIp);
         this.setParamObj(map, prefix + "HostResource.", this.HostResource);
+        this.setParamSimple(map, prefix + "CageId", this.CageId);
 
     }
 }

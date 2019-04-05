@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.aai.v20180522.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse  extends AbstractModel{
+public class DescribeLogDownloadListResponse  extends AbstractModel{
 
     /**
-    * base64编码的wav音频数据
+    * 日志信息列表。
     */
-    @SerializedName("Audio")
+    @SerializedName("LogInfoList")
     @Expose
-    private String Audio;
+    private LogInfo [] LogInfoList;
 
     /**
-    * 一次请求对应一个SessionId
+    * 总条数。
     */
-    @SerializedName("SessionId")
+    @SerializedName("TotalNum")
     @Expose
-    private String SessionId;
+    private Integer TotalNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class TextToVoiceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取base64编码的wav音频数据
-     * @return Audio base64编码的wav音频数据
+     * 获取日志信息列表。
+     * @return LogInfoList 日志信息列表。
      */
-    public String getAudio() {
-        return this.Audio;
+    public LogInfo [] getLogInfoList() {
+        return this.LogInfoList;
     }
 
     /**
-     * 设置base64编码的wav音频数据
-     * @param Audio base64编码的wav音频数据
+     * 设置日志信息列表。
+     * @param LogInfoList 日志信息列表。
      */
-    public void setAudio(String Audio) {
-        this.Audio = Audio;
+    public void setLogInfoList(LogInfo [] LogInfoList) {
+        this.LogInfoList = LogInfoList;
     }
 
     /**
-     * 获取一次请求对应一个SessionId
-     * @return SessionId 一次请求对应一个SessionId
+     * 获取总条数。
+     * @return TotalNum 总条数。
      */
-    public String getSessionId() {
-        return this.SessionId;
+    public Integer getTotalNum() {
+        return this.TotalNum;
     }
 
     /**
-     * 设置一次请求对应一个SessionId
-     * @param SessionId 一次请求对应一个SessionId
+     * 设置总条数。
+     * @param TotalNum 总条数。
      */
-    public void setSessionId(String SessionId) {
-        this.SessionId = SessionId;
+    public void setTotalNum(Integer TotalNum) {
+        this.TotalNum = TotalNum;
     }
 
     /**
@@ -95,8 +95,8 @@ public class TextToVoiceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Audio", this.Audio);
-        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamArrayObj(map, prefix + "LogInfoList.", this.LogInfoList);
+        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

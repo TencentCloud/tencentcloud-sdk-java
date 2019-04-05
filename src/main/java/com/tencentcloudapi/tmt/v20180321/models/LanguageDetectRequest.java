@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class LanguageDetectRequest  extends AbstractModel{
 
     /**
-    * 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
+    * 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败。单次请求的文本长度需要低于2000。
     */
     @SerializedName("Text")
     @Expose
@@ -37,16 +37,16 @@ public class LanguageDetectRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-     * 获取待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
-     * @return Text 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
+     * 获取待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败。单次请求的文本长度需要低于2000。
+     * @return Text 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败。单次请求的文本长度需要低于2000。
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * 设置待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
-     * @param Text 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
+     * 设置待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败。单次请求的文本长度需要低于2000。
+     * @param Text 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败。单次请求的文本长度需要低于2000。
      */
     public void setText(String Text) {
         this.Text = Text;

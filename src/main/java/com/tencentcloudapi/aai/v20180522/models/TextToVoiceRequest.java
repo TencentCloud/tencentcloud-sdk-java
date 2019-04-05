@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TextToVoiceRequest  extends AbstractModel{
 
     /**
-    * 合成语音的源文本，中文最大支持100个汉字（标点符号算一个汉字）；英文最大支持400个字母（标点符号算一个字母）。
+    * 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
     */
     @SerializedName("Text")
     @Expose
@@ -66,7 +66,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-    * 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
+    * 音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
     */
     @SerializedName("VoiceType")
     @Expose
@@ -87,16 +87,16 @@ public class TextToVoiceRequest  extends AbstractModel{
     private Integer SampleRate;
 
     /**
-     * 获取合成语音的源文本，中文最大支持100个汉字（标点符号算一个汉字）；英文最大支持400个字母（标点符号算一个字母）。
-     * @return Text 合成语音的源文本，中文最大支持100个汉字（标点符号算一个汉字）；英文最大支持400个字母（标点符号算一个字母）。
+     * 获取合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
+     * @return Text 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * 设置合成语音的源文本，中文最大支持100个汉字（标点符号算一个汉字）；英文最大支持400个字母（标点符号算一个字母）。
-     * @param Text 合成语音的源文本，中文最大支持100个汉字（标点符号算一个汉字）；英文最大支持400个字母（标点符号算一个字母）。
+     * 设置合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
+     * @param Text 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
      */
     public void setText(String Text) {
         this.Text = Text;
@@ -187,16 +187,16 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
-     * @return VoiceType 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
+     * 获取音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * @return VoiceType 音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
     public Integer getVoiceType() {
         return this.VoiceType;
     }
 
     /**
-     * 设置音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
-     * @param VoiceType 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
+     * 设置音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * @param VoiceType 音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
     public void setVoiceType(Integer VoiceType) {
         this.VoiceType = VoiceType;

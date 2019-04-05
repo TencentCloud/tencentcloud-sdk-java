@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
 
     /**
-    * 模板名称。非空的字符串
+    * 模板名称。非空的字符串。
     */
     @SerializedName("TemplateName")
     @Expose
@@ -65,37 +65,37 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     private Integer SnapshotInterval;
 
     /**
-    * 截图宽度。默认：0（原始高）
+    * 截图宽度。默认：0（原始宽）。
     */
     @SerializedName("Width")
     @Expose
     private Integer Width;
 
     /**
-    * 截图高度。默认：0（原始宽）
+    * 截图高度。默认：0（原始高）。
     */
     @SerializedName("Height")
     @Expose
     private Integer Height;
 
     /**
-    * 是否开启鉴黄，0：不开启，1：开启。默认：0.
+    * 是否开启鉴黄，0：不开启，1：开启。默认：0。
     */
     @SerializedName("PornFlag")
     @Expose
     private Integer PornFlag;
 
     /**
-     * 获取模板名称。非空的字符串
-     * @return TemplateName 模板名称。非空的字符串
+     * 获取模板名称。非空的字符串。
+     * @return TemplateName 模板名称。非空的字符串。
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * 设置模板名称。非空的字符串
-     * @param TemplateName 模板名称。非空的字符串
+     * 设置模板名称。非空的字符串。
+     * @param TemplateName 模板名称。非空的字符串。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -182,48 +182,48 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取截图宽度。默认：0（原始高）
-     * @return Width 截图宽度。默认：0（原始高）
+     * 获取截图宽度。默认：0（原始宽）。
+     * @return Width 截图宽度。默认：0（原始宽）。
      */
     public Integer getWidth() {
         return this.Width;
     }
 
     /**
-     * 设置截图宽度。默认：0（原始高）
-     * @param Width 截图宽度。默认：0（原始高）
+     * 设置截图宽度。默认：0（原始宽）。
+     * @param Width 截图宽度。默认：0（原始宽）。
      */
     public void setWidth(Integer Width) {
         this.Width = Width;
     }
 
     /**
-     * 获取截图高度。默认：0（原始宽）
-     * @return Height 截图高度。默认：0（原始宽）
+     * 获取截图高度。默认：0（原始高）。
+     * @return Height 截图高度。默认：0（原始高）。
      */
     public Integer getHeight() {
         return this.Height;
     }
 
     /**
-     * 设置截图高度。默认：0（原始宽）
-     * @param Height 截图高度。默认：0（原始宽）
+     * 设置截图高度。默认：0（原始高）。
+     * @param Height 截图高度。默认：0（原始高）。
      */
     public void setHeight(Integer Height) {
         this.Height = Height;
     }
 
     /**
-     * 获取是否开启鉴黄，0：不开启，1：开启。默认：0.
-     * @return PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0.
+     * 获取是否开启鉴黄，0：不开启，1：开启。默认：0。
+     * @return PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0。
      */
     public Integer getPornFlag() {
         return this.PornFlag;
     }
 
     /**
-     * 设置是否开启鉴黄，0：不开启，1：开启。默认：0.
-     * @param PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0.
+     * 设置是否开启鉴黄，0：不开启，1：开启。默认：0。
+     * @param PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0。
      */
     public void setPornFlag(Integer PornFlag) {
         this.PornFlag = PornFlag;

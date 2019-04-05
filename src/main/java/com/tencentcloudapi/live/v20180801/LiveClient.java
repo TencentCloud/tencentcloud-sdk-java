@@ -1152,6 +1152,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *批量获取日志URL。
+     * @param req DescribeLogDownloadListRequest
+     * @return DescribeLogDownloadListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogDownloadListResponse DescribeLogDownloadList(DescribeLogDownloadListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogDownloadListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogDownloadListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLogDownloadList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询某段时间内每个省份每个运营商的平均每秒流量，总流量，总请求数信息。
      * @param req DescribeProIspPlaySumInfoListRequest
      * @return DescribeProIspPlaySumInfoListResponse

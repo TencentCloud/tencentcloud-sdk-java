@@ -37,7 +37,7 @@ public class CreateLiveCallbackRuleRequest  extends AbstractModel{
     private String AppName;
 
     /**
-    * 模板ID
+    * 模板ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -76,16 +76,16 @@ public class CreateLiveCallbackRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板ID
-     * @return TemplateId 模板ID
+     * 获取模板ID。
+     * @return TemplateId 模板ID。
      */
     public Integer getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * 设置模板ID
-     * @param TemplateId 模板ID
+     * 设置模板ID。
+     * @param TemplateId 模板ID。
      */
     public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;

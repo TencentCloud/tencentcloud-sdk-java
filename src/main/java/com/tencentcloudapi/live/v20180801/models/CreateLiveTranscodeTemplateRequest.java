@@ -30,7 +30,7 @@ public class CreateLiveTranscodeTemplateRequest  extends AbstractModel{
     private String TemplateName;
 
     /**
-    * 视频码率。
+    * 视频码率。范围：100-8000。
     */
     @SerializedName("VideoBitrate")
     @Expose
@@ -53,7 +53,7 @@ public class CreateLiveTranscodeTemplateRequest  extends AbstractModel{
     private String Acodec;
 
     /**
-    * 音频码率：默认0。0-500
+    * 音频码率：默认0。0-500。
     */
     @SerializedName("AudioBitrate")
     @Expose
@@ -67,7 +67,7 @@ public class CreateLiveTranscodeTemplateRequest  extends AbstractModel{
     private String Description;
 
     /**
-    * 款，默认0。
+    * 宽，默认0。
     */
     @SerializedName("Width")
     @Expose
@@ -163,16 +163,16 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取视频码率。
-     * @return VideoBitrate 视频码率。
+     * 获取视频码率。范围：100-8000。
+     * @return VideoBitrate 视频码率。范围：100-8000。
      */
     public Integer getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * 设置视频码率。
-     * @param VideoBitrate 视频码率。
+     * 设置视频码率。范围：100-8000。
+     * @param VideoBitrate 视频码率。范围：100-8000。
      */
     public void setVideoBitrate(Integer VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
@@ -219,16 +219,16 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取音频码率：默认0。0-500
-     * @return AudioBitrate 音频码率：默认0。0-500
+     * 获取音频码率：默认0。0-500。
+     * @return AudioBitrate 音频码率：默认0。0-500。
      */
     public Integer getAudioBitrate() {
         return this.AudioBitrate;
     }
 
     /**
-     * 设置音频码率：默认0。0-500
-     * @param AudioBitrate 音频码率：默认0。0-500
+     * 设置音频码率：默认0。0-500。
+     * @param AudioBitrate 音频码率：默认0。0-500。
      */
     public void setAudioBitrate(Integer AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
@@ -251,16 +251,16 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取款，默认0。
-     * @return Width 款，默认0。
+     * 获取宽，默认0。
+     * @return Width 宽，默认0。
      */
     public Integer getWidth() {
         return this.Width;
     }
 
     /**
-     * 设置款，默认0。
-     * @param Width 款，默认0。
+     * 设置宽，默认0。
+     * @param Width 宽，默认0。
      */
     public void setWidth(Integer Width) {
         this.Width = Width;

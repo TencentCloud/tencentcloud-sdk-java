@@ -143,7 +143,7 @@ public class RunInstancesRequest  extends AbstractModel{
     private ActionTimer ActionTimer;
 
     /**
-    * 容灾组id，仅支持指定一个。
+    * 置放群组id，仅支持指定一个。
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
@@ -447,16 +447,16 @@ public class RunInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取容灾组id，仅支持指定一个。
-     * @return DisasterRecoverGroupIds 容灾组id，仅支持指定一个。
+     * 获取置放群组id，仅支持指定一个。
+     * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * 设置容灾组id，仅支持指定一个。
-     * @param DisasterRecoverGroupIds 容灾组id，仅支持指定一个。
+     * 设置置放群组id，仅支持指定一个。
+     * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;

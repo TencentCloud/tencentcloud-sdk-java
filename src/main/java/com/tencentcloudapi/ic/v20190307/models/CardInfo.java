@@ -68,7 +68,7 @@ public class CardInfo  extends AbstractModel{
     private Integer Teleoperator;
 
     /**
-    * 卡片状态
+    * 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
     */
     @SerializedName("CardStatus")
     @Expose
@@ -330,16 +330,16 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取卡片状态
-     * @return CardStatus 卡片状态
+     * 获取卡片状态 1:未激活 2：激活 3：停卡 5：销卡
+     * @return CardStatus 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      */
     public Integer getCardStatus() {
         return this.CardStatus;
     }
 
     /**
-     * 设置卡片状态
-     * @param CardStatus 卡片状态
+     * 设置卡片状态 1:未激活 2：激活 3：停卡 5：销卡
+     * @param CardStatus 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      */
     public void setCardStatus(Integer CardStatus) {
         this.CardStatus = CardStatus;

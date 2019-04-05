@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateLiveCallbackTemplateResponse  extends AbstractModel{
 
     /**
-    * 模板Id。
+    * 模板ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateLiveCallbackTemplateResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取模板Id。
-     * @return TemplateId 模板Id。
+     * 获取模板ID。
+     * @return TemplateId 模板ID。
      */
     public Integer getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * 设置模板Id。
-     * @param TemplateId 模板Id。
+     * 设置模板ID。
+     * @param TemplateId 模板ID。
      */
     public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;
