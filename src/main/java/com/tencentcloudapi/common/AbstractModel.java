@@ -19,14 +19,20 @@ package com.tencentcloudapi.common;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 抽象model类
  */
 abstract public class AbstractModel {
-	
+    // any stores customized parameters which are not documented.
+    // You should make sure it can be correctly serialized to json string.
+    private HashMap<String, Object> customizedParams = new HashMap<String, Object>();
+
 	protected abstract void toMap(HashMap<String, String> map, String prefix);
 
 	/*
@@ -78,24 +84,52 @@ abstract public class AbstractModel {
     
     /**
      * 序列化函数，将对象数据转化为json格式的string
-     * @param obj 集成自AbstractModel的子类实例
+     * 
+     * @param obj
+     *            集成自AbstractModel的子类实例
      * @return json格式的string
      */
-    public static <O extends AbstractModel> String toJsonString (O obj) {
-    	Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-    	return gson.toJson(obj);
+    public static <O extends AbstractModel> String toJsonString(O obj) {
+        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+        JsonObject jopublic = gson.toJsonTree(obj).getAsJsonObject();
+        JsonObject joadd = gson.toJsonTree(obj.any()).getAsJsonObject();
+        for (Map.Entry<String, JsonElement> entry : joadd.entrySet()) {
+            jopublic.add(entry.getKey(), entry.getValue());
+        }
+        return jopublic.toString();
     }
     
     /**
      * 序列化函数，根据传入的json格式的string实例化一个cls对象返回
-     * @param json  json格式的string
-     * @param cls	与json匹配的类对象
-     * @return		cls的实例
+     * 
+     * @param json
+     *            json格式的string
+     * @param cls
+     *            与json匹配的类对象
+     * @return cls的实例
      */
-    public static <O> O fromJsonString (String json, Class<O> cls) {
-    	Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-    	return gson.fromJson(json, cls);
-    	
+    public static <O> O fromJsonString(String json, Class<O> cls) {
+        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+        return gson.fromJson(json, cls);
+    }
+
+    /**
+     * Set any key value pair to this model.
+     * 
+     * @param key
+     * @param value
+     */
+    public void set(String key, Object value) {
+        this.customizedParams.put(key, value);
+    }
+
+    /**
+     * Get customized key value pairs from this model.
+     * 
+     * @return
+     */
+    public HashMap<String, Object> any() {
+        return this.customizedParams;
     }
 }
 

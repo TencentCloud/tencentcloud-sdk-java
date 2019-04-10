@@ -162,10 +162,6 @@ abstract public class AbstractClient {
             endpoint = this.profile.getHttpProfile().getEndpoint();
         }
         // always use post tc3-hmac-sha256 signature process
-        String httpRequestMethod = this.profile.getHttpProfile().getReqMethod();
-        if (httpRequestMethod == null) {
-            throw new TencentCloudSDKException("Request method should not be null, can only be GET or POST");
-        }
         // okhttp always set charset even we don't specify it,
         // to ensure signature be correct, we have to set it here as well.
         String contentType = "application/json; charset=utf-8";
@@ -181,7 +177,7 @@ abstract public class AbstractClient {
         } else {
             hashedRequestPayload = Sign.sha256Hex(requestPayload);
         }
-        String canonicalRequest = httpRequestMethod + "\n" + canonicalUri + "\n" + canonicalQueryString + "\n"
+        String canonicalRequest = HttpProfile.REQ_POST + "\n" + canonicalUri + "\n" + canonicalQueryString + "\n"
                 + canonicalHeaders + "\n" + signedHeaders + "\n" + hashedRequestPayload;
 
         String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
@@ -244,15 +240,29 @@ abstract public class AbstractClient {
     }
 
     protected String internalRequest(AbstractModel request, String actionName) throws TencentCloudSDKException {
-
         Response okRsp = null;
         String endpoint = this.endpoint;
         if (!(this.profile.getHttpProfile().getEndpoint() == null)) {
             endpoint = this.profile.getHttpProfile().getEndpoint();
         }
-        
         String [] binaryParams = request.getBinaryParams();
         String sm = this.profile.getSignMethod();
+        String reqMethod = this.profile.getHttpProfile().getReqMethod();
+
+        // currently, customized params only can be supported via post json tc3-hmac-sha256
+        HashMap<String, Object> customizedParams = request.any();
+        if (customizedParams.size() > 0) {
+            if (binaryParams.length > 0) {
+                throw new TencentCloudSDKException("WrongUsage: Cannot post multipart with customized parameters.");
+            }
+            if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {
+                throw new TencentCloudSDKException("WrongUsage: Cannot use HmacSHA1 or HmacSHA256 with customized parameters.");
+            }
+            if (reqMethod.equals(HttpProfile.REQ_GET)) {
+                throw new TencentCloudSDKException("WrongUsage: Cannot use get method with customized parameters.");
+            }
+        }
+
         if (binaryParams.length > 0 || sm.equals(ClientProfile.SIGN_TC3_256)) {
             okRsp = doRequestWithTC3(endpoint, request, actionName);
         } else if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {

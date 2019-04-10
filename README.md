@@ -32,6 +32,7 @@
 ```java
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import com.tencentcloudapi.common.profile.ClientProfile;
 // 导入对应产品模块的client
 import com.tencentcloudapi.cvm.v20170312.CvmClient;
 // 导入要请求接口对应的request response类
@@ -46,7 +47,9 @@ public class DescribeZones
             Credential cred = new Credential("secretId", "secretKey");
             
             // 实例化要请求产品(以cvm为例)的client对象
-            CvmClient client = new CvmClient(cred, "ap-guangzhou");
+            ClientProfile clientProfile = new ClientProfile();
+            clientProfile.setSignMethod(ClientProfile.SIGN_TC3_256);
+            CvmClient client = new CvmClient(cred, "ap-guangzhou", clientProfile);
             
             // 实例化一个请求对象
             DescribeZonesRequest req = new DescribeZonesRequest();
