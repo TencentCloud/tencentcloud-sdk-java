@@ -143,6 +143,106 @@ abstract public class AbstractClient {
         return this.credential;
     }
 
+    /**
+     * Use post/json with tc3-hmac-sha256 signature to call any action. Ignore
+     * request method and signature method defined in profile.
+     * 
+     * @param action
+     *            Name of action to be called.
+     * @param jsonPayload
+     *            Parameters of action serialized in json string format.
+     * @return Raw response from API if request succeeded, otherwise an exception
+     *         will be raised instead of raw response
+     * @throws TencentCloudSDKException
+     */
+    public String call(String action, String jsonPayload) throws TencentCloudSDKException {
+        String endpoint = this.endpoint;
+        // in case user has reset endpoint after init this client
+        if (!(this.profile.getHttpProfile().getEndpoint() == null)) {
+            endpoint = this.profile.getHttpProfile().getEndpoint();
+        }
+        // always use post tc3-hmac-sha256 signature process
+        String httpRequestMethod = this.profile.getHttpProfile().getReqMethod();
+        if (httpRequestMethod == null) {
+            throw new TencentCloudSDKException("Request method should not be null, can only be GET or POST");
+        }
+        // okhttp always set charset even we don't specify it,
+        // to ensure signature be correct, we have to set it here as well.
+        String contentType = "application/json; charset=utf-8";
+        byte[] requestPayload = jsonPayload.getBytes();
+        String canonicalUri = "/";
+        String canonicalQueryString = "";
+        String canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
+        String signedHeaders = "content-type;host";
+
+        String hashedRequestPayload = "";
+        if (this.profile.isUnsignedPayload()) {
+            hashedRequestPayload = Sign.sha256Hex("UNSIGNED-PAYLOAD".getBytes());
+        } else {
+            hashedRequestPayload = Sign.sha256Hex(requestPayload);
+        }
+        String canonicalRequest = httpRequestMethod + "\n" + canonicalUri + "\n" + canonicalQueryString + "\n"
+                + canonicalHeaders + "\n" + signedHeaders + "\n" + hashedRequestPayload;
+
+        String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+        String date = sdf.format(new Date(Long.valueOf(timestamp + "000")));
+        String service = endpoint.split("\\.")[0];
+        String credentialScope = date + "/" + service + "/" + "tc3_request";
+        String hashedCanonicalRequest = Sign.sha256Hex(canonicalRequest.getBytes());
+        String stringToSign = "TC3-HMAC-SHA256\n" + timestamp + "\n" + credentialScope + "\n" + hashedCanonicalRequest;
+
+        String secretId = this.credential.getSecretId();
+        String secretKey = this.credential.getSecretKey();
+        byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(), date);
+        byte[] secretService = Sign.hmac256(secretDate, service);
+        byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
+        String signature = DatatypeConverter.printHexBinary(Sign.hmac256(secretSigning, stringToSign)).toLowerCase();
+        String authorization = "TC3-HMAC-SHA256 " + "Credential=" + secretId + "/" + credentialScope + ", "
+                + "SignedHeaders=" + signedHeaders + ", " + "Signature=" + signature;
+
+        HttpConnection conn = new HttpConnection(this.profile.getHttpProfile().getConnTimeout(),
+                this.profile.getHttpProfile().getReadTimeout(), this.profile.getHttpProfile().getWriteTimeout());
+        String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
+        Builder hb = new Headers.Builder();
+        hb.add("Content-Type", contentType).add("Host", endpoint).add("Authorization", authorization)
+                .add("X-TC-Action", action).add("X-TC-Timestamp", timestamp).add("X-TC-Version", this.apiVersion)
+                .add("X-TC-Region", this.getRegion()).add("X-TC-RequestClient", SDK_VERSION);
+        String token = this.credential.getToken();
+        if (token != null && !token.isEmpty()) {
+            hb.add("X-TC-Token", token);
+        }
+        if (this.profile.isUnsignedPayload()) {
+            hb.add("X-TC-Content-SHA256", "UNSIGNED-PAYLOAD");
+        }
+
+        Headers headers = hb.build();
+        Response resp = conn.postRequest(url, requestPayload, headers);
+        if (resp.code() != AbstractClient.HTTP_RSP_OK) {
+            throw new TencentCloudSDKException(resp.code() + resp.message());
+        }
+        String respbody = null;
+        try {
+            respbody = resp.body().string();
+        } catch (IOException e) {
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+        }
+        JsonResponseModel<JsonResponseErrModel> errResp = null;
+        try {
+            Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {
+            }.getType();
+            errResp = gson.fromJson(respbody, errType);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+        }
+        if (errResp.response.error != null) {
+            throw new TencentCloudSDKException(errResp.response.error.code + "-" + errResp.response.error.message,
+                    errResp.response.requestId);
+        }
+        return respbody;
+    }
+
     protected String internalRequest(AbstractModel request, String actionName) throws TencentCloudSDKException {
 
         Response okRsp = null;
