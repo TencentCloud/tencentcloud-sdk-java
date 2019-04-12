@@ -30,7 +30,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     private String TaskResult;
 
     /**
-    * 任务类型，001为报告下载，002为数据上传，003为还款数据上传。
+    * <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务类型，001为报告下载，002为数据上传，003为还款数据上传。
-     * @return TaskType 任务类型，001为报告下载，002为数据上传，003为还款数据上传。
+     * 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
+     * @return TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * 设置任务类型，001为报告下载，002为数据上传，003为还款数据上传。
-     * @param TaskType 任务类型，001为报告下载，002为数据上传，003为还款数据上传。
+     * 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
+     * @param TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

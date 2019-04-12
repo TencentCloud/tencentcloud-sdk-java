@@ -65,6 +65,14 @@ public class CreateLiveRecordTemplateRequest  extends AbstractModel{
     private RecordParam AacParam;
 
     /**
+    * 0：普通直播，
+1：慢直播。
+    */
+    @SerializedName("IsDelayLive")
+    @Expose
+    private Integer IsDelayLive;
+
+    /**
      * 获取模板名。非空的字符串
      * @return TemplateName 模板名。非空的字符串
      */
@@ -161,6 +169,26 @@ public class CreateLiveRecordTemplateRequest  extends AbstractModel{
     }
 
     /**
+     * 获取0：普通直播，
+1：慢直播。
+     * @return IsDelayLive 0：普通直播，
+1：慢直播。
+     */
+    public Integer getIsDelayLive() {
+        return this.IsDelayLive;
+    }
+
+    /**
+     * 设置0：普通直播，
+1：慢直播。
+     * @param IsDelayLive 0：普通直播，
+1：慢直播。
+     */
+    public void setIsDelayLive(Integer IsDelayLive) {
+        this.IsDelayLive = IsDelayLive;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +198,7 @@ public class CreateLiveRecordTemplateRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "HlsParam.", this.HlsParam);
         this.setParamObj(map, prefix + "Mp4Param.", this.Mp4Param);
         this.setParamObj(map, prefix + "AacParam.", this.AacParam);
+        this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
 
     }
 }

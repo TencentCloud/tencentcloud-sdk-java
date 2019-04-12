@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Policy  extends AbstractModel{
 
     /**
-    * 选定周一到周日中需要创建快照的日期，取值范围：[0, 6]。0表示周一触发，依此类推。
+    * 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
     */
     @SerializedName("DayOfWeek")
     @Expose
@@ -37,16 +37,16 @@ public class Policy  extends AbstractModel{
     private Integer [] Hour;
 
     /**
-     * 获取选定周一到周日中需要创建快照的日期，取值范围：[0, 6]。0表示周一触发，依此类推。
-     * @return DayOfWeek 选定周一到周日中需要创建快照的日期，取值范围：[0, 6]。0表示周一触发，依此类推。
+     * 获取指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+     * @return DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
      */
     public Integer [] getDayOfWeek() {
         return this.DayOfWeek;
     }
 
     /**
-     * 设置选定周一到周日中需要创建快照的日期，取值范围：[0, 6]。0表示周一触发，依此类推。
-     * @param DayOfWeek 选定周一到周日中需要创建快照的日期，取值范围：[0, 6]。0表示周一触发，依此类推。
+     * 设置指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+     * @param DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
      */
     public void setDayOfWeek(Integer [] DayOfWeek) {
         this.DayOfWeek = DayOfWeek;

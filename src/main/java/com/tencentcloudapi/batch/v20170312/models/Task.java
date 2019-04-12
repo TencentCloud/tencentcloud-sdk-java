@@ -128,6 +128,13 @@ public class Task  extends AbstractModel{
     private Integer Timeout;
 
     /**
+    * 任务最大并发数限制，默认没有限制。
+    */
+    @SerializedName("MaxConcurrentNum")
+    @Expose
+    private Integer MaxConcurrentNum;
+
+    /**
      * 获取应用程序信息
      * @return Application 应用程序信息
      */
@@ -368,6 +375,22 @@ public class Task  extends AbstractModel{
     }
 
     /**
+     * 获取任务最大并发数限制，默认没有限制。
+     * @return MaxConcurrentNum 任务最大并发数限制，默认没有限制。
+     */
+    public Integer getMaxConcurrentNum() {
+        return this.MaxConcurrentNum;
+    }
+
+    /**
+     * 设置任务最大并发数限制，默认没有限制。
+     * @param MaxConcurrentNum 任务最大并发数限制，默认没有限制。
+     */
+    public void setMaxConcurrentNum(Integer MaxConcurrentNum) {
+        this.MaxConcurrentNum = MaxConcurrentNum;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +409,7 @@ public class Task  extends AbstractModel{
         this.setParamSimple(map, prefix + "FailedAction", this.FailedAction);
         this.setParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamSimple(map, prefix + "MaxConcurrentNum", this.MaxConcurrentNum);
 
     }
 }

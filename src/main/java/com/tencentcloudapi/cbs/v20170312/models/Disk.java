@@ -230,6 +230,20 @@ public class Disk  extends AbstractModel{
     private Integer MigratePercent;
 
     /**
+    * 云盘是否为共享型云盘。
+    */
+    @SerializedName("Shareable")
+    @Expose
+    private Boolean Shareable;
+
+    /**
+    * 对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
+    */
+    @SerializedName("InstanceIdList")
+    @Expose
+    private String [] InstanceIdList;
+
+    /**
      * 获取云硬盘ID。
      * @return DiskId 云硬盘ID。
      */
@@ -722,6 +736,38 @@ public class Disk  extends AbstractModel{
     }
 
     /**
+     * 获取云盘是否为共享型云盘。
+     * @return Shareable 云盘是否为共享型云盘。
+     */
+    public Boolean getShareable() {
+        return this.Shareable;
+    }
+
+    /**
+     * 设置云盘是否为共享型云盘。
+     * @param Shareable 云盘是否为共享型云盘。
+     */
+    public void setShareable(Boolean Shareable) {
+        this.Shareable = Shareable;
+    }
+
+    /**
+     * 获取对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
+     * @return InstanceIdList 对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
+     */
+    public String [] getInstanceIdList() {
+        return this.InstanceIdList;
+    }
+
+    /**
+     * 设置对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
+     * @param InstanceIdList 对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
+     */
+    public void setInstanceIdList(String [] InstanceIdList) {
+        this.InstanceIdList = InstanceIdList;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -753,6 +799,8 @@ public class Disk  extends AbstractModel{
         this.setParamSimple(map, prefix + "DifferDaysOfDeadline", this.DifferDaysOfDeadline);
         this.setParamSimple(map, prefix + "Migrating", this.Migrating);
         this.setParamSimple(map, prefix + "MigratePercent", this.MigratePercent);
+        this.setParamSimple(map, prefix + "Shareable", this.Shareable);
+        this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
 
     }
 }

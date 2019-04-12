@@ -37,6 +37,14 @@ public class CreateBackupRequest  extends AbstractModel{
     private String BackupMethod;
 
     /**
+    * 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
+例：如果需要备份 db1 库的 tb1、tb2表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]
+    */
+    @SerializedName("BackupDBTableList")
+    @Expose
+    private BackupItem [] BackupDBTableList;
+
+    /**
      * 获取实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      */
@@ -69,11 +77,32 @@ public class CreateBackupRequest  extends AbstractModel{
     }
 
     /**
+     * 获取需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
+例：如果需要备份 db1 库的 tb1、tb2表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]
+     * @return BackupDBTableList 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
+例：如果需要备份 db1 库的 tb1、tb2表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]
+     */
+    public BackupItem [] getBackupDBTableList() {
+        return this.BackupDBTableList;
+    }
+
+    /**
+     * 设置需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
+例：如果需要备份 db1 库的 tb1、tb2表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]
+     * @param BackupDBTableList 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
+例：如果需要备份 db1 库的 tb1、tb2表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]
+     */
+    public void setBackupDBTableList(BackupItem [] BackupDBTableList) {
+        this.BackupDBTableList = BackupDBTableList;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+        this.setParamArrayObj(map, prefix + "BackupDBTableList.", this.BackupDBTableList);
 
     }
 }

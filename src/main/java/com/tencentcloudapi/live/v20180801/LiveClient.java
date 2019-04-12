@@ -701,7 +701,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *查询直播域名信息
+     *查询直播域名信息。
      * @param req DescribeLiveDomainRequest
      * @return DescribeLiveDomainResponse
      * @throws TencentCloudSDKException

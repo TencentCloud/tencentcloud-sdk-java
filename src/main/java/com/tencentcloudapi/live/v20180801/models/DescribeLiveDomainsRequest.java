@@ -51,6 +51,13 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     private Integer PageNum;
 
     /**
+    * 0 普通直播 1慢直播 默认0
+    */
+    @SerializedName("IsDelayLive")
+    @Expose
+    private Integer IsDelayLive;
+
+    /**
      * 获取域名状态过滤。0-停用，1-启用
      * @return DomainStatus 域名状态过滤。0-停用，1-启用
      */
@@ -115,6 +122,22 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取0 普通直播 1慢直播 默认0
+     * @return IsDelayLive 0 普通直播 1慢直播 默认0
+     */
+    public Integer getIsDelayLive() {
+        return this.IsDelayLive;
+    }
+
+    /**
+     * 设置0 普通直播 1慢直播 默认0
+     * @param IsDelayLive 0 普通直播 1慢直播 默认0
+     */
+    public void setIsDelayLive(Integer IsDelayLive) {
+        this.IsDelayLive = IsDelayLive;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "DomainType", this.DomainType);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
+        this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
 
     }
 }

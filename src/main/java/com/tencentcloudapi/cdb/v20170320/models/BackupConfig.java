@@ -48,7 +48,7 @@ public class BackupConfig  extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private String Vport;
+    private Integer Vport;
 
     /**
      * 获取第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
@@ -102,7 +102,7 @@ public class BackupConfig  extends AbstractModel{
      * 获取第二个从库访问端口
      * @return Vport 第二个从库访问端口
      */
-    public String getVport() {
+    public Integer getVport() {
         return this.Vport;
     }
 
@@ -110,7 +110,7 @@ public class BackupConfig  extends AbstractModel{
      * 设置第二个从库访问端口
      * @param Vport 第二个从库访问端口
      */
-    public void setVport(String Vport) {
+    public void setVport(Integer Vport) {
         this.Vport = Vport;
     }
 

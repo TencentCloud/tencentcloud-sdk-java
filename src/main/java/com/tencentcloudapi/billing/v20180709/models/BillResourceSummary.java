@@ -184,6 +184,27 @@ public class BillResourceSummary  extends AbstractModel{
     private String IncentivePayAmount;
 
     /**
+    * 扩展字段3
+    */
+    @SerializedName("ExtendField3")
+    @Expose
+    private String ExtendField3;
+
+    /**
+    * 扩展字段4
+    */
+    @SerializedName("ExtendField4")
+    @Expose
+    private String ExtendField4;
+
+    /**
+    * 扩展字段5
+    */
+    @SerializedName("ExtendField5")
+    @Expose
+    private String ExtendField5;
+
+    /**
      * 获取产品
      * @return BusinessCodeName 产品
      */
@@ -552,6 +573,54 @@ public class BillResourceSummary  extends AbstractModel{
     }
 
     /**
+     * 获取扩展字段3
+     * @return ExtendField3 扩展字段3
+     */
+    public String getExtendField3() {
+        return this.ExtendField3;
+    }
+
+    /**
+     * 设置扩展字段3
+     * @param ExtendField3 扩展字段3
+     */
+    public void setExtendField3(String ExtendField3) {
+        this.ExtendField3 = ExtendField3;
+    }
+
+    /**
+     * 获取扩展字段4
+     * @return ExtendField4 扩展字段4
+     */
+    public String getExtendField4() {
+        return this.ExtendField4;
+    }
+
+    /**
+     * 设置扩展字段4
+     * @param ExtendField4 扩展字段4
+     */
+    public void setExtendField4(String ExtendField4) {
+        this.ExtendField4 = ExtendField4;
+    }
+
+    /**
+     * 获取扩展字段5
+     * @return ExtendField5 扩展字段5
+     */
+    public String getExtendField5() {
+        return this.ExtendField5;
+    }
+
+    /**
+     * 设置扩展字段5
+     * @param ExtendField5 扩展字段5
+     */
+    public void setExtendField5(String ExtendField5) {
+        this.ExtendField5 = ExtendField5;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -578,6 +647,9 @@ public class BillResourceSummary  extends AbstractModel{
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+        this.setParamSimple(map, prefix + "ExtendField3", this.ExtendField3);
+        this.setParamSimple(map, prefix + "ExtendField4", this.ExtendField4);
+        this.setParamSimple(map, prefix + "ExtendField5", this.ExtendField5);
 
     }
 }

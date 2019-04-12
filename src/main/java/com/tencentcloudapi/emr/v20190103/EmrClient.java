@@ -49,6 +49,42 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *创建EMR实例
+     * @param req CreateInstanceRequest
+     * @return CreateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceResponse CreateInstance(CreateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询EMR实例
+     * @param req DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建实例询价
      * @param req InquiryPriceCreateInstanceRequest
      * @return InquiryPriceCreateInstanceResponse
@@ -60,6 +96,78 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceCreateInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *扩容询价. 当扩容时候，请通过该接口查询价格。
+     * @param req InquiryPriceScaleOutInstanceRequest
+     * @return InquiryPriceScaleOutInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceScaleOutInstanceResponse InquiryPriceScaleOutInstance(InquiryPriceScaleOutInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceScaleOutInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceScaleOutInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *实例扩容
+     * @param req ScaleOutInstanceRequest
+     * @return ScaleOutInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleOutInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ScaleOutInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *销毁EMR实例
+     * @param req TerminateInstanceRequest
+     * @return TerminateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateInstanceResponse TerminateInstance(TerminateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TerminateInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *缩容Task节点
+     * @param req TerminateTasksRequest
+     * @return TerminateTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateTasksResponse TerminateTasks(TerminateTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateTasksResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateTasksResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TerminateTasks"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

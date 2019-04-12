@@ -72,7 +72,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     private String EngineVersion;
 
     /**
-    * 切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
+    * 切换访问新实例的方式，默认为0。支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
     */
     @SerializedName("WaitSwitch")
     @Expose
@@ -205,16 +205,16 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
-     * @return WaitSwitch 切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
+     * 获取切换访问新实例的方式，默认为0。支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
+     * @return WaitSwitch 切换访问新实例的方式，默认为0。支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
      */
     public Integer getWaitSwitch() {
         return this.WaitSwitch;
     }
 
     /**
-     * 设置切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
-     * @param WaitSwitch 切换访问新实例的方式，默认为0，升级主实例时，可指定该参数，升级只读实例或者灾备实例时指定该参数无意义，支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
+     * 设置切换访问新实例的方式，默认为0。支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
+     * @param WaitSwitch 切换访问新实例的方式，默认为0。支持值包括：0-立刻切换，1-时间窗切换；当该值为1时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口[切换访问新实例](https://cloud.tencent.com/document/product/236/15864)触发该流程
      */
     public void setWaitSwitch(Integer WaitSwitch) {
         this.WaitSwitch = WaitSwitch;

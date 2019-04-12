@@ -45,6 +45,7 @@ public class TaskView  extends AbstractModel{
 
     /**
     * 结束时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -100,7 +101,9 @@ public class TaskView  extends AbstractModel{
 
     /**
      * 获取结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @return EndTime 结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -108,7 +111,9 @@ public class TaskView  extends AbstractModel{
 
     /**
      * 设置结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

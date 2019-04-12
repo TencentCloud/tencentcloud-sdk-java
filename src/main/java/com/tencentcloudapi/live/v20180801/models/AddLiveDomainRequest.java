@@ -23,72 +23,125 @@ import java.util.HashMap;
 public class AddLiveDomainRequest  extends AbstractModel{
 
     /**
-    * 域名名称
+    * 域名名称。
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 域名类型。0-推流域名，1-播放域名
+    * 域名类型，
+0：推流域名，
+1：播放域名。
     */
     @SerializedName("DomainType")
     @Expose
     private Integer DomainType;
 
     /**
-    * 拉流域名类型。1-国内；2-全球；3-境外
+    * 拉流域名类型：
+1：国内，
+2：全球，
+3：境外。
     */
     @SerializedName("PlayType")
     @Expose
     private Integer PlayType;
 
     /**
-     * 获取域名名称
-     * @return DomainName 域名名称
+    * 默认 0 ：普通直播，
+1：慢直播。
+    */
+    @SerializedName("IsDelayLive")
+    @Expose
+    private Integer IsDelayLive;
+
+    /**
+     * 获取域名名称。
+     * @return DomainName 域名名称。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * 设置域名名称
-     * @param DomainName 域名名称
+     * 设置域名名称。
+     * @param DomainName 域名名称。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * 获取域名类型。0-推流域名，1-播放域名
-     * @return DomainType 域名类型。0-推流域名，1-播放域名
+     * 获取域名类型，
+0：推流域名，
+1：播放域名。
+     * @return DomainType 域名类型，
+0：推流域名，
+1：播放域名。
      */
     public Integer getDomainType() {
         return this.DomainType;
     }
 
     /**
-     * 设置域名类型。0-推流域名，1-播放域名
-     * @param DomainType 域名类型。0-推流域名，1-播放域名
+     * 设置域名类型，
+0：推流域名，
+1：播放域名。
+     * @param DomainType 域名类型，
+0：推流域名，
+1：播放域名。
      */
     public void setDomainType(Integer DomainType) {
         this.DomainType = DomainType;
     }
 
     /**
-     * 获取拉流域名类型。1-国内；2-全球；3-境外
-     * @return PlayType 拉流域名类型。1-国内；2-全球；3-境外
+     * 获取拉流域名类型：
+1：国内，
+2：全球，
+3：境外。
+     * @return PlayType 拉流域名类型：
+1：国内，
+2：全球，
+3：境外。
      */
     public Integer getPlayType() {
         return this.PlayType;
     }
 
     /**
-     * 设置拉流域名类型。1-国内；2-全球；3-境外
-     * @param PlayType 拉流域名类型。1-国内；2-全球；3-境外
+     * 设置拉流域名类型：
+1：国内，
+2：全球，
+3：境外。
+     * @param PlayType 拉流域名类型：
+1：国内，
+2：全球，
+3：境外。
      */
     public void setPlayType(Integer PlayType) {
         this.PlayType = PlayType;
+    }
+
+    /**
+     * 获取默认 0 ：普通直播，
+1：慢直播。
+     * @return IsDelayLive 默认 0 ：普通直播，
+1：慢直播。
+     */
+    public Integer getIsDelayLive() {
+        return this.IsDelayLive;
+    }
+
+    /**
+     * 设置默认 0 ：普通直播，
+1：慢直播。
+     * @param IsDelayLive 默认 0 ：普通直播，
+1：慢直播。
+     */
+    public void setIsDelayLive(Integer IsDelayLive) {
+        this.IsDelayLive = IsDelayLive;
     }
 
     /**
@@ -98,6 +151,7 @@ public class AddLiveDomainRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "DomainType", this.DomainType);
         this.setParamSimple(map, prefix + "PlayType", this.PlayType);
+        this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
 
     }
 }

@@ -31,6 +31,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
     * 计算环境名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvName")
     @Expose
@@ -38,6 +39,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
     * 计算环境描述
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvDescription")
     @Expose
@@ -59,6 +61,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
     * 数据盘挂载选项
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountDataDisks")
     @Expose
@@ -66,6 +69,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
     * 输入映射
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputMappings")
     @Expose
@@ -73,6 +77,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
     * 授权信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Authentications")
     @Expose
@@ -80,6 +85,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
     * 通知信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Notifications")
     @Expose
@@ -110,7 +116,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 获取计算环境名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @return EnvName 计算环境名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvName() {
         return this.EnvName;
@@ -118,7 +126,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 设置计算环境名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvName 计算环境名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvName(String EnvName) {
         this.EnvName = EnvName;
@@ -126,7 +136,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 获取计算环境描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @return EnvDescription 计算环境描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvDescription() {
         return this.EnvDescription;
@@ -134,7 +146,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 设置计算环境描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvDescription 计算环境描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvDescription(String EnvDescription) {
         this.EnvDescription = EnvDescription;
@@ -174,7 +188,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 获取数据盘挂载选项
+注意：此字段可能返回 null，表示取不到有效值。
      * @return MountDataDisks 数据盘挂载选项
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MountDataDisk [] getMountDataDisks() {
         return this.MountDataDisks;
@@ -182,7 +198,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 设置数据盘挂载选项
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MountDataDisks 数据盘挂载选项
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountDataDisks(MountDataDisk [] MountDataDisks) {
         this.MountDataDisks = MountDataDisks;
@@ -190,7 +208,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 获取输入映射
+注意：此字段可能返回 null，表示取不到有效值。
      * @return InputMappings 输入映射
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputMapping [] getInputMappings() {
         return this.InputMappings;
@@ -198,7 +218,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 设置输入映射
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InputMappings 输入映射
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputMappings(InputMapping [] InputMappings) {
         this.InputMappings = InputMappings;
@@ -206,7 +228,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 获取授权信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Authentications 授权信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Authentication [] getAuthentications() {
         return this.Authentications;
@@ -214,7 +238,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 设置授权信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Authentications 授权信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthentications(Authentication [] Authentications) {
         this.Authentications = Authentications;
@@ -222,7 +248,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 获取通知信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Notifications 通知信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Notification [] getNotifications() {
         return this.Notifications;
@@ -230,7 +258,9 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
 
     /**
      * 设置通知信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Notifications 通知信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotifications(Notification [] Notifications) {
         this.Notifications = Notifications;

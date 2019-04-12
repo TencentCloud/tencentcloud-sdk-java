@@ -52,6 +52,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
 
     /**
     * 扩展属性。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Externals")
     @Expose
@@ -172,7 +173,9 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
 
     /**
      * 获取扩展属性。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Externals 扩展属性。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Externals getExternals() {
         return this.Externals;
@@ -180,7 +183,9 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
 
     /**
      * 设置扩展属性。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Externals 扩展属性。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternals(Externals Externals) {
         this.Externals = Externals;
