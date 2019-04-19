@@ -60,7 +60,7 @@ public class Listener  extends AbstractModel{
     private HealthCheck HealthCheck;
 
     /**
-    * 请求调度方式
+    * 请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scheduler")
@@ -188,9 +188,9 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取请求调度方式
+     * 获取请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Scheduler 请求调度方式
+     * @return Scheduler 请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduler() {
@@ -198,9 +198,9 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置请求调度方式
+     * 设置请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scheduler 请求调度方式
+     * @param Scheduler 请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduler(String Scheduler) {

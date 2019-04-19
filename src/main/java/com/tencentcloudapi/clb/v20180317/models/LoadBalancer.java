@@ -148,6 +148,54 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String SubnetId;
 
     /**
+    * 负载均衡实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+    * 负载均衡实例的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecureGroups")
+    @Expose
+    private String [] SecureGroups;
+
+    /**
+    * 负载均衡实例绑定的后端设备的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetRegionInfo")
+    @Expose
+    private TargetRegionInfo TargetRegionInfo;
+
+    /**
+    * anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnycastZone")
+    @Expose
+    private String AnycastZone;
+
+    /**
+    * IP版本，ipv4 | ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddressIPVersion")
+    @Expose
+    private String AddressIPVersion;
+
+    /**
+    * 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NumericalVpcId")
+    @Expose
+    private Integer NumericalVpcId;
+
+    /**
      * 获取负载均衡实例 ID。
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -456,6 +504,126 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * 获取负载均衡实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Tags 负载均衡实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置负载均衡实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 负载均衡实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * 获取负载均衡实例的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SecureGroups 负载均衡实例的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecureGroups() {
+        return this.SecureGroups;
+    }
+
+    /**
+     * 设置负载均衡实例的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecureGroups 负载均衡实例的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecureGroups(String [] SecureGroups) {
+        this.SecureGroups = SecureGroups;
+    }
+
+    /**
+     * 获取负载均衡实例绑定的后端设备的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TargetRegionInfo 负载均衡实例绑定的后端设备的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TargetRegionInfo getTargetRegionInfo() {
+        return this.TargetRegionInfo;
+    }
+
+    /**
+     * 设置负载均衡实例绑定的后端设备的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetRegionInfo 负载均衡实例绑定的后端设备的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetRegionInfo(TargetRegionInfo TargetRegionInfo) {
+        this.TargetRegionInfo = TargetRegionInfo;
+    }
+
+    /**
+     * 获取anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AnycastZone anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAnycastZone() {
+        return this.AnycastZone;
+    }
+
+    /**
+     * 设置anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnycastZone anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnycastZone(String AnycastZone) {
+        this.AnycastZone = AnycastZone;
+    }
+
+    /**
+     * 获取IP版本，ipv4 | ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AddressIPVersion IP版本，ipv4 | ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAddressIPVersion() {
+        return this.AddressIPVersion;
+    }
+
+    /**
+     * 设置IP版本，ipv4 | ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddressIPVersion IP版本，ipv4 | ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddressIPVersion(String AddressIPVersion) {
+        this.AddressIPVersion = AddressIPVersion;
+    }
+
+    /**
+     * 获取数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return NumericalVpcId 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getNumericalVpcId() {
+        return this.NumericalVpcId;
+    }
+
+    /**
+     * 设置数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NumericalVpcId 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNumericalVpcId(Integer NumericalVpcId) {
+        this.NumericalVpcId = NumericalVpcId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -475,6 +643,12 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "Isolation", this.Isolation);
         this.setParamSimple(map, prefix + "Log", this.Log);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "SecureGroups.", this.SecureGroups);
+        this.setParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
+        this.setParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
+        this.setParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+        this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
 
     }
 }

@@ -37,7 +37,7 @@ public class AssumeRoleRequest  extends AbstractModel{
     private String RoleSessionName;
 
     /**
-    * 指定临时证书的有效期，单位：秒，默认 1800 秒，最长可设定有效期为 7200 秒
+    * 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
     */
     @SerializedName("DurationSeconds")
     @Expose
@@ -76,16 +76,16 @@ public class AssumeRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定临时证书的有效期，单位：秒，默认 1800 秒，最长可设定有效期为 7200 秒
-     * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认 1800 秒，最长可设定有效期为 7200 秒
+     * 获取指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+     * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
     public Integer getDurationSeconds() {
         return this.DurationSeconds;
     }
 
     /**
-     * 设置指定临时证书的有效期，单位：秒，默认 1800 秒，最长可设定有效期为 7200 秒
-     * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认 1800 秒，最长可设定有效期为 7200 秒
+     * 设置指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+     * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
     public void setDurationSeconds(Integer DurationSeconds) {
         this.DurationSeconds = DurationSeconds;

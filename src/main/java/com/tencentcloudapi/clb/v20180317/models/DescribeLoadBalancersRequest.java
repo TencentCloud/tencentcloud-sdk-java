@@ -129,6 +129,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Integer WithRs;
 
     /**
+    * 负载均衡实例所属网络，如 vpc-bhqkbhdx
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
      * 获取负载均衡实例 ID。
      * @return LoadBalancerIds 负载均衡实例 ID。
      */
@@ -373,6 +380,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * 获取负载均衡实例所属网络，如 vpc-bhqkbhdx
+     * @return VpcId 负载均衡实例所属网络，如 vpc-bhqkbhdx
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * 设置负载均衡实例所属网络，如 vpc-bhqkbhdx
+     * @param VpcId 负载均衡实例所属网络，如 vpc-bhqkbhdx
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -391,6 +414,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "WithRs", this.WithRs);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

@@ -20,14 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegisterTargetsRequest  extends AbstractModel{
-
-    /**
-    * 负载均衡实例 ID
-    */
-    @SerializedName("LoadBalancerId")
-    @Expose
-    private String LoadBalancerId;
+public class RsWeightRule  extends AbstractModel{
 
     /**
     * 负载均衡监听器 ID
@@ -37,18 +30,18 @@ public class RegisterTargetsRequest  extends AbstractModel{
     private String ListenerId;
 
     /**
-    * 要注册的后端机器列表，数组长度最大支持20
-    */
-    @SerializedName("Targets")
-    @Expose
-    private Target [] Targets;
-
-    /**
-    * 转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+    * 转发规则的ID
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
+
+    /**
+    * 要修改权重的后端机器列表
+    */
+    @SerializedName("Targets")
+    @Expose
+    private Target [] Targets;
 
     /**
     * 目标规则的域名，提供LocationId参数时本参数不生效
@@ -65,20 +58,11 @@ public class RegisterTargetsRequest  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取负载均衡实例 ID
-     * @return LoadBalancerId 负载均衡实例 ID
-     */
-    public String getLoadBalancerId() {
-        return this.LoadBalancerId;
-    }
-
-    /**
-     * 设置负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
-     */
-    public void setLoadBalancerId(String LoadBalancerId) {
-        this.LoadBalancerId = LoadBalancerId;
-    }
+    * 后端云服务器新的转发权重，取值范围：0~100。
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Integer Weight;
 
     /**
      * 获取负载均衡监听器 ID
@@ -97,35 +81,35 @@ public class RegisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要注册的后端机器列表，数组长度最大支持20
-     * @return Targets 要注册的后端机器列表，数组长度最大支持20
-     */
-    public Target [] getTargets() {
-        return this.Targets;
-    }
-
-    /**
-     * 设置要注册的后端机器列表，数组长度最大支持20
-     * @param Targets 要注册的后端机器列表，数组长度最大支持20
-     */
-    public void setTargets(Target [] Targets) {
-        this.Targets = Targets;
-    }
-
-    /**
-     * 获取转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
-     * @return LocationId 转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * 获取转发规则的ID
+     * @return LocationId 转发规则的ID
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * 设置转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
-     * @param LocationId 转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * 设置转发规则的ID
+     * @param LocationId 转发规则的ID
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
+    }
+
+    /**
+     * 获取要修改权重的后端机器列表
+     * @return Targets 要修改权重的后端机器列表
+     */
+    public Target [] getTargets() {
+        return this.Targets;
+    }
+
+    /**
+     * 设置要修改权重的后端机器列表
+     * @param Targets 要修改权重的后端机器列表
+     */
+    public void setTargets(Target [] Targets) {
+        this.Targets = Targets;
     }
 
     /**
@@ -161,15 +145,31 @@ public class RegisterTargetsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取后端云服务器新的转发权重，取值范围：0~100。
+     * @return Weight 后端云服务器新的转发权重，取值范围：0~100。
+     */
+    public Integer getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * 设置后端云服务器新的转发权重，取值范围：0~100。
+     * @param Weight 后端云服务器新的转发权重，取值范围：0~100。
+     */
+    public void setWeight(Integer Weight) {
+        this.Weight = Weight;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
-        this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
+        this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

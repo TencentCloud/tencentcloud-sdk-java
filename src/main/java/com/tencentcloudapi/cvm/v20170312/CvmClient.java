@@ -471,6 +471,26 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口（DescribeInstancesOperationLimit）用于查询实例操作限制。
+
+* 目前支持调整配置操作限制次数查询。
+     * @param req DescribeInstancesOperationLimitRequest
+     * @return DescribeInstancesOperationLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesOperationLimitResponse DescribeInstancesOperationLimit(DescribeInstancesOperationLimitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesOperationLimitResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesOperationLimitResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstancesOperationLimit"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeInstancesStatus) 用于查询一个或多个实例的状态。
 
 * 可以根据实例`ID`来查询实例的状态。

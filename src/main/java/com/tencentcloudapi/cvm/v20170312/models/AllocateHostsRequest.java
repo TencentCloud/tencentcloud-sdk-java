@@ -65,6 +65,13 @@ public class AllocateHostsRequest  extends AbstractModel{
     private Integer HostCount;
 
     /**
+    * 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
@@ -161,6 +168,22 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+     * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+     * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class AllocateHostsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "HostChargeType", this.HostChargeType);
         this.setParamSimple(map, prefix + "HostType", this.HostType);
         this.setParamSimple(map, prefix + "HostCount", this.HostCount);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

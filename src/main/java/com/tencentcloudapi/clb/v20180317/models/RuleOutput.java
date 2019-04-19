@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RuleOutput  extends AbstractModel{
 
     /**
-    * 转发规则的 ID，作为输入时无需此字段
+    * 转发规则的 ID
     */
     @SerializedName("LocationId")
     @Expose
@@ -76,16 +76,59 @@ public class RuleOutput  extends AbstractModel{
     private String Scheduler;
 
     /**
-     * 获取转发规则的 ID，作为输入时无需此字段
-     * @return LocationId 转发规则的 ID，作为输入时无需此字段
+    * 转发规则所属的监听器 ID
+    */
+    @SerializedName("ListenerId")
+    @Expose
+    private String ListenerId;
+
+    /**
+    * 转发规则的重定向目标信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RewriteTarget")
+    @Expose
+    private RewriteTarget RewriteTarget;
+
+    /**
+    * 是否开启gzip
+    */
+    @SerializedName("HttpGzip")
+    @Expose
+    private Boolean HttpGzip;
+
+    /**
+    * 转发规则是否为自动创建
+    */
+    @SerializedName("BeAutoCreated")
+    @Expose
+    private Boolean BeAutoCreated;
+
+    /**
+    * 是否作为默认域名
+    */
+    @SerializedName("DefaultServer")
+    @Expose
+    private Boolean DefaultServer;
+
+    /**
+    * 是否开启Http2
+    */
+    @SerializedName("Http2")
+    @Expose
+    private Boolean Http2;
+
+    /**
+     * 获取转发规则的 ID
+     * @return LocationId 转发规则的 ID
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * 设置转发规则的 ID，作为输入时无需此字段
-     * @param LocationId 转发规则的 ID，作为输入时无需此字段
+     * 设置转发规则的 ID
+     * @param LocationId 转发规则的 ID
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
@@ -204,6 +247,106 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
+     * 获取转发规则所属的监听器 ID
+     * @return ListenerId 转发规则所属的监听器 ID
+     */
+    public String getListenerId() {
+        return this.ListenerId;
+    }
+
+    /**
+     * 设置转发规则所属的监听器 ID
+     * @param ListenerId 转发规则所属的监听器 ID
+     */
+    public void setListenerId(String ListenerId) {
+        this.ListenerId = ListenerId;
+    }
+
+    /**
+     * 获取转发规则的重定向目标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return RewriteTarget 转发规则的重定向目标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RewriteTarget getRewriteTarget() {
+        return this.RewriteTarget;
+    }
+
+    /**
+     * 设置转发规则的重定向目标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RewriteTarget 转发规则的重定向目标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRewriteTarget(RewriteTarget RewriteTarget) {
+        this.RewriteTarget = RewriteTarget;
+    }
+
+    /**
+     * 获取是否开启gzip
+     * @return HttpGzip 是否开启gzip
+     */
+    public Boolean getHttpGzip() {
+        return this.HttpGzip;
+    }
+
+    /**
+     * 设置是否开启gzip
+     * @param HttpGzip 是否开启gzip
+     */
+    public void setHttpGzip(Boolean HttpGzip) {
+        this.HttpGzip = HttpGzip;
+    }
+
+    /**
+     * 获取转发规则是否为自动创建
+     * @return BeAutoCreated 转发规则是否为自动创建
+     */
+    public Boolean getBeAutoCreated() {
+        return this.BeAutoCreated;
+    }
+
+    /**
+     * 设置转发规则是否为自动创建
+     * @param BeAutoCreated 转发规则是否为自动创建
+     */
+    public void setBeAutoCreated(Boolean BeAutoCreated) {
+        this.BeAutoCreated = BeAutoCreated;
+    }
+
+    /**
+     * 获取是否作为默认域名
+     * @return DefaultServer 是否作为默认域名
+     */
+    public Boolean getDefaultServer() {
+        return this.DefaultServer;
+    }
+
+    /**
+     * 设置是否作为默认域名
+     * @param DefaultServer 是否作为默认域名
+     */
+    public void setDefaultServer(Boolean DefaultServer) {
+        this.DefaultServer = DefaultServer;
+    }
+
+    /**
+     * 获取是否开启Http2
+     * @return Http2 是否开启Http2
+     */
+    public Boolean getHttp2() {
+        return this.Http2;
+    }
+
+    /**
+     * 设置是否开启Http2
+     * @param Http2 是否开启Http2
+     */
+    public void setHttp2(Boolean Http2) {
+        this.Http2 = Http2;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -214,6 +357,12 @@ public class RuleOutput  extends AbstractModel{
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
+        this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
+        this.setParamObj(map, prefix + "RewriteTarget.", this.RewriteTarget);
+        this.setParamSimple(map, prefix + "HttpGzip", this.HttpGzip);
+        this.setParamSimple(map, prefix + "BeAutoCreated", this.BeAutoCreated);
+        this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+        this.setParamSimple(map, prefix + "Http2", this.Http2);
 
     }
 }

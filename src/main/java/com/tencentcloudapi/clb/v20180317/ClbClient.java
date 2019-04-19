@@ -49,6 +49,25 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *BatchModifyTargetWeight接口用于批量修改监听器绑定的后端机器的转发权重，当前接口只支持应用型HTTP/HTTPS监听器。
+本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
+     * @param req BatchModifyTargetWeightRequest
+     * @return BatchModifyTargetWeightResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyTargetWeightResponse BatchModifyTargetWeight(BatchModifyTargetWeightRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchModifyTargetWeightResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchModifyTargetWeightResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BatchModifyTargetWeight"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在一个负载均衡实例下创建监听器。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req CreateListenerRequest
