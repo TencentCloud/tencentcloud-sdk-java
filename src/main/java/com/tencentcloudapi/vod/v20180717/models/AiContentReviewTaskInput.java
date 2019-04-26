@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AiContentReviewTaskInput  extends AbstractModel{
 
     /**
-    * 视频内容审核模板 ID，可以填 10 和 20。<li>10：对视频画面进行鉴黄、鉴暴、鉴政审核；</li><li>20：对视频画面进行鉴黄、鉴暴、鉴政审核，并对 Asr 和 Ocr 文字进行鉴黄、鉴政审核。</li>
+    * 视频内容审核模板 ID。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * 获取视频内容审核模板 ID，可以填 10 和 20。<li>10：对视频画面进行鉴黄、鉴暴、鉴政审核；</li><li>20：对视频画面进行鉴黄、鉴暴、鉴政审核，并对 Asr 和 Ocr 文字进行鉴黄、鉴政审核。</li>
-     * @return Definition 视频内容审核模板 ID，可以填 10 和 20。<li>10：对视频画面进行鉴黄、鉴暴、鉴政审核；</li><li>20：对视频画面进行鉴黄、鉴暴、鉴政审核，并对 Asr 和 Ocr 文字进行鉴黄、鉴政审核。</li>
+     * 获取视频内容审核模板 ID。
+     * @return Definition 视频内容审核模板 ID。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * 设置视频内容审核模板 ID，可以填 10 和 20。<li>10：对视频画面进行鉴黄、鉴暴、鉴政审核；</li><li>20：对视频画面进行鉴黄、鉴暴、鉴政审核，并对 Asr 和 Ocr 文字进行鉴黄、鉴政审核。</li>
-     * @param Definition 视频内容审核模板 ID，可以填 10 和 20。<li>10：对视频画面进行鉴黄、鉴暴、鉴政审核；</li><li>20：对视频画面进行鉴黄、鉴暴、鉴政审核，并对 Asr 和 Ocr 文字进行鉴黄、鉴政审核。</li>
+     * 设置视频内容审核模板 ID。
+     * @param Definition 视频内容审核模板 ID。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

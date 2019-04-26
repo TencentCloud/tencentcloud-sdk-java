@@ -62,7 +62,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private String [] Status;
+    private Integer [] Status;
 
     /**
      * 获取待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
@@ -148,7 +148,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
      * 获取1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      * @return Status 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      */
-    public String [] getStatus() {
+    public Integer [] getStatus() {
         return this.Status;
     }
 
@@ -156,7 +156,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
      * 设置1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      * @param Status 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      */
-    public void setStatus(String [] Status) {
+    public void setStatus(Integer [] Status) {
         this.Status = Status;
     }
 

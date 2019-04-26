@@ -72,6 +72,13 @@ public class QueryRequest  extends AbstractModel{
     private String FuncName;
 
     /**
+    * 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
     * 被调用的函数参数列表
     */
     @SerializedName("Args")
@@ -191,6 +198,22 @@ public class QueryRequest  extends AbstractModel{
     }
 
     /**
+     * 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     * @return GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * 设置调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     * @param GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
+    /**
      * 获取被调用的函数参数列表
      * @return Args 被调用的函数参数列表
      */
@@ -217,6 +240,7 @@ public class QueryRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ChannelName", this.ChannelName);
         this.setParamArrayObj(map, prefix + "Peers.", this.Peers);
         this.setParamSimple(map, prefix + "FuncName", this.FuncName);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamArraySimple(map, prefix + "Args.", this.Args);
 
     }

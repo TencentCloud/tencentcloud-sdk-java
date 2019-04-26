@@ -31,7 +31,6 @@ public class AiAnalysisTaskTagResult  extends AbstractModel{
 
     /**
     * 错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -39,7 +38,6 @@ public class AiAnalysisTaskTagResult  extends AbstractModel{
 
     /**
     * 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -78,9 +76,7 @@ public class AiAnalysisTaskTagResult  extends AbstractModel{
 
     /**
      * 获取错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return ErrCode 错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -88,9 +84,7 @@ public class AiAnalysisTaskTagResult  extends AbstractModel{
 
     /**
      * 设置错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码，0：成功，其他值：失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -98,9 +92,7 @@ public class AiAnalysisTaskTagResult  extends AbstractModel{
 
     /**
      * 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -108,9 +100,7 @@ public class AiAnalysisTaskTagResult  extends AbstractModel{
 
     /**
      * 设置错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

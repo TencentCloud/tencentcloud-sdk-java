@@ -37,7 +37,7 @@ public class SentenceInfo  extends AbstractModel{
     private WordRsp [] Words;
 
     /**
-    * 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值。当为流式模式且请求中IsEnd未置1时，取值无意义
+    * 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
     */
     @SerializedName("PronAccuracy")
     @Expose
@@ -56,6 +56,13 @@ public class SentenceInfo  extends AbstractModel{
     @SerializedName("PronCompletion")
     @Expose
     private Float PronCompletion;
+
+    /**
+    * 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+    */
+    @SerializedName("SuggestedScore")
+    @Expose
+    private Float SuggestedScore;
 
     /**
      * 获取句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
@@ -90,16 +97,16 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值。当为流式模式且请求中IsEnd未置1时，取值无意义
-     * @return PronAccuracy 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值。当为流式模式且请求中IsEnd未置1时，取值无意义
+     * 获取发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
+     * @return PronAccuracy 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
      */
     public Float getPronAccuracy() {
         return this.PronAccuracy;
     }
 
     /**
-     * 设置发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值。当为流式模式且请求中IsEnd未置1时，取值无意义
-     * @param PronAccuracy 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值。当为流式模式且请求中IsEnd未置1时，取值无意义
+     * 设置发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
+     * @param PronAccuracy 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
      */
     public void setPronAccuracy(Float PronAccuracy) {
         this.PronAccuracy = PronAccuracy;
@@ -138,6 +145,22 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+     * @return SuggestedScore 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+     */
+    public Float getSuggestedScore() {
+        return this.SuggestedScore;
+    }
+
+    /**
+     * 设置建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+     * @param SuggestedScore 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+     */
+    public void setSuggestedScore(Float SuggestedScore) {
+        this.SuggestedScore = SuggestedScore;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class SentenceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "PronAccuracy", this.PronAccuracy);
         this.setParamSimple(map, prefix + "PronFluency", this.PronFluency);
         this.setParamSimple(map, prefix + "PronCompletion", this.PronCompletion);
+        this.setParamSimple(map, prefix + "SuggestedScore", this.SuggestedScore);
 
     }
 }

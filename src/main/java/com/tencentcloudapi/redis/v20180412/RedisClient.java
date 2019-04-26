@@ -49,6 +49,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *回收站实例立即下线
+     * @param req CleanUpInstanceRequest
+     * @return CleanUpInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CleanUpInstanceResponse CleanUpInstance(CleanUpInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CleanUpInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CleanUpInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CleanUpInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *清空Redis实例的实例数据。
      * @param req ClearInstanceRequest
      * @return ClearInstanceResponse
@@ -103,6 +121,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询备份Rdb下载地址
+     * @param req DescribeBackupUrlRequest
+     * @return DescribeBackupUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupUrlResponse DescribeBackupUrl(DescribeBackupUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupUrlResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupUrlResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackupUrl"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询 CRS 实例备份列表
      * @param req DescribeInstanceBackupsRequest
      * @return DescribeInstanceBackupsResponse
@@ -132,6 +168,78 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceDealDetailResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceDealDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询参数修改历史列表
+     * @param req DescribeInstanceParamRecordsRequest
+     * @return DescribeInstanceParamRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamRecordsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceParamRecords"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例参数列表
+     * @param req DescribeInstanceParamsRequest
+     * @return DescribeInstanceParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceParams"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例安全组信息
+     * @param req DescribeInstanceSecurityGroupRequest
+     * @return DescribeInstanceSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSecurityGroupResponse DescribeInstanceSecurityGroup(DescribeInstanceSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceSecurityGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceSecurityGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceSecurityGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取集群版实例分片信息
+     * @param req DescribeInstanceShardsRequest
+     * @return DescribeInstanceShardsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceShardsResponse DescribeInstanceShards(DescribeInstanceShardsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceShardsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceShardsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceShards"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -175,6 +283,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询项目安全组信息
+     * @param req DescribeProjectSecurityGroupRequest
+     * @return DescribeProjectSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectSecurityGroupResponse DescribeProjectSecurityGroup(DescribeProjectSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectSecurityGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProjectSecurityGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询任务结果
      * @param req DescribeTaskInfoRequest
      * @return DescribeTaskInfoResponse
@@ -186,6 +312,78 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *按量计费实例销毁
+     * @param req DestroyPostpaidInstanceRequest
+     * @return DestroyPostpaidInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyPostpaidInstanceResponse DestroyPostpaidInstance(DestroyPostpaidInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyPostpaidInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyPostpaidInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DestroyPostpaidInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *包年包月实例退还
+     * @param req DestroyPrepaidInstanceRequest
+     * @return DestroyPrepaidInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyPrepaidInstanceResponse DestroyPrepaidInstance(DestroyPrepaidInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyPrepaidInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyPrepaidInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DestroyPrepaidInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *禁用读写分离
+     * @param req DisableReplicaReadonlyRequest
+     * @return DisableReplicaReadonlyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableReplicaReadonlyResponse DisableReplicaReadonly(DisableReplicaReadonlyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableReplicaReadonlyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableReplicaReadonlyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableReplicaReadonly"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用读写分离
+     * @param req EnableReplicaReadonlyRequest
+     * @return EnableReplicaReadonlyResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableReplicaReadonlyResponse EnableReplicaReadonly(EnableReplicaReadonlyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableReplicaReadonlyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableReplicaReadonlyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableReplicaReadonly"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -265,6 +463,42 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *修改实例参数
+     * @param req ModifyInstanceParamsRequest
+     * @return ModifyInstanceParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceParamsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceParamsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyInstanceParams"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改实例网络配置
+     * @param req ModifyNetworkConfigRequest
+     * @return ModifyNetworkConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkConfigResponse ModifyNetworkConfig(ModifyNetworkConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetworkConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetworkConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNetworkConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *续费实例
      * @param req RenewInstanceRequest
      * @return RenewInstanceResponse
@@ -294,6 +528,24 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetPasswordResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ResetPassword"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *恢复 CRS 实例
+     * @param req RestoreInstanceRequest
+     * @return RestoreInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestoreInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestoreInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RestoreInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

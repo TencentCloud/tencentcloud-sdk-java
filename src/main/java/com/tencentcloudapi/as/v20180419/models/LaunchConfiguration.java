@@ -153,6 +153,13 @@ public class LaunchConfiguration  extends AbstractModel{
     private String [] InstanceTypes;
 
     /**
+    * 标签列表。
+    */
+    @SerializedName("InstanceTags")
+    @Expose
+    private InstanceTag [] InstanceTags;
+
+    /**
      * 获取实例所属项目ID。
      * @return ProjectId 实例所属项目ID。
      */
@@ -457,6 +464,22 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
+     * 获取标签列表。
+     * @return InstanceTags 标签列表。
+     */
+    public InstanceTag [] getInstanceTags() {
+        return this.InstanceTags;
+    }
+
+    /**
+     * 设置标签列表。
+     * @param InstanceTags 标签列表。
+     */
+    public void setInstanceTags(InstanceTag [] InstanceTags) {
+        this.InstanceTags = InstanceTags;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -478,6 +501,7 @@ public class LaunchConfiguration  extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
+        this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
 
     }
 }

@@ -73,6 +73,13 @@ public class CreateLiveRecordTemplateRequest  extends AbstractModel{
     private Integer IsDelayLive;
 
     /**
+    * HLS专属录制参数。
+    */
+    @SerializedName("HlsSpecialParam")
+    @Expose
+    private HlsSpecialParam HlsSpecialParam;
+
+    /**
      * 获取模板名。非空的字符串
      * @return TemplateName 模板名。非空的字符串
      */
@@ -189,6 +196,22 @@ public class CreateLiveRecordTemplateRequest  extends AbstractModel{
     }
 
     /**
+     * 获取HLS专属录制参数。
+     * @return HlsSpecialParam HLS专属录制参数。
+     */
+    public HlsSpecialParam getHlsSpecialParam() {
+        return this.HlsSpecialParam;
+    }
+
+    /**
+     * 设置HLS专属录制参数。
+     * @param HlsSpecialParam HLS专属录制参数。
+     */
+    public void setHlsSpecialParam(HlsSpecialParam HlsSpecialParam) {
+        this.HlsSpecialParam = HlsSpecialParam;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -199,6 +222,7 @@ public class CreateLiveRecordTemplateRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "Mp4Param.", this.Mp4Param);
         this.setParamObj(map, prefix + "AacParam.", this.AacParam);
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
+        this.setParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
 
     }
 }

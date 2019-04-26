@@ -33,8 +33,9 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     * 过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
+<li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
 <li>is-default - Boolean - （过滤条件）是否是默认子网。</li>
+<li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
 <li>subnet-name - String - （过滤条件）子网名称。</li>
 <li>zone - String - （过滤条件）可用区。</li>
     */
@@ -76,15 +77,17 @@ public class DescribeSubnetsRequest  extends AbstractModel{
      * 获取过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
+<li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
 <li>is-default - Boolean - （过滤条件）是否是默认子网。</li>
+<li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
 <li>subnet-name - String - （过滤条件）子网名称。</li>
 <li>zone - String - （过滤条件）可用区。</li>
      * @return Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
+<li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
 <li>is-default - Boolean - （过滤条件）是否是默认子网。</li>
+<li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
 <li>subnet-name - String - （过滤条件）子网名称。</li>
 <li>zone - String - （过滤条件）可用区。</li>
      */
@@ -96,15 +99,17 @@ public class DescribeSubnetsRequest  extends AbstractModel{
      * 设置过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
+<li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
 <li>is-default - Boolean - （过滤条件）是否是默认子网。</li>
+<li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
 <li>subnet-name - String - （过滤条件）子网名称。</li>
 <li>zone - String - （过滤条件）可用区。</li>
      * @param Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
+<li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
 <li>is-default - Boolean - （过滤条件）是否是默认子网。</li>
+<li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
 <li>subnet-name - String - （过滤条件）子网名称。</li>
 <li>zone - String - （过滤条件）可用区。</li>
      */

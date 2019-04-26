@@ -114,6 +114,55 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private Integer [] RegionIds;
 
     /**
+    * 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+    */
+    @SerializedName("Status")
+    @Expose
+    private Integer [] Status;
+
+    /**
+    * 类型版本：1-单机版,2-主从版,3-集群版
+    */
+    @SerializedName("TypeVersion")
+    @Expose
+    private Integer TypeVersion;
+
+    /**
+    * 引擎信息：Redis-2.8，Redis-4.0，CKV
+    */
+    @SerializedName("EngineName")
+    @Expose
+    private String EngineName;
+
+    /**
+    * 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Integer [] AutoRenew;
+
+    /**
+    * 计费模式：postpaid-按量计费；prepaid-包年包月
+    */
+    @SerializedName("BillingMode")
+    @Expose
+    private String BillingMode;
+
+    /**
+    * 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；7-Redis 4.0集群版
+    */
+    @SerializedName("Type")
+    @Expose
+    private Integer Type;
+
+    /**
+    * 搜索关键词：支持实例Id、实例名称、完整IP
+    */
+    @SerializedName("SearchKeys")
+    @Expose
+    private String [] SearchKeys;
+
+    /**
      * 获取实例列表的大小，参数默认值20
      * @return Limit 实例列表的大小，参数默认值20
      */
@@ -322,6 +371,118 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     * @return Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     */
+    public Integer [] getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * 设置实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     * @param Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     */
+    public void setStatus(Integer [] Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * 获取类型版本：1-单机版,2-主从版,3-集群版
+     * @return TypeVersion 类型版本：1-单机版,2-主从版,3-集群版
+     */
+    public Integer getTypeVersion() {
+        return this.TypeVersion;
+    }
+
+    /**
+     * 设置类型版本：1-单机版,2-主从版,3-集群版
+     * @param TypeVersion 类型版本：1-单机版,2-主从版,3-集群版
+     */
+    public void setTypeVersion(Integer TypeVersion) {
+        this.TypeVersion = TypeVersion;
+    }
+
+    /**
+     * 获取引擎信息：Redis-2.8，Redis-4.0，CKV
+     * @return EngineName 引擎信息：Redis-2.8，Redis-4.0，CKV
+     */
+    public String getEngineName() {
+        return this.EngineName;
+    }
+
+    /**
+     * 设置引擎信息：Redis-2.8，Redis-4.0，CKV
+     * @param EngineName 引擎信息：Redis-2.8，Redis-4.0，CKV
+     */
+    public void setEngineName(String EngineName) {
+        this.EngineName = EngineName;
+    }
+
+    /**
+     * 获取续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @return AutoRenew 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     */
+    public Integer [] getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * 设置续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @param AutoRenew 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     */
+    public void setAutoRenew(Integer [] AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
+    /**
+     * 获取计费模式：postpaid-按量计费；prepaid-包年包月
+     * @return BillingMode 计费模式：postpaid-按量计费；prepaid-包年包月
+     */
+    public String getBillingMode() {
+        return this.BillingMode;
+    }
+
+    /**
+     * 设置计费模式：postpaid-按量计费；prepaid-包年包月
+     * @param BillingMode 计费模式：postpaid-按量计费；prepaid-包年包月
+     */
+    public void setBillingMode(String BillingMode) {
+        this.BillingMode = BillingMode;
+    }
+
+    /**
+     * 获取实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；7-Redis 4.0集群版
+     * @return Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；7-Redis 4.0集群版
+     */
+    public Integer getType() {
+        return this.Type;
+    }
+
+    /**
+     * 设置实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；7-Redis 4.0集群版
+     * @param Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；7-Redis 4.0集群版
+     */
+    public void setType(Integer Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * 获取搜索关键词：支持实例Id、实例名称、完整IP
+     * @return SearchKeys 搜索关键词：支持实例Id、实例名称、完整IP
+     */
+    public String [] getSearchKeys() {
+        return this.SearchKeys;
+    }
+
+    /**
+     * 设置搜索关键词：支持实例Id、实例名称、完整IP
+     * @param SearchKeys 搜索关键词：支持实例Id、实例名称、完整IP
+     */
+    public void setSearchKeys(String [] SearchKeys) {
+        this.SearchKeys = SearchKeys;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +499,13 @@ public class DescribeInstancesRequest  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "UniqVpcIds.", this.UniqVpcIds);
         this.setParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
         this.setParamArraySimple(map, prefix + "RegionIds.", this.RegionIds);
+        this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamSimple(map, prefix + "TypeVersion", this.TypeVersion);
+        this.setParamSimple(map, prefix + "EngineName", this.EngineName);
+        this.setParamArraySimple(map, prefix + "AutoRenew.", this.AutoRenew);
+        this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
 
     /**
-    * 开始时间，北京时间，
+    * 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
     */
     @SerializedName("StartTime")
@@ -31,7 +31,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     private String StartTime;
 
     /**
-    * 结束时间，北京时间，
+    * 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
     */
     @SerializedName("EndTime")
@@ -55,9 +55,17 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     private String StreamName;
 
     /**
-     * 获取开始时间，北京时间，
+    * 播放路径，精确匹配，不支持。
+若不填，则为查询总体播放数据。
+    */
+    @SerializedName("AppName")
+    @Expose
+    private String AppName;
+
+    /**
+     * 获取开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
-     * @return StartTime 开始时间，北京时间，
+     * @return StartTime 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
      */
     public String getStartTime() {
@@ -65,9 +73,9 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间，北京时间，
+     * 设置开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
-     * @param StartTime 开始时间，北京时间，
+     * @param StartTime 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
      */
     public void setStartTime(String StartTime) {
@@ -75,9 +83,9 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，北京时间，
+     * 获取结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
-     * @return EndTime 结束时间，北京时间，
+     * @return EndTime 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
      */
     public String getEndTime() {
@@ -85,9 +93,9 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，北京时间，
+     * 设置结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
-     * @param EndTime 结束时间，北京时间，
+     * @param EndTime 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
      */
     public void setEndTime(String EndTime) {
@@ -135,6 +143,26 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
+     * 获取播放路径，精确匹配，不支持。
+若不填，则为查询总体播放数据。
+     * @return AppName 播放路径，精确匹配，不支持。
+若不填，则为查询总体播放数据。
+     */
+    public String getAppName() {
+        return this.AppName;
+    }
+
+    /**
+     * 设置播放路径，精确匹配，不支持。
+若不填，则为查询总体播放数据。
+     * @param AppName 播放路径，精确匹配，不支持。
+若不填，则为查询总体播放数据。
+     */
+    public void setAppName(String AppName) {
+        this.AppName = AppName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -142,6 +170,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
+        this.setParamSimple(map, prefix + "AppName", this.AppName);
 
     }
 }

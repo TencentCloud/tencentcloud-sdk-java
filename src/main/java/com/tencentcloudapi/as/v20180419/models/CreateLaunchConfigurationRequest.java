@@ -137,6 +137,13 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     private String InstanceTypesCheckPolicy;
 
     /**
+    * 标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+    */
+    @SerializedName("InstanceTags")
+    @Expose
+    private InstanceTag [] InstanceTags;
+
+    /**
      * 获取启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      * @return LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      */
@@ -413,6 +420,22 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+     * @return InstanceTags 标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+     */
+    public InstanceTag [] getInstanceTags() {
+        return this.InstanceTags;
+    }
+
+    /**
+     * 设置标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+     * @param InstanceTags 标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+     */
+    public void setInstanceTags(InstanceTag [] InstanceTags) {
+        this.InstanceTags = InstanceTags;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -431,6 +454,7 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
         this.setParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
+        this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
 
     }
 }

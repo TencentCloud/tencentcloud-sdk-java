@@ -100,6 +100,20 @@ public class Subnet  extends AbstractModel{
     private String Ipv6CidrBlock;
 
     /**
+    * 关联`ACL`ID
+    */
+    @SerializedName("NetworkAclId")
+    @Expose
+    private String NetworkAclId;
+
+    /**
+    * 是否为 `SNAT` 地址池子网。
+    */
+    @SerializedName("IsRemoteVpcSnat")
+    @Expose
+    private Boolean IsRemoteVpcSnat;
+
+    /**
      * 获取`VPC`实例`ID`。
      * @return VpcId `VPC`实例`ID`。
      */
@@ -276,6 +290,38 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
+     * 获取关联`ACL`ID
+     * @return NetworkAclId 关联`ACL`ID
+     */
+    public String getNetworkAclId() {
+        return this.NetworkAclId;
+    }
+
+    /**
+     * 设置关联`ACL`ID
+     * @param NetworkAclId 关联`ACL`ID
+     */
+    public void setNetworkAclId(String NetworkAclId) {
+        this.NetworkAclId = NetworkAclId;
+    }
+
+    /**
+     * 获取是否为 `SNAT` 地址池子网。
+     * @return IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
+     */
+    public Boolean getIsRemoteVpcSnat() {
+        return this.IsRemoteVpcSnat;
+    }
+
+    /**
+     * 设置是否为 `SNAT` 地址池子网。
+     * @param IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
+     */
+    public void setIsRemoteVpcSnat(Boolean IsRemoteVpcSnat) {
+        this.IsRemoteVpcSnat = IsRemoteVpcSnat;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +336,8 @@ public class Subnet  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "AvailableIpAddressCount", this.AvailableIpAddressCount);
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
+        this.setParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
+        this.setParamSimple(map, prefix + "IsRemoteVpcSnat", this.IsRemoteVpcSnat);
 
     }
 }

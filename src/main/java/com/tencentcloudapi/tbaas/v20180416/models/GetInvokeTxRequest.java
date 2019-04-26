@@ -72,6 +72,13 @@ public class GetInvokeTxRequest  extends AbstractModel{
     private String TxId;
 
     /**
+    * 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
      * 获取模块名，固定字段：transaction
      * @return Module 模块名，固定字段：transaction
      */
@@ -184,6 +191,22 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
+     * 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     * @return GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * 设置调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     * @param GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "PeerName", this.PeerName);
         this.setParamSimple(map, prefix + "PeerGroup", this.PeerGroup);
         this.setParamSimple(map, prefix + "TxId", this.TxId);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
 
     }
 }

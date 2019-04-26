@@ -114,7 +114,7 @@ public class InstanceSet  extends AbstractModel{
     private Float Size;
 
     /**
-    * 实例当前已使用容量，单位：MB
+    * 该字段已废弃
     */
     @SerializedName("SizeUsed")
     @Expose
@@ -175,6 +175,99 @@ public class InstanceSet  extends AbstractModel{
     @SerializedName("BillingMode")
     @Expose
     private Integer BillingMode;
+
+    /**
+    * 实例运行状态描述：如”实例运行中“
+    */
+    @SerializedName("InstanceTitle")
+    @Expose
+    private String InstanceTitle;
+
+    /**
+    * 计划下线时间
+    */
+    @SerializedName("OfflineTime")
+    @Expose
+    private String OfflineTime;
+
+    /**
+    * 流程中的实例，返回子状态
+    */
+    @SerializedName("SubStatus")
+    @Expose
+    private Integer SubStatus;
+
+    /**
+    * 反亲和性标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
+    * 实例节点信息
+    */
+    @SerializedName("InstanceNode")
+    @Expose
+    private InstanceNode [] InstanceNode;
+
+    /**
+    * 分片大小
+    */
+    @SerializedName("RedisShardSize")
+    @Expose
+    private Integer RedisShardSize;
+
+    /**
+    * 分片数量
+    */
+    @SerializedName("RedisShardNum")
+    @Expose
+    private Integer RedisShardNum;
+
+    /**
+    * 副本数量
+    */
+    @SerializedName("RedisReplicasNum")
+    @Expose
+    private Integer RedisReplicasNum;
+
+    /**
+    * 计费Id
+    */
+    @SerializedName("PriceId")
+    @Expose
+    private Integer PriceId;
+
+    /**
+    * 隔离时间
+    */
+    @SerializedName("CloseTime")
+    @Expose
+    private String CloseTime;
+
+    /**
+    * 从节点读取权重
+    */
+    @SerializedName("SlaveReadWeight")
+    @Expose
+    private Integer SlaveReadWeight;
+
+    /**
+    * 实例关联的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceTags")
+    @Expose
+    private InstanceTagInfo [] InstanceTags;
+
+    /**
+    * 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
 
     /**
      * 获取实例名称
@@ -385,16 +478,16 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例当前已使用容量，单位：MB
-     * @return SizeUsed 实例当前已使用容量，单位：MB
+     * 获取该字段已废弃
+     * @return SizeUsed 该字段已废弃
      */
     public Float getSizeUsed() {
         return this.SizeUsed;
     }
 
     /**
-     * 设置实例当前已使用容量，单位：MB
-     * @param SizeUsed 实例当前已使用容量，单位：MB
+     * 设置该字段已废弃
+     * @param SizeUsed 该字段已废弃
      */
     public void setSizeUsed(Float SizeUsed) {
         this.SizeUsed = SizeUsed;
@@ -529,6 +622,222 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
+     * 获取实例运行状态描述：如”实例运行中“
+     * @return InstanceTitle 实例运行状态描述：如”实例运行中“
+     */
+    public String getInstanceTitle() {
+        return this.InstanceTitle;
+    }
+
+    /**
+     * 设置实例运行状态描述：如”实例运行中“
+     * @param InstanceTitle 实例运行状态描述：如”实例运行中“
+     */
+    public void setInstanceTitle(String InstanceTitle) {
+        this.InstanceTitle = InstanceTitle;
+    }
+
+    /**
+     * 获取计划下线时间
+     * @return OfflineTime 计划下线时间
+     */
+    public String getOfflineTime() {
+        return this.OfflineTime;
+    }
+
+    /**
+     * 设置计划下线时间
+     * @param OfflineTime 计划下线时间
+     */
+    public void setOfflineTime(String OfflineTime) {
+        this.OfflineTime = OfflineTime;
+    }
+
+    /**
+     * 获取流程中的实例，返回子状态
+     * @return SubStatus 流程中的实例，返回子状态
+     */
+    public Integer getSubStatus() {
+        return this.SubStatus;
+    }
+
+    /**
+     * 设置流程中的实例，返回子状态
+     * @param SubStatus 流程中的实例，返回子状态
+     */
+    public void setSubStatus(Integer SubStatus) {
+        this.SubStatus = SubStatus;
+    }
+
+    /**
+     * 获取反亲和性标签
+     * @return Tags 反亲和性标签
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置反亲和性标签
+     * @param Tags 反亲和性标签
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * 获取实例节点信息
+     * @return InstanceNode 实例节点信息
+     */
+    public InstanceNode [] getInstanceNode() {
+        return this.InstanceNode;
+    }
+
+    /**
+     * 设置实例节点信息
+     * @param InstanceNode 实例节点信息
+     */
+    public void setInstanceNode(InstanceNode [] InstanceNode) {
+        this.InstanceNode = InstanceNode;
+    }
+
+    /**
+     * 获取分片大小
+     * @return RedisShardSize 分片大小
+     */
+    public Integer getRedisShardSize() {
+        return this.RedisShardSize;
+    }
+
+    /**
+     * 设置分片大小
+     * @param RedisShardSize 分片大小
+     */
+    public void setRedisShardSize(Integer RedisShardSize) {
+        this.RedisShardSize = RedisShardSize;
+    }
+
+    /**
+     * 获取分片数量
+     * @return RedisShardNum 分片数量
+     */
+    public Integer getRedisShardNum() {
+        return this.RedisShardNum;
+    }
+
+    /**
+     * 设置分片数量
+     * @param RedisShardNum 分片数量
+     */
+    public void setRedisShardNum(Integer RedisShardNum) {
+        this.RedisShardNum = RedisShardNum;
+    }
+
+    /**
+     * 获取副本数量
+     * @return RedisReplicasNum 副本数量
+     */
+    public Integer getRedisReplicasNum() {
+        return this.RedisReplicasNum;
+    }
+
+    /**
+     * 设置副本数量
+     * @param RedisReplicasNum 副本数量
+     */
+    public void setRedisReplicasNum(Integer RedisReplicasNum) {
+        this.RedisReplicasNum = RedisReplicasNum;
+    }
+
+    /**
+     * 获取计费Id
+     * @return PriceId 计费Id
+     */
+    public Integer getPriceId() {
+        return this.PriceId;
+    }
+
+    /**
+     * 设置计费Id
+     * @param PriceId 计费Id
+     */
+    public void setPriceId(Integer PriceId) {
+        this.PriceId = PriceId;
+    }
+
+    /**
+     * 获取隔离时间
+     * @return CloseTime 隔离时间
+     */
+    public String getCloseTime() {
+        return this.CloseTime;
+    }
+
+    /**
+     * 设置隔离时间
+     * @param CloseTime 隔离时间
+     */
+    public void setCloseTime(String CloseTime) {
+        this.CloseTime = CloseTime;
+    }
+
+    /**
+     * 获取从节点读取权重
+     * @return SlaveReadWeight 从节点读取权重
+     */
+    public Integer getSlaveReadWeight() {
+        return this.SlaveReadWeight;
+    }
+
+    /**
+     * 设置从节点读取权重
+     * @param SlaveReadWeight 从节点读取权重
+     */
+    public void setSlaveReadWeight(Integer SlaveReadWeight) {
+        this.SlaveReadWeight = SlaveReadWeight;
+    }
+
+    /**
+     * 获取实例关联的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return InstanceTags 实例关联的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceTagInfo [] getInstanceTags() {
+        return this.InstanceTags;
+    }
+
+    /**
+     * 设置实例关联的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceTags 实例关联的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceTags(InstanceTagInfo [] InstanceTags) {
+        this.InstanceTags = InstanceTags;
+    }
+
+    /**
+     * 获取项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * 设置项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -554,6 +863,19 @@ public class InstanceSet  extends AbstractModel{
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
+        this.setParamSimple(map, prefix + "InstanceTitle", this.InstanceTitle);
+        this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+        this.setParamSimple(map, prefix + "SubStatus", this.SubStatus);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "InstanceNode.", this.InstanceNode);
+        this.setParamSimple(map, prefix + "RedisShardSize", this.RedisShardSize);
+        this.setParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
+        this.setParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
+        this.setParamSimple(map, prefix + "PriceId", this.PriceId);
+        this.setParamSimple(map, prefix + "CloseTime", this.CloseTime);
+        this.setParamSimple(map, prefix + "SlaveReadWeight", this.SlaveReadWeight);
+        this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
 
     }
 }

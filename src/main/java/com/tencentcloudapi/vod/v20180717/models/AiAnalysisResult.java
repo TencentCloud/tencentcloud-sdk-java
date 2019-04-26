@@ -26,8 +26,6 @@ public class AiAnalysisResult  extends AbstractModel{
     * 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
-<li>Description：智能描述</li>
-<li>Highlight：智能精彩片断</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
     */
@@ -60,18 +58,22 @@ public class AiAnalysisResult  extends AbstractModel{
     private AiAnalysisTaskTagResult TagTask;
 
     /**
+    * 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FrameTagTask")
+    @Expose
+    private AiAnalysisTaskFrameTagResult FrameTagTask;
+
+    /**
      * 获取任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
-<li>Description：智能描述</li>
-<li>Highlight：智能精彩片断</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
      * @return Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
-<li>Description：智能描述</li>
-<li>Highlight：智能精彩片断</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
      */
@@ -83,15 +85,11 @@ public class AiAnalysisResult  extends AbstractModel{
      * 设置任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
-<li>Description：智能描述</li>
-<li>Highlight：智能精彩片断</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
      * @param Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
-<li>Description：智能描述</li>
-<li>Highlight：智能精彩片断</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
      */
@@ -160,6 +158,26 @@ public class AiAnalysisResult  extends AbstractModel{
     }
 
     /**
+     * 获取视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return FrameTagTask 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskFrameTagResult getFrameTagTask() {
+        return this.FrameTagTask;
+    }
+
+    /**
+     * 设置视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FrameTagTask 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFrameTagTask(AiAnalysisTaskFrameTagResult FrameTagTask) {
+        this.FrameTagTask = FrameTagTask;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -167,6 +185,7 @@ public class AiAnalysisResult  extends AbstractModel{
         this.setParamObj(map, prefix + "ClassificationTask.", this.ClassificationTask);
         this.setParamObj(map, prefix + "CoverTask.", this.CoverTask);
         this.setParamObj(map, prefix + "TagTask.", this.TagTask);
+        this.setParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
 
     }
 }

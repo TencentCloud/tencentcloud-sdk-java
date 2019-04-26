@@ -24,7 +24,6 @@ public class AiAnalysisTaskCoverOutput  extends AbstractModel{
 
     /**
     * 智能封面列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoverSet")
     @Expose
@@ -32,9 +31,7 @@ public class AiAnalysisTaskCoverOutput  extends AbstractModel{
 
     /**
      * 获取智能封面列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return CoverSet 智能封面列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaAiAnalysisCoverItem [] getCoverSet() {
         return this.CoverSet;
@@ -42,9 +39,7 @@ public class AiAnalysisTaskCoverOutput  extends AbstractModel{
 
     /**
      * 设置智能封面列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverSet 智能封面列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoverSet(MediaAiAnalysisCoverItem [] CoverSet) {
         this.CoverSet = CoverSet;

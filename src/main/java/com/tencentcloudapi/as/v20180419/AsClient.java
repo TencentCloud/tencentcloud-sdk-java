@@ -68,6 +68,27 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（CompleteLifecycleAction）用于完成生命周期动作。
+
+* 用户通过调用本接口，指定一个具体的生命周期挂钩的结果（“CONITNUE”或者“ABANDON”）。如果一直不调用本接口，则生命周期挂钩会在超时后按照“DefaultResult”进行处理。
+
+     * @param req CompleteLifecycleActionRequest
+     * @return CompleteLifecycleActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CompleteLifecycleActionResponse CompleteLifecycleAction(CompleteLifecycleActionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CompleteLifecycleActionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CompleteLifecycleActionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CompleteLifecycleAction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateAutoScalingGroup）用于创建伸缩组
      * @param req CreateAutoScalingGroupRequest
      * @return CreateAutoScalingGroupResponse
@@ -109,6 +130,42 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateLifecycleHook）用于创建生命周期挂钩。
+
+* 您可以为生命周期挂钩配置消息通知，弹性伸缩会通知您的CMQ消息队列，通知内容形如：
+
+```
+{
+	"Service": "Tencent Cloud Auto Scaling",
+	"Time": "2019-03-14T10:15:11Z",
+	"AppId": "1251783334",
+	"ActivityId": "asa-fznnvrja",
+	"AutoScalingGroupId": "asg-rrrrtttt",
+	"LifecycleHookId": "ash-xxxxyyyy",
+	"LifecycleHookName": "my-hook",
+	"LifecycleActionToken": "3080e1c9-0efe-4dd7-ad3b-90cd6618298f",
+	"InstanceId": "ins-aaaabbbb",
+	"LifecycleTransition": "INSTANCE_LAUNCHING",
+	"NotificationMetadata": ""
+}
+```
+     * @param req CreateLifecycleHookRequest
+     * @return CreateLifecycleHookResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLifecycleHookResponse CreateLifecycleHook(CreateLifecycleHookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLifecycleHookResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLifecycleHookResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLifecycleHook"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateNotificationConfiguration）用于创建通知。
      * @param req CreateNotificationConfigurationRequest
      * @return CreateNotificationConfigurationResponse
@@ -120,6 +177,24 @@ public class AsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateNotificationConfigurationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateNotificationConfiguration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (CreatePaiInstance) 用于创建一个指定配置的PAI实例。
+     * @param req CreatePaiInstanceRequest
+     * @return CreatePaiInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePaiInstanceResponse CreatePaiInstance(CreatePaiInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePaiInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePaiInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePaiInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -195,6 +270,24 @@ public class AsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteLaunchConfigurationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteLaunchConfiguration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteLifecycleHook）用于删除生命周期挂钩。
+     * @param req DeleteLifecycleHookRequest
+     * @return DeleteLifecycleHookResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLifecycleHookResponse DeleteLifecycleHook(DeleteLifecycleHookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLifecycleHookResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLifecycleHookResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLifecycleHook"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -355,6 +448,27 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeLifecycleHooks）用于查询生命周期挂钩信息。
+
+* 可以根据伸缩组ID、生命周期挂钩ID或者生命周期挂钩名称等信息来查询生命周期挂钩的详细信息。过滤信息详细请见过滤器`Filter`。
+* 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的生命周期挂钩。
+     * @param req DescribeLifecycleHooksRequest
+     * @return DescribeLifecycleHooksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLifecycleHooksResponse DescribeLifecycleHooks(DescribeLifecycleHooksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLifecycleHooksResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLifecycleHooksResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLifecycleHooks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeNotificationConfigurations) 用于查询一个或多个通知的详细信息。
 
 可以根据通知ID、伸缩组ID等信息来查询通知的详细信息。过滤信息详细请见过滤器`Filter`。
@@ -369,6 +483,27 @@ public class AsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNotificationConfigurationsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeNotificationConfigurations"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribePaiInstances）用于查询PAI实例信息。
+
+* 可以根据实例ID、实例域名等信息来查询PAI实例的详细信息。过滤信息详细请见过滤器`Filter`。
+* 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的PAI实例。
+     * @param req DescribePaiInstancesRequest
+     * @return DescribePaiInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePaiInstancesResponse DescribePaiInstances(DescribePaiInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePaiInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePaiInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePaiInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -602,6 +737,25 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（PreviewPaiDomainName）用于预览PAI实例域名。
+
+     * @param req PreviewPaiDomainNameRequest
+     * @return PreviewPaiDomainNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public PreviewPaiDomainNameResponse PreviewPaiDomainName(PreviewPaiDomainNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PreviewPaiDomainNameResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PreviewPaiDomainNameResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PreviewPaiDomainName"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（RemoveInstances）用于从伸缩组删除 CVM 实例。根据当前的产品逻辑，如果实例由弹性伸缩自动创建，则实例会被销毁；如果实例系创建后加入伸缩组的，则会从伸缩组中移除，保留实例。
      * @param req RemoveInstancesRequest
      * @return RemoveInstancesResponse
@@ -632,6 +786,27 @@ public class AsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetInstancesProtectionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SetInstancesProtection"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UpgradeLifecycleHook）用于升级生命周期挂钩。
+
+* 本接口用于升级生命周期挂钩，采用“完全覆盖”风格，无论之前参数如何，统一按照接口参数设置为新的配置。对于非必填字段，不填写则按照默认值赋值。
+
+     * @param req UpgradeLifecycleHookRequest
+     * @return UpgradeLifecycleHookResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeLifecycleHookResponse UpgradeLifecycleHook(UpgradeLifecycleHookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeLifecycleHookResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeLifecycleHookResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeLifecycleHook"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

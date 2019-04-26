@@ -24,7 +24,6 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
 
     /**
     * 智能分类的类别名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Classification")
     @Expose
@@ -32,7 +31,6 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
 
     /**
     * 智能分类的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -40,9 +38,7 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
 
     /**
      * 获取智能分类的类别名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return Classification 智能分类的类别名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClassification() {
         return this.Classification;
@@ -50,9 +46,7 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
 
     /**
      * 设置智能分类的类别名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Classification 智能分类的类别名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassification(String Classification) {
         this.Classification = Classification;
@@ -60,9 +54,7 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
 
     /**
      * 获取智能分类的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return Confidence 智能分类的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -70,9 +62,7 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
 
     /**
      * 设置智能分类的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 智能分类的可信度，取值范围是 0 到 100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

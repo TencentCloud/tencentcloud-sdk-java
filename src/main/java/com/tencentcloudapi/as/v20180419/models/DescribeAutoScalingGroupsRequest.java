@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAutoScalingGroupsRequest  extends AbstractModel{
 
     /**
-    * 按照一个或者多个伸缩组ID查询。伸缩组ID形如：`asg-nkdwoui0`。每次请求的上限为100。参数不支持同时指定`AutoScalingGroups`和`Filters`。
+    * 按照一个或者多个伸缩组ID查询。伸缩组ID形如：`asg-nkdwoui0`。每次请求的上限为100。参数不支持同时指定`AutoScalingGroupIds`和`Filters`。
     */
     @SerializedName("AutoScalingGroupIds")
     @Expose
@@ -55,16 +55,16 @@ public class DescribeAutoScalingGroupsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取按照一个或者多个伸缩组ID查询。伸缩组ID形如：`asg-nkdwoui0`。每次请求的上限为100。参数不支持同时指定`AutoScalingGroups`和`Filters`。
-     * @return AutoScalingGroupIds 按照一个或者多个伸缩组ID查询。伸缩组ID形如：`asg-nkdwoui0`。每次请求的上限为100。参数不支持同时指定`AutoScalingGroups`和`Filters`。
+     * 获取按照一个或者多个伸缩组ID查询。伸缩组ID形如：`asg-nkdwoui0`。每次请求的上限为100。参数不支持同时指定`AutoScalingGroupIds`和`Filters`。
+     * @return AutoScalingGroupIds 按照一个或者多个伸缩组ID查询。伸缩组ID形如：`asg-nkdwoui0`。每次请求的上限为100。参数不支持同时指定`AutoScalingGroupIds`和`Filters`。
      */
     public String [] getAutoScalingGroupIds() {
         return this.AutoScalingGroupIds;
     }
 
     /**
-     * 设置按照一个或者多个伸缩组ID查询。伸缩组ID形如：`asg-nkdwoui0`。每次请求的上限为100。参数不支持同时指定`AutoScalingGroups`和`Filters`。
-     * @param AutoScalingGroupIds 按照一个或者多个伸缩组ID查询。伸缩组ID形如：`asg-nkdwoui0`。每次请求的上限为100。参数不支持同时指定`AutoScalingGroups`和`Filters`。
+     * 设置按照一个或者多个伸缩组ID查询。伸缩组ID形如：`asg-nkdwoui0`。每次请求的上限为100。参数不支持同时指定`AutoScalingGroupIds`和`Filters`。
+     * @param AutoScalingGroupIds 按照一个或者多个伸缩组ID查询。伸缩组ID形如：`asg-nkdwoui0`。每次请求的上限为100。参数不支持同时指定`AutoScalingGroupIds`和`Filters`。
      */
     public void setAutoScalingGroupIds(String [] AutoScalingGroupIds) {
         this.AutoScalingGroupIds = AutoScalingGroupIds;

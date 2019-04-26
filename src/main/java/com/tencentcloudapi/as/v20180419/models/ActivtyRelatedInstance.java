@@ -31,6 +31,8 @@ public class ActivtyRelatedInstance  extends AbstractModel{
 
     /**
     * 实例在伸缩活动中的状态。取值如下：
+<li>INIT：初始化中
+<li>RUNNING：实例操作中
 <li>SUCCESSFUL：活动成功
 <li>FAILED：活动失败
     */
@@ -56,9 +58,13 @@ public class ActivtyRelatedInstance  extends AbstractModel{
 
     /**
      * 获取实例在伸缩活动中的状态。取值如下：
+<li>INIT：初始化中
+<li>RUNNING：实例操作中
 <li>SUCCESSFUL：活动成功
 <li>FAILED：活动失败
      * @return InstanceStatus 实例在伸缩活动中的状态。取值如下：
+<li>INIT：初始化中
+<li>RUNNING：实例操作中
 <li>SUCCESSFUL：活动成功
 <li>FAILED：活动失败
      */
@@ -68,9 +74,13 @@ public class ActivtyRelatedInstance  extends AbstractModel{
 
     /**
      * 设置实例在伸缩活动中的状态。取值如下：
+<li>INIT：初始化中
+<li>RUNNING：实例操作中
 <li>SUCCESSFUL：活动成功
 <li>FAILED：活动失败
      * @param InstanceStatus 实例在伸缩活动中的状态。取值如下：
+<li>INIT：初始化中
+<li>RUNNING：实例操作中
 <li>SUCCESSFUL：活动成功
 <li>FAILED：活动失败
      */

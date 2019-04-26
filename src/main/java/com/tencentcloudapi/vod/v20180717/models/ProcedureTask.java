@@ -117,6 +117,14 @@ public class ProcedureTask  extends AbstractModel{
     private AiAnalysisResult [] AiAnalysisResultSet;
 
     /**
+    * 视频内容识别任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AiRecognitionResultSet")
+    @Expose
+    private AiRecognitionResult [] AiRecognitionResultSet;
+
+    /**
     * 任务流的优先级，取值范围为 [-10, 10]。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -396,6 +404,26 @@ public class ProcedureTask  extends AbstractModel{
     }
 
     /**
+     * 获取视频内容识别任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiRecognitionResult [] getAiRecognitionResultSet() {
+        return this.AiRecognitionResultSet;
+    }
+
+    /**
+     * 设置视频内容识别任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAiRecognitionResultSet(AiRecognitionResult [] AiRecognitionResultSet) {
+        this.AiRecognitionResultSet = AiRecognitionResultSet;
+    }
+
+    /**
      * 获取任务流的优先级，取值范围为 [-10, 10]。
 注意：此字段可能返回 null，表示取不到有效值。
      * @return TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
@@ -502,6 +530,7 @@ public class ProcedureTask  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "MediaProcessResultSet.", this.MediaProcessResultSet);
         this.setParamArrayObj(map, prefix + "AiContentReviewResultSet.", this.AiContentReviewResultSet);
         this.setParamArrayObj(map, prefix + "AiAnalysisResultSet.", this.AiAnalysisResultSet);
+        this.setParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);

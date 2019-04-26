@@ -51,7 +51,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     private Integer GoodsNum;
 
     /**
-    * 购买时长，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+    * 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
     */
     @SerializedName("Period")
     @Expose
@@ -93,7 +93,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-    * 自动续费表示。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+    * 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -133,6 +133,13 @@ public class CreateInstancesRequest  extends AbstractModel{
     @SerializedName("ReplicasReadonly")
     @Expose
     private Boolean ReplicasReadonly;
+
+    /**
+    * 实例名称
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
 
     /**
      * 获取实例所属的可用区id
@@ -199,16 +206,16 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
-     * @return Period 购买时长，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * 获取购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * @return Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
     public Integer getPeriod() {
         return this.Period;
     }
 
     /**
-     * 设置购买时长，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
-     * @param Period 购买时长，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * 设置购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * @param Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
     public void setPeriod(Integer Period) {
         this.Period = Period;
@@ -295,16 +302,16 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费表示。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
-     * @return AutoRenew 自动续费表示。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * 获取自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @return AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
     public Integer getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * 设置自动续费表示。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
-     * @param AutoRenew 自动续费表示。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * 设置自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @param AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
     public void setAutoRenew(Integer AutoRenew) {
         this.AutoRenew = AutoRenew;
@@ -391,6 +398,22 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例名称
+     * @return InstanceName 实例名称
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * 设置实例名称
+     * @param InstanceName 实例名称
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class CreateInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
         this.setParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
         this.setParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
 
     }
 }

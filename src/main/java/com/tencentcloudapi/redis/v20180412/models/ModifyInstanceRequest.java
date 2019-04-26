@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyInstanceRequest  extends AbstractModel{
 
     /**
-    * 修改实例操作，如填写：rename（表示实例重命名）
+    * 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
     */
     @SerializedName("Operation")
     @Expose
@@ -44,16 +44,30 @@ public class ModifyInstanceRequest  extends AbstractModel{
     private String InstanceName;
 
     /**
-     * 获取修改实例操作，如填写：rename（表示实例重命名）
-     * @return Operation 修改实例操作，如填写：rename（表示实例重命名）
+    * 项目Id
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Integer ProjectId;
+
+    /**
+    * 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Integer AutoRenew;
+
+    /**
+     * 获取修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
+     * @return Operation 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置修改实例操作，如填写：rename（表示实例重命名）
-     * @param Operation 修改实例操作，如填写：rename（表示实例重命名）
+     * 设置修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
+     * @param Operation 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -92,12 +106,46 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取项目Id
+     * @return ProjectId 项目Id
+     */
+    public Integer getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * 设置项目Id
+     * @param ProjectId 项目Id
+     */
+    public void setProjectId(Integer ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * 获取自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @return AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     */
+    public Integer getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * 设置自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @param AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     */
+    public void setAutoRenew(Integer AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
 
     }
 }

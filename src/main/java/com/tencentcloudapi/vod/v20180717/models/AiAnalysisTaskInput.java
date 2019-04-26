@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AiAnalysisTaskInput  extends AbstractModel{
 
     /**
-    * 视频内容分析模板 ID ，固定为 10，同时进行智能分类、智能标签分析、智能封面分析。
+    * 视频内容分析模板 ID。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * 获取视频内容分析模板 ID ，固定为 10，同时进行智能分类、智能标签分析、智能封面分析。
-     * @return Definition 视频内容分析模板 ID ，固定为 10，同时进行智能分类、智能标签分析、智能封面分析。
+     * 获取视频内容分析模板 ID。
+     * @return Definition 视频内容分析模板 ID。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * 设置视频内容分析模板 ID ，固定为 10，同时进行智能分类、智能标签分析、智能封面分析。
-     * @param Definition 视频内容分析模板 ID ，固定为 10，同时进行智能分类、智能标签分析、智能封面分析。
+     * 设置视频内容分析模板 ID。
+     * @param Definition 视频内容分析模板 ID。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

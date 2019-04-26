@@ -72,7 +72,7 @@ public class WatermarkTemplate  extends AbstractModel{
     private String YPos;
 
     /**
-    * 图片水印模板，仅当 Type 为 image，该字段有值。
+    * 图片水印模板，仅当 Type 为 image，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageTemplate")
@@ -80,12 +80,20 @@ public class WatermarkTemplate  extends AbstractModel{
     private ImageWatermarkTemplate ImageTemplate;
 
     /**
-    * 文字水印模板，仅当 Type 为 text，该字段有值。
+    * 文字水印模板，仅当 Type 为 text，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextTemplate")
     @Expose
     private TextWatermarkTemplateInput TextTemplate;
+
+    /**
+    * SVG 水印模板，当 Type 为 svg，该字段有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SvgTemplate")
+    @Expose
+    private SvgWatermarkInput SvgTemplate;
 
     /**
     * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -237,9 +245,9 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取图片水印模板，仅当 Type 为 image，该字段有值。
+     * 获取图片水印模板，仅当 Type 为 image，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return ImageTemplate 图片水印模板，仅当 Type 为 image，该字段有值。
+     * @return ImageTemplate 图片水印模板，仅当 Type 为 image，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageWatermarkTemplate getImageTemplate() {
@@ -247,9 +255,9 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置图片水印模板，仅当 Type 为 image，该字段有值。
+     * 设置图片水印模板，仅当 Type 为 image，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageTemplate 图片水印模板，仅当 Type 为 image，该字段有值。
+     * @param ImageTemplate 图片水印模板，仅当 Type 为 image，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageTemplate(ImageWatermarkTemplate ImageTemplate) {
@@ -257,9 +265,9 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取文字水印模板，仅当 Type 为 text，该字段有值。
+     * 获取文字水印模板，仅当 Type 为 text，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return TextTemplate 文字水印模板，仅当 Type 为 text，该字段有值。
+     * @return TextTemplate 文字水印模板，仅当 Type 为 text，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TextWatermarkTemplateInput getTextTemplate() {
@@ -267,13 +275,33 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置文字水印模板，仅当 Type 为 text，该字段有值。
+     * 设置文字水印模板，仅当 Type 为 text，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TextTemplate 文字水印模板，仅当 Type 为 text，该字段有值。
+     * @param TextTemplate 文字水印模板，仅当 Type 为 text，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextTemplate(TextWatermarkTemplateInput TextTemplate) {
         this.TextTemplate = TextTemplate;
+    }
+
+    /**
+     * 获取SVG 水印模板，当 Type 为 svg，该字段有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SvgTemplate SVG 水印模板，当 Type 为 svg，该字段有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SvgWatermarkInput getSvgTemplate() {
+        return this.SvgTemplate;
+    }
+
+    /**
+     * 设置SVG 水印模板，当 Type 为 svg，该字段有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SvgTemplate SVG 水印模板，当 Type 为 svg，该字段有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSvgTemplate(SvgWatermarkInput SvgTemplate) {
+        this.SvgTemplate = SvgTemplate;
     }
 
     /**
@@ -352,6 +380,7 @@ public class WatermarkTemplate  extends AbstractModel{
         this.setParamSimple(map, prefix + "YPos", this.YPos);
         this.setParamObj(map, prefix + "ImageTemplate.", this.ImageTemplate);
         this.setParamObj(map, prefix + "TextTemplate.", this.TextTemplate);
+        this.setParamObj(map, prefix + "SvgTemplate.", this.SvgTemplate);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "CoordinateOrigin", this.CoordinateOrigin);

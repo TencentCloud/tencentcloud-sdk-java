@@ -24,7 +24,6 @@ public class AiAnalysisTaskClassificationOutput  extends AbstractModel{
 
     /**
     * 视频智能分类列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClassificationSet")
     @Expose
@@ -32,9 +31,7 @@ public class AiAnalysisTaskClassificationOutput  extends AbstractModel{
 
     /**
      * 获取视频智能分类列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return ClassificationSet 视频智能分类列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaAiAnalysisClassificationItem [] getClassificationSet() {
         return this.ClassificationSet;
@@ -42,9 +39,7 @@ public class AiAnalysisTaskClassificationOutput  extends AbstractModel{
 
     /**
      * 设置视频智能分类列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClassificationSet 视频智能分类列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassificationSet(MediaAiAnalysisClassificationItem [] ClassificationSet) {
         this.ClassificationSet = ClassificationSet;

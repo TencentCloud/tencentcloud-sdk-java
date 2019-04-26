@@ -30,6 +30,13 @@ public class CreateLiveRecordRuleRequest  extends AbstractModel{
     private String DomainName;
 
     /**
+    * 模板Id。
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private Integer TemplateId;
+
+    /**
     * 推流路径。
     */
     @SerializedName("AppName")
@@ -38,17 +45,11 @@ public class CreateLiveRecordRuleRequest  extends AbstractModel{
 
     /**
     * 流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
-
-    /**
-    * 模板Id。
-    */
-    @SerializedName("TemplateId")
-    @Expose
-    private Integer TemplateId;
 
     /**
      * 获取推流域名。
@@ -64,6 +65,22 @@ public class CreateLiveRecordRuleRequest  extends AbstractModel{
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
+    }
+
+    /**
+     * 获取模板Id。
+     * @return TemplateId 模板Id。
+     */
+    public Integer getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * 设置模板Id。
+     * @param TemplateId 模板Id。
+     */
+    public void setTemplateId(Integer TemplateId) {
+        this.TemplateId = TemplateId;
     }
 
     /**
@@ -84,7 +101,9 @@ public class CreateLiveRecordRuleRequest  extends AbstractModel{
 
     /**
      * 获取流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
      * @return StreamName 流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
      */
     public String getStreamName() {
         return this.StreamName;
@@ -92,26 +111,12 @@ public class CreateLiveRecordRuleRequest  extends AbstractModel{
 
     /**
      * 设置流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
      * @param StreamName 流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
-    }
-
-    /**
-     * 获取模板Id。
-     * @return TemplateId 模板Id。
-     */
-    public Integer getTemplateId() {
-        return this.TemplateId;
-    }
-
-    /**
-     * 设置模板Id。
-     * @param TemplateId 模板Id。
-     */
-    public void setTemplateId(Integer TemplateId) {
-        this.TemplateId = TemplateId;
     }
 
     /**
@@ -119,9 +124,9 @@ public class CreateLiveRecordRuleRequest  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }
