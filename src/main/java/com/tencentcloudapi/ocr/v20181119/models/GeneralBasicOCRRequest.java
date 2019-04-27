@@ -43,6 +43,13 @@ public class GeneralBasicOCRRequest  extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * 保留字段。
+    */
+    @SerializedName("Scene")
+    @Expose
+    private String Scene;
+
+    /**
      * 获取图片的BASE64值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持GIF格式。
 支持的图片大小：所下载图片经Base64编码后不超过3M。图片下载时间不超过3秒。
@@ -99,11 +106,28 @@ public class GeneralBasicOCRRequest  extends AbstractModel{
     }
 
     /**
+     * 获取保留字段。
+     * @return Scene 保留字段。
+     */
+    public String getScene() {
+        return this.Scene;
+    }
+
+    /**
+     * 设置保留字段。
+     * @param Scene 保留字段。
+     */
+    public void setScene(String Scene) {
+        this.Scene = Scene;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "Scene", this.Scene);
 
     }
 }

@@ -51,11 +51,17 @@ BACK为身份证有国徽的一面（反面）
     private String CardSide;
 
     /**
-    * 可选字段，根据需要选择是否请求对应字段。目前包含的字段为：
-CropIdCard-身份证照片裁剪，
-CropPortrait-人像照片裁剪，
-CopyWarn-复印件告警，
-ReshootWarn-翻拍告警。
+    * 可选字段，根据需要选择是否请求对应字段。
+目前包含的字段为：
+CropIdCard-身份证照片裁剪，bool类型，
+CropPortrait-人像照片裁剪，bool类型，
+CopyWarn-复印件告警，bool类型，
+ReshootWarn-翻拍告警，bool类型。
+
+SDK设置方式参考：
+Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+API 3.0 Explorer设置方式参考：
+Config = {"CropIdCard":true,"CropPortrait":true}
     */
     @SerializedName("Config")
     @Expose
@@ -138,32 +144,56 @@ BACK为身份证有国徽的一面（反面）
     }
 
     /**
-     * 获取可选字段，根据需要选择是否请求对应字段。目前包含的字段为：
-CropIdCard-身份证照片裁剪，
-CropPortrait-人像照片裁剪，
-CopyWarn-复印件告警，
-ReshootWarn-翻拍告警。
-     * @return Config 可选字段，根据需要选择是否请求对应字段。目前包含的字段为：
-CropIdCard-身份证照片裁剪，
-CropPortrait-人像照片裁剪，
-CopyWarn-复印件告警，
-ReshootWarn-翻拍告警。
+     * 获取可选字段，根据需要选择是否请求对应字段。
+目前包含的字段为：
+CropIdCard-身份证照片裁剪，bool类型，
+CropPortrait-人像照片裁剪，bool类型，
+CopyWarn-复印件告警，bool类型，
+ReshootWarn-翻拍告警，bool类型。
+
+SDK设置方式参考：
+Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+API 3.0 Explorer设置方式参考：
+Config = {"CropIdCard":true,"CropPortrait":true}
+     * @return Config 可选字段，根据需要选择是否请求对应字段。
+目前包含的字段为：
+CropIdCard-身份证照片裁剪，bool类型，
+CropPortrait-人像照片裁剪，bool类型，
+CopyWarn-复印件告警，bool类型，
+ReshootWarn-翻拍告警，bool类型。
+
+SDK设置方式参考：
+Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+API 3.0 Explorer设置方式参考：
+Config = {"CropIdCard":true,"CropPortrait":true}
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * 设置可选字段，根据需要选择是否请求对应字段。目前包含的字段为：
-CropIdCard-身份证照片裁剪，
-CropPortrait-人像照片裁剪，
-CopyWarn-复印件告警，
-ReshootWarn-翻拍告警。
-     * @param Config 可选字段，根据需要选择是否请求对应字段。目前包含的字段为：
-CropIdCard-身份证照片裁剪，
-CropPortrait-人像照片裁剪，
-CopyWarn-复印件告警，
-ReshootWarn-翻拍告警。
+     * 设置可选字段，根据需要选择是否请求对应字段。
+目前包含的字段为：
+CropIdCard-身份证照片裁剪，bool类型，
+CropPortrait-人像照片裁剪，bool类型，
+CopyWarn-复印件告警，bool类型，
+ReshootWarn-翻拍告警，bool类型。
+
+SDK设置方式参考：
+Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+API 3.0 Explorer设置方式参考：
+Config = {"CropIdCard":true,"CropPortrait":true}
+     * @param Config 可选字段，根据需要选择是否请求对应字段。
+目前包含的字段为：
+CropIdCard-身份证照片裁剪，bool类型，
+CropPortrait-人像照片裁剪，bool类型，
+CopyWarn-复印件告警，bool类型，
+ReshootWarn-翻拍告警，bool类型。
+
+SDK设置方式参考：
+Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+API 3.0 Explorer设置方式参考：
+Config = {"CropIdCard":true,"CropPortrait":true}
      */
     public void setConfig(String Config) {
         this.Config = Config;
