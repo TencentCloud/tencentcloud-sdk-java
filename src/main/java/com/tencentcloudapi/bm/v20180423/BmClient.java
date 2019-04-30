@@ -943,6 +943,24 @@ ConfirmUnRecovered（维修完成后，确认故障未恢复）<br>
     }
 
     /**
+     *开启服务器
+     * @param req StartDevicesRequest
+     * @return StartDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartDevicesResponse StartDevices(StartDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StartDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *解除标签与预授权规则的绑定
      * @param req UnbindPsaTagRequest
      * @return UnbindPsaTagResponse

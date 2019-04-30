@@ -44,28 +44,29 @@ public class DeviceInfo  extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 设备状态ID
+    * 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
     */
     @SerializedName("DeviceStatus")
     @Expose
     private Integer DeviceStatus;
 
     /**
-    * 设备操作状态
+    * 设备操作状态ID，取值：
+<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
     */
     @SerializedName("OperateStatus")
     @Expose
     private Integer OperateStatus;
 
     /**
-    * 操作系统ID
+    * 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
     */
     @SerializedName("OsTypeId")
     @Expose
     private Integer OsTypeId;
 
     /**
-    * RAID类型ID
+    * RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
     */
     @SerializedName("RaidId")
     @Expose
@@ -239,64 +240,68 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备状态ID
-     * @return DeviceStatus 设备状态ID
+     * 获取设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
+     * @return DeviceStatus 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
      */
     public Integer getDeviceStatus() {
         return this.DeviceStatus;
     }
 
     /**
-     * 设置设备状态ID
-     * @param DeviceStatus 设备状态ID
+     * 设置设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
+     * @param DeviceStatus 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
      */
     public void setDeviceStatus(Integer DeviceStatus) {
         this.DeviceStatus = DeviceStatus;
     }
 
     /**
-     * 获取设备操作状态
-     * @return OperateStatus 设备操作状态
+     * 获取设备操作状态ID，取值：
+<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
+     * @return OperateStatus 设备操作状态ID，取值：
+<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
      */
     public Integer getOperateStatus() {
         return this.OperateStatus;
     }
 
     /**
-     * 设置设备操作状态
-     * @param OperateStatus 设备操作状态
+     * 设置设备操作状态ID，取值：
+<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
+     * @param OperateStatus 设备操作状态ID，取值：
+<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
      */
     public void setOperateStatus(Integer OperateStatus) {
         this.OperateStatus = OperateStatus;
     }
 
     /**
-     * 获取操作系统ID
-     * @return OsTypeId 操作系统ID
+     * 获取操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
+     * @return OsTypeId 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
      */
     public Integer getOsTypeId() {
         return this.OsTypeId;
     }
 
     /**
-     * 设置操作系统ID
-     * @param OsTypeId 操作系统ID
+     * 设置操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
+     * @param OsTypeId 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
      */
     public void setOsTypeId(Integer OsTypeId) {
         this.OsTypeId = OsTypeId;
     }
 
     /**
-     * 获取RAID类型ID
-     * @return RaidId RAID类型ID
+     * 获取RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
+     * @return RaidId RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
      */
     public Integer getRaidId() {
         return this.RaidId;
     }
 
     /**
-     * 设置RAID类型ID
-     * @param RaidId RAID类型ID
+     * 设置RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
+     * @param RaidId RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
      */
     public void setRaidId(Integer RaidId) {
         this.RaidId = RaidId;

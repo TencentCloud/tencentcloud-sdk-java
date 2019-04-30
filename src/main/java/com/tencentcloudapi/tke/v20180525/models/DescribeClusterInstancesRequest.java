@@ -48,7 +48,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     */
     @SerializedName("InstanceIds")
     @Expose
-    private String InstanceIds;
+    private String [] InstanceIds;
 
     /**
      * 获取集群ID
@@ -102,7 +102,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
      * 获取需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
      * @return InstanceIds 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
      */
-    public String getInstanceIds() {
+    public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
@@ -110,7 +110,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
      * 设置需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
      * @param InstanceIds 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
      */
-    public void setInstanceIds(String InstanceIds) {
+    public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
@@ -121,7 +121,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

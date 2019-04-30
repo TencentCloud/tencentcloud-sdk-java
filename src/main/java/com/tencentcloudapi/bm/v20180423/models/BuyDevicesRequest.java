@@ -276,6 +276,13 @@ public class BuyDevicesRequest  extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
+    */
+    @SerializedName("FileSystem")
+    @Expose
+    private String FileSystem;
+
+    /**
      * 获取可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/6634)获取可用区信息
      * @return Zone 可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/6634)获取可用区信息
      */
@@ -856,6 +863,22 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
+     * @return FileSystem 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
+     */
+    public String getFileSystem() {
+        return this.FileSystem;
+    }
+
+    /**
+     * 设置指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
+     * @param FileSystem 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
+     */
+    public void setFileSystem(String FileSystem) {
+        this.FileSystem = FileSystem;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -895,6 +918,7 @@ public class BuyDevicesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "DataDiskTypeId", this.DataDiskTypeId);
         this.setParamSimple(map, prefix + "DataDiskCount", this.DataDiskCount);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "FileSystem", this.FileSystem);
 
     }
 }

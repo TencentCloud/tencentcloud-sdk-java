@@ -51,7 +51,7 @@ public class EnvData  extends AbstractModel{
     private DataDisk [] DataDisks;
 
     /**
-    * 私有网络相关信息配置
+    * 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
     */
     @SerializedName("VirtualPrivateCloud")
     @Expose
@@ -121,6 +121,20 @@ public class EnvData  extends AbstractModel{
     private InstanceTypeOptions InstanceTypeOptions;
 
     /**
+    * 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
+    * 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+    */
+    @SerializedName("VirtualPrivateClouds")
+    @Expose
+    private VirtualPrivateCloud [] VirtualPrivateClouds;
+
+    /**
      * 获取CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
      * @return InstanceType CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
      */
@@ -185,16 +199,16 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络相关信息配置
-     * @return VirtualPrivateCloud 私有网络相关信息配置
+     * 获取私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
+     * @return VirtualPrivateCloud 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
      */
     public VirtualPrivateCloud getVirtualPrivateCloud() {
         return this.VirtualPrivateCloud;
     }
 
     /**
-     * 设置私有网络相关信息配置
-     * @param VirtualPrivateCloud 私有网络相关信息配置
+     * 设置私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
+     * @param VirtualPrivateCloud 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
      */
     public void setVirtualPrivateCloud(VirtualPrivateCloud VirtualPrivateCloud) {
         this.VirtualPrivateCloud = VirtualPrivateCloud;
@@ -345,6 +359,38 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
+     * 获取可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+     * @return Zones 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * 设置可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+     * @param Zones 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
+     * 获取私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+     * @return VirtualPrivateClouds 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+     */
+    public VirtualPrivateCloud [] getVirtualPrivateClouds() {
+        return this.VirtualPrivateClouds;
+    }
+
+    /**
+     * 设置私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+     * @param VirtualPrivateClouds 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+     */
+    public void setVirtualPrivateClouds(VirtualPrivateCloud [] VirtualPrivateClouds) {
+        this.VirtualPrivateClouds = VirtualPrivateClouds;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +408,8 @@ public class EnvData  extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
         this.setParamObj(map, prefix + "InstanceTypeOptions.", this.InstanceTypeOptions);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamArrayObj(map, prefix + "VirtualPrivateClouds.", this.VirtualPrivateClouds);
 
     }
 }

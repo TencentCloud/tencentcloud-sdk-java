@@ -79,6 +79,13 @@ public class Cluster  extends AbstractModel{
     private Integer ClusterNodeNum;
 
     /**
+    * 集群所属的项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Integer ProjectId;
+
+    /**
      * 获取集群ID
      * @return ClusterId 集群ID
      */
@@ -207,6 +214,22 @@ public class Cluster  extends AbstractModel{
     }
 
     /**
+     * 获取集群所属的项目ID
+     * @return ProjectId 集群所属的项目ID
+     */
+    public Integer getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * 设置集群所属的项目ID
+     * @param ProjectId 集群所属的项目ID
+     */
+    public void setProjectId(Integer ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class Cluster  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamObj(map, prefix + "ClusterNetworkSettings.", this.ClusterNetworkSettings);
         this.setParamSimple(map, prefix + "ClusterNodeNum", this.ClusterNodeNum);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }
