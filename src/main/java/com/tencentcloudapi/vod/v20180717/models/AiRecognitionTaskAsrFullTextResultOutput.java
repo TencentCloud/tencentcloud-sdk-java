@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
 
     /**
-    * 语音全文识别结果集。
+    * 语音全文识别片段列表。
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -37,16 +37,16 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     private String SubtitleUrl;
 
     /**
-     * 获取语音全文识别结果集。
-     * @return SegmentSet 语音全文识别结果集。
+     * 获取语音全文识别片段列表。
+     * @return SegmentSet 语音全文识别片段列表。
      */
     public AiRecognitionTaskAsrFullTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * 设置语音全文识别结果集。
-     * @param SegmentSet 语音全文识别结果集。
+     * 设置语音全文识别片段列表。
+     * @param SegmentSet 语音全文识别片段列表。
      */
     public void setSegmentSet(AiRecognitionTaskAsrFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

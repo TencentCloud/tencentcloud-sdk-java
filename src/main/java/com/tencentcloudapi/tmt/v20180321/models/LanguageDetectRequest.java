@@ -30,7 +30,7 @@ public class LanguageDetectRequest  extends AbstractModel{
     private String Text;
 
     /**
-    * 项目id
+    * 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
     */
     @SerializedName("ProjectId")
     @Expose
@@ -53,16 +53,16 @@ public class LanguageDetectRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目id
-     * @return ProjectId 项目id
+     * 获取项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
+     * @return ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
     public Integer getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置项目id
-     * @param ProjectId 项目id
+     * 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
+     * @param ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
     public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;

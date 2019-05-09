@@ -58,6 +58,20 @@ public class UpdateLiveWatermarkRequest  extends AbstractModel{
     private String WatermarkName;
 
     /**
+    * 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+    */
+    @SerializedName("Width")
+    @Expose
+    private Integer Width;
+
+    /**
+    * 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+    */
+    @SerializedName("Height")
+    @Expose
+    private Integer Height;
+
+    /**
      * 获取水印ID。
      * @return WatermarkId 水印ID。
      */
@@ -138,6 +152,38 @@ public class UpdateLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
+     * 获取水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * @return Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     */
+    public Integer getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * 设置水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * @param Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     */
+    public void setWidth(Integer Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * 获取水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * @return Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     */
+    public Integer getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * 设置水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * @param Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     */
+    public void setHeight(Integer Height) {
+        this.Height = Height;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class UpdateLiveWatermarkRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "XPosition", this.XPosition);
         this.setParamSimple(map, prefix + "YPosition", this.YPosition);
         this.setParamSimple(map, prefix + "WatermarkName", this.WatermarkName);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
 
     }
 }

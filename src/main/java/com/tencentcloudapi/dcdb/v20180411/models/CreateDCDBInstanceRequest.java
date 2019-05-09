@@ -96,7 +96,11 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+    * 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
+10.0.10 - Mariadb 10.0.10；
+10.1.9 - Mariadb 10.1.9；
+5.7.17 - Percona 5.7.17。
+如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
     */
     @SerializedName("DbVersionId")
     @Expose
@@ -289,16 +293,32 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
-     * @return DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+     * 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
+10.0.10 - Mariadb 10.0.10；
+10.1.9 - Mariadb 10.1.9；
+5.7.17 - Percona 5.7.17。
+如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
+     * @return DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
+10.0.10 - Mariadb 10.0.10；
+10.1.9 - Mariadb 10.1.9；
+5.7.17 - Percona 5.7.17。
+如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
      */
     public String getDbVersionId() {
         return this.DbVersionId;
     }
 
     /**
-     * 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
-     * @param DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+     * 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
+10.0.10 - Mariadb 10.0.10；
+10.1.9 - Mariadb 10.1.9；
+5.7.17 - Percona 5.7.17。
+如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
+     * @param DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
+10.0.10 - Mariadb 10.0.10；
+10.1.9 - Mariadb 10.1.9；
+5.7.17 - Percona 5.7.17。
+如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
      */
     public void setDbVersionId(String DbVersionId) {
         this.DbVersionId = DbVersionId;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateSealRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名SealMng
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名CreateSeal
     */
     @SerializedName("Operation")
     @Expose
@@ -51,32 +51,39 @@ public class CreateSealRequest  extends AbstractModel{
     private String ImgUrl;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+    * 图片数据，base64编码
+    */
+    @SerializedName("ImgData")
+    @Expose
+    private String ImgData;
+
+    /**
+     * 获取模块名SealMng
+     * @return Module 模块名SealMng
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名SealMng
+     * @param Module 模块名SealMng
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名CreateSeal
+     * @return Operation 操作名CreateSeal
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名CreateSeal
+     * @param Operation 操作名CreateSeal
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -115,6 +122,22 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
+     * 获取图片数据，base64编码
+     * @return ImgData 图片数据，base64编码
+     */
+    public String getImgData() {
+        return this.ImgData;
+    }
+
+    /**
+     * 设置图片数据，base64编码
+     * @param ImgData 图片数据，base64编码
+     */
+    public void setImgData(String ImgData) {
+        this.ImgData = ImgData;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class CreateSealRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "AccountResId", this.AccountResId);
         this.setParamSimple(map, prefix + "ImgUrl", this.ImgUrl);
+        this.setParamSimple(map, prefix + "ImgData", this.ImgData);
 
     }
 }

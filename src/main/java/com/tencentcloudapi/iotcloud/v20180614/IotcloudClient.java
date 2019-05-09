@@ -85,6 +85,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *创建lora类型的设备
+     * @param req CreateLoraDeviceRequest
+     * @return CreateLoraDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLoraDeviceResponse CreateLoraDevice(CreateLoraDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLoraDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLoraDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLoraDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateMultiDevice）用于批量创建物联云设备。
      * @param req CreateMultiDeviceRequest
      * @return CreateMultiDeviceResponse
@@ -193,6 +211,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *删除lora类型的设备
+     * @param req DeleteLoraDeviceRequest
+     * @return DeleteLoraDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoraDeviceResponse DeleteLoraDevice(DeleteLoraDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLoraDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLoraDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoraDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteProduct）用于删除一个物联网通信产品。
      * @param req DeleteProductRequest
      * @return DeleteProductResponse
@@ -276,6 +312,24 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取lora类型设备的详细信息
+     * @param req DescribeLoraDeviceRequest
+     * @return DescribeLoraDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoraDeviceResponse DescribeLoraDevice(DescribeLoraDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoraDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoraDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLoraDevice"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -409,6 +463,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *模拟lora类型的设备端向服务器端发送消息
+     * @param req PublishAsDeviceRequest
+     * @return PublishAsDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishAsDeviceResponse PublishAsDevice(PublishAsDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishAsDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishAsDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PublishAsDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（PublishMessage）用于向某个主题发消息。
      * @param req PublishMessageRequest
      * @return PublishMessageResponse
@@ -420,6 +492,24 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PublishMessageResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PublishMessage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *服务器端下发消息给lora类型的设备
+     * @param req PublishToDeviceRequest
+     * @return PublishToDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishToDeviceResponse PublishToDevice(PublishToDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishToDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishToDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PublishToDevice"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

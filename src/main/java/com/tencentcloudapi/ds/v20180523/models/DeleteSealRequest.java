@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DeleteSealRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名SealMng
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名DeleteSeal
     */
     @SerializedName("Operation")
     @Expose
@@ -51,32 +51,32 @@ public class DeleteSealRequest  extends AbstractModel{
     private String SealResId;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+     * 获取模块名SealMng
+     * @return Module 模块名SealMng
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名SealMng
+     * @param Module 模块名SealMng
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名DeleteSeal
+     * @return Operation 操作名DeleteSeal
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名DeleteSeal
+     * @param Operation 操作名DeleteSeal
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

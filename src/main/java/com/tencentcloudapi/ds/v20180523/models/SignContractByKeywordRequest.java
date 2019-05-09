@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class SignContractByKeywordRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名ContractMng
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名SignContractByKeyword
     */
     @SerializedName("Operation")
     @Expose
@@ -65,6 +65,13 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     private String Position;
 
     /**
+    * 签署关键字，偏移坐标原点为关键字中心
+    */
+    @SerializedName("SignKeyword")
+    @Expose
+    private SignKeyword SignKeyword;
+
+    /**
     * 签章ID
     */
     @SerializedName("SealResId")
@@ -72,39 +79,46 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     private String SealResId;
 
     /**
-    * 签署关键字，坐标和范围不得超过合同文件边界
+    * 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
     */
-    @SerializedName("SignKeyword")
+    @SerializedName("CertType")
     @Expose
-    private SignKeyword SignKeyword;
+    private Integer CertType;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+    * 签名图片，base64编码
+    */
+    @SerializedName("ImageData")
+    @Expose
+    private String ImageData;
+
+    /**
+     * 获取模块名ContractMng
+     * @return Module 模块名ContractMng
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名ContractMng
+     * @param Module 模块名ContractMng
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名SignContractByKeyword
+     * @return Operation 操作名SignContractByKeyword
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名SignContractByKeyword
+     * @param Operation 操作名SignContractByKeyword
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -175,6 +189,22 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
+     * 获取签署关键字，偏移坐标原点为关键字中心
+     * @return SignKeyword 签署关键字，偏移坐标原点为关键字中心
+     */
+    public SignKeyword getSignKeyword() {
+        return this.SignKeyword;
+    }
+
+    /**
+     * 设置签署关键字，偏移坐标原点为关键字中心
+     * @param SignKeyword 签署关键字，偏移坐标原点为关键字中心
+     */
+    public void setSignKeyword(SignKeyword SignKeyword) {
+        this.SignKeyword = SignKeyword;
+    }
+
+    /**
      * 获取签章ID
      * @return SealResId 签章ID
      */
@@ -191,19 +221,35 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取签署关键字，坐标和范围不得超过合同文件边界
-     * @return SignKeyword 签署关键字，坐标和范围不得超过合同文件边界
+     * 获取选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * @return CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
-    public SignKeyword getSignKeyword() {
-        return this.SignKeyword;
+    public Integer getCertType() {
+        return this.CertType;
     }
 
     /**
-     * 设置签署关键字，坐标和范围不得超过合同文件边界
-     * @param SignKeyword 签署关键字，坐标和范围不得超过合同文件边界
+     * 设置选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * @param CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
-    public void setSignKeyword(SignKeyword SignKeyword) {
-        this.SignKeyword = SignKeyword;
+    public void setCertType(Integer CertType) {
+        this.CertType = CertType;
+    }
+
+    /**
+     * 获取签名图片，base64编码
+     * @return ImageData 签名图片，base64编码
+     */
+    public String getImageData() {
+        return this.ImageData;
+    }
+
+    /**
+     * 设置签名图片，base64编码
+     * @param ImageData 签名图片，base64编码
+     */
+    public void setImageData(String ImageData) {
+        this.ImageData = ImageData;
     }
 
     /**
@@ -216,8 +262,10 @@ public class SignContractByKeywordRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "AccountResId", this.AccountResId);
         this.setParamSimple(map, prefix + "AuthorizationTime", this.AuthorizationTime);
         this.setParamSimple(map, prefix + "Position", this.Position);
-        this.setParamSimple(map, prefix + "SealResId", this.SealResId);
         this.setParamObj(map, prefix + "SignKeyword.", this.SignKeyword);
+        this.setParamSimple(map, prefix + "SealResId", this.SealResId);
+        this.setParamSimple(map, prefix + "CertType", this.CertType);
+        this.setParamSimple(map, prefix + "ImageData", this.ImageData);
 
     }
 }

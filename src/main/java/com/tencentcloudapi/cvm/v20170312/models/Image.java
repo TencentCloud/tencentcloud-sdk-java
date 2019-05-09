@@ -123,6 +123,14 @@ public class Image  extends AbstractModel{
     private Boolean IsSupportCloudinit;
 
     /**
+    * 镜像关联的快照信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SnapshotSet")
+    @Expose
+    private Snapshot [] SnapshotSet;
+
+    /**
      * 获取镜像ID
      * @return ImageId 镜像ID
      */
@@ -355,6 +363,26 @@ public class Image  extends AbstractModel{
     }
 
     /**
+     * 获取镜像关联的快照信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SnapshotSet 镜像关联的快照信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Snapshot [] getSnapshotSet() {
+        return this.SnapshotSet;
+    }
+
+    /**
+     * 设置镜像关联的快照信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SnapshotSet 镜像关联的快照信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSnapshotSet(Snapshot [] SnapshotSet) {
+        this.SnapshotSet = SnapshotSet;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -372,6 +400,7 @@ public class Image  extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageSource", this.ImageSource);
         this.setParamSimple(map, prefix + "SyncPercent", this.SyncPercent);
         this.setParamSimple(map, prefix + "IsSupportCloudinit", this.IsSupportCloudinit);
+        this.setParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
 
     }
 }

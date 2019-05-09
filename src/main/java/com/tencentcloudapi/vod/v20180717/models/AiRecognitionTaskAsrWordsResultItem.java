@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrWordsResultItem  extends AbstractModel{
 
     /**
-    * 语音识别词。
+    * 语音关键词。
     */
     @SerializedName("Word")
     @Expose
     private String Word;
 
     /**
-    * 用户自定义语音识别结果集。
+    * 语音关键词出现的时间片段列表。
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskAsrWordsSegmentItem [] SegmentSet;
 
     /**
-     * 获取语音识别词。
-     * @return Word 语音识别词。
+     * 获取语音关键词。
+     * @return Word 语音关键词。
      */
     public String getWord() {
         return this.Word;
     }
 
     /**
-     * 设置语音识别词。
-     * @param Word 语音识别词。
+     * 设置语音关键词。
+     * @param Word 语音关键词。
      */
     public void setWord(String Word) {
         this.Word = Word;
     }
 
     /**
-     * 获取用户自定义语音识别结果集。
-     * @return SegmentSet 用户自定义语音识别结果集。
+     * 获取语音关键词出现的时间片段列表。
+     * @return SegmentSet 语音关键词出现的时间片段列表。
      */
     public AiRecognitionTaskAsrWordsSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * 设置用户自定义语音识别结果集。
-     * @param SegmentSet 用户自定义语音识别结果集。
+     * 设置语音关键词出现的时间片段列表。
+     * @param SegmentSet 语音关键词出现的时间片段列表。
      */
     public void setSegmentSet(AiRecognitionTaskAsrWordsSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

@@ -44,6 +44,13 @@ public class DescribeDBPerformanceRequest  extends AbstractModel{
     private String EndTime;
 
     /**
+    * 拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
+    */
+    @SerializedName("MetricName")
+    @Expose
+    private String MetricName;
+
+    /**
      * 获取实例 ID，形如：tdsql-ow728lmc。
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
@@ -92,12 +99,29 @@ public class DescribeDBPerformanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
+     * @return MetricName 拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
+     */
+    public String getMetricName() {
+        return this.MetricName;
+    }
+
+    /**
+     * 设置拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
+     * @param MetricName 拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
+     */
+    public void setMetricName(String MetricName) {
+        this.MetricName = MetricName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
 
     }
 }

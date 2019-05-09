@@ -269,6 +269,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
 
     /**
     * 实例处于异步任务状态时，表示异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Locker")
     @Expose
@@ -280,6 +281,13 @@ public class DCDBInstanceInfo  extends AbstractModel{
     @SerializedName("WanStatus")
     @Expose
     private Integer WanStatus;
+
+    /**
+    * 该实例是否支持审计。1-支持；0-不支持
+    */
+    @SerializedName("IsAuditSupported")
+    @Expose
+    private Integer IsAuditSupported;
 
     /**
      * 获取实例ID
@@ -843,7 +851,9 @@ public class DCDBInstanceInfo  extends AbstractModel{
 
     /**
      * 获取实例处于异步任务状态时，表示异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Locker 实例处于异步任务状态时，表示异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getLocker() {
         return this.Locker;
@@ -851,7 +861,9 @@ public class DCDBInstanceInfo  extends AbstractModel{
 
     /**
      * 设置实例处于异步任务状态时，表示异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Locker 实例处于异步任务状态时，表示异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocker(Integer Locker) {
         this.Locker = Locker;
@@ -871,6 +883,22 @@ public class DCDBInstanceInfo  extends AbstractModel{
      */
     public void setWanStatus(Integer WanStatus) {
         this.WanStatus = WanStatus;
+    }
+
+    /**
+     * 获取该实例是否支持审计。1-支持；0-不支持
+     * @return IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
+     */
+    public Integer getIsAuditSupported() {
+        return this.IsAuditSupported;
+    }
+
+    /**
+     * 设置该实例是否支持审计。1-支持；0-不支持
+     * @param IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
+     */
+    public void setIsAuditSupported(Integer IsAuditSupported) {
+        this.IsAuditSupported = IsAuditSupported;
     }
 
     /**
@@ -914,6 +942,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "Paymode", this.Paymode);
         this.setParamSimple(map, prefix + "Locker", this.Locker);
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
+        this.setParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
 
     }
 }

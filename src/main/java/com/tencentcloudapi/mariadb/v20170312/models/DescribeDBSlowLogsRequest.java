@@ -79,6 +79,13 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     private String OrderByType;
 
     /**
+    * 是否查询从机的慢查询，0-主机; 1-从机
+    */
+    @SerializedName("Slave")
+    @Expose
+    private Integer Slave;
+
+    /**
      * 获取实例 ID，形如：tdsql-ow728lmc。
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
@@ -207,6 +214,22 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否查询从机的慢查询，0-主机; 1-从机
+     * @return Slave 是否查询从机的慢查询，0-主机; 1-从机
+     */
+    public Integer getSlave() {
+        return this.Slave;
+    }
+
+    /**
+     * 设置是否查询从机的慢查询，0-主机; 1-从机
+     * @param Slave 是否查询从机的慢查询，0-主机; 1-从机
+     */
+    public void setSlave(Integer Slave) {
+        this.Slave = Slave;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Db", this.Db);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
+        this.setParamSimple(map, prefix + "Slave", this.Slave);
 
     }
 }

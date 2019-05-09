@@ -51,7 +51,7 @@ public class PublishMessageRequest  extends AbstractModel{
     private String DeviceName;
 
     /**
-    * 服务质量等级，取值为0， 1
+    * 服务质量等级，取值为0或1
     */
     @SerializedName("Qos")
     @Expose
@@ -122,16 +122,16 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务质量等级，取值为0， 1
-     * @return Qos 服务质量等级，取值为0， 1
+     * 获取服务质量等级，取值为0或1
+     * @return Qos 服务质量等级，取值为0或1
      */
     public Integer getQos() {
         return this.Qos;
     }
 
     /**
-     * 设置服务质量等级，取值为0， 1
-     * @param Qos 服务质量等级，取值为0， 1
+     * 设置服务质量等级，取值为0或1
+     * @param Qos 服务质量等级，取值为0或1
      */
     public void setQos(Integer Qos) {
         this.Qos = Qos;

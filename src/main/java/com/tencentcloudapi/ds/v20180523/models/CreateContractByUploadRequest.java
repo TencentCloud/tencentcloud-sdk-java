@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateContractByUploadRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名ContractMng
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名CreateContractByUpload
     */
     @SerializedName("Operation")
     @Expose
@@ -58,13 +58,6 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     private String ContractName;
 
     /**
-    * 备注
-    */
-    @SerializedName("Remarks")
-    @Expose
-    private String Remarks;
-
-    /**
     * 合同发起方帐号ID
     */
     @SerializedName("Initiator")
@@ -72,32 +65,46 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     private String Initiator;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+    * 备注
+    */
+    @SerializedName("Remarks")
+    @Expose
+    private String Remarks;
+
+    /**
+    * 过期时间
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+     * 获取模块名ContractMng
+     * @return Module 模块名ContractMng
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名ContractMng
+     * @param Module 模块名ContractMng
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名CreateContractByUpload
+     * @return Operation 操作名CreateContractByUpload
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名CreateContractByUpload
+     * @param Operation 操作名CreateContractByUpload
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -152,22 +159,6 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备注
-     * @return Remarks 备注
-     */
-    public String getRemarks() {
-        return this.Remarks;
-    }
-
-    /**
-     * 设置备注
-     * @param Remarks 备注
-     */
-    public void setRemarks(String Remarks) {
-        this.Remarks = Remarks;
-    }
-
-    /**
      * 获取合同发起方帐号ID
      * @return Initiator 合同发起方帐号ID
      */
@@ -184,6 +175,38 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
+     * 获取备注
+     * @return Remarks 备注
+     */
+    public String getRemarks() {
+        return this.Remarks;
+    }
+
+    /**
+     * 设置备注
+     * @param Remarks 备注
+     */
+    public void setRemarks(String Remarks) {
+        this.Remarks = Remarks;
+    }
+
+    /**
+     * 获取过期时间
+     * @return ExpireTime 过期时间
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * 设置过期时间
+     * @param ExpireTime 过期时间
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -192,8 +215,9 @@ public class CreateContractByUploadRequest  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SignInfos.", this.SignInfos);
         this.setParamSimple(map, prefix + "ContractFile", this.ContractFile);
         this.setParamSimple(map, prefix + "ContractName", this.ContractName);
-        this.setParamSimple(map, prefix + "Remarks", this.Remarks);
         this.setParamSimple(map, prefix + "Initiator", this.Initiator);
+        this.setParamSimple(map, prefix + "Remarks", this.Remarks);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }
 }

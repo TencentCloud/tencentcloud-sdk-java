@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeTaskStatusRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名CommonMng
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名DescribeTaskStatus
     */
     @SerializedName("Operation")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     private Integer TaskId;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+     * 获取模块名CommonMng
+     * @return Module 模块名CommonMng
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名CommonMng
+     * @param Module 模块名CommonMng
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名DescribeTaskStatus
+     * @return Operation 操作名DescribeTaskStatus
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名DescribeTaskStatus
+     * @param Operation 操作名DescribeTaskStatus
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

@@ -65,6 +65,13 @@ public class SignInfo  extends AbstractModel{
     private Integer CertType;
 
     /**
+    * 签名域的标签值
+    */
+    @SerializedName("SignLocation")
+    @Expose
+    private String SignLocation;
+
+    /**
      * 获取账户ID
      * @return AccountResId 账户ID
      */
@@ -161,6 +168,22 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
+     * 获取签名域的标签值
+     * @return SignLocation 签名域的标签值
+     */
+    public String getSignLocation() {
+        return this.SignLocation;
+    }
+
+    /**
+     * 设置签名域的标签值
+     * @param SignLocation 签名域的标签值
+     */
+    public void setSignLocation(String SignLocation) {
+        this.SignLocation = SignLocation;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class SignInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "SealId", this.SealId);
         this.setParamSimple(map, prefix + "ImageData", this.ImageData);
         this.setParamSimple(map, prefix + "CertType", this.CertType);
+        this.setParamSimple(map, prefix + "SignLocation", this.SignLocation);
 
     }
 }

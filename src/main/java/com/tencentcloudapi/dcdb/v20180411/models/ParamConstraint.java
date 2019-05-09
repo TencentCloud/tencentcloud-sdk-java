@@ -38,6 +38,7 @@ public class ParamConstraint  extends AbstractModel{
 
     /**
     * 约束类型为section时的范围
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Range")
     @Expose
@@ -84,7 +85,9 @@ public class ParamConstraint  extends AbstractModel{
 
     /**
      * 获取约束类型为section时的范围
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Range 约束类型为section时的范围
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConstraintRange getRange() {
         return this.Range;
@@ -92,7 +95,9 @@ public class ParamConstraint  extends AbstractModel{
 
     /**
      * 设置约束类型为section时的范围
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Range 约束类型为section时的范围
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRange(ConstraintRange Range) {
         this.Range = Range;

@@ -48,7 +48,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     */
     @SerializedName("DataDiskAvailable")
     @Expose
-    private MonitorIntData DataDiskAvailable;
+    private MonitorData DataDiskAvailable;
 
     /**
      * 获取binlog日志磁盘可用空间,单位GB
@@ -102,7 +102,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
      * 获取磁盘可用空间,单位GB
      * @return DataDiskAvailable 磁盘可用空间,单位GB
      */
-    public MonitorIntData getDataDiskAvailable() {
+    public MonitorData getDataDiskAvailable() {
         return this.DataDiskAvailable;
     }
 
@@ -110,7 +110,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
      * 设置磁盘可用空间,单位GB
      * @param DataDiskAvailable 磁盘可用空间,单位GB
      */
-    public void setDataDiskAvailable(MonitorIntData DataDiskAvailable) {
+    public void setDataDiskAvailable(MonitorData DataDiskAvailable) {
         this.DataDiskAvailable = DataDiskAvailable;
     }
 

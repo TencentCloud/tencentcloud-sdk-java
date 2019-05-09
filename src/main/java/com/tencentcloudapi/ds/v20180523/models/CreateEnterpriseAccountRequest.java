@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateEnterpriseAccountRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名AccountMng
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名CreateEnterpriseAccount
     */
     @SerializedName("Operation")
     @Expose
@@ -58,7 +58,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     private String IdentNo;
 
     /**
-    * 企业联系电话
+    * 企业联系人手机号
     */
     @SerializedName("MobilePhone")
     @Expose
@@ -93,32 +93,32 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     private String TransactorPhone;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+     * 获取模块名AccountMng
+     * @return Module 模块名AccountMng
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名AccountMng
+     * @param Module 模块名AccountMng
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名CreateEnterpriseAccount
+     * @return Operation 操作名CreateEnterpriseAccount
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名CreateEnterpriseAccount
+     * @param Operation 操作名CreateEnterpriseAccount
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -173,16 +173,16 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取企业联系电话
-     * @return MobilePhone 企业联系电话
+     * 获取企业联系人手机号
+     * @return MobilePhone 企业联系人手机号
      */
     public String getMobilePhone() {
         return this.MobilePhone;
     }
 
     /**
-     * 设置企业联系电话
-     * @param MobilePhone 企业联系电话
+     * 设置企业联系人手机号
+     * @param MobilePhone 企业联系人手机号
      */
     public void setMobilePhone(String MobilePhone) {
         this.MobilePhone = MobilePhone;

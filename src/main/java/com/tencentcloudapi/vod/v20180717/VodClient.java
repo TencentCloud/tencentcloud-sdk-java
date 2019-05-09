@@ -50,7 +50,7 @@ public class VodClient extends AbstractClient{
 
     /**
      ** 该接口用于申请媒体文件（和封面文件）的上传，获取文件上传到腾讯云点播的元信息（包括上传路径、上传签名等），用于后续上传接口。
-* 上传流程请参考[服务端上传综述](https://cloud.tencent.com/document/product/266/9759#.E4.B8.8A.E4.BC.A0.E6.B5.81.E7.A8.8B)。
+* 上传流程请参考[服务端上传综述](https://cloud.tencent.com/document/product/266/9759)。
      * @param req ApplyUploadRequest
      * @return ApplyUploadResponse
      * @throws TencentCloudSDKException
@@ -124,6 +124,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建用户自定义视频内容识别模板，数量上限：50。
+     * @param req CreateAIRecognitionTemplateRequest
+     * @return CreateAIRecognitionTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(CreateAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAIRecognitionTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAIRecognitionTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAIRecognitionTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 用于对媒体进行分类管理；
 * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
 * 分类层次不可超过 4 层。
@@ -138,6 +156,42 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateClassResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateClass"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建用户自定义视频内容审核模板，数量上限：50。
+     * @param req CreateContentReviewTemplateRequest
+     * @return CreateContentReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateContentReviewTemplateResponse CreateContentReviewTemplate(CreateContentReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateContentReviewTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateContentReviewTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateContentReviewTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于创建人物样本，用于通过人脸识别等技术，进行内容识别、内容审核等视频处理。
+     * @param req CreatePersonSampleRequest
+     * @return CreatePersonSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePersonSampleResponse CreatePersonSample(CreatePersonSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePersonSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePersonSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePersonSample"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -199,6 +253,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于批量创建关键词样本，样本用于通过OCR、ASR技术，进行内容审核、内容识别等视频处理。关键词样本不可重复创建，如需变更，可先删除后，重新创建。
+     * @param req CreateWordSamplesRequest
+     * @return CreateWordSamplesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWordSamplesResponse CreateWordSamples(CreateWordSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWordSamplesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWordSamplesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateWordSamples"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除用户自定义视频内容分析模板。
 
 注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
@@ -212,6 +284,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAIAnalysisTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteAIAnalysisTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户自定义视频内容识别模板。
+     * @param req DeleteAIRecognitionTemplateRequest
+     * @return DeleteAIRecognitionTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAIRecognitionTemplateResponse DeleteAIRecognitionTemplate(DeleteAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAIRecognitionTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAIRecognitionTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAIRecognitionTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -238,6 +328,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *删除用户自定义视频内容审核模板。
+     * @param req DeleteContentReviewTemplateRequest
+     * @return DeleteContentReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(DeleteContentReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteContentReviewTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteContentReviewTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteContentReviewTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 删除媒体及其对应的视频处理文件（如转码视频、雪碧图、截图、微信发布视频等）；
 * 可单独删除指定 ID 的视频文件下的转码，或者微信发布文件；
      * @param req DeleteMediaRequest
@@ -250,6 +358,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteMediaResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于根据人物 ID，删除人物样本。
+     * @param req DeletePersonSampleRequest
+     * @return DeletePersonSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePersonSampleResponse DeletePersonSample(DeletePersonSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePersonSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePersonSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePersonSample"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -311,6 +437,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于批量删除关键词样本。
+     * @param req DeleteWordSamplesRequest
+     * @return DeleteWordSamplesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWordSamplesResponse DeleteWordSamples(DeleteWordSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteWordSamplesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteWordSamplesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteWordSamples"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据视频内容分析模板唯一标识，获取视频内容分析模板详情列表。返回结果包含符合条件的所有用户自定义视频内容分析模板及[系统预置视频内容分析模板]
      * @param req DescribeAIAnalysisTemplatesRequest
      * @return DescribeAIAnalysisTemplatesResponse
@@ -329,6 +473,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *根据视频内容识别模板唯一标识，获取视频内容识别模板详情列表。返回结果包含符合条件的所有用户自定义视频内容识别模板及[系统预置视频内容识别模板]
+     * @param req DescribeAIRecognitionTemplatesRequest
+     * @return DescribeAIRecognitionTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIRecognitionTemplatesResponse DescribeAIRecognitionTemplates(DescribeAIRecognitionTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAIRecognitionTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAIRecognitionTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAIRecognitionTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 获得用户的所有分类信息。
      * @param req DescribeAllClassRequest
      * @return DescribeAllClassResponse
@@ -340,6 +502,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAllClassResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeAllClass"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据视频内容审核模板唯一标识，获取视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板]。
+     * @param req DescribeContentReviewTemplatesRequest
+     * @return DescribeContentReviewTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(DescribeContentReviewTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeContentReviewTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeContentReviewTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeContentReviewTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -367,6 +547,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaInfosResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaInfos"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于查询人物样本信息，支持根据人物 ID、名称、标签，分页查询。
+     * @param req DescribePersonSamplesRequest
+     * @return DescribePersonSamplesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePersonSamplesResponse DescribePersonSamples(DescribePersonSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePersonSamplesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePersonSamplesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePersonSamples"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -430,7 +628,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     *根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      * @param req DescribeTranscodeTemplatesRequest
      * @return DescribeTranscodeTemplatesResponse
      * @throws TencentCloudSDKException
@@ -466,6 +664,52 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于根据应用场景、关键词、标签，分页查询关键词样本信息。
+     * @param req DescribeWordSamplesRequest
+     * @return DescribeWordSamplesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWordSamplesResponse DescribeWordSamples(DescribeWordSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWordSamplesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWordSamplesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWordSamples"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对视频进行编辑（剪辑、拼接等），生成一个新的点播视频。编辑的功能包括：
+
+1. 对点播中的一个文件进行剪辑，生成一个新的视频；
+2. 对点播中的多个文件进行拼接，生成一个新的视频；
+3. 对点播中的多个文件进行剪辑，然后再拼接，生成一个新的视频；
+4. 对点播中的一个流，直接生成一个新的视频；
+5. 对点播中的一个流进行剪辑，生成一个新的视频；
+6. 对点播中的多个流进行拼接，生成一个新的视频；
+7. 对点播中的多个流进行剪辑，然后拼接，生成一个新的视频。
+
+对于生成的新视频，还可以指定生成后的视频是否要执行任务流。
+     * @param req EditMediaRequest
+     * @return EditMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public EditMediaResponse EditMedia(EditMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EditMediaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EditMediaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EditMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
 
 腾讯云点播支持两种即时剪辑模式：
@@ -473,7 +717,7 @@ public class VodClient extends AbstractClient{
 - 剪辑不固化：剪辑得到的视频附属于直播录制文件，没有独立 FileId；适用于将精彩片段**临时分享**的场景。
 
 注意：
-- 使用直播即时剪辑功能的前提是：目标直播流开启了[时移回看](https://cloud.tencent.com/document/product/267/32742#.E5.BC.80.E9.80.9A.E6.AD.A5.E9.AA.A4)功能。
+- 使用直播即时剪辑功能的前提是：目标直播流开启了[时移回看](https://cloud.tencent.com/document/product/267/32742)功能。
 - 直播即时剪辑是基于直播录制生成的 m3u8 文件进行的，故而其最小剪辑精度为一个 ts 切片，无法实现秒级或者更为精确的剪辑精度。
 
 
@@ -527,6 +771,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *修改用户自定义视频内容识别模板。
+     * @param req ModifyAIRecognitionTemplateRequest
+     * @return ModifyAIRecognitionTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(ModifyAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAIRecognitionTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAIRecognitionTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改媒体分类属性。
      * @param req ModifyClassRequest
      * @return ModifyClassResponse
@@ -545,6 +807,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *修改用户自定义视频内容审核模板。
+     * @param req ModifyContentReviewTemplateRequest
+     * @return ModifyContentReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(ModifyContentReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyContentReviewTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyContentReviewTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyContentReviewTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改媒体文件的属性，包括分类、名称、描述、标签、过期时间、打点信息、视频封面等。
      * @param req ModifyMediaInfoRequest
      * @return ModifyMediaInfoResponse
@@ -556,6 +836,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyMediaInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyMediaInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于根据人物 ID，修改人物样本信息，包括名称、描述的修改，以及人脸、标签的添加、删除、重置操作。人脸删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
+     * @param req ModifyPersonSampleRequest
+     * @return ModifyPersonSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPersonSampleResponse ModifyPersonSample(ModifyPersonSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPersonSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPersonSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPersonSample"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -599,6 +897,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于修改关键词的应用场景、标签，关键词本身不可修改，如需修改，可删除重建。
+     * @param req ModifyWordSampleRequest
+     * @return ModifyWordSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWordSampleResponse ModifyWordSample(ModifyWordSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyWordSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyWordSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyWordSample"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对点播中的音视频媒体发起处理任务，功能包括：
 1. 视频转码（带水印）；
 2. 视频转动图；
@@ -608,7 +924,8 @@ public class VodClient extends AbstractClient{
 6. 对视频截取一张图做封面；
 7. 对视频转自适应码流（并加密）；
 8. 智能内容审核（鉴黄、鉴恐、鉴政）；
-9. 智能内容分析（标签、分类、封面）。
+9. 智能内容分析（标签、分类、封面、按帧标签）；
+10. 智能内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
      * @param req ProcessMediaRequest
      * @return ProcessMediaResponse
      * @throws TencentCloudSDKException
@@ -626,10 +943,32 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *使用任务流模板，对点播中的视频发起处理任务。
+有两种方式创建任务流模板：
+1. 在控制台上创建和修改任务流模板；
+2. 通过任务流模板接口创建任务流模板。
+     * @param req ProcessMediaByProcedureRequest
+     * @return ProcessMediaByProcedureResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessMediaByProcedureResponse ProcessMediaByProcedure(ProcessMediaByProcedureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ProcessMediaByProcedureResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ProcessMediaByProcedureResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ProcessMediaByProcedure"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对来源为 URL 的音视频媒体发起处理任务，功能包括：
 
 1. 智能内容审核（鉴黄、鉴恐、鉴政）；
-2. 智能内容分析（标签、分类、封面）。
+2. 智能内容分析（标签、分类、封面、按帧标签）；
+3. 智能内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
      * @param req ProcessMediaByUrlRequest
      * @return ProcessMediaByUrlResponse
      * @throws TencentCloudSDKException

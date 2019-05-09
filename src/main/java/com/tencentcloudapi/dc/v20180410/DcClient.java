@@ -67,6 +67,27 @@ public class DcClient extends AbstractClient{
     }
 
     /**
+     *申请物理专线接入。
+调用该接口时，请注意：
+账号要进行实名认证，否则不允许申请物理专线；
+若账户下存在欠费状态的物理专线，则不能申请更多的物理专线。
+     * @param req CreateDirectConnectRequest
+     * @return CreateDirectConnectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDirectConnectResponse CreateDirectConnect(CreateDirectConnectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDirectConnectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDirectConnectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDirectConnect"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于创建专用通道的接口
      * @param req CreateDirectConnectTunnelRequest
      * @return CreateDirectConnectTunnelResponse
@@ -78,6 +99,25 @@ public class DcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDirectConnectTunnelResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateDirectConnectTunnel"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除物理专线。
+只能删除处于状态的物理专线。
+     * @param req DeleteDirectConnectRequest
+     * @return DeleteDirectConnectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDirectConnectResponse DeleteDirectConnect(DeleteDirectConnectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDirectConnect"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -103,6 +143,25 @@ public class DcClient extends AbstractClient{
     }
 
     /**
+     *查询物理专线接入点
+
+     * @param req DescribeAccessPointsRequest
+     * @return DescribeAccessPointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessPointsResponse DescribeAccessPoints(DescribeAccessPointsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccessPointsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAccessPoints"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询专用通道列表。
      * @param req DescribeDirectConnectTunnelsRequest
      * @return DescribeDirectConnectTunnelsResponse
@@ -114,6 +173,42 @@ public class DcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectTunnelsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDirectConnectTunnels"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询物理专线列表。
+     * @param req DescribeDirectConnectsRequest
+     * @return DescribeDirectConnectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDirectConnectsResponse DescribeDirectConnects(DescribeDirectConnectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDirectConnectsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDirectConnects"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改物理专线的属性。
+     * @param req ModifyDirectConnectAttributeRequest
+     * @return ModifyDirectConnectAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(ModifyDirectConnectAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDirectConnectAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class SignContractByCoordinateRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名ContractMng
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名SignContractByCoordinate
     */
     @SerializedName("Operation")
     @Expose
@@ -65,7 +65,7 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     private String Position;
 
     /**
-    * 签署坐标，坐标不得超过合同文件边界
+    * 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
     */
     @SerializedName("SignLocations")
     @Expose
@@ -79,32 +79,46 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     private String SealResId;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+    * 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+    */
+    @SerializedName("CertType")
+    @Expose
+    private Integer CertType;
+
+    /**
+    * 签名图片，base64编码
+    */
+    @SerializedName("ImageData")
+    @Expose
+    private String ImageData;
+
+    /**
+     * 获取模块名ContractMng
+     * @return Module 模块名ContractMng
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名ContractMng
+     * @param Module 模块名ContractMng
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名SignContractByCoordinate
+     * @return Operation 操作名SignContractByCoordinate
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名SignContractByCoordinate
+     * @param Operation 操作名SignContractByCoordinate
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -175,16 +189,16 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取签署坐标，坐标不得超过合同文件边界
-     * @return SignLocations 签署坐标，坐标不得超过合同文件边界
+     * 获取签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
+     * @return SignLocations 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
      */
     public SignLocation [] getSignLocations() {
         return this.SignLocations;
     }
 
     /**
-     * 设置签署坐标，坐标不得超过合同文件边界
-     * @param SignLocations 签署坐标，坐标不得超过合同文件边界
+     * 设置签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
+     * @param SignLocations 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
      */
     public void setSignLocations(SignLocation [] SignLocations) {
         this.SignLocations = SignLocations;
@@ -207,6 +221,38 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     }
 
     /**
+     * 获取选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * @return CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     */
+    public Integer getCertType() {
+        return this.CertType;
+    }
+
+    /**
+     * 设置选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * @param CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     */
+    public void setCertType(Integer CertType) {
+        this.CertType = CertType;
+    }
+
+    /**
+     * 获取签名图片，base64编码
+     * @return ImageData 签名图片，base64编码
+     */
+    public String getImageData() {
+        return this.ImageData;
+    }
+
+    /**
+     * 设置签名图片，base64编码
+     * @param ImageData 签名图片，base64编码
+     */
+    public void setImageData(String ImageData) {
+        this.ImageData = ImageData;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +264,8 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Position", this.Position);
         this.setParamArrayObj(map, prefix + "SignLocations.", this.SignLocations);
         this.setParamSimple(map, prefix + "SealResId", this.SealResId);
+        this.setParamSimple(map, prefix + "CertType", this.CertType);
+        this.setParamSimple(map, prefix + "ImageData", this.ImageData);
 
     }
 }

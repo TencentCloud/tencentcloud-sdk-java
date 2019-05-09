@@ -86,6 +86,13 @@ public class CreateDeviceRequest  extends AbstractModel{
     private String Skey;
 
     /**
+    * LoRa设备的AppKey
+    */
+    @SerializedName("LoraAppKey")
+    @Expose
+    private String LoraAppKey;
+
+    /**
      * 获取产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      * @return ProductId 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      */
@@ -230,6 +237,22 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取LoRa设备的AppKey
+     * @return LoraAppKey LoRa设备的AppKey
+     */
+    public String getLoraAppKey() {
+        return this.LoraAppKey;
+    }
+
+    /**
+     * 设置LoRa设备的AppKey
+     * @param LoraAppKey LoRa设备的AppKey
+     */
+    public void setLoraAppKey(String LoraAppKey) {
+        this.LoraAppKey = LoraAppKey;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class CreateDeviceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
         this.setParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
         this.setParamSimple(map, prefix + "Skey", this.Skey);
+        this.setParamSimple(map, prefix + "LoraAppKey", this.LoraAppKey);
 
     }
 }

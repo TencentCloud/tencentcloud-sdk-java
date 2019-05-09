@@ -44,14 +44,14 @@ public class AiRecognitionTaskAsrWordsResult  extends AbstractModel{
     private String Message;
 
     /**
-    * 用户自定义语音识别任务输入信息。
+    * 语音关键词识别任务输入信息。
     */
     @SerializedName("Input")
     @Expose
     private AiRecognitionTaskAsrWordsResultInput Input;
 
     /**
-    * 用户自定义语音识别任务输出信息。
+    * 语音关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -107,25 +107,25 @@ public class AiRecognitionTaskAsrWordsResult  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义语音识别任务输入信息。
-     * @return Input 用户自定义语音识别任务输入信息。
+     * 获取语音关键词识别任务输入信息。
+     * @return Input 语音关键词识别任务输入信息。
      */
     public AiRecognitionTaskAsrWordsResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * 设置用户自定义语音识别任务输入信息。
-     * @param Input 用户自定义语音识别任务输入信息。
+     * 设置语音关键词识别任务输入信息。
+     * @param Input 语音关键词识别任务输入信息。
      */
     public void setInput(AiRecognitionTaskAsrWordsResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * 获取用户自定义语音识别任务输出信息。
+     * 获取语音关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Output 用户自定义语音识别任务输出信息。
+     * @return Output 语音关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskAsrWordsResultOutput getOutput() {
@@ -133,9 +133,9 @@ public class AiRecognitionTaskAsrWordsResult  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义语音识别任务输出信息。
+     * 设置语音关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 用户自定义语音识别任务输出信息。
+     * @param Output 语音关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiRecognitionTaskAsrWordsResultOutput Output) {

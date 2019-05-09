@@ -58,21 +58,21 @@ public class DBBackup  extends AbstractModel{
     private Integer Strategy;
 
     /**
-    * 类型（0-定时；1-临时）
+    * 类型（0-定时）
     */
     @SerializedName("Way")
     @Expose
     private Integer Way;
 
     /**
-    * 备份方式（1-完整；2-日志；3-差异）
+    * 备份方式（1-完整）
     */
     @SerializedName("Type")
     @Expose
     private Integer Type;
 
     /**
-    * 状态（0-创建中；1-成功；2-失败）
+    * 状态（1-创建中；2-成功；3-失败）
     */
     @SerializedName("Status")
     @Expose
@@ -180,48 +180,48 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取类型（0-定时；1-临时）
-     * @return Way 类型（0-定时；1-临时）
+     * 获取类型（0-定时）
+     * @return Way 类型（0-定时）
      */
     public Integer getWay() {
         return this.Way;
     }
 
     /**
-     * 设置类型（0-定时；1-临时）
-     * @param Way 类型（0-定时；1-临时）
+     * 设置类型（0-定时）
+     * @param Way 类型（0-定时）
      */
     public void setWay(Integer Way) {
         this.Way = Way;
     }
 
     /**
-     * 获取备份方式（1-完整；2-日志；3-差异）
-     * @return Type 备份方式（1-完整；2-日志；3-差异）
+     * 获取备份方式（1-完整）
+     * @return Type 备份方式（1-完整）
      */
     public Integer getType() {
         return this.Type;
     }
 
     /**
-     * 设置备份方式（1-完整；2-日志；3-差异）
-     * @param Type 备份方式（1-完整；2-日志；3-差异）
+     * 设置备份方式（1-完整）
+     * @param Type 备份方式（1-完整）
      */
     public void setType(Integer Type) {
         this.Type = Type;
     }
 
     /**
-     * 获取状态（0-创建中；1-成功；2-失败）
-     * @return Status 状态（0-创建中；1-成功；2-失败）
+     * 获取状态（1-创建中；2-成功；3-失败）
+     * @return Status 状态（1-创建中；2-成功；3-失败）
      */
     public Integer getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置状态（0-创建中；1-成功；2-失败）
-     * @param Status 状态（0-创建中；1-成功；2-失败）
+     * 设置状态（1-创建中；2-成功；3-失败）
+     * @param Status 状态（1-创建中；2-成功；3-失败）
      */
     public void setStatus(Integer Status) {
         this.Status = Status;

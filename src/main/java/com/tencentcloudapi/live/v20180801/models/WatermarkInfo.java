@@ -72,6 +72,20 @@ public class WatermarkInfo  extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 水印宽
+    */
+    @SerializedName("Width")
+    @Expose
+    private Integer Width;
+
+    /**
+    * 水印高
+    */
+    @SerializedName("Height")
+    @Expose
+    private Integer Height;
+
+    /**
      * 获取水印ID。
      * @return WatermarkId 水印ID。
      */
@@ -184,6 +198,38 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
+     * 获取水印宽
+     * @return Width 水印宽
+     */
+    public Integer getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * 设置水印宽
+     * @param Width 水印宽
+     */
+    public void setWidth(Integer Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * 获取水印高
+     * @return Height 水印高
+     */
+    public Integer getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * 设置水印高
+     * @param Height 水印高
+     */
+    public void setHeight(Integer Height) {
+        this.Height = Height;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class WatermarkInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "WatermarkName", this.WatermarkName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
 
     }
 }

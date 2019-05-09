@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrWordsResultItem  extends AbstractModel{
 
     /**
-    * 文本识别词。
+    * 文本关键词。
     */
     @SerializedName("Word")
     @Expose
     private String Word;
 
     /**
-    * 文本文字识别结果集。
+    * 文本关键出现的片段列表。
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskOcrWordsSegmentItem [] SegmentSet;
 
     /**
-     * 获取文本识别词。
-     * @return Word 文本识别词。
+     * 获取文本关键词。
+     * @return Word 文本关键词。
      */
     public String getWord() {
         return this.Word;
     }
 
     /**
-     * 设置文本识别词。
-     * @param Word 文本识别词。
+     * 设置文本关键词。
+     * @param Word 文本关键词。
      */
     public void setWord(String Word) {
         this.Word = Word;
     }
 
     /**
-     * 获取文本文字识别结果集。
-     * @return SegmentSet 文本文字识别结果集。
+     * 获取文本关键出现的片段列表。
+     * @return SegmentSet 文本关键出现的片段列表。
      */
     public AiRecognitionTaskOcrWordsSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * 设置文本文字识别结果集。
-     * @param SegmentSet 文本文字识别结果集。
+     * 设置文本关键出现的片段列表。
+     * @param SegmentSet 文本关键出现的片段列表。
      */
     public void setSegmentSet(AiRecognitionTaskOcrWordsSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

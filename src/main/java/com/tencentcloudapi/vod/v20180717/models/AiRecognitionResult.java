@@ -25,10 +25,10 @@ public class AiRecognitionResult  extends AbstractModel{
     /**
     * 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
+<li>AsrWordsRecognition：语音关键词识别，</li>
+<li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
-<li>AsrWordsRecognition：用户自定义语音识别，</li>
-<li>OcrWordsRecognition：用户自定义文本识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
     */
@@ -41,9 +41,18 @@ public class AiRecognitionResult  extends AbstractModel{
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FaceRecognitionTask")
+    @SerializedName("FaceTask")
     @Expose
-    private AiRecognitionTaskFaceResult FaceRecognitionTask;
+    private AiRecognitionTaskFaceResult FaceTask;
+
+    /**
+    * 语音关键词识别结果，当 Type 为
+ AsrWordsRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsrWordsTask")
+    @Expose
+    private AiRecognitionTaskAsrWordsResult AsrWordsTask;
 
     /**
     * 语音全文识别结果，当 Type 为
@@ -55,6 +64,15 @@ public class AiRecognitionResult  extends AbstractModel{
     private AiRecognitionTaskAsrFullTextResult AsrFullTextTask;
 
     /**
+    * 文本关键词识别结果，当 Type 为
+ OcrWordsRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OcrWordsTask")
+    @Expose
+    private AiRecognitionTaskOcrWordsResult OcrWordsTask;
+
+    /**
     * 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,24 +80,6 @@ public class AiRecognitionResult  extends AbstractModel{
     @SerializedName("OcrFullTextTask")
     @Expose
     private AiRecognitionTaskOcrFullTextResult OcrFullTextTask;
-
-    /**
-    * 用户自定义语音识别结果集，当 Type 为
- AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("AsrWordsTask")
-    @Expose
-    private AiRecognitionTaskAsrWordsResult AsrWordsTask;
-
-    /**
-    * 用户自定义文本识别结果集，当 Type 为
- OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("OcrWordsTask")
-    @Expose
-    private AiRecognitionTaskOcrWordsResult OcrWordsTask;
 
     /**
     * 视频片头片尾识别结果，当 Type 为
@@ -102,18 +102,18 @@ public class AiRecognitionResult  extends AbstractModel{
     /**
      * 获取任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
+<li>AsrWordsRecognition：语音关键词识别，</li>
+<li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
-<li>AsrWordsRecognition：用户自定义语音识别，</li>
-<li>OcrWordsRecognition：用户自定义文本识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
      * @return Type 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
+<li>AsrWordsRecognition：语音关键词识别，</li>
+<li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
-<li>AsrWordsRecognition：用户自定义语音识别，</li>
-<li>OcrWordsRecognition：用户自定义文本识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
      */
@@ -124,18 +124,18 @@ public class AiRecognitionResult  extends AbstractModel{
     /**
      * 设置任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
+<li>AsrWordsRecognition：语音关键词识别，</li>
+<li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
-<li>AsrWordsRecognition：用户自定义语音识别，</li>
-<li>OcrWordsRecognition：用户自定义文本识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
      * @param Type 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
+<li>AsrWordsRecognition：语音关键词识别，</li>
+<li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
-<li>AsrWordsRecognition：用户自定义语音识别，</li>
-<li>OcrWordsRecognition：用户自定义文本识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
      */
@@ -147,24 +147,48 @@ public class AiRecognitionResult  extends AbstractModel{
      * 获取人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return FaceRecognitionTask 人脸识别结果，当 Type 为 
+     * @return FaceTask 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AiRecognitionTaskFaceResult getFaceRecognitionTask() {
-        return this.FaceRecognitionTask;
+    public AiRecognitionTaskFaceResult getFaceTask() {
+        return this.FaceTask;
     }
 
     /**
      * 设置人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FaceRecognitionTask 人脸识别结果，当 Type 为 
+     * @param FaceTask 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFaceRecognitionTask(AiRecognitionTaskFaceResult FaceRecognitionTask) {
-        this.FaceRecognitionTask = FaceRecognitionTask;
+    public void setFaceTask(AiRecognitionTaskFaceResult FaceTask) {
+        this.FaceTask = FaceTask;
+    }
+
+    /**
+     * 获取语音关键词识别结果，当 Type 为
+ AsrWordsRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AsrWordsTask 语音关键词识别结果，当 Type 为
+ AsrWordsRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiRecognitionTaskAsrWordsResult getAsrWordsTask() {
+        return this.AsrWordsTask;
+    }
+
+    /**
+     * 设置语音关键词识别结果，当 Type 为
+ AsrWordsRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsrWordsTask 语音关键词识别结果，当 Type 为
+ AsrWordsRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsrWordsTask(AiRecognitionTaskAsrWordsResult AsrWordsTask) {
+        this.AsrWordsTask = AsrWordsTask;
     }
 
     /**
@@ -192,6 +216,30 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
+     * 获取文本关键词识别结果，当 Type 为
+ OcrWordsRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return OcrWordsTask 文本关键词识别结果，当 Type 为
+ OcrWordsRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiRecognitionTaskOcrWordsResult getOcrWordsTask() {
+        return this.OcrWordsTask;
+    }
+
+    /**
+     * 设置文本关键词识别结果，当 Type 为
+ OcrWordsRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OcrWordsTask 文本关键词识别结果，当 Type 为
+ OcrWordsRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOcrWordsTask(AiRecognitionTaskOcrWordsResult OcrWordsTask) {
+        this.OcrWordsTask = OcrWordsTask;
+    }
+
+    /**
      * 获取文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -213,54 +261,6 @@ public class AiRecognitionResult  extends AbstractModel{
      */
     public void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult OcrFullTextTask) {
         this.OcrFullTextTask = OcrFullTextTask;
-    }
-
-    /**
-     * 获取用户自定义语音识别结果集，当 Type 为
- AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return AsrWordsTask 用户自定义语音识别结果集，当 Type 为
- AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public AiRecognitionTaskAsrWordsResult getAsrWordsTask() {
-        return this.AsrWordsTask;
-    }
-
-    /**
-     * 设置用户自定义语音识别结果集，当 Type 为
- AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsrWordsTask 用户自定义语音识别结果集，当 Type 为
- AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setAsrWordsTask(AiRecognitionTaskAsrWordsResult AsrWordsTask) {
-        this.AsrWordsTask = AsrWordsTask;
-    }
-
-    /**
-     * 获取用户自定义文本识别结果集，当 Type 为
- OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return OcrWordsTask 用户自定义文本识别结果集，当 Type 为
- OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public AiRecognitionTaskOcrWordsResult getOcrWordsTask() {
-        return this.OcrWordsTask;
-    }
-
-    /**
-     * 设置用户自定义文本识别结果集，当 Type 为
- OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrWordsTask 用户自定义文本识别结果集，当 Type 为
- OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setOcrWordsTask(AiRecognitionTaskOcrWordsResult OcrWordsTask) {
-        this.OcrWordsTask = OcrWordsTask;
     }
 
     /**
@@ -316,11 +316,11 @@ public class AiRecognitionResult  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamObj(map, prefix + "FaceRecognitionTask.", this.FaceRecognitionTask);
-        this.setParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
-        this.setParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
+        this.setParamObj(map, prefix + "FaceTask.", this.FaceTask);
         this.setParamObj(map, prefix + "AsrWordsTask.", this.AsrWordsTask);
+        this.setParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
         this.setParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
+        this.setParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
         this.setParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
         this.setParamObj(map, prefix + "ObjectTask.", this.ObjectTask);
 

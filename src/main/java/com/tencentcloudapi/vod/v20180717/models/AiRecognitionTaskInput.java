@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskInput  extends AbstractModel{
 
     /**
-    * 视频智能识别模板 ID ，固定为 10，同时进行按帧标签识别、精彩片段识别、视频头尾识别、拆条、人脸识别、文字识别、语音识别、文字全文识别、语音全文识别，后续会推出用户自定义模板，可根据需要选择相应的识别任务。
+    * 视频智能识别模板 ID 。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * 获取视频智能识别模板 ID ，固定为 10，同时进行按帧标签识别、精彩片段识别、视频头尾识别、拆条、人脸识别、文字识别、语音识别、文字全文识别、语音全文识别，后续会推出用户自定义模板，可根据需要选择相应的识别任务。
-     * @return Definition 视频智能识别模板 ID ，固定为 10，同时进行按帧标签识别、精彩片段识别、视频头尾识别、拆条、人脸识别、文字识别、语音识别、文字全文识别、语音全文识别，后续会推出用户自定义模板，可根据需要选择相应的识别任务。
+     * 获取视频智能识别模板 ID 。
+     * @return Definition 视频智能识别模板 ID 。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * 设置视频智能识别模板 ID ，固定为 10，同时进行按帧标签识别、精彩片段识别、视频头尾识别、拆条、人脸识别、文字识别、语音识别、文字全文识别、语音全文识别，后续会推出用户自定义模板，可根据需要选择相应的识别任务。
-     * @param Definition 视频智能识别模板 ID ，固定为 10，同时进行按帧标签识别、精彩片段识别、视频头尾识别、拆条、人脸识别、文字识别、语音识别、文字全文识别、语音全文识别，后续会推出用户自定义模板，可根据需要选择相应的识别任务。
+     * 设置视频智能识别模板 ID 。
+     * @param Definition 视频智能识别模板 ID 。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

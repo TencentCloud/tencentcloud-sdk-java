@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrWordsResultInput  extends AbstractModel{
 
     /**
-    * 用户自定义文本识别模板 ID。
+    * 文本关键词识别模板 ID。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * 获取用户自定义文本识别模板 ID。
-     * @return Definition 用户自定义文本识别模板 ID。
+     * 获取文本关键词识别模板 ID。
+     * @return Definition 文本关键词识别模板 ID。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * 设置用户自定义文本识别模板 ID。
-     * @param Definition 用户自定义文本识别模板 ID。
+     * 设置文本关键词识别模板 ID。
+     * @param Definition 文本关键词识别模板 ID。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

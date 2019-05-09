@@ -79,7 +79,7 @@ public class Address  extends AbstractModel{
     private String PrivateAddressIp;
 
     /**
-    * 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+    * 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
     */
     @SerializedName("IsArrears")
     @Expose
@@ -242,16 +242,16 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
-     * @return IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+     * 获取资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+     * @return IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
      */
     public Boolean getIsArrears() {
         return this.IsArrears;
     }
 
     /**
-     * 设置资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
-     * @param IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+     * 设置资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+     * @param IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
      */
     public void setIsArrears(Boolean IsArrears) {
         this.IsArrears = IsArrears;

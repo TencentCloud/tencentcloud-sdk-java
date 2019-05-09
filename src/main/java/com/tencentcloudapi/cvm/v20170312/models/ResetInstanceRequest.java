@@ -31,6 +31,7 @@ public class ResetInstanceRequest  extends AbstractModel{
 
     /**
     * 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/9418) ，取返回信息中的`ImageId`字段。</li>
+<br>默认取值：默认使用当前镜像。
     */
     @SerializedName("ImageId")
     @Expose
@@ -58,6 +59,13 @@ public class ResetInstanceRequest  extends AbstractModel{
     private EnhancedService EnhancedService;
 
     /**
+    * 重装系统时，可以指定修改实例的HostName。
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
      * 获取实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。
      * @return InstanceId 实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。
      */
@@ -75,7 +83,9 @@ public class ResetInstanceRequest  extends AbstractModel{
 
     /**
      * 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/9418) ，取返回信息中的`ImageId`字段。</li>
+<br>默认取值：默认使用当前镜像。
      * @return ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/9418) ，取返回信息中的`ImageId`字段。</li>
+<br>默认取值：默认使用当前镜像。
      */
     public String getImageId() {
         return this.ImageId;
@@ -83,7 +93,9 @@ public class ResetInstanceRequest  extends AbstractModel{
 
     /**
      * 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/9418) ，取返回信息中的`ImageId`字段。</li>
+<br>默认取值：默认使用当前镜像。
      * @param ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/9418) ，取返回信息中的`ImageId`字段。</li>
+<br>默认取值：默认使用当前镜像。
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
@@ -138,6 +150,22 @@ public class ResetInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取重装系统时，可以指定修改实例的HostName。
+     * @return HostName 重装系统时，可以指定修改实例的HostName。
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * 设置重装系统时，可以指定修改实例的HostName。
+     * @param HostName 重装系统时，可以指定修改实例的HostName。
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +174,7 @@ public class ResetInstanceRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
 
     }
 }

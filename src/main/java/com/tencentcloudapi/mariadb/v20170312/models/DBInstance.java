@@ -285,6 +285,13 @@ public class DBInstance  extends AbstractModel{
     private String Machine;
 
     /**
+    * 是否支持数据加密。1-支持；0-不支持
+    */
+    @SerializedName("IsEncryptSupported")
+    @Expose
+    private Integer IsEncryptSupported;
+
+    /**
      * 获取实例 Id，唯一标识一个 TDSQL 实例
      * @return InstanceId 实例 Id，唯一标识一个 TDSQL 实例
      */
@@ -889,6 +896,22 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
+     * 获取是否支持数据加密。1-支持；0-不支持
+     * @return IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
+     */
+    public Integer getIsEncryptSupported() {
+        return this.IsEncryptSupported;
+    }
+
+    /**
+     * 设置是否支持数据加密。1-支持；0-不支持
+     * @param IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
+     */
+    public void setIsEncryptSupported(Integer IsEncryptSupported) {
+        this.IsEncryptSupported = IsEncryptSupported;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -929,6 +952,7 @@ public class DBInstance  extends AbstractModel{
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
         this.setParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
         this.setParamSimple(map, prefix + "Machine", this.Machine);
+        this.setParamSimple(map, prefix + "IsEncryptSupported", this.IsEncryptSupported);
 
     }
 }

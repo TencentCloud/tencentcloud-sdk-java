@@ -44,14 +44,14 @@ public class AiRecognitionTaskOcrWordsResult  extends AbstractModel{
     private String Message;
 
     /**
-    * 用户自定义文本识别任务输入信息。
+    * 文本关键词识别任务输入信息。
     */
     @SerializedName("Input")
     @Expose
     private AiRecognitionTaskOcrWordsResultInput Input;
 
     /**
-    * 用户自定义文本识别任务输出信息。
+    * 文本关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -107,25 +107,25 @@ public class AiRecognitionTaskOcrWordsResult  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义文本识别任务输入信息。
-     * @return Input 用户自定义文本识别任务输入信息。
+     * 获取文本关键词识别任务输入信息。
+     * @return Input 文本关键词识别任务输入信息。
      */
     public AiRecognitionTaskOcrWordsResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * 设置用户自定义文本识别任务输入信息。
-     * @param Input 用户自定义文本识别任务输入信息。
+     * 设置文本关键词识别任务输入信息。
+     * @param Input 文本关键词识别任务输入信息。
      */
     public void setInput(AiRecognitionTaskOcrWordsResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * 获取用户自定义文本识别任务输出信息。
+     * 获取文本关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Output 用户自定义文本识别任务输出信息。
+     * @return Output 文本关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskOcrWordsResultOutput getOutput() {
@@ -133,9 +133,9 @@ public class AiRecognitionTaskOcrWordsResult  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义文本识别任务输出信息。
+     * 设置文本关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 用户自定义文本识别任务输出信息。
+     * @param Output 文本关键词识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiRecognitionTaskOcrWordsResultOutput Output) {

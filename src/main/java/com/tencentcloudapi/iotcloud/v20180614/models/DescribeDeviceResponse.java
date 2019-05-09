@@ -128,6 +128,14 @@ public class DescribeDeviceResponse  extends AbstractModel{
     private Integer LoraMoteType;
 
     /**
+    * 设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogLevel")
+    @Expose
+    private Integer LogLevel;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -375,6 +383,26 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
+     * 获取设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LogLevel 设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getLogLevel() {
+        return this.LogLevel;
+    }
+
+    /**
+     * 设置设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogLevel 设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogLevel(Integer LogLevel) {
+        this.LogLevel = LogLevel;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -409,6 +437,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "NbiotDeviceID", this.NbiotDeviceID);
         this.setParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
         this.setParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
+        this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

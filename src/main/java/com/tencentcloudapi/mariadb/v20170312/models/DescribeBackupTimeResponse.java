@@ -35,7 +35,7 @@ public class DescribeBackupTimeResponse  extends AbstractModel{
     */
     @SerializedName("Items")
     @Expose
-    private DBBackupTimeConfig Items;
+    private DBBackupTimeConfig [] Items;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,7 +66,7 @@ public class DescribeBackupTimeResponse  extends AbstractModel{
      * @return Items 实例备份时间配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DBBackupTimeConfig getItems() {
+    public DBBackupTimeConfig [] getItems() {
         return this.Items;
     }
 
@@ -76,7 +76,7 @@ public class DescribeBackupTimeResponse  extends AbstractModel{
      * @param Items 实例备份时间配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setItems(DBBackupTimeConfig Items) {
+    public void setItems(DBBackupTimeConfig [] Items) {
         this.Items = Items;
     }
 
@@ -101,7 +101,7 @@ public class DescribeBackupTimeResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamObj(map, prefix + "Items.", this.Items);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

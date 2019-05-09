@@ -114,11 +114,18 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Boolean IsFilterExcluster;
 
     /**
-    * 1非独享集群，2独享集群， 0全部
+    * 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
     */
     @SerializedName("ExclusterType")
     @Expose
     private Integer ExclusterType;
+
+    /**
+    * 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+    */
+    @SerializedName("ExclusterIds")
+    @Expose
+    private String [] ExclusterIds;
 
     /**
      * 获取按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
@@ -329,19 +336,35 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取1非独享集群，2独享集群， 0全部
-     * @return ExclusterType 1非独享集群，2独享集群， 0全部
+     * 获取实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
+     * @return ExclusterType 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
      */
     public Integer getExclusterType() {
         return this.ExclusterType;
     }
 
     /**
-     * 设置1非独享集群，2独享集群， 0全部
-     * @param ExclusterType 1非独享集群，2独享集群， 0全部
+     * 设置实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
+     * @param ExclusterType 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
      */
     public void setExclusterType(Integer ExclusterType) {
         this.ExclusterType = ExclusterType;
+    }
+
+    /**
+     * 获取按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+     * @return ExclusterIds 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+     */
+    public String [] getExclusterIds() {
+        return this.ExclusterIds;
+    }
+
+    /**
+     * 设置按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+     * @param ExclusterIds 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+     */
+    public void setExclusterIds(String [] ExclusterIds) {
+        this.ExclusterIds = ExclusterIds;
     }
 
     /**
@@ -362,6 +385,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "OriginSerialIds.", this.OriginSerialIds);
         this.setParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
         this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
+        this.setParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
 
     }
 }

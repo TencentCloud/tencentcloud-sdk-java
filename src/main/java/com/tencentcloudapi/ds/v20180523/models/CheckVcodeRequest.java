@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CheckVcodeRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名VerifyCode
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名CheckVcode
     */
     @SerializedName("Operation")
     @Expose
@@ -58,32 +58,32 @@ public class CheckVcodeRequest  extends AbstractModel{
     private String VerifyCode;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+     * 获取模块名VerifyCode
+     * @return Module 模块名VerifyCode
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名VerifyCode
+     * @param Module 模块名VerifyCode
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名CheckVcode
+     * @return Operation 操作名CheckVcode
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名CheckVcode
+     * @param Operation 操作名CheckVcode
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

@@ -43,7 +43,7 @@ public class ImageWatermarkInput  extends AbstractModel{
     * 水印的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Height 为视频高度的百分比大小，如 10% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
-默认值：0px，表示 Height 按照 Width 对视频宽度的比例缩放。
+默认值：0px，表示 Height 按照原始水印图片的宽高比缩放。
     */
     @SerializedName("Height")
     @Expose
@@ -97,11 +97,11 @@ public class ImageWatermarkInput  extends AbstractModel{
      * 获取水印的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Height 为视频高度的百分比大小，如 10% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
-默认值：0px，表示 Height 按照 Width 对视频宽度的比例缩放。
+默认值：0px，表示 Height 按照原始水印图片的宽高比缩放。
      * @return Height 水印的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Height 为视频高度的百分比大小，如 10% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
-默认值：0px，表示 Height 按照 Width 对视频宽度的比例缩放。
+默认值：0px，表示 Height 按照原始水印图片的宽高比缩放。
      */
     public String getHeight() {
         return this.Height;
@@ -111,11 +111,11 @@ public class ImageWatermarkInput  extends AbstractModel{
      * 设置水印的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Height 为视频高度的百分比大小，如 10% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
-默认值：0px，表示 Height 按照 Width 对视频宽度的比例缩放。
+默认值：0px，表示 Height 按照原始水印图片的宽高比缩放。
      * @param Height 水印的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Height 为视频高度的百分比大小，如 10% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
-默认值：0px，表示 Height 按照 Width 对视频宽度的比例缩放。
+默认值：0px，表示 Height 按照原始水印图片的宽高比缩放。
      */
     public void setHeight(String Height) {
         this.Height = Height;

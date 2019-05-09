@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrWordsResultOutput  extends AbstractModel{
 
     /**
-    * 用户自定义文本识别结果集。
+    * 文本关键词识别结果集。
     */
     @SerializedName("ResultSet")
     @Expose
     private AiRecognitionTaskOcrWordsResultItem [] ResultSet;
 
     /**
-     * 获取用户自定义文本识别结果集。
-     * @return ResultSet 用户自定义文本识别结果集。
+     * 获取文本关键词识别结果集。
+     * @return ResultSet 文本关键词识别结果集。
      */
     public AiRecognitionTaskOcrWordsResultItem [] getResultSet() {
         return this.ResultSet;
     }
 
     /**
-     * 设置用户自定义文本识别结果集。
-     * @param ResultSet 用户自定义文本识别结果集。
+     * 设置文本关键词识别结果集。
+     * @param ResultSet 文本关键词识别结果集。
      */
     public void setResultSet(AiRecognitionTaskOcrWordsResultItem [] ResultSet) {
         this.ResultSet = ResultSet;

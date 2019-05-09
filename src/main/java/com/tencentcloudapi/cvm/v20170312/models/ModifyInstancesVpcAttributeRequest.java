@@ -44,6 +44,13 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     private Boolean ForceStop;
 
     /**
+    * 是否保留主机名。默认为FALSE。
+    */
+    @SerializedName("ReserveHostName")
+    @Expose
+    private Boolean ReserveHostName;
+
+    /**
      * 获取待操作的实例ID数组。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
      * @return InstanceIds 待操作的实例ID数组。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
      */
@@ -92,12 +99,29 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否保留主机名。默认为FALSE。
+     * @return ReserveHostName 是否保留主机名。默认为FALSE。
+     */
+    public Boolean getReserveHostName() {
+        return this.ReserveHostName;
+    }
+
+    /**
+     * 设置是否保留主机名。默认为FALSE。
+     * @param ReserveHostName 是否保留主机名。默认为FALSE。
+     */
+    public void setReserveHostName(Boolean ReserveHostName) {
+        this.ReserveHostName = ReserveHostName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
         this.setParamSimple(map, prefix + "ForceStop", this.ForceStop);
+        this.setParamSimple(map, prefix + "ReserveHostName", this.ReserveHostName);
 
     }
 }

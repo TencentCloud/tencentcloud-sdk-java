@@ -94,6 +94,27 @@ public class ProductProperties  extends AbstractModel{
     private String ProductKey;
 
     /**
+    * 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
+    */
+    @SerializedName("RegisterType")
+    @Expose
+    private Integer RegisterType;
+
+    /**
+    * 动态注册产品秘钥
+    */
+    @SerializedName("ProductSecret")
+    @Expose
+    private String ProductSecret;
+
+    /**
+    * RegisterType为2时，设备动态创建的限制数量
+    */
+    @SerializedName("RegisterLimit")
+    @Expose
+    private Integer RegisterLimit;
+
+    /**
      * 获取产品描述
      * @return ProductDescription 产品描述
      */
@@ -258,6 +279,54 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
+     * 获取动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
+     * @return RegisterType 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
+     */
+    public Integer getRegisterType() {
+        return this.RegisterType;
+    }
+
+    /**
+     * 设置动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
+     * @param RegisterType 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
+     */
+    public void setRegisterType(Integer RegisterType) {
+        this.RegisterType = RegisterType;
+    }
+
+    /**
+     * 获取动态注册产品秘钥
+     * @return ProductSecret 动态注册产品秘钥
+     */
+    public String getProductSecret() {
+        return this.ProductSecret;
+    }
+
+    /**
+     * 设置动态注册产品秘钥
+     * @param ProductSecret 动态注册产品秘钥
+     */
+    public void setProductSecret(String ProductSecret) {
+        this.ProductSecret = ProductSecret;
+    }
+
+    /**
+     * 获取RegisterType为2时，设备动态创建的限制数量
+     * @return RegisterLimit RegisterType为2时，设备动态创建的限制数量
+     */
+    public Integer getRegisterLimit() {
+        return this.RegisterLimit;
+    }
+
+    /**
+     * 设置RegisterType为2时，设备动态创建的限制数量
+     * @param RegisterLimit RegisterType为2时，设备动态创建的限制数量
+     */
+    public void setRegisterLimit(Integer RegisterLimit) {
+        this.RegisterLimit = RegisterLimit;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -271,6 +340,9 @@ public class ProductProperties  extends AbstractModel{
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ProductKey", this.ProductKey);
+        this.setParamSimple(map, prefix + "RegisterType", this.RegisterType);
+        this.setParamSimple(map, prefix + "ProductSecret", this.ProductSecret);
+        this.setParamSimple(map, prefix + "RegisterLimit", this.RegisterLimit);
 
     }
 }

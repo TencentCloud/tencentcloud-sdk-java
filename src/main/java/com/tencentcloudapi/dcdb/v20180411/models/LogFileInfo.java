@@ -44,6 +44,13 @@ public class LogFileInfo  extends AbstractModel{
     private String Uri;
 
     /**
+    * 文件名
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
+
+    /**
      * 获取Log最后修改时间
      * @return Mtime Log最后修改时间
      */
@@ -92,12 +99,29 @@ public class LogFileInfo  extends AbstractModel{
     }
 
     /**
+     * 获取文件名
+     * @return FileName 文件名
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * 设置文件名
+     * @param FileName 文件名
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mtime", this.Mtime);
         this.setParamSimple(map, prefix + "Length", this.Length);
         this.setParamSimple(map, prefix + "Uri", this.Uri);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
 
     }
 }

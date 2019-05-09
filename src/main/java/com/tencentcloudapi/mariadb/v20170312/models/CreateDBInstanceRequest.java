@@ -82,14 +82,14 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-    * 虚拟私有网络 ID，不传或传 0 表示创建为基础网络
+    * 虚拟私有网络 ID，不传表示创建为基础网络
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 虚拟私有网络子网 ID，VpcId 不为0时必填
+    * 虚拟私有网络子网 ID，VpcId 不为空时必填
     */
     @SerializedName("SubnetId")
     @Expose
@@ -103,7 +103,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-    * 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+    * 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
     */
     @SerializedName("DbVersionId")
     @Expose
@@ -250,32 +250,32 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取虚拟私有网络 ID，不传或传 0 表示创建为基础网络
-     * @return VpcId 虚拟私有网络 ID，不传或传 0 表示创建为基础网络
+     * 获取虚拟私有网络 ID，不传表示创建为基础网络
+     * @return VpcId 虚拟私有网络 ID，不传表示创建为基础网络
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置虚拟私有网络 ID，不传或传 0 表示创建为基础网络
-     * @param VpcId 虚拟私有网络 ID，不传或传 0 表示创建为基础网络
+     * 设置虚拟私有网络 ID，不传表示创建为基础网络
+     * @param VpcId 虚拟私有网络 ID，不传表示创建为基础网络
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * 获取虚拟私有网络子网 ID，VpcId 不为0时必填
-     * @return SubnetId 虚拟私有网络子网 ID，VpcId 不为0时必填
+     * 获取虚拟私有网络子网 ID，VpcId 不为空时必填
+     * @return SubnetId 虚拟私有网络子网 ID，VpcId 不为空时必填
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * 设置虚拟私有网络子网 ID，VpcId 不为0时必填
-     * @param SubnetId 虚拟私有网络子网 ID，VpcId 不为0时必填
+     * 设置虚拟私有网络子网 ID，VpcId 不为空时必填
+     * @param SubnetId 虚拟私有网络子网 ID，VpcId 不为空时必填
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -298,16 +298,16 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
-     * @return DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+     * 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+     * @return DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
      */
     public String getDbVersionId() {
         return this.DbVersionId;
     }
 
     /**
-     * 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
-     * @param DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+     * 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+     * @param DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
      */
     public void setDbVersionId(String DbVersionId) {
         this.DbVersionId = DbVersionId;

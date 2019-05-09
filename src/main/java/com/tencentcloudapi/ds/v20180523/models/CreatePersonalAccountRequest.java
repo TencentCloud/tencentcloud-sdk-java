@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreatePersonalAccountRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名AccountMng
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名CreatePersonalAccount
     */
     @SerializedName("Operation")
     @Expose
@@ -65,32 +65,32 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     private String MobilePhone;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+     * 获取模块名AccountMng
+     * @return Module 模块名AccountMng
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名AccountMng
+     * @param Module 模块名AccountMng
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名CreatePersonalAccount
+     * @return Operation 操作名CreatePersonalAccount
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名CreatePersonalAccount
+     * @param Operation 操作名CreatePersonalAccount
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

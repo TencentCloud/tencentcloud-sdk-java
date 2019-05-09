@@ -72,6 +72,13 @@ public class ModifyLiveRecordTemplateRequest  extends AbstractModel{
     private RecordParam AacParam;
 
     /**
+    * HLS录制定制参数
+    */
+    @SerializedName("HlsSpecialParam")
+    @Expose
+    private HlsSpecialParam HlsSpecialParam;
+
+    /**
      * 获取模板Id。
      * @return TemplateId 模板Id。
      */
@@ -184,6 +191,22 @@ public class ModifyLiveRecordTemplateRequest  extends AbstractModel{
     }
 
     /**
+     * 获取HLS录制定制参数
+     * @return HlsSpecialParam HLS录制定制参数
+     */
+    public HlsSpecialParam getHlsSpecialParam() {
+        return this.HlsSpecialParam;
+    }
+
+    /**
+     * 设置HLS录制定制参数
+     * @param HlsSpecialParam HLS录制定制参数
+     */
+    public void setHlsSpecialParam(HlsSpecialParam HlsSpecialParam) {
+        this.HlsSpecialParam = HlsSpecialParam;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ModifyLiveRecordTemplateRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "HlsParam.", this.HlsParam);
         this.setParamObj(map, prefix + "Mp4Param.", this.Mp4Param);
         this.setParamObj(map, prefix + "AacParam.", this.AacParam);
+        this.setParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
 
     }
 }

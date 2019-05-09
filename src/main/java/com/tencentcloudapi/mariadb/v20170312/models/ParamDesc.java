@@ -37,7 +37,7 @@ public class ParamDesc  extends AbstractModel{
     private String Value;
 
     /**
-    * 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+    * 设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetValue")
@@ -57,6 +57,13 @@ public class ParamDesc  extends AbstractModel{
     @SerializedName("Constraint")
     @Expose
     private ParamConstraint Constraint;
+
+    /**
+    * 是否有设置过值，false:没有设置过值，true:有设置过值。
+    */
+    @SerializedName("HaveSetValue")
+    @Expose
+    private Boolean HaveSetValue;
 
     /**
      * 获取参数名字
@@ -91,9 +98,9 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 获取设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+     * 获取设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return SetValue 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+     * @return SetValue 设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSetValue() {
@@ -101,9 +108,9 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 设置设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+     * 设置设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SetValue 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+     * @param SetValue 设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetValue(String SetValue) {
@@ -143,6 +150,22 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
+     * 获取是否有设置过值，false:没有设置过值，true:有设置过值。
+     * @return HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
+     */
+    public Boolean getHaveSetValue() {
+        return this.HaveSetValue;
+    }
+
+    /**
+     * 设置是否有设置过值，false:没有设置过值，true:有设置过值。
+     * @param HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
+     */
+    public void setHaveSetValue(Boolean HaveSetValue) {
+        this.HaveSetValue = HaveSetValue;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +174,7 @@ public class ParamDesc  extends AbstractModel{
         this.setParamSimple(map, prefix + "SetValue", this.SetValue);
         this.setParamSimple(map, prefix + "Default", this.Default);
         this.setParamObj(map, prefix + "Constraint.", this.Constraint);
+        this.setParamSimple(map, prefix + "HaveSetValue", this.HaveSetValue);
 
     }
 }

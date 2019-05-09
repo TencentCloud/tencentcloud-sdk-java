@@ -37,7 +37,7 @@ public class DescribeSqlLogsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 拉取数量（0-1000，为0时拉取总数信息）。
+    * 拉取数量（0-10000，为0时拉取总数信息）。
     */
     @SerializedName("Limit")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeSqlLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取数量（0-1000，为0时拉取总数信息）。
-     * @return Limit 拉取数量（0-1000，为0时拉取总数信息）。
+     * 获取拉取数量（0-10000，为0时拉取总数信息）。
+     * @return Limit 拉取数量（0-10000，为0时拉取总数信息）。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置拉取数量（0-1000，为0时拉取总数信息）。
-     * @param Limit 拉取数量（0-1000，为0时拉取总数信息）。
+     * 设置拉取数量（0-10000，为0时拉取总数信息）。
+     * @param Limit 拉取数量（0-10000，为0时拉取总数信息）。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

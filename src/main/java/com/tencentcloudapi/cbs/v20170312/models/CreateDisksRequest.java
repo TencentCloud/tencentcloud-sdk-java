@@ -30,7 +30,7 @@ public class CreateDisksRequest  extends AbstractModel{
     private String DiskType;
 
     /**
-    * 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+    * 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
     */
     @SerializedName("DiskChargeType")
     @Expose
@@ -100,11 +100,18 @@ public class CreateDisksRequest  extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+    * 可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
     */
     @SerializedName("DeleteWithInstance")
     @Expose
     private Boolean DeleteWithInstance;
+
+    /**
+    * 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+    */
+    @SerializedName("Shareable")
+    @Expose
+    private Boolean Shareable;
 
     /**
      * 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
@@ -123,16 +130,16 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
-     * @return DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+     * 获取云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+     * @return DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
      */
     public String getDiskChargeType() {
         return this.DiskChargeType;
     }
 
     /**
-     * 设置云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
-     * @param DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+     * 设置云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+     * @param DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
      */
     public void setDiskChargeType(String DiskChargeType) {
         this.DiskChargeType = DiskChargeType;
@@ -283,19 +290,35 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
-     * @return DeleteWithInstance 可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+     * 获取可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+     * @return DeleteWithInstance 可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
     }
 
     /**
-     * 设置可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
-     * @param DeleteWithInstance 可选参数，不传该参数则仅执行挂载操作。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+     * 设置可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
+     * @param DeleteWithInstance 可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
+    }
+
+    /**
+     * 获取可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+     * @return Shareable 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+     */
+    public Boolean getShareable() {
+        return this.Shareable;
+    }
+
+    /**
+     * 设置可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+     * @param Shareable 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+     */
+    public void setShareable(Boolean Shareable) {
+        this.Shareable = Shareable;
     }
 
     /**
@@ -314,6 +337,7 @@ public class CreateDisksRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+        this.setParamSimple(map, prefix + "Shareable", this.Shareable);
 
     }
 }
