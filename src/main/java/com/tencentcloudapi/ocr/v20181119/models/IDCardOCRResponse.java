@@ -23,56 +23,56 @@ import java.util.HashMap;
 public class IDCardOCRResponse  extends AbstractModel{
 
     /**
-    * 姓名（正面）
+    * 姓名（人像面）
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 性别（正面）
+    * 性别（人像面）
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * 民族（正面）
+    * 民族（人像面）
     */
     @SerializedName("Nation")
     @Expose
     private String Nation;
 
     /**
-    * 出生日期（正面）
+    * 出生日期（人像面）
     */
     @SerializedName("Birth")
     @Expose
     private String Birth;
 
     /**
-    * 地址（正面）
+    * 地址（人像面）
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * 身份证号（正面）
+    * 身份证号（人像面）
     */
     @SerializedName("IdNum")
     @Expose
     private String IdNum;
 
     /**
-    * 发证机关（反面）
+    * 发证机关（国徽面）
     */
     @SerializedName("Authority")
     @Expose
     private String Authority;
 
     /**
-    * 证件有效期（反面）
+    * 证件有效期（国徽面）
     */
     @SerializedName("ValidDate")
     @Expose
@@ -80,9 +80,13 @@ public class IDCardOCRResponse  extends AbstractModel{
 
     /**
     * 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-IdCard身份证照片，请求CropIdCard时返回；
-Portrait人像照片，请求CropPortrait时返回；
-WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。
+IdCard，身份证照片，请求 CropIdCard 时返回；
+Portrait，人像照片，请求 CropPortrait 时返回；
+WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+
+Code 告警码列表和释义：
+-9103	身份证翻拍告警，
+-9102	身份证复印件告警。
     */
     @SerializedName("AdvancedInfo")
     @Expose
@@ -96,128 +100,128 @@ WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件�
     private String RequestId;
 
     /**
-     * 获取姓名（正面）
-     * @return Name 姓名（正面）
+     * 获取姓名（人像面）
+     * @return Name 姓名（人像面）
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * 设置姓名（正面）
-     * @param Name 姓名（正面）
+     * 设置姓名（人像面）
+     * @param Name 姓名（人像面）
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * 获取性别（正面）
-     * @return Sex 性别（正面）
+     * 获取性别（人像面）
+     * @return Sex 性别（人像面）
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * 设置性别（正面）
-     * @param Sex 性别（正面）
+     * 设置性别（人像面）
+     * @param Sex 性别（人像面）
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * 获取民族（正面）
-     * @return Nation 民族（正面）
+     * 获取民族（人像面）
+     * @return Nation 民族（人像面）
      */
     public String getNation() {
         return this.Nation;
     }
 
     /**
-     * 设置民族（正面）
-     * @param Nation 民族（正面）
+     * 设置民族（人像面）
+     * @param Nation 民族（人像面）
      */
     public void setNation(String Nation) {
         this.Nation = Nation;
     }
 
     /**
-     * 获取出生日期（正面）
-     * @return Birth 出生日期（正面）
+     * 获取出生日期（人像面）
+     * @return Birth 出生日期（人像面）
      */
     public String getBirth() {
         return this.Birth;
     }
 
     /**
-     * 设置出生日期（正面）
-     * @param Birth 出生日期（正面）
+     * 设置出生日期（人像面）
+     * @param Birth 出生日期（人像面）
      */
     public void setBirth(String Birth) {
         this.Birth = Birth;
     }
 
     /**
-     * 获取地址（正面）
-     * @return Address 地址（正面）
+     * 获取地址（人像面）
+     * @return Address 地址（人像面）
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * 设置地址（正面）
-     * @param Address 地址（正面）
+     * 设置地址（人像面）
+     * @param Address 地址（人像面）
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * 获取身份证号（正面）
-     * @return IdNum 身份证号（正面）
+     * 获取身份证号（人像面）
+     * @return IdNum 身份证号（人像面）
      */
     public String getIdNum() {
         return this.IdNum;
     }
 
     /**
-     * 设置身份证号（正面）
-     * @param IdNum 身份证号（正面）
+     * 设置身份证号（人像面）
+     * @param IdNum 身份证号（人像面）
      */
     public void setIdNum(String IdNum) {
         this.IdNum = IdNum;
     }
 
     /**
-     * 获取发证机关（反面）
-     * @return Authority 发证机关（反面）
+     * 获取发证机关（国徽面）
+     * @return Authority 发证机关（国徽面）
      */
     public String getAuthority() {
         return this.Authority;
     }
 
     /**
-     * 设置发证机关（反面）
-     * @param Authority 发证机关（反面）
+     * 设置发证机关（国徽面）
+     * @param Authority 发证机关（国徽面）
      */
     public void setAuthority(String Authority) {
         this.Authority = Authority;
     }
 
     /**
-     * 获取证件有效期（反面）
-     * @return ValidDate 证件有效期（反面）
+     * 获取证件有效期（国徽面）
+     * @return ValidDate 证件有效期（国徽面）
      */
     public String getValidDate() {
         return this.ValidDate;
     }
 
     /**
-     * 设置证件有效期（反面）
-     * @param ValidDate 证件有效期（反面）
+     * 设置证件有效期（国徽面）
+     * @param ValidDate 证件有效期（国徽面）
      */
     public void setValidDate(String ValidDate) {
         this.ValidDate = ValidDate;
@@ -225,13 +229,21 @@ WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件�
 
     /**
      * 获取扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-IdCard身份证照片，请求CropIdCard时返回；
-Portrait人像照片，请求CropPortrait时返回；
-WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。
+IdCard，身份证照片，请求 CropIdCard 时返回；
+Portrait，人像照片，请求 CropPortrait 时返回；
+WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+
+Code 告警码列表和释义：
+-9103	身份证翻拍告警，
+-9102	身份证复印件告警。
      * @return AdvancedInfo 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-IdCard身份证照片，请求CropIdCard时返回；
-Portrait人像照片，请求CropPortrait时返回；
-WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。
+IdCard，身份证照片，请求 CropIdCard 时返回；
+Portrait，人像照片，请求 CropPortrait 时返回；
+WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+
+Code 告警码列表和释义：
+-9103	身份证翻拍告警，
+-9102	身份证复印件告警。
      */
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
@@ -239,13 +251,21 @@ WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件�
 
     /**
      * 设置扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-IdCard身份证照片，请求CropIdCard时返回；
-Portrait人像照片，请求CropPortrait时返回；
-WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。
+IdCard，身份证照片，请求 CropIdCard 时返回；
+Portrait，人像照片，请求 CropPortrait 时返回；
+WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+
+Code 告警码列表和释义：
+-9103	身份证翻拍告警，
+-9102	身份证复印件告警。
      * @param AdvancedInfo 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-IdCard身份证照片，请求CropIdCard时返回；
-Portrait人像照片，请求CropPortrait时返回；
-WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。
+IdCard，身份证照片，请求 CropIdCard 时返回；
+Portrait，人像照片，请求 CropPortrait 时返回；
+WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+
+Code 告警码列表和释义：
+-9103	身份证翻拍告警，
+-9102	身份证复印件告警。
      */
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;

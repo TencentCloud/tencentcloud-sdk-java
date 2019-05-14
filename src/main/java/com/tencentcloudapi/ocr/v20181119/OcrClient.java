@@ -85,7 +85,7 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *身份证识别接口支持二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限；具备身份证照片、人像照片的裁剪功能和翻拍件、复印件的识别告警功能。应用场景包括：银行开户、用户注册、人脸核身等各种身份证信息有效性核验场景。
+     *本接口支持二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限；具备身份证照片、人像照片的裁剪功能和翻拍件、复印件的识别告警功能。
      * @param req IDCardOCRRequest
      * @return IDCardOCRResponse
      * @throws TencentCloudSDKException

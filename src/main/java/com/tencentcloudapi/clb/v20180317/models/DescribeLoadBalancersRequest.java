@@ -129,11 +129,19 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Integer WithRs;
 
     /**
-    * 负载均衡实例所属网络，如 vpc-bhqkbhdx
+    * 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
+基础网络不支持通过VpcId查询。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
+
+    /**
+    * 安全组ID，如 sg-m1cc9123
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String SecurityGroup;
 
     /**
      * 获取负载均衡实例 ID。
@@ -380,19 +388,39 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例所属网络，如 vpc-bhqkbhdx
-     * @return VpcId 负载均衡实例所属网络，如 vpc-bhqkbhdx
+     * 获取负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
+基础网络不支持通过VpcId查询。
+     * @return VpcId 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
+基础网络不支持通过VpcId查询。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置负载均衡实例所属网络，如 vpc-bhqkbhdx
-     * @param VpcId 负载均衡实例所属网络，如 vpc-bhqkbhdx
+     * 设置负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
+基础网络不支持通过VpcId查询。
+     * @param VpcId 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
+基础网络不支持通过VpcId查询。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
+    }
+
+    /**
+     * 获取安全组ID，如 sg-m1cc9123
+     * @return SecurityGroup 安全组ID，如 sg-m1cc9123
+     */
+    public String getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * 设置安全组ID，如 sg-m1cc9123
+     * @param SecurityGroup 安全组ID，如 sg-m1cc9123
+     */
+    public void setSecurityGroup(String SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
     }
 
     /**
@@ -415,6 +443,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "WithRs", this.WithRs);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
 
     }
 }

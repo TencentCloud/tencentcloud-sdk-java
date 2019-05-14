@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TargetRegionInfo  extends AbstractModel{
 
     /**
-    * Target所属地域
+    * Target所属地域，如 ap-guangzhou
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Target所属VPC网络
+    * Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-     * 获取Target所属地域
-     * @return Region Target所属地域
+     * 获取Target所属地域，如 ap-guangzhou
+     * @return Region Target所属地域，如 ap-guangzhou
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * 设置Target所属地域
-     * @param Region Target所属地域
+     * 设置Target所属地域，如 ap-guangzhou
+     * @param Region Target所属地域，如 ap-guangzhou
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * 获取Target所属VPC网络
-     * @return VpcId Target所属VPC网络
+     * 获取Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+     * @return VpcId Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置Target所属VPC网络
-     * @param VpcId Target所属VPC网络
+     * 设置Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+     * @param VpcId Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

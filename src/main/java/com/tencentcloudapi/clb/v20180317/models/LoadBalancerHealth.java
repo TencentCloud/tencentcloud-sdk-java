@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
+public class LoadBalancerHealth  extends AbstractModel{
 
     /**
-    * 负载均衡的唯一ID
+    * 负载均衡实例ID
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -31,29 +31,31 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
 
     /**
     * 负载均衡实例名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerName")
     @Expose
     private String LoadBalancerName;
 
     /**
-    * 负载均衡绑定的后端服务的地域信息
+    * 监听器列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TargetRegionInfo")
+    @SerializedName("Listeners")
     @Expose
-    private TargetRegionInfo TargetRegionInfo;
+    private ListenerHealth [] Listeners;
 
     /**
-     * 获取负载均衡的唯一ID
-     * @return LoadBalancerId 负载均衡的唯一ID
+     * 获取负载均衡实例ID
+     * @return LoadBalancerId 负载均衡实例ID
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * 设置负载均衡的唯一ID
-     * @param LoadBalancerId 负载均衡的唯一ID
+     * 设置负载均衡实例ID
+     * @param LoadBalancerId 负载均衡实例ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
@@ -61,7 +63,9 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
 
     /**
      * 获取负载均衡实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @return LoadBalancerName 负载均衡实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
@@ -69,26 +73,32 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
 
     /**
      * 设置负载均衡实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerName 负载均衡实例名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
     }
 
     /**
-     * 获取负载均衡绑定的后端服务的地域信息
-     * @return TargetRegionInfo 负载均衡绑定的后端服务的地域信息
+     * 获取监听器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Listeners 监听器列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TargetRegionInfo getTargetRegionInfo() {
-        return this.TargetRegionInfo;
+    public ListenerHealth [] getListeners() {
+        return this.Listeners;
     }
 
     /**
-     * 设置负载均衡绑定的后端服务的地域信息
-     * @param TargetRegionInfo 负载均衡绑定的后端服务的地域信息
+     * 设置监听器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Listeners 监听器列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTargetRegionInfo(TargetRegionInfo TargetRegionInfo) {
-        this.TargetRegionInfo = TargetRegionInfo;
+    public void setListeners(ListenerHealth [] Listeners) {
+        this.Listeners = Listeners;
     }
 
     /**
@@ -97,7 +107,7 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
-        this.setParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
+        this.setParamArrayObj(map, prefix + "Listeners.", this.Listeners);
 
     }
 }

@@ -49,6 +49,24 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *系统自动为已存在的HTTPS:443监听器创建HTTP监听器进行转发，默认使用80端口。创建成功后可以通过HTTP:80地址自动跳转为HTTPS:443地址进行访问。
+     * @param req AutoRewriteRequest
+     * @return AutoRewriteResponse
+     * @throws TencentCloudSDKException
+     */
+    public AutoRewriteResponse AutoRewrite(AutoRewriteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AutoRewriteResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AutoRewriteResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AutoRewrite"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *BatchModifyTargetWeight接口用于批量修改监听器绑定的后端机器的转发权重，当前接口只支持应用型HTTP/HTTPS监听器。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req BatchModifyTargetWeightRequest
@@ -156,6 +174,24 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoadBalancer"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DeleteRewrite 接口支持删除指定转发规则之间的重定向关系。
+     * @param req DeleteRewriteRequest
+     * @return DeleteRewriteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRewriteResponse DeleteRewrite(DeleteRewriteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRewriteResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRewriteResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteRewrite"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -328,6 +364,42 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *DescribeRewrite 接口可根据负载均衡实例ID，查询一个负载均衡实例下转发规则的重定向关系。如果不指定监听器ID或转发规则ID，则返回该负载均衡实例下的所有重定向关系。
+     * @param req DescribeRewriteRequest
+     * @return DescribeRewriteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRewriteResponse DescribeRewrite(DescribeRewriteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRewriteResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRewriteResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRewrite"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeTargetHealth 接口用来获取应用型负载均衡后端的健康检查结果。
+     * @param req DescribeTargetHealthRequest
+     * @return DescribeTargetHealthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTargetHealthResponse DescribeTargetHealth(DescribeTargetHealthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTargetHealthResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTargetHealthResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTargetHealth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeTargets 接口用来查询应用型负载均衡实例的某些监听器后端绑定的机器列表。
      * @param req DescribeTargetsRequest
      * @return DescribeTargetsResponse
@@ -357,6 +429,24 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户手动配置原访问地址和重定向地址，系统自动将原访问地址的请求重定向至对应路径的目的地址。同一域名下可以配置多条路径作为重定向策略，实现http/https之间请求的自动跳转。
+     * @param req ManualRewriteRequest
+     * @return ManualRewriteResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManualRewriteResponse ManualRewrite(ManualRewriteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManualRewriteResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManualRewriteResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ManualRewrite"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -402,7 +492,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *修改负载均衡实例的属性，目前仅用于修改负载均衡实例的名称。
+     *修改负载均衡实例的属性，支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req ModifyLoadBalancerAttributesRequest
      * @return ModifyLoadBalancerAttributesResponse
@@ -508,6 +598,26 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RegisterTargetsWithClassicalLBResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RegisterTargetsWithClassicalLB"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *SetLoadBalancerSecurityGroups 接口支持对一个负载均衡实例执行设置（绑定、解绑）安全组操作，查询一个负载均衡实例目前已绑定的安全组，可使用 DescribeLoadBalancers 接口。
+绑定操作时，入参需要传入负载均衡实例要绑定的所有安全组（已绑定的+新增绑定的）。
+解绑操作时，入参需要传入负载均衡实例执行解绑后所绑定的所有安全组；如果要解绑所有安全组，可传入空数组。
+     * @param req SetLoadBalancerSecurityGroupsRequest
+     * @return SetLoadBalancerSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetLoadBalancerSecurityGroupsResponse SetLoadBalancerSecurityGroups(SetLoadBalancerSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetLoadBalancerSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetLoadBalancerSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetLoadBalancerSecurityGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
