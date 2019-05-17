@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GroupIdOfUidInfo  extends AbstractModel{
 
     /**
-    * 子用户 ID
+    * 子用户 UID
     */
     @SerializedName("Uid")
     @Expose
@@ -37,16 +37,16 @@ public class GroupIdOfUidInfo  extends AbstractModel{
     private Long GroupId;
 
     /**
-     * 获取子用户 ID
-     * @return Uid 子用户 ID
+     * 获取子用户 UID
+     * @return Uid 子用户 UID
      */
     public Long getUid() {
         return this.Uid;
     }
 
     /**
-     * 设置子用户 ID
-     * @param Uid 子用户 ID
+     * 设置子用户 UID
+     * @param Uid 子用户 UID
      */
     public void setUid(Long Uid) {
         this.Uid = Uid;

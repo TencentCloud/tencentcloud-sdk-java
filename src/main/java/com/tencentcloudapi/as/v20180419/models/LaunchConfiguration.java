@@ -160,6 +160,20 @@ public class LaunchConfiguration  extends AbstractModel{
     private InstanceTag [] InstanceTags;
 
     /**
+    * 版本号。
+    */
+    @SerializedName("VersionNumber")
+    @Expose
+    private Integer VersionNumber;
+
+    /**
+    * 更新时间
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private String UpdatedTime;
+
+    /**
      * 获取实例所属项目ID。
      * @return ProjectId 实例所属项目ID。
      */
@@ -480,6 +494,38 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
+     * 获取版本号。
+     * @return VersionNumber 版本号。
+     */
+    public Integer getVersionNumber() {
+        return this.VersionNumber;
+    }
+
+    /**
+     * 设置版本号。
+     * @param VersionNumber 版本号。
+     */
+    public void setVersionNumber(Integer VersionNumber) {
+        this.VersionNumber = VersionNumber;
+    }
+
+    /**
+     * 获取更新时间
+     * @return UpdatedTime 更新时间
+     */
+    public String getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * 设置更新时间
+     * @param UpdatedTime 更新时间
+     */
+    public void setUpdatedTime(String UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -502,6 +548,8 @@ public class LaunchConfiguration  extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+        this.setParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
 
     }
 }

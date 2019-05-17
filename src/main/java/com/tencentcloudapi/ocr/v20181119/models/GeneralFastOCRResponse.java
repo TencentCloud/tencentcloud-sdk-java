@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GeneralFastOCRResponse  extends AbstractModel{
 
     /**
-    * 检测到的文本信息，具体内容请点击左侧链接
+    * 检测到的文本信息，具体内容请点击左侧链接。
     */
     @SerializedName("TextDetections")
     @Expose
@@ -31,7 +31,7 @@ public class GeneralFastOCRResponse  extends AbstractModel{
 
     /**
     * 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
-返回结果含义为：zh-中英混合，jap-日文，kor-韩文。
+返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。
     */
     @SerializedName("Language")
     @Expose
@@ -45,16 +45,16 @@ public class GeneralFastOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取检测到的文本信息，具体内容请点击左侧链接
-     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接
+     * 获取检测到的文本信息，具体内容请点击左侧链接。
+     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
      */
     public TextDetection [] getTextDetections() {
         return this.TextDetections;
     }
 
     /**
-     * 设置检测到的文本信息，具体内容请点击左侧链接
-     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接
+     * 设置检测到的文本信息，具体内容请点击左侧链接。
+     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
      */
     public void setTextDetections(TextDetection [] TextDetections) {
         this.TextDetections = TextDetections;
@@ -62,9 +62,9 @@ public class GeneralFastOCRResponse  extends AbstractModel{
 
     /**
      * 获取检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
-返回结果含义为：zh-中英混合，jap-日文，kor-韩文。
+返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。
      * @return Language 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
-返回结果含义为：zh-中英混合，jap-日文，kor-韩文。
+返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。
      */
     public String getLanguage() {
         return this.Language;
@@ -72,9 +72,9 @@ public class GeneralFastOCRResponse  extends AbstractModel{
 
     /**
      * 设置检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
-返回结果含义为：zh-中英混合，jap-日文，kor-韩文。
+返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。
      * @param Language 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
-返回结果含义为：zh-中英混合，jap-日文，kor-韩文。
+返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。
      */
     public void setLanguage(String Language) {
         this.Language = Language;

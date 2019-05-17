@@ -75,7 +75,6 @@ public class CreateLiveTranscodeTemplateRequest  extends AbstractModel{
 
     /**
     * 是否保留视频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
     */
     @SerializedName("NeedVideo")
     @Expose
@@ -83,7 +82,6 @@ public class CreateLiveTranscodeTemplateRequest  extends AbstractModel{
 
     /**
     * 是否保留音频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
     */
     @SerializedName("NeedAudio")
     @Expose
@@ -268,9 +266,7 @@ baseline/main/high。默认baseline
 
     /**
      * 获取是否保留视频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      * @return NeedVideo 是否保留视频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      */
     public Integer getNeedVideo() {
         return this.NeedVideo;
@@ -278,9 +274,7 @@ baseline/main/high。默认baseline
 
     /**
      * 设置是否保留视频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      * @param NeedVideo 是否保留视频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      */
     public void setNeedVideo(Integer NeedVideo) {
         this.NeedVideo = NeedVideo;
@@ -288,9 +282,7 @@ baseline/main/high。默认baseline
 
     /**
      * 获取是否保留音频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      * @return NeedAudio 是否保留音频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      */
     public Integer getNeedAudio() {
         return this.NeedAudio;
@@ -298,9 +290,7 @@ baseline/main/high。默认baseline
 
     /**
      * 设置是否保留音频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      * @param NeedAudio 是否保留音频，0：否，1：是。默认1。
-注意：当前该参数未生效，待后续支持！
      */
     public void setNeedAudio(Integer NeedAudio) {
         this.NeedAudio = NeedAudio;

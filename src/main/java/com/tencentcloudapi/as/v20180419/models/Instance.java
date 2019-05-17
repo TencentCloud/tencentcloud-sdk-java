@@ -100,6 +100,13 @@ public class Instance  extends AbstractModel{
     private String InstanceType;
 
     /**
+    * 版本号
+    */
+    @SerializedName("VersionNumber")
+    @Expose
+    private Integer VersionNumber;
+
+    /**
      * 获取实例ID
      * @return InstanceId 实例ID
      */
@@ -276,6 +283,22 @@ public class Instance  extends AbstractModel{
     }
 
     /**
+     * 获取版本号
+     * @return VersionNumber 版本号
+     */
+    public Integer getVersionNumber() {
+        return this.VersionNumber;
+    }
+
+    /**
+     * 设置版本号
+     * @param VersionNumber 版本号
+     */
+    public void setVersionNumber(Integer VersionNumber) {
+        this.VersionNumber = VersionNumber;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class Instance  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreationType", this.CreationType);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
 
     }
 }

@@ -58,7 +58,7 @@ public class WordRsp  extends AbstractModel{
     private String Word;
 
     /**
-    * 当前词与输入语句的匹配情况，0:匹配单词、1：新增单词、2：缺少单词
+    * 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
     */
     @SerializedName("MatchTag")
     @Expose
@@ -152,16 +152,16 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 获取当前词与输入语句的匹配情况，0:匹配单词、1：新增单词、2：缺少单词
-     * @return MatchTag 当前词与输入语句的匹配情况，0:匹配单词、1：新增单词、2：缺少单词
+     * 获取当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     * @return MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
     public Integer getMatchTag() {
         return this.MatchTag;
     }
 
     /**
-     * 设置当前词与输入语句的匹配情况，0:匹配单词、1：新增单词、2：缺少单词
-     * @param MatchTag 当前词与输入语句的匹配情况，0:匹配单词、1：新增单词、2：缺少单词
+     * 设置当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     * @param MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
     public void setMatchTag(Integer MatchTag) {
         this.MatchTag = MatchTag;

@@ -30,28 +30,28 @@ public class FaceShape  extends AbstractModel{
     private Point [] FaceProfile;
 
     /**
-    * 描述左测眼睛轮廓的 8 点。
+    * 描述左侧眼睛轮廓的 8 点。
     */
     @SerializedName("LeftEye")
     @Expose
     private Point [] LeftEye;
 
     /**
-    * 描述右测眼睛轮廓的 8 点。
+    * 描述右侧眼睛轮廓的 8 点。
     */
     @SerializedName("RightEye")
     @Expose
     private Point [] RightEye;
 
     /**
-    * 描述左测眉毛轮廓的 8 点。
+    * 描述左侧眉毛轮廓的 8 点。
     */
     @SerializedName("LeftEyeBrow")
     @Expose
     private Point [] LeftEyeBrow;
 
     /**
-    * 描述右测眉毛轮廓的 8 点。
+    * 描述右侧眉毛轮廓的 8 点。
     */
     @SerializedName("RightEyeBrow")
     @Expose
@@ -102,64 +102,64 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 获取描述左测眼睛轮廓的 8 点。
-     * @return LeftEye 描述左测眼睛轮廓的 8 点。
+     * 获取描述左侧眼睛轮廓的 8 点。
+     * @return LeftEye 描述左侧眼睛轮廓的 8 点。
      */
     public Point [] getLeftEye() {
         return this.LeftEye;
     }
 
     /**
-     * 设置描述左测眼睛轮廓的 8 点。
-     * @param LeftEye 描述左测眼睛轮廓的 8 点。
+     * 设置描述左侧眼睛轮廓的 8 点。
+     * @param LeftEye 描述左侧眼睛轮廓的 8 点。
      */
     public void setLeftEye(Point [] LeftEye) {
         this.LeftEye = LeftEye;
     }
 
     /**
-     * 获取描述右测眼睛轮廓的 8 点。
-     * @return RightEye 描述右测眼睛轮廓的 8 点。
+     * 获取描述右侧眼睛轮廓的 8 点。
+     * @return RightEye 描述右侧眼睛轮廓的 8 点。
      */
     public Point [] getRightEye() {
         return this.RightEye;
     }
 
     /**
-     * 设置描述右测眼睛轮廓的 8 点。
-     * @param RightEye 描述右测眼睛轮廓的 8 点。
+     * 设置描述右侧眼睛轮廓的 8 点。
+     * @param RightEye 描述右侧眼睛轮廓的 8 点。
      */
     public void setRightEye(Point [] RightEye) {
         this.RightEye = RightEye;
     }
 
     /**
-     * 获取描述左测眉毛轮廓的 8 点。
-     * @return LeftEyeBrow 描述左测眉毛轮廓的 8 点。
+     * 获取描述左侧眉毛轮廓的 8 点。
+     * @return LeftEyeBrow 描述左侧眉毛轮廓的 8 点。
      */
     public Point [] getLeftEyeBrow() {
         return this.LeftEyeBrow;
     }
 
     /**
-     * 设置描述左测眉毛轮廓的 8 点。
-     * @param LeftEyeBrow 描述左测眉毛轮廓的 8 点。
+     * 设置描述左侧眉毛轮廓的 8 点。
+     * @param LeftEyeBrow 描述左侧眉毛轮廓的 8 点。
      */
     public void setLeftEyeBrow(Point [] LeftEyeBrow) {
         this.LeftEyeBrow = LeftEyeBrow;
     }
 
     /**
-     * 获取描述右测眉毛轮廓的 8 点。
-     * @return RightEyeBrow 描述右测眉毛轮廓的 8 点。
+     * 获取描述右侧眉毛轮廓的 8 点。
+     * @return RightEyeBrow 描述右侧眉毛轮廓的 8 点。
      */
     public Point [] getRightEyeBrow() {
         return this.RightEyeBrow;
     }
 
     /**
-     * 设置描述右测眉毛轮廓的 8 点。
-     * @param RightEyeBrow 描述右测眉毛轮廓的 8 点。
+     * 设置描述右侧眉毛轮廓的 8 点。
+     * @param RightEyeBrow 描述右侧眉毛轮廓的 8 点。
      */
     public void setRightEyeBrow(Point [] RightEyeBrow) {
         this.RightEyeBrow = RightEyeBrow;

@@ -30,7 +30,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     private String AutoScalingGroupId;
 
     /**
-    * 生命周期挂钩名称
+    * 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超128个字节。
     */
     @SerializedName("LifecycleHookName")
     @Expose
@@ -58,7 +58,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     private Integer HeartbeatTimeout;
 
     /**
-    * 弹性伸缩向通知目标发送的附加信息，默认值为''
+    * 弹性伸缩向通知目标发送的附加信息，默认值为''。最大长度不能超过1024个字节。
     */
     @SerializedName("NotificationMetadata")
     @Expose
@@ -88,16 +88,16 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 获取生命周期挂钩名称
-     * @return LifecycleHookName 生命周期挂钩名称
+     * 获取生命周期挂钩名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超128个字节。
+     * @return LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超128个字节。
      */
     public String getLifecycleHookName() {
         return this.LifecycleHookName;
     }
 
     /**
-     * 设置生命周期挂钩名称
-     * @param LifecycleHookName 生命周期挂钩名称
+     * 设置生命周期挂钩名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超128个字节。
+     * @param LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超128个字节。
      */
     public void setLifecycleHookName(String LifecycleHookName) {
         this.LifecycleHookName = LifecycleHookName;
@@ -152,16 +152,16 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性伸缩向通知目标发送的附加信息，默认值为''
-     * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为''
+     * 获取弹性伸缩向通知目标发送的附加信息，默认值为''。最大长度不能超过1024个字节。
+     * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为''。最大长度不能超过1024个字节。
      */
     public String getNotificationMetadata() {
         return this.NotificationMetadata;
     }
 
     /**
-     * 设置弹性伸缩向通知目标发送的附加信息，默认值为''
-     * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为''
+     * 设置弹性伸缩向通知目标发送的附加信息，默认值为''。最大长度不能超过1024个字节。
+     * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为''。最大长度不能超过1024个字节。
      */
     public void setNotificationMetadata(String NotificationMetadata) {
         this.NotificationMetadata = NotificationMetadata;

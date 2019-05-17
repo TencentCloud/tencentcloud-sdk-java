@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AddUserResponse  extends AbstractModel{
 
     /**
-    * 子用户用户 ID
+    * 子用户 UIN
     */
     @SerializedName("Uin")
     @Expose
@@ -58,6 +58,13 @@ public class AddUserResponse  extends AbstractModel{
     private String SecretKey;
 
     /**
+    * 子用户 UID
+    */
+    @SerializedName("Uid")
+    @Expose
+    private Long Uid;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -65,16 +72,16 @@ public class AddUserResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取子用户用户 ID
-     * @return Uin 子用户用户 ID
+     * 获取子用户 UIN
+     * @return Uin 子用户 UIN
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * 设置子用户用户 ID
-     * @param Uin 子用户用户 ID
+     * 设置子用户 UIN
+     * @param Uin 子用户 UIN
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
@@ -145,6 +152,22 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
+     * 获取子用户 UID
+     * @return Uid 子用户 UID
+     */
+    public Long getUid() {
+        return this.Uid;
+    }
+
+    /**
+     * 设置子用户 UID
+     * @param Uid 子用户 UID
+     */
+    public void setUid(Long Uid) {
+        this.Uid = Uid;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -169,6 +192,7 @@ public class AddUserResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "SecretId", this.SecretId);
         this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
+        this.setParamSimple(map, prefix + "Uid", this.Uid);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

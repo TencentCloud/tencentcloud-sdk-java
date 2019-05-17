@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSdkAppidResponse  extends AbstractModel{
 
     /**
-    * 表示appid对应的SdkAppid的数据
+    * 表示 appid 对应的 SdkAppid 的数据
     */
     @SerializedName("SdkAppids")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeSdkAppidResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取表示appid对应的SdkAppid的数据
-     * @return SdkAppids 表示appid对应的SdkAppid的数据
+     * 获取表示 appid 对应的 SdkAppid 的数据
+     * @return SdkAppids 表示 appid 对应的 SdkAppid 的数据
      */
     public Long [] getSdkAppids() {
         return this.SdkAppids;
     }
 
     /**
-     * 设置表示appid对应的SdkAppid的数据
-     * @param SdkAppids 表示appid对应的SdkAppid的数据
+     * 设置表示 appid 对应的 SdkAppid 的数据
+     * @param SdkAppids 表示 appid 对应的 SdkAppid 的数据
      */
     public void setSdkAppids(Long [] SdkAppids) {
         this.SdkAppids = SdkAppids;

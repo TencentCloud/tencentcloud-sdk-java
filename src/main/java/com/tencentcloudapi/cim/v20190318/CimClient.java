@@ -49,7 +49,7 @@ public class CimClient extends AbstractClient{
     }
 
     /**
-     *获取云通信IM中腾讯云账号对应的sdkappid
+     *获取云通信IM中腾讯云账号对应的SDKAppID
      * @param req DescribeSdkAppidRequest
      * @return DescribeSdkAppidResponse
      * @throws TencentCloudSDKException

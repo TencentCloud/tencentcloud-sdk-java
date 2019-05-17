@@ -87,6 +87,14 @@ public class NodeSpec  extends AbstractModel{
     private String SpecName;
 
     /**
+    * 多云盘参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MultiDisks")
+    @Expose
+    private MultiDisk [] MultiDisks;
+
+    /**
      * 获取内存容量,单位为M
 注意：此字段可能返回 null，表示取不到有效值。
      * @return Memory 内存容量,单位为M
@@ -247,6 +255,26 @@ public class NodeSpec  extends AbstractModel{
     }
 
     /**
+     * 获取多云盘参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return MultiDisks 多云盘参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MultiDisk [] getMultiDisks() {
+        return this.MultiDisks;
+    }
+
+    /**
+     * 设置多云盘参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MultiDisks 多云盘参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMultiDisks(MultiDisk [] MultiDisks) {
+        this.MultiDisks = MultiDisks;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +286,7 @@ public class NodeSpec  extends AbstractModel{
         this.setParamSimple(map, prefix + "RootDiskVolume", this.RootDiskVolume);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
+        this.setParamArrayObj(map, prefix + "MultiDisks.", this.MultiDisks);
 
     }
 }

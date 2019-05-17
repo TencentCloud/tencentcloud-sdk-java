@@ -1,0 +1,200 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.vpc.v20170312.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CreateFlowLogRequest  extends AbstractModel{
+
+    /**
+    * 私用网络ID或者统一ID，建议使用统一ID
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 流日志实例名字
+    */
+    @SerializedName("FlowLogName")
+    @Expose
+    private String FlowLogName;
+
+    /**
+    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * 资源唯一ID
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * 流日志采集类型，ACCEPT|REJECT|ALL
+    */
+    @SerializedName("TrafficType")
+    @Expose
+    private String TrafficType;
+
+    /**
+    * 流日志存储ID
+    */
+    @SerializedName("CloudLogId")
+    @Expose
+    private String CloudLogId;
+
+    /**
+    * 流日志实例描述
+    */
+    @SerializedName("FlowLogDescription")
+    @Expose
+    private String FlowLogDescription;
+
+    /**
+     * 获取私用网络ID或者统一ID，建议使用统一ID
+     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * 设置私用网络ID或者统一ID，建议使用统一ID
+     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * 获取流日志实例名字
+     * @return FlowLogName 流日志实例名字
+     */
+    public String getFlowLogName() {
+        return this.FlowLogName;
+    }
+
+    /**
+     * 设置流日志实例名字
+     * @param FlowLogName 流日志实例名字
+     */
+    public void setFlowLogName(String FlowLogName) {
+        this.FlowLogName = FlowLogName;
+    }
+
+    /**
+     * 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * 获取资源唯一ID
+     * @return ResourceId 资源唯一ID
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * 设置资源唯一ID
+     * @param ResourceId 资源唯一ID
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * 获取流日志采集类型，ACCEPT|REJECT|ALL
+     * @return TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
+     */
+    public String getTrafficType() {
+        return this.TrafficType;
+    }
+
+    /**
+     * 设置流日志采集类型，ACCEPT|REJECT|ALL
+     * @param TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
+     */
+    public void setTrafficType(String TrafficType) {
+        this.TrafficType = TrafficType;
+    }
+
+    /**
+     * 获取流日志存储ID
+     * @return CloudLogId 流日志存储ID
+     */
+    public String getCloudLogId() {
+        return this.CloudLogId;
+    }
+
+    /**
+     * 设置流日志存储ID
+     * @param CloudLogId 流日志存储ID
+     */
+    public void setCloudLogId(String CloudLogId) {
+        this.CloudLogId = CloudLogId;
+    }
+
+    /**
+     * 获取流日志实例描述
+     * @return FlowLogDescription 流日志实例描述
+     */
+    public String getFlowLogDescription() {
+        return this.FlowLogDescription;
+    }
+
+    /**
+     * 设置流日志实例描述
+     * @param FlowLogDescription 流日志实例描述
+     */
+    public void setFlowLogDescription(String FlowLogDescription) {
+        this.FlowLogDescription = FlowLogDescription;
+    }
+
+    /**
+     * 内部实现，用户禁止调用
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "FlowLogName", this.FlowLogName);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "TrafficType", this.TrafficType);
+        this.setParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
+        this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
+
+    }
+}
+

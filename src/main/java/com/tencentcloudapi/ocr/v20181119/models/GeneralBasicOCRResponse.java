@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GeneralBasicOCRResponse  extends AbstractModel{
 
     /**
-    * 检测到的文本信息，具体内容请点击左侧链接
+    * 检测到的文本信息，具体内容请点击左侧链接。
     */
     @SerializedName("TextDetections")
     @Expose
@@ -45,16 +45,16 @@ public class GeneralBasicOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取检测到的文本信息，具体内容请点击左侧链接
-     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接
+     * 获取检测到的文本信息，具体内容请点击左侧链接。
+     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
      */
     public TextDetection [] getTextDetections() {
         return this.TextDetections;
     }
 
     /**
-     * 设置检测到的文本信息，具体内容请点击左侧链接
-     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接
+     * 设置检测到的文本信息，具体内容请点击左侧链接。
+     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
      */
     public void setTextDetections(TextDetection [] TextDetections) {
         this.TextDetections = TextDetections;

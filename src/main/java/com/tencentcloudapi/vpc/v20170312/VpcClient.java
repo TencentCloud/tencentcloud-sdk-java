@@ -448,6 +448,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateFlowLog）用于创建流日志
+     * @param req CreateFlowLogRequest
+     * @return CreateFlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFlowLogResponse CreateFlowLog(CreateFlowLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFlowLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFlowLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateFlowLog"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
      * @param req CreateHaVipRequest
      * @return CreateHaVipResponse
@@ -855,6 +873,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectGatewayCcnRoutesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteDirectConnectGatewayCcnRoutes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteFlowLog）用于删除流日志
+     * @param req DeleteFlowLogRequest
+     * @return DeleteFlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFlowLogResponse DeleteFlowLog(DeleteFlowLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFlowLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFlowLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteFlowLog"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1389,6 +1425,42 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectGatewaysResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDirectConnectGateways"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeFlowLog）用于查询流日志实例信息
+     * @param req DescribeFlowLogRequest
+     * @return DescribeFlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowLogResponse DescribeFlowLog(DescribeFlowLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlowLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlowLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFlowLog"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeFlowLogs）用于查询获取流日志集合
+     * @param req DescribeFlowLogsRequest
+     * @return DescribeFlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowLogsResponse DescribeFlowLogs(DescribeFlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlowLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlowLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFlowLogs"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -2163,6 +2235,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectGatewayAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyDirectConnectGatewayAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyFlowLogAttribute）用于修改流日志属性
+     * @param req ModifyFlowLogAttributeRequest
+     * @return ModifyFlowLogAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFlowLogAttributeResponse ModifyFlowLogAttribute(ModifyFlowLogAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyFlowLogAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyFlowLogAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyFlowLogAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

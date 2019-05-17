@@ -44,7 +44,7 @@ public class ZoneInfo  extends AbstractModel{
     private String ZoneId;
 
     /**
-    * 可用区状态
+    * 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
     */
     @SerializedName("ZoneState")
     @Expose
@@ -99,16 +99,16 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区状态
-     * @return ZoneState 可用区状态
+     * 获取可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
+     * @return ZoneState 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
      */
     public String getZoneState() {
         return this.ZoneState;
     }
 
     /**
-     * 设置可用区状态
-     * @param ZoneState 可用区状态
+     * 设置可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
+     * @param ZoneState 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
      */
     public void setZoneState(String ZoneState) {
         this.ZoneState = ZoneState;

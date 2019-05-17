@@ -65,7 +65,7 @@ public class TransmitOralProcessWithInitRequest  extends AbstractModel{
     private String SessionId;
 
     /**
-    * 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
+    * 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
     */
     @SerializedName("RefText")
     @Expose
@@ -121,7 +121,7 @@ public class TransmitOralProcessWithInitRequest  extends AbstractModel{
     private Integer ServerType;
 
     /**
-    * 异步模式标识，0：同步模式，1：异步模式。
+    * 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
     */
     @SerializedName("IsAsync")
     @Expose
@@ -135,7 +135,7 @@ public class TransmitOralProcessWithInitRequest  extends AbstractModel{
     private Integer IsQuery;
 
     /**
-    * 输入文本模式，0: 普通文本，1: 音素结构文本
+    * 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
     */
     @SerializedName("TextMode")
     @Expose
@@ -238,16 +238,16 @@ public class TransmitOralProcessWithInitRequest  extends AbstractModel{
     }
 
     /**
-     * 获取被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
-     * @return RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
+     * 获取被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+     * @return RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
     public String getRefText() {
         return this.RefText;
     }
 
     /**
-     * 设置被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
-     * @param RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
+     * 设置被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+     * @param RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
     public void setRefText(String RefText) {
         this.RefText = RefText;
@@ -366,16 +366,16 @@ public class TransmitOralProcessWithInitRequest  extends AbstractModel{
     }
 
     /**
-     * 获取异步模式标识，0：同步模式，1：异步模式。
-     * @return IsAsync 异步模式标识，0：同步模式，1：异步模式。
+     * 获取异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+     * @return IsAsync 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      */
     public Integer getIsAsync() {
         return this.IsAsync;
     }
 
     /**
-     * 设置异步模式标识，0：同步模式，1：异步模式。
-     * @param IsAsync 异步模式标识，0：同步模式，1：异步模式。
+     * 设置异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+     * @param IsAsync 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      */
     public void setIsAsync(Integer IsAsync) {
         this.IsAsync = IsAsync;
@@ -398,16 +398,16 @@ public class TransmitOralProcessWithInitRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输入文本模式，0: 普通文本，1: 音素结构文本
-     * @return TextMode 输入文本模式，0: 普通文本，1: 音素结构文本
+     * 获取输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
+     * @return TextMode 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
      */
     public Integer getTextMode() {
         return this.TextMode;
     }
 
     /**
-     * 设置输入文本模式，0: 普通文本，1: 音素结构文本
-     * @param TextMode 输入文本模式，0: 普通文本，1: 音素结构文本
+     * 设置输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
+     * @param TextMode 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
      */
     public void setTextMode(Integer TextMode) {
         this.TextMode = TextMode;

@@ -93,7 +93,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     private String TimeUnit;
 
     /**
-    * 登陆配置
+    * 登录配置
     */
     @SerializedName("LoginSettings")
     @Expose
@@ -133,6 +133,13 @@ public class CreateInstanceRequest  extends AbstractModel{
     @SerializedName("AutoRenew")
     @Expose
     private Integer AutoRenew;
+
+    /**
+    * 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+    */
+    @SerializedName("NeedMasterWan")
+    @Expose
+    private String NeedMasterWan;
 
     /**
      * 获取产品ID
@@ -295,16 +302,16 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取登陆配置
-     * @return LoginSettings 登陆配置
+     * 获取登录配置
+     * @return LoginSettings 登录配置
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * 设置登陆配置
-     * @param LoginSettings 登陆配置
+     * 设置登录配置
+     * @param LoginSettings 登录配置
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
@@ -391,6 +398,22 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     * @return NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     */
+    public String getNeedMasterWan() {
+        return this.NeedMasterWan;
+    }
+
+    /**
+     * 设置是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     * @param NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     */
+    public void setNeedMasterWan(String NeedMasterWan) {
+        this.NeedMasterWan = NeedMasterWan;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class CreateInstanceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "SgId", this.SgId);
         this.setParamObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+        this.setParamSimple(map, prefix + "NeedMasterWan", this.NeedMasterWan);
 
     }
 }
