@@ -61,7 +61,7 @@ public class ClientProfile {
 	 */
     public ClientProfile(String signMethod, HttpProfile httpProfile) {
         if (signMethod == null || signMethod.isEmpty()) {
-            signMethod = SIGN_SHA256;
+            signMethod = SIGN_TC3_256;
         }
         this.signMethod = signMethod;
         this.httpProfile = httpProfile;
@@ -73,7 +73,7 @@ public class ClientProfile {
     }
 	
 	public ClientProfile() {
-		this(ClientProfile.SIGN_SHA256, new HttpProfile());
+		this(ClientProfile.SIGN_TC3_256, new HttpProfile());
 	}
 	
 	/**
