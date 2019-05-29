@@ -22,6 +22,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -90,13 +91,43 @@ abstract public class AbstractModel {
      * @return json格式的string
      */
     public static <O extends AbstractModel> String toJsonString(O obj) {
+        return toJsonObject(obj).toString();
+    }
+
+    /**
+     * Recursively generate obj's JSON object. Even if obj.any() is empty, this
+     * recursive progress cannot be skipped because customized additional parameter
+     * might be hidden in lower data structure.
+     * 
+     * @param obj
+     * @return
+     */
+    private static <O extends AbstractModel> JsonObject toJsonObject(O obj) {
         Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-        JsonObject jopublic = gson.toJsonTree(obj).getAsJsonObject();
+        JsonObject joall = new JsonObject();
         JsonObject joadd = gson.toJsonTree(obj.any()).getAsJsonObject();
         for (Map.Entry<String, JsonElement> entry : joadd.entrySet()) {
-            jopublic.add(entry.getKey(), entry.getValue());
+            joall.add(entry.getKey(), entry.getValue());
         }
-        return jopublic.toString();
+        // jopublic will override joadd if key conflict exists
+        JsonObject jopublic = gson.toJsonTree(obj).getAsJsonObject();
+        for (Map.Entry<String, JsonElement> entry : jopublic.entrySet()) {
+            Object fo = null;
+            try {
+                Field f = obj.getClass().getDeclaredField(entry.getKey());
+                f.setAccessible(true);
+                fo = f.get(obj);
+            } catch (NoSuchFieldException | SecurityException | IllegalAccessException e) {
+                // this should never happen
+                e.printStackTrace();
+            }
+            if (fo instanceof AbstractModel) {
+                joall.add(entry.getKey(), toJsonObject((AbstractModel)fo));
+            } else {
+                joall.add(entry.getKey(), entry.getValue());
+            }
+        }
+        return joall;
     }
     
     /**
