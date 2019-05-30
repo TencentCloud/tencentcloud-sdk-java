@@ -87,7 +87,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     private String TypeName;
 
     /**
-    * 本地磁盘规格列表。
+    * 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
     */
     @SerializedName("LocalDiskTypeList")
     @Expose
@@ -256,16 +256,16 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取本地磁盘规格列表。
-     * @return LocalDiskTypeList 本地磁盘规格列表。
+     * 获取本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
+     * @return LocalDiskTypeList 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
      */
     public LocalDiskType [] getLocalDiskTypeList() {
         return this.LocalDiskTypeList;
     }
 
     /**
-     * 设置本地磁盘规格列表。
-     * @param LocalDiskTypeList 本地磁盘规格列表。
+     * 设置本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
+     * @param LocalDiskTypeList 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
      */
     public void setLocalDiskTypeList(LocalDiskType [] LocalDiskTypeList) {
         this.LocalDiskTypeList = LocalDiskTypeList;

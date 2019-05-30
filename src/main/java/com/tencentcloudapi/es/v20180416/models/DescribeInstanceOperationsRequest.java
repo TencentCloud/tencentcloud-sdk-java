@@ -30,14 +30,14 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 起始时间
+    * 起始时间, e.g. "2019-03-07 16:30:39"
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间, e.g. "2019-03-30 20:18:03"
     */
     @SerializedName("EndTime")
     @Expose
@@ -74,32 +74,32 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始时间
-     * @return StartTime 起始时间
+     * 获取起始时间, e.g. "2019-03-07 16:30:39"
+     * @return StartTime 起始时间, e.g. "2019-03-07 16:30:39"
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * 设置起始时间
-     * @param StartTime 起始时间
+     * 设置起始时间, e.g. "2019-03-07 16:30:39"
+     * @param StartTime 起始时间, e.g. "2019-03-07 16:30:39"
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * 获取结束时间
-     * @return EndTime 结束时间
+     * 获取结束时间, e.g. "2019-03-30 20:18:03"
+     * @return EndTime 结束时间, e.g. "2019-03-30 20:18:03"
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * 设置结束时间
-     * @param EndTime 结束时间
+     * 设置结束时间, e.g. "2019-03-30 20:18:03"
+     * @param EndTime 结束时间, e.g. "2019-03-30 20:18:03"
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

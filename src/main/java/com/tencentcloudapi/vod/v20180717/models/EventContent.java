@@ -36,7 +36,9 @@ public class EventContent  extends AbstractModel{
 <li>FileDeleted：视频删除完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
-<li>WechatPublishComplete：微信发布完成。</li>
+<li>WechatPublishComplete：微信发布完成；</li>
+<li>ComposeMediaComplete：制作媒体文件完成；</li>
+<li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -137,6 +139,22 @@ public class EventContent  extends AbstractModel{
     private SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetCompleteEvent;
 
     /**
+    * 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ComposeMediaCompleteEvent")
+    @Expose
+    private ComposeMediaTask ComposeMediaCompleteEvent;
+
+    /**
+    * 微信小程序视频发布完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WechatMiniProgramPublishEvent")
+    @Expose
+    private WechatMiniProgramPublishTask WechatMiniProgramPublishEvent;
+
+    /**
      * 获取事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      * @return EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      */
@@ -159,7 +177,9 @@ public class EventContent  extends AbstractModel{
 <li>FileDeleted：视频删除完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
-<li>WechatPublishComplete：微信发布完成。</li>
+<li>WechatPublishComplete：微信发布完成；</li>
+<li>ComposeMediaComplete：制作媒体文件完成；</li>
+<li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -172,7 +192,9 @@ public class EventContent  extends AbstractModel{
 <li>FileDeleted：视频删除完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
-<li>WechatPublishComplete：微信发布完成。</li>
+<li>WechatPublishComplete：微信发布完成；</li>
+<li>ComposeMediaComplete：制作媒体文件完成；</li>
+<li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -191,7 +213,9 @@ public class EventContent  extends AbstractModel{
 <li>FileDeleted：视频删除完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
-<li>WechatPublishComplete：微信发布完成。</li>
+<li>WechatPublishComplete：微信发布完成；</li>
+<li>ComposeMediaComplete：制作媒体文件完成；</li>
+<li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -204,7 +228,9 @@ public class EventContent  extends AbstractModel{
 <li>FileDeleted：视频删除完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
-<li>WechatPublishComplete：微信发布完成。</li>
+<li>WechatPublishComplete：微信发布完成；</li>
+<li>ComposeMediaComplete：制作媒体文件完成；</li>
+<li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -437,6 +463,46 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
+     * 获取制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ComposeMediaCompleteEvent 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ComposeMediaTask getComposeMediaCompleteEvent() {
+        return this.ComposeMediaCompleteEvent;
+    }
+
+    /**
+     * 设置制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComposeMediaCompleteEvent 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComposeMediaCompleteEvent(ComposeMediaTask ComposeMediaCompleteEvent) {
+        this.ComposeMediaCompleteEvent = ComposeMediaCompleteEvent;
+    }
+
+    /**
+     * 获取微信小程序视频发布完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return WechatMiniProgramPublishEvent 微信小程序视频发布完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WechatMiniProgramPublishTask getWechatMiniProgramPublishEvent() {
+        return this.WechatMiniProgramPublishEvent;
+    }
+
+    /**
+     * 设置微信小程序视频发布完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatMiniProgramPublishEvent 微信小程序视频发布完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWechatMiniProgramPublishEvent(WechatMiniProgramPublishTask WechatMiniProgramPublishEvent) {
+        this.WechatMiniProgramPublishEvent = WechatMiniProgramPublishEvent;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -453,6 +519,8 @@ public class EventContent  extends AbstractModel{
         this.setParamObj(map, prefix + "ClipCompleteEvent.", this.ClipCompleteEvent);
         this.setParamObj(map, prefix + "CreateImageSpriteCompleteEvent.", this.CreateImageSpriteCompleteEvent);
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
+        this.setParamObj(map, prefix + "ComposeMediaCompleteEvent.", this.ComposeMediaCompleteEvent);
+        this.setParamObj(map, prefix + "WechatMiniProgramPublishEvent.", this.WechatMiniProgramPublishEvent);
 
     }
 }

@@ -65,7 +65,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     private String PeerGroup;
 
     /**
-    * 事务ID
+    * 交易ID
     */
     @SerializedName("TxId")
     @Expose
@@ -175,16 +175,16 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 获取事务ID
-     * @return TxId 事务ID
+     * 获取交易ID
+     * @return TxId 交易ID
      */
     public String getTxId() {
         return this.TxId;
     }
 
     /**
-     * 设置事务ID
-     * @param TxId 事务ID
+     * 设置交易ID
+     * @param TxId 交易ID
      */
     public void setTxId(String TxId) {
         this.TxId = TxId;

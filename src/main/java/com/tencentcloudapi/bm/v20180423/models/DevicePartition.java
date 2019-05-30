@@ -72,6 +72,13 @@ public class DevicePartition  extends AbstractModel{
     private Integer SysDataSpace;
 
     /**
+    * 硬盘大小详情
+    */
+    @SerializedName("DeviceDiskSizeInfoSet")
+    @Expose
+    private DeviceDiskSizeInfo [] DeviceDiskSizeInfoSet;
+
+    /**
      * 获取系统盘大小
      * @return SystemDiskSize 系统盘大小
      */
@@ -184,6 +191,22 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
+     * 获取硬盘大小详情
+     * @return DeviceDiskSizeInfoSet 硬盘大小详情
+     */
+    public DeviceDiskSizeInfo [] getDeviceDiskSizeInfoSet() {
+        return this.DeviceDiskSizeInfoSet;
+    }
+
+    /**
+     * 设置硬盘大小详情
+     * @param DeviceDiskSizeInfoSet 硬盘大小详情
+     */
+    public void setDeviceDiskSizeInfoSet(DeviceDiskSizeInfo [] DeviceDiskSizeInfoSet) {
+        this.DeviceDiskSizeInfoSet = DeviceDiskSizeInfoSet;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class DevicePartition  extends AbstractModel{
         this.setParamSimple(map, prefix + "SysSwaporuefiSpace", this.SysSwaporuefiSpace);
         this.setParamSimple(map, prefix + "SysUsrlocalSpace", this.SysUsrlocalSpace);
         this.setParamSimple(map, prefix + "SysDataSpace", this.SysDataSpace);
+        this.setParamArrayObj(map, prefix + "DeviceDiskSizeInfoSet.", this.DeviceDiskSizeInfoSet);
 
     }
 }

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class RestartInstanceRequest  extends AbstractModel{
 
     /**
-    * 要重启的实例ID
+    * 实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 是否强制重启
+    * 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
     */
     @SerializedName("ForceRestart")
     @Expose
     private Boolean ForceRestart;
 
     /**
-     * 获取要重启的实例ID
-     * @return InstanceId 要重启的实例ID
+     * 获取实例ID
+     * @return InstanceId 实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置要重启的实例ID
-     * @param InstanceId 要重启的实例ID
+     * 设置实例ID
+     * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * 获取是否强制重启
-     * @return ForceRestart 是否强制重启
+     * 获取是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+     * @return ForceRestart 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * 设置是否强制重启
-     * @param ForceRestart 是否强制重启
+     * 设置是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+     * @param ForceRestart 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;

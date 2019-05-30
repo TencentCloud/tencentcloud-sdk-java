@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class AttachInstancesResponse  extends AbstractModel{
 
     /**
+    * 伸缩活动ID
+    */
+    @SerializedName("ActivityId")
+    @Expose
+    private String ActivityId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * 获取伸缩活动ID
+     * @return ActivityId 伸缩活动ID
+     */
+    public String getActivityId() {
+        return this.ActivityId;
+    }
+
+    /**
+     * 设置伸缩活动ID
+     * @param ActivityId 伸缩活动ID
+     */
+    public void setActivityId(String ActivityId) {
+        this.ActivityId = ActivityId;
+    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,6 +72,7 @@ public class AttachInstancesResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

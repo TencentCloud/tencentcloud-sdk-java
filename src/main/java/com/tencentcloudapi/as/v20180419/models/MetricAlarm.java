@@ -44,7 +44,7 @@ public class MetricAlarm  extends AbstractModel{
     private Integer Threshold;
 
     /**
-    * 时间周期。单位：秒
+    * 时间周期，单位：秒，取值枚举值为60、300。
     */
     @SerializedName("Period")
     @Expose
@@ -113,16 +113,16 @@ public class MetricAlarm  extends AbstractModel{
     }
 
     /**
-     * 获取时间周期。单位：秒
-     * @return Period 时间周期。单位：秒
+     * 获取时间周期，单位：秒，取值枚举值为60、300。
+     * @return Period 时间周期，单位：秒，取值枚举值为60、300。
      */
     public Integer getPeriod() {
         return this.Period;
     }
 
     /**
-     * 设置时间周期。单位：秒
-     * @param Period 时间周期。单位：秒
+     * 设置时间周期，单位：秒，取值枚举值为60、300。
+     * @param Period 时间周期，单位：秒，取值枚举值为60、300。
      */
     public void setPeriod(Integer Period) {
         this.Period = Period;

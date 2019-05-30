@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
 
     /**
-    * 推流域名。
+    * 播放域名。
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 推流路径。
+    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
     */
     @SerializedName("AppName")
     @Expose
@@ -51,32 +51,32 @@ public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
     private Integer TemplateId;
 
     /**
-     * 获取推流域名。
-     * @return DomainName 推流域名。
+     * 获取播放域名。
+     * @return DomainName 播放域名。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * 设置推流域名。
-     * @param DomainName 推流域名。
+     * 设置播放域名。
+     * @param DomainName 播放域名。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * 获取推流路径。
-     * @return AppName 推流路径。
+     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * 设置推流路径。
-     * @param AppName 推流路径。
+     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

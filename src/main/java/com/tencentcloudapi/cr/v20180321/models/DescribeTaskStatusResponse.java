@@ -23,18 +23,26 @@ import java.util.HashMap;
 public class DescribeTaskStatusResponse  extends AbstractModel{
 
     /**
-    * 任务结果
+    * 任务结果，例如上传成功时返回“File Uploading Task Success.”
     */
     @SerializedName("TaskResult")
     @Expose
     private String TaskResult;
 
     /**
-    * <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
+    * <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
+
+    /**
+    * 过滤文件下载链接，有过滤数据时才存在。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskFileUrl")
+    @Expose
+    private String TaskFileUrl;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +52,55 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务结果
-     * @return TaskResult 任务结果
+     * 获取任务结果，例如上传成功时返回“File Uploading Task Success.”
+     * @return TaskResult 任务结果，例如上传成功时返回“File Uploading Task Success.”
      */
     public String getTaskResult() {
         return this.TaskResult;
     }
 
     /**
-     * 设置任务结果
-     * @param TaskResult 任务结果
+     * 设置任务结果，例如上传成功时返回“File Uploading Task Success.”
+     * @param TaskResult 任务结果，例如上传成功时返回“File Uploading Task Success.”
      */
     public void setTaskResult(String TaskResult) {
         this.TaskResult = TaskResult;
     }
 
     /**
-     * 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
-     * @return TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
+     * 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * @return TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
-     * @param TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
+     * 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * @param TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
+    }
+
+    /**
+     * 获取过滤文件下载链接，有过滤数据时才存在。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TaskFileUrl 过滤文件下载链接，有过滤数据时才存在。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskFileUrl() {
+        return this.TaskFileUrl;
+    }
+
+    /**
+     * 设置过滤文件下载链接，有过滤数据时才存在。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskFileUrl 过滤文件下载链接，有过滤数据时才存在。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskFileUrl(String TaskFileUrl) {
+        this.TaskFileUrl = TaskFileUrl;
     }
 
     /**
@@ -97,6 +125,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskResult", this.TaskResult);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "TaskFileUrl", this.TaskFileUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

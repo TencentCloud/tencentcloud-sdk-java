@@ -30,7 +30,7 @@ public class CosBackup  extends AbstractModel{
     private Boolean IsAutoBackup;
 
     /**
-    * 自动备份时间
+    * 自动备份执行时间（精确到小时）, e.g. "22:00"
     */
     @SerializedName("BackupTime")
     @Expose
@@ -53,16 +53,16 @@ public class CosBackup  extends AbstractModel{
     }
 
     /**
-     * 获取自动备份时间
-     * @return BackupTime 自动备份时间
+     * 获取自动备份执行时间（精确到小时）, e.g. "22:00"
+     * @return BackupTime 自动备份执行时间（精确到小时）, e.g. "22:00"
      */
     public String getBackupTime() {
         return this.BackupTime;
     }
 
     /**
-     * 设置自动备份时间
-     * @param BackupTime 自动备份时间
+     * 设置自动备份执行时间（精确到小时）, e.g. "22:00"
+     * @param BackupTime 自动备份执行时间（精确到小时）, e.g. "22:00"
      */
     public void setBackupTime(String BackupTime) {
         this.BackupTime = BackupTime;

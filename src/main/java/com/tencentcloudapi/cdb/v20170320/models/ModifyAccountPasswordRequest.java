@@ -30,7 +30,7 @@ public class ModifyAccountPasswordRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 数据库账号的新密码。
+    * 数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
     */
     @SerializedName("NewPassword")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库账号的新密码。
-     * @return NewPassword 数据库账号的新密码。
+     * 获取数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
+     * @return NewPassword 数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
      */
     public String getNewPassword() {
         return this.NewPassword;
     }
 
     /**
-     * 设置数据库账号的新密码。
-     * @param NewPassword 数据库账号的新密码。
+     * 设置数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
+     * @param NewPassword 数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
      */
     public void setNewPassword(String NewPassword) {
         this.NewPassword = NewPassword;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResumeLiveStreamRequest  extends AbstractModel{
 
     /**
-    * 应用名称。
+    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
     */
     @SerializedName("AppName")
     @Expose
@@ -44,16 +44,16 @@ public class ResumeLiveStreamRequest  extends AbstractModel{
     private String StreamName;
 
     /**
-     * 获取应用名称。
-     * @return AppName 应用名称。
+     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * 设置应用名称。
-     * @param AppName 应用名称。
+     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

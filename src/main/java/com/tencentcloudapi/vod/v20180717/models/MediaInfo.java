@@ -87,6 +87,14 @@ public class MediaInfo  extends AbstractModel{
     private MediaKeyFrameDescInfo KeyFrameDescInfo;
 
     /**
+    * 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdaptiveDynamicStreamingInfo")
+    @Expose
+    private MediaAdaptiveDynamicStreamingInfo AdaptiveDynamicStreamingInfo;
+
+    /**
     * 媒体文件唯一标识 ID。
     */
     @SerializedName("FileId")
@@ -254,6 +262,26 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
+     * 获取转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaAdaptiveDynamicStreamingInfo getAdaptiveDynamicStreamingInfo() {
+        return this.AdaptiveDynamicStreamingInfo;
+    }
+
+    /**
+     * 设置转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdaptiveDynamicStreamingInfo(MediaAdaptiveDynamicStreamingInfo AdaptiveDynamicStreamingInfo) {
+        this.AdaptiveDynamicStreamingInfo = AdaptiveDynamicStreamingInfo;
+    }
+
+    /**
      * 获取媒体文件唯一标识 ID。
      * @return FileId 媒体文件唯一标识 ID。
      */
@@ -281,6 +309,7 @@ public class MediaInfo  extends AbstractModel{
         this.setParamObj(map, prefix + "ImageSpriteInfo.", this.ImageSpriteInfo);
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetInfo.", this.SnapshotByTimeOffsetInfo);
         this.setParamObj(map, prefix + "KeyFrameDescInfo.", this.KeyFrameDescInfo);
+        this.setParamObj(map, prefix + "AdaptiveDynamicStreamingInfo.", this.AdaptiveDynamicStreamingInfo);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }

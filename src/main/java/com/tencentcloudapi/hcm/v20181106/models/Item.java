@@ -44,11 +44,19 @@ public class Item  extends AbstractModel{
     private ItemCoord ItemCoord;
 
     /**
-    * 推荐的答案
+    * 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
     */
     @SerializedName("Answer")
     @Expose
     private String Answer;
+
+    /**
+    * 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpressionType")
+    @Expose
+    private String ExpressionType;
 
     /**
      * 获取识别的算式是否正确
@@ -99,19 +107,39 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 获取推荐的答案
-     * @return Answer 推荐的答案
+     * 获取推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+     * @return Answer 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
      */
     public String getAnswer() {
         return this.Answer;
     }
 
     /**
-     * 设置推荐的答案
-     * @param Answer 推荐的答案
+     * 设置推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+     * @param Answer 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
      */
     public void setAnswer(String Answer) {
         this.Answer = Answer;
+    }
+
+    /**
+     * 获取算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ExpressionType 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExpressionType() {
+        return this.ExpressionType;
+    }
+
+    /**
+     * 设置算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpressionType 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpressionType(String ExpressionType) {
+        this.ExpressionType = ExpressionType;
     }
 
     /**
@@ -122,6 +150,7 @@ public class Item  extends AbstractModel{
         this.setParamSimple(map, prefix + "ItemString", this.ItemString);
         this.setParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
         this.setParamSimple(map, prefix + "Answer", this.Answer);
+        this.setParamSimple(map, prefix + "ExpressionType", this.ExpressionType);
 
     }
 }

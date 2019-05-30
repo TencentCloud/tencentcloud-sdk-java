@@ -373,7 +373,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeBackupDatabases)用于查询备份数据库列表。
+     *本接口(DescribeBackupDatabases)用于查询备份数据库列表 (将废弃)。
      * @param req DescribeBackupDatabasesRequest
      * @return DescribeBackupDatabasesResponse
      * @throws TencentCloudSDKException
@@ -391,7 +391,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeBackupTables)用于查询指定的数据库的备份数据表名。
+     *本接口(DescribeBackupTables)用于查询指定的数据库的备份数据表名 (将废弃)。
      * @param req DescribeBackupTablesRequest
      * @return DescribeBackupTablesResponse
      * @throws TencentCloudSDKException

@@ -30,6 +30,14 @@ public class DescribeBillResourceSummaryResponse  extends AbstractModel{
     private BillResourceSummary [] ResourceSummarySet;
 
     /**
+    * 资源汇总列表总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Total")
+    @Expose
+    private Integer Total;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +61,26 @@ public class DescribeBillResourceSummaryResponse  extends AbstractModel{
     }
 
     /**
+     * 获取资源汇总列表总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Total 资源汇总列表总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * 设置资源汇总列表总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 资源汇总列表总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotal(Integer Total) {
+        this.Total = Total;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +101,7 @@ public class DescribeBillResourceSummaryResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ResourceSummarySet.", this.ResourceSummarySet);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

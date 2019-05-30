@@ -48,7 +48,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     private String StartTime;
 
     /**
-    * 直播流所属应用名称。
+    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
     */
     @SerializedName("AppName")
     @Expose
@@ -137,16 +137,16 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 获取直播流所属应用名称。
-     * @return AppName 直播流所属应用名称。
+     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * 设置直播流所属应用名称。
-     * @param AppName 直播流所属应用名称。
+     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

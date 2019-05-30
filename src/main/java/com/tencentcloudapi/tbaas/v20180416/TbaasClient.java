@@ -49,6 +49,42 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
+     *查看当前网络下的所有区块列表，分页展示
+     * @param req GetBlockListRequest
+     * @return GetBlockListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetBlockListResponse GetBlockList(GetBlockListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetBlockListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetBlockListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetBlockList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取区块链网络概要
+     * @param req GetClusterSummaryRequest
+     * @return GetClusterSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetClusterSummaryResponse GetClusterSummary(GetClusterSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetClusterSummaryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetClusterSummaryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetClusterSummary"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *Invoke异步调用结果查询
      * @param req GetInvokeTxRequest
      * @return GetInvokeTxResponse
@@ -60,6 +96,24 @@ public class TbaasClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetInvokeTxResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetInvokeTx"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取最新交易列表
+     * @param req GetLatesdTransactionListRequest
+     * @return GetLatesdTransactionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLatesdTransactionListResponse GetLatesdTransactionList(GetLatesdTransactionListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetLatesdTransactionListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetLatesdTransactionListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetLatesdTransactionList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

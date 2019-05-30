@@ -30,14 +30,14 @@ public class DescribeDosageDetailByDateRequest  extends AbstractModel{
     private String StartDate;
 
     /**
-    * 查询账单结束日期，如 2019-01-01
+    * 查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
 
     /**
-    * 视频业务：
+    * 互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
 
@@ -51,6 +51,12 @@ cdn业务：
 
 100967：弹性公网IP-按流量计费
 101065：公网负载均衡-按流量计费
+
+视频直播
+10226 视频直播流量(国内)
+10227 视频直播带宽(国内)
+100763 视频直播流量(海外)
+100762 视频直播宽带(海外)
     */
     @SerializedName("ProductCode")
     @Expose
@@ -58,7 +64,7 @@ cdn业务：
 
     /**
     * 查询域名 例如 www.qq.com
-非CDN业务查询时可以设置为空
+非CDN业务查询时值为空
     */
     @SerializedName("Domain")
     @Expose
@@ -89,23 +95,23 @@ cdn业务：
     }
 
     /**
-     * 获取查询账单结束日期，如 2019-01-01
-     * @return EndDate 查询账单结束日期，如 2019-01-01
+     * 获取查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
+     * @return EndDate 查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * 设置查询账单结束日期，如 2019-01-01
-     * @param EndDate 查询账单结束日期，如 2019-01-01
+     * 设置查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
+     * @param EndDate 查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
     /**
-     * 获取视频业务：
+     * 获取互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
 
@@ -119,7 +125,13 @@ cdn业务：
 
 100967：弹性公网IP-按流量计费
 101065：公网负载均衡-按流量计费
-     * @return ProductCode 视频业务：
+
+视频直播
+10226 视频直播流量(国内)
+10227 视频直播带宽(国内)
+100763 视频直播流量(海外)
+100762 视频直播宽带(海外)
+     * @return ProductCode 互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
 
@@ -133,13 +145,19 @@ cdn业务：
 
 100967：弹性公网IP-按流量计费
 101065：公网负载均衡-按流量计费
+
+视频直播
+10226 视频直播流量(国内)
+10227 视频直播带宽(国内)
+100763 视频直播流量(海外)
+100762 视频直播宽带(海外)
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * 设置视频业务：
+     * 设置互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
 
@@ -153,7 +171,13 @@ cdn业务：
 
 100967：弹性公网IP-按流量计费
 101065：公网负载均衡-按流量计费
-     * @param ProductCode 视频业务：
+
+视频直播
+10226 视频直播流量(国内)
+10227 视频直播带宽(国内)
+100763 视频直播流量(海外)
+100762 视频直播宽带(海外)
+     * @param ProductCode 互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
 
@@ -167,6 +191,12 @@ cdn业务：
 
 100967：弹性公网IP-按流量计费
 101065：公网负载均衡-按流量计费
+
+视频直播
+10226 视频直播流量(国内)
+10227 视频直播带宽(国内)
+100763 视频直播流量(海外)
+100762 视频直播宽带(海外)
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
@@ -174,9 +204,9 @@ cdn业务：
 
     /**
      * 获取查询域名 例如 www.qq.com
-非CDN业务查询时可以设置为空
+非CDN业务查询时值为空
      * @return Domain 查询域名 例如 www.qq.com
-非CDN业务查询时可以设置为空
+非CDN业务查询时值为空
      */
     public String getDomain() {
         return this.Domain;
@@ -184,9 +214,9 @@ cdn业务：
 
     /**
      * 设置查询域名 例如 www.qq.com
-非CDN业务查询时可以设置为空
+非CDN业务查询时值为空
      * @param Domain 查询域名 例如 www.qq.com
-非CDN业务查询时可以设置为空
+非CDN业务查询时值为空
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

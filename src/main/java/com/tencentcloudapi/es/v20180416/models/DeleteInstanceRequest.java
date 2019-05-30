@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteInstanceRequest  extends AbstractModel{
 
     /**
-    * 要销毁的实例ID
+    * 实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * 获取要销毁的实例ID
-     * @return InstanceId 要销毁的实例ID
+     * 获取实例ID
+     * @return InstanceId 实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置要销毁的实例ID
-     * @param InstanceId 要销毁的实例ID
+     * 设置实例ID
+     * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

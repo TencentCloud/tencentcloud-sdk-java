@@ -30,6 +30,14 @@ public class AdaptiveDynamicStreamingTaskInput  extends AbstractModel{
     private Long Definition;
 
     /**
+    * 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WatermarkSet")
+    @Expose
+    private WatermarkInput [] WatermarkSet;
+
+    /**
      * 获取转自适应码流模板 ID。
      * @return Definition 转自适应码流模板 ID。
      */
@@ -46,10 +54,31 @@ public class AdaptiveDynamicStreamingTaskInput  extends AbstractModel{
     }
 
     /**
+     * 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WatermarkInput [] getWatermarkSet() {
+        return this.WatermarkSet;
+    }
+
+    /**
+     * 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
+        this.WatermarkSet = WatermarkSet;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
 
     }
 }

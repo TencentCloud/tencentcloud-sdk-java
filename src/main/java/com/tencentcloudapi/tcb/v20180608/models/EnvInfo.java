@@ -39,7 +39,7 @@ public class EnvInfo  extends AbstractModel{
     private String Source;
 
     /**
-    * 备注名
+    * 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
     */
     @SerializedName("Alias")
     @Expose
@@ -91,12 +91,7 @@ public class EnvInfo  extends AbstractModel{
     private FunctionInfo [] Functions;
 
     /**
-    * 套餐ID。包含以下取值：
-<li>baisc ：表示基础版</li>
-<li>professional ：表示专业版</li>
-<li>business ： 表示企业版</li>
-<li>flagship：表示旗舰版</li>
-<li>supremacy：表示至尊版</li>
+    * tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageId")
@@ -104,12 +99,7 @@ public class EnvInfo  extends AbstractModel{
     private String PackageId;
 
     /**
-    * 套餐中文名称。包含以下取值：
-<li>基础版</li>
-<li>专业版</li>
-<li>企业版</li>
-<li>旗舰版</li>
-<li>至尊版</li>
+    * 套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageName")
@@ -157,16 +147,16 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备注名
-     * @return Alias 备注名
+     * 获取环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * @return Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * 设置备注名
-     * @param Alias 备注名
+     * 设置环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * @param Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
@@ -281,19 +271,9 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取套餐ID。包含以下取值：
-<li>baisc ：表示基础版</li>
-<li>professional ：表示专业版</li>
-<li>business ： 表示企业版</li>
-<li>flagship：表示旗舰版</li>
-<li>supremacy：表示至尊版</li>
+     * 获取tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return PackageId 套餐ID。包含以下取值：
-<li>baisc ：表示基础版</li>
-<li>professional ：表示专业版</li>
-<li>business ： 表示企业版</li>
-<li>flagship：表示旗舰版</li>
-<li>supremacy：表示至尊版</li>
+     * @return PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageId() {
@@ -301,19 +281,9 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置套餐ID。包含以下取值：
-<li>baisc ：表示基础版</li>
-<li>professional ：表示专业版</li>
-<li>business ： 表示企业版</li>
-<li>flagship：表示旗舰版</li>
-<li>supremacy：表示至尊版</li>
+     * 设置tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageId 套餐ID。包含以下取值：
-<li>baisc ：表示基础版</li>
-<li>professional ：表示专业版</li>
-<li>business ： 表示企业版</li>
-<li>flagship：表示旗舰版</li>
-<li>supremacy：表示至尊版</li>
+     * @param PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageId(String PackageId) {
@@ -321,19 +291,9 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取套餐中文名称。包含以下取值：
-<li>基础版</li>
-<li>专业版</li>
-<li>企业版</li>
-<li>旗舰版</li>
-<li>至尊版</li>
+     * 获取套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return PackageName 套餐中文名称。包含以下取值：
-<li>基础版</li>
-<li>专业版</li>
-<li>企业版</li>
-<li>旗舰版</li>
-<li>至尊版</li>
+     * @return PackageName 套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageName() {
@@ -341,19 +301,9 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置套餐中文名称。包含以下取值：
-<li>基础版</li>
-<li>专业版</li>
-<li>企业版</li>
-<li>旗舰版</li>
-<li>至尊版</li>
+     * 设置套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageName 套餐中文名称。包含以下取值：
-<li>基础版</li>
-<li>专业版</li>
-<li>企业版</li>
-<li>旗舰版</li>
-<li>至尊版</li>
+     * @param PackageName 套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageName(String PackageName) {

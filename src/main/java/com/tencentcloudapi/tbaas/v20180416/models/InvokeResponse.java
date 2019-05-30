@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InvokeResponse  extends AbstractModel{
 
     /**
-    * 交易编号
+    * 交易ID
     */
     @SerializedName("Txid")
     @Expose
@@ -44,16 +44,16 @@ public class InvokeResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取交易编号
-     * @return Txid 交易编号
+     * 获取交易ID
+     * @return Txid 交易ID
      */
     public String getTxid() {
         return this.Txid;
     }
 
     /**
-     * 设置交易编号
-     * @param Txid 交易编号
+     * 设置交易ID
+     * @param Txid 交易ID
      */
     public void setTxid(String Txid) {
         this.Txid = Txid;

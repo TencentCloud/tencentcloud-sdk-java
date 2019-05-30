@@ -30,7 +30,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     private String InquiryType;
 
     /**
-    * 查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
+    * 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
     */
     @SerializedName("Zones")
     @Expose
@@ -95,16 +95,16 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
-     * @return Zones 查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
+     * 获取查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+     * @return Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * 设置查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
-     * @param Zones 查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
+     * 设置查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+     * @param Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;

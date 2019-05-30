@@ -23,18 +23,25 @@ import java.util.HashMap;
 public class GetInvokeTxResponse  extends AbstractModel{
 
     /**
-    * 状态码
+    * 交易执行状态码
     */
     @SerializedName("TxValidationCode")
     @Expose
     private Integer TxValidationCode;
 
     /**
-    * 消息
+    * 交易执行消息
     */
     @SerializedName("TxValidationMsg")
     @Expose
     private String TxValidationMsg;
+
+    /**
+    * 交易所在区块ID
+    */
+    @SerializedName("BlockId")
+    @Expose
+    private Integer BlockId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +51,51 @@ public class GetInvokeTxResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取状态码
-     * @return TxValidationCode 状态码
+     * 获取交易执行状态码
+     * @return TxValidationCode 交易执行状态码
      */
     public Integer getTxValidationCode() {
         return this.TxValidationCode;
     }
 
     /**
-     * 设置状态码
-     * @param TxValidationCode 状态码
+     * 设置交易执行状态码
+     * @param TxValidationCode 交易执行状态码
      */
     public void setTxValidationCode(Integer TxValidationCode) {
         this.TxValidationCode = TxValidationCode;
     }
 
     /**
-     * 获取消息
-     * @return TxValidationMsg 消息
+     * 获取交易执行消息
+     * @return TxValidationMsg 交易执行消息
      */
     public String getTxValidationMsg() {
         return this.TxValidationMsg;
     }
 
     /**
-     * 设置消息
-     * @param TxValidationMsg 消息
+     * 设置交易执行消息
+     * @param TxValidationMsg 交易执行消息
      */
     public void setTxValidationMsg(String TxValidationMsg) {
         this.TxValidationMsg = TxValidationMsg;
+    }
+
+    /**
+     * 获取交易所在区块ID
+     * @return BlockId 交易所在区块ID
+     */
+    public Integer getBlockId() {
+        return this.BlockId;
+    }
+
+    /**
+     * 设置交易所在区块ID
+     * @param BlockId 交易所在区块ID
+     */
+    public void setBlockId(Integer BlockId) {
+        this.BlockId = BlockId;
     }
 
     /**
@@ -97,6 +120,7 @@ public class GetInvokeTxResponse  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TxValidationCode", this.TxValidationCode);
         this.setParamSimple(map, prefix + "TxValidationMsg", this.TxValidationMsg);
+        this.setParamSimple(map, prefix + "BlockId", this.BlockId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

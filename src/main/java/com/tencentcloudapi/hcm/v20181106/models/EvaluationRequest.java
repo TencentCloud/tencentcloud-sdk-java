@@ -37,7 +37,7 @@ public class EvaluationRequest  extends AbstractModel{
     private String Image;
 
     /**
-    * 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+    * 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
     */
     @SerializedName("HcmAppid")
     @Expose
@@ -49,6 +49,20 @@ public class EvaluationRequest  extends AbstractModel{
     @SerializedName("Url")
     @Expose
     private String Url;
+
+    /**
+    * 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+    */
+    @SerializedName("SupportHorizontalImage")
+    @Expose
+    private Boolean SupportHorizontalImage;
+
+    /**
+    * 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+    */
+    @SerializedName("RejectNonArithmeticImage")
+    @Expose
+    private Boolean RejectNonArithmeticImage;
 
     /**
      * 获取图片唯一标识，一张图片一个SessionId；
@@ -83,16 +97,16 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
-     * @return HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * @return HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
      */
     public String getHcmAppid() {
         return this.HcmAppid;
     }
 
     /**
-     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
-     * @param HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * @param HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
      */
     public void setHcmAppid(String HcmAppid) {
         this.HcmAppid = HcmAppid;
@@ -115,6 +129,38 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+     * @return SupportHorizontalImage 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+     */
+    public Boolean getSupportHorizontalImage() {
+        return this.SupportHorizontalImage;
+    }
+
+    /**
+     * 设置横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+     * @param SupportHorizontalImage 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+     */
+    public void setSupportHorizontalImage(Boolean SupportHorizontalImage) {
+        this.SupportHorizontalImage = SupportHorizontalImage;
+    }
+
+    /**
+     * 获取拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+     * @return RejectNonArithmeticImage 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+     */
+    public Boolean getRejectNonArithmeticImage() {
+        return this.RejectNonArithmeticImage;
+    }
+
+    /**
+     * 设置拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+     * @param RejectNonArithmeticImage 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+     */
+    public void setRejectNonArithmeticImage(Boolean RejectNonArithmeticImage) {
+        this.RejectNonArithmeticImage = RejectNonArithmeticImage;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +168,8 @@ public class EvaluationRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "HcmAppid", this.HcmAppid);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "SupportHorizontalImage", this.SupportHorizontalImage);
+        this.setParamSimple(map, prefix + "RejectNonArithmeticImage", this.RejectNonArithmeticImage);
 
     }
 }

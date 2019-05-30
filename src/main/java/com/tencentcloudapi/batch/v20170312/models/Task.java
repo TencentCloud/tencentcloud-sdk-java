@@ -135,6 +135,13 @@ public class Task  extends AbstractModel{
     private Integer MaxConcurrentNum;
 
     /**
+    * 任务完成后，重启计算节点。适用于指定计算环境执行任务。
+    */
+    @SerializedName("RestartComputeNode")
+    @Expose
+    private Boolean RestartComputeNode;
+
+    /**
      * 获取应用程序信息
      * @return Application 应用程序信息
      */
@@ -391,6 +398,22 @@ public class Task  extends AbstractModel{
     }
 
     /**
+     * 获取任务完成后，重启计算节点。适用于指定计算环境执行任务。
+     * @return RestartComputeNode 任务完成后，重启计算节点。适用于指定计算环境执行任务。
+     */
+    public Boolean getRestartComputeNode() {
+        return this.RestartComputeNode;
+    }
+
+    /**
+     * 设置任务完成后，重启计算节点。适用于指定计算环境执行任务。
+     * @param RestartComputeNode 任务完成后，重启计算节点。适用于指定计算环境执行任务。
+     */
+    public void setRestartComputeNode(Boolean RestartComputeNode) {
+        this.RestartComputeNode = RestartComputeNode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class Task  extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "MaxConcurrentNum", this.MaxConcurrentNum);
+        this.setParamSimple(map, prefix + "RestartComputeNode", this.RestartComputeNode);
 
     }
 }

@@ -83,7 +83,7 @@ public class LifecycleHook  extends AbstractModel{
     */
     @SerializedName("NotificationTarget")
     @Expose
-    private String NotificationTarget;
+    private NotificationTarget NotificationTarget;
 
     /**
      * 获取生命周期挂钩ID
@@ -217,7 +217,7 @@ public class LifecycleHook  extends AbstractModel{
      * 获取通知目标
      * @return NotificationTarget 通知目标
      */
-    public String getNotificationTarget() {
+    public NotificationTarget getNotificationTarget() {
         return this.NotificationTarget;
     }
 
@@ -225,7 +225,7 @@ public class LifecycleHook  extends AbstractModel{
      * 设置通知目标
      * @param NotificationTarget 通知目标
      */
-    public void setNotificationTarget(String NotificationTarget) {
+    public void setNotificationTarget(NotificationTarget NotificationTarget) {
         this.NotificationTarget = NotificationTarget;
     }
 
@@ -241,7 +241,7 @@ public class LifecycleHook  extends AbstractModel{
         this.setParamSimple(map, prefix + "LifecycleTransition", this.LifecycleTransition);
         this.setParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
-        this.setParamSimple(map, prefix + "NotificationTarget", this.NotificationTarget);
+        this.setParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
 
     }
 }

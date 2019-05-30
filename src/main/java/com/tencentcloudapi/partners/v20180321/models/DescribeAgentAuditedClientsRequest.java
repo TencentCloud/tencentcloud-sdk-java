@@ -100,6 +100,20 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     private String ProjectType;
 
     /**
+    * 业务员ID
+    */
+    @SerializedName("SalesUin")
+    @Expose
+    private String SalesUin;
+
+    /**
+    * 业务员姓名（模糊查询）
+    */
+    @SerializedName("SalesName")
+    @Expose
+    private String SalesName;
+
+    /**
      * 获取客户账号ID
      * @return ClientUin 客户账号ID
      */
@@ -276,6 +290,38 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取业务员ID
+     * @return SalesUin 业务员ID
+     */
+    public String getSalesUin() {
+        return this.SalesUin;
+    }
+
+    /**
+     * 设置业务员ID
+     * @param SalesUin 业务员ID
+     */
+    public void setSalesUin(String SalesUin) {
+        this.SalesUin = SalesUin;
+    }
+
+    /**
+     * 获取业务员姓名（模糊查询）
+     * @return SalesName 业务员姓名（模糊查询）
+     */
+    public String getSalesName() {
+        return this.SalesName;
+    }
+
+    /**
+     * 设置业务员姓名（模糊查询）
+     * @param SalesName 业务员姓名（模糊查询）
+     */
+    public void setSalesName(String SalesName) {
+        this.SalesName = SalesName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +336,8 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ClientType", this.ClientType);
         this.setParamSimple(map, prefix + "ProjectType", this.ProjectType);
+        this.setParamSimple(map, prefix + "SalesUin", this.SalesUin);
+        this.setParamSimple(map, prefix + "SalesName", this.SalesName);
 
     }
 }

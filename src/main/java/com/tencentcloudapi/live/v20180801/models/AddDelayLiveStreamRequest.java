@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class AddDelayLiveStreamRequest  extends AbstractModel{
 
     /**
-    * 应用名称。
+    * 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 您的加速域名。
+    * 推流域名。
     */
     @SerializedName("DomainName")
     @Expose
@@ -59,32 +59,32 @@ public class AddDelayLiveStreamRequest  extends AbstractModel{
     private String ExpireTime;
 
     /**
-     * 获取应用名称。
-     * @return AppName 应用名称。
+     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * 设置应用名称。
-     * @param AppName 应用名称。
+     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * 获取您的加速域名。
-     * @return DomainName 您的加速域名。
+     * 获取推流域名。
+     * @return DomainName 推流域名。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * 设置您的加速域名。
-     * @param DomainName 您的加速域名。
+     * 设置推流域名。
+     * @param DomainName 推流域名。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;

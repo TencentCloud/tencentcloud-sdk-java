@@ -30,7 +30,14 @@ public class CreateLiveSnapshotRuleRequest  extends AbstractModel{
     private String DomainName;
 
     /**
-    * 推流路径。
+    * 模板Id。
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private Integer TemplateId;
+
+    /**
+    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
     */
     @SerializedName("AppName")
     @Expose
@@ -38,17 +45,11 @@ public class CreateLiveSnapshotRuleRequest  extends AbstractModel{
 
     /**
     * 流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
-
-    /**
-    * 模板Id。
-    */
-    @SerializedName("TemplateId")
-    @Expose
-    private Integer TemplateId;
 
     /**
      * 获取推流域名。
@@ -64,38 +65,6 @@ public class CreateLiveSnapshotRuleRequest  extends AbstractModel{
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
-    }
-
-    /**
-     * 获取推流路径。
-     * @return AppName 推流路径。
-     */
-    public String getAppName() {
-        return this.AppName;
-    }
-
-    /**
-     * 设置推流路径。
-     * @param AppName 推流路径。
-     */
-    public void setAppName(String AppName) {
-        this.AppName = AppName;
-    }
-
-    /**
-     * 获取流名称。
-     * @return StreamName 流名称。
-     */
-    public String getStreamName() {
-        return this.StreamName;
-    }
-
-    /**
-     * 设置流名称。
-     * @param StreamName 流名称。
-     */
-    public void setStreamName(String StreamName) {
-        this.StreamName = StreamName;
     }
 
     /**
@@ -115,13 +84,49 @@ public class CreateLiveSnapshotRuleRequest  extends AbstractModel{
     }
 
     /**
+     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     */
+    public String getAppName() {
+        return this.AppName;
+    }
+
+    /**
+     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     */
+    public void setAppName(String AppName) {
+        this.AppName = AppName;
+    }
+
+    /**
+     * 获取流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+     * @return StreamName 流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+     */
+    public String getStreamName() {
+        return this.StreamName;
+    }
+
+    /**
+     * 设置流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+     * @param StreamName 流名称。
+注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+     */
+    public void setStreamName(String StreamName) {
+        this.StreamName = StreamName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

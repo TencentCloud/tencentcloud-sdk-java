@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FaceAttributesInfo  extends AbstractModel{
 
     /**
-    * 性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+    * 性别 [0(female，女性)~100(male，男性)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
     */
     @SerializedName("Gender")
     @Expose
@@ -37,7 +37,7 @@ public class FaceAttributesInfo  extends AbstractModel{
     private Integer Age;
 
     /**
-    * 微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+    * 微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
     */
     @SerializedName("Expression")
     @Expose
@@ -114,16 +114,16 @@ public class FaceAttributesInfo  extends AbstractModel{
     private Boolean EyeOpen;
 
     /**
-     * 获取性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
-     * @return Gender 性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * 获取性别 [0(female，女性)~100(male，男性)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @return Gender 性别 [0(female，女性)~100(male，男性)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
     public Integer getGender() {
         return this.Gender;
     }
 
     /**
-     * 设置性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
-     * @param Gender 性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * 设置性别 [0(female，女性)~100(male，男性)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @param Gender 性别 [0(female，女性)~100(male，男性)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
     public void setGender(Integer Gender) {
         this.Gender = Gender;
@@ -146,16 +146,16 @@ public class FaceAttributesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
-     * @return Expression 微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * 获取微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @return Expression 微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
     public Integer getExpression() {
         return this.Expression;
     }
 
     /**
-     * 设置微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
-     * @param Expression 微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * 设置微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+     * @param Expression 微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
     public void setExpression(Integer Expression) {
         this.Expression = Expression;

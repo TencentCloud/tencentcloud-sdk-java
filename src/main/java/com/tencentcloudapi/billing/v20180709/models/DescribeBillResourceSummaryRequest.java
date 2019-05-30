@@ -51,6 +51,14 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     private String Month;
 
     /**
+    * 是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要
+    */
+    @SerializedName("NeedRecordNum")
+    @Expose
+    private Integer NeedRecordNum;
+
+    /**
      * 获取偏移量
      * @return Offset 偏移量
      */
@@ -115,6 +123,26 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要
+     * @return NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要
+     */
+    public Integer getNeedRecordNum() {
+        return this.NeedRecordNum;
+    }
+
+    /**
+     * 设置是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要
+     * @param NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要
+     */
+    public void setNeedRecordNum(Integer NeedRecordNum) {
+        this.NeedRecordNum = NeedRecordNum;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +150,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "PeriodType", this.PeriodType);
         this.setParamSimple(map, prefix + "Month", this.Month);
+        this.setParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
 
     }
 }

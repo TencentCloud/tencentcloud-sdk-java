@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ListGroupsRequest  extends AbstractModel{
 
     /**
-    * 页码。
+    * 页码。默认为1。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 每页数量。
+    * 每页数量。默认为20。
     */
     @SerializedName("Rp")
     @Expose
@@ -44,32 +44,32 @@ public class ListGroupsRequest  extends AbstractModel{
     private String Keyword;
 
     /**
-     * 获取页码。
-     * @return Page 页码。
+     * 获取页码。默认为1。
+     * @return Page 页码。默认为1。
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * 设置页码。
-     * @param Page 页码。
+     * 设置页码。默认为1。
+     * @param Page 页码。默认为1。
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * 获取每页数量。
-     * @return Rp 每页数量。
+     * 获取每页数量。默认为20。
+     * @return Rp 每页数量。默认为20。
      */
     public Long getRp() {
         return this.Rp;
     }
 
     /**
-     * 设置每页数量。
-     * @param Rp 每页数量。
+     * 设置每页数量。默认为20。
+     * @param Rp 每页数量。默认为20。
      */
     public void setRp(Long Rp) {
         this.Rp = Rp;

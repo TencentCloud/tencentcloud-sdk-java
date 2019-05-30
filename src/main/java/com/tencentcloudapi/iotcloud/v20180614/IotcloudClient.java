@@ -283,6 +283,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
+     * @param req DescribeDeviceClientKeyRequest
+     * @return DescribeDeviceClientKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceClientKeyResponse DescribeDeviceClientKey(DescribeDeviceClientKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceClientKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceClientKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDeviceClientKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDeviceShadow）用于查询虚拟设备信息。
      * @param req DescribeDeviceShadowRequest
      * @return DescribeDeviceShadowResponse
@@ -528,6 +546,24 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReplaceTopicRuleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ReplaceTopicRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重置设备的连接状态
+     * @param req ResetDeviceStateRequest
+     * @return ResetDeviceStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetDeviceStateResponse ResetDeviceState(ResetDeviceStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetDeviceStateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetDeviceStateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ResetDeviceState"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

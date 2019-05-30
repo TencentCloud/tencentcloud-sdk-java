@@ -51,6 +51,13 @@ public class SingleBlackApply  extends AbstractModel{
     private String BlackDescription;
 
     /**
+    * 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+    */
+    @SerializedName("BlackValidDate")
+    @Expose
+    private String BlackValidDate;
+
+    /**
      * 获取黑名单类型，01代表手机号码。
      * @return BlackType 黑名单类型，01代表手机号码。
      */
@@ -115,6 +122,22 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
+     * 获取黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+     * @return BlackValidDate 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+     */
+    public String getBlackValidDate() {
+        return this.BlackValidDate;
+    }
+
+    /**
+     * 设置黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+     * @param BlackValidDate 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+     */
+    public void setBlackValidDate(String BlackValidDate) {
+        this.BlackValidDate = BlackValidDate;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class SingleBlackApply  extends AbstractModel{
         this.setParamSimple(map, prefix + "OperationType", this.OperationType);
         this.setParamSimple(map, prefix + "BlackValue", this.BlackValue);
         this.setParamSimple(map, prefix + "BlackDescription", this.BlackDescription);
+        this.setParamSimple(map, prefix + "BlackValidDate", this.BlackValidDate);
 
     }
 }

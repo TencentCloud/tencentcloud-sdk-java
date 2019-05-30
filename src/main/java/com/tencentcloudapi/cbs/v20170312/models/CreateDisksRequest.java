@@ -100,13 +100,6 @@ public class CreateDisksRequest  extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
-    */
-    @SerializedName("DeleteWithInstance")
-    @Expose
-    private Boolean DeleteWithInstance;
-
-    /**
     * 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
     */
     @SerializedName("Shareable")
@@ -290,22 +283,6 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
-     * @return DeleteWithInstance 可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
-     */
-    public Boolean getDeleteWithInstance() {
-        return this.DeleteWithInstance;
-    }
-
-    /**
-     * 设置可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
-     * @param DeleteWithInstance 可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
-     */
-    public void setDeleteWithInstance(Boolean DeleteWithInstance) {
-        this.DeleteWithInstance = DeleteWithInstance;
-    }
-
-    /**
      * 获取可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
      * @return Shareable 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
      */
@@ -336,7 +313,6 @@ public class CreateDisksRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
-        this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
 
     }

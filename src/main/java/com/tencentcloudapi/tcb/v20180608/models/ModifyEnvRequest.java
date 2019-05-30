@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyEnvRequest  extends AbstractModel{
 
     /**
-    * 环境唯一标识
+    * 环境ID
     */
     @SerializedName("EnvId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyEnvRequest  extends AbstractModel{
     private String Alias;
 
     /**
-     * 获取环境唯一标识
-     * @return EnvId 环境唯一标识
+     * 获取环境ID
+     * @return EnvId 环境ID
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * 设置环境唯一标识
-     * @param EnvId 环境唯一标识
+     * 设置环境ID
+     * @param EnvId 环境ID
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

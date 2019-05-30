@@ -160,6 +160,14 @@ public class DeviceInfo  extends AbstractModel{
     private Integer LogLevel;
 
     /**
+    * 设备证书获取状态, 1 已获取过设备密钥，0 未获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertState")
+    @Expose
+    private Integer CertState;
+
+    /**
      * 获取设备名
      * @return DeviceName 设备名
      */
@@ -480,6 +488,26 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取设备证书获取状态, 1 已获取过设备密钥，0 未获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CertState 设备证书获取状态, 1 已获取过设备密钥，0 未获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getCertState() {
+        return this.CertState;
+    }
+
+    /**
+     * 设置设备证书获取状态, 1 已获取过设备密钥，0 未获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertState 设备证书获取状态, 1 已获取过设备密钥，0 未获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertState(Integer CertState) {
+        this.CertState = CertState;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -502,6 +530,7 @@ public class DeviceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "LastOfflineTime", this.LastOfflineTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
+        this.setParamSimple(map, prefix + "CertState", this.CertState);
 
     }
 }

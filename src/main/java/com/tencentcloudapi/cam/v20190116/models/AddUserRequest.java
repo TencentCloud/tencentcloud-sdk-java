@@ -37,28 +37,28 @@ public class AddUserRequest  extends AbstractModel{
     private String Remark;
 
     /**
-    * 子用户是否可以登录控制台
+    * 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
     */
     @SerializedName("ConsoleLogin")
     @Expose
     private Long ConsoleLogin;
 
     /**
-    * 是否生成子用户密钥
+    * 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
     */
     @SerializedName("UseApi")
     @Expose
     private Long UseApi;
 
     /**
-    * 子用户控制台登录密码，只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码
+    * 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 子用户是否要在下次登录时重置密码
+    * 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
     */
     @SerializedName("NeedResetPassword")
     @Expose
@@ -118,64 +118,64 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子用户是否可以登录控制台
-     * @return ConsoleLogin 子用户是否可以登录控制台
+     * 获取子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
+     * @return ConsoleLogin 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
      */
     public Long getConsoleLogin() {
         return this.ConsoleLogin;
     }
 
     /**
-     * 设置子用户是否可以登录控制台
-     * @param ConsoleLogin 子用户是否可以登录控制台
+     * 设置子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
+     * @param ConsoleLogin 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
      */
     public void setConsoleLogin(Long ConsoleLogin) {
         this.ConsoleLogin = ConsoleLogin;
     }
 
     /**
-     * 获取是否生成子用户密钥
-     * @return UseApi 是否生成子用户密钥
+     * 获取是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
+     * @return UseApi 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
      */
     public Long getUseApi() {
         return this.UseApi;
     }
 
     /**
-     * 设置是否生成子用户密钥
-     * @param UseApi 是否生成子用户密钥
+     * 设置是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
+     * @param UseApi 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
      */
     public void setUseApi(Long UseApi) {
         this.UseApi = UseApi;
     }
 
     /**
-     * 获取子用户控制台登录密码，只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码
-     * @return Password 子用户控制台登录密码，只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码
+     * 获取子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
+     * @return Password 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * 设置子用户控制台登录密码，只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码
-     * @param Password 子用户控制台登录密码，只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码
+     * 设置子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
+     * @param Password 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * 获取子用户是否要在下次登录时重置密码
-     * @return NeedResetPassword 子用户是否要在下次登录时重置密码
+     * 获取子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
+     * @return NeedResetPassword 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
      */
     public Long getNeedResetPassword() {
         return this.NeedResetPassword;
     }
 
     /**
-     * 设置子用户是否要在下次登录时重置密码
-     * @param NeedResetPassword 子用户是否要在下次登录时重置密码
+     * 设置子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
+     * @param NeedResetPassword 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
      */
     public void setNeedResetPassword(Long NeedResetPassword) {
         this.NeedResetPassword = NeedResetPassword;

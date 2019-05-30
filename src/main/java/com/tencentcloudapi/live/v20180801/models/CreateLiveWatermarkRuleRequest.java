@@ -30,7 +30,7 @@ public class CreateLiveWatermarkRuleRequest  extends AbstractModel{
     private String DomainName;
 
     /**
-    * 推流路径。
+    * 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
     */
     @SerializedName("AppName")
     @Expose
@@ -67,16 +67,16 @@ public class CreateLiveWatermarkRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径。
-     * @return AppName 推流路径。
+     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * 设置推流路径。
-     * @param AppName 推流路径。
+     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

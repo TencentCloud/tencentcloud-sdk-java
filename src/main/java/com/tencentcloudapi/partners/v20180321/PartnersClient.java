@@ -157,6 +157,42 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+     * @param req DescribeAgentDealsCacheRequest
+     * @return DescribeAgentDealsCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentDealsCacheResponse DescribeAgentDealsCache(DescribeAgentDealsCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgentDealsCacheResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgentDealsCacheResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAgentDealsCache"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *可以查询代理商代付的所有订单
+     * @param req DescribeAgentPayDealsRequest
+     * @return DescribeAgentPayDealsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentPayDealsResponse DescribeAgentPayDeals(DescribeAgentPayDealsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgentPayDealsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgentPayDealsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAgentPayDeals"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
      * @param req DescribeClientBalanceRequest
      * @return DescribeClientBalanceResponse
@@ -186,6 +222,24 @@ public class PartnersClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRebateInfosResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeRebateInfos"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *代理商查询名下业务员列表信息
+     * @param req DescribeSalesmansRequest
+     * @return DescribeSalesmansResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSalesmansResponse DescribeSalesmans(DescribeSalesmansRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSalesmansResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSalesmansResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSalesmans"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

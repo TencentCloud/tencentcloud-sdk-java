@@ -114,6 +114,22 @@ public class AgentAuditedClient  extends AbstractModel{
     private String ProjectType;
 
     /**
+    * 业务员ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SalesUin")
+    @Expose
+    private String SalesUin;
+
+    /**
+    * 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SalesName")
+    @Expose
+    private String SalesName;
+
+    /**
      * 获取代理商账号ID
      * @return Uin 代理商账号ID
      */
@@ -322,6 +338,46 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
+     * 获取业务员ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SalesUin 业务员ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSalesUin() {
+        return this.SalesUin;
+    }
+
+    /**
+     * 设置业务员ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SalesUin 业务员ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSalesUin(String SalesUin) {
+        this.SalesUin = SalesUin;
+    }
+
+    /**
+     * 获取业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SalesName 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSalesName() {
+        return this.SalesName;
+    }
+
+    /**
+     * 设置业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SalesName 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSalesName(String SalesName) {
+        this.SalesName = SalesName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +394,8 @@ public class AgentAuditedClient  extends AbstractModel{
         this.setParamSimple(map, prefix + "HasOverdueBill", this.HasOverdueBill);
         this.setParamSimple(map, prefix + "ClientType", this.ClientType);
         this.setParamSimple(map, prefix + "ProjectType", this.ProjectType);
+        this.setParamSimple(map, prefix + "SalesUin", this.SalesUin);
+        this.setParamSimple(map, prefix + "SalesName", this.SalesName);
 
     }
 }

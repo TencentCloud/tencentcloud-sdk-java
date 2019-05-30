@@ -30,7 +30,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     private String DomainName;
 
     /**
-    * 应用名称。
+    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
     */
     @SerializedName("AppName")
     @Expose
@@ -53,7 +53,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     private Integer PageSize;
 
     /**
-    * 流名称，精确查询。
+    * 流名称，用于精确查询。
     */
     @SerializedName("StreamName")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用名称。
-     * @return AppName 应用名称。
+     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * 设置应用名称。
-     * @param AppName 应用名称。
+     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
@@ -132,16 +132,16 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称，精确查询。
-     * @return StreamName 流名称，精确查询。
+     * 获取流名称，用于精确查询。
+     * @return StreamName 流名称，用于精确查询。
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * 设置流名称，精确查询。
-     * @param StreamName 流名称，精确查询。
+     * 设置流名称，用于精确查询。
+     * @param StreamName 流名称，用于精确查询。
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;

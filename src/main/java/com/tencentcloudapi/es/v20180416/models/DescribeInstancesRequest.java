@@ -30,14 +30,14 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private String Zone;
 
     /**
-    * 一个或多个集群实例ID
+    * 集群实例ID列表
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 一个或多个集群实例名称
+    * 集群实例名称列表
     */
     @SerializedName("InstanceNames")
     @Expose
@@ -58,14 +58,14 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-    * 排序字段：1，实例ID；2，实例名称；3，可用区；4，创建时间，若orderKey未传递则按创建时间降序排序
+    * 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
     */
     @SerializedName("OrderByKey")
     @Expose
     private Integer OrderByKey;
 
     /**
-    * 排序方式：0，升序；1，降序；若传递了orderByKey未传递orderByType, 则默认升序
+    * 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
     */
     @SerializedName("OrderByType")
     @Expose
@@ -88,32 +88,32 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一个或多个集群实例ID
-     * @return InstanceIds 一个或多个集群实例ID
+     * 获取集群实例ID列表
+     * @return InstanceIds 集群实例ID列表
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * 设置一个或多个集群实例ID
-     * @param InstanceIds 一个或多个集群实例ID
+     * 设置集群实例ID列表
+     * @param InstanceIds 集群实例ID列表
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * 获取一个或多个集群实例名称
-     * @return InstanceNames 一个或多个集群实例名称
+     * 获取集群实例名称列表
+     * @return InstanceNames 集群实例名称列表
      */
     public String [] getInstanceNames() {
         return this.InstanceNames;
     }
 
     /**
-     * 设置一个或多个集群实例名称
-     * @param InstanceNames 一个或多个集群实例名称
+     * 设置集群实例名称列表
+     * @param InstanceNames 集群实例名称列表
      */
     public void setInstanceNames(String [] InstanceNames) {
         this.InstanceNames = InstanceNames;
@@ -152,32 +152,32 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段：1，实例ID；2，实例名称；3，可用区；4，创建时间，若orderKey未传递则按创建时间降序排序
-     * @return OrderByKey 排序字段：1，实例ID；2，实例名称；3，可用区；4，创建时间，若orderKey未传递则按创建时间降序排序
+     * 获取排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+     * @return OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      */
     public Integer getOrderByKey() {
         return this.OrderByKey;
     }
 
     /**
-     * 设置排序字段：1，实例ID；2，实例名称；3，可用区；4，创建时间，若orderKey未传递则按创建时间降序排序
-     * @param OrderByKey 排序字段：1，实例ID；2，实例名称；3，可用区；4，创建时间，若orderKey未传递则按创建时间降序排序
+     * 设置排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+     * @param OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      */
     public void setOrderByKey(Integer OrderByKey) {
         this.OrderByKey = OrderByKey;
     }
 
     /**
-     * 获取排序方式：0，升序；1，降序；若传递了orderByKey未传递orderByType, 则默认升序
-     * @return OrderByType 排序方式：0，升序；1，降序；若传递了orderByKey未传递orderByType, 则默认升序
+     * 获取排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+     * @return OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      */
     public Integer getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * 设置排序方式：0，升序；1，降序；若传递了orderByKey未传递orderByType, 则默认升序
-     * @param OrderByType 排序方式：0，升序；1，降序；若传递了orderByKey未传递orderByType, 则默认升序
+     * 设置排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+     * @param OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      */
     public void setOrderByType(Integer OrderByType) {
         this.OrderByType = OrderByType;
