@@ -117,7 +117,7 @@ abstract public class AbstractModel {
                 Field f = obj.getClass().getDeclaredField(entry.getKey());
                 f.setAccessible(true);
                 fo = f.get(obj);
-            } catch (NoSuchFieldException | SecurityException | IllegalAccessException e) {
+            } catch (Exception e) {
                 // this should never happen
                 e.printStackTrace();
             }
@@ -129,7 +129,7 @@ abstract public class AbstractModel {
         }
         return joall;
     }
-    
+
     /**
      * 序列化函数，根据传入的json格式的string实例化一个cls对象返回
      * 
