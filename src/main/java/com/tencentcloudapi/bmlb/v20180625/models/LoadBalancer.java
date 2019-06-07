@@ -205,13 +205,6 @@ public class LoadBalancer  extends AbstractModel{
     private String BzL7Metrics;
 
     /**
-    * Isp类型。5:腾讯CAP;7:内网。
-    */
-    @SerializedName("IspId")
-    @Expose
-    private String IspId;
-
-    /**
      * 获取负载均衡器ID
      * @return LoadBalancerId 负载均衡器ID
      */
@@ -628,22 +621,6 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取Isp类型。5:腾讯CAP;7:内网。
-     * @return IspId Isp类型。5:腾讯CAP;7:内网。
-     */
-    public String getIspId() {
-        return this.IspId;
-    }
-
-    /**
-     * 设置Isp类型。5:腾讯CAP;7:内网。
-     * @param IspId Isp类型。5:腾讯CAP;7:内网。
-     */
-    public void setIspId(String IspId) {
-        this.IspId = IspId;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -673,7 +650,6 @@ public class LoadBalancer  extends AbstractModel{
         this.setParamSimple(map, prefix + "BzPayMode", this.BzPayMode);
         this.setParamSimple(map, prefix + "BzL4Metrics", this.BzL4Metrics);
         this.setParamSimple(map, prefix + "BzL7Metrics", this.BzL7Metrics);
-        this.setParamSimple(map, prefix + "IspId", this.IspId);
 
     }
 }

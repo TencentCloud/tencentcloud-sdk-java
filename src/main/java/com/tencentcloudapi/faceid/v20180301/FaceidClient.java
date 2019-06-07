@@ -67,7 +67,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *每次开始核身前，需先调用本接口获取BizToken，用来串联核身流程，在核身完成后，用于获取验证结果信息。
+     *每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
      * @param req DetectAuthRequest
      * @return DetectAuthResponse
      * @throws TencentCloudSDKException
@@ -168,6 +168,24 @@ public class FaceidClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ImageRecognitionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ImageRecognition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *活体检测
+     * @param req LivenessRequest
+     * @return LivenessResponse
+     * @throws TencentCloudSDKException
+     */
+    public LivenessResponse Liveness(LivenessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<LivenessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<LivenessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "Liveness"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

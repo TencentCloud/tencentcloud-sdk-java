@@ -121,6 +121,55 @@ public class L4ListenerInfo  extends AbstractModel{
     private String AddTimestamp;
 
     /**
+    * 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+    */
+    @SerializedName("CustomHealthSwitch")
+    @Expose
+    private Integer CustomHealthSwitch;
+
+    /**
+    * 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+    */
+    @SerializedName("InputType")
+    @Expose
+    private String InputType;
+
+    /**
+    * 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+    */
+    @SerializedName("LineSeparatorType")
+    @Expose
+    private Integer LineSeparatorType;
+
+    /**
+    * 自定义探测请求内容。
+    */
+    @SerializedName("HealthRequest")
+    @Expose
+    private String HealthRequest;
+
+    /**
+    * 自定义探测返回内容。
+    */
+    @SerializedName("HealthResponse")
+    @Expose
+    private String HealthResponse;
+
+    /**
+    * 是否开启toa：1（开启）、0（关闭）。
+    */
+    @SerializedName("ToaFlag")
+    @Expose
+    private Integer ToaFlag;
+
+    /**
+    * 转发后端服务器调度类型。
+    */
+    @SerializedName("BalanceMode")
+    @Expose
+    private String BalanceMode;
+
+    /**
      * 获取监听器ID。
      * @return ListenerId 监听器ID。
      */
@@ -345,6 +394,118 @@ public class L4ListenerInfo  extends AbstractModel{
     }
 
     /**
+     * 获取是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+     * @return CustomHealthSwitch 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+     */
+    public Integer getCustomHealthSwitch() {
+        return this.CustomHealthSwitch;
+    }
+
+    /**
+     * 设置是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+     * @param CustomHealthSwitch 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+     */
+    public void setCustomHealthSwitch(Integer CustomHealthSwitch) {
+        this.CustomHealthSwitch = CustomHealthSwitch;
+    }
+
+    /**
+     * 获取自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+     * @return InputType 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+     */
+    public String getInputType() {
+        return this.InputType;
+    }
+
+    /**
+     * 设置自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+     * @param InputType 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+     */
+    public void setInputType(String InputType) {
+        this.InputType = InputType;
+    }
+
+    /**
+     * 获取探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+     * @return LineSeparatorType 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+     */
+    public Integer getLineSeparatorType() {
+        return this.LineSeparatorType;
+    }
+
+    /**
+     * 设置探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+     * @param LineSeparatorType 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+     */
+    public void setLineSeparatorType(Integer LineSeparatorType) {
+        this.LineSeparatorType = LineSeparatorType;
+    }
+
+    /**
+     * 获取自定义探测请求内容。
+     * @return HealthRequest 自定义探测请求内容。
+     */
+    public String getHealthRequest() {
+        return this.HealthRequest;
+    }
+
+    /**
+     * 设置自定义探测请求内容。
+     * @param HealthRequest 自定义探测请求内容。
+     */
+    public void setHealthRequest(String HealthRequest) {
+        this.HealthRequest = HealthRequest;
+    }
+
+    /**
+     * 获取自定义探测返回内容。
+     * @return HealthResponse 自定义探测返回内容。
+     */
+    public String getHealthResponse() {
+        return this.HealthResponse;
+    }
+
+    /**
+     * 设置自定义探测返回内容。
+     * @param HealthResponse 自定义探测返回内容。
+     */
+    public void setHealthResponse(String HealthResponse) {
+        this.HealthResponse = HealthResponse;
+    }
+
+    /**
+     * 获取是否开启toa：1（开启）、0（关闭）。
+     * @return ToaFlag 是否开启toa：1（开启）、0（关闭）。
+     */
+    public Integer getToaFlag() {
+        return this.ToaFlag;
+    }
+
+    /**
+     * 设置是否开启toa：1（开启）、0（关闭）。
+     * @param ToaFlag 是否开启toa：1（开启）、0（关闭）。
+     */
+    public void setToaFlag(Integer ToaFlag) {
+        this.ToaFlag = ToaFlag;
+    }
+
+    /**
+     * 获取转发后端服务器调度类型。
+     * @return BalanceMode 转发后端服务器调度类型。
+     */
+    public String getBalanceMode() {
+        return this.BalanceMode;
+    }
+
+    /**
+     * 设置转发后端服务器调度类型。
+     * @param BalanceMode 转发后端服务器调度类型。
+     */
+    public void setBalanceMode(String BalanceMode) {
+        this.BalanceMode = BalanceMode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +523,13 @@ public class L4ListenerInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "UnhealthNum", this.UnhealthNum);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AddTimestamp", this.AddTimestamp);
+        this.setParamSimple(map, prefix + "CustomHealthSwitch", this.CustomHealthSwitch);
+        this.setParamSimple(map, prefix + "InputType", this.InputType);
+        this.setParamSimple(map, prefix + "LineSeparatorType", this.LineSeparatorType);
+        this.setParamSimple(map, prefix + "HealthRequest", this.HealthRequest);
+        this.setParamSimple(map, prefix + "HealthResponse", this.HealthResponse);
+        this.setParamSimple(map, prefix + "ToaFlag", this.ToaFlag);
+        this.setParamSimple(map, prefix + "BalanceMode", this.BalanceMode);
 
     }
 }

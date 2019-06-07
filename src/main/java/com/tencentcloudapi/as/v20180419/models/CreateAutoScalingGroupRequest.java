@@ -137,6 +137,13 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     private String ZonesCheckPolicy;
 
     /**
+    * 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * 获取伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @return AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      */
@@ -413,6 +420,22 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
+     * 获取标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+     * @return Tags 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+     * @param Tags 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -431,6 +454,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
         this.setParamSimple(map, prefix + "ZonesCheckPolicy", this.ZonesCheckPolicy);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

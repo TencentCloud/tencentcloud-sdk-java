@@ -26,7 +26,8 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     * 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
-<li>WechatPublish：微信发布任务。</li>
+<li>WechatPublish：微信发布任务；</li>
+<li>ComposeMedia：制作媒体文件任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
 <li>SnapshotByTimeOffset：视频截图任务；</li>
@@ -134,6 +135,14 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     private CreateImageSpriteTask2017 CreateImageSpriteTask;
 
     /**
+    * 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ComposeMediaTask")
+    @Expose
+    private ComposeMediaTask ComposeMediaTask;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -144,7 +153,8 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
      * 获取任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
-<li>WechatPublish：微信发布任务。</li>
+<li>WechatPublish：微信发布任务；</li>
+<li>ComposeMedia：制作媒体文件任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
 <li>SnapshotByTimeOffset：视频截图任务；</li>
@@ -154,7 +164,8 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
      * @return TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
-<li>WechatPublish：微信发布任务。</li>
+<li>WechatPublish：微信发布任务；</li>
+<li>ComposeMedia：制作媒体文件任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
 <li>SnapshotByTimeOffset：视频截图任务；</li>
@@ -170,7 +181,8 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
      * 设置任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
-<li>WechatPublish：微信发布任务。</li>
+<li>WechatPublish：微信发布任务；</li>
+<li>ComposeMedia：制作媒体文件任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
 <li>SnapshotByTimeOffset：视频截图任务；</li>
@@ -180,7 +192,8 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
      * @param TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
-<li>WechatPublish：微信发布任务。</li>
+<li>WechatPublish：微信发布任务；</li>
+<li>ComposeMedia：制作媒体文件任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
 <li>SnapshotByTimeOffset：视频截图任务；</li>
@@ -429,6 +442,26 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
+     * 获取制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ComposeMediaTask 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ComposeMediaTask getComposeMediaTask() {
+        return this.ComposeMediaTask;
+    }
+
+    /**
+     * 设置制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComposeMediaTask 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComposeMediaTask(ComposeMediaTask ComposeMediaTask) {
+        this.ComposeMediaTask = ComposeMediaTask;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -461,6 +494,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
         this.setParamObj(map, prefix + "ConcatTask.", this.ConcatTask);
         this.setParamObj(map, prefix + "ClipTask.", this.ClipTask);
         this.setParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
+        this.setParamObj(map, prefix + "ComposeMediaTask.", this.ComposeMediaTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

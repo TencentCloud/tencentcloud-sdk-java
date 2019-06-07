@@ -177,6 +177,13 @@ public class AutoScalingGroup  extends AbstractModel{
     private String InActivityStatus;
 
     /**
+    * 伸缩组标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * 获取伸缩组ID
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -529,6 +536,22 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
+     * 获取伸缩组标签列表
+     * @return Tags 伸缩组标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置伸缩组标签列表
+     * @param Tags 伸缩组标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -554,6 +577,7 @@ public class AutoScalingGroup  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ZoneSet.", this.ZoneSet);
         this.setParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
         this.setParamSimple(map, prefix + "InActivityStatus", this.InActivityStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

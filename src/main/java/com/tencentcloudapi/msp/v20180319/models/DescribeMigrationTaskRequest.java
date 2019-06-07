@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeMigrationTaskRequest  extends AbstractModel{
 
     /**
-    * 任务ID
+    * 任务ID，例如msp-jitoh33n
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * 获取任务ID
-     * @return TaskId 任务ID
+     * 获取任务ID，例如msp-jitoh33n
+     * @return TaskId 任务ID，例如msp-jitoh33n
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置任务ID
-     * @param TaskId 任务ID
+     * 设置任务ID，例如msp-jitoh33n
+     * @param TaskId 任务ID，例如msp-jitoh33n
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

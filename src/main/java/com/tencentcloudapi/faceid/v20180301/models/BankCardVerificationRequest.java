@@ -44,6 +44,21 @@ public class BankCardVerificationRequest  extends AbstractModel{
     private String BankCard;
 
     /**
+    * 证件类型（不填默认0）
+0 身份证
+1 军官证
+2 护照
+3 港澳证
+4 台胞证
+5 警官证
+6 士兵证
+7 其它证件
+    */
+    @SerializedName("CertType")
+    @Expose
+    private Integer CertType;
+
+    /**
      * 获取身份证号
      * @return IdCard 身份证号
      */
@@ -92,12 +107,61 @@ public class BankCardVerificationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取证件类型（不填默认0）
+0 身份证
+1 军官证
+2 护照
+3 港澳证
+4 台胞证
+5 警官证
+6 士兵证
+7 其它证件
+     * @return CertType 证件类型（不填默认0）
+0 身份证
+1 军官证
+2 护照
+3 港澳证
+4 台胞证
+5 警官证
+6 士兵证
+7 其它证件
+     */
+    public Integer getCertType() {
+        return this.CertType;
+    }
+
+    /**
+     * 设置证件类型（不填默认0）
+0 身份证
+1 军官证
+2 护照
+3 港澳证
+4 台胞证
+5 警官证
+6 士兵证
+7 其它证件
+     * @param CertType 证件类型（不填默认0）
+0 身份证
+1 军官证
+2 护照
+3 港澳证
+4 台胞证
+5 警官证
+6 士兵证
+7 其它证件
+     */
+    public void setCertType(Integer CertType) {
+        this.CertType = CertType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "BankCard", this.BankCard);
+        this.setParamSimple(map, prefix + "CertType", this.CertType);
 
     }
 }

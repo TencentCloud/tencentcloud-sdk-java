@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyMigrationTaskStatusRequest  extends AbstractModel{
 
     /**
-    * 任务状态
+    * 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 任务ID
+    * 任务ID，例如msp-jitoh33n
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * 获取任务状态
-     * @return Status 任务状态
+     * 获取任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
+     * @return Status 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置任务状态
-     * @param Status 任务状态
+     * 设置任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
+     * @param Status 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取任务ID
-     * @return TaskId 任务ID
+     * 获取任务ID，例如msp-jitoh33n
+     * @return TaskId 任务ID，例如msp-jitoh33n
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置任务ID
-     * @param TaskId 任务ID
+     * 设置任务ID，例如msp-jitoh33n
+     * @param TaskId 任务ID，例如msp-jitoh33n
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

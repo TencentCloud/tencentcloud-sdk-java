@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyMigrationTaskBelongToProjectRequest  extends AbstractModel{
 
     /**
-    * 任务ID
+    * 任务ID，例如msp-jitoh33n
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 项目ID
+    * 项目ID，例如10005
     */
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
 
     /**
-     * 获取任务ID
-     * @return TaskId 任务ID
+     * 获取任务ID，例如msp-jitoh33n
+     * @return TaskId 任务ID，例如msp-jitoh33n
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置任务ID
-     * @param TaskId 任务ID
+     * 设置任务ID，例如msp-jitoh33n
+     * @param TaskId 任务ID，例如msp-jitoh33n
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * 获取项目ID
-     * @return ProjectId 项目ID
+     * 获取项目ID，例如10005
+     * @return ProjectId 项目ID，例如10005
      */
     public Integer getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置项目ID
-     * @param ProjectId 项目ID
+     * 设置项目ID，例如10005
+     * @param ProjectId 项目ID，例如10005
      */
     public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;

@@ -86,6 +86,28 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于制作媒体文件，可以
+
+1. 对一个媒体文件进行剪辑，生成一个新的媒体文件；
+2. 对多个媒体文件进行裁剪拼接，生成一个新的媒体文件；
+3. 对多个媒体文件的媒体流进行裁剪拼接，生成一个新的媒体文件；
+     * @param req ComposeMediaRequest
+     * @return ComposeMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ComposeMediaResponse ComposeMedia(ComposeMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ComposeMediaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ComposeMediaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ComposeMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 开发者调用拉取事件通知，获取到事件后，必须调用该接口来确认消息已经收到；
 * 开发者获取到事件句柄后，等待确认的有效时间为 30 秒，超出 30 秒会报参数错误（4000）；
 * 更多参考[服务端事件通知](https://cloud.tencent.com/document/product/266/7829)。
@@ -584,6 +606,27 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeProcedureTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeProcedureTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口返回查询时间范围内每天使用的视频内容审核时长数据，单位： 秒。
+
+1. 可以查询最近 90 天内的转码时长统计数据。
+2. 查询时间跨度不超过 60 天。
+     * @param req DescribeReviewDetailsRequest
+     * @return DescribeReviewDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReviewDetailsResponse DescribeReviewDetails(DescribeReviewDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReviewDetailsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReviewDetailsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReviewDetails"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

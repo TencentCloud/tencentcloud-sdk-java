@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeIpInfoRequest  extends AbstractModel{
 
     /**
-    * 要查询的域名
+    * 要查询的IP
     */
     @SerializedName("Key")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeIpInfoRequest  extends AbstractModel{
     private Integer Option;
 
     /**
-     * 获取要查询的域名
-     * @return Key 要查询的域名
+     * 获取要查询的IP
+     * @return Key 要查询的IP
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * 设置要查询的域名
-     * @param Key 要查询的域名
+     * 设置要查询的IP
+     * @param Key 要查询的IP
      */
     public void setKey(String Key) {
         this.Key = Key;

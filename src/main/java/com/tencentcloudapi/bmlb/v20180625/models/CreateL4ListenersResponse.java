@@ -27,7 +27,7 @@ public class CreateL4ListenersResponse  extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Integer TaskId;
+    private String TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateL4ListenersResponse  extends AbstractModel{
      * 获取任务ID。该接口为异步任务，可根据本参数调用DescribeLoadBalancerTaskResult接口来查询任务操作结果
      * @return TaskId 任务ID。该接口为异步任务，可根据本参数调用DescribeLoadBalancerTaskResult接口来查询任务操作结果
      */
-    public Integer getTaskId() {
+    public String getTaskId() {
         return this.TaskId;
     }
 
@@ -48,7 +48,7 @@ public class CreateL4ListenersResponse  extends AbstractModel{
      * 设置任务ID。该接口为异步任务，可根据本参数调用DescribeLoadBalancerTaskResult接口来查询任务操作结果
      * @param TaskId 任务ID。该接口为异步任务，可根据本参数调用DescribeLoadBalancerTaskResult接口来查询任务操作结果
      */
-    public void setTaskId(Integer TaskId) {
+    public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 

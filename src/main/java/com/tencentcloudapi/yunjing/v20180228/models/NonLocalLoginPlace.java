@@ -27,7 +27,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 主机IP。
@@ -105,7 +105,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
      * 获取事件ID。
      * @return Id 事件ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
@@ -113,7 +113,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
      * 设置事件ID。
      * @param Id 事件ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
