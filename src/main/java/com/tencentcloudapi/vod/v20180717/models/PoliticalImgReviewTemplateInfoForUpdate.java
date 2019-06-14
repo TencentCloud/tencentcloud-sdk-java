@@ -34,7 +34,9 @@ public class PoliticalImgReviewTemplateInfoForUpdate  extends AbstractModel{
     /**
     * 画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
-<li>politician：政治人物。</li>
+<li>politician：政治人物；</li>
+<li>entertainment：娱乐明星；</li>
+<li>sport：体育明星。</li>
     */
     @SerializedName("LabelSet")
     @Expose
@@ -81,10 +83,14 @@ public class PoliticalImgReviewTemplateInfoForUpdate  extends AbstractModel{
     /**
      * 获取画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
-<li>politician：政治人物。</li>
+<li>politician：政治人物；</li>
+<li>entertainment：娱乐明星；</li>
+<li>sport：体育明星。</li>
      * @return LabelSet 画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
-<li>politician：政治人物。</li>
+<li>politician：政治人物；</li>
+<li>entertainment：娱乐明星；</li>
+<li>sport：体育明星。</li>
      */
     public String [] getLabelSet() {
         return this.LabelSet;
@@ -93,10 +99,14 @@ public class PoliticalImgReviewTemplateInfoForUpdate  extends AbstractModel{
     /**
      * 设置画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
-<li>politician：政治人物。</li>
+<li>politician：政治人物；</li>
+<li>entertainment：娱乐明星；</li>
+<li>sport：体育明星。</li>
      * @param LabelSet 画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
-<li>politician：政治人物。</li>
+<li>politician：政治人物；</li>
+<li>entertainment：娱乐明星；</li>
+<li>sport：体育明星。</li>
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;

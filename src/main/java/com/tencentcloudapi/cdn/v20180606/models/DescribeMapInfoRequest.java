@@ -24,7 +24,7 @@ public class DescribeMapInfoRequest  extends AbstractModel{
 
     /**
     * 映射查询类别：
-ips：运营商映射查询
+isp：运营商映射查询
 district：省份映射查询
     */
     @SerializedName("Name")
@@ -33,10 +33,10 @@ district：省份映射查询
 
     /**
      * 获取映射查询类别：
-ips：运营商映射查询
+isp：运营商映射查询
 district：省份映射查询
      * @return Name 映射查询类别：
-ips：运营商映射查询
+isp：运营商映射查询
 district：省份映射查询
      */
     public String getName() {
@@ -45,10 +45,10 @@ district：省份映射查询
 
     /**
      * 设置映射查询类别：
-ips：运营商映射查询
+isp：运营商映射查询
 district：省份映射查询
      * @param Name 映射查询类别：
-ips：运营商映射查询
+isp：运营商映射查询
 district：省份映射查询
      */
     public void setName(String Name) {

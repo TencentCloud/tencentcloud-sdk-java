@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class Placement  extends AbstractModel{
 
     /**
-    * 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)ID。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
+    * 所在[可用区](/document/api/213/9452#zone)。
+
+
+云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
     */
     @SerializedName("Zone")
     @Expose
@@ -61,16 +64,28 @@ public class Placement  extends AbstractModel{
     private String CdcName;
 
     /**
-     * 获取云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)ID。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
-     * @return Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)ID。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
+     * 获取所在[可用区](/document/api/213/9452#zone)。
+
+
+云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
+     * @return Zone 所在[可用区](/document/api/213/9452#zone)。
+
+
+云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * 设置云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)ID。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
-     * @param Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)ID。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
+     * 设置所在[可用区](/document/api/213/9452#zone)。
+
+
+云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
+     * @param Zone 所在[可用区](/document/api/213/9452#zone)。
+
+
+云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -44,13 +44,6 @@ public class LookUpEventsRequest  extends AbstractModel{
     private LookupAttribute [] LookupAttributes;
 
     /**
-    * 是否调用新的查询接口
-    */
-    @SerializedName("IsApiV3")
-    @Expose
-    private Long IsApiV3;
-
-    /**
     * 返回日志的最大条数
     */
     @SerializedName("MaxResults")
@@ -113,22 +106,6 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否调用新的查询接口
-     * @return IsApiV3 是否调用新的查询接口
-     */
-    public Long getIsApiV3() {
-        return this.IsApiV3;
-    }
-
-    /**
-     * 设置是否调用新的查询接口
-     * @param IsApiV3 是否调用新的查询接口
-     */
-    public void setIsApiV3(Long IsApiV3) {
-        this.IsApiV3 = IsApiV3;
-    }
-
-    /**
      * 获取返回日志的最大条数
      * @return MaxResults 返回日志的最大条数
      */
@@ -167,7 +144,6 @@ public class LookUpEventsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamArrayObj(map, prefix + "LookupAttributes.", this.LookupAttributes);
-        this.setParamSimple(map, prefix + "IsApiV3", this.IsApiV3);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
 

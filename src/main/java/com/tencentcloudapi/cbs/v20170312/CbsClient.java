@@ -463,6 +463,27 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyAutoSnapshotPolicyAttribute）用于修改定期快照策略属性。
+
+* 可通过该接口修改定期快照策略的执行策略、名称、是否激活等属性。
+* 修改保留天数时必须保证不与是否永久保留属性冲突，否则整个操作失败，以特定的错误码返回。
+     * @param req ModifyAutoSnapshotPolicyAttributeRequest
+     * @return ModifyAutoSnapshotPolicyAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoSnapshotPolicyAttributeResponse ModifyAutoSnapshotPolicyAttribute(ModifyAutoSnapshotPolicyAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAutoSnapshotPolicyAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAutoSnapshotPolicyAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAutoSnapshotPolicyAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 只支持修改弹性云盘的项目ID。随云主机创建的云硬盘项目ID与云主机联动。可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。
 * “云硬盘名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行云盘管理操作的依据。
 * 支持批量操作，如果传入多个云盘ID，则所有云盘修改为同一属性。如果存在不允许操作的云盘，则操作不执行，以特定错误码返回。

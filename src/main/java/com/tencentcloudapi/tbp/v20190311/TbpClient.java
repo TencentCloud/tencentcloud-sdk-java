@@ -49,24 +49,6 @@ public class TbpClient extends AbstractClient{
     }
 
     /**
-     *机器人会话接口，接收音频信息，传递给后台机器人
-     * @param req PostAudioRequest
-     * @return PostAudioResponse
-     * @throws TencentCloudSDKException
-     */
-    public PostAudioResponse PostAudio(PostAudioRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PostAudioResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<PostAudioResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "PostAudio"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *机器人会话接口，接收文本信息，传递给后台机器人
      * @param req PostTextRequest
      * @return PostTextResponse

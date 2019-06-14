@@ -754,6 +754,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *本接口仅用于定制开发的特殊场景，除非云点播客服人员主动告知您需要使用本接口，其它情况请勿调用。
+     * @param req ExecuteFunctionRequest
+     * @return ExecuteFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExecuteFunctionResponse ExecuteFunction(ExecuteFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExecuteFunctionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExecuteFunctionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ExecuteFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
 
 腾讯云点播支持两种即时剪辑模式：
@@ -1044,6 +1062,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PullEventsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PullEvents"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *1. 预热指定的 URL 列表。
+2. URL 的域名必须已在云点播中注册。
+3. 单次请求最多指定20个 URL。
+     * @param req PushUrlCacheRequest
+     * @return PushUrlCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public PushUrlCacheResponse PushUrlCache(PushUrlCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PushUrlCacheResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PushUrlCacheResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PushUrlCache"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

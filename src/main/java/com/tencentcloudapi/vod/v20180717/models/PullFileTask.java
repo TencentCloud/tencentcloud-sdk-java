@@ -53,12 +53,12 @@ public class PullFileTask  extends AbstractModel{
     private String FileId;
 
     /**
-    * 上传完成后生成的媒体文件基础信息。
+    * 转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaBasicInfo")
     @Expose
-    private String MediaBasicInfo;
+    private MediaBasicInfo MediaBasicInfo;
 
     /**
     * 转拉上传完成后生成的播放地址。
@@ -147,22 +147,22 @@ public class PullFileTask  extends AbstractModel{
     }
 
     /**
-     * 获取上传完成后生成的媒体文件基础信息。
+     * 获取转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return MediaBasicInfo 上传完成后生成的媒体文件基础信息。
+     * @return MediaBasicInfo 转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getMediaBasicInfo() {
+    public MediaBasicInfo getMediaBasicInfo() {
         return this.MediaBasicInfo;
     }
 
     /**
-     * 设置上传完成后生成的媒体文件基础信息。
+     * 设置转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaBasicInfo 上传完成后生成的媒体文件基础信息。
+     * @param MediaBasicInfo 转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMediaBasicInfo(String MediaBasicInfo) {
+    public void setMediaBasicInfo(MediaBasicInfo MediaBasicInfo) {
         this.MediaBasicInfo = MediaBasicInfo;
     }
 
@@ -206,7 +206,7 @@ public class PullFileTask  extends AbstractModel{
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
-        this.setParamSimple(map, prefix + "MediaBasicInfo", this.MediaBasicInfo);
+        this.setParamObj(map, prefix + "MediaBasicInfo.", this.MediaBasicInfo);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
 

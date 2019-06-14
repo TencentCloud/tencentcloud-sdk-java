@@ -32,7 +32,7 @@ public class FaceConfigureInfo  extends AbstractModel{
     private String Switch;
 
     /**
-    * 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 90 分。取值范围：0 - 100。
+    * 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 95 分。取值范围：0 - 100。
     */
     @SerializedName("Score")
     @Expose
@@ -40,8 +40,8 @@ public class FaceConfigureInfo  extends AbstractModel{
 
     /**
     * 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
-<li>entertainments：娱乐明星；</li>
-<li>sports：体育明星；</li>
+<li>entertainment：娱乐明星；</li>
+<li>sport：体育明星；</li>
 <li>politician：政治人物。</li>
     */
     @SerializedName("DefaultLibraryLabelSet")
@@ -92,16 +92,16 @@ public class FaceConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 90 分。取值范围：0 - 100。
-     * @return Score 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 90 分。取值范围：0 - 100。
+     * 获取人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 95 分。取值范围：0 - 100。
+     * @return Score 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 95 分。取值范围：0 - 100。
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * 设置人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 90 分。取值范围：0 - 100。
-     * @param Score 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 90 分。取值范围：0 - 100。
+     * 设置人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 95 分。取值范围：0 - 100。
+     * @param Score 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。默认 95 分。取值范围：0 - 100。
      */
     public void setScore(Float Score) {
         this.Score = Score;
@@ -109,12 +109,12 @@ public class FaceConfigureInfo  extends AbstractModel{
 
     /**
      * 获取默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
-<li>entertainments：娱乐明星；</li>
-<li>sports：体育明星；</li>
+<li>entertainment：娱乐明星；</li>
+<li>sport：体育明星；</li>
 <li>politician：政治人物。</li>
      * @return DefaultLibraryLabelSet 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
-<li>entertainments：娱乐明星；</li>
-<li>sports：体育明星；</li>
+<li>entertainment：娱乐明星；</li>
+<li>sport：体育明星；</li>
 <li>politician：政治人物。</li>
      */
     public String [] getDefaultLibraryLabelSet() {
@@ -123,12 +123,12 @@ public class FaceConfigureInfo  extends AbstractModel{
 
     /**
      * 设置默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
-<li>entertainments：娱乐明星；</li>
-<li>sports：体育明星；</li>
+<li>entertainment：娱乐明星；</li>
+<li>sport：体育明星；</li>
 <li>politician：政治人物。</li>
      * @param DefaultLibraryLabelSet 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
-<li>entertainments：娱乐明星；</li>
-<li>sports：体育明星；</li>
+<li>entertainment：娱乐明星；</li>
+<li>sport：体育明星；</li>
 <li>politician：政治人物。</li>
      */
     public void setDefaultLibraryLabelSet(String [] DefaultLibraryLabelSet) {

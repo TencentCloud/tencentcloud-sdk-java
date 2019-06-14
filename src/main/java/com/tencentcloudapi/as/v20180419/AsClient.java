@@ -604,6 +604,27 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（ExecuteScalingPolicy）用于执行伸缩策略。
+
+* 可以根据伸缩策略ID执行伸缩策略。
+* 伸缩策略所属伸缩组处于伸缩活动时，会拒绝执行伸缩策略。
+     * @param req ExecuteScalingPolicyRequest
+     * @return ExecuteScalingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExecuteScalingPolicyResponse ExecuteScalingPolicy(ExecuteScalingPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExecuteScalingPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExecuteScalingPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ExecuteScalingPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyAutoScalingGroup）用于修改伸缩组。
      * @param req ModifyAutoScalingGroupRequest
      * @return ModifyAutoScalingGroupResponse

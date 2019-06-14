@@ -65,7 +65,7 @@ public class DiskConfig  extends AbstractModel{
     private Integer MinDiskSize;
 
     /**
-    * 所在[可用区](/document/api/213/9452#zone)。
+    * 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
     */
     @SerializedName("Zone")
     @Expose
@@ -184,16 +184,16 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 获取所在[可用区](/document/api/213/9452#zone)。
-     * @return Zone 所在[可用区](/document/api/213/9452#zone)。
+     * 获取云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
+     * @return Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * 设置所在[可用区](/document/api/213/9452#zone)。
-     * @param Zone 所在[可用区](/document/api/213/9452#zone)。
+     * 设置云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
+     * @param Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
