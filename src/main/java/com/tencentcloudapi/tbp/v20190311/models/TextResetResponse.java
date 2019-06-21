@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PostTextResponse  extends AbstractModel{
+public class TextResetResponse  extends AbstractModel{
 
     /**
-    * 当前会话状态。取值:"start"/"continue"/"complete"
+    * 当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DialogStatus")
@@ -31,7 +31,7 @@ public class PostTextResponse  extends AbstractModel{
     private String DialogStatus;
 
     /**
-    * 匹配到的机器人名称
+    * 匹配到的机器人名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BotName")
@@ -39,7 +39,7 @@ public class PostTextResponse  extends AbstractModel{
     private String BotName;
 
     /**
-    * 匹配到的意图名称
+    * 匹配到的意图名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntentName")
@@ -47,14 +47,7 @@ public class PostTextResponse  extends AbstractModel{
     private String IntentName;
 
     /**
-    * 机器人回答
-    */
-    @SerializedName("ResponseText")
-    @Expose
-    private String ResponseText;
-
-    /**
-    * 语义解析的槽位结果列表
+    * 槽位信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlotInfoList")
@@ -62,35 +55,28 @@ public class PostTextResponse  extends AbstractModel{
     private SlotInfo [] SlotInfoList;
 
     /**
-    * 透传字段
+    * 原始的用户说法。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputText")
+    @Expose
+    private String InputText;
+
+    /**
+    * 机器人回答。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResponseText")
+    @Expose
+    private String ResponseText;
+
+    /**
+    * 透传字段，由endpoint服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionAttributes")
     @Expose
     private String SessionAttributes;
-
-    /**
-    * 用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
-    */
-    @SerializedName("Question")
-    @Expose
-    private String Question;
-
-    /**
-    * tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("WaveUrl")
-    @Expose
-    private String WaveUrl;
-
-    /**
-    * tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("WaveData")
-    @Expose
-    private String WaveData;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -100,9 +86,9 @@ public class PostTextResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取当前会话状态。取值:"start"/"continue"/"complete"
+     * 获取当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return DialogStatus 当前会话状态。取值:"start"/"continue"/"complete"
+     * @return DialogStatus 当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDialogStatus() {
@@ -110,9 +96,9 @@ public class PostTextResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前会话状态。取值:"start"/"continue"/"complete"
+     * 设置当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DialogStatus 当前会话状态。取值:"start"/"continue"/"complete"
+     * @param DialogStatus 当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDialogStatus(String DialogStatus) {
@@ -120,9 +106,9 @@ public class PostTextResponse  extends AbstractModel{
     }
 
     /**
-     * 获取匹配到的机器人名称
+     * 获取匹配到的机器人名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return BotName 匹配到的机器人名称
+     * @return BotName 匹配到的机器人名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBotName() {
@@ -130,9 +116,9 @@ public class PostTextResponse  extends AbstractModel{
     }
 
     /**
-     * 设置匹配到的机器人名称
+     * 设置匹配到的机器人名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BotName 匹配到的机器人名称
+     * @param BotName 匹配到的机器人名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBotName(String BotName) {
@@ -140,9 +126,9 @@ public class PostTextResponse  extends AbstractModel{
     }
 
     /**
-     * 获取匹配到的意图名称
+     * 获取匹配到的意图名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return IntentName 匹配到的意图名称
+     * @return IntentName 匹配到的意图名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntentName() {
@@ -150,9 +136,9 @@ public class PostTextResponse  extends AbstractModel{
     }
 
     /**
-     * 设置匹配到的意图名称
+     * 设置匹配到的意图名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntentName 匹配到的意图名称
+     * @param IntentName 匹配到的意图名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntentName(String IntentName) {
@@ -160,25 +146,9 @@ public class PostTextResponse  extends AbstractModel{
     }
 
     /**
-     * 获取机器人回答
-     * @return ResponseText 机器人回答
-     */
-    public String getResponseText() {
-        return this.ResponseText;
-    }
-
-    /**
-     * 设置机器人回答
-     * @param ResponseText 机器人回答
-     */
-    public void setResponseText(String ResponseText) {
-        this.ResponseText = ResponseText;
-    }
-
-    /**
-     * 获取语义解析的槽位结果列表
+     * 获取槽位信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return SlotInfoList 语义解析的槽位结果列表
+     * @return SlotInfoList 槽位信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlotInfo [] getSlotInfoList() {
@@ -186,9 +156,9 @@ public class PostTextResponse  extends AbstractModel{
     }
 
     /**
-     * 设置语义解析的槽位结果列表
+     * 设置槽位信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlotInfoList 语义解析的槽位结果列表
+     * @param SlotInfoList 槽位信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlotInfoList(SlotInfo [] SlotInfoList) {
@@ -196,9 +166,49 @@ public class PostTextResponse  extends AbstractModel{
     }
 
     /**
-     * 获取透传字段
+     * 获取原始的用户说法。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return SessionAttributes 透传字段
+     * @return InputText 原始的用户说法。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInputText() {
+        return this.InputText;
+    }
+
+    /**
+     * 设置原始的用户说法。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputText 原始的用户说法。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputText(String InputText) {
+        this.InputText = InputText;
+    }
+
+    /**
+     * 获取机器人回答。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ResponseText 机器人回答。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResponseText() {
+        return this.ResponseText;
+    }
+
+    /**
+     * 设置机器人回答。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResponseText 机器人回答。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResponseText(String ResponseText) {
+        this.ResponseText = ResponseText;
+    }
+
+    /**
+     * 获取透传字段，由endpoint服务返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SessionAttributes 透传字段，由endpoint服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionAttributes() {
@@ -206,69 +216,13 @@ public class PostTextResponse  extends AbstractModel{
     }
 
     /**
-     * 设置透传字段
+     * 设置透传字段，由endpoint服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SessionAttributes 透传字段
+     * @param SessionAttributes 透传字段，由endpoint服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionAttributes(String SessionAttributes) {
         this.SessionAttributes = SessionAttributes;
-    }
-
-    /**
-     * 获取用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
-     * @return Question 用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
-     */
-    public String getQuestion() {
-        return this.Question;
-    }
-
-    /**
-     * 设置用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
-     * @param Question 用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
-     */
-    public void setQuestion(String Question) {
-        this.Question = Question;
-    }
-
-    /**
-     * 获取tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return WaveUrl tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getWaveUrl() {
-        return this.WaveUrl;
-    }
-
-    /**
-     * 设置tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param WaveUrl tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setWaveUrl(String WaveUrl) {
-        this.WaveUrl = WaveUrl;
-    }
-
-    /**
-     * 获取tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return WaveData tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getWaveData() {
-        return this.WaveData;
-    }
-
-    /**
-     * 设置tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param WaveData tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setWaveData(String WaveData) {
-        this.WaveData = WaveData;
     }
 
     /**
@@ -294,12 +248,10 @@ public class PostTextResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "DialogStatus", this.DialogStatus);
         this.setParamSimple(map, prefix + "BotName", this.BotName);
         this.setParamSimple(map, prefix + "IntentName", this.IntentName);
-        this.setParamSimple(map, prefix + "ResponseText", this.ResponseText);
         this.setParamArrayObj(map, prefix + "SlotInfoList.", this.SlotInfoList);
+        this.setParamSimple(map, prefix + "InputText", this.InputText);
+        this.setParamSimple(map, prefix + "ResponseText", this.ResponseText);
         this.setParamSimple(map, prefix + "SessionAttributes", this.SessionAttributes);
-        this.setParamSimple(map, prefix + "Question", this.Question);
-        this.setParamSimple(map, prefix + "WaveUrl", this.WaveUrl);
-        this.setParamSimple(map, prefix + "WaveData", this.WaveData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

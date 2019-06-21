@@ -49,24 +49,6 @@ public class TbpClient extends AbstractClient{
     }
 
     /**
-     *机器人会话接口，接收文本信息，传递给后台机器人
-     * @param req PostTextRequest
-     * @return PostTextResponse
-     * @throws TencentCloudSDKException
-     */
-    public PostTextResponse PostText(PostTextRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PostTextResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<PostTextResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "PostText"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *对当前机器人的会话状态进行复位
      * @param req ResetRequest
      * @return ResetResponse
@@ -78,6 +60,42 @@ public class TbpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "Reset"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接收调用侧的文本输入，返回应答文本。
+     * @param req TextProcessRequest
+     * @return TextProcessResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextProcessResponse TextProcess(TextProcessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TextProcessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TextProcessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TextProcess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *会话重置接口
+     * @param req TextResetRequest
+     * @return TextResetResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextResetResponse TextReset(TextResetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TextResetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TextResetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TextReset"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

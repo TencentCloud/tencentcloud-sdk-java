@@ -37,7 +37,7 @@ public class CreateProductRequest  extends AbstractModel{
     private ProductProperties ProductProperties;
 
     /**
-    * 创建LoRa产品需要的Skey
+    * 创建CLAA产品时，需要Skey
     */
     @SerializedName("Skey")
     @Expose
@@ -76,16 +76,16 @@ public class CreateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取创建LoRa产品需要的Skey
-     * @return Skey 创建LoRa产品需要的Skey
+     * 获取创建CLAA产品时，需要Skey
+     * @return Skey 创建CLAA产品时，需要Skey
      */
     public String getSkey() {
         return this.Skey;
     }
 
     /**
-     * 设置创建LoRa产品需要的Skey
-     * @param Skey 创建LoRa产品需要的Skey
+     * 设置创建CLAA产品时，需要Skey
+     * @param Skey 创建CLAA产品时，需要Skey
      */
     public void setSkey(String Skey) {
         this.Skey = Skey;

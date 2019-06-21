@@ -66,7 +66,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-    * 音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+    * 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
     */
     @SerializedName("VoiceType")
     @Expose
@@ -85,6 +85,13 @@ public class TextToVoiceRequest  extends AbstractModel{
     @SerializedName("SampleRate")
     @Expose
     private Integer SampleRate;
+
+    /**
+    * 返回音频格式，可取值：wav（默认），mp3
+    */
+    @SerializedName("Codec")
+    @Expose
+    private String Codec;
 
     /**
      * 获取合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
@@ -187,16 +194,16 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
-     * @return VoiceType 音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * 获取音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * @return VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
     public Integer getVoiceType() {
         return this.VoiceType;
     }
 
     /**
-     * 设置音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
-     * @param VoiceType 音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * 设置音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * @param VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
     public void setVoiceType(Integer VoiceType) {
         this.VoiceType = VoiceType;
@@ -235,6 +242,22 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取返回音频格式，可取值：wav（默认），mp3
+     * @return Codec 返回音频格式，可取值：wav（默认），mp3
+     */
+    public String getCodec() {
+        return this.Codec;
+    }
+
+    /**
+     * 设置返回音频格式，可取值：wav（默认），mp3
+     * @param Codec 返回音频格式，可取值：wav（默认），mp3
+     */
+    public void setCodec(String Codec) {
+        this.Codec = Codec;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -247,6 +270,7 @@ public class TextToVoiceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
         this.setParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
+        this.setParamSimple(map, prefix + "Codec", this.Codec);
 
     }
 }

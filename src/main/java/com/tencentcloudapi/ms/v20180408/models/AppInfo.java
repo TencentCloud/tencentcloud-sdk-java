@@ -51,7 +51,7 @@ public class AppInfo  extends AbstractModel{
     private String FileName;
 
     /**
-    * app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
+    * app的包名，需要正确的传递此字段
     */
     @SerializedName("AppPkgName")
     @Expose
@@ -143,16 +143,16 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
-     * @return AppPkgName app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
+     * 获取app的包名，需要正确的传递此字段
+     * @return AppPkgName app的包名，需要正确的传递此字段
      */
     public String getAppPkgName() {
         return this.AppPkgName;
     }
 
     /**
-     * 设置app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
-     * @param AppPkgName app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
+     * 设置app的包名，需要正确的传递此字段
+     * @param AppPkgName app的包名，需要正确的传递此字段
      */
     public void setAppPkgName(String AppPkgName) {
         this.AppPkgName = AppPkgName;

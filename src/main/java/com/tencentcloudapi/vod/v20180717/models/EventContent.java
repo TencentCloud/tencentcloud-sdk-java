@@ -80,7 +80,7 @@ public class EventContent  extends AbstractModel{
     */
     @SerializedName("PullCompleteEvent")
     @Expose
-    private PullFileTask PullCompleteEvent;
+    private PullUploadTask PullCompleteEvent;
 
     /**
     * 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
@@ -300,7 +300,7 @@ public class EventContent  extends AbstractModel{
      * @return PullCompleteEvent 视频转拉完成事件，当事件类型为 PullComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public PullFileTask getPullCompleteEvent() {
+    public PullUploadTask getPullCompleteEvent() {
         return this.PullCompleteEvent;
     }
 
@@ -310,7 +310,7 @@ public class EventContent  extends AbstractModel{
      * @param PullCompleteEvent 视频转拉完成事件，当事件类型为 PullComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPullCompleteEvent(PullFileTask PullCompleteEvent) {
+    public void setPullCompleteEvent(PullUploadTask PullCompleteEvent) {
         this.PullCompleteEvent = PullCompleteEvent;
     }
 

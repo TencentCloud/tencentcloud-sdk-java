@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class TextWatermarkTemplateInput  extends AbstractModel{
 
     /**
-    * 字体类型，目前仅支持 arial.ttf。
+    * 字体类型，目前可以支持两种：
+<li>simkai.ttf：可以支持中文和英文；</li>
+<li>arial.ttf：仅支持英文。</li>
     */
     @SerializedName("FontType")
     @Expose
@@ -54,16 +56,24 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     private Float FontAlpha;
 
     /**
-     * 获取字体类型，目前仅支持 arial.ttf。
-     * @return FontType 字体类型，目前仅支持 arial.ttf。
+     * 获取字体类型，目前可以支持两种：
+<li>simkai.ttf：可以支持中文和英文；</li>
+<li>arial.ttf：仅支持英文。</li>
+     * @return FontType 字体类型，目前可以支持两种：
+<li>simkai.ttf：可以支持中文和英文；</li>
+<li>arial.ttf：仅支持英文。</li>
      */
     public String getFontType() {
         return this.FontType;
     }
 
     /**
-     * 设置字体类型，目前仅支持 arial.ttf。
-     * @param FontType 字体类型，目前仅支持 arial.ttf。
+     * 设置字体类型，目前可以支持两种：
+<li>simkai.ttf：可以支持中文和英文；</li>
+<li>arial.ttf：仅支持英文。</li>
+     * @param FontType 字体类型，目前可以支持两种：
+<li>simkai.ttf：可以支持中文和英文；</li>
+<li>arial.ttf：仅支持英文。</li>
      */
     public void setFontType(String FontType) {
         this.FontType = FontType;

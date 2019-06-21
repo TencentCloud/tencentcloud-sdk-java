@@ -136,6 +136,46 @@ public class DescribeDeviceResponse  extends AbstractModel{
     private Integer LogLevel;
 
     /**
+    * 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirstOnlineTime")
+    @Expose
+    private Integer FirstOnlineTime;
+
+    /**
+    * 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastOfflineTime")
+    @Expose
+    private Integer LastOfflineTime;
+
+    /**
+    * 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Integer CreateTime;
+
+    /**
+    * 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertState")
+    @Expose
+    private Integer CertState;
+
+    /**
+    * 设备启用状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableState")
+    @Expose
+    private Integer EnableState;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -403,6 +443,106 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
+     * 获取首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return FirstOnlineTime 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getFirstOnlineTime() {
+        return this.FirstOnlineTime;
+    }
+
+    /**
+     * 设置首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirstOnlineTime 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirstOnlineTime(Integer FirstOnlineTime) {
+        this.FirstOnlineTime = FirstOnlineTime;
+    }
+
+    /**
+     * 获取最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LastOfflineTime 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getLastOfflineTime() {
+        return this.LastOfflineTime;
+    }
+
+    /**
+     * 设置最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastOfflineTime 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastOfflineTime(Integer LastOfflineTime) {
+        this.LastOfflineTime = LastOfflineTime;
+    }
+
+    /**
+     * 获取设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CreateTime 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * 设置设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Integer CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * 获取设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CertState 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getCertState() {
+        return this.CertState;
+    }
+
+    /**
+     * 设置设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertState 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertState(Integer CertState) {
+        this.CertState = CertState;
+    }
+
+    /**
+     * 获取设备启用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return EnableState 设备启用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getEnableState() {
+        return this.EnableState;
+    }
+
+    /**
+     * 设置设备启用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableState 设备启用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableState(Integer EnableState) {
+        this.EnableState = EnableState;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -438,6 +578,11 @@ public class DescribeDeviceResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
         this.setParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
         this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
+        this.setParamSimple(map, prefix + "FirstOnlineTime", this.FirstOnlineTime);
+        this.setParamSimple(map, prefix + "LastOfflineTime", this.LastOfflineTime);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "CertState", this.CertState);
+        this.setParamSimple(map, prefix + "EnableState", this.EnableState);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

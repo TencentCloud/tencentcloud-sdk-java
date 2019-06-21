@@ -168,6 +168,14 @@ public class DeviceInfo  extends AbstractModel{
     private Integer CertState;
 
     /**
+    * 设备可用状态，0禁用，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableState")
+    @Expose
+    private Integer EnableState;
+
+    /**
      * 获取设备名
      * @return DeviceName 设备名
      */
@@ -508,6 +516,26 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取设备可用状态，0禁用，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return EnableState 设备可用状态，0禁用，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getEnableState() {
+        return this.EnableState;
+    }
+
+    /**
+     * 设置设备可用状态，0禁用，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableState 设备可用状态，0禁用，1启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableState(Integer EnableState) {
+        this.EnableState = EnableState;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -531,6 +559,7 @@ public class DeviceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
         this.setParamSimple(map, prefix + "CertState", this.CertState);
+        this.setParamSimple(map, prefix + "EnableState", this.EnableState);
 
     }
 }

@@ -144,7 +144,7 @@ public class ProcedureTask  extends AbstractModel{
     private String TasksNotifyMode;
 
     /**
-    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 250 个字符。
+    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionContext")
@@ -476,9 +476,9 @@ public class ProcedureTask  extends AbstractModel{
     }
 
     /**
-     * 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 250 个字符。
+     * 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 250 个字符。
+     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionContext() {
@@ -486,9 +486,9 @@ public class ProcedureTask  extends AbstractModel{
     }
 
     /**
-     * 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 250 个字符。
+     * 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 250 个字符。
+     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionContext(String SessionContext) {

@@ -50,8 +50,6 @@ public class CmsClient extends AbstractClient{
 
     /**
      *音频内容检测（Audio Moderation, AM）服务使用了波形分析、声纹分析等技术，能识别涉黄、涉政、涉恐等违规音频，同时支持用户配置音频黑库，打击自定义的违规内容。
-
-通过API直接上传音频即可进行检测，对于高危部分直接屏蔽，可疑部分人工复审，从而节省审核人力，释放业务风险。
      * @param req AudioModerationRequest
      * @return AudioModerationResponse
      * @throws TencentCloudSDKException
@@ -62,6 +60,42 @@ public class CmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<AudioModerationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "AudioModeration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新增文本类型样本库
+     * @param req CreateTextSampleRequest
+     * @return CreateTextSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTextSampleResponse CreateTextSample(CreateTextSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTextSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTextSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTextSample"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除文字样本库，暂时只支持单个删除
+     * @param req DeleteTextSampleRequest
+     * @return DeleteTextSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTextSampleResponse DeleteTextSample(DeleteTextSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTextSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTextSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTextSample"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -87,8 +121,25 @@ public class CmsClient extends AbstractClient{
     }
 
     /**
+     *支持批量查询文字样本库
+     * @param req DescribeTextSampleRequest
+     * @return DescribeTextSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTextSampleResponse DescribeTextSample(DescribeTextSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTextSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTextSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTextSample"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *图片内容检测服务（Image Moderation, IM）能自动扫描图片，识别涉黄、涉恐、涉政、涉毒等有害内容，同时支持用户配置图片黑名单，打击自定义的违规图片。
-通过API获取检测的标签及置信度，可直接采信高置信度的结果，人工复审低置信度的结果，从而降低人工成本，提高审核效率。
      * @param req ImageModerationRequest
      * @return ImageModerationResponse
      * @throws TencentCloudSDKException
@@ -107,7 +158,6 @@ public class CmsClient extends AbstractClient{
 
     /**
      *文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
-通过API接口，能检测内容的危险等级，对于高危部分直接过滤，可疑部分人工复审，从而节省审核人力，释放业务风险。
      * @param req TextModerationRequest
      * @return TextModerationResponse
      * @throws TencentCloudSDKException
@@ -126,7 +176,6 @@ public class CmsClient extends AbstractClient{
 
     /**
      *视频内容检测（Video Moderation, VM）服务能识别涉黄、涉政、涉恐等违规视频，同时支持用户配置视频黑库，打击自定义的违规内容。
-通过API直接上传视频即可进行检测，对于高危部分直接过滤，可疑部分人工复审，从而节省审核人力，释放业务风险。
      * @param req VideoModerationRequest
      * @return VideoModerationResponse
      * @throws TencentCloudSDKException

@@ -289,6 +289,14 @@ public class InstanceInfo  extends AbstractModel{
     private String ZoneName;
 
     /**
+    * 物理机型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceClass")
+    @Expose
+    private String DeviceClass;
+
+    /**
      * 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -897,6 +905,26 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取物理机型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return DeviceClass 物理机型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceClass() {
+        return this.DeviceClass;
+    }
+
+    /**
+     * 设置物理机型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceClass 物理机型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceClass(String DeviceClass) {
+        this.DeviceClass = DeviceClass;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -938,6 +966,7 @@ public class InstanceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Qps", this.Qps);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
 
     }
 }

@@ -58,6 +58,13 @@ public class ImagePolityDetect  extends AbstractModel{
     private String [] Keywords;
 
     /**
+    * 命中的政治物品名称
+    */
+    @SerializedName("PolityItems")
+    @Expose
+    private String [] PolityItems;
+
+    /**
     * 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
     */
     @SerializedName("Score")
@@ -157,6 +164,22 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
+     * 获取命中的政治物品名称
+     * @return PolityItems 命中的政治物品名称
+     */
+    public String [] getPolityItems() {
+        return this.PolityItems;
+    }
+
+    /**
+     * 设置命中的政治物品名称
+     * @param PolityItems 命中的政治物品名称
+     */
+    public void setPolityItems(String [] PolityItems) {
+        this.PolityItems = PolityItems;
+    }
+
+    /**
      * 获取政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
      * @return Score 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
      */
@@ -180,6 +203,7 @@ public class ImagePolityDetect  extends AbstractModel{
         this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
         this.setParamArraySimple(map, prefix + "FaceNames.", this.FaceNames);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamArraySimple(map, prefix + "PolityItems.", this.PolityItems);
         this.setParamSimple(map, prefix + "Score", this.Score);
 
     }

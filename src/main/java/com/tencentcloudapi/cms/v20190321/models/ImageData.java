@@ -44,6 +44,13 @@ public class ImageData  extends AbstractModel{
     private Long EvilType;
 
     /**
+    * 图片性感详情
+    */
+    @SerializedName("HotDetect")
+    @Expose
+    private ImageHotDetect HotDetect;
+
+    /**
     * 图片违法详情
     */
     @SerializedName("IllegalDetect")
@@ -139,6 +146,22 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
+     * 获取图片性感详情
+     * @return HotDetect 图片性感详情
+     */
+    public ImageHotDetect getHotDetect() {
+        return this.HotDetect;
+    }
+
+    /**
+     * 设置图片性感详情
+     * @param HotDetect 图片性感详情
+     */
+    public void setHotDetect(ImageHotDetect HotDetect) {
+        this.HotDetect = HotDetect;
+    }
+
+    /**
      * 获取图片违法详情
      * @return IllegalDetect 图片违法详情
      */
@@ -224,6 +247,7 @@ public class ImageData  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
+        this.setParamObj(map, prefix + "HotDetect.", this.HotDetect);
         this.setParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
         this.setParamObj(map, prefix + "PolityDetect.", this.PolityDetect);
         this.setParamObj(map, prefix + "PornDetect.", this.PornDetect);

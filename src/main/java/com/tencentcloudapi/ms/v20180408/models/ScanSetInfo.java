@@ -86,6 +86,20 @@ public class ScanSetInfo  extends AbstractModel{
     private String StatusRef;
 
     /**
+    * 系统权限信息
+    */
+    @SerializedName("PermissionInfo")
+    @Expose
+    private ScanPermissionList PermissionInfo;
+
+    /**
+    * 敏感词列表
+    */
+    @SerializedName("SensitiveInfo")
+    @Expose
+    private ScanSensitiveList SensitiveInfo;
+
+    /**
      * 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @return TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
@@ -230,6 +244,38 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
+     * 获取系统权限信息
+     * @return PermissionInfo 系统权限信息
+     */
+    public ScanPermissionList getPermissionInfo() {
+        return this.PermissionInfo;
+    }
+
+    /**
+     * 设置系统权限信息
+     * @param PermissionInfo 系统权限信息
+     */
+    public void setPermissionInfo(ScanPermissionList PermissionInfo) {
+        this.PermissionInfo = PermissionInfo;
+    }
+
+    /**
+     * 获取敏感词列表
+     * @return SensitiveInfo 敏感词列表
+     */
+    public ScanSensitiveList getSensitiveInfo() {
+        return this.SensitiveInfo;
+    }
+
+    /**
+     * 设置敏感词列表
+     * @param SensitiveInfo 敏感词列表
+     */
+    public void setSensitiveInfo(ScanSensitiveList SensitiveInfo) {
+        this.SensitiveInfo = SensitiveInfo;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +288,8 @@ public class ScanSetInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "StatusCode", this.StatusCode);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "StatusRef", this.StatusRef);
+        this.setParamObj(map, prefix + "PermissionInfo.", this.PermissionInfo);
+        this.setParamObj(map, prefix + "SensitiveInfo.", this.SensitiveInfo);
 
     }
 }

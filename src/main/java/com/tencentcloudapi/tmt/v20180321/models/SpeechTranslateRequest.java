@@ -79,7 +79,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-    * 识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
+    * 识别模式，该参数已废弃
     */
     @SerializedName("Mode")
     @Expose
@@ -214,16 +214,16 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
-     * @return Mode 识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
+     * 获取识别模式，该参数已废弃
+     * @return Mode 识别模式，该参数已废弃
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * 设置识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
-     * @param Mode 识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
+     * 设置识别模式，该参数已废弃
+     * @param Mode 识别模式，该参数已废弃
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
