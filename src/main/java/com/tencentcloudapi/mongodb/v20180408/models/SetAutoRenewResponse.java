@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.mongodb.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRoutesResponse  extends AbstractModel{
-
-    /**
-    * 新增的实例个数。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Integer TotalCount;
-
-    /**
-    * 路由表对象。
-    */
-    @SerializedName("RouteTableSet")
-    @Expose
-    private RouteTable [] RouteTableSet;
+public class SetAutoRenewResponse  extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class CreateRoutesResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * 获取新增的实例个数。
-     * @return TotalCount 新增的实例个数。
-     */
-    public Integer getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * 设置新增的实例个数。
-     * @param TotalCount 新增的实例个数。
-     */
-    public void setTotalCount(Integer TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * 获取路由表对象。
-     * @return RouteTableSet 路由表对象。
-     */
-    public RouteTable [] getRouteTableSet() {
-        return this.RouteTableSet;
-    }
-
-    /**
-     * 设置路由表对象。
-     * @param RouteTableSet 路由表对象。
-     */
-    public void setRouteTableSet(RouteTable [] RouteTableSet) {
-        this.RouteTableSet = RouteTableSet;
-    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -95,8 +49,6 @@ public class CreateRoutesResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "RouteTableSet.", this.RouteTableSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,28 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRoutesResponse  extends AbstractModel{
+public class DescribeBillSummaryByProjectResponse  extends AbstractModel{
 
     /**
-    * 新增的实例个数。
+    * 数据是否准备好，0未准备好，1准备好
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Ready")
     @Expose
-    private Integer TotalCount;
+    private Integer Ready;
 
     /**
-    * 路由表对象。
+    * 各项目花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RouteTableSet")
+    @SerializedName("SummaryOverview")
     @Expose
-    private RouteTable [] RouteTableSet;
+    private ProjectSummaryOverviewItem [] SummaryOverview;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +45,39 @@ public class CreateRoutesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取新增的实例个数。
-     * @return TotalCount 新增的实例个数。
+     * 获取数据是否准备好，0未准备好，1准备好
+     * @return Ready 数据是否准备好，0未准备好，1准备好
      */
-    public Integer getTotalCount() {
-        return this.TotalCount;
+    public Integer getReady() {
+        return this.Ready;
     }
 
     /**
-     * 设置新增的实例个数。
-     * @param TotalCount 新增的实例个数。
+     * 设置数据是否准备好，0未准备好，1准备好
+     * @param Ready 数据是否准备好，0未准备好，1准备好
      */
-    public void setTotalCount(Integer TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setReady(Integer Ready) {
+        this.Ready = Ready;
     }
 
     /**
-     * 获取路由表对象。
-     * @return RouteTableSet 路由表对象。
+     * 获取各项目花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SummaryOverview 各项目花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public RouteTable [] getRouteTableSet() {
-        return this.RouteTableSet;
+    public ProjectSummaryOverviewItem [] getSummaryOverview() {
+        return this.SummaryOverview;
     }
 
     /**
-     * 设置路由表对象。
-     * @param RouteTableSet 路由表对象。
+     * 设置各项目花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SummaryOverview 各项目花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRouteTableSet(RouteTable [] RouteTableSet) {
-        this.RouteTableSet = RouteTableSet;
+    public void setSummaryOverview(ProjectSummaryOverviewItem [] SummaryOverview) {
+        this.SummaryOverview = SummaryOverview;
     }
 
     /**
@@ -95,8 +100,8 @@ public class CreateRoutesResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "RouteTableSet.", this.RouteTableSet);
+        this.setParamSimple(map, prefix + "Ready", this.Ready);
+        this.setParamArrayObj(map, prefix + "SummaryOverview.", this.SummaryOverview);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

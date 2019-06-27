@@ -55,6 +55,20 @@ public class DescribeCcnsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
+    * 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方法。顺序：`ASC`，倒序：`DESC`。
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
      * 获取CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
      * @return CcnIds CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
      */
@@ -135,6 +149,38 @@ public class DescribeCcnsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+     * @return OrderField 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * 设置排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+     * @param OrderField 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * 获取排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @return OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * 设置排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @param OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -142,6 +188,8 @@ public class DescribeCcnsRequest  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

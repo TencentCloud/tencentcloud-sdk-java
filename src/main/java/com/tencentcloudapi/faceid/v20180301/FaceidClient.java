@@ -49,6 +49,42 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *银行卡二要素核验
+     * @param req BankCard2EVerificationRequest
+     * @return BankCard2EVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public BankCard2EVerificationResponse BankCard2EVerification(BankCard2EVerificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BankCard2EVerificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BankCard2EVerificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BankCard2EVerification"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *银行卡四要素核验
+     * @param req BankCard4EVerificationRequest
+     * @return BankCard4EVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public BankCard4EVerificationResponse BankCard4EVerification(BankCard4EVerificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BankCard4EVerificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BankCard4EVerificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BankCard4EVerification"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *银行卡核验
      * @param req BankCardVerificationRequest
      * @return BankCardVerificationResponse

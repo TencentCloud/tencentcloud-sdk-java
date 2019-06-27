@@ -38,8 +38,7 @@ public class PullUploadRequest  extends AbstractModel{
     private String MediaName;
 
     /**
-    * 要拉取的视频封面 URL。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.jpg``` ，扩展名为 jpg，支持的扩展名详见[封面类型](https://cloud.tencent.com/document/product/266/9760#.E5.B0.81.E9.9D.A2.E7.B1.BB.E5.9E.8B)。</li>
+    * 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -134,20 +133,16 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要拉取的视频封面 URL。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.jpg``` ，扩展名为 jpg，支持的扩展名详见[封面类型](https://cloud.tencent.com/document/product/266/9760#.E5.B0.81.E9.9D.A2.E7.B1.BB.E5.9E.8B)。</li>
-     * @return CoverUrl 要拉取的视频封面 URL。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.jpg``` ，扩展名为 jpg，支持的扩展名详见[封面类型](https://cloud.tencent.com/document/product/266/9760#.E5.B0.81.E9.9D.A2.E7.B1.BB.E5.9E.8B)。</li>
+     * 获取要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
+     * @return CoverUrl 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * 设置要拉取的视频封面 URL。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.jpg``` ，扩展名为 jpg，支持的扩展名详见[封面类型](https://cloud.tencent.com/document/product/266/9760#.E5.B0.81.E9.9D.A2.E7.B1.BB.E5.9E.8B)。</li>
-     * @param CoverUrl 要拉取的视频封面 URL。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.jpg``` ，扩展名为 jpg，支持的扩展名详见[封面类型](https://cloud.tencent.com/document/product/266/9760#.E5.B0.81.E9.9D.A2.E7.B1.BB.E5.9E.8B)。</li>
+     * 设置要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
+     * @param CoverUrl 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;

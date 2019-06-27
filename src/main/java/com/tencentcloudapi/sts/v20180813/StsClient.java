@@ -67,6 +67,24 @@ public class StsClient extends AbstractClient{
     }
 
     /**
+     *本接口（AssumeRoleWithSAML）用于根据 SAML 断言申请角色临时凭证。
+     * @param req AssumeRoleWithSAMLRequest
+     * @return AssumeRoleWithSAMLResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssumeRoleWithSAMLResponse AssumeRoleWithSAML(AssumeRoleWithSAMLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssumeRoleWithSAMLResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssumeRoleWithSAMLResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssumeRoleWithSAML"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取联合身份临时访问凭证
      * @param req GetFederationTokenRequest
      * @return GetFederationTokenResponse

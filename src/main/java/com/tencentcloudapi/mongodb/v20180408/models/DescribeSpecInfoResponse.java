@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.mongodb.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRoutesResponse  extends AbstractModel{
+public class DescribeSpecInfoResponse  extends AbstractModel{
 
     /**
-    * 新增的实例个数。
+    * 实例售卖规格信息列表
     */
-    @SerializedName("TotalCount")
+    @SerializedName("SpecInfoList")
     @Expose
-    private Integer TotalCount;
-
-    /**
-    * 路由表对象。
-    */
-    @SerializedName("RouteTableSet")
-    @Expose
-    private RouteTable [] RouteTableSet;
+    private SpecificationInfo [] SpecInfoList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class CreateRoutesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取新增的实例个数。
-     * @return TotalCount 新增的实例个数。
+     * 获取实例售卖规格信息列表
+     * @return SpecInfoList 实例售卖规格信息列表
      */
-    public Integer getTotalCount() {
-        return this.TotalCount;
+    public SpecificationInfo [] getSpecInfoList() {
+        return this.SpecInfoList;
     }
 
     /**
-     * 设置新增的实例个数。
-     * @param TotalCount 新增的实例个数。
+     * 设置实例售卖规格信息列表
+     * @param SpecInfoList 实例售卖规格信息列表
      */
-    public void setTotalCount(Integer TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * 获取路由表对象。
-     * @return RouteTableSet 路由表对象。
-     */
-    public RouteTable [] getRouteTableSet() {
-        return this.RouteTableSet;
-    }
-
-    /**
-     * 设置路由表对象。
-     * @param RouteTableSet 路由表对象。
-     */
-    public void setRouteTableSet(RouteTable [] RouteTableSet) {
-        this.RouteTableSet = RouteTableSet;
+    public void setSpecInfoList(SpecificationInfo [] SpecInfoList) {
+        this.SpecInfoList = SpecInfoList;
     }
 
     /**
@@ -95,8 +72,7 @@ public class CreateRoutesResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "RouteTableSet.", this.RouteTableSet);
+        this.setParamArrayObj(map, prefix + "SpecInfoList.", this.SpecInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -85,7 +85,7 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
-     *查询账单资源汇总数据
+     *查询账单资源汇总数据 
      * @param req DescribeBillResourceSummaryRequest
      * @return DescribeBillResourceSummaryResponse
      * @throws TencentCloudSDKException
@@ -96,6 +96,78 @@ public class BillingClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBillResourceSummaryResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeBillResourceSummary"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取按付费模式汇总费用分布
+     * @param req DescribeBillSummaryByPayModeRequest
+     * @return DescribeBillSummaryByPayModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryByPayModeResponse DescribeBillSummaryByPayMode(DescribeBillSummaryByPayModeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillSummaryByPayModeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByPayModeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBillSummaryByPayMode"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取产品汇总费用分布
+     * @param req DescribeBillSummaryByProductRequest
+     * @return DescribeBillSummaryByProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryByProductResponse DescribeBillSummaryByProduct(DescribeBillSummaryByProductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillSummaryByProductResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByProductResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBillSummaryByProduct"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取按项目汇总费用分布
+     * @param req DescribeBillSummaryByProjectRequest
+     * @return DescribeBillSummaryByProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryByProjectResponse DescribeBillSummaryByProject(DescribeBillSummaryByProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillSummaryByProjectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByProjectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBillSummaryByProject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取按地域汇总费用分布
+     * @param req DescribeBillSummaryByRegionRequest
+     * @return DescribeBillSummaryByRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(DescribeBillSummaryByRegionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillSummaryByRegionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByRegionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBillSummaryByRegion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

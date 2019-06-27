@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.mongodb.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRoutesResponse  extends AbstractModel{
+public class DescribeSlowLogResponse  extends AbstractModel{
 
     /**
-    * 新增的实例个数。
+    * 符合查询条件的慢查询日志总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
 
     /**
-    * 路由表对象。
+    * 符合查询条件的慢查询日志详情。
     */
-    @SerializedName("RouteTableSet")
+    @SerializedName("SlowLogList")
     @Expose
-    private RouteTable [] RouteTableSet;
+    private String [] SlowLogList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class CreateRoutesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取新增的实例个数。
-     * @return TotalCount 新增的实例个数。
+     * 获取符合查询条件的慢查询日志总数。
+     * @return TotalCount 符合查询条件的慢查询日志总数。
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置新增的实例个数。
-     * @param TotalCount 新增的实例个数。
+     * 设置符合查询条件的慢查询日志总数。
+     * @param TotalCount 符合查询条件的慢查询日志总数。
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取路由表对象。
-     * @return RouteTableSet 路由表对象。
+     * 获取符合查询条件的慢查询日志详情。
+     * @return SlowLogList 符合查询条件的慢查询日志详情。
      */
-    public RouteTable [] getRouteTableSet() {
-        return this.RouteTableSet;
+    public String [] getSlowLogList() {
+        return this.SlowLogList;
     }
 
     /**
-     * 设置路由表对象。
-     * @param RouteTableSet 路由表对象。
+     * 设置符合查询条件的慢查询日志详情。
+     * @param SlowLogList 符合查询条件的慢查询日志详情。
      */
-    public void setRouteTableSet(RouteTable [] RouteTableSet) {
-        this.RouteTableSet = RouteTableSet;
+    public void setSlowLogList(String [] SlowLogList) {
+        this.SlowLogList = SlowLogList;
     }
 
     /**
@@ -96,7 +96,7 @@ public class CreateRoutesResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "RouteTableSet.", this.RouteTableSet);
+        this.setParamArraySimple(map, prefix + "SlowLogList.", this.SlowLogList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

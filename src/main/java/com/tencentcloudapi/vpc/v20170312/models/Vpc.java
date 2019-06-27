@@ -100,6 +100,13 @@ public class Vpc  extends AbstractModel{
     private String Ipv6CidrBlock;
 
     /**
+    * 标签键值对
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * 获取`VPC`名称。
      * @return VpcName `VPC`名称。
      */
@@ -276,6 +283,22 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
+     * 获取标签键值对
+     * @return TagSet 标签键值对
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * 设置标签键值对
+     * @param TagSet 标签键值对
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class Vpc  extends AbstractModel{
         this.setParamSimple(map, prefix + "DhcpOptionsId", this.DhcpOptionsId);
         this.setParamSimple(map, prefix + "EnableDhcp", this.EnableDhcp);
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

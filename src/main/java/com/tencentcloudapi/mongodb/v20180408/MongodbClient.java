@@ -49,6 +49,26 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(AssignProject)用于指定云数据库实例的所属项目。
+
+
+     * @param req AssignProjectRequest
+     * @return AssignProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssignProjectResponse AssignProject(AssignProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssignProjectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssignProjectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssignProject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。
      * @param req CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -78,6 +98,116 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceHourResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateDBInstanceHour"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
+     * @param req DescribeDBInstancesRequest
+     * @return DescribeDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeSlowLogs)用于获取云数据库实例的慢查询日志。
+     * @param req DescribeSlowLogRequest
+     * @return DescribeSlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogResponse DescribeSlowLog(DescribeSlowLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLog"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeSpecInfo)用于查询实例的售卖规格。
+     * @param req DescribeSpecInfoRequest
+     * @return DescribeSpecInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpecInfoResponse DescribeSpecInfo(DescribeSpecInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSpecInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSpecInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSpecInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(RenameInstance)用于修改云数据库实例的名称。
+     * @param req RenameInstanceRequest
+     * @return RenameInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenameInstanceResponse RenameInstance(RenameInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenameInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenameInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RenameInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(SetAutoRenew)用于设置包年包月云数据库实例的续费选项。
+     * @param req SetAutoRenewRequest
+     * @return SetAutoRenewResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAutoRenewResponse SetAutoRenew(SetAutoRenewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetAutoRenewResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetAutoRenewResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetAutoRenew"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(SetPassword)用于设置云数据库账户的密码。
+
+
+     * @param req SetPasswordRequest
+     * @return SetPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetPasswordResponse SetPassword(SetPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetPasswordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetPasswordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetPassword"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
