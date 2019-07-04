@@ -34,7 +34,7 @@ public class RecordParam  extends AbstractModel{
 
     /**
     * 录制存储时长。
-单位秒，取值范围： 0-5184000。
+单位秒，取值范围： 0-93312000。
 0表示永久存储。
     */
     @SerializedName("StorageTime")
@@ -78,10 +78,10 @@ public class RecordParam  extends AbstractModel{
 
     /**
      * 获取录制存储时长。
-单位秒，取值范围： 0-5184000。
+单位秒，取值范围： 0-93312000。
 0表示永久存储。
      * @return StorageTime 录制存储时长。
-单位秒，取值范围： 0-5184000。
+单位秒，取值范围： 0-93312000。
 0表示永久存储。
      */
     public Integer getStorageTime() {
@@ -90,10 +90,10 @@ public class RecordParam  extends AbstractModel{
 
     /**
      * 设置录制存储时长。
-单位秒，取值范围： 0-5184000。
+单位秒，取值范围： 0-93312000。
 0表示永久存储。
      * @param StorageTime 录制存储时长。
-单位秒，取值范围： 0-5184000。
+单位秒，取值范围： 0-93312000。
 0表示永久存储。
      */
     public void setStorageTime(Integer StorageTime) {

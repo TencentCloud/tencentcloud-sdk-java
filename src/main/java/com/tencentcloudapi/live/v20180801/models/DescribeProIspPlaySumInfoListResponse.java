@@ -44,42 +44,42 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     private String StatType;
 
     /**
-    * 每页的记录数
+    * 每页的记录数。
     */
     @SerializedName("PageSize")
     @Expose
     private Integer PageSize;
 
     /**
-    * 页号
+    * 页号。
     */
     @SerializedName("PageNum")
     @Expose
     private Integer PageNum;
 
     /**
-    * 总记录数
+    * 总记录数。
     */
     @SerializedName("TotalNum")
     @Expose
     private Integer TotalNum;
 
     /**
-    * 总页数
+    * 总页数。
     */
     @SerializedName("TotalPage")
     @Expose
     private Integer TotalPage;
 
     /**
-    * 省份或运营商汇总数据列表
+    * 省份或运营商汇总数据列表。
     */
     @SerializedName("DataInfoList")
     @Expose
     private ProIspPlaySumInfo [] DataInfoList;
 
     /**
-    * 平均带宽
+    * 平均带宽。
     */
     @SerializedName("AvgFluxPerSecond")
     @Expose
@@ -141,96 +141,96 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每页的记录数
-     * @return PageSize 每页的记录数
+     * 获取每页的记录数。
+     * @return PageSize 每页的记录数。
      */
     public Integer getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * 设置每页的记录数
-     * @param PageSize 每页的记录数
+     * 设置每页的记录数。
+     * @param PageSize 每页的记录数。
      */
     public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * 获取页号
-     * @return PageNum 页号
+     * 获取页号。
+     * @return PageNum 页号。
      */
     public Integer getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * 设置页号
-     * @param PageNum 页号
+     * 设置页号。
+     * @param PageNum 页号。
      */
     public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * 获取总记录数
-     * @return TotalNum 总记录数
+     * 获取总记录数。
+     * @return TotalNum 总记录数。
      */
     public Integer getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * 设置总记录数
-     * @param TotalNum 总记录数
+     * 设置总记录数。
+     * @param TotalNum 总记录数。
      */
     public void setTotalNum(Integer TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * 获取总页数
-     * @return TotalPage 总页数
+     * 获取总页数。
+     * @return TotalPage 总页数。
      */
     public Integer getTotalPage() {
         return this.TotalPage;
     }
 
     /**
-     * 设置总页数
-     * @param TotalPage 总页数
+     * 设置总页数。
+     * @param TotalPage 总页数。
      */
     public void setTotalPage(Integer TotalPage) {
         this.TotalPage = TotalPage;
     }
 
     /**
-     * 获取省份或运营商汇总数据列表
-     * @return DataInfoList 省份或运营商汇总数据列表
+     * 获取省份或运营商汇总数据列表。
+     * @return DataInfoList 省份或运营商汇总数据列表。
      */
     public ProIspPlaySumInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * 设置省份或运营商汇总数据列表
-     * @param DataInfoList 省份或运营商汇总数据列表
+     * 设置省份或运营商汇总数据列表。
+     * @param DataInfoList 省份或运营商汇总数据列表。
      */
     public void setDataInfoList(ProIspPlaySumInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;
     }
 
     /**
-     * 获取平均带宽
-     * @return AvgFluxPerSecond 平均带宽
+     * 获取平均带宽。
+     * @return AvgFluxPerSecond 平均带宽。
      */
     public Float getAvgFluxPerSecond() {
         return this.AvgFluxPerSecond;
     }
 
     /**
-     * 设置平均带宽
-     * @param AvgFluxPerSecond 平均带宽
+     * 设置平均带宽。
+     * @param AvgFluxPerSecond 平均带宽。
      */
     public void setAvgFluxPerSecond(Float AvgFluxPerSecond) {
         this.AvgFluxPerSecond = AvgFluxPerSecond;

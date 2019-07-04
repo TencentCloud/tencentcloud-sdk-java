@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeSlowLogsResponse  extends AbstractModel{
 
     /**
-    * 符合查询条件的慢查询日志总数
+    * 符合查询条件的慢查询日志总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
 
     /**
-    * 符合查询条件的慢查询日志详情
+    * 符合查询条件的慢查询日志详情。
     */
     @SerializedName("Items")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeSlowLogsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合查询条件的慢查询日志总数
-     * @return TotalCount 符合查询条件的慢查询日志总数
+     * 获取符合查询条件的慢查询日志总数。
+     * @return TotalCount 符合查询条件的慢查询日志总数。
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置符合查询条件的慢查询日志总数
-     * @param TotalCount 符合查询条件的慢查询日志总数
+     * 设置符合查询条件的慢查询日志总数。
+     * @param TotalCount 符合查询条件的慢查询日志总数。
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取符合查询条件的慢查询日志详情
-     * @return Items 符合查询条件的慢查询日志详情
+     * 获取符合查询条件的慢查询日志详情。
+     * @return Items 符合查询条件的慢查询日志详情。
      */
     public SlowLogInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * 设置符合查询条件的慢查询日志详情
-     * @param Items 符合查询条件的慢查询日志详情
+     * 设置符合查询条件的慢查询日志详情。
+     * @param Items 符合查询条件的慢查询日志详情。
      */
     public void setItems(SlowLogInfo [] Items) {
         this.Items = Items;

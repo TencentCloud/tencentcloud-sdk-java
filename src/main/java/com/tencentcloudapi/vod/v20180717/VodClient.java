@@ -1175,4 +1175,22 @@ public class VodClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *将点播视频发布到微信小程序，供微信小程序播放器播放。
+     * @param req WeChatMiniProgramPublishRequest
+     * @return WeChatMiniProgramPublishResponse
+     * @throws TencentCloudSDKException
+     */
+    public WeChatMiniProgramPublishResponse WeChatMiniProgramPublish(WeChatMiniProgramPublishRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<WeChatMiniProgramPublishResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<WeChatMiniProgramPublishResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "WeChatMiniProgramPublish"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBInstanceGTIDResponse  extends AbstractModel{
 
     /**
-    * GTID是否开通的标记：0-未开通，1-已开通。
+    * GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
     */
     @SerializedName("IsGTIDOpen")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeDBInstanceGTIDResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取GTID是否开通的标记：0-未开通，1-已开通。
-     * @return IsGTIDOpen GTID是否开通的标记：0-未开通，1-已开通。
+     * 获取GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
+     * @return IsGTIDOpen GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
      */
     public Integer getIsGTIDOpen() {
         return this.IsGTIDOpen;
     }
 
     /**
-     * 设置GTID是否开通的标记：0-未开通，1-已开通。
-     * @param IsGTIDOpen GTID是否开通的标记：0-未开通，1-已开通。
+     * 设置GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
+     * @param IsGTIDOpen GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
      */
     public void setIsGTIDOpen(Integer IsGTIDOpen) {
         this.IsGTIDOpen = IsGTIDOpen;

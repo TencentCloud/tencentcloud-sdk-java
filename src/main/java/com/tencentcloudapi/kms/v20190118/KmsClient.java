@@ -49,6 +49,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *取消CMK的计划删除操作
+     * @param req CancelKeyDeletionRequest
+     * @return CancelKeyDeletionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelKeyDeletionResponse CancelKeyDeletion(CancelKeyDeletionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelKeyDeletionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelKeyDeletionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CancelKeyDeletion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
      * @param req CreateKeyRequest
      * @return CreateKeyResponse
@@ -348,6 +366,24 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReEncryptResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ReEncrypt"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
+     * @param req ScheduleKeyDeletionRequest
+     * @return ScheduleKeyDeletionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScheduleKeyDeletionResponse ScheduleKeyDeletion(ScheduleKeyDeletionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScheduleKeyDeletionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScheduleKeyDeletionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ScheduleKeyDeletion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

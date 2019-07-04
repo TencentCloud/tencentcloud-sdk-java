@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateKeyRequest  extends AbstractModel{
 
     /**
-    * 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字符或数字的组合
+    * 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合。以 kms- 作为前缀的用于云产品使用，Alias 不可重复。
     */
     @SerializedName("Alias")
     @Expose
@@ -51,16 +51,16 @@ public class CreateKeyRequest  extends AbstractModel{
     private Long Type;
 
     /**
-     * 获取作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字符或数字的组合
-     * @return Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字符或数字的组合
+     * 获取作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合。以 kms- 作为前缀的用于云产品使用，Alias 不可重复。
+     * @return Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合。以 kms- 作为前缀的用于云产品使用，Alias 不可重复。
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * 设置作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字符或数字的组合
-     * @param Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字符或数字的组合
+     * 设置作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合。以 kms- 作为前缀的用于云产品使用，Alias 不可重复。
+     * @param Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合。以 kms- 作为前缀的用于云产品使用，Alias 不可重复。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

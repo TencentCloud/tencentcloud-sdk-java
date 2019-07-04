@@ -37,7 +37,7 @@ public class SlaveInstanceInfo  extends AbstractModel{
     private String Region;
 
     /**
-    * 虚拟Ip信息
+    * 虚拟 IP 信息
     */
     @SerializedName("Vip")
     @Expose
@@ -83,16 +83,16 @@ public class SlaveInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取虚拟Ip信息
-     * @return Vip 虚拟Ip信息
+     * 获取虚拟 IP 信息
+     * @return Vip 虚拟 IP 信息
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * 设置虚拟Ip信息
-     * @param Vip 虚拟Ip信息
+     * 设置虚拟 IP 信息
+     * @param Vip 虚拟 IP 信息
      */
     public void setVip(String Vip) {
         this.Vip = Vip;

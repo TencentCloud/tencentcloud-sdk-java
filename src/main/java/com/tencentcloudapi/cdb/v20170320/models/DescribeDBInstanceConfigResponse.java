@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DescribeDBInstanceConfigResponse  extends AbstractModel{
 
     /**
-    * 主库数据保护方式，主实例属性，可能的返回值：0-异步复制方式，1-半同步复制方式，2-强同步复制方式。
+    * 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
     */
     @SerializedName("ProtectMode")
     @Expose
     private Integer ProtectMode;
 
     /**
-    * 主库部署方式，主实例属性，可能的返回值：0-单可用部署，1-多可用区部署。
+    * 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
     */
     @SerializedName("DeployMode")
     @Expose
     private Integer DeployMode;
 
     /**
-    * 主库可用区的正式名称，如ap-shanghai-1。
+    * 实例可用区信息，格式如 "ap-shanghai-1"。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 从库的配置信息。
+    * 备库的配置信息。
     */
     @SerializedName("SlaveConfig")
     @Expose
     private SlaveConfig SlaveConfig;
 
     /**
-    * ECDB第二个从库的配置信息，只有ECDB实例才有这个字段。
+    * 强同步实例第二备库的配置信息。
     */
     @SerializedName("BackupConfig")
     @Expose
@@ -65,80 +65,80 @@ public class DescribeDBInstanceConfigResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取主库数据保护方式，主实例属性，可能的返回值：0-异步复制方式，1-半同步复制方式，2-强同步复制方式。
-     * @return ProtectMode 主库数据保护方式，主实例属性，可能的返回值：0-异步复制方式，1-半同步复制方式，2-强同步复制方式。
+     * 获取主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
+     * @return ProtectMode 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
      */
     public Integer getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * 设置主库数据保护方式，主实例属性，可能的返回值：0-异步复制方式，1-半同步复制方式，2-强同步复制方式。
-     * @param ProtectMode 主库数据保护方式，主实例属性，可能的返回值：0-异步复制方式，1-半同步复制方式，2-强同步复制方式。
+     * 设置主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
+     * @param ProtectMode 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
      */
     public void setProtectMode(Integer ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 
     /**
-     * 获取主库部署方式，主实例属性，可能的返回值：0-单可用部署，1-多可用区部署。
-     * @return DeployMode 主库部署方式，主实例属性，可能的返回值：0-单可用部署，1-多可用区部署。
+     * 获取主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
+     * @return DeployMode 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
      */
     public Integer getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * 设置主库部署方式，主实例属性，可能的返回值：0-单可用部署，1-多可用区部署。
-     * @param DeployMode 主库部署方式，主实例属性，可能的返回值：0-单可用部署，1-多可用区部署。
+     * 设置主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
+     * @param DeployMode 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
      */
     public void setDeployMode(Integer DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * 获取主库可用区的正式名称，如ap-shanghai-1。
-     * @return Zone 主库可用区的正式名称，如ap-shanghai-1。
+     * 获取实例可用区信息，格式如 "ap-shanghai-1"。
+     * @return Zone 实例可用区信息，格式如 "ap-shanghai-1"。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * 设置主库可用区的正式名称，如ap-shanghai-1。
-     * @param Zone 主库可用区的正式名称，如ap-shanghai-1。
+     * 设置实例可用区信息，格式如 "ap-shanghai-1"。
+     * @param Zone 实例可用区信息，格式如 "ap-shanghai-1"。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * 获取从库的配置信息。
-     * @return SlaveConfig 从库的配置信息。
+     * 获取备库的配置信息。
+     * @return SlaveConfig 备库的配置信息。
      */
     public SlaveConfig getSlaveConfig() {
         return this.SlaveConfig;
     }
 
     /**
-     * 设置从库的配置信息。
-     * @param SlaveConfig 从库的配置信息。
+     * 设置备库的配置信息。
+     * @param SlaveConfig 备库的配置信息。
      */
     public void setSlaveConfig(SlaveConfig SlaveConfig) {
         this.SlaveConfig = SlaveConfig;
     }
 
     /**
-     * 获取ECDB第二个从库的配置信息，只有ECDB实例才有这个字段。
-     * @return BackupConfig ECDB第二个从库的配置信息，只有ECDB实例才有这个字段。
+     * 获取强同步实例第二备库的配置信息。
+     * @return BackupConfig 强同步实例第二备库的配置信息。
      */
     public BackupConfig getBackupConfig() {
         return this.BackupConfig;
     }
 
     /**
-     * 设置ECDB第二个从库的配置信息，只有ECDB实例才有这个字段。
-     * @param BackupConfig ECDB第二个从库的配置信息，只有ECDB实例才有这个字段。
+     * 设置强同步实例第二备库的配置信息。
+     * @param BackupConfig 强同步实例第二备库的配置信息。
      */
     public void setBackupConfig(BackupConfig BackupConfig) {
         this.BackupConfig = BackupConfig;

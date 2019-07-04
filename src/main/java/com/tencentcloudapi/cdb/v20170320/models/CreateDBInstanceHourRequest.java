@@ -23,529 +23,529 @@ import java.util.HashMap;
 public class CreateDBInstanceHourRequest  extends AbstractModel{
 
     /**
-    * 实例数量，默认值为1, 最小值1，最大值为100
+    * 实例数量，默认值为 1，最小值 1，最大值为 100。
     */
     @SerializedName("GoodsNum")
     @Expose
     private Integer GoodsNum;
 
     /**
-    * 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+    * 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
     */
     @SerializedName("Memory")
     @Expose
     private Integer Memory;
 
     /**
-    * 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
+    * 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
     */
     @SerializedName("Volume")
     @Expose
     private Integer Volume;
 
     /**
-    * MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
+    * MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * 私有网络ID，如果不传则默认选择基础网络，请使用[查询私有网络列表](/document/api/215/15778)
+    * 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 私有网络下的子网ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)
+    * 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 项目ID，不填为默认项目。请使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口获取项目ID
+    * 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
 
     /**
-    * 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
+    * 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例ID，请使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询云数据库实例ID
+    * 实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
     */
     @SerializedName("MasterInstanceId")
     @Expose
     private String MasterInstanceId;
 
     /**
-    * 实例类型，默认为 master，支持值包括：master-表示主实例，dr-表示灾备实例，ro-表示只读实例
+    * 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
     */
     @SerializedName("InstanceRole")
     @Expose
     private String InstanceRole;
 
     /**
-    * 主实例的可用区信息，购买灾备实例时必填
+    * 主实例的可用区信息，购买灾备实例时必填。
     */
     @SerializedName("MasterRegion")
     @Expose
     private String MasterRegion;
 
     /**
-    * 自定义端口，端口支持范围：[ 1024-65535 ]
+    * 自定义端口，端口支持范围：[ 1024-65535 ] 。
     */
     @SerializedName("Port")
     @Expose
     private Integer Port;
 
     /**
-    * 设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+    * 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
+    * 参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
     */
     @SerializedName("ParamList")
     @Expose
     private ParamInfo [] ParamList;
 
     /**
-    * 数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+    * 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
     */
     @SerializedName("ProtectMode")
     @Expose
     private Integer ProtectMode;
 
     /**
-    * 多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+    * 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
     */
     @SerializedName("DeployMode")
     @Expose
     private Integer DeployMode;
 
     /**
-    * 备库1的可用区ID，默认为zoneId的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+    * 备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
     */
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
 
     /**
-    * 备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+    * 备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
     */
     @SerializedName("BackupZone")
     @Expose
     private String BackupZone;
 
     /**
-    * 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
+    * 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
     */
     @SerializedName("SecurityGroup")
     @Expose
     private String [] SecurityGroup;
 
     /**
-    * 只读实例信息
+    * 只读实例信息。购买只读实例时，该参数必传。
     */
     @SerializedName("RoGroup")
     @Expose
     private RoGroup RoGroup;
 
     /**
-    * 自动续费标记，值为0或1。购买按量计费实例该字段无意义
+    * 购买按量计费实例该字段无意义。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Integer AutoRenewFlag;
 
     /**
-    * 实例名称
+    * 实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例标签
+    * 实例标签信息。
     */
     @SerializedName("ResourceTags")
     @Expose
     private TagInfo [] ResourceTags;
 
     /**
-     * 获取实例数量，默认值为1, 最小值1，最大值为100
-     * @return GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
+     * 获取实例数量，默认值为 1，最小值 1，最大值为 100。
+     * @return GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
     public Integer getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * 设置实例数量，默认值为1, 最小值1，最大值为100
-     * @param GoodsNum 实例数量，默认值为1, 最小值1，最大值为100
+     * 设置实例数量，默认值为 1，最小值 1，最大值为 100。
+     * @param GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
     public void setGoodsNum(Integer GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * 获取实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
-     * @return Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+     * 获取实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
+     * @return Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      */
     public Integer getMemory() {
         return this.Memory;
     }
 
     /**
-     * 设置实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
-     * @param Memory 实例内存大小，单位：MB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的内存规格
+     * 设置实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
+     * @param Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      */
     public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * 获取实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
-     * @return Volume 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
+     * 获取实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
+     * @return Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
      */
     public Integer getVolume() {
         return this.Volume;
     }
 
     /**
-     * 设置实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
-     * @param Volume 实例硬盘大小，单位：GB，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的硬盘范围
+     * 设置实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
+     * @param Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
      */
     public void setVolume(Integer Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * 获取MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
-     * @return EngineVersion MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
+     * 获取MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+     * @return EngineVersion MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * 设置MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
-     * @param EngineVersion MySQL版本，值包括：5.5、5.6和5.7，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的实例版本
+     * 设置MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+     * @param EngineVersion MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * 获取私有网络ID，如果不传则默认选择基础网络，请使用[查询私有网络列表](/document/api/215/15778)
-     * @return UniqVpcId 私有网络ID，如果不传则默认选择基础网络，请使用[查询私有网络列表](/document/api/215/15778)
+     * 获取私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+     * @return UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * 设置私有网络ID，如果不传则默认选择基础网络，请使用[查询私有网络列表](/document/api/215/15778)
-     * @param UniqVpcId 私有网络ID，如果不传则默认选择基础网络，请使用[查询私有网络列表](/document/api/215/15778)
+     * 设置私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+     * @param UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * 获取私有网络下的子网ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)
-     * @return UniqSubnetId 私有网络下的子网ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)
+     * 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
+     * @return UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * 设置私有网络下的子网ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)
-     * @param UniqSubnetId 私有网络下的子网ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)
+     * 设置私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
+     * @param UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * 获取项目ID，不填为默认项目。请使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口获取项目ID
-     * @return ProjectId 项目ID，不填为默认项目。请使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口获取项目ID
+     * 获取项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
+     * @return ProjectId 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
      */
     public Integer getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置项目ID，不填为默认项目。请使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口获取项目ID
-     * @param ProjectId 项目ID，不填为默认项目。请使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口获取项目ID
+     * 设置项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
+     * @param ProjectId 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
      */
     public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * 获取可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
-     * @return Zone 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
+     * 获取可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
+     * @return Zone 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * 设置可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
-     * @param Zone 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口获取可创建的可用区
+     * 设置可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
+     * @param Zone 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * 获取实例ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例ID，请使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询云数据库实例ID
-     * @return MasterInstanceId 实例ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例ID，请使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询云数据库实例ID
+     * 获取实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
+     * @return MasterInstanceId 实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
      */
     public String getMasterInstanceId() {
         return this.MasterInstanceId;
     }
 
     /**
-     * 设置实例ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例ID，请使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询云数据库实例ID
-     * @param MasterInstanceId 实例ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例ID，请使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询云数据库实例ID
+     * 设置实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
+     * @param MasterInstanceId 实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
      */
     public void setMasterInstanceId(String MasterInstanceId) {
         this.MasterInstanceId = MasterInstanceId;
     }
 
     /**
-     * 获取实例类型，默认为 master，支持值包括：master-表示主实例，dr-表示灾备实例，ro-表示只读实例
-     * @return InstanceRole 实例类型，默认为 master，支持值包括：master-表示主实例，dr-表示灾备实例，ro-表示只读实例
+     * 获取实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
+     * @return InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * 设置实例类型，默认为 master，支持值包括：master-表示主实例，dr-表示灾备实例，ro-表示只读实例
-     * @param InstanceRole 实例类型，默认为 master，支持值包括：master-表示主实例，dr-表示灾备实例，ro-表示只读实例
+     * 设置实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
+     * @param InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;
     }
 
     /**
-     * 获取主实例的可用区信息，购买灾备实例时必填
-     * @return MasterRegion 主实例的可用区信息，购买灾备实例时必填
+     * 获取主实例的可用区信息，购买灾备实例时必填。
+     * @return MasterRegion 主实例的可用区信息，购买灾备实例时必填。
      */
     public String getMasterRegion() {
         return this.MasterRegion;
     }
 
     /**
-     * 设置主实例的可用区信息，购买灾备实例时必填
-     * @param MasterRegion 主实例的可用区信息，购买灾备实例时必填
+     * 设置主实例的可用区信息，购买灾备实例时必填。
+     * @param MasterRegion 主实例的可用区信息，购买灾备实例时必填。
      */
     public void setMasterRegion(String MasterRegion) {
         this.MasterRegion = MasterRegion;
     }
 
     /**
-     * 获取自定义端口，端口支持范围：[ 1024-65535 ]
-     * @return Port 自定义端口，端口支持范围：[ 1024-65535 ]
+     * 获取自定义端口，端口支持范围：[ 1024-65535 ] 。
+     * @return Port 自定义端口，端口支持范围：[ 1024-65535 ] 。
      */
     public Integer getPort() {
         return this.Port;
     }
 
     /**
-     * 设置自定义端口，端口支持范围：[ 1024-65535 ]
-     * @param Port 自定义端口，端口支持范围：[ 1024-65535 ]
+     * 设置自定义端口，端口支持范围：[ 1024-65535 ] 。
+     * @param Port 自定义端口，端口支持范围：[ 1024-65535 ] 。
      */
     public void setPort(Integer Port) {
         this.Port = Port;
     }
 
     /**
-     * 获取设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @return Password 设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+     * 获取设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * @return Password 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * 设置设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @param Password 设置root帐号密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+     * 设置设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * @param Password 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * 获取参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
-     * @return ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
+     * 获取参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
+     * @return ParamList 参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
      */
     public ParamInfo [] getParamList() {
         return this.ParamList;
     }
 
     /**
-     * 设置参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
-     * @param ParamList 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
+     * 设置参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
+     * @param ParamList 参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
      */
     public void setParamList(ParamInfo [] ParamList) {
         this.ParamList = ParamList;
     }
 
     /**
-     * 获取数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @return ProtectMode 数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+     * 获取数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * @return ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public Integer getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * 设置数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @param ProtectMode 数据复制方式，默认为0，支持值包括：0-表示异步复制，1-表示半同步复制，2-表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+     * 设置数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * @param ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public void setProtectMode(Integer ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 
     /**
-     * 获取多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @return DeployMode 多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+     * 获取多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * @return DeployMode 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public Integer getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * 设置多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @param DeployMode 多可用区域，默认为0，支持值包括：0-表示单可用区，1-表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+     * 设置多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * @param DeployMode 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public void setDeployMode(Integer DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * 获取备库1的可用区ID，默认为zoneId的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @return SlaveZone 备库1的可用区ID，默认为zoneId的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+     * 获取备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * @return SlaveZone 备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * 设置备库1的可用区ID，默认为zoneId的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @param SlaveZone 备库1的可用区ID，默认为zoneId的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+     * 设置备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * @param SlaveZone 备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * 获取备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @return BackupZone 备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+     * 获取备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+     * @return BackupZone 备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
      */
     public String getBackupZone() {
         return this.BackupZone;
     }
 
     /**
-     * 设置备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
-     * @param BackupZone 备库2的可用区ID，默认为0，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义
+     * 设置备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+     * @param BackupZone 备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
      */
     public void setBackupZone(String BackupZone) {
         this.BackupZone = BackupZone;
     }
 
     /**
-     * 获取安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
-     * @return SecurityGroup 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
+     * 获取安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
+     * @return SecurityGroup 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
      */
     public String [] getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * 设置安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
-     * @param SecurityGroup 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
+     * 设置安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
+     * @param SecurityGroup 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
      */
     public void setSecurityGroup(String [] SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
     }
 
     /**
-     * 获取只读实例信息
-     * @return RoGroup 只读实例信息
+     * 获取只读实例信息。购买只读实例时，该参数必传。
+     * @return RoGroup 只读实例信息。购买只读实例时，该参数必传。
      */
     public RoGroup getRoGroup() {
         return this.RoGroup;
     }
 
     /**
-     * 设置只读实例信息
-     * @param RoGroup 只读实例信息
+     * 设置只读实例信息。购买只读实例时，该参数必传。
+     * @param RoGroup 只读实例信息。购买只读实例时，该参数必传。
      */
     public void setRoGroup(RoGroup RoGroup) {
         this.RoGroup = RoGroup;
     }
 
     /**
-     * 获取自动续费标记，值为0或1。购买按量计费实例该字段无意义
-     * @return AutoRenewFlag 自动续费标记，值为0或1。购买按量计费实例该字段无意义
+     * 获取购买按量计费实例该字段无意义。
+     * @return AutoRenewFlag 购买按量计费实例该字段无意义。
      */
     public Integer getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * 设置自动续费标记，值为0或1。购买按量计费实例该字段无意义
-     * @param AutoRenewFlag 自动续费标记，值为0或1。购买按量计费实例该字段无意义
+     * 设置购买按量计费实例该字段无意义。
+     * @param AutoRenewFlag 购买按量计费实例该字段无意义。
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * 获取实例名称
-     * @return InstanceName 实例名称
+     * 获取实例名称。
+     * @return InstanceName 实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * 设置实例名称
-     * @param InstanceName 实例名称
+     * 设置实例名称。
+     * @param InstanceName 实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * 获取实例标签
-     * @return ResourceTags 实例标签
+     * 获取实例标签信息。
+     * @return ResourceTags 实例标签信息。
      */
     public TagInfo [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * 设置实例标签
-     * @param ResourceTags 实例标签
+     * 设置实例标签信息。
+     * @param ResourceTags 实例标签信息。
      */
     public void setResourceTags(TagInfo [] ResourceTags) {
         this.ResourceTags = ResourceTags;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeInstanceParamRecordsResponse  extends AbstractModel{
 
     /**
-    * 符合条件的记录数
+    * 符合条件的记录数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
 
     /**
-    * 参数修改记录
+    * 参数修改记录。
     */
     @SerializedName("Items")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeInstanceParamRecordsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合条件的记录数
-     * @return TotalCount 符合条件的记录数
+     * 获取符合条件的记录数。
+     * @return TotalCount 符合条件的记录数。
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置符合条件的记录数
-     * @param TotalCount 符合条件的记录数
+     * 设置符合条件的记录数。
+     * @param TotalCount 符合条件的记录数。
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取参数修改记录
-     * @return Items 参数修改记录
+     * 获取参数修改记录。
+     * @return Items 参数修改记录。
      */
     public ParamRecord [] getItems() {
         return this.Items;
     }
 
     /**
-     * 设置参数修改记录
-     * @param Items 参数修改记录
+     * 设置参数修改记录。
+     * @param Items 参数修改记录。
      */
     public void setItems(ParamRecord [] Items) {
         this.Items = Items;

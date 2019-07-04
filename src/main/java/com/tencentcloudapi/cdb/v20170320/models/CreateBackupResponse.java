@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateBackupResponse  extends AbstractModel{
 
     /**
-    * 备份任务ID。
+    * 备份任务 ID。
     */
     @SerializedName("BackupId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateBackupResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取备份任务ID。
-     * @return BackupId 备份任务ID。
+     * 获取备份任务 ID。
+     * @return BackupId 备份任务 ID。
      */
     public Integer getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * 设置备份任务ID。
-     * @param BackupId 备份任务ID。
+     * 设置备份任务 ID。
+     * @param BackupId 备份任务 ID。
      */
     public void setBackupId(Integer BackupId) {
         this.BackupId = BackupId;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class Outbound  extends AbstractModel{
 
     /**
-    * 策略，ACCEPT或者DROP
+    * 策略，ACCEPT 或者 DROP
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 目的Ip或Ip段，例如172.16.0.0/12
+    * 目的 IP 或 IP 段，例如172.16.0.0/12
     */
     @SerializedName("CidrIp")
     @Expose
@@ -44,46 +44,46 @@ public class Outbound  extends AbstractModel{
     private String PortRange;
 
     /**
-    * 网络协议，支持udp、tcp等
+    * 网络协议，支持 UDP、TCP等
     */
     @SerializedName("IpProtocol")
     @Expose
     private String IpProtocol;
 
     /**
-    * 规则限定的方向，进站规则为OUTPUT
+    * 规则限定的方向，进站规则为 OUTPUT
     */
     @SerializedName("Dir")
     @Expose
     private String Dir;
 
     /**
-     * 获取策略，ACCEPT或者DROP
-     * @return Action 策略，ACCEPT或者DROP
+     * 获取策略，ACCEPT 或者 DROP
+     * @return Action 策略，ACCEPT 或者 DROP
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * 设置策略，ACCEPT或者DROP
-     * @param Action 策略，ACCEPT或者DROP
+     * 设置策略，ACCEPT 或者 DROP
+     * @param Action 策略，ACCEPT 或者 DROP
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * 获取目的Ip或Ip段，例如172.16.0.0/12
-     * @return CidrIp 目的Ip或Ip段，例如172.16.0.0/12
+     * 获取目的 IP 或 IP 段，例如172.16.0.0/12
+     * @return CidrIp 目的 IP 或 IP 段，例如172.16.0.0/12
      */
     public String getCidrIp() {
         return this.CidrIp;
     }
 
     /**
-     * 设置目的Ip或Ip段，例如172.16.0.0/12
-     * @param CidrIp 目的Ip或Ip段，例如172.16.0.0/12
+     * 设置目的 IP 或 IP 段，例如172.16.0.0/12
+     * @param CidrIp 目的 IP 或 IP 段，例如172.16.0.0/12
      */
     public void setCidrIp(String CidrIp) {
         this.CidrIp = CidrIp;
@@ -106,32 +106,32 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 获取网络协议，支持udp、tcp等
-     * @return IpProtocol 网络协议，支持udp、tcp等
+     * 获取网络协议，支持 UDP、TCP等
+     * @return IpProtocol 网络协议，支持 UDP、TCP等
      */
     public String getIpProtocol() {
         return this.IpProtocol;
     }
 
     /**
-     * 设置网络协议，支持udp、tcp等
-     * @param IpProtocol 网络协议，支持udp、tcp等
+     * 设置网络协议，支持 UDP、TCP等
+     * @param IpProtocol 网络协议，支持 UDP、TCP等
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;
     }
 
     /**
-     * 获取规则限定的方向，进站规则为OUTPUT
-     * @return Dir 规则限定的方向，进站规则为OUTPUT
+     * 获取规则限定的方向，进站规则为 OUTPUT
+     * @return Dir 规则限定的方向，进站规则为 OUTPUT
      */
     public String getDir() {
         return this.Dir;
     }
 
     /**
-     * 设置规则限定的方向，进站规则为OUTPUT
-     * @param Dir 规则限定的方向，进站规则为OUTPUT
+     * 设置规则限定的方向，进站规则为 OUTPUT
+     * @param Dir 规则限定的方向，进站规则为 OUTPUT
      */
     public void setDir(String Dir) {
         this.Dir = Dir;

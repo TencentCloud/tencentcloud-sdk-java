@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DisassociateSecurityGroupsRequest  extends AbstractModel{
 
     /**
-    * 安全组Id。
+    * 安全组 ID。
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 实例ID列表，一个或者多个实例Id组成的数组。
+    * 实例 ID 列表，一个或者多个实例 ID 组成的数组。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * 获取安全组Id。
-     * @return SecurityGroupId 安全组Id。
+     * 获取安全组 ID。
+     * @return SecurityGroupId 安全组 ID。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * 设置安全组Id。
-     * @param SecurityGroupId 安全组Id。
+     * 设置安全组 ID。
+     * @param SecurityGroupId 安全组 ID。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * 获取实例ID列表，一个或者多个实例Id组成的数组。
-     * @return InstanceIds 实例ID列表，一个或者多个实例Id组成的数组。
+     * 获取实例 ID 列表，一个或者多个实例 ID 组成的数组。
+     * @return InstanceIds 实例 ID 列表，一个或者多个实例 ID 组成的数组。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * 设置实例ID列表，一个或者多个实例Id组成的数组。
-     * @param InstanceIds 实例ID列表，一个或者多个实例Id组成的数组。
+     * 设置实例 ID 列表，一个或者多个实例 ID 组成的数组。
+     * @param InstanceIds 实例 ID 列表，一个或者多个实例 ID 组成的数组。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

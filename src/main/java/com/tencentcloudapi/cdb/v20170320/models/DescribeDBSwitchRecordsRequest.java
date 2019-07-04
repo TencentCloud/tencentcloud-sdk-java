@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
 
     /**
-    * 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+    * 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -37,23 +37,23 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 分页大小，默认值为50，最小值为1，最大值为2000。
+    * 分页大小，默认值为 50，最小值为 1，最大值为 2000。
     */
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
 
     /**
-     * 获取实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -76,16 +76,16 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小，默认值为50，最小值为1，最大值为2000。
-     * @return Limit 分页大小，默认值为50，最小值为1，最大值为2000。
+     * 获取分页大小，默认值为 50，最小值为 1，最大值为 2000。
+     * @return Limit 分页大小，默认值为 50，最小值为 1，最大值为 2000。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页大小，默认值为50，最小值为1，最大值为2000。
-     * @param Limit 分页大小，默认值为50，最小值为1，最大值为2000。
+     * 设置分页大小，默认值为 50，最小值为 1，最大值为 2000。
+     * @param Limit 分页大小，默认值为 50，最小值为 1，最大值为 2000。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

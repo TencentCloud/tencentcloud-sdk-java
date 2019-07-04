@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBImportRecordsRequest  extends AbstractModel{
 
     /**
-    * 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -44,30 +44,30 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-    * 分页参数 , 偏移量 , 默认值为0。
+    * 分页参数，偏移量，默认值为0。
     */
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
 
     /**
-    * 分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
+    * 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
 
     /**
-     * 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -106,32 +106,32 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数 , 偏移量 , 默认值为0。
-     * @return Offset 分页参数 , 偏移量 , 默认值为0。
+     * 获取分页参数，偏移量，默认值为0。
+     * @return Offset 分页参数，偏移量，默认值为0。
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置分页参数 , 偏移量 , 默认值为0。
-     * @param Offset 分页参数 , 偏移量 , 默认值为0。
+     * 设置分页参数，偏移量，默认值为0。
+     * @param Offset 分页参数，偏移量，默认值为0。
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
-     * @return Limit 分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
+     * 获取分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+     * @return Limit 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
-     * @param Limit 分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
+     * 设置分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+     * @param Limit 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

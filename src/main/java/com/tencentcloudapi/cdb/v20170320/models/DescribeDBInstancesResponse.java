@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDBInstancesResponse  extends AbstractModel{
 
     /**
-    * 符合查询条件的实例总数
+    * 符合查询条件的实例总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
 
     /**
-    * 实例详细信息
+    * 实例详细信息。
     */
     @SerializedName("Items")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeDBInstancesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合查询条件的实例总数
-     * @return TotalCount 符合查询条件的实例总数
+     * 获取符合查询条件的实例总数。
+     * @return TotalCount 符合查询条件的实例总数。
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置符合查询条件的实例总数
-     * @param TotalCount 符合查询条件的实例总数
+     * 设置符合查询条件的实例总数。
+     * @param TotalCount 符合查询条件的实例总数。
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取实例详细信息
-     * @return Items 实例详细信息
+     * 获取实例详细信息。
+     * @return Items 实例详细信息。
      */
     public InstanceInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * 设置实例详细信息
-     * @param Items 实例详细信息
+     * 设置实例详细信息。
+     * @param Items 实例详细信息。
      */
     public void setItems(InstanceInfo [] Items) {
         this.Items = Items;

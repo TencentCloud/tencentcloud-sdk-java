@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeInstanceParamsResponse  extends AbstractModel{
 
     /**
-    * 实例的参数总数
+    * 实例的参数总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
 
     /**
-    * 参数详情
+    * 参数详情。
     */
     @SerializedName("Items")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例的参数总数
-     * @return TotalCount 实例的参数总数
+     * 获取实例的参数总数。
+     * @return TotalCount 实例的参数总数。
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置实例的参数总数
-     * @param TotalCount 实例的参数总数
+     * 设置实例的参数总数。
+     * @param TotalCount 实例的参数总数。
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取参数详情
-     * @return Items 参数详情
+     * 获取参数详情。
+     * @return Items 参数详情。
      */
     public ParameterDetail [] getItems() {
         return this.Items;
     }
 
     /**
-     * 设置参数详情
-     * @param Items 参数详情
+     * 设置参数详情。
+     * @param Items 参数详情。
      */
     public void setItems(ParameterDetail [] Items) {
         this.Items = Items;

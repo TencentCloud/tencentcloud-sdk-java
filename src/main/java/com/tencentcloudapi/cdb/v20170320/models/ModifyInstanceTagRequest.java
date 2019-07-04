@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyInstanceTagRequest  extends AbstractModel{
 
     /**
-    * 实例ID
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 要增加或修改的标签
+    * 要增加或修改的标签。
     */
     @SerializedName("ReplaceTags")
     @Expose
     private TagInfo [] ReplaceTags;
 
     /**
-    * 要删除的标签
+    * 要删除的标签。
     */
     @SerializedName("DeleteTags")
     @Expose
     private TagInfo [] DeleteTags;
 
     /**
-     * 获取实例ID
-     * @return InstanceId 实例ID
+     * 获取实例 ID。
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置实例ID
-     * @param InstanceId 实例ID
+     * 设置实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * 获取要增加或修改的标签
-     * @return ReplaceTags 要增加或修改的标签
+     * 获取要增加或修改的标签。
+     * @return ReplaceTags 要增加或修改的标签。
      */
     public TagInfo [] getReplaceTags() {
         return this.ReplaceTags;
     }
 
     /**
-     * 设置要增加或修改的标签
-     * @param ReplaceTags 要增加或修改的标签
+     * 设置要增加或修改的标签。
+     * @param ReplaceTags 要增加或修改的标签。
      */
     public void setReplaceTags(TagInfo [] ReplaceTags) {
         this.ReplaceTags = ReplaceTags;
     }
 
     /**
-     * 获取要删除的标签
-     * @return DeleteTags 要删除的标签
+     * 获取要删除的标签。
+     * @return DeleteTags 要删除的标签。
      */
     public TagInfo [] getDeleteTags() {
         return this.DeleteTags;
     }
 
     /**
-     * 设置要删除的标签
-     * @param DeleteTags 要删除的标签
+     * 设置要删除的标签。
+     * @param DeleteTags 要删除的标签。
      */
     public void setDeleteTags(TagInfo [] DeleteTags) {
         this.DeleteTags = DeleteTags;

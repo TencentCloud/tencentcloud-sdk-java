@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeDefaultParamsRequest  extends AbstractModel{
 
     /**
-    * mysql版本，目前支持["5.1", "5.5", "5.6", "5.7"]
+    * mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-     * 获取mysql版本，目前支持["5.1", "5.5", "5.6", "5.7"]
-     * @return EngineVersion mysql版本，目前支持["5.1", "5.5", "5.6", "5.7"]
+     * 获取mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+     * @return EngineVersion mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * 设置mysql版本，目前支持["5.1", "5.5", "5.6", "5.7"]
-     * @param EngineVersion mysql版本，目前支持["5.1", "5.5", "5.6", "5.7"]
+     * 设置mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+     * @param EngineVersion mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;

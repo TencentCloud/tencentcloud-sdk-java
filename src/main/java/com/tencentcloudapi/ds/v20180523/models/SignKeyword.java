@@ -44,7 +44,7 @@ public class SignKeyword  extends AbstractModel{
     private String OffsetCoordY;
 
     /**
-    * 签章突破宽度
+    * 签章图片宽度
     */
     @SerializedName("ImageWidth")
     @Expose
@@ -106,16 +106,16 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 获取签章突破宽度
-     * @return ImageWidth 签章突破宽度
+     * 获取签章图片宽度
+     * @return ImageWidth 签章图片宽度
      */
     public String getImageWidth() {
         return this.ImageWidth;
     }
 
     /**
-     * 设置签章突破宽度
-     * @param ImageWidth 签章突破宽度
+     * 设置签章图片宽度
+     * @param ImageWidth 签章图片宽度
      */
     public void setImageWidth(String ImageWidth) {
         this.ImageWidth = ImageWidth;

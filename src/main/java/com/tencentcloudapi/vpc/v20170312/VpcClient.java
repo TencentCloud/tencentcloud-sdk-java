@@ -1543,6 +1543,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeNatGateways）用于查询 NAT 网关。
+     * @param req DescribeNatGatewaysRequest
+     * @return DescribeNatGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatGatewaysResponse DescribeNatGateways(DescribeNatGatewaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNatGatewaysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNatGatewaysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNatGateways"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
      * @param req DescribeNetworkInterfacesRequest
      * @return DescribeNetworkInterfacesResponse

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class VerifyRootAccountRequest  extends AbstractModel{
 
     /**
-    * 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例ROOT账号的密码。
+    * 实例 ROOT 账号的密码。
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * 获取实例ROOT账号的密码。
-     * @return Password 实例ROOT账号的密码。
+     * 获取实例 ROOT 账号的密码。
+     * @return Password 实例 ROOT 账号的密码。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * 设置实例ROOT账号的密码。
-     * @param Password 实例ROOT账号的密码。
+     * 设置实例 ROOT 账号的密码。
+     * @param Password 实例 ROOT 账号的密码。
      */
     public void setPassword(String Password) {
         this.Password = Password;

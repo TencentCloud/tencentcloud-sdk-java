@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeBinlogsResponse  extends AbstractModel{
 
     /**
-    * 符合查询条件的日志文件总数
+    * 符合查询条件的日志文件总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
 
     /**
-    * 符合查询条件的二进制日志文件详情
+    * 符合查询条件的二进制日志文件详情。
     */
     @SerializedName("Items")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeBinlogsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合查询条件的日志文件总数
-     * @return TotalCount 符合查询条件的日志文件总数
+     * 获取符合查询条件的日志文件总数。
+     * @return TotalCount 符合查询条件的日志文件总数。
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置符合查询条件的日志文件总数
-     * @param TotalCount 符合查询条件的日志文件总数
+     * 设置符合查询条件的日志文件总数。
+     * @param TotalCount 符合查询条件的日志文件总数。
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取符合查询条件的二进制日志文件详情
-     * @return Items 符合查询条件的二进制日志文件详情
+     * 获取符合查询条件的二进制日志文件详情。
+     * @return Items 符合查询条件的二进制日志文件详情。
      */
     public BinlogInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * 设置符合查询条件的二进制日志文件详情
-     * @param Items 符合查询条件的二进制日志文件详情
+     * 设置符合查询条件的二进制日志文件详情。
+     * @param Items 符合查询条件的二进制日志文件详情。
      */
     public void setItems(BinlogInfo [] Items) {
         this.Items = Items;

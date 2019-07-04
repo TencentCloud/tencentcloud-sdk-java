@@ -51,7 +51,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     private Long OrderType;
 
     /**
-    * 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK
+    * 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
     */
     @SerializedName("KeyState")
     @Expose
@@ -129,16 +129,16 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK
-     * @return KeyState 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK
+     * 获取根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
+     * @return KeyState 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
      */
     public Long getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * 设置根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK
-     * @param KeyState 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK
+     * 设置根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
+     * @param KeyState 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
      */
     public void setKeyState(Long KeyState) {
         this.KeyState = KeyState;

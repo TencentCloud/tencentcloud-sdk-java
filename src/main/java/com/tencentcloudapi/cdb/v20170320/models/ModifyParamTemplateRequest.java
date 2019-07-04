@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyParamTemplateRequest  extends AbstractModel{
 
     /**
-    * 模板Id。
+    * 模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -51,16 +51,16 @@ public class ModifyParamTemplateRequest  extends AbstractModel{
     private Parameter [] ParamList;
 
     /**
-     * 获取模板Id。
-     * @return TemplateId 模板Id。
+     * 获取模板 ID。
+     * @return TemplateId 模板 ID。
      */
     public Integer getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * 设置模板Id。
-     * @param TemplateId 模板Id。
+     * 设置模板 ID。
+     * @param TemplateId 模板 ID。
      */
     public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyDBInstanceProjectRequest  extends AbstractModel{
 
     /**
-    * 实例ID数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+    * 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 项目的ID。
+    * 项目的 ID。
     */
     @SerializedName("NewProjectId")
     @Expose
     private Integer NewProjectId;
 
     /**
-     * 获取实例ID数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
-     * @return InstanceIds 实例ID数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * 获取实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * @return InstanceIds 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * 设置实例ID数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
-     * @param InstanceIds 实例ID数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * 设置实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * @param InstanceIds 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * 获取项目的ID。
-     * @return NewProjectId 项目的ID。
+     * 获取项目的 ID。
+     * @return NewProjectId 项目的 ID。
      */
     public Integer getNewProjectId() {
         return this.NewProjectId;
     }
 
     /**
-     * 设置项目的ID。
-     * @param NewProjectId 项目的ID。
+     * 设置项目的 ID。
+     * @param NewProjectId 项目的 ID。
      */
     public void setNewProjectId(Integer NewProjectId) {
         this.NewProjectId = NewProjectId;

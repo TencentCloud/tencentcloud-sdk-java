@@ -27,6 +27,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
 <li>WechatPublish：微信发布任务；</li>
+<li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
@@ -153,6 +154,14 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     private CreateImageSpriteTask2017 CreateImageSpriteTask;
 
     /**
+    * 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WechatMiniProgramPublishTask")
+    @Expose
+    private WechatMiniProgramPublishTask WechatMiniProgramPublishTask;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -164,6 +173,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
 <li>WechatPublish：微信发布任务；</li>
+<li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
@@ -177,6 +187,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
 <li>WechatPublish：微信发布任务；</li>
+<li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
@@ -196,6 +207,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
 <li>WechatPublish：微信发布任务；</li>
+<li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
@@ -209,6 +221,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
 <li>WechatPublish：微信发布任务；</li>
+<li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
@@ -500,6 +513,26 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
+     * 获取微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() {
+        return this.WechatMiniProgramPublishTask;
+    }
+
+    /**
+     * 设置微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask WechatMiniProgramPublishTask) {
+        this.WechatMiniProgramPublishTask = WechatMiniProgramPublishTask;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -534,6 +567,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
         this.setParamObj(map, prefix + "ConcatTask.", this.ConcatTask);
         this.setParamObj(map, prefix + "ClipTask.", this.ClipTask);
         this.setParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
+        this.setParamObj(map, prefix + "WechatMiniProgramPublishTask.", this.WechatMiniProgramPublishTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

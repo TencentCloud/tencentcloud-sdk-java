@@ -57,6 +57,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     /**
     * 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
+注意：按AppName查询，需要联系客服同学提单支持。
     */
     @SerializedName("AppName")
     @Expose
@@ -145,8 +146,10 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     /**
      * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
+注意：按AppName查询，需要联系客服同学提单支持。
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
+注意：按AppName查询，需要联系客服同学提单支持。
      */
     public String getAppName() {
         return this.AppName;
@@ -155,8 +158,10 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     /**
      * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
+注意：按AppName查询，需要联系客服同学提单支持。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
+注意：按AppName查询，需要联系客服同学提单支持。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

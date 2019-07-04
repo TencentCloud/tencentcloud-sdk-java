@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeTablesRequest  extends AbstractModel{
 
     /**
-    * 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -51,23 +51,23 @@ public class DescribeTablesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-    * 匹配数据库表名的正则表达式，规则同MySQL官网
+    * 匹配数据库表名的正则表达式，规则同 MySQL 官网
     */
     @SerializedName("TableRegexp")
     @Expose
     private String TableRegexp;
 
     /**
-     * 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -122,16 +122,16 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取匹配数据库表名的正则表达式，规则同MySQL官网
-     * @return TableRegexp 匹配数据库表名的正则表达式，规则同MySQL官网
+     * 获取匹配数据库表名的正则表达式，规则同 MySQL 官网
+     * @return TableRegexp 匹配数据库表名的正则表达式，规则同 MySQL 官网
      */
     public String getTableRegexp() {
         return this.TableRegexp;
     }
 
     /**
-     * 设置匹配数据库表名的正则表达式，规则同MySQL官网
-     * @param TableRegexp 匹配数据库表名的正则表达式，规则同MySQL官网
+     * 设置匹配数据库表名的正则表达式，规则同 MySQL 官网
+     * @param TableRegexp 匹配数据库表名的正则表达式，规则同 MySQL 官网
      */
     public void setTableRegexp(String TableRegexp) {
         this.TableRegexp = TableRegexp;

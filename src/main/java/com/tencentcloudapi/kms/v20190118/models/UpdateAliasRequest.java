@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpdateAliasRequest  extends AbstractModel{
 
     /**
-    * 新的别名，1-64个字符或数字的组合
+    * 新的别名，1-60个字符或数字的组合
     */
     @SerializedName("Alias")
     @Expose
@@ -37,16 +37,16 @@ public class UpdateAliasRequest  extends AbstractModel{
     private String KeyId;
 
     /**
-     * 获取新的别名，1-64个字符或数字的组合
-     * @return Alias 新的别名，1-64个字符或数字的组合
+     * 获取新的别名，1-60个字符或数字的组合
+     * @return Alias 新的别名，1-60个字符或数字的组合
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * 设置新的别名，1-64个字符或数字的组合
-     * @param Alias 新的别名，1-64个字符或数字的组合
+     * 设置新的别名，1-60个字符或数字的组合
+     * @param Alias 新的别名，1-60个字符或数字的组合
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

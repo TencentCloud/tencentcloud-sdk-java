@@ -30,7 +30,7 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     private String KeyId;
 
     /**
-    * 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。默认为AES_256
+    * 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
     */
     @SerializedName("KeySpec")
     @Expose
@@ -67,16 +67,16 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。默认为AES_256
-     * @return KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。默认为AES_256
+     * 获取指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
+     * @return KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
      */
     public String getKeySpec() {
         return this.KeySpec;
     }
 
     /**
-     * 设置指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。默认为AES_256
-     * @param KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。默认为AES_256
+     * 设置指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
+     * @param KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
      */
     public void setKeySpec(String KeySpec) {
         this.KeySpec = KeySpec;

@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeTagsOfInstanceIdsRequest  extends AbstractModel{
 
     /**
-    * 实例列表
+    * 实例列表。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 偏移量
+    * 偏移量。
     */
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
 
     /**
-    * 每页返回多少个标签
+    * 每页返回多少个标签。
     */
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
 
     /**
-     * 获取实例列表
-     * @return InstanceIds 实例列表
+     * 获取实例列表。
+     * @return InstanceIds 实例列表。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * 设置实例列表
-     * @param InstanceIds 实例列表
+     * 设置实例列表。
+     * @param InstanceIds 实例列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * 获取偏移量
-     * @return Offset 偏移量
+     * 获取偏移量。
+     * @return Offset 偏移量。
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量
-     * @param Offset 偏移量
+     * 设置偏移量。
+     * @param Offset 偏移量。
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取每页返回多少个标签
-     * @return Limit 每页返回多少个标签
+     * 获取每页返回多少个标签。
+     * @return Limit 每页返回多少个标签。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置每页返回多少个标签
-     * @param Limit 每页返回多少个标签
+     * 设置每页返回多少个标签。
+     * @param Limit 每页返回多少个标签。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

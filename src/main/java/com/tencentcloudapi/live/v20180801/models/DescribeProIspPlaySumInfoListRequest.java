@@ -40,7 +40,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-    * 统计的类型，可选值包括”Province”，”Isp”
+    * 统计的类型，可选值包括”Province”，”Isp”。
     */
     @SerializedName("StatType")
     @Expose
@@ -56,7 +56,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     /**
     * 页号，
 范围是[1,1000]，
-默认值是1
+默认值是1。
     */
     @SerializedName("PageNum")
     @Expose
@@ -64,7 +64,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
 
     /**
     * 每页个数，范围是[1,1000]，
-默认值是20
+默认值是20。
     */
     @SerializedName("PageSize")
     @Expose
@@ -115,16 +115,16 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取统计的类型，可选值包括”Province”，”Isp”
-     * @return StatType 统计的类型，可选值包括”Province”，”Isp”
+     * 获取统计的类型，可选值包括”Province”，”Isp”。
+     * @return StatType 统计的类型，可选值包括”Province”，”Isp”。
      */
     public String getStatType() {
         return this.StatType;
     }
 
     /**
-     * 设置统计的类型，可选值包括”Province”，”Isp”
-     * @param StatType 统计的类型，可选值包括”Province”，”Isp”
+     * 设置统计的类型，可选值包括”Province”，”Isp”。
+     * @param StatType 统计的类型，可选值包括”Province”，”Isp”。
      */
     public void setStatType(String StatType) {
         this.StatType = StatType;
@@ -149,10 +149,10 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     /**
      * 获取页号，
 范围是[1,1000]，
-默认值是1
+默认值是1。
      * @return PageNum 页号，
 范围是[1,1000]，
-默认值是1
+默认值是1。
      */
     public Integer getPageNum() {
         return this.PageNum;
@@ -161,10 +161,10 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     /**
      * 设置页号，
 范围是[1,1000]，
-默认值是1
+默认值是1。
      * @param PageNum 页号，
 范围是[1,1000]，
-默认值是1
+默认值是1。
      */
     public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
@@ -172,9 +172,9 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
 
     /**
      * 获取每页个数，范围是[1,1000]，
-默认值是20
+默认值是20。
      * @return PageSize 每页个数，范围是[1,1000]，
-默认值是20
+默认值是20。
      */
     public Integer getPageSize() {
         return this.PageSize;
@@ -182,9 +182,9 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
 
     /**
      * 设置每页个数，范围是[1,1000]，
-默认值是20
+默认值是20。
      * @param PageSize 每页个数，范围是[1,1000]，
-默认值是20
+默认值是20。
      */
     public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;

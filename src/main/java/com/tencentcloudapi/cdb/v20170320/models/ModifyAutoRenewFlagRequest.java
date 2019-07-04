@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyAutoRenewFlagRequest  extends AbstractModel{
 
     /**
-    * 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+    * 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 自动续费标记，可取值的有：0-不自动续费，1-自动续费。
+    * 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
     */
     @SerializedName("AutoRenew")
     @Expose
     private Integer AutoRenew;
 
     /**
-     * 获取实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @return InstanceIds 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 获取实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @return InstanceIds 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * 设置实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceIds 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 设置实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceIds 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * 获取自动续费标记，可取值的有：0-不自动续费，1-自动续费。
-     * @return AutoRenew 自动续费标记，可取值的有：0-不自动续费，1-自动续费。
+     * 获取自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
+     * @return AutoRenew 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      */
     public Integer getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * 设置自动续费标记，可取值的有：0-不自动续费，1-自动续费。
-     * @param AutoRenew 自动续费标记，可取值的有：0-不自动续费，1-自动续费。
+     * 设置自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
+     * @param AutoRenew 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      */
     public void setAutoRenew(Integer AutoRenew) {
         this.AutoRenew = AutoRenew;

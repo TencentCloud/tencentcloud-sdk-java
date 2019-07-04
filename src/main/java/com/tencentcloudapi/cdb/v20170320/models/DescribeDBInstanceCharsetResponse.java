@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBInstanceCharsetResponse  extends AbstractModel{
 
     /**
-    * 实例的默认字符集，如"latin1", "utf8"等。
+    * 实例的默认字符集，如 "latin1"，"utf8" 等。
     */
     @SerializedName("Charset")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeDBInstanceCharsetResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例的默认字符集，如"latin1", "utf8"等。
-     * @return Charset 实例的默认字符集，如"latin1", "utf8"等。
+     * 获取实例的默认字符集，如 "latin1"，"utf8" 等。
+     * @return Charset 实例的默认字符集，如 "latin1"，"utf8" 等。
      */
     public String getCharset() {
         return this.Charset;
     }
 
     /**
-     * 设置实例的默认字符集，如"latin1", "utf8"等。
-     * @param Charset 实例的默认字符集，如"latin1", "utf8"等。
+     * 设置实例的默认字符集，如 "latin1"，"utf8" 等。
+     * @param Charset 实例的默认字符集，如 "latin1"，"utf8" 等。
      */
     public void setCharset(String Charset) {
         this.Charset = Charset;

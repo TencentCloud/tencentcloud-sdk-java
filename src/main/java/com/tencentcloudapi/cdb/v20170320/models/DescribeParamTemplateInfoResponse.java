@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeParamTemplateInfoResponse  extends AbstractModel{
 
     /**
-    * 参数模板Id。
+    * 参数模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeParamTemplateInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取参数模板Id。
-     * @return TemplateId 参数模板Id。
+     * 获取参数模板 ID。
+     * @return TemplateId 参数模板 ID。
      */
     public Integer getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * 设置参数模板Id。
-     * @param TemplateId 参数模板Id。
+     * 设置参数模板 ID。
+     * @param TemplateId 参数模板 ID。
      */
     public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;

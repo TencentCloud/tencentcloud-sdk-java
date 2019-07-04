@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeTagsOfInstanceIdsResponse  extends AbstractModel{
 
     /**
-    * 偏移量
+    * 偏移量。
     */
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
 
     /**
-    * 每页返回多少个标签
+    * 每页返回多少个标签。
     */
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
 
     /**
-    * 实例标签信息
+    * 实例标签信息。
     */
     @SerializedName("Rows")
     @Expose
@@ -51,48 +51,48 @@ public class DescribeTagsOfInstanceIdsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取偏移量
-     * @return Offset 偏移量
+     * 获取偏移量。
+     * @return Offset 偏移量。
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量
-     * @param Offset 偏移量
+     * 设置偏移量。
+     * @param Offset 偏移量。
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取每页返回多少个标签
-     * @return Limit 每页返回多少个标签
+     * 获取每页返回多少个标签。
+     * @return Limit 每页返回多少个标签。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置每页返回多少个标签
-     * @param Limit 每页返回多少个标签
+     * 设置每页返回多少个标签。
+     * @param Limit 每页返回多少个标签。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取实例标签信息
-     * @return Rows 实例标签信息
+     * 获取实例标签信息。
+     * @return Rows 实例标签信息。
      */
     public TagsInfoOfInstance [] getRows() {
         return this.Rows;
     }
 
     /**
-     * 设置实例标签信息
-     * @param Rows 实例标签信息
+     * 设置实例标签信息。
+     * @param Rows 实例标签信息。
      */
     public void setRows(TagsInfoOfInstance [] Rows) {
         this.Rows = Rows;

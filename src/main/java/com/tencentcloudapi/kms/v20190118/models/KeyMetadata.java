@@ -51,7 +51,7 @@ public class KeyMetadata  extends AbstractModel{
     private String Description;
 
     /**
-    * CMK的状态， Enabled 或者 Disabled 或者 Deleted
+    * CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
     */
     @SerializedName("KeyState")
     @Expose
@@ -98,6 +98,14 @@ public class KeyMetadata  extends AbstractModel{
     @SerializedName("NextRotateTime")
     @Expose
     private Long NextRotateTime;
+
+    /**
+    * 计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeletionDate")
+    @Expose
+    private Long DeletionDate;
 
     /**
      * 获取CMK的全局唯一标识
@@ -164,16 +172,16 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取CMK的状态， Enabled 或者 Disabled 或者 Deleted
-     * @return KeyState CMK的状态， Enabled 或者 Disabled 或者 Deleted
+     * 获取CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
+     * @return KeyState CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
      */
     public String getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * 设置CMK的状态， Enabled 或者 Disabled 或者 Deleted
-     * @param KeyState CMK的状态， Enabled 或者 Disabled 或者 Deleted
+     * 设置CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
+     * @param KeyState CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
      */
     public void setKeyState(String KeyState) {
         this.KeyState = KeyState;
@@ -276,6 +284,26 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
+     * 获取计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return DeletionDate 计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeletionDate() {
+        return this.DeletionDate;
+    }
+
+    /**
+     * 设置计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeletionDate 计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeletionDate(Long DeletionDate) {
+        this.DeletionDate = DeletionDate;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +318,7 @@ public class KeyMetadata  extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
         this.setParamSimple(map, prefix + "Owner", this.Owner);
         this.setParamSimple(map, prefix + "NextRotateTime", this.NextRotateTime);
+        this.setParamSimple(map, prefix + "DeletionDate", this.DeletionDate);
 
     }
 }

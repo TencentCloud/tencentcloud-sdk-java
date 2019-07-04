@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RenewDBInstanceResponse  extends AbstractModel{
 
     /**
-    * 订单ID
+    * 订单 ID。
     */
     @SerializedName("DealId")
     @Expose
@@ -37,16 +37,16 @@ public class RenewDBInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取订单ID
-     * @return DealId 订单ID
+     * 获取订单 ID。
+     * @return DealId 订单 ID。
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * 设置订单ID
-     * @param DealId 订单ID
+     * 设置订单 ID。
+     * @param DealId 订单 ID。
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;

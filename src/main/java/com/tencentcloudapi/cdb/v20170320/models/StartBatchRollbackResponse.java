@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class StartBatchRollbackResponse  extends AbstractModel{
 
     /**
-    * 异步任务的请求ID，可使用此ID查询异步任务的执行结果
+    * 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -37,16 +37,16 @@ public class StartBatchRollbackResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取异步任务的请求ID，可使用此ID查询异步任务的执行结果
-     * @return AsyncRequestId 异步任务的请求ID，可使用此ID查询异步任务的执行结果
+     * 获取异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * 设置异步任务的请求ID，可使用此ID查询异步任务的执行结果
-     * @param AsyncRequestId 异步任务的请求ID，可使用此ID查询异步任务的执行结果
+     * 设置异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

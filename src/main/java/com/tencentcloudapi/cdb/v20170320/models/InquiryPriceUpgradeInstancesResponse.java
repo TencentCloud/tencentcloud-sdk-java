@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class InquiryPriceUpgradeInstancesResponse  extends AbstractModel{
 
     /**
-    * 实例价格，单位：分（人民币）
+    * 实例价格，单位：分（人民币）。
     */
     @SerializedName("Price")
     @Expose
     private Integer Price;
 
     /**
-    * 实例原价，单位：分（人民币）
+    * 实例原价，单位：分（人民币）。
     */
     @SerializedName("OriginalPrice")
     @Expose
@@ -44,32 +44,32 @@ public class InquiryPriceUpgradeInstancesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例价格，单位：分（人民币）
-     * @return Price 实例价格，单位：分（人民币）
+     * 获取实例价格，单位：分（人民币）。
+     * @return Price 实例价格，单位：分（人民币）。
      */
     public Integer getPrice() {
         return this.Price;
     }
 
     /**
-     * 设置实例价格，单位：分（人民币）
-     * @param Price 实例价格，单位：分（人民币）
+     * 设置实例价格，单位：分（人民币）。
+     * @param Price 实例价格，单位：分（人民币）。
      */
     public void setPrice(Integer Price) {
         this.Price = Price;
     }
 
     /**
-     * 获取实例原价，单位：分（人民币）
-     * @return OriginalPrice 实例原价，单位：分（人民币）
+     * 获取实例原价，单位：分（人民币）。
+     * @return OriginalPrice 实例原价，单位：分（人民币）。
      */
     public Integer getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * 设置实例原价，单位：分（人民币）
-     * @param OriginalPrice 实例原价，单位：分（人民币）
+     * 设置实例原价，单位：分（人民币）。
+     * @param OriginalPrice 实例原价，单位：分（人民币）。
      */
     public void setOriginalPrice(Integer OriginalPrice) {
         this.OriginalPrice = OriginalPrice;

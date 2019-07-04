@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeTasksResponse  extends AbstractModel{
 
     /**
-    * 符合查询条件的实例总数
+    * 符合查询条件的实例总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Integer TotalCount;
 
     /**
-    * 返回的实例任务信息
+    * 返回的实例任务信息。
     */
     @SerializedName("Items")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeTasksResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合查询条件的实例总数
-     * @return TotalCount 符合查询条件的实例总数
+     * 获取符合查询条件的实例总数。
+     * @return TotalCount 符合查询条件的实例总数。
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置符合查询条件的实例总数
-     * @param TotalCount 符合查询条件的实例总数
+     * 设置符合查询条件的实例总数。
+     * @param TotalCount 符合查询条件的实例总数。
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取返回的实例任务信息
-     * @return Items 返回的实例任务信息
+     * 获取返回的实例任务信息。
+     * @return Items 返回的实例任务信息。
      */
     public String [] getItems() {
         return this.Items;
     }
 
     /**
-     * 设置返回的实例任务信息
-     * @param Items 返回的实例任务信息
+     * 设置返回的实例任务信息。
+     * @param Items 返回的实例任务信息。
      */
     public void setItems(String [] Items) {
         this.Items = Items;

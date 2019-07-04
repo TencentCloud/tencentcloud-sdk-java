@@ -59,10 +59,11 @@ public class PullUploadRequest  extends AbstractModel{
     private String ExpireTime;
 
     /**
-    * 指定上传园区，仅适用于对上传地域有特殊需求的用户。目前支持的园区：
+    * 指定上传园区，目前支持的园区：
 <li>ap-chongqing：重庆园区，</li>
 <li>ap-beijing：北京园区，</li>
 <li>ap-shanghai：上海园区。</li>
+注意：不填此参数默认上传至重庆园区。
     */
     @SerializedName("StorageRegion")
     @Expose
@@ -181,28 +182,32 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定上传园区，仅适用于对上传地域有特殊需求的用户。目前支持的园区：
+     * 获取指定上传园区，目前支持的园区：
 <li>ap-chongqing：重庆园区，</li>
 <li>ap-beijing：北京园区，</li>
 <li>ap-shanghai：上海园区。</li>
-     * @return StorageRegion 指定上传园区，仅适用于对上传地域有特殊需求的用户。目前支持的园区：
+注意：不填此参数默认上传至重庆园区。
+     * @return StorageRegion 指定上传园区，目前支持的园区：
 <li>ap-chongqing：重庆园区，</li>
 <li>ap-beijing：北京园区，</li>
 <li>ap-shanghai：上海园区。</li>
+注意：不填此参数默认上传至重庆园区。
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * 设置指定上传园区，仅适用于对上传地域有特殊需求的用户。目前支持的园区：
+     * 设置指定上传园区，目前支持的园区：
 <li>ap-chongqing：重庆园区，</li>
 <li>ap-beijing：北京园区，</li>
 <li>ap-shanghai：上海园区。</li>
-     * @param StorageRegion 指定上传园区，仅适用于对上传地域有特殊需求的用户。目前支持的园区：
+注意：不填此参数默认上传至重庆园区。
+     * @param StorageRegion 指定上传园区，目前支持的园区：
 <li>ap-chongqing：重庆园区，</li>
 <li>ap-beijing：北京园区，</li>
 <li>ap-shanghai：上海园区。</li>
+注意：不填此参数默认上传至重庆园区。
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;

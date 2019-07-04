@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UpgradeDBInstanceResponse  extends AbstractModel{
 
     /**
-    * 订单ID
+    * 订单 ID。
     */
     @SerializedName("DealIds")
     @Expose
     private String [] DealIds;
 
     /**
-    * 异步任务的请求ID，可使用此ID查询异步任务的执行结果
+    * 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -44,32 +44,32 @@ public class UpgradeDBInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取订单ID
-     * @return DealIds 订单ID
+     * 获取订单 ID。
+     * @return DealIds 订单 ID。
      */
     public String [] getDealIds() {
         return this.DealIds;
     }
 
     /**
-     * 设置订单ID
-     * @param DealIds 订单ID
+     * 设置订单 ID。
+     * @param DealIds 订单 ID。
      */
     public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;
     }
 
     /**
-     * 获取异步任务的请求ID，可使用此ID查询异步任务的执行结果
-     * @return AsyncRequestId 异步任务的请求ID，可使用此ID查询异步任务的执行结果
+     * 获取异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * 设置异步任务的请求ID，可使用此ID查询异步任务的执行结果
-     * @param AsyncRequestId 异步任务的请求ID，可使用此ID查询异步任务的执行结果
+     * 设置异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

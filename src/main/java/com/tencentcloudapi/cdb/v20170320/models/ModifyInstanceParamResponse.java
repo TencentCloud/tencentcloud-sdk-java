@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyInstanceParamResponse  extends AbstractModel{
 
     /**
-    * 异步任务Id，可用于查询任务进度。
+    * 异步任务 ID，可用于查询任务进度。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyInstanceParamResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取异步任务Id，可用于查询任务进度。
-     * @return AsyncRequestId 异步任务Id，可用于查询任务进度。
+     * 获取异步任务 ID，可用于查询任务进度。
+     * @return AsyncRequestId 异步任务 ID，可用于查询任务进度。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * 设置异步任务Id，可用于查询任务进度。
-     * @param AsyncRequestId 异步任务Id，可用于查询任务进度。
+     * 设置异步任务 ID，可用于查询任务进度。
+     * @param AsyncRequestId 异步任务 ID，可用于查询任务进度。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

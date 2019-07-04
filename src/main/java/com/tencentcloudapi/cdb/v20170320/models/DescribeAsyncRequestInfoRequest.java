@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeAsyncRequestInfoRequest  extends AbstractModel{
 
     /**
-    * 异步任务的请求ID。
+    * 异步任务的请求 ID。
     */
     @SerializedName("AsyncRequestId")
     @Expose
     private String AsyncRequestId;
 
     /**
-     * 获取异步任务的请求ID。
-     * @return AsyncRequestId 异步任务的请求ID。
+     * 获取异步任务的请求 ID。
+     * @return AsyncRequestId 异步任务的请求 ID。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * 设置异步任务的请求ID。
-     * @param AsyncRequestId 异步任务的请求ID。
+     * 设置异步任务的请求 ID。
+     * @param AsyncRequestId 异步任务的请求 ID。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

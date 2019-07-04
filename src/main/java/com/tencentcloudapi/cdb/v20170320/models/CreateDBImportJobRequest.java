@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDBImportJobRequest  extends AbstractModel{
 
     /**
-    * 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+    * 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -44,7 +44,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     private String User;
 
     /**
-    * 云数据库实例User账号的密码。
+    * 云数据库实例 User 账号的密码。
     */
     @SerializedName("Password")
     @Expose
@@ -58,16 +58,16 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     private String DbName;
 
     /**
-     * 获取实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @return InstanceId 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 获取实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @return InstanceId 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 设置实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -106,16 +106,16 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云数据库实例User账号的密码。
-     * @return Password 云数据库实例User账号的密码。
+     * 获取云数据库实例 User 账号的密码。
+     * @return Password 云数据库实例 User 账号的密码。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * 设置云数据库实例User账号的密码。
-     * @param Password 云数据库实例User账号的密码。
+     * 设置云数据库实例 User 账号的密码。
+     * @param Password 云数据库实例 User 账号的密码。
      */
     public void setPassword(String Password) {
         this.Password = Password;

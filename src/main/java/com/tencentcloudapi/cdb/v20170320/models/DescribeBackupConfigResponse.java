@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DescribeBackupConfigResponse  extends AbstractModel{
 
     /**
-    * 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨2:00
+    * 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
     */
     @SerializedName("StartTimeMin")
     @Expose
     private Integer StartTimeMin;
 
     /**
-    * 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨6:00
+    * 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
     */
     @SerializedName("StartTimeMax")
     @Expose
     private Integer StartTimeMax;
 
     /**
-    * 备份过期时间，单位为天
+    * 备份过期时间，单位为天。
     */
     @SerializedName("BackupExpireDays")
     @Expose
     private Integer BackupExpireDays;
 
     /**
-    * 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份
+    * 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
     */
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
 
     /**
-    * Binlog过期时间，单位为天
+    * Binlog 过期时间，单位为天。
     */
     @SerializedName("BinlogExpireDays")
     @Expose
@@ -65,80 +65,80 @@ public class DescribeBackupConfigResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取备份开始的最早时间点，单位为时刻。例如，2 - 凌晨2:00
-     * @return StartTimeMin 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨2:00
+     * 获取备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
+     * @return StartTimeMin 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
      */
     public Integer getStartTimeMin() {
         return this.StartTimeMin;
     }
 
     /**
-     * 设置备份开始的最早时间点，单位为时刻。例如，2 - 凌晨2:00
-     * @param StartTimeMin 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨2:00
+     * 设置备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
+     * @param StartTimeMin 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
      */
     public void setStartTimeMin(Integer StartTimeMin) {
         this.StartTimeMin = StartTimeMin;
     }
 
     /**
-     * 获取备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨6:00
-     * @return StartTimeMax 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨6:00
+     * 获取备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
+     * @return StartTimeMax 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
      */
     public Integer getStartTimeMax() {
         return this.StartTimeMax;
     }
 
     /**
-     * 设置备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨6:00
-     * @param StartTimeMax 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨6:00
+     * 设置备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
+     * @param StartTimeMax 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
      */
     public void setStartTimeMax(Integer StartTimeMax) {
         this.StartTimeMax = StartTimeMax;
     }
 
     /**
-     * 获取备份过期时间，单位为天
-     * @return BackupExpireDays 备份过期时间，单位为天
+     * 获取备份过期时间，单位为天。
+     * @return BackupExpireDays 备份过期时间，单位为天。
      */
     public Integer getBackupExpireDays() {
         return this.BackupExpireDays;
     }
 
     /**
-     * 设置备份过期时间，单位为天
-     * @param BackupExpireDays 备份过期时间，单位为天
+     * 设置备份过期时间，单位为天。
+     * @param BackupExpireDays 备份过期时间，单位为天。
      */
     public void setBackupExpireDays(Integer BackupExpireDays) {
         this.BackupExpireDays = BackupExpireDays;
     }
 
     /**
-     * 获取备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份
-     * @return BackupMethod 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份
+     * 获取备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
+     * @return BackupMethod 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * 设置备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份
-     * @param BackupMethod 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份
+     * 设置备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
+     * @param BackupMethod 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * 获取Binlog过期时间，单位为天
-     * @return BinlogExpireDays Binlog过期时间，单位为天
+     * 获取Binlog 过期时间，单位为天。
+     * @return BinlogExpireDays Binlog 过期时间，单位为天。
      */
     public Integer getBinlogExpireDays() {
         return this.BinlogExpireDays;
     }
 
     /**
-     * 设置Binlog过期时间，单位为天
-     * @param BinlogExpireDays Binlog过期时间，单位为天
+     * 设置Binlog 过期时间，单位为天。
+     * @param BinlogExpireDays Binlog 过期时间，单位为天。
      */
     public void setBinlogExpireDays(Integer BinlogExpireDays) {
         this.BinlogExpireDays = BinlogExpireDays;

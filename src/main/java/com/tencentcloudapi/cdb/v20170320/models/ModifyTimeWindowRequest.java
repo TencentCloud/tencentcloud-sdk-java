@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyTimeWindowRequest  extends AbstractModel{
 
     /**
-    * 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+    * 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -37,23 +37,23 @@ public class ModifyTimeWindowRequest  extends AbstractModel{
     private String [] TimeRanges;
 
     /**
-    * 指定修改哪一天的客户时间段，可能的取值为：monday, tuesday, wednesday, thursday, friday, saturday, sunday。如果不指定该值或者为空，则默认一周七天都修改。
+    * 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
     */
     @SerializedName("Weekdays")
     @Expose
     private String [] Weekdays;
 
     /**
-     * 获取实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -76,16 +76,16 @@ public class ModifyTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定修改哪一天的客户时间段，可能的取值为：monday, tuesday, wednesday, thursday, friday, saturday, sunday。如果不指定该值或者为空，则默认一周七天都修改。
-     * @return Weekdays 指定修改哪一天的客户时间段，可能的取值为：monday, tuesday, wednesday, thursday, friday, saturday, sunday。如果不指定该值或者为空，则默认一周七天都修改。
+     * 获取指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+     * @return Weekdays 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
      */
     public String [] getWeekdays() {
         return this.Weekdays;
     }
 
     /**
-     * 设置指定修改哪一天的客户时间段，可能的取值为：monday, tuesday, wednesday, thursday, friday, saturday, sunday。如果不指定该值或者为空，则默认一周七天都修改。
-     * @param Weekdays 指定修改哪一天的客户时间段，可能的取值为：monday, tuesday, wednesday, thursday, friday, saturday, sunday。如果不指定该值或者为空，则默认一周七天都修改。
+     * 设置指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+     * @param Weekdays 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
      */
     public void setWeekdays(String [] Weekdays) {
         this.Weekdays = Weekdays;
