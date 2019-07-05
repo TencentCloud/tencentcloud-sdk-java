@@ -66,9 +66,10 @@ public class GestureResult  extends AbstractModel{
 
     /**
      * 获取识别结果
+     * Java getClass cannot and should not be overrided, hence we have to transfer it to a new name which should never conflict with another attribute. The underscode(_) is used as a postfix, because it is invalid in API 3.0, but can be used in Java, even it is not recommended.
      * @return Class 识别结果
      */
-    public String getClass() {
+    public String getClass_() {
         return this.Class;
     }
 
