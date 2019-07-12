@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.clb.v20180317.models;
+package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadBalancerResponse  extends AbstractModel{
+public class DescribeFilterResultResponse  extends AbstractModel{
 
     /**
-    * 由负载均衡实例唯一 ID 组成的数组。
+    * 过滤结果
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("LoadBalancerIds")
+    @SerializedName("Data")
     @Expose
-    private String [] LoadBalancerIds;
+    private VoiceFilterInfo Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class CreateLoadBalancerResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取由负载均衡实例唯一 ID 组成的数组。
-     * @return LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
+     * 获取过滤结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Data 过滤结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getLoadBalancerIds() {
-        return this.LoadBalancerIds;
+    public VoiceFilterInfo getData() {
+        return this.Data;
     }
 
     /**
-     * 设置由负载均衡实例唯一 ID 组成的数组。
-     * @param LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
+     * 设置过滤结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 过滤结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLoadBalancerIds(String [] LoadBalancerIds) {
-        this.LoadBalancerIds = LoadBalancerIds;
+    public void setData(VoiceFilterInfo Data) {
+        this.Data = Data;
     }
 
     /**
@@ -72,7 +77,7 @@ public class CreateLoadBalancerResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

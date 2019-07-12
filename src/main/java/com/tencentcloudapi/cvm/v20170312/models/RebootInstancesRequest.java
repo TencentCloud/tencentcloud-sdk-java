@@ -37,6 +37,13 @@ public class RebootInstancesRequest  extends AbstractModel{
     private Boolean ForceReboot;
 
     /**
+    * 关机类型。取值范围：<br><li>SOFT：表示软关机<br><li>HARD：表示硬关机<br><li>SOFT_FIRST：表示优先软关机，失败再执行硬关机<br><br>默认取值：SOFT。
+    */
+    @SerializedName("StopType")
+    @Expose
+    private String StopType;
+
+    /**
      * 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
      * @return InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
      */
@@ -69,11 +76,28 @@ public class RebootInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取关机类型。取值范围：<br><li>SOFT：表示软关机<br><li>HARD：表示硬关机<br><li>SOFT_FIRST：表示优先软关机，失败再执行硬关机<br><br>默认取值：SOFT。
+     * @return StopType 关机类型。取值范围：<br><li>SOFT：表示软关机<br><li>HARD：表示硬关机<br><li>SOFT_FIRST：表示优先软关机，失败再执行硬关机<br><br>默认取值：SOFT。
+     */
+    public String getStopType() {
+        return this.StopType;
+    }
+
+    /**
+     * 设置关机类型。取值范围：<br><li>SOFT：表示软关机<br><li>HARD：表示硬关机<br><li>SOFT_FIRST：表示优先软关机，失败再执行硬关机<br><br>默认取值：SOFT。
+     * @param StopType 关机类型。取值范围：<br><li>SOFT：表示软关机<br><li>HARD：表示硬关机<br><li>SOFT_FIRST：表示优先软关机，失败再执行硬关机<br><br>默认取值：SOFT。
+     */
+    public void setStopType(String StopType) {
+        this.StopType = StopType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "ForceReboot", this.ForceReboot);
+        this.setParamSimple(map, prefix + "StopType", this.StopType);
 
     }
 }

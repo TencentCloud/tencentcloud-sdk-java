@@ -52,7 +52,7 @@ public class ListenerBackend  extends AbstractModel{
     private RuleTargets [] Rules;
 
     /**
-    * 监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+    * 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Targets")
@@ -128,9 +128,9 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 获取监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+     * 获取监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Targets 监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+     * @return Targets 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Backend [] getTargets() {
@@ -138,9 +138,9 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 设置监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+     * 设置监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Targets 监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+     * @param Targets 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargets(Backend [] Targets) {

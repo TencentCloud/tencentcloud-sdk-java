@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class Backend  extends AbstractModel{
 
     /**
-    * 转发目标的类型，目前仅可取值为 CVM
+    * 后端服务的类型，可取：CVM、ENI（即将支持）
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+    * 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 后端云服务器监听端口
+    * 后端服务的监听端口
     */
     @SerializedName("Port")
     @Expose
     private Integer Port;
 
     /**
-    * 后端云服务器的转发权重，取值范围：0~100，默认为 10。
+    * 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
     */
     @SerializedName("Weight")
     @Expose
     private Integer Weight;
 
     /**
-    * 云服务器的外网 IP
+    * 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddresses")
@@ -59,7 +59,7 @@ public class Backend  extends AbstractModel{
     private String [] PublicIpAddresses;
 
     /**
-    * 云服务器的内网 IP
+    * 后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIpAddresses")
@@ -67,7 +67,7 @@ public class Backend  extends AbstractModel{
     private String [] PrivateIpAddresses;
 
     /**
-    * 云服务器实例名称
+    * 后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
@@ -75,7 +75,7 @@ public class Backend  extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 云服务器被绑定到监听器的时间
+    * 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisteredTime")
@@ -83,73 +83,81 @@ public class Backend  extends AbstractModel{
     private String RegisteredTime;
 
     /**
-     * 获取转发目标的类型，目前仅可取值为 CVM
-     * @return Type 转发目标的类型，目前仅可取值为 CVM
+    * 弹性网卡唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EniId")
+    @Expose
+    private String EniId;
+
+    /**
+     * 获取后端服务的类型，可取：CVM、ENI（即将支持）
+     * @return Type 后端服务的类型，可取：CVM、ENI（即将支持）
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * 设置转发目标的类型，目前仅可取值为 CVM
-     * @param Type 转发目标的类型，目前仅可取值为 CVM
+     * 设置后端服务的类型，可取：CVM、ENI（即将支持）
+     * @param Type 后端服务的类型，可取：CVM、ENI（即将支持）
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * 获取云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
-     * @return InstanceId 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * 获取后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * @return InstanceId 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
-     * @param InstanceId 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * 设置后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * @param InstanceId 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * 获取后端云服务器监听端口
-     * @return Port 后端云服务器监听端口
+     * 获取后端服务的监听端口
+     * @return Port 后端服务的监听端口
      */
     public Integer getPort() {
         return this.Port;
     }
 
     /**
-     * 设置后端云服务器监听端口
-     * @param Port 后端云服务器监听端口
+     * 设置后端服务的监听端口
+     * @param Port 后端服务的监听端口
      */
     public void setPort(Integer Port) {
         this.Port = Port;
     }
 
     /**
-     * 获取后端云服务器的转发权重，取值范围：0~100，默认为 10。
-     * @return Weight 后端云服务器的转发权重，取值范围：0~100，默认为 10。
+     * 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * @return Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
     public Integer getWeight() {
         return this.Weight;
     }
 
     /**
-     * 设置后端云服务器的转发权重，取值范围：0~100，默认为 10。
-     * @param Weight 后端云服务器的转发权重，取值范围：0~100，默认为 10。
+     * 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * @param Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
     public void setWeight(Integer Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * 获取云服务器的外网 IP
+     * 获取后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return PublicIpAddresses 云服务器的外网 IP
+     * @return PublicIpAddresses 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPublicIpAddresses() {
@@ -157,9 +165,9 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置云服务器的外网 IP
+     * 设置后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicIpAddresses 云服务器的外网 IP
+     * @param PublicIpAddresses 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
@@ -167,9 +175,9 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取云服务器的内网 IP
+     * 获取后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return PrivateIpAddresses 云服务器的内网 IP
+     * @return PrivateIpAddresses 后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPrivateIpAddresses() {
@@ -177,9 +185,9 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置云服务器的内网 IP
+     * 设置后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrivateIpAddresses 云服务器的内网 IP
+     * @param PrivateIpAddresses 后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
@@ -187,9 +195,9 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取云服务器实例名称
+     * 获取后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return InstanceName 云服务器实例名称
+     * @return InstanceName 后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
@@ -197,9 +205,9 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置云服务器实例名称
+     * 设置后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceName 云服务器实例名称
+     * @param InstanceName 后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
@@ -207,9 +215,9 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取云服务器被绑定到监听器的时间
+     * 获取后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return RegisteredTime 云服务器被绑定到监听器的时间
+     * @return RegisteredTime 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegisteredTime() {
@@ -217,13 +225,33 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置云服务器被绑定到监听器的时间
+     * 设置后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegisteredTime 云服务器被绑定到监听器的时间
+     * @param RegisteredTime 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisteredTime(String RegisteredTime) {
         this.RegisteredTime = RegisteredTime;
+    }
+
+    /**
+     * 获取弹性网卡唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return EniId 弹性网卡唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEniId() {
+        return this.EniId;
+    }
+
+    /**
+     * 设置弹性网卡唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EniId 弹性网卡唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEniId(String EniId) {
+        this.EniId = EniId;
     }
 
     /**
@@ -238,6 +266,7 @@ public class Backend  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
+        this.setParamSimple(map, prefix + "EniId", this.EniId);
 
     }
 }

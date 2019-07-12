@@ -119,6 +119,13 @@ public class RuleOutput  extends AbstractModel{
     private Boolean Http2;
 
     /**
+    * 负载均衡与后端服务之间的转发协议
+    */
+    @SerializedName("ForwardType")
+    @Expose
+    private String ForwardType;
+
+    /**
      * 获取转发规则的 ID
      * @return LocationId 转发规则的 ID
      */
@@ -347,6 +354,22 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
+     * 获取负载均衡与后端服务之间的转发协议
+     * @return ForwardType 负载均衡与后端服务之间的转发协议
+     */
+    public String getForwardType() {
+        return this.ForwardType;
+    }
+
+    /**
+     * 设置负载均衡与后端服务之间的转发协议
+     * @param ForwardType 负载均衡与后端服务之间的转发协议
+     */
+    public void setForwardType(String ForwardType) {
+        this.ForwardType = ForwardType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -363,6 +386,7 @@ public class RuleOutput  extends AbstractModel{
         this.setParamSimple(map, prefix + "BeAutoCreated", this.BeAutoCreated);
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
         this.setParamSimple(map, prefix + "Http2", this.Http2);
+        this.setParamSimple(map, prefix + "ForwardType", this.ForwardType);
 
     }
 }

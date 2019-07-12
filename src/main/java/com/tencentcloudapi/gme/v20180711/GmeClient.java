@@ -49,6 +49,24 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *根据应用ID和文件ID查询识别结果
+     * @param req DescribeFilterResultRequest
+     * @return DescribeFilterResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFilterResultResponse DescribeFilterResult(DescribeFilterResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFilterResultResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFilterResultResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFilterResult"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据日期查询识别结果列表
      * @param req DescribeFilterResultListRequest
      * @return DescribeFilterResultListResponse

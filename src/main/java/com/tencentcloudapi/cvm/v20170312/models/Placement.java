@@ -44,6 +44,13 @@ public class Placement  extends AbstractModel{
     private String [] HostIds;
 
     /**
+    * 指定母机ip生产子机
+    */
+    @SerializedName("HostIps")
+    @Expose
+    private String [] HostIps;
+
+    /**
      * 获取实例所属的[可用区](/document/product/213/9452#zone)ID。该参数也可以通过调用  [DescribeZones](/document/api/213/9455) 的返回值中的Zone字段来获取。
      * @return Zone 实例所属的[可用区](/document/product/213/9452#zone)ID。该参数也可以通过调用  [DescribeZones](/document/api/213/9455) 的返回值中的Zone字段来获取。
      */
@@ -92,12 +99,29 @@ public class Placement  extends AbstractModel{
     }
 
     /**
+     * 获取指定母机ip生产子机
+     * @return HostIps 指定母机ip生产子机
+     */
+    public String [] getHostIps() {
+        return this.HostIps;
+    }
+
+    /**
+     * 设置指定母机ip生产子机
+     * @param HostIps 指定母机ip生产子机
+     */
+    public void setHostIps(String [] HostIps) {
+        this.HostIps = HostIps;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "HostIds.", this.HostIds);
+        this.setParamArraySimple(map, prefix + "HostIps.", this.HostIps);
 
     }
 }

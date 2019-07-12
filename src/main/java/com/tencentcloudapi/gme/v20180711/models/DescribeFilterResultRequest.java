@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetLiveWatermarkStatusRequest  extends AbstractModel{
+public class DescribeFilterResultRequest  extends AbstractModel{
 
     /**
-    * 水印ID。
+    * 应用ID
     */
-    @SerializedName("WatermarkId")
+    @SerializedName("BizId")
     @Expose
-    private Integer WatermarkId;
+    private Long BizId;
 
     /**
-    * 状态。0：停用，1:启用
+    * 文件ID
     */
-    @SerializedName("Status")
+    @SerializedName("FileId")
     @Expose
-    private Integer Status;
+    private String FileId;
 
     /**
-     * 获取水印ID。
-     * @return WatermarkId 水印ID。
+     * 获取应用ID
+     * @return BizId 应用ID
      */
-    public Integer getWatermarkId() {
-        return this.WatermarkId;
+    public Long getBizId() {
+        return this.BizId;
     }
 
     /**
-     * 设置水印ID。
-     * @param WatermarkId 水印ID。
+     * 设置应用ID
+     * @param BizId 应用ID
      */
-    public void setWatermarkId(Integer WatermarkId) {
-        this.WatermarkId = WatermarkId;
+    public void setBizId(Long BizId) {
+        this.BizId = BizId;
     }
 
     /**
-     * 获取状态。0：停用，1:启用
-     * @return Status 状态。0：停用，1:启用
+     * 获取文件ID
+     * @return FileId 文件ID
      */
-    public Integer getStatus() {
-        return this.Status;
+    public String getFileId() {
+        return this.FileId;
     }
 
     /**
-     * 设置状态。0：停用，1:启用
-     * @param Status 状态。0：停用，1:启用
+     * 设置文件ID
+     * @param FileId 文件ID
      */
-    public void setStatus(Integer Status) {
-        this.Status = Status;
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BizId", this.BizId);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

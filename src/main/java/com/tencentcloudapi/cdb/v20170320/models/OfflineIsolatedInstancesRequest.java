@@ -13,56 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.clb.v20180317.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeregisterTargetsFromClassicalLBRequest  extends AbstractModel{
+public class OfflineIsolatedInstancesRequest  extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
-    */
-    @SerializedName("LoadBalancerId")
-    @Expose
-    private String LoadBalancerId;
-
-    /**
-    * 后端服务的实例ID列表
+    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * 获取负载均衡实例 ID
-     * @return LoadBalancerId 负载均衡实例 ID
-     */
-    public String getLoadBalancerId() {
-        return this.LoadBalancerId;
-    }
-
-    /**
-     * 设置负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
-     */
-    public void setLoadBalancerId(String LoadBalancerId) {
-        this.LoadBalancerId = LoadBalancerId;
-    }
-
-    /**
-     * 获取后端服务的实例ID列表
-     * @return InstanceIds 后端服务的实例ID列表
+     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @return InstanceIds 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * 设置后端服务的实例ID列表
-     * @param InstanceIds 后端服务的实例ID列表
+     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceIds 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -72,7 +49,6 @@ public class DeregisterTargetsFromClassicalLBRequest  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }

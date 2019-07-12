@@ -58,11 +58,19 @@ public class RuleInput  extends AbstractModel{
     private CertificateInput Certificate;
 
     /**
-    * 规则的请求转发方式
+    * 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
+
+    /**
+    * 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+    */
+    @SerializedName("ForwardType")
+    @Expose
+    private String ForwardType;
 
     /**
      * 获取转发规则的域名。
@@ -145,19 +153,39 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 获取规则的请求转发方式
-     * @return Scheduler 规则的请求转发方式
+     * 获取规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+     * @return Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * 设置规则的请求转发方式
-     * @param Scheduler 规则的请求转发方式
+     * 设置规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+     * @param Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
+    }
+
+    /**
+     * 获取负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     * @return ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     */
+    public String getForwardType() {
+        return this.ForwardType;
+    }
+
+    /**
+     * 设置负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     * @param ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     */
+    public void setForwardType(String ForwardType) {
+        this.ForwardType = ForwardType;
     }
 
     /**
@@ -170,6 +198,7 @@ public class RuleInput  extends AbstractModel{
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
+        this.setParamSimple(map, prefix + "ForwardType", this.ForwardType);
 
     }
 }

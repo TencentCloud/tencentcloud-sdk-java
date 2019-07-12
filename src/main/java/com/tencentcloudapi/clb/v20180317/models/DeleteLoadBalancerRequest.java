@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteLoadBalancerRequest  extends AbstractModel{
 
     /**
-    * 要删除的负载均衡实例 ID数组
+    * 要删除的负载均衡实例 ID数组，数组大小最大支持20
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-     * 获取要删除的负载均衡实例 ID数组
-     * @return LoadBalancerIds 要删除的负载均衡实例 ID数组
+     * 获取要删除的负载均衡实例 ID数组，数组大小最大支持20
+     * @return LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * 设置要删除的负载均衡实例 ID数组
-     * @param LoadBalancerIds 要删除的负载均衡实例 ID数组
+     * 设置要删除的负载均衡实例 ID数组，数组大小最大支持20
+     * @param LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

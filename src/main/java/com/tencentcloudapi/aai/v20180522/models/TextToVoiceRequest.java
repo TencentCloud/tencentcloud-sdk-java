@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TextToVoiceRequest  extends AbstractModel{
 
     /**
-    * 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
+    * 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符。包含空格等字符时需要url encode再传输。
     */
     @SerializedName("Text")
     @Expose
@@ -94,16 +94,16 @@ public class TextToVoiceRequest  extends AbstractModel{
     private String Codec;
 
     /**
-     * 获取合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
-     * @return Text 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
+     * 获取合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符。包含空格等字符时需要url encode再传输。
+     * @return Text 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符。包含空格等字符时需要url encode再传输。
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * 设置合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
-     * @param Text 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
+     * 设置合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符。包含空格等字符时需要url encode再传输。
+     * @param Text 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符。包含空格等字符时需要url encode再传输。
      */
     public void setText(String Text) {
         this.Text = Text;

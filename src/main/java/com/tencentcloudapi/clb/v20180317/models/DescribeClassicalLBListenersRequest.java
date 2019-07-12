@@ -30,7 +30,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 负载均衡监听器ID列表， 范围[1-65535]
+    * 负载均衡监听器ID列表
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -44,7 +44,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     private String Protocol;
 
     /**
-    * 负载均衡监听端口
+    * 负载均衡监听端口， 范围[1-65535]
     */
     @SerializedName("ListenerPort")
     @Expose
@@ -74,16 +74,16 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器ID列表， 范围[1-65535]
-     * @return ListenerIds 负载均衡监听器ID列表， 范围[1-65535]
+     * 获取负载均衡监听器ID列表
+     * @return ListenerIds 负载均衡监听器ID列表
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * 设置负载均衡监听器ID列表， 范围[1-65535]
-     * @param ListenerIds 负载均衡监听器ID列表， 范围[1-65535]
+     * 设置负载均衡监听器ID列表
+     * @param ListenerIds 负载均衡监听器ID列表
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;
@@ -106,16 +106,16 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听端口
-     * @return ListenerPort 负载均衡监听端口
+     * 获取负载均衡监听端口， 范围[1-65535]
+     * @return ListenerPort 负载均衡监听端口， 范围[1-65535]
      */
     public Integer getListenerPort() {
         return this.ListenerPort;
     }
 
     /**
-     * 设置负载均衡监听端口
-     * @param ListenerPort 负载均衡监听端口
+     * 设置负载均衡监听端口， 范围[1-65535]
+     * @param ListenerPort 负载均衡监听端口， 范围[1-65535]
      */
     public void setListenerPort(Integer ListenerPort) {
         this.ListenerPort = ListenerPort;

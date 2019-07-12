@@ -37,28 +37,28 @@ public class RegisterTargetsRequest  extends AbstractModel{
     private String ListenerId;
 
     /**
-    * 要注册的后端机器列表，数组长度最大支持20
+    * 待绑定的后端服务列表，数组长度最大支持20
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
 
     /**
-    * 转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+    * 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * 目标规则的域名，提供LocationId参数时本参数不生效
+    * 目标转发规则的域名，提供LocationId参数时本参数不生效
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 目标规则的URL，提供LocationId参数时本参数不生效
+    * 目标转发规则的URL，提供LocationId参数时本参数不生效
     */
     @SerializedName("Url")
     @Expose
@@ -97,64 +97,64 @@ public class RegisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要注册的后端机器列表，数组长度最大支持20
-     * @return Targets 要注册的后端机器列表，数组长度最大支持20
+     * 获取待绑定的后端服务列表，数组长度最大支持20
+     * @return Targets 待绑定的后端服务列表，数组长度最大支持20
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * 设置要注册的后端机器列表，数组长度最大支持20
-     * @param Targets 要注册的后端机器列表，数组长度最大支持20
+     * 设置待绑定的后端服务列表，数组长度最大支持20
+     * @param Targets 待绑定的后端服务列表，数组长度最大支持20
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * 获取转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
-     * @return LocationId 转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * 获取转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * @return LocationId 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * 设置转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
-     * @param LocationId 转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * 设置转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * @param LocationId 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * 获取目标规则的域名，提供LocationId参数时本参数不生效
-     * @return Domain 目标规则的域名，提供LocationId参数时本参数不生效
+     * 获取目标转发规则的域名，提供LocationId参数时本参数不生效
+     * @return Domain 目标转发规则的域名，提供LocationId参数时本参数不生效
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * 设置目标规则的域名，提供LocationId参数时本参数不生效
-     * @param Domain 目标规则的域名，提供LocationId参数时本参数不生效
+     * 设置目标转发规则的域名，提供LocationId参数时本参数不生效
+     * @param Domain 目标转发规则的域名，提供LocationId参数时本参数不生效
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * 获取目标规则的URL，提供LocationId参数时本参数不生效
-     * @return Url 目标规则的URL，提供LocationId参数时本参数不生效
+     * 获取目标转发规则的URL，提供LocationId参数时本参数不生效
+     * @return Url 目标转发规则的URL，提供LocationId参数时本参数不生效
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * 设置目标规则的URL，提供LocationId参数时本参数不生效
-     * @param Url 目标规则的URL，提供LocationId参数时本参数不生效
+     * 设置目标转发规则的URL，提供LocationId参数时本参数不生效
+     * @param Url 目标转发规则的URL，提供LocationId参数时本参数不生效
      */
     public void setUrl(String Url) {
         this.Url = Url;

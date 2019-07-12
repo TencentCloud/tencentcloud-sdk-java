@@ -49,7 +49,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *系统自动为已存在的HTTPS:443监听器创建HTTP监听器进行转发，默认使用80端口。创建成功后可以通过HTTP:80地址自动跳转为HTTPS:443地址进行访问。
+     *用户需要先创建出一个HTTPS:443监听器，并在其下创建转发规则。通过调用本接口，系统会自动创建出一个HTTP:80监听器（如果之前不存在），并在其下创建转发规则，与HTTPS:443监听器下的Domains（在入参中指定）对应。创建成功后可以通过HTTP:80地址自动跳转为HTTPS:443地址进行访问。
      * @param req AutoRewriteRequest
      * @return AutoRewriteResponse
      * @throws TencentCloudSDKException
@@ -87,7 +87,7 @@ public class ClbClient extends AbstractClient{
 
     /**
      *在一个负载均衡实例下创建监听器。
-本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
+本接口为异步接口，接口返回成功后，需以返回的 RequestId 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
      * @param req CreateListenerRequest
      * @return CreateListenerResponse
      * @throws TencentCloudSDKException
@@ -105,8 +105,8 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *CreateLoadBalancer 接口用来创建负载均衡实例。为了使用负载均衡服务，您必须要购买一个或者多个负载均衡实例。通过成功调用该接口，会返回负载均衡实例的唯一 ID。用户可以购买的负载均衡实例类型分为：公网（应用型）、内网（应用型）。可以参考产品说明的产品类型。
-本接口成功返回后，可使用查询负载均衡实例列表接口DescribeLoadBalancers查询负载均衡实例的状态，以确定是否创建成功。
+     *CreateLoadBalancer 接口用来创建负载均衡实例。为了使用负载均衡服务，您必须购买一个或多个负载均衡实例。成功调用该接口后，会返回负载均衡实例的唯一 ID。负载均衡实例的类型分为：公网、内网。详情可参考产品说明中的产品类型。
+本接口为异步接口，接口成功返回后，可使用 DescribeLoadBalancers 接口查询负载均衡实例的状态（如创建中、正常），以确定是否创建成功。
      * @param req CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
      * @throws TencentCloudSDKException
@@ -124,7 +124,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *CreateRule 接口用于在一个已存在的应用型负载均衡七层监听器下创建转发规则，七层监听器中，后端机器必须绑定到规则上而非监听器上。
+     *CreateRule 接口用于在一个已存在的负载均衡七层监听器下创建转发规则，七层监听器中，后端服务必须绑定到规则上而非监听器上。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req CreateRuleRequest
      * @return CreateRuleResponse
@@ -143,8 +143,8 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *本接口用来删除应用型（四层和七层）负载均衡实例下的监听器。
-本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
+     *本接口用来删除负载均衡实例下的监听器（四层和七层）。
+本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
      * @param req DeleteListenerRequest
      * @return DeleteListenerResponse
      * @throws TencentCloudSDKException
@@ -162,8 +162,8 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *DeleteLoadBalancer 接口用来删除用户指定的一个负载均衡实例。
-本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
+     *DeleteLoadBalancer 接口用以删除指定的一个或多个负载均衡实例。
+本接口为异步接口，接口返回成功后，需以返回的 RequestId 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
      * @param req DeleteLoadBalancerRequest
      * @return DeleteLoadBalancerResponse
      * @throws TencentCloudSDKException
@@ -199,7 +199,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *DeleteRule 接口用来删除应用型负载均衡实例七层监听器下的转发规则。
+     *DeleteRule 接口用来删除负载均衡实例七层监听器下的转发规则。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req DeleteRuleRequest
      * @return DeleteRuleResponse
@@ -237,7 +237,8 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *DeregisterTargetsFromClassicalLB用于解绑后端服务器
+     *DeregisterTargetsFromClassicalLB 接口用于解绑负载均衡后端服务。
+本接口为异步接口，接口返回成功后，需以返回的 RequestId 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
      * @param req DeregisterTargetsFromClassicalLBRequest
      * @return DeregisterTargetsFromClassicalLBResponse
      * @throws TencentCloudSDKException
@@ -291,7 +292,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *DescribeClassicalLBListeners用于获取传统型负载均衡信息
+     *DescribeClassicalLBListeners 接口用于获取传统型负载均衡的监听器信息。
      * @param req DescribeClassicalLBListenersRequest
      * @return DescribeClassicalLBListenersResponse
      * @throws TencentCloudSDKException
@@ -327,7 +328,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *DescribeListeners 接口可根据负载均衡器 ID，监听器的协议或者端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，默认返该负载均衡器下的默认数据长度（20 个）的监听器。
+     *DescribeListeners 接口可根据负载均衡器 ID，监听器的协议或端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，默认返该负载均衡器下的默认数据长度（20 个）的监听器。
      * @param req DescribeListenersRequest
      * @return DescribeListenersResponse
      * @throws TencentCloudSDKException
@@ -418,7 +419,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *本接口用于查询异步执行任务的状态，对于非查询类的接口（创建/删除负载均衡实例、监听器、规则以及绑定或解绑后端机器等），在调用成功后都需要使用本接口查询任务是否最终执行成功。
+     *本接口用于查询异步任务的执行状态，对于非查询类的接口（创建/删除负载均衡实例、监听器、规则以及绑定或解绑后端服务等），在接口调用成功后，都需要使用本接口查询任务最终是否执行成功。
      * @param req DescribeTaskStatusRequest
      * @return DescribeTaskStatusResponse
      * @throws TencentCloudSDKException
@@ -436,7 +437,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *用户手动配置原访问地址和重定向地址，系统自动将原访问地址的请求重定向至对应路径的目的地址。同一域名下可以配置多条路径作为重定向策略，实现http/https之间请求的自动跳转。
+     *用户手动配置原访问地址和重定向地址，系统自动将原访问地址的请求重定向至对应路径的目的地址。同一域名下可以配置多条路径作为重定向策略，实现http/https之间请求的自动跳转。设置重定向时，需满足如下约束条件：若A已经重定向至B，则A不能再重定向至C（除非先删除老的重定向关系，再建立新的重定向关系），B不能重定向至任何其它地址。
      * @param req ManualRewriteRequest
      * @return ManualRewriteResponse
      * @throws TencentCloudSDKException
@@ -454,7 +455,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *ModifyDomain接口用来修改应用型负载均衡七层监听器下的域名。
+     *ModifyDomain接口用来修改负载均衡七层监听器下的域名。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req ModifyDomainRequest
      * @return ModifyDomainResponse
@@ -492,8 +493,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *修改负载均衡实例的属性，支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
-本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
+     *修改负载均衡实例的属性。支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
      * @param req ModifyLoadBalancerAttributesRequest
      * @return ModifyLoadBalancerAttributesResponse
      * @throws TencentCloudSDKException
@@ -511,7 +511,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *ModifyRule 接口用来修改应用型负载均衡七层监听器下的转发规则的各项属性，包括转发路径、健康检查属性、转发策略等。
+     *ModifyRule 接口用来修改负载均衡七层监听器下的转发规则的各项属性，包括转发路径、健康检查属性、转发策略等。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req ModifyRuleRequest
      * @return ModifyRuleResponse
@@ -568,7 +568,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *RegisterTargets 接口用来将一台或多台后端机器注册到应用型负载均衡的监听器，对于四层监听器（TCP、UDP），只需指定监听器ID即可，对于七层监听器（HTTP、HTTPS），还需通过LocationId或者Domain+Url指定转发规则。
+     *RegisterTargets 接口用来将一台或多台后端服务绑定到负载均衡的监听器（或7层转发规则），在此之前您需要先行创建相关的4层监听器或7层转发规则。对于四层监听器（TCP、UDP），只需指定监听器ID即可，对于七层监听器（HTTP、HTTPS），还需通过LocationId或者Domain+Url指定转发规则。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req RegisterTargetsRequest
      * @return RegisterTargetsResponse
@@ -587,7 +587,8 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *RegisterTargetsWithClassicalLB用于绑定后端服务到传统型负载均衡
+     *RegisterTargetsWithClassicalLB 接口用于绑定后端服务到传统型负载均衡。
+本接口为异步接口，接口返回成功后，需以返回的 RequestId 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
      * @param req RegisterTargetsWithClassicalLBRequest
      * @return RegisterTargetsWithClassicalLBResponse
      * @throws TencentCloudSDKException
@@ -605,9 +606,9 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *SetLoadBalancerSecurityGroups 接口支持对一个负载均衡实例执行设置（绑定、解绑）安全组操作，查询一个负载均衡实例目前已绑定的安全组，可使用 DescribeLoadBalancers 接口。
+     *SetLoadBalancerSecurityGroups 接口支持对一个公网负载均衡实例执行设置（绑定、解绑）安全组操作。查询一个负载均衡实例目前已绑定的安全组，可使用 DescribeLoadBalancers 接口。本接口是set语义，
 绑定操作时，入参需要传入负载均衡实例要绑定的所有安全组（已绑定的+新增绑定的）。
-解绑操作时，入参需要传入负载均衡实例执行解绑后所绑定的所有安全组；如果要解绑所有安全组，可传入空数组。
+解绑操作时，入参需要传入负载均衡实例执行解绑后所绑定的所有安全组；如果要解绑所有安全组，可不传此参数，或传入空数组。注意：内网负载均衡不支持绑定安全组。
      * @param req SetLoadBalancerSecurityGroupsRequest
      * @return SetLoadBalancerSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -618,6 +619,24 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetLoadBalancerSecurityGroupsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SetLoadBalancerSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *绑定或解绑一个安全组到多个公网负载均衡实例。注意：内网负载均衡不支持绑定安全组。
+     * @param req SetSecurityGroupForLoadbalancersRequest
+     * @return SetSecurityGroupForLoadbalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetSecurityGroupForLoadbalancersResponse SetSecurityGroupForLoadbalancers(SetSecurityGroupForLoadbalancersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetSecurityGroupForLoadbalancersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetSecurityGroupForLoadbalancersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetSecurityGroupForLoadbalancers"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

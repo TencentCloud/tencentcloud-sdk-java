@@ -37,14 +37,14 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     private String Description;
 
     /**
-    * mysql版本。
+    * MySQL 版本号。
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * 源参数模板ID。
+    * 源参数模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -90,32 +90,32 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取mysql版本。
-     * @return EngineVersion mysql版本。
+     * 获取MySQL 版本号。
+     * @return EngineVersion MySQL 版本号。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * 设置mysql版本。
-     * @param EngineVersion mysql版本。
+     * 设置MySQL 版本号。
+     * @param EngineVersion MySQL 版本号。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * 获取源参数模板ID。
-     * @return TemplateId 源参数模板ID。
+     * 获取源参数模板 ID。
+     * @return TemplateId 源参数模板 ID。
      */
     public Integer getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * 设置源参数模板ID。
-     * @param TemplateId 源参数模板ID。
+     * 设置源参数模板 ID。
+     * @param TemplateId 源参数模板 ID。
      */
     public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;

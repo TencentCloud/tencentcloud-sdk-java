@@ -144,6 +144,13 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     private InstanceTag [] InstanceTags;
 
     /**
+    * CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+    */
+    @SerializedName("CamRoleName")
+    @Expose
+    private String CamRoleName;
+
+    /**
      * 获取启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      * @return LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      */
@@ -436,6 +443,22 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @return CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public String getCamRoleName() {
+        return this.CamRoleName;
+    }
+
+    /**
+     * 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @param CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public void setCamRoleName(String CamRoleName) {
+        this.CamRoleName = CamRoleName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -455,6 +478,7 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
         this.setParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
 
     }
 }

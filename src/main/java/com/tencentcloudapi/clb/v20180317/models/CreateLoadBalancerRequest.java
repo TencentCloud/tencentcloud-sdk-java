@@ -31,40 +31,90 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String LoadBalancerType;
 
     /**
-    * 负载均衡实例。1：应用型，0：传统型，默认为应用型负载均衡实例。
+    * 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
     */
     @SerializedName("Forward")
     @Expose
     private Integer Forward;
 
     /**
-    * 负载均衡实例的名称，只用来创建一个的时候生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称重复的话，则系统将会自动生成此次创建的负载均衡实例的名称。
+    * 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
     */
     @SerializedName("LoadBalancerName")
     @Expose
     private String LoadBalancerName;
 
     /**
-    * 负载均衡后端实例所属网络 ID，可以通过 DescribeVpcEx 接口获取。 不填则默认为基础网络。
+    * 负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 在私有网络内购买内网负载均衡实例的时候需要指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其他情况不用填写该字段。
+    * 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不填则属于默认项目。
+    * 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
     private Integer ProjectId;
+
+    /**
+    * IP版本，IPV4 | IPV6，默认值 IPV4。
+    */
+    @SerializedName("AddressIPVersion")
+    @Expose
+    private String AddressIPVersion;
+
+    /**
+    * 创建负载均衡的个数
+    */
+    @SerializedName("Number")
+    @Expose
+    private Integer Number;
+
+    /**
+    * 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+    */
+    @SerializedName("MasterZoneId")
+    @Expose
+    private String MasterZoneId;
+
+    /**
+    * 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * Anycast的发布域，可取 ZONE_A 或 ZONE_B
+    */
+    @SerializedName("AnycastZone")
+    @Expose
+    private String AnycastZone;
+
+    /**
+    * 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+    */
+    @SerializedName("InternetAccessible")
+    @Expose
+    private InternetAccessible InternetAccessible;
+
+    /**
+    * CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+    */
+    @SerializedName("VipIsp")
+    @Expose
+    private String VipIsp;
 
     /**
      * 获取负载均衡实例的网络类型：
@@ -87,87 +137,203 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例。1：应用型，0：传统型，默认为应用型负载均衡实例。
-     * @return Forward 负载均衡实例。1：应用型，0：传统型，默认为应用型负载均衡实例。
+     * 获取负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+     * @return Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
      */
     public Integer getForward() {
         return this.Forward;
     }
 
     /**
-     * 设置负载均衡实例。1：应用型，0：传统型，默认为应用型负载均衡实例。
-     * @param Forward 负载均衡实例。1：应用型，0：传统型，默认为应用型负载均衡实例。
+     * 设置负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+     * @param Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
      */
     public void setForward(Integer Forward) {
         this.Forward = Forward;
     }
 
     /**
-     * 获取负载均衡实例的名称，只用来创建一个的时候生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称重复的话，则系统将会自动生成此次创建的负载均衡实例的名称。
-     * @return LoadBalancerName 负载均衡实例的名称，只用来创建一个的时候生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称重复的话，则系统将会自动生成此次创建的负载均衡实例的名称。
+     * 获取负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
+     * @return LoadBalancerName 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * 设置负载均衡实例的名称，只用来创建一个的时候生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称重复的话，则系统将会自动生成此次创建的负载均衡实例的名称。
-     * @param LoadBalancerName 负载均衡实例的名称，只用来创建一个的时候生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称重复的话，则系统将会自动生成此次创建的负载均衡实例的名称。
+     * 设置负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
+     * @param LoadBalancerName 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
     }
 
     /**
-     * 获取负载均衡后端实例所属网络 ID，可以通过 DescribeVpcEx 接口获取。 不填则默认为基础网络。
-     * @return VpcId 负载均衡后端实例所属网络 ID，可以通过 DescribeVpcEx 接口获取。 不填则默认为基础网络。
+     * 获取负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+     * @return VpcId 负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置负载均衡后端实例所属网络 ID，可以通过 DescribeVpcEx 接口获取。 不填则默认为基础网络。
-     * @param VpcId 负载均衡后端实例所属网络 ID，可以通过 DescribeVpcEx 接口获取。 不填则默认为基础网络。
+     * 设置负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+     * @param VpcId 负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * 获取在私有网络内购买内网负载均衡实例的时候需要指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其他情况不用填写该字段。
-     * @return SubnetId 在私有网络内购买内网负载均衡实例的时候需要指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其他情况不用填写该字段。
+     * 获取在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+     * @return SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * 设置在私有网络内购买内网负载均衡实例的时候需要指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其他情况不用填写该字段。
-     * @param SubnetId 在私有网络内购买内网负载均衡实例的时候需要指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其他情况不用填写该字段。
+     * 设置在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+     * @param SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * 获取负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不填则属于默认项目。
-     * @return ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不填则属于默认项目。
+     * 获取负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+     * @return ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
      */
     public Integer getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不填则属于默认项目。
-     * @param ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不填则属于默认项目。
+     * 设置负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+     * @param ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
      */
     public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * 获取IP版本，IPV4 | IPV6，默认值 IPV4。
+     * @return AddressIPVersion IP版本，IPV4 | IPV6，默认值 IPV4。
+     */
+    public String getAddressIPVersion() {
+        return this.AddressIPVersion;
+    }
+
+    /**
+     * 设置IP版本，IPV4 | IPV6，默认值 IPV4。
+     * @param AddressIPVersion IP版本，IPV4 | IPV6，默认值 IPV4。
+     */
+    public void setAddressIPVersion(String AddressIPVersion) {
+        this.AddressIPVersion = AddressIPVersion;
+    }
+
+    /**
+     * 获取创建负载均衡的个数
+     * @return Number 创建负载均衡的个数
+     */
+    public Integer getNumber() {
+        return this.Number;
+    }
+
+    /**
+     * 设置创建负载均衡的个数
+     * @param Number 创建负载均衡的个数
+     */
+    public void setNumber(Integer Number) {
+        this.Number = Number;
+    }
+
+    /**
+     * 获取设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+     * @return MasterZoneId 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+     */
+    public String getMasterZoneId() {
+        return this.MasterZoneId;
+    }
+
+    /**
+     * 设置设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+     * @param MasterZoneId 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+     */
+    public void setMasterZoneId(String MasterZoneId) {
+        this.MasterZoneId = MasterZoneId;
+    }
+
+    /**
+     * 获取可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * @return ZoneId 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * 设置可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * @param ZoneId 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * 获取Anycast的发布域，可取 ZONE_A 或 ZONE_B
+     * @return AnycastZone Anycast的发布域，可取 ZONE_A 或 ZONE_B
+     */
+    public String getAnycastZone() {
+        return this.AnycastZone;
+    }
+
+    /**
+     * 设置Anycast的发布域，可取 ZONE_A 或 ZONE_B
+     * @param AnycastZone Anycast的发布域，可取 ZONE_A 或 ZONE_B
+     */
+    public void setAnycastZone(String AnycastZone) {
+        this.AnycastZone = AnycastZone;
+    }
+
+    /**
+     * 获取负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+     * @return InternetAccessible 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+     */
+    public InternetAccessible getInternetAccessible() {
+        return this.InternetAccessible;
+    }
+
+    /**
+     * 设置负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+     * @param InternetAccessible 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+     */
+    public void setInternetAccessible(InternetAccessible InternetAccessible) {
+        this.InternetAccessible = InternetAccessible;
+    }
+
+    /**
+     * 获取CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+     * @return VipIsp CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+     */
+    public String getVipIsp() {
+        return this.VipIsp;
+    }
+
+    /**
+     * 设置CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+     * @param VipIsp CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+     */
+    public void setVipIsp(String VipIsp) {
+        this.VipIsp = VipIsp;
     }
 
     /**
@@ -180,6 +346,13 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+        this.setParamSimple(map, prefix + "Number", this.Number);
+        this.setParamSimple(map, prefix + "MasterZoneId", this.MasterZoneId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
+        this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
+        this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
 
     }
 }

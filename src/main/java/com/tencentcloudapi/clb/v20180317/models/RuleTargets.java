@@ -44,7 +44,7 @@ public class RuleTargets  extends AbstractModel{
     private String Url;
 
     /**
-    * 后端机器的信息
+    * 后端服务的信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Targets")
@@ -100,9 +100,9 @@ public class RuleTargets  extends AbstractModel{
     }
 
     /**
-     * 获取后端机器的信息
+     * 获取后端服务的信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Targets 后端机器的信息
+     * @return Targets 后端服务的信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Backend [] getTargets() {
@@ -110,9 +110,9 @@ public class RuleTargets  extends AbstractModel{
     }
 
     /**
-     * 设置后端机器的信息
+     * 设置后端服务的信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Targets 后端机器的信息
+     * @param Targets 后端服务的信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargets(Backend [] Targets) {

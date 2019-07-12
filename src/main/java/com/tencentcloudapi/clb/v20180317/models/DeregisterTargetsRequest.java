@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DeregisterTargetsRequest  extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例 ID，格式如 lb-12345678
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 监听器 ID
+    * 监听器 ID，格式如 lbl-12345678
     */
     @SerializedName("ListenerId")
     @Expose
@@ -44,7 +44,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     private Target [] Targets;
 
     /**
-    * 转发规则的ID，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+    * 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
     */
     @SerializedName("LocationId")
     @Expose
@@ -65,32 +65,32 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取负载均衡实例 ID
-     * @return LoadBalancerId 负载均衡实例 ID
+     * 获取负载均衡实例 ID，格式如 lb-12345678
+     * @return LoadBalancerId 负载均衡实例 ID，格式如 lb-12345678
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * 设置负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * 设置负载均衡实例 ID，格式如 lb-12345678
+     * @param LoadBalancerId 负载均衡实例 ID，格式如 lb-12345678
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * 获取监听器 ID
-     * @return ListenerId 监听器 ID
+     * 获取监听器 ID，格式如 lbl-12345678
+     * @return ListenerId 监听器 ID，格式如 lbl-12345678
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * 设置监听器 ID
-     * @param ListenerId 监听器 ID
+     * 设置监听器 ID，格式如 lbl-12345678
+     * @param ListenerId 监听器 ID，格式如 lbl-12345678
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
@@ -113,16 +113,16 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的ID，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
-     * @return LocationId 转发规则的ID，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+     * 获取转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+     * @return LocationId 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * 设置转发规则的ID，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
-     * @param LocationId 转发规则的ID，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+     * 设置转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+     * @param LocationId 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;

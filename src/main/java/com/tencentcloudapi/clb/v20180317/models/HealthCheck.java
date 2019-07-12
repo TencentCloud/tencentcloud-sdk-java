@@ -62,8 +62,8 @@ public class HealthCheck  extends AbstractModel{
     private Integer UnHealthNum;
 
     /**
-    * 健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
-1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+    * 健康检查状态码（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。可选值：1~31，默认 31。
+1 表示探测后返回值 1xx 代表健康，2 表示返回 2xx 代表健康，4 表示返回 3xx 代表健康，8 表示返回 4xx 代表健康，16 表示返回 5xx 代表健康。若希望多种返回码都可代表健康，则将相应的值相加。注意：TCP监听器的HTTP健康检查方式，只支持指定一种健康检查状态码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpCode")
@@ -71,7 +71,7 @@ public class HealthCheck  extends AbstractModel{
     private Integer HttpCode;
 
     /**
-    * 健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+    * 健康检查路径（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpCheckPath")
@@ -79,7 +79,7 @@ public class HealthCheck  extends AbstractModel{
     private String HttpCheckPath;
 
     /**
-    * 健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+    * 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpCheckDomain")
@@ -87,12 +87,60 @@ public class HealthCheck  extends AbstractModel{
     private String HttpCheckDomain;
 
     /**
-    * 健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+    * 健康检查方法（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式），默认值：HEAD，可选值HEAD或GET。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpCheckMethod")
     @Expose
     private String HttpCheckMethod;
+
+    /**
+    * 自定义探测相关参数。健康检查端口，默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckPort")
+    @Expose
+    private Integer CheckPort;
+
+    /**
+    * 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查的输入格式，可取值：HEX或TEXT；取值为HEX时，SendContext和RecvContext的字符只能在0123456789ABCDEF中选取且长度必须是偶数位。（仅适用于TCP/UDP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContextType")
+    @Expose
+    private String ContextType;
+
+    /**
+    * 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查发送的请求内容，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SendContext")
+    @Expose
+    private String SendContext;
+
+    /**
+    * 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查返回的结果，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecvContext")
+    @Expose
+    private String RecvContext;
+
+    /**
+    * 自定义探测相关参数。健康检查使用的协议：TCP | HTTP | CUSTOM（仅适用于TCP/UDP监听器，其中UDP监听器只支持CUSTOM；如果使用自定义健康检查功能，则必传）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckType")
+    @Expose
+    private String CheckType;
+
+    /**
+    * 自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HttpVersion")
+    @Expose
+    private String HttpVersion;
 
     /**
      * 获取是否开启健康检查：1（开启）、0（关闭）。
@@ -191,11 +239,11 @@ public class HealthCheck  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
-1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+     * 获取健康检查状态码（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。可选值：1~31，默认 31。
+1 表示探测后返回值 1xx 代表健康，2 表示返回 2xx 代表健康，4 表示返回 3xx 代表健康，8 表示返回 4xx 代表健康，16 表示返回 5xx 代表健康。若希望多种返回码都可代表健康，则将相应的值相加。注意：TCP监听器的HTTP健康检查方式，只支持指定一种健康检查状态码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return HttpCode 健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
-1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+     * @return HttpCode 健康检查状态码（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。可选值：1~31，默认 31。
+1 表示探测后返回值 1xx 代表健康，2 表示返回 2xx 代表健康，4 表示返回 3xx 代表健康，8 表示返回 4xx 代表健康，16 表示返回 5xx 代表健康。若希望多种返回码都可代表健康，则将相应的值相加。注意：TCP监听器的HTTP健康检查方式，只支持指定一种健康检查状态码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getHttpCode() {
@@ -203,11 +251,11 @@ public class HealthCheck  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
-1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+     * 设置健康检查状态码（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。可选值：1~31，默认 31。
+1 表示探测后返回值 1xx 代表健康，2 表示返回 2xx 代表健康，4 表示返回 3xx 代表健康，8 表示返回 4xx 代表健康，16 表示返回 5xx 代表健康。若希望多种返回码都可代表健康，则将相应的值相加。注意：TCP监听器的HTTP健康检查方式，只支持指定一种健康检查状态码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpCode 健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
-1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+     * @param HttpCode 健康检查状态码（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。可选值：1~31，默认 31。
+1 表示探测后返回值 1xx 代表健康，2 表示返回 2xx 代表健康，4 表示返回 3xx 代表健康，8 表示返回 4xx 代表健康，16 表示返回 5xx 代表健康。若希望多种返回码都可代表健康，则将相应的值相加。注意：TCP监听器的HTTP健康检查方式，只支持指定一种健康检查状态码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpCode(Integer HttpCode) {
@@ -215,9 +263,9 @@ public class HealthCheck  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+     * 获取健康检查路径（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return HttpCheckPath 健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+     * @return HttpCheckPath 健康检查路径（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpCheckPath() {
@@ -225,9 +273,9 @@ public class HealthCheck  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+     * 设置健康检查路径（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpCheckPath 健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+     * @param HttpCheckPath 健康检查路径（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpCheckPath(String HttpCheckPath) {
@@ -235,9 +283,9 @@ public class HealthCheck  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+     * 获取健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+     * @return HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpCheckDomain() {
@@ -245,9 +293,9 @@ public class HealthCheck  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+     * 设置健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+     * @param HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
@@ -255,9 +303,9 @@ public class HealthCheck  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+     * 获取健康检查方法（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式），默认值：HEAD，可选值HEAD或GET。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return HttpCheckMethod 健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+     * @return HttpCheckMethod 健康检查方法（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式），默认值：HEAD，可选值HEAD或GET。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpCheckMethod() {
@@ -265,13 +313,133 @@ public class HealthCheck  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+     * 设置健康检查方法（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式），默认值：HEAD，可选值HEAD或GET。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpCheckMethod 健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+     * @param HttpCheckMethod 健康检查方法（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式），默认值：HEAD，可选值HEAD或GET。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpCheckMethod(String HttpCheckMethod) {
         this.HttpCheckMethod = HttpCheckMethod;
+    }
+
+    /**
+     * 获取自定义探测相关参数。健康检查端口，默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CheckPort 自定义探测相关参数。健康检查端口，默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getCheckPort() {
+        return this.CheckPort;
+    }
+
+    /**
+     * 设置自定义探测相关参数。健康检查端口，默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckPort 自定义探测相关参数。健康检查端口，默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckPort(Integer CheckPort) {
+        this.CheckPort = CheckPort;
+    }
+
+    /**
+     * 获取自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查的输入格式，可取值：HEX或TEXT；取值为HEX时，SendContext和RecvContext的字符只能在0123456789ABCDEF中选取且长度必须是偶数位。（仅适用于TCP/UDP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ContextType 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查的输入格式，可取值：HEX或TEXT；取值为HEX时，SendContext和RecvContext的字符只能在0123456789ABCDEF中选取且长度必须是偶数位。（仅适用于TCP/UDP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContextType() {
+        return this.ContextType;
+    }
+
+    /**
+     * 设置自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查的输入格式，可取值：HEX或TEXT；取值为HEX时，SendContext和RecvContext的字符只能在0123456789ABCDEF中选取且长度必须是偶数位。（仅适用于TCP/UDP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContextType 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查的输入格式，可取值：HEX或TEXT；取值为HEX时，SendContext和RecvContext的字符只能在0123456789ABCDEF中选取且长度必须是偶数位。（仅适用于TCP/UDP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContextType(String ContextType) {
+        this.ContextType = ContextType;
+    }
+
+    /**
+     * 获取自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查发送的请求内容，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SendContext 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查发送的请求内容，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSendContext() {
+        return this.SendContext;
+    }
+
+    /**
+     * 设置自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查发送的请求内容，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SendContext 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查发送的请求内容，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSendContext(String SendContext) {
+        this.SendContext = SendContext;
+    }
+
+    /**
+     * 获取自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查返回的结果，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return RecvContext 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查返回的结果，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecvContext() {
+        return this.RecvContext;
+    }
+
+    /**
+     * 设置自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查返回的结果，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecvContext 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查返回的结果，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecvContext(String RecvContext) {
+        this.RecvContext = RecvContext;
+    }
+
+    /**
+     * 获取自定义探测相关参数。健康检查使用的协议：TCP | HTTP | CUSTOM（仅适用于TCP/UDP监听器，其中UDP监听器只支持CUSTOM；如果使用自定义健康检查功能，则必传）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CheckType 自定义探测相关参数。健康检查使用的协议：TCP | HTTP | CUSTOM（仅适用于TCP/UDP监听器，其中UDP监听器只支持CUSTOM；如果使用自定义健康检查功能，则必传）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCheckType() {
+        return this.CheckType;
+    }
+
+    /**
+     * 设置自定义探测相关参数。健康检查使用的协议：TCP | HTTP | CUSTOM（仅适用于TCP/UDP监听器，其中UDP监听器只支持CUSTOM；如果使用自定义健康检查功能，则必传）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckType 自定义探测相关参数。健康检查使用的协议：TCP | HTTP | CUSTOM（仅适用于TCP/UDP监听器，其中UDP监听器只支持CUSTOM；如果使用自定义健康检查功能，则必传）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckType(String CheckType) {
+        this.CheckType = CheckType;
+    }
+
+    /**
+     * 获取自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return HttpVersion 自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHttpVersion() {
+        return this.HttpVersion;
+    }
+
+    /**
+     * 设置自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HttpVersion 自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttpVersion(String HttpVersion) {
+        this.HttpVersion = HttpVersion;
     }
 
     /**
@@ -287,6 +455,12 @@ public class HealthCheck  extends AbstractModel{
         this.setParamSimple(map, prefix + "HttpCheckPath", this.HttpCheckPath);
         this.setParamSimple(map, prefix + "HttpCheckDomain", this.HttpCheckDomain);
         this.setParamSimple(map, prefix + "HttpCheckMethod", this.HttpCheckMethod);
+        this.setParamSimple(map, prefix + "CheckPort", this.CheckPort);
+        this.setParamSimple(map, prefix + "ContextType", this.ContextType);
+        this.setParamSimple(map, prefix + "SendContext", this.SendContext);
+        this.setParamSimple(map, prefix + "RecvContext", this.RecvContext);
+        this.setParamSimple(map, prefix + "CheckType", this.CheckType);
+        this.setParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
 
     }
 }

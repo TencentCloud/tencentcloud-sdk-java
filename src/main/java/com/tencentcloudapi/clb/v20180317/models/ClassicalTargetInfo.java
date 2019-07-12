@@ -30,7 +30,7 @@ public class ClassicalTargetInfo  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 权重 取值为0-100
+    * 权重，取值范围 [0, 100]
     */
     @SerializedName("Weight")
     @Expose
@@ -53,16 +53,16 @@ public class ClassicalTargetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取权重 取值为0-100
-     * @return Weight 权重 取值为0-100
+     * 获取权重，取值范围 [0, 100]
+     * @return Weight 权重，取值范围 [0, 100]
      */
     public Integer getWeight() {
         return this.Weight;
     }
 
     /**
-     * 设置权重 取值为0-100
-     * @param Weight 权重 取值为0-100
+     * 设置权重，取值范围 [0, 100]
+     * @param Weight 权重，取值范围 [0, 100]
      */
     public void setWeight(Integer Weight) {
         this.Weight = Weight;

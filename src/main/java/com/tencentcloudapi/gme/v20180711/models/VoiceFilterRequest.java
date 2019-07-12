@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class VoiceFilterRequest  extends AbstractModel{
 
     /**
-    * 应用id
+    * 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * 文件id，表示文件唯一id
+    * 文件ID，表示文件唯一id
     */
     @SerializedName("FileId")
     @Expose
@@ -44,7 +44,7 @@ public class VoiceFilterRequest  extends AbstractModel{
     private String FileName;
 
     /**
-    * 文件内容url，FileUrl和FileContent二选一
+    * 文件url，urlencode编码，FileUrl和FileContent二选一
     */
     @SerializedName("FileUrl")
     @Expose
@@ -58,39 +58,39 @@ public class VoiceFilterRequest  extends AbstractModel{
     private String FileContent;
 
     /**
-    * 用户id
+    * 用户ID
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-     * 获取应用id
-     * @return BizId 应用id
+     * 获取应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+     * @return BizId 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * 设置应用id
-     * @param BizId 应用id
+     * 设置应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+     * @param BizId 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * 获取文件id，表示文件唯一id
-     * @return FileId 文件id，表示文件唯一id
+     * 获取文件ID，表示文件唯一id
+     * @return FileId 文件ID，表示文件唯一id
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * 设置文件id，表示文件唯一id
-     * @param FileId 文件id，表示文件唯一id
+     * 设置文件ID，表示文件唯一id
+     * @param FileId 文件ID，表示文件唯一id
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -113,16 +113,16 @@ public class VoiceFilterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件内容url，FileUrl和FileContent二选一
-     * @return FileUrl 文件内容url，FileUrl和FileContent二选一
+     * 获取文件url，urlencode编码，FileUrl和FileContent二选一
+     * @return FileUrl 文件url，urlencode编码，FileUrl和FileContent二选一
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * 设置文件内容url，FileUrl和FileContent二选一
-     * @param FileUrl 文件内容url，FileUrl和FileContent二选一
+     * 设置文件url，urlencode编码，FileUrl和FileContent二选一
+     * @param FileUrl 文件url，urlencode编码，FileUrl和FileContent二选一
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
@@ -145,16 +145,16 @@ public class VoiceFilterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户id
-     * @return OpenId 用户id
+     * 获取用户ID
+     * @return OpenId 用户ID
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * 设置用户id
-     * @param OpenId 用户id
+     * 设置用户ID
+     * @param OpenId 用户ID
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

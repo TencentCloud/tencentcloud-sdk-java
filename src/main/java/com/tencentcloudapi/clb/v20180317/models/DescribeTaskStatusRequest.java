@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeTaskStatusRequest  extends AbstractModel{
 
     /**
-    * 请求ID，即接口返回的RequestId
+    * 请求ID，即接口返回的 RequestId 参数
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * 获取请求ID，即接口返回的RequestId
-     * @return TaskId 请求ID，即接口返回的RequestId
+     * 获取请求ID，即接口返回的 RequestId 参数
+     * @return TaskId 请求ID，即接口返回的 RequestId 参数
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置请求ID，即接口返回的RequestId
-     * @param TaskId 请求ID，即接口返回的RequestId
+     * 设置请求ID，即接口返回的 RequestId 参数
+     * @param TaskId 请求ID，即接口返回的 RequestId 参数
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

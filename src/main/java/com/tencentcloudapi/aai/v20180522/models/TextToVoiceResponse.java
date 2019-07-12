@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TextToVoiceResponse  extends AbstractModel{
 
     /**
-    * base64编码的wav音频数据
+    * base64编码的wav/mp3音频数据
     */
     @SerializedName("Audio")
     @Expose
@@ -44,16 +44,16 @@ public class TextToVoiceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取base64编码的wav音频数据
-     * @return Audio base64编码的wav音频数据
+     * 获取base64编码的wav/mp3音频数据
+     * @return Audio base64编码的wav/mp3音频数据
      */
     public String getAudio() {
         return this.Audio;
     }
 
     /**
-     * 设置base64编码的wav音频数据
-     * @param Audio base64编码的wav音频数据
+     * 设置base64编码的wav/mp3音频数据
+     * @param Audio base64编码的wav/mp3音频数据
      */
     public void setAudio(String Audio) {
         this.Audio = Audio;

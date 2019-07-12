@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteListenerRequest  extends AbstractModel{
 
     /**
-    * 应用型负载均衡实例 ID
+    * 负载均衡实例 ID
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteListenerRequest  extends AbstractModel{
     private String ListenerId;
 
     /**
-     * 获取应用型负载均衡实例 ID
-     * @return LoadBalancerId 应用型负载均衡实例 ID
+     * 获取负载均衡实例 ID
+     * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * 设置应用型负载均衡实例 ID
-     * @param LoadBalancerId 应用型负载均衡实例 ID
+     * 设置负载均衡实例 ID
+     * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;

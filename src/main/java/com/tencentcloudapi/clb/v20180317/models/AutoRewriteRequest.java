@@ -30,14 +30,14 @@ public class AutoRewriteRequest  extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 监听器ID
+    * HTTPS:443监听器的ID
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 需要重定向的域名
+    * HTTPS:443监听器下需要重定向的域名
     */
     @SerializedName("Domains")
     @Expose
@@ -60,32 +60,32 @@ public class AutoRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器ID
-     * @return ListenerId 监听器ID
+     * 获取HTTPS:443监听器的ID
+     * @return ListenerId HTTPS:443监听器的ID
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * 设置监听器ID
-     * @param ListenerId 监听器ID
+     * 设置HTTPS:443监听器的ID
+     * @param ListenerId HTTPS:443监听器的ID
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * 获取需要重定向的域名
-     * @return Domains 需要重定向的域名
+     * 获取HTTPS:443监听器下需要重定向的域名
+     * @return Domains HTTPS:443监听器下需要重定向的域名
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * 设置需要重定向的域名
-     * @param Domains 需要重定向的域名
+     * 设置HTTPS:443监听器下需要重定向的域名
+     * @param Domains HTTPS:443监听器下需要重定向的域名
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;

@@ -30,7 +30,7 @@ public class DescribeListenersRequest  extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 要查询的应用型负载均衡监听器 ID数组
+    * 要查询的负载均衡监听器 ID数组
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的应用型负载均衡监听器 ID数组
-     * @return ListenerIds 要查询的应用型负载均衡监听器 ID数组
+     * 获取要查询的负载均衡监听器 ID数组
+     * @return ListenerIds 要查询的负载均衡监听器 ID数组
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * 设置要查询的应用型负载均衡监听器 ID数组
-     * @param ListenerIds 要查询的应用型负载均衡监听器 ID数组
+     * 设置要查询的负载均衡监听器 ID数组
+     * @param ListenerIds 要查询的负载均衡监听器 ID数组
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

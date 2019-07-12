@@ -58,7 +58,7 @@ public class RsWeightRule  extends AbstractModel{
     private String Url;
 
     /**
-    * 后端云服务器新的转发权重，取值范围：0~100。
+    * 后端服务新的转发权重，取值范围：0~100。
     */
     @SerializedName("Weight")
     @Expose
@@ -145,16 +145,16 @@ public class RsWeightRule  extends AbstractModel{
     }
 
     /**
-     * 获取后端云服务器新的转发权重，取值范围：0~100。
-     * @return Weight 后端云服务器新的转发权重，取值范围：0~100。
+     * 获取后端服务新的转发权重，取值范围：0~100。
+     * @return Weight 后端服务新的转发权重，取值范围：0~100。
      */
     public Integer getWeight() {
         return this.Weight;
     }
 
     /**
-     * 设置后端云服务器新的转发权重，取值范围：0~100。
-     * @param Weight 后端云服务器新的转发权重，取值范围：0~100。
+     * 设置后端服务新的转发权重，取值范围：0~100。
+     * @param Weight 后端服务新的转发权重，取值范围：0~100。
      */
     public void setWeight(Integer Weight) {
         this.Weight = Weight;

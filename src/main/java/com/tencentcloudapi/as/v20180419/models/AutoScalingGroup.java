@@ -184,6 +184,13 @@ public class AutoScalingGroup  extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 服务设置
+    */
+    @SerializedName("ServiceSettings")
+    @Expose
+    private ServiceSettings ServiceSettings;
+
+    /**
      * 获取伸缩组ID
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -552,6 +559,22 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
+     * 获取服务设置
+     * @return ServiceSettings 服务设置
+     */
+    public ServiceSettings getServiceSettings() {
+        return this.ServiceSettings;
+    }
+
+    /**
+     * 设置服务设置
+     * @param ServiceSettings 服务设置
+     */
+    public void setServiceSettings(ServiceSettings ServiceSettings) {
+        this.ServiceSettings = ServiceSettings;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -578,6 +601,7 @@ public class AutoScalingGroup  extends AbstractModel{
         this.setParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
         this.setParamSimple(map, prefix + "InActivityStatus", this.InActivityStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
 
     }
 }

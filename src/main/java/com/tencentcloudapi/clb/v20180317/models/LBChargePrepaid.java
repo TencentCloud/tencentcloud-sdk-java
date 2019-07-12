@@ -13,77 +13,77 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoiceFilter  extends AbstractModel{
+public class LBChargePrepaid  extends AbstractModel{
 
     /**
-    * 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+    * 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Type")
+    @SerializedName("RenewFlag")
     @Expose
-    private Long Type;
+    private String RenewFlag;
 
     /**
-    * 过滤命中关键词
+    * 周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Word")
+    @SerializedName("Period")
     @Expose
-    private String Word;
+    private Integer Period;
 
     /**
-     * 获取过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * 获取续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Type 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * @return RenewFlag 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getType() {
-        return this.Type;
+    public String getRenewFlag() {
+        return this.RenewFlag;
     }
 
     /**
-     * 设置过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * 设置续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * @param RenewFlag 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setType(Long Type) {
-        this.Type = Type;
+    public void setRenewFlag(String RenewFlag) {
+        this.RenewFlag = RenewFlag;
     }
 
     /**
-     * 获取过滤命中关键词
+     * 获取周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Word 过滤命中关键词
+     * @return Period 周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getWord() {
-        return this.Word;
+    public Integer getPeriod() {
+        return this.Period;
     }
 
     /**
-     * 设置过滤命中关键词
+     * 设置周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Word 过滤命中关键词
+     * @param Period 周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWord(String Word) {
-        this.Word = Word;
+    public void setPeriod(Integer Period) {
+        this.Period = Period;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "Word", this.Word);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

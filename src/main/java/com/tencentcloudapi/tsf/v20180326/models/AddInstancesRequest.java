@@ -58,7 +58,7 @@ public class AddInstancesRequest  extends AbstractModel{
     private String Password;
 
     /**
-    * 重装系统，关联秘钥设置
+    * 重装系统，关联密钥设置
     */
     @SerializedName("KeyId")
     @Expose
@@ -159,16 +159,16 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取重装系统，关联秘钥设置
-     * @return KeyId 重装系统，关联秘钥设置
+     * 获取重装系统，关联密钥设置
+     * @return KeyId 重装系统，关联密钥设置
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * 设置重装系统，关联秘钥设置
-     * @param KeyId 重装系统，关联秘钥设置
+     * 设置重装系统，关联密钥设置
+     * @param KeyId 重装系统，关联密钥设置
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;

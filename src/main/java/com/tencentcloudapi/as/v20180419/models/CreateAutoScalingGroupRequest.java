@@ -116,9 +116,10 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     private String [] Zones;
 
     /**
-    * 重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
+    * 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
+<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
     */
     @SerializedName("RetryPolicy")
     @Expose
@@ -142,6 +143,13 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * 服务设置，包括云监控不健康替换等服务设置。
+    */
+    @SerializedName("ServiceSettings")
+    @Expose
+    private ServiceSettings ServiceSettings;
 
     /**
      * 获取伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
@@ -360,24 +368,28 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
+     * 获取重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
-     * @return RetryPolicy 重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
+<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
+     * @return RetryPolicy 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
+<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
      */
     public String getRetryPolicy() {
         return this.RetryPolicy;
     }
 
     /**
-     * 设置重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
+     * 设置重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
-     * @param RetryPolicy 重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
+<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
+     * @param RetryPolicy 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
+<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
      */
     public void setRetryPolicy(String RetryPolicy) {
         this.RetryPolicy = RetryPolicy;
@@ -436,6 +448,22 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
+     * 获取服务设置，包括云监控不健康替换等服务设置。
+     * @return ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
+     */
+    public ServiceSettings getServiceSettings() {
+        return this.ServiceSettings;
+    }
+
+    /**
+     * 设置服务设置，包括云监控不健康替换等服务设置。
+     * @param ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
+     */
+    public void setServiceSettings(ServiceSettings ServiceSettings) {
+        this.ServiceSettings = ServiceSettings;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -455,6 +483,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
         this.setParamSimple(map, prefix + "ZonesCheckPolicy", this.ZonesCheckPolicy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
 
     }
 }

@@ -37,14 +37,14 @@ public class Block  extends AbstractModel{
     private String DataHash;
 
     /**
-    * 区块ID，与区块编号一直
+    * 区块ID，与区块编号一致
     */
     @SerializedName("BlockId")
     @Expose
     private Integer BlockId;
 
     /**
-    * 前一个区块Hash（未使用）,与区块Hash数值一直
+    * 前一个区块Hash（未使用）,与区块Hash数值一致
     */
     @SerializedName("PreHash")
     @Expose
@@ -90,32 +90,32 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 获取区块ID，与区块编号一直
-     * @return BlockId 区块ID，与区块编号一直
+     * 获取区块ID，与区块编号一致
+     * @return BlockId 区块ID，与区块编号一致
      */
     public Integer getBlockId() {
         return this.BlockId;
     }
 
     /**
-     * 设置区块ID，与区块编号一直
-     * @param BlockId 区块ID，与区块编号一直
+     * 设置区块ID，与区块编号一致
+     * @param BlockId 区块ID，与区块编号一致
      */
     public void setBlockId(Integer BlockId) {
         this.BlockId = BlockId;
     }
 
     /**
-     * 获取前一个区块Hash（未使用）,与区块Hash数值一直
-     * @return PreHash 前一个区块Hash（未使用）,与区块Hash数值一直
+     * 获取前一个区块Hash（未使用）,与区块Hash数值一致
+     * @return PreHash 前一个区块Hash（未使用）,与区块Hash数值一致
      */
     public String getPreHash() {
         return this.PreHash;
     }
 
     /**
-     * 设置前一个区块Hash（未使用）,与区块Hash数值一直
-     * @param PreHash 前一个区块Hash（未使用）,与区块Hash数值一直
+     * 设置前一个区块Hash（未使用）,与区块Hash数值一致
+     * @param PreHash 前一个区块Hash（未使用）,与区块Hash数值一致
      */
     public void setPreHash(String PreHash) {
         this.PreHash = PreHash;

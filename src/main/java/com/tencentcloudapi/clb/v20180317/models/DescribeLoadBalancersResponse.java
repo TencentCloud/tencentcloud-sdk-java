@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLoadBalancersResponse  extends AbstractModel{
 
     /**
-    * 满足过滤条件的负载均衡实例总数。
+    * 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeLoadBalancersResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取满足过滤条件的负载均衡实例总数。
-     * @return TotalCount 满足过滤条件的负载均衡实例总数。
+     * 获取满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+     * @return TotalCount 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
      */
     public Integer getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置满足过滤条件的负载均衡实例总数。
-     * @param TotalCount 满足过滤条件的负载均衡实例总数。
+     * 设置满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+     * @param TotalCount 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
      */
     public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;

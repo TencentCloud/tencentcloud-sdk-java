@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.clb.v20180317.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadBalancerResponse  extends AbstractModel{
-
-    /**
-    * 由负载均衡实例唯一 ID 组成的数组。
-    */
-    @SerializedName("LoadBalancerIds")
-    @Expose
-    private String [] LoadBalancerIds;
+public class OfflineIsolatedInstancesResponse  extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class CreateLoadBalancerResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * 获取由负载均衡实例唯一 ID 组成的数组。
-     * @return LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
-     */
-    public String [] getLoadBalancerIds() {
-        return this.LoadBalancerIds;
-    }
-
-    /**
-     * 设置由负载均衡实例唯一 ID 组成的数组。
-     * @param LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
-     */
-    public void setLoadBalancerIds(String [] LoadBalancerIds) {
-        this.LoadBalancerIds = LoadBalancerIds;
-    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -72,7 +49,6 @@ public class CreateLoadBalancerResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

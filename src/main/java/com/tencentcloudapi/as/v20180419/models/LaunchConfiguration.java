@@ -174,6 +174,13 @@ public class LaunchConfiguration  extends AbstractModel{
     private String UpdatedTime;
 
     /**
+    * CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+    */
+    @SerializedName("CamRoleName")
+    @Expose
+    private String CamRoleName;
+
+    /**
      * 获取实例所属项目ID。
      * @return ProjectId 实例所属项目ID。
      */
@@ -526,6 +533,22 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
+     * 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @return CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public String getCamRoleName() {
+        return this.CamRoleName;
+    }
+
+    /**
+     * 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @param CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public void setCamRoleName(String CamRoleName) {
+        this.CamRoleName = CamRoleName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -550,6 +573,7 @@ public class LaunchConfiguration  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
 
     }
 }

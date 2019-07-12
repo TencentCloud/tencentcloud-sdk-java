@@ -65,7 +65,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-    * 安全组 ID。
+    * 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
     */
     @SerializedName("SecurityGroupId")
     @Expose
@@ -142,7 +142,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private String OrderDirection;
 
     /**
-    * 是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
+    * 是否以安全组 ID 为过滤条件。
     */
     @SerializedName("WithSecurityGroup")
     @Expose
@@ -294,16 +294,16 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组 ID。
-     * @return SecurityGroupId 安全组 ID。
+     * 获取安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
+     * @return SecurityGroupId 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * 设置安全组 ID。
-     * @param SecurityGroupId 安全组 ID。
+     * 设置安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
+     * @param SecurityGroupId 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
@@ -470,16 +470,16 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
-     * @return WithSecurityGroup 是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
+     * 获取是否以安全组 ID 为过滤条件。
+     * @return WithSecurityGroup 是否以安全组 ID 为过滤条件。
      */
     public Integer getWithSecurityGroup() {
         return this.WithSecurityGroup;
     }
 
     /**
-     * 设置是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
-     * @param WithSecurityGroup 是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
+     * 设置是否以安全组 ID 为过滤条件。
+     * @param WithSecurityGroup 是否以安全组 ID 为过滤条件。
      */
     public void setWithSecurityGroup(Integer WithSecurityGroup) {
         this.WithSecurityGroup = WithSecurityGroup;

@@ -142,6 +142,13 @@ public class UpgradeLaunchConfigurationRequest  extends AbstractModel{
     private InstanceTag [] InstanceTags;
 
     /**
+    * CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+    */
+    @SerializedName("CamRoleName")
+    @Expose
+    private String CamRoleName;
+
+    /**
      * 获取启动配置ID。
      * @return LaunchConfigurationId 启动配置ID。
      */
@@ -426,6 +433,22 @@ public class UpgradeLaunchConfigurationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @return CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public String getCamRoleName() {
+        return this.CamRoleName;
+    }
+
+    /**
+     * 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @param CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public void setCamRoleName(String CamRoleName) {
+        this.CamRoleName = CamRoleName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -445,6 +468,7 @@ public class UpgradeLaunchConfigurationRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
 
     }
 }

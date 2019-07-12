@@ -65,7 +65,7 @@ public class ClassicalListener  extends AbstractModel{
     private Integer SessionExpire;
 
     /**
-    * 是否开启了检查：1（开启）、0（关闭）
+    * 是否开启了健康检查：1（开启）、0（关闭）
     */
     @SerializedName("HealthSwitch")
     @Expose
@@ -100,42 +100,42 @@ public class ClassicalListener  extends AbstractModel{
     private Integer UnhealthNum;
 
     /**
-    * 公网固定IP型的 HTTP、HTTPS 协议监听器的轮询方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+    * 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
     */
     @SerializedName("HttpHash")
     @Expose
     private String HttpHash;
 
     /**
-    * 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+    * 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
     */
     @SerializedName("HttpCode")
     @Expose
     private Integer HttpCode;
 
     /**
-    * 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查路径
+    * 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
     */
     @SerializedName("HttpCheckPath")
     @Expose
     private String HttpCheckPath;
 
     /**
-    * 公网固定IP型的 HTTPS 协议监听器的认证方式
+    * 传统型公网负载均衡的 HTTPS 监听器的认证方式
     */
     @SerializedName("SSLMode")
     @Expose
     private String SSLMode;
 
     /**
-    * 公网固定IP型的 HTTPS 协议监听器服务端证书 ID
+    * 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * 公网固定IP型的 HTTPS 协议监听器客户端证书 ID
+    * 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
     */
     @SerializedName("CertCaId")
     @Expose
@@ -245,16 +245,16 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启了检查：1（开启）、0（关闭）
-     * @return HealthSwitch 是否开启了检查：1（开启）、0（关闭）
+     * 获取是否开启了健康检查：1（开启）、0（关闭）
+     * @return HealthSwitch 是否开启了健康检查：1（开启）、0（关闭）
      */
     public Integer getHealthSwitch() {
         return this.HealthSwitch;
     }
 
     /**
-     * 设置是否开启了检查：1（开启）、0（关闭）
-     * @param HealthSwitch 是否开启了检查：1（开启）、0（关闭）
+     * 设置是否开启了健康检查：1（开启）、0（关闭）
+     * @param HealthSwitch 是否开启了健康检查：1（开启）、0（关闭）
      */
     public void setHealthSwitch(Integer HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
@@ -325,96 +325,96 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取公网固定IP型的 HTTP、HTTPS 协议监听器的轮询方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
-     * @return HttpHash 公网固定IP型的 HTTP、HTTPS 协议监听器的轮询方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+     * 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+     * @return HttpHash 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
      */
     public String getHttpHash() {
         return this.HttpHash;
     }
 
     /**
-     * 设置公网固定IP型的 HTTP、HTTPS 协议监听器的轮询方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
-     * @param HttpHash 公网固定IP型的 HTTP、HTTPS 协议监听器的轮询方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+     * 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+     * @param HttpHash 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
      */
     public void setHttpHash(String HttpHash) {
         this.HttpHash = HttpHash;
     }
 
     /**
-     * 获取公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
-     * @return HttpCode 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * @return HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
      */
     public Integer getHttpCode() {
         return this.HttpCode;
     }
 
     /**
-     * 设置公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
-     * @param HttpCode 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * @param HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
      */
     public void setHttpCode(Integer HttpCode) {
         this.HttpCode = HttpCode;
     }
 
     /**
-     * 获取公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查路径
-     * @return HttpCheckPath 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查路径
+     * 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+     * @return HttpCheckPath 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
      */
     public String getHttpCheckPath() {
         return this.HttpCheckPath;
     }
 
     /**
-     * 设置公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查路径
-     * @param HttpCheckPath 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查路径
+     * 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+     * @param HttpCheckPath 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
      */
     public void setHttpCheckPath(String HttpCheckPath) {
         this.HttpCheckPath = HttpCheckPath;
     }
 
     /**
-     * 获取公网固定IP型的 HTTPS 协议监听器的认证方式
-     * @return SSLMode 公网固定IP型的 HTTPS 协议监听器的认证方式
+     * 获取传统型公网负载均衡的 HTTPS 监听器的认证方式
+     * @return SSLMode 传统型公网负载均衡的 HTTPS 监听器的认证方式
      */
     public String getSSLMode() {
         return this.SSLMode;
     }
 
     /**
-     * 设置公网固定IP型的 HTTPS 协议监听器的认证方式
-     * @param SSLMode 公网固定IP型的 HTTPS 协议监听器的认证方式
+     * 设置传统型公网负载均衡的 HTTPS 监听器的认证方式
+     * @param SSLMode 传统型公网负载均衡的 HTTPS 监听器的认证方式
      */
     public void setSSLMode(String SSLMode) {
         this.SSLMode = SSLMode;
     }
 
     /**
-     * 获取公网固定IP型的 HTTPS 协议监听器服务端证书 ID
-     * @return CertId 公网固定IP型的 HTTPS 协议监听器服务端证书 ID
+     * 获取传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+     * @return CertId 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * 设置公网固定IP型的 HTTPS 协议监听器服务端证书 ID
-     * @param CertId 公网固定IP型的 HTTPS 协议监听器服务端证书 ID
+     * 设置传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+     * @param CertId 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * 获取公网固定IP型的 HTTPS 协议监听器客户端证书 ID
-     * @return CertCaId 公网固定IP型的 HTTPS 协议监听器客户端证书 ID
+     * 获取传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+     * @return CertCaId 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
      */
     public String getCertCaId() {
         return this.CertCaId;
     }
 
     /**
-     * 设置公网固定IP型的 HTTPS 协议监听器客户端证书 ID
-     * @param CertCaId 公网固定IP型的 HTTPS 协议监听器客户端证书 ID
+     * 设置传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+     * @param CertCaId 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
      */
     public void setCertCaId(String CertCaId) {
         this.CertCaId = CertCaId;

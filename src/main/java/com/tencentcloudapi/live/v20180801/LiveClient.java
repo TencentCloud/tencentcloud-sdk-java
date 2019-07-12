@@ -1757,24 +1757,6 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *设置水印是否启用
-     * @param req SetLiveWatermarkStatusRequest
-     * @return SetLiveWatermarkStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public SetLiveWatermarkStatusResponse SetLiveWatermarkStatus(SetLiveWatermarkStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetLiveWatermarkStatusResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<SetLiveWatermarkStatusResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "SetLiveWatermarkStatus"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
      * @param req StopLiveRecordRequest
      * @return StopLiveRecordResponse

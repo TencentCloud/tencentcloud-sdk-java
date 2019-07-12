@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeFilterResultListRequest  extends AbstractModel{
 
     /**
-    * 应用id
+    * 应用ID
     */
     @SerializedName("BizId")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取应用id
-     * @return BizId 应用id
+     * 获取应用ID
+     * @return BizId 应用ID
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * 设置应用id
-     * @param BizId 应用id
+     * 设置应用ID
+     * @param BizId 应用ID
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;

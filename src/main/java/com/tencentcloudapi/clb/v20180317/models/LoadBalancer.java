@@ -45,14 +45,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String LoadBalancerType;
 
     /**
-    * 应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
+    * 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
     */
     @SerializedName("Forward")
     @Expose
     private Integer Forward;
 
     /**
-    * 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+    * 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
@@ -196,6 +196,70 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Integer NumericalVpcId;
 
     /**
+    * 负载均衡IP地址所属的ISP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VipIsp")
+    @Expose
+    private String VipIsp;
+
+    /**
+    * 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MasterZone")
+    @Expose
+    private ZoneInfo MasterZone;
+
+    /**
+    * 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupZoneSet")
+    @Expose
+    private ZoneInfo [] BackupZoneSet;
+
+    /**
+    * 负载均衡实例被隔离的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolatedTime")
+    @Expose
+    private String IsolatedTime;
+
+    /**
+    * 负载均衡实例的过期时间，仅对预付费负载均衡生效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+    * 负载均衡实例的计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private String ChargeType;
+
+    /**
+    * 负载均衡实例的网络属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkAttributes")
+    @Expose
+    private InternetAccessible NetworkAttributes;
+
+    /**
+    * 负载均衡实例的预付费相关属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrepaidAttributes")
+    @Expose
+    private LBChargePrepaid PrepaidAttributes;
+
+    /**
      * 获取负载均衡实例 ID。
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -248,25 +312,25 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
-     * @return Forward 应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
+     * 获取负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
+     * @return Forward 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
      */
     public Integer getForward() {
         return this.Forward;
     }
 
     /**
-     * 设置应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
-     * @param Forward 应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
+     * 设置负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
+     * @param Forward 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
      */
     public void setForward(Integer Forward) {
         this.Forward = Forward;
     }
 
     /**
-     * 获取负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+     * 获取负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Domain 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+     * @return Domain 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
@@ -274,9 +338,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+     * 设置负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Domain 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+     * @param Domain 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
@@ -624,6 +688,166 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * 获取负载均衡IP地址所属的ISP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return VipIsp 负载均衡IP地址所属的ISP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVipIsp() {
+        return this.VipIsp;
+    }
+
+    /**
+     * 设置负载均衡IP地址所属的ISP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VipIsp 负载均衡IP地址所属的ISP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVipIsp(String VipIsp) {
+        this.VipIsp = VipIsp;
+    }
+
+    /**
+     * 获取主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return MasterZone 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ZoneInfo getMasterZone() {
+        return this.MasterZone;
+    }
+
+    /**
+     * 设置主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MasterZone 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMasterZone(ZoneInfo MasterZone) {
+        this.MasterZone = MasterZone;
+    }
+
+    /**
+     * 获取备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return BackupZoneSet 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ZoneInfo [] getBackupZoneSet() {
+        return this.BackupZoneSet;
+    }
+
+    /**
+     * 设置备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupZoneSet 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupZoneSet(ZoneInfo [] BackupZoneSet) {
+        this.BackupZoneSet = BackupZoneSet;
+    }
+
+    /**
+     * 获取负载均衡实例被隔离的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return IsolatedTime 负载均衡实例被隔离的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsolatedTime() {
+        return this.IsolatedTime;
+    }
+
+    /**
+     * 设置负载均衡实例被隔离的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolatedTime 负载均衡实例被隔离的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolatedTime(String IsolatedTime) {
+        this.IsolatedTime = IsolatedTime;
+    }
+
+    /**
+     * 获取负载均衡实例的过期时间，仅对预付费负载均衡生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * 设置负载均衡实例的过期时间，仅对预付费负载均衡生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * 获取负载均衡实例的计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ChargeType 负载均衡实例的计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * 设置负载均衡实例的计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChargeType 负载均衡实例的计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChargeType(String ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
+    /**
+     * 获取负载均衡实例的网络属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return NetworkAttributes 负载均衡实例的网络属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InternetAccessible getNetworkAttributes() {
+        return this.NetworkAttributes;
+    }
+
+    /**
+     * 设置负载均衡实例的网络属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkAttributes 负载均衡实例的网络属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkAttributes(InternetAccessible NetworkAttributes) {
+        this.NetworkAttributes = NetworkAttributes;
+    }
+
+    /**
+     * 获取负载均衡实例的预付费相关属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return PrepaidAttributes 负载均衡实例的预付费相关属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LBChargePrepaid getPrepaidAttributes() {
+        return this.PrepaidAttributes;
+    }
+
+    /**
+     * 设置负载均衡实例的预付费相关属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrepaidAttributes 负载均衡实例的预付费相关属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrepaidAttributes(LBChargePrepaid PrepaidAttributes) {
+        this.PrepaidAttributes = PrepaidAttributes;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -649,6 +873,14 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
         this.setParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
         this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
+        this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
+        this.setParamObj(map, prefix + "MasterZone.", this.MasterZone);
+        this.setParamArrayObj(map, prefix + "BackupZoneSet.", this.BackupZoneSet);
+        this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
+        this.setParamObj(map, prefix + "PrepaidAttributes.", this.PrepaidAttributes);
 
     }
 }

@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class ClassicalHealth  extends AbstractModel{
 
     /**
-    * 云服务器内网 IP
+    * 后端服务的内网 IP
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * 云服务器端口
+    * 后端服务的端口
     */
     @SerializedName("Port")
     @Expose
     private Integer Port;
 
     /**
-    * 负载均衡监听端口
+    * 负载均衡的监听端口
     */
     @SerializedName("ListenerPort")
     @Expose
@@ -58,48 +58,48 @@ public class ClassicalHealth  extends AbstractModel{
     private Integer HealthStatus;
 
     /**
-     * 获取云服务器内网 IP
-     * @return IP 云服务器内网 IP
+     * 获取后端服务的内网 IP
+     * @return IP 后端服务的内网 IP
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * 设置云服务器内网 IP
-     * @param IP 云服务器内网 IP
+     * 设置后端服务的内网 IP
+     * @param IP 后端服务的内网 IP
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * 获取云服务器端口
-     * @return Port 云服务器端口
+     * 获取后端服务的端口
+     * @return Port 后端服务的端口
      */
     public Integer getPort() {
         return this.Port;
     }
 
     /**
-     * 设置云服务器端口
-     * @param Port 云服务器端口
+     * 设置后端服务的端口
+     * @param Port 后端服务的端口
      */
     public void setPort(Integer Port) {
         this.Port = Port;
     }
 
     /**
-     * 获取负载均衡监听端口
-     * @return ListenerPort 负载均衡监听端口
+     * 获取负载均衡的监听端口
+     * @return ListenerPort 负载均衡的监听端口
      */
     public Integer getListenerPort() {
         return this.ListenerPort;
     }
 
     /**
-     * 设置负载均衡监听端口
-     * @param ListenerPort 负载均衡监听端口
+     * 设置负载均衡的监听端口
+     * @param ListenerPort 负载均衡的监听端口
      */
     public void setListenerPort(Integer ListenerPort) {
         this.ListenerPort = ListenerPort;
