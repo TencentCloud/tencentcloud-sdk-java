@@ -44,7 +44,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     private Integer Volume;
 
     /**
-    * 版本号，当前仅支持 MONGO_3_WT
+    * 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
     */
     @SerializedName("MongoVersion")
     @Expose
@@ -162,16 +162,16 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取版本号，当前仅支持 MONGO_3_WT
-     * @return MongoVersion 版本号，当前仅支持 MONGO_3_WT
+     * 获取版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
+     * @return MongoVersion 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * 设置版本号，当前仅支持 MONGO_3_WT
-     * @param MongoVersion 版本号，当前仅支持 MONGO_3_WT
+     * 设置版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
+     * @param MongoVersion 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;

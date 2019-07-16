@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralBasicOCRRequest  extends AbstractModel{
+public class VehicleLicenseOCRRequest  extends AbstractModel{
 
     /**
     * 图片的 Base64 值。
@@ -44,31 +44,12 @@ public class GeneralBasicOCRRequest  extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 保留字段。
+    * FRONT 为行驶证主页正面（有红色印章的一面），
+BACK 为行驶证副页正面（有号码号牌的一面）。
     */
-    @SerializedName("Scene")
+    @SerializedName("CardSide")
     @Expose
-    private String Scene;
-
-    /**
-    * 识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-    */
-    @SerializedName("LanguageType")
-    @Expose
-    private String LanguageType;
+    private String CardSide;
 
     /**
      * 获取图片的 Base64 值。
@@ -131,87 +112,23 @@ nor\hun\tha
     }
 
     /**
-     * 获取保留字段。
-     * @return Scene 保留字段。
+     * 获取FRONT 为行驶证主页正面（有红色印章的一面），
+BACK 为行驶证副页正面（有号码号牌的一面）。
+     * @return CardSide FRONT 为行驶证主页正面（有红色印章的一面），
+BACK 为行驶证副页正面（有号码号牌的一面）。
      */
-    public String getScene() {
-        return this.Scene;
+    public String getCardSide() {
+        return this.CardSide;
     }
 
     /**
-     * 设置保留字段。
-     * @param Scene 保留字段。
+     * 设置FRONT 为行驶证主页正面（有红色印章的一面），
+BACK 为行驶证副页正面（有号码号牌的一面）。
+     * @param CardSide FRONT 为行驶证主页正面（有红色印章的一面），
+BACK 为行驶证副页正面（有号码号牌的一面）。
      */
-    public void setScene(String Scene) {
-        this.Scene = Scene;
-    }
-
-    /**
-     * 获取识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-     * @return LanguageType 识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-     */
-    public String getLanguageType() {
-        return this.LanguageType;
-    }
-
-    /**
-     * 设置识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-     * @param LanguageType 识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-     */
-    public void setLanguageType(String LanguageType) {
-        this.LanguageType = LanguageType;
+    public void setCardSide(String CardSide) {
+        this.CardSide = CardSide;
     }
 
     /**
@@ -220,8 +137,7 @@ nor\hun\tha
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
-        this.setParamSimple(map, prefix + "Scene", this.Scene);
-        this.setParamSimple(map, prefix + "LanguageType", this.LanguageType);
+        this.setParamSimple(map, prefix + "CardSide", this.CardSide);
 
     }
 }

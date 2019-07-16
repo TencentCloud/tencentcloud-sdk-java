@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralBasicOCRRequest  extends AbstractModel{
+public class BizLicenseOCRRequest  extends AbstractModel{
 
     /**
     * 图片的 Base64 值。
@@ -42,33 +42,6 @@ public class GeneralBasicOCRRequest  extends AbstractModel{
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
-
-    /**
-    * 保留字段。
-    */
-    @SerializedName("Scene")
-    @Expose
-    private String Scene;
-
-    /**
-    * 识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-    */
-    @SerializedName("LanguageType")
-    @Expose
-    private String LanguageType;
 
     /**
      * 获取图片的 Base64 值。
@@ -131,97 +104,11 @@ nor\hun\tha
     }
 
     /**
-     * 获取保留字段。
-     * @return Scene 保留字段。
-     */
-    public String getScene() {
-        return this.Scene;
-    }
-
-    /**
-     * 设置保留字段。
-     * @param Scene 保留字段。
-     */
-    public void setScene(String Scene) {
-        this.Scene = Scene;
-    }
-
-    /**
-     * 获取识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-     * @return LanguageType 识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-     */
-    public String getLanguageType() {
-        return this.LanguageType;
-    }
-
-    /**
-     * 设置识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-     * @param LanguageType 识别语言类型。
-支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-可选值：
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha
-可选值分别表示：
-中英文混合、自动识别、日语、韩语、
-西班牙语、法语、德语、葡萄牙语、
-越南语、马来语、俄语、意大利语、
-荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语。
-     */
-    public void setLanguageType(String LanguageType) {
-        this.LanguageType = LanguageType;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
-        this.setParamSimple(map, prefix + "Scene", this.Scene);
-        this.setParamSimple(map, prefix + "LanguageType", this.LanguageType);
 
     }
 }

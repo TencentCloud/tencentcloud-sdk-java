@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralBasicOCRResponse  extends AbstractModel{
+public class VatInvoiceOCRResponse  extends AbstractModel{
 
     /**
     * 检测到的文本信息，具体内容请点击左侧链接。
     */
-    @SerializedName("TextDetections")
+    @SerializedName("VatInvoiceInfos")
     @Expose
-    private TextDetection [] TextDetections;
-
-    /**
-    * 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-    */
-    @SerializedName("Language")
-    @Expose
-    private String Language;
+    private TextVatInvoice [] VatInvoiceInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,34 +38,18 @@ public class GeneralBasicOCRResponse  extends AbstractModel{
 
     /**
      * 获取检测到的文本信息，具体内容请点击左侧链接。
-     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * @return VatInvoiceInfos 检测到的文本信息，具体内容请点击左侧链接。
      */
-    public TextDetection [] getTextDetections() {
-        return this.TextDetections;
+    public TextVatInvoice [] getVatInvoiceInfos() {
+        return this.VatInvoiceInfos;
     }
 
     /**
      * 设置检测到的文本信息，具体内容请点击左侧链接。
-     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * @param VatInvoiceInfos 检测到的文本信息，具体内容请点击左侧链接。
      */
-    public void setTextDetections(TextDetection [] TextDetections) {
-        this.TextDetections = TextDetections;
-    }
-
-    /**
-     * 获取检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     * @return Language 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     */
-    public String getLanguage() {
-        return this.Language;
-    }
-
-    /**
-     * 设置检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     * @param Language 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     */
-    public void setLanguage(String Language) {
-        this.Language = Language;
+    public void setVatInvoiceInfos(TextVatInvoice [] VatInvoiceInfos) {
+        this.VatInvoiceInfos = VatInvoiceInfos;
     }
 
     /**
@@ -95,8 +72,7 @@ public class GeneralBasicOCRResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-        this.setParamSimple(map, prefix + "Language", this.Language);
+        this.setParamArrayObj(map, prefix + "VatInvoiceInfos.", this.VatInvoiceInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

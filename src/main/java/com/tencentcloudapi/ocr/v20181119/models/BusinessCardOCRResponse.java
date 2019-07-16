@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralBasicOCRResponse  extends AbstractModel{
+public class BusinessCardOCRResponse  extends AbstractModel{
 
     /**
-    * 检测到的文本信息，具体内容请点击左侧链接。
+    * 名片识别内容。
     */
-    @SerializedName("TextDetections")
+    @SerializedName("BusinessCardInfos")
     @Expose
-    private TextDetection [] TextDetections;
+    private BusinessCardInfo [] BusinessCardInfos;
 
     /**
-    * 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+    * 返回图像预处理后的图片，图像预处理未开启时返回内容为空。
     */
-    @SerializedName("Language")
+    @SerializedName("RetImageBase64")
     @Expose
-    private String Language;
+    private String RetImageBase64;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class GeneralBasicOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取检测到的文本信息，具体内容请点击左侧链接。
-     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * 获取名片识别内容。
+     * @return BusinessCardInfos 名片识别内容。
      */
-    public TextDetection [] getTextDetections() {
-        return this.TextDetections;
+    public BusinessCardInfo [] getBusinessCardInfos() {
+        return this.BusinessCardInfos;
     }
 
     /**
-     * 设置检测到的文本信息，具体内容请点击左侧链接。
-     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * 设置名片识别内容。
+     * @param BusinessCardInfos 名片识别内容。
      */
-    public void setTextDetections(TextDetection [] TextDetections) {
-        this.TextDetections = TextDetections;
+    public void setBusinessCardInfos(BusinessCardInfo [] BusinessCardInfos) {
+        this.BusinessCardInfos = BusinessCardInfos;
     }
 
     /**
-     * 获取检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     * @return Language 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+     * 获取返回图像预处理后的图片，图像预处理未开启时返回内容为空。
+     * @return RetImageBase64 返回图像预处理后的图片，图像预处理未开启时返回内容为空。
      */
-    public String getLanguage() {
-        return this.Language;
+    public String getRetImageBase64() {
+        return this.RetImageBase64;
     }
 
     /**
-     * 设置检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     * @param Language 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+     * 设置返回图像预处理后的图片，图像预处理未开启时返回内容为空。
+     * @param RetImageBase64 返回图像预处理后的图片，图像预处理未开启时返回内容为空。
      */
-    public void setLanguage(String Language) {
-        this.Language = Language;
+    public void setRetImageBase64(String RetImageBase64) {
+        this.RetImageBase64 = RetImageBase64;
     }
 
     /**
@@ -95,8 +95,8 @@ public class GeneralBasicOCRResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-        this.setParamSimple(map, prefix + "Language", this.Language);
+        this.setParamArrayObj(map, prefix + "BusinessCardInfos.", this.BusinessCardInfos);
+        this.setParamSimple(map, prefix + "RetImageBase64", this.RetImageBase64);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

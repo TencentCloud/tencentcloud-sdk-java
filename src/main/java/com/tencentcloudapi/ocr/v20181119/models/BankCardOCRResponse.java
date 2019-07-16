@@ -20,21 +20,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralBasicOCRResponse  extends AbstractModel{
+public class BankCardOCRResponse  extends AbstractModel{
 
     /**
-    * 检测到的文本信息，具体内容请点击左侧链接。
+    * 卡号
     */
-    @SerializedName("TextDetections")
+    @SerializedName("CardNo")
     @Expose
-    private TextDetection [] TextDetections;
+    private String CardNo;
 
     /**
-    * 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+    * 银行信息
     */
-    @SerializedName("Language")
+    @SerializedName("BankInfo")
     @Expose
-    private String Language;
+    private String BankInfo;
+
+    /**
+    * 有效期
+    */
+    @SerializedName("ValidDate")
+    @Expose
+    private String ValidDate;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +51,51 @@ public class GeneralBasicOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取检测到的文本信息，具体内容请点击左侧链接。
-     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * 获取卡号
+     * @return CardNo 卡号
      */
-    public TextDetection [] getTextDetections() {
-        return this.TextDetections;
+    public String getCardNo() {
+        return this.CardNo;
     }
 
     /**
-     * 设置检测到的文本信息，具体内容请点击左侧链接。
-     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * 设置卡号
+     * @param CardNo 卡号
      */
-    public void setTextDetections(TextDetection [] TextDetections) {
-        this.TextDetections = TextDetections;
+    public void setCardNo(String CardNo) {
+        this.CardNo = CardNo;
     }
 
     /**
-     * 获取检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     * @return Language 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+     * 获取银行信息
+     * @return BankInfo 银行信息
      */
-    public String getLanguage() {
-        return this.Language;
+    public String getBankInfo() {
+        return this.BankInfo;
     }
 
     /**
-     * 设置检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     * @param Language 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+     * 设置银行信息
+     * @param BankInfo 银行信息
      */
-    public void setLanguage(String Language) {
-        this.Language = Language;
+    public void setBankInfo(String BankInfo) {
+        this.BankInfo = BankInfo;
+    }
+
+    /**
+     * 获取有效期
+     * @return ValidDate 有效期
+     */
+    public String getValidDate() {
+        return this.ValidDate;
+    }
+
+    /**
+     * 设置有效期
+     * @param ValidDate 有效期
+     */
+    public void setValidDate(String ValidDate) {
+        this.ValidDate = ValidDate;
     }
 
     /**
@@ -95,8 +118,9 @@ public class GeneralBasicOCRResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-        this.setParamSimple(map, prefix + "Language", this.Language);
+        this.setParamSimple(map, prefix + "CardNo", this.CardNo);
+        this.setParamSimple(map, prefix + "BankInfo", this.BankInfo);
+        this.setParamSimple(map, prefix + "ValidDate", this.ValidDate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralBasicOCRResponse  extends AbstractModel{
+public class LicensePlateOCRResponse  extends AbstractModel{
 
     /**
-    * 检测到的文本信息，具体内容请点击左侧链接。
+    * 识别出的车牌号码。
     */
-    @SerializedName("TextDetections")
+    @SerializedName("Number")
     @Expose
-    private TextDetection [] TextDetections;
+    private String Number;
 
     /**
-    * 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+    * 置信度，0 - 100 之间。
     */
-    @SerializedName("Language")
+    @SerializedName("Confidence")
     @Expose
-    private String Language;
+    private Integer Confidence;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class GeneralBasicOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取检测到的文本信息，具体内容请点击左侧链接。
-     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * 获取识别出的车牌号码。
+     * @return Number 识别出的车牌号码。
      */
-    public TextDetection [] getTextDetections() {
-        return this.TextDetections;
+    public String getNumber() {
+        return this.Number;
     }
 
     /**
-     * 设置检测到的文本信息，具体内容请点击左侧链接。
-     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * 设置识别出的车牌号码。
+     * @param Number 识别出的车牌号码。
      */
-    public void setTextDetections(TextDetection [] TextDetections) {
-        this.TextDetections = TextDetections;
+    public void setNumber(String Number) {
+        this.Number = Number;
     }
 
     /**
-     * 获取检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     * @return Language 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+     * 获取置信度，0 - 100 之间。
+     * @return Confidence 置信度，0 - 100 之间。
      */
-    public String getLanguage() {
-        return this.Language;
+    public Integer getConfidence() {
+        return this.Confidence;
     }
 
     /**
-     * 设置检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-     * @param Language 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
+     * 设置置信度，0 - 100 之间。
+     * @param Confidence 置信度，0 - 100 之间。
      */
-    public void setLanguage(String Language) {
-        this.Language = Language;
+    public void setConfidence(Integer Confidence) {
+        this.Confidence = Confidence;
     }
 
     /**
@@ -95,8 +95,8 @@ public class GeneralBasicOCRResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-        this.setParamSimple(map, prefix + "Language", this.Language);
+        this.setParamSimple(map, prefix + "Number", this.Number);
+        this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
