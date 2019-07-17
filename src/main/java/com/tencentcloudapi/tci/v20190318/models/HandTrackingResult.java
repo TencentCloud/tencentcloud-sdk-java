@@ -27,7 +27,7 @@ public class HandTrackingResult  extends AbstractModel{
     */
     @SerializedName("Class")
     @Expose
-    private String Class;
+    private String Class_;
 
     /**
     * 置信度
@@ -67,18 +67,18 @@ public class HandTrackingResult  extends AbstractModel{
     /**
      * 获取识别结果
      * Java getClass cannot and should not be overrided, hence we have to transfer it to a new name which should never conflict with another attribute. The underscode(_) is used as a postfix, because it is invalid in API 3.0, but can be used in Java, even it is not recommended.
-     * @return Class 识别结果
+     * @return Class_ 识别结果
      */
     public String getClass_() {
-        return this.Class;
+        return this.Class_;
     }
 
     /**
      * 设置识别结果
-     * @param Class 识别结果
+     * @param Class_ 识别结果
      */
-    public void setClass(String Class) {
-        this.Class = Class;
+    public void setClass_(String Class_) {
+        this.Class_ = Class_;
     }
 
     /**
@@ -165,7 +165,7 @@ public class HandTrackingResult  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Class", this.Class);
+        this.setParamSimple(map, prefix + "Class_", this.Class_);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Left", this.Left);
