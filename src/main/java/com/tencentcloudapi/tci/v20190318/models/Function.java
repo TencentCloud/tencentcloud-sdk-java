@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class Function  extends AbstractModel{
 
     /**
+    * 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+    */
+    @SerializedName("EnableAllText")
+    @Expose
+    private Boolean EnableAllText;
+
+    /**
     * 输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
     */
     @SerializedName("EnableKeyword")
@@ -42,6 +49,22 @@ public class Function  extends AbstractModel{
     @SerializedName("EnableVolume")
     @Expose
     private Boolean EnableVolume;
+
+    /**
+     * 获取输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+     * @return EnableAllText 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+     */
+    public Boolean getEnableAllText() {
+        return this.EnableAllText;
+    }
+
+    /**
+     * 设置输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+     * @param EnableAllText 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+     */
+    public void setEnableAllText(Boolean EnableAllText) {
+        this.EnableAllText = EnableAllText;
+    }
 
     /**
      * 获取输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
@@ -95,6 +118,7 @@ public class Function  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EnableAllText", this.EnableAllText);
         this.setParamSimple(map, prefix + "EnableKeyword", this.EnableKeyword);
         this.setParamSimple(map, prefix + "EnableVadInfo", this.EnableVadInfo);
         this.setParamSimple(map, prefix + "EnableVolume", this.EnableVolume);

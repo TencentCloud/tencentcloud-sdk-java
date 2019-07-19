@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class VoiceFilterRequest  extends AbstractModel{
 
     /**
-    * 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+    * 应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * 文件ID，表示文件唯一id
+    * 文件ID，表示文件唯一ID
     */
     @SerializedName("FileId")
     @Expose
@@ -65,32 +65,32 @@ public class VoiceFilterRequest  extends AbstractModel{
     private String OpenId;
 
     /**
-     * 获取应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
-     * @return BizId 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+     * 获取应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * @return BizId 应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * 设置应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
-     * @param BizId 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+     * 设置应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * @param BizId 应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * 获取文件ID，表示文件唯一id
-     * @return FileId 文件ID，表示文件唯一id
+     * 获取文件ID，表示文件唯一ID
+     * @return FileId 文件ID，表示文件唯一ID
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * 设置文件ID，表示文件唯一id
-     * @param FileId 文件ID，表示文件唯一id
+     * 设置文件ID，表示文件唯一ID
+     * @param FileId 文件ID，表示文件唯一ID
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

@@ -157,6 +157,24 @@ public class TciClient extends AbstractClient{
     }
 
     /**
+     *创建人员
+     * @param req CreatePersonRequest
+     * @return CreatePersonResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePersonResponse CreatePerson(CreatePersonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePersonResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePersonResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePerson"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建词汇
      * @param req CreateVocabRequest
      * @return CreateVocabResponse
@@ -564,6 +582,24 @@ public class TciClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SubmitCheckAttendanceTaskResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SubmitCheckAttendanceTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对话任务分析接口
+     * @param req SubmitConversationTaskRequest
+     * @return SubmitConversationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitConversationTaskResponse SubmitConversationTask(SubmitConversationTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SubmitConversationTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SubmitConversationTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SubmitConversationTask"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

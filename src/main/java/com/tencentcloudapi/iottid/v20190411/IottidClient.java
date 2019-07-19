@@ -49,6 +49,24 @@ public class IottidClient extends AbstractClient{
     }
 
     /**
+     *单向认证测试TID
+     * @param req AuthTestTidRequest
+     * @return AuthTestTidResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuthTestTidResponse AuthTestTid(AuthTestTidRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AuthTestTidResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AuthTestTidResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AuthTestTid"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *安全芯片TID烧录回执
      * @param req BurnTidNotifyRequest
      * @return BurnTidNotifyResponse
@@ -132,6 +150,24 @@ public class IottidClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DownloadTidsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DownloadTids"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *下载控制台验证芯片烧录信息，保证TID与中心信息一致
+     * @param req VerifyChipBurnInfoRequest
+     * @return VerifyChipBurnInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyChipBurnInfoResponse VerifyChipBurnInfo(VerifyChipBurnInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VerifyChipBurnInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<VerifyChipBurnInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "VerifyChipBurnInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

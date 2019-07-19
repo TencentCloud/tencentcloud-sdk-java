@@ -51,6 +51,13 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     private VocabStatInfomation [] VocabAnalysisStatInfo;
 
     /**
+    * 返回音频全部文本。
+    */
+    @SerializedName("AllTexts")
+    @Expose
+    private String AllTexts;
+
+    /**
     * 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
     */
     @SerializedName("JobId")
@@ -143,6 +150,22 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
+     * 获取返回音频全部文本。
+     * @return AllTexts 返回音频全部文本。
+     */
+    public String getAllTexts() {
+        return this.AllTexts;
+    }
+
+    /**
+     * 设置返回音频全部文本。
+     * @param AllTexts 返回音频全部文本。
+     */
+    public void setAllTexts(String AllTexts) {
+        this.AllTexts = AllTexts;
+    }
+
+    /**
      * 获取音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      * @return JobId 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      */
@@ -214,6 +237,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Texts.", this.Texts);
         this.setParamArrayObj(map, prefix + "VocabAnalysisDetailInfo.", this.VocabAnalysisDetailInfo);
         this.setParamArrayObj(map, prefix + "VocabAnalysisStatInfo.", this.VocabAnalysisStatInfo);
+        this.setParamSimple(map, prefix + "AllTexts", this.AllTexts);
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

@@ -127,6 +127,13 @@ public class NetworkInterface  extends AbstractModel{
     private Ipv6Address [] Ipv6AddressSet;
 
     /**
+    * 标签键值对。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * 获取弹性网卡实例ID，例如：eni-f1xjkw1b。
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
@@ -375,6 +382,22 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
+     * 获取标签键值对。
+     * @return TagSet 标签键值对。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * 设置标签键值对。
+     * @param TagSet 标签键值对。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -392,6 +415,7 @@ public class NetworkInterface  extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

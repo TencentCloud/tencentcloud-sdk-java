@@ -51,6 +51,13 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     private VocabStatInfomation [] VocabAnalysisStatInfo;
 
     /**
+    * 音频全部文本。
+    */
+    @SerializedName("AllTexts")
+    @Expose
+    private String AllTexts;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
+     * 获取音频全部文本。
+     * @return AllTexts 音频全部文本。
+     */
+    public String getAllTexts() {
+        return this.AllTexts;
+    }
+
+    /**
+     * 设置音频全部文本。
+     * @param AllTexts 音频全部文本。
+     */
+    public void setAllTexts(String AllTexts) {
+        this.AllTexts = AllTexts;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -145,6 +168,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Texts.", this.Texts);
         this.setParamArrayObj(map, prefix + "VocabAnalysisDetailInfo.", this.VocabAnalysisDetailInfo);
         this.setParamArrayObj(map, prefix + "VocabAnalysisStatInfo.", this.VocabAnalysisStatInfo);
+        this.setParamSimple(map, prefix + "AllTexts", this.AllTexts);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -184,4 +184,40 @@ public class EsClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *升级ES集群版本
+     * @param req UpgradeInstanceRequest
+     * @return UpgradeInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *升级ES商业特性
+     * @param req UpgradeLicenseRequest
+     * @return UpgradeLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeLicenseResponse UpgradeLicense(UpgradeLicenseRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeLicenseResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeLicenseResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeLicense"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

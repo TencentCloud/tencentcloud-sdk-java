@@ -44,7 +44,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     private Long VoiceEncodeType;
 
     /**
-    * 语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
+    * 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
     */
     @SerializedName("VoiceFileType")
     @Expose
@@ -58,18 +58,11 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     private Function Functions;
 
     /**
-    * 课堂标识符
+    * 视频文件类型，默认点播，直播天 live_url
     */
-    @SerializedName("ClassId")
+    @SerializedName("FileType")
     @Expose
-    private String ClassId;
-
-    /**
-    * 身份，1：老师 2：学生
-    */
-    @SerializedName("Identity")
-    @Expose
-    private Long Identity;
+    private String FileType;
 
     /**
     * 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
@@ -127,16 +120,16 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
-     * @return VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
+     * 获取语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
+     * @return VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
      */
     public Long getVoiceFileType() {
         return this.VoiceFileType;
     }
 
     /**
-     * 设置语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
-     * @param VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
+     * 设置语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
+     * @param VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
      */
     public void setVoiceFileType(Long VoiceFileType) {
         this.VoiceFileType = VoiceFileType;
@@ -159,35 +152,19 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取课堂标识符
-     * @return ClassId 课堂标识符
+     * 获取视频文件类型，默认点播，直播天 live_url
+     * @return FileType 视频文件类型，默认点播，直播天 live_url
      */
-    public String getClassId() {
-        return this.ClassId;
+    public String getFileType() {
+        return this.FileType;
     }
 
     /**
-     * 设置课堂标识符
-     * @param ClassId 课堂标识符
+     * 设置视频文件类型，默认点播，直播天 live_url
+     * @param FileType 视频文件类型，默认点播，直播天 live_url
      */
-    public void setClassId(String ClassId) {
-        this.ClassId = ClassId;
-    }
-
-    /**
-     * 获取身份，1：老师 2：学生
-     * @return Identity 身份，1：老师 2：学生
-     */
-    public Long getIdentity() {
-        return this.Identity;
-    }
-
-    /**
-     * 设置身份，1：老师 2：学生
-     * @param Identity 身份，1：老师 2：学生
-     */
-    public void setIdentity(Long Identity) {
-        this.Identity = Identity;
+    public void setFileType(String FileType) {
+        this.FileType = FileType;
     }
 
     /**
@@ -215,8 +192,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "VoiceEncodeType", this.VoiceEncodeType);
         this.setParamSimple(map, prefix + "VoiceFileType", this.VoiceFileType);
         this.setParamObj(map, prefix + "Functions.", this.Functions);
-        this.setParamSimple(map, prefix + "ClassId", this.ClassId);
-        this.setParamSimple(map, prefix + "Identity", this.Identity);
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamArraySimple(map, prefix + "VocabLibNameList.", this.VocabLibNameList);
 
     }

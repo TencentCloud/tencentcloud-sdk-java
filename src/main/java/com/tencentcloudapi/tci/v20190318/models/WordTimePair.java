@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class WordTimePair  extends AbstractModel{
 
     /**
-    * 单词的起始时间
+    * 单词出现的那个句子的起始时间
     */
     @SerializedName("Mbtm")
     @Expose
     private Long Mbtm;
 
     /**
-    * 	单词的结束时间
+    * 	单词出现的那个句子的结束时间
     */
     @SerializedName("Metm")
     @Expose
     private Long Metm;
 
     /**
-     * 获取单词的起始时间
-     * @return Mbtm 单词的起始时间
+     * 获取单词出现的那个句子的起始时间
+     * @return Mbtm 单词出现的那个句子的起始时间
      */
     public Long getMbtm() {
         return this.Mbtm;
     }
 
     /**
-     * 设置单词的起始时间
-     * @param Mbtm 单词的起始时间
+     * 设置单词出现的那个句子的起始时间
+     * @param Mbtm 单词出现的那个句子的起始时间
      */
     public void setMbtm(Long Mbtm) {
         this.Mbtm = Mbtm;
     }
 
     /**
-     * 获取	单词的结束时间
-     * @return Metm 	单词的结束时间
+     * 获取	单词出现的那个句子的结束时间
+     * @return Metm 	单词出现的那个句子的结束时间
      */
     public Long getMetm() {
         return this.Metm;
     }
 
     /**
-     * 设置	单词的结束时间
-     * @param Metm 	单词的结束时间
+     * 设置	单词出现的那个句子的结束时间
+     * @param Metm 	单词出现的那个句子的结束时间
      */
     public void setMetm(Long Metm) {
         this.Metm = Metm;

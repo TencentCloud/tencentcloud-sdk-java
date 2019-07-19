@@ -59,7 +59,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
 
     /**
     * 截图间隔，单位s，默认10s。
-范围： 10s ~ 600s。
+范围： 5s ~ 600s。
     */
     @SerializedName("SnapshotInterval")
     @Expose
@@ -168,9 +168,9 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
 
     /**
      * 获取截图间隔，单位s，默认10s。
-范围： 10s ~ 600s。
+范围： 5s ~ 600s。
      * @return SnapshotInterval 截图间隔，单位s，默认10s。
-范围： 10s ~ 600s。
+范围： 5s ~ 600s。
      */
     public Integer getSnapshotInterval() {
         return this.SnapshotInterval;
@@ -178,9 +178,9 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
 
     /**
      * 设置截图间隔，单位s，默认10s。
-范围： 10s ~ 600s。
+范围： 5s ~ 600s。
      * @param SnapshotInterval 截图间隔，单位s，默认10s。
-范围： 10s ~ 600s。
+范围： 5s ~ 600s。
      */
     public void setSnapshotInterval(Integer SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;

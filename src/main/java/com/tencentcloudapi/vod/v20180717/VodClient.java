@@ -550,8 +550,8 @@ public class VodClient extends AbstractClient{
 
     /**
      *1. 该接口可以获取多个视频的多种信息，包括：
-    1. 基础信息（basicInfo）：包括视频名称、大小、时长、封面图片等。
-    2. 元信息（metaData）：包括视频流信息、音频流信息等。
+    1. 基础信息（basicInfo）：包括视频名称、分类、播放地址、封面图片等。
+    2. 元信息（metaData）：包括大小、时长、视频流信息、音频流信息等。
     3. 转码结果信息（transcodeInfo）：包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
     4. 转动图结果信息（animatedGraphicsInfo）：对视频转动图（如 gif）后，动图相关信息。
     5. 采样截图信息（sampleSnapshotInfo）：对视频采样截图后，相关截图信息。
@@ -627,6 +627,25 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeReviewDetailsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeReviewDetails"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于获取当前账号有权限的子应用列表，包含主应用。若尚未开通子应用功能，接口将返回 
+ FailedOperation。
+     * @param req DescribeSubAppIdsRequest
+     * @return DescribeSubAppIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubAppIdsResponse DescribeSubAppIds(DescribeSubAppIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubAppIdsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubAppIdsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSubAppIds"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -916,6 +935,42 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonSampleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyPersonSample"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于修改子应用信息，但不允许修改主应用信息。
+     * @param req ModifySubAppIdInfoRequest
+     * @return ModifySubAppIdInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubAppIdInfoResponse ModifySubAppIdInfo(ModifySubAppIdInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubAppIdInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubAppIdInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubAppIdInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于启用、停用子应用。被停用的子应用将封停对应域名，并限制控制台访问。
+     * @param req ModifySubAppIdStatusRequest
+     * @return ModifySubAppIdStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubAppIdStatusResponse ModifySubAppIdStatus(ModifySubAppIdStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubAppIdStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubAppIdStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubAppIdStatus"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

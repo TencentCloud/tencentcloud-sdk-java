@@ -49,6 +49,25 @@ public class DrmClient extends AbstractClient{
     }
 
     /**
+     *本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
+如需使用fairplay方案，请务必先设置私钥。
+     * @param req AddFairPlayPemRequest
+     * @return AddFairPlayPemResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddFairPlayPemResponse AddFairPlayPem(AddFairPlayPemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddFairPlayPemResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddFairPlayPemResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddFairPlayPem"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用来生成DRM方案对应的播放许可证，开发者需提供DRM方案类型、内容类型参数，后台将生成许可证后返回许可证数据
 开发者需要转发终端设备发出的许可证请求信息。
      * @param req CreateLicenseRequest
@@ -61,6 +80,44 @@ public class DrmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateLicenseResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateLicense"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用来删除fairplay方案的私钥、ask等信息
+注：高风险操作，删除后，您将无法使用腾讯云DRM提供的fairplay服务。
+由于缓存，删除操作需要约半小时生效
+     * @param req DeleteFairPlayPemRequest
+     * @return DeleteFairPlayPemResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFairPlayPemResponse DeleteFairPlayPem(DeleteFairPlayPemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFairPlayPemResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFairPlayPemResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteFairPlayPem"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用来查询设置的FairPlay私钥校验信息。可用该接口校验设置的私钥与本身的私钥是否一致。
+     * @param req DescribeFairPlayPemRequest
+     * @return DescribeFairPlayPemResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFairPlayPemResponse DescribeFairPlayPem(DescribeFairPlayPemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFairPlayPemResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFairPlayPemResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFairPlayPem"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -81,6 +138,25 @@ public class DrmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeKeysResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
+如需使用fairplay方案，请务必先设置私钥。
+     * @param req ModifyFairPlayPemRequest
+     * @return ModifyFairPlayPemResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFairPlayPemResponse ModifyFairPlayPem(ModifyFairPlayPemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyFairPlayPemResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyFairPlayPemResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyFairPlayPem"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -30,7 +30,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     private String FileContent;
 
     /**
-    * 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+    * 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
     */
     @SerializedName("FileType")
     @Expose
@@ -51,7 +51,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     private LightStandard [] LightStandardSet;
 
     /**
-    * 抽帧的时间间隔，单位毫秒，默认值1000。
+    * 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
     */
     @SerializedName("FrameInterval")
     @Expose
@@ -72,7 +72,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     private Long MaxVideoDuration;
 
     /**
-    * 人脸识别中的相似度阈值，默认值为0.89
+    * 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
     */
     @SerializedName("SimThreshold")
     @Expose
@@ -95,16 +95,16 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
-     * @return FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+     * 获取输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
+     * @return FileType 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
-     * @param FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+     * 设置输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
+     * @param FileType 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
@@ -143,16 +143,16 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取抽帧的时间间隔，单位毫秒，默认值1000。
-     * @return FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000。
+     * 获取抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
+     * @return FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      */
     public Long getFrameInterval() {
         return this.FrameInterval;
     }
 
     /**
-     * 设置抽帧的时间间隔，单位毫秒，默认值1000。
-     * @param FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000。
+     * 设置抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
+     * @param FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      */
     public void setFrameInterval(Long FrameInterval) {
         this.FrameInterval = FrameInterval;
@@ -191,16 +191,16 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别中的相似度阈值，默认值为0.89
-     * @return SimThreshold 人脸识别中的相似度阈值，默认值为0.89
+     * 获取人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
+     * @return SimThreshold 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
      */
     public Float getSimThreshold() {
         return this.SimThreshold;
     }
 
     /**
-     * 设置人脸识别中的相似度阈值，默认值为0.89
-     * @param SimThreshold 人脸识别中的相似度阈值，默认值为0.89
+     * 设置人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
+     * @param SimThreshold 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
      */
     public void setSimThreshold(Float SimThreshold) {
         this.SimThreshold = SimThreshold;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DetailInfo  extends AbstractModel{
 
     /**
-    * 单词出现在该音频中的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
+    * 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
     */
     @SerializedName("Value")
     @Expose
@@ -37,16 +37,16 @@ public class DetailInfo  extends AbstractModel{
     private String Keyword;
 
     /**
-     * 获取单词出现在该音频中的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
-     * @return Value 单词出现在该音频中的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
+     * 获取单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
+     * @return Value 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
      */
     public WordTimePair [] getValue() {
         return this.Value;
     }
 
     /**
-     * 设置单词出现在该音频中的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
-     * @param Value 单词出现在该音频中的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
+     * 设置单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
+     * @param Value 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
      */
     public void setValue(WordTimePair [] Value) {
         this.Value = Value;

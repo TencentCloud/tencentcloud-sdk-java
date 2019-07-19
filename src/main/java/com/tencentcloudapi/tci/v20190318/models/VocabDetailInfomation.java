@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class VocabDetailInfomation  extends AbstractModel{
 
     /**
-    * 词汇库中的单词出现在该音频中的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+    * 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
     */
     @SerializedName("VocabDetailInfo")
     @Expose
-    private DetailInfo VocabDetailInfo;
+    private DetailInfo [] VocabDetailInfo;
 
     /**
     * 词汇库名
@@ -37,18 +37,18 @@ public class VocabDetailInfomation  extends AbstractModel{
     private String VocabLibName;
 
     /**
-     * 获取词汇库中的单词出现在该音频中的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
-     * @return VocabDetailInfo 词汇库中的单词出现在该音频中的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+     * 获取词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+     * @return VocabDetailInfo 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
      */
-    public DetailInfo getVocabDetailInfo() {
+    public DetailInfo [] getVocabDetailInfo() {
         return this.VocabDetailInfo;
     }
 
     /**
-     * 设置词汇库中的单词出现在该音频中的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
-     * @param VocabDetailInfo 词汇库中的单词出现在该音频中的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+     * 设置词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+     * @param VocabDetailInfo 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
      */
-    public void setVocabDetailInfo(DetailInfo VocabDetailInfo) {
+    public void setVocabDetailInfo(DetailInfo [] VocabDetailInfo) {
         this.VocabDetailInfo = VocabDetailInfo;
     }
 
@@ -72,7 +72,7 @@ public class VocabDetailInfomation  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "VocabDetailInfo.", this.VocabDetailInfo);
+        this.setParamArrayObj(map, prefix + "VocabDetailInfo.", this.VocabDetailInfo);
         this.setParamSimple(map, prefix + "VocabLibName", this.VocabLibName);
 
     }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaInfo  extends AbstractModel{
 
     /**
-    * 基础信息。包括视频名称、大小、时长、封面图片等。
+    * 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BasicInfo")
@@ -31,7 +31,7 @@ public class MediaInfo  extends AbstractModel{
     private MediaBasicInfo BasicInfo;
 
     /**
-    * 元信息。包括视频流信息、音频流信息等。
+    * 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaData")
@@ -102,9 +102,9 @@ public class MediaInfo  extends AbstractModel{
     private String FileId;
 
     /**
-     * 获取基础信息。包括视频名称、大小、时长、封面图片等。
+     * 获取基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return BasicInfo 基础信息。包括视频名称、大小、时长、封面图片等。
+     * @return BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaBasicInfo getBasicInfo() {
@@ -112,9 +112,9 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置基础信息。包括视频名称、大小、时长、封面图片等。
+     * 设置基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BasicInfo 基础信息。包括视频名称、大小、时长、封面图片等。
+     * @param BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBasicInfo(MediaBasicInfo BasicInfo) {
@@ -122,9 +122,9 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取元信息。包括视频流信息、音频流信息等。
+     * 获取元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return MetaData 元信息。包括视频流信息、音频流信息等。
+     * @return MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetaData getMetaData() {
@@ -132,9 +132,9 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置元信息。包括视频流信息、音频流信息等。
+     * 设置元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetaData 元信息。包括视频流信息、音频流信息等。
+     * @param MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaData(MediaMetaData MetaData) {
