@@ -67,6 +67,24 @@ public class TiiaClient extends AbstractClient{
     }
 
     /**
+     *本接口支持识别图片中包含的商品，能够输出商品的品类名称、类别，还可以输出商品在图片中的位置。支持一张图片多个商品的识别。
+     * @param req DetectProductRequest
+     * @return DetectProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectProductResponse DetectProduct(DetectProductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectProductResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectProductResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetectProduct"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口提供多种维度的图像审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
      * @param req ImageModerationRequest
      * @return ImageModerationResponse
@@ -78,6 +96,24 @@ public class TiiaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ImageModerationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ImageModeration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *腾讯云车辆属性识别可对汽车车身及车辆属性进行检测与识别，目前支持11种车身颜色、20多种车型、300多种品牌、4000多种车系+年款的识别，同时支持对车标的位置进行检测。
+     * @param req RecognizeCarRequest
+     * @return RecognizeCarResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeCarResponse RecognizeCar(RecognizeCarRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeCarResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeCarResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RecognizeCar"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -51,7 +51,7 @@ public class MigrateOption  extends AbstractModel{
     private Integer MigrateObject;
 
     /**
-    * 数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+    * 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
     */
     @SerializedName("ConsistencyType")
     @Expose
@@ -80,13 +80,14 @@ MongoDB可定义如下的参数:
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
+MySQL暂不支持额外参数设置。
     */
     @SerializedName("ExternParams")
     @Expose
     private String ExternParams;
 
     /**
-    * 抽样检验时的抽样参数
+    * 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
     */
     @SerializedName("ConsistencyParams")
     @Expose
@@ -157,16 +158,16 @@ MongoDB可定义如下的参数:
     }
 
     /**
-     * 获取数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
-     * @return ConsistencyType 数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+     * 获取抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+     * @return ConsistencyType 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
      */
     public Integer getConsistencyType() {
         return this.ConsistencyType;
     }
 
     /**
-     * 设置数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
-     * @param ConsistencyType 数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+     * 设置抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+     * @param ConsistencyType 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
      */
     public void setConsistencyType(Integer ConsistencyType) {
         this.ConsistencyType = ConsistencyType;
@@ -204,6 +205,7 @@ MongoDB可定义如下的参数:
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
+MySQL暂不支持额外参数设置。
      * @return ExternParams 不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
 { 
@@ -219,6 +221,7 @@ MongoDB可定义如下的参数:
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
+MySQL暂不支持额外参数设置。
      */
     public String getExternParams() {
         return this.ExternParams;
@@ -240,6 +243,7 @@ MongoDB可定义如下的参数:
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
+MySQL暂不支持额外参数设置。
      * @param ExternParams 不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
 { 
@@ -255,22 +259,23 @@ MongoDB可定义如下的参数:
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
+MySQL暂不支持额外参数设置。
      */
     public void setExternParams(String ExternParams) {
         this.ExternParams = ExternParams;
     }
 
     /**
-     * 获取抽样检验时的抽样参数
-     * @return ConsistencyParams 抽样检验时的抽样参数
+     * 获取仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
+     * @return ConsistencyParams 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
      */
     public ConsistencyParams getConsistencyParams() {
         return this.ConsistencyParams;
     }
 
     /**
-     * 设置抽样检验时的抽样参数
-     * @param ConsistencyParams 抽样检验时的抽样参数
+     * 设置仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
+     * @param ConsistencyParams 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
      */
     public void setConsistencyParams(ConsistencyParams ConsistencyParams) {
         this.ConsistencyParams = ConsistencyParams;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SrcInfo  extends AbstractModel{
 
     /**
-    * 阿里云AccessKey
+    * 阿里云AccessKey。源库是阿里云RDS5.6适用
     */
     @SerializedName("AccessKey")
     @Expose
@@ -58,49 +58,49 @@ public class SrcInfo  extends AbstractModel{
     private String Password;
 
     /**
-    * 阿里云rds实例id
+    * 阿里云RDS实例ID。源库是阿里云RDS5.6适用
     */
     @SerializedName("RdsInstanceId")
     @Expose
     private String RdsInstanceId;
 
     /**
-    * CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
+    * CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
     */
     @SerializedName("CvmInstanceId")
     @Expose
     private String CvmInstanceId;
 
     /**
-    * 专线网关ID
+    * 专线网关ID，格式如：dcg-0rxtqqxb
     */
     @SerializedName("UniqDcgId")
     @Expose
     private String UniqDcgId;
 
     /**
-    * 私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
+    * 私有网络ID，格式如：vpc-92jblxto
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
+    * 私有网络下的子网ID，格式如：subnet-3paxmkdz
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 系统分配的VPN网关ID
+    * VPN网关ID，格式如：vpngw-9ghexg7q
     */
     @SerializedName("UniqVpnGwId")
     @Expose
     private String UniqVpnGwId;
 
     /**
-    * 实例短Id
+    * 数据库实例ID,格式如：cdb-powiqx8q
     */
     @SerializedName("InstanceId")
     @Expose
@@ -114,23 +114,23 @@ public class SrcInfo  extends AbstractModel{
     private String Region;
 
     /**
-    * 服务提供商，如:aliyun,others
+    * 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
     */
     @SerializedName("Supplier")
     @Expose
     private String Supplier;
 
     /**
-     * 获取阿里云AccessKey
-     * @return AccessKey 阿里云AccessKey
+     * 获取阿里云AccessKey。源库是阿里云RDS5.6适用
+     * @return AccessKey 阿里云AccessKey。源库是阿里云RDS5.6适用
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * 设置阿里云AccessKey
-     * @param AccessKey 阿里云AccessKey
+     * 设置阿里云AccessKey。源库是阿里云RDS5.6适用
+     * @param AccessKey 阿里云AccessKey。源库是阿里云RDS5.6适用
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
@@ -201,112 +201,112 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取阿里云rds实例id
-     * @return RdsInstanceId 阿里云rds实例id
+     * 获取阿里云RDS实例ID。源库是阿里云RDS5.6适用
+     * @return RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6适用
      */
     public String getRdsInstanceId() {
         return this.RdsInstanceId;
     }
 
     /**
-     * 设置阿里云rds实例id
-     * @param RdsInstanceId 阿里云rds实例id
+     * 设置阿里云RDS实例ID。源库是阿里云RDS5.6适用
+     * @param RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6适用
      */
     public void setRdsInstanceId(String RdsInstanceId) {
         this.RdsInstanceId = RdsInstanceId;
     }
 
     /**
-     * 获取CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
-     * @return CvmInstanceId CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
+     * 获取CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+     * @return CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
      */
     public String getCvmInstanceId() {
         return this.CvmInstanceId;
     }
 
     /**
-     * 设置CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
-     * @param CvmInstanceId CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
+     * 设置CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+     * @param CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
      */
     public void setCvmInstanceId(String CvmInstanceId) {
         this.CvmInstanceId = CvmInstanceId;
     }
 
     /**
-     * 获取专线网关ID
-     * @return UniqDcgId 专线网关ID
+     * 获取专线网关ID，格式如：dcg-0rxtqqxb
+     * @return UniqDcgId 专线网关ID，格式如：dcg-0rxtqqxb
      */
     public String getUniqDcgId() {
         return this.UniqDcgId;
     }
 
     /**
-     * 设置专线网关ID
-     * @param UniqDcgId 专线网关ID
+     * 设置专线网关ID，格式如：dcg-0rxtqqxb
+     * @param UniqDcgId 专线网关ID，格式如：dcg-0rxtqqxb
      */
     public void setUniqDcgId(String UniqDcgId) {
         this.UniqDcgId = UniqDcgId;
     }
 
     /**
-     * 获取私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
-     * @return VpcId 私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
+     * 获取私有网络ID，格式如：vpc-92jblxto
+     * @return VpcId 私有网络ID，格式如：vpc-92jblxto
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
-     * @param VpcId 私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
+     * 设置私有网络ID，格式如：vpc-92jblxto
+     * @param VpcId 私有网络ID，格式如：vpc-92jblxto
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * 获取私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
-     * @return SubnetId 私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
+     * 获取私有网络下的子网ID，格式如：subnet-3paxmkdz
+     * @return SubnetId 私有网络下的子网ID，格式如：subnet-3paxmkdz
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * 设置私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
-     * @param SubnetId 私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
+     * 设置私有网络下的子网ID，格式如：subnet-3paxmkdz
+     * @param SubnetId 私有网络下的子网ID，格式如：subnet-3paxmkdz
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * 获取系统分配的VPN网关ID
-     * @return UniqVpnGwId 系统分配的VPN网关ID
+     * 获取VPN网关ID，格式如：vpngw-9ghexg7q
+     * @return UniqVpnGwId VPN网关ID，格式如：vpngw-9ghexg7q
      */
     public String getUniqVpnGwId() {
         return this.UniqVpnGwId;
     }
 
     /**
-     * 设置系统分配的VPN网关ID
-     * @param UniqVpnGwId 系统分配的VPN网关ID
+     * 设置VPN网关ID，格式如：vpngw-9ghexg7q
+     * @param UniqVpnGwId VPN网关ID，格式如：vpngw-9ghexg7q
      */
     public void setUniqVpnGwId(String UniqVpnGwId) {
         this.UniqVpnGwId = UniqVpnGwId;
     }
 
     /**
-     * 获取实例短Id
-     * @return InstanceId 实例短Id
+     * 获取数据库实例ID,格式如：cdb-powiqx8q
+     * @return InstanceId 数据库实例ID,格式如：cdb-powiqx8q
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置实例短Id
-     * @param InstanceId 实例短Id
+     * 设置数据库实例ID,格式如：cdb-powiqx8q
+     * @param InstanceId 数据库实例ID,格式如：cdb-powiqx8q
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -329,16 +329,16 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取服务提供商，如:aliyun,others
-     * @return Supplier 服务提供商，如:aliyun,others
+     * 获取当实例为RDS实例时，填写为aliyun, 其他情况均填写others
+     * @return Supplier 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
      */
     public String getSupplier() {
         return this.Supplier;
     }
 
     /**
-     * 设置服务提供商，如:aliyun,others
-     * @param Supplier 服务提供商，如:aliyun,others
+     * 设置当实例为RDS实例时，填写为aliyun, 其他情况均填写others
+     * @param Supplier 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
      */
     public void setSupplier(String Supplier) {
         this.Supplier = Supplier;

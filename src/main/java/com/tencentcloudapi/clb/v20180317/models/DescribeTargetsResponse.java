@@ -24,6 +24,7 @@ public class DescribeTargetsResponse  extends AbstractModel{
 
     /**
     * 监听器后端绑定的机器信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Listeners")
     @Expose
@@ -38,7 +39,9 @@ public class DescribeTargetsResponse  extends AbstractModel{
 
     /**
      * 获取监听器后端绑定的机器信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Listeners 监听器后端绑定的机器信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ListenerBackend [] getListeners() {
         return this.Listeners;
@@ -46,7 +49,9 @@ public class DescribeTargetsResponse  extends AbstractModel{
 
     /**
      * 设置监听器后端绑定的机器信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Listeners 监听器后端绑定的机器信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListeners(ListenerBackend [] Listeners) {
         this.Listeners = Listeners;

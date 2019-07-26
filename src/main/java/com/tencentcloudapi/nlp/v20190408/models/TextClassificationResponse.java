@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TextClassificationResponse  extends AbstractModel{
 
     /**
-    * 文本分类结果
+    * 文本分类结果（文本分类映射表请参见附录）
     */
     @SerializedName("Classes")
     @Expose
@@ -37,16 +37,16 @@ public class TextClassificationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取文本分类结果
-     * @return Classes 文本分类结果
+     * 获取文本分类结果（文本分类映射表请参见附录）
+     * @return Classes 文本分类结果（文本分类映射表请参见附录）
      */
     public ClassificationResult [] getClasses() {
         return this.Classes;
     }
 
     /**
-     * 设置文本分类结果
-     * @param Classes 文本分类结果
+     * 设置文本分类结果（文本分类映射表请参见附录）
+     * @param Classes 文本分类结果（文本分类映射表请参见附录）
      */
     public void setClasses(ClassificationResult [] Classes) {
         this.Classes = Classes;

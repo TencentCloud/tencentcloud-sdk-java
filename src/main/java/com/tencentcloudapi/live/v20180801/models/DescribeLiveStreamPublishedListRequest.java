@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLiveStreamPublishedListRequest  extends AbstractModel{
 
     /**
-    * 您的域名。
+    * 您的推流域名。
     */
     @SerializedName("DomainName")
     @Expose
@@ -33,6 +33,7 @@ public class DescribeLiveStreamPublishedListRequest  extends AbstractModel{
     * 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
+注意：EndTime和StartTime相差不可超过30天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -41,14 +42,14 @@ UTC 格式，例如：2016-06-30T19:00:00Z。
     /**
     * 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-和当前时间相隔不超过7天。
+最长支持查询60天内数据。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
     */
     @SerializedName("AppName")
     @Expose
@@ -73,16 +74,23 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     private Integer PageSize;
 
     /**
-     * 获取您的域名。
-     * @return DomainName 您的域名。
+    * 流名称，支持模糊匹配。
+    */
+    @SerializedName("StreamName")
+    @Expose
+    private String StreamName;
+
+    /**
+     * 获取您的推流域名。
+     * @return DomainName 您的推流域名。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * 设置您的域名。
-     * @param DomainName 您的域名。
+     * 设置您的推流域名。
+     * @param DomainName 您的推流域名。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
@@ -92,9 +100,11 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
      * 获取结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
+注意：EndTime和StartTime相差不可超过30天。
      * @return EndTime 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
+注意：EndTime和StartTime相差不可超过30天。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -104,9 +114,11 @@ UTC 格式，例如：2016-06-30T19:00:00Z。
      * 设置结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
+注意：EndTime和StartTime相差不可超过30天。
      * @param EndTime 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
+注意：EndTime和StartTime相差不可超过30天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -115,10 +127,10 @@ UTC 格式，例如：2016-06-30T19:00:00Z。
     /**
      * 获取起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-和当前时间相隔不超过7天。
+最长支持查询60天内数据。
      * @return StartTime 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-和当前时间相隔不超过7天。
+最长支持查询60天内数据。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -127,26 +139,26 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     /**
      * 设置起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-和当前时间相隔不超过7天。
+最长支持查询60天内数据。
      * @param StartTime 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-和当前时间相隔不超过7天。
+最长支持查询60天内数据。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
@@ -201,6 +213,22 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
+     * 获取流名称，支持模糊匹配。
+     * @return StreamName 流名称，支持模糊匹配。
+     */
+    public String getStreamName() {
+        return this.StreamName;
+    }
+
+    /**
+     * 设置流名称，支持模糊匹配。
+     * @param StreamName 流名称，支持模糊匹配。
+     */
+    public void setStreamName(String StreamName) {
+        this.StreamName = StreamName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -210,6 +238,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "StreamName", this.StreamName);
 
     }
 }

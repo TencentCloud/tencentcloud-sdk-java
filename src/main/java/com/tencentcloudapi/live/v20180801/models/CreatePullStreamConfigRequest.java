@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePullStreamConfigRequest  extends AbstractModel{
 
     /**
-    * 源Url。
+    * 源Url。目前可支持直播流及点播文件。
     */
     @SerializedName("FromUrl")
     @Expose
@@ -72,16 +72,16 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取源Url。
-     * @return FromUrl 源Url。
+     * 获取源Url。目前可支持直播流及点播文件。
+     * @return FromUrl 源Url。目前可支持直播流及点播文件。
      */
     public String getFromUrl() {
         return this.FromUrl;
     }
 
     /**
-     * 设置源Url。
-     * @param FromUrl 源Url。
+     * 设置源Url。目前可支持直播流及点播文件。
+     * @param FromUrl 源Url。目前可支持直播流及点播文件。
      */
     public void setFromUrl(String FromUrl) {
         this.FromUrl = FromUrl;

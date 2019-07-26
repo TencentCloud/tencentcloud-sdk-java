@@ -37,6 +37,24 @@ public class AiRecognitionResult  extends AbstractModel{
     private String Type;
 
     /**
+    * 视频片头片尾识别结果，当 Type 为
+ HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HeadTailTask")
+    @Expose
+    private AiRecognitionTaskHeadTailResult HeadTailTask;
+
+    /**
+    * 视频拆条识别结果，当 Type 为
+ SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SegmentTask")
+    @Expose
+    private AiRecognitionTaskSegmentResult SegmentTask;
+
+    /**
     * 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -80,15 +98,6 @@ public class AiRecognitionResult  extends AbstractModel{
     @SerializedName("OcrFullTextTask")
     @Expose
     private AiRecognitionTaskOcrFullTextResult OcrFullTextTask;
-
-    /**
-    * 视频片头片尾识别结果，当 Type 为
- HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("HeadTailTask")
-    @Expose
-    private AiRecognitionTaskHeadTailResult HeadTailTask;
 
     /**
     * 物体识别结果，当 Type 为
@@ -141,6 +150,54 @@ public class AiRecognitionResult  extends AbstractModel{
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * 获取视频片头片尾识别结果，当 Type 为
+ HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return HeadTailTask 视频片头片尾识别结果，当 Type 为
+ HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiRecognitionTaskHeadTailResult getHeadTailTask() {
+        return this.HeadTailTask;
+    }
+
+    /**
+     * 设置视频片头片尾识别结果，当 Type 为
+ HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeadTailTask 视频片头片尾识别结果，当 Type 为
+ HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeadTailTask(AiRecognitionTaskHeadTailResult HeadTailTask) {
+        this.HeadTailTask = HeadTailTask;
+    }
+
+    /**
+     * 获取视频拆条识别结果，当 Type 为
+ SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SegmentTask 视频拆条识别结果，当 Type 为
+ SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiRecognitionTaskSegmentResult getSegmentTask() {
+        return this.SegmentTask;
+    }
+
+    /**
+     * 设置视频拆条识别结果，当 Type 为
+ SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SegmentTask 视频拆条识别结果，当 Type 为
+ SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSegmentTask(AiRecognitionTaskSegmentResult SegmentTask) {
+        this.SegmentTask = SegmentTask;
     }
 
     /**
@@ -264,30 +321,6 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频片头片尾识别结果，当 Type 为
- HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return HeadTailTask 视频片头片尾识别结果，当 Type 为
- HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public AiRecognitionTaskHeadTailResult getHeadTailTask() {
-        return this.HeadTailTask;
-    }
-
-    /**
-     * 设置视频片头片尾识别结果，当 Type 为
- HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HeadTailTask 视频片头片尾识别结果，当 Type 为
- HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setHeadTailTask(AiRecognitionTaskHeadTailResult HeadTailTask) {
-        this.HeadTailTask = HeadTailTask;
-    }
-
-    /**
      * 获取物体识别结果，当 Type 为
  ObjectRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -316,12 +349,13 @@ public class AiRecognitionResult  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
+        this.setParamObj(map, prefix + "SegmentTask.", this.SegmentTask);
         this.setParamObj(map, prefix + "FaceTask.", this.FaceTask);
         this.setParamObj(map, prefix + "AsrWordsTask.", this.AsrWordsTask);
         this.setParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
         this.setParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
         this.setParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
-        this.setParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
         this.setParamObj(map, prefix + "ObjectTask.", this.ObjectTask);
 
     }

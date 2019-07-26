@@ -37,21 +37,21 @@ public class ModifyTargetPortRequest  extends AbstractModel{
     private String ListenerId;
 
     /**
-    * 要修改端口的后端机器列表
+    * 要修改端口的后端服务列表
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
 
     /**
-    * 后端机器绑定到监听器的新端口
+    * 后端服务绑定到监听器或转发规则的新端口
     */
     @SerializedName("NewPort")
     @Expose
     private Integer NewPort;
 
     /**
-    * 转发规则的ID
+    * 转发规则的ID，当后端服务绑定到七层转发规则时，必须提供此参数或Domain+Url两者之一
     */
     @SerializedName("LocationId")
     @Expose
@@ -104,48 +104,48 @@ public class ModifyTargetPortRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要修改端口的后端机器列表
-     * @return Targets 要修改端口的后端机器列表
+     * 获取要修改端口的后端服务列表
+     * @return Targets 要修改端口的后端服务列表
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * 设置要修改端口的后端机器列表
-     * @param Targets 要修改端口的后端机器列表
+     * 设置要修改端口的后端服务列表
+     * @param Targets 要修改端口的后端服务列表
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * 获取后端机器绑定到监听器的新端口
-     * @return NewPort 后端机器绑定到监听器的新端口
+     * 获取后端服务绑定到监听器或转发规则的新端口
+     * @return NewPort 后端服务绑定到监听器或转发规则的新端口
      */
     public Integer getNewPort() {
         return this.NewPort;
     }
 
     /**
-     * 设置后端机器绑定到监听器的新端口
-     * @param NewPort 后端机器绑定到监听器的新端口
+     * 设置后端服务绑定到监听器或转发规则的新端口
+     * @param NewPort 后端服务绑定到监听器或转发规则的新端口
      */
     public void setNewPort(Integer NewPort) {
         this.NewPort = NewPort;
     }
 
     /**
-     * 获取转发规则的ID
-     * @return LocationId 转发规则的ID
+     * 获取转发规则的ID，当后端服务绑定到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * @return LocationId 转发规则的ID，当后端服务绑定到七层转发规则时，必须提供此参数或Domain+Url两者之一
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * 设置转发规则的ID
-     * @param LocationId 转发规则的ID
+     * 设置转发规则的ID，当后端服务绑定到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * @param LocationId 转发规则的ID，当后端服务绑定到七层转发规则时，必须提供此参数或Domain+Url两者之一
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;

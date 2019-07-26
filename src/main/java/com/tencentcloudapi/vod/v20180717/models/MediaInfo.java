@@ -95,6 +95,14 @@ public class MediaInfo  extends AbstractModel{
     private MediaAdaptiveDynamicStreamingInfo AdaptiveDynamicStreamingInfo;
 
     /**
+    * 小程序审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MiniProgramReviewInfo")
+    @Expose
+    private MediaMiniProgramReviewInfo MiniProgramReviewInfo;
+
+    /**
     * 媒体文件唯一标识 ID。
     */
     @SerializedName("FileId")
@@ -282,6 +290,26 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
+     * 获取小程序审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return MiniProgramReviewInfo 小程序审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaMiniProgramReviewInfo getMiniProgramReviewInfo() {
+        return this.MiniProgramReviewInfo;
+    }
+
+    /**
+     * 设置小程序审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MiniProgramReviewInfo 小程序审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMiniProgramReviewInfo(MediaMiniProgramReviewInfo MiniProgramReviewInfo) {
+        this.MiniProgramReviewInfo = MiniProgramReviewInfo;
+    }
+
+    /**
      * 获取媒体文件唯一标识 ID。
      * @return FileId 媒体文件唯一标识 ID。
      */
@@ -310,6 +338,7 @@ public class MediaInfo  extends AbstractModel{
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetInfo.", this.SnapshotByTimeOffsetInfo);
         this.setParamObj(map, prefix + "KeyFrameDescInfo.", this.KeyFrameDescInfo);
         this.setParamObj(map, prefix + "AdaptiveDynamicStreamingInfo.", this.AdaptiveDynamicStreamingInfo);
+        this.setParamObj(map, prefix + "MiniProgramReviewInfo.", this.MiniProgramReviewInfo);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }

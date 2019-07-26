@@ -37,13 +37,6 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     private String ListenerId;
 
     /**
-    * 后端云服务器新的转发权重，取值范围：0~100。
-    */
-    @SerializedName("Weight")
-    @Expose
-    private Integer Weight;
-
-    /**
     * 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
     */
     @SerializedName("LocationId")
@@ -65,11 +58,18 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     private String Url;
 
     /**
-    * 要修改权重的后端机器列表
+    * 要修改权重的后端服务列表
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
+
+    /**
+    * 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Integer Weight;
 
     /**
      * 获取负载均衡实例 ID
@@ -101,22 +101,6 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
-    }
-
-    /**
-     * 获取后端云服务器新的转发权重，取值范围：0~100。
-     * @return Weight 后端云服务器新的转发权重，取值范围：0~100。
-     */
-    public Integer getWeight() {
-        return this.Weight;
-    }
-
-    /**
-     * 设置后端云服务器新的转发权重，取值范围：0~100。
-     * @param Weight 后端云服务器新的转发权重，取值范围：0~100。
-     */
-    public void setWeight(Integer Weight) {
-        this.Weight = Weight;
     }
 
     /**
@@ -168,19 +152,35 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要修改权重的后端机器列表
-     * @return Targets 要修改权重的后端机器列表
+     * 获取要修改权重的后端服务列表
+     * @return Targets 要修改权重的后端服务列表
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * 设置要修改权重的后端机器列表
-     * @param Targets 要修改权重的后端机器列表
+     * 设置要修改权重的后端服务列表
+     * @param Targets 要修改权重的后端服务列表
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
+    }
+
+    /**
+     * 获取后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     * @return Weight 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     */
+    public Integer getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * 设置后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     * @param Weight 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     */
+    public void setWeight(Integer Weight) {
+        this.Weight = Weight;
     }
 
     /**
@@ -189,11 +189,11 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
-        this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

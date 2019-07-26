@@ -13,31 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LexicalAnalysisResponse  extends AbstractModel{
+public class DetectProductResponse  extends AbstractModel{
 
     /**
-    * 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+    * 商品识别结果数组
     */
-    @SerializedName("NerTokens")
+    @SerializedName("Products")
     @Expose
-    private NerToken [] NerTokens;
-
-    /**
-    * 分词&词性标注结果（词性表请参见附录）
-    */
-    @SerializedName("PosTokens")
-    @Expose
-    private PosToken [] PosTokens;
+    private Product [] Products;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,47 +37,19 @@ public class LexicalAnalysisResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
-     * @return NerTokens 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+     * 获取商品识别结果数组
+     * @return Products 商品识别结果数组
      */
-    public NerToken [] getNerTokens() {
-        return this.NerTokens;
+    public Product [] getProducts() {
+        return this.Products;
     }
 
     /**
-     * 设置命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
-     * @param NerTokens 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+     * 设置商品识别结果数组
+     * @param Products 商品识别结果数组
      */
-    public void setNerTokens(NerToken [] NerTokens) {
-        this.NerTokens = NerTokens;
-    }
-
-    /**
-     * 获取分词&词性标注结果（词性表请参见附录）
-     * @return PosTokens 分词&词性标注结果（词性表请参见附录）
-     */
-    public PosToken [] getPosTokens() {
-        return this.PosTokens;
-    }
-
-    /**
-     * 设置分词&词性标注结果（词性表请参见附录）
-     * @param PosTokens 分词&词性标注结果（词性表请参见附录）
-     */
-    public void setPosTokens(PosToken [] PosTokens) {
-        this.PosTokens = PosTokens;
+    public void setProducts(Product [] Products) {
+        this.Products = Products;
     }
 
     /**
@@ -110,8 +72,7 @@ public class LexicalAnalysisResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "NerTokens.", this.NerTokens);
-        this.setParamArrayObj(map, prefix + "PosTokens.", this.PosTokens);
+        this.setParamArrayObj(map, prefix + "Products.", this.Products);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

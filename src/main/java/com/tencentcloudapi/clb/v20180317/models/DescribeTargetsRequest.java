@@ -44,7 +44,7 @@ public class DescribeTargetsRequest  extends AbstractModel{
     private String Protocol;
 
     /**
-    * 负载均衡监听器端口
+    * 监听器端口
     */
     @SerializedName("Port")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器端口
-     * @return Port 负载均衡监听器端口
+     * 获取监听器端口
+     * @return Port 监听器端口
      */
     public Integer getPort() {
         return this.Port;
     }
 
     /**
-     * 设置负载均衡监听器端口
-     * @param Port 负载均衡监听器端口
+     * 设置监听器端口
+     * @param Port 监听器端口
      */
     public void setPort(Integer Port) {
         this.Port = Port;

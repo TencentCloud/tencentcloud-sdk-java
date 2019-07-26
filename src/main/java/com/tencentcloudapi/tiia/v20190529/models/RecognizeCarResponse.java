@@ -13,31 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LexicalAnalysisResponse  extends AbstractModel{
+public class RecognizeCarResponse  extends AbstractModel{
 
     /**
-    * 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+    * 汽车的四个矩形顶点坐标
     */
-    @SerializedName("NerTokens")
+    @SerializedName("CarCoords")
     @Expose
-    private NerToken [] NerTokens;
+    private Coord [] CarCoords;
 
     /**
-    * 分词&词性标注结果（词性表请参见附录）
+    * 车辆属性识别的结果数组
     */
-    @SerializedName("PosTokens")
+    @SerializedName("CarTags")
     @Expose
-    private PosToken [] PosTokens;
+    private CarTagItem [] CarTags;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,47 +44,35 @@ public class LexicalAnalysisResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
-     * @return NerTokens 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+     * 获取汽车的四个矩形顶点坐标
+     * @return CarCoords 汽车的四个矩形顶点坐标
      */
-    public NerToken [] getNerTokens() {
-        return this.NerTokens;
+    public Coord [] getCarCoords() {
+        return this.CarCoords;
     }
 
     /**
-     * 设置命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
-     * @param NerTokens 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+     * 设置汽车的四个矩形顶点坐标
+     * @param CarCoords 汽车的四个矩形顶点坐标
      */
-    public void setNerTokens(NerToken [] NerTokens) {
-        this.NerTokens = NerTokens;
+    public void setCarCoords(Coord [] CarCoords) {
+        this.CarCoords = CarCoords;
     }
 
     /**
-     * 获取分词&词性标注结果（词性表请参见附录）
-     * @return PosTokens 分词&词性标注结果（词性表请参见附录）
+     * 获取车辆属性识别的结果数组
+     * @return CarTags 车辆属性识别的结果数组
      */
-    public PosToken [] getPosTokens() {
-        return this.PosTokens;
+    public CarTagItem [] getCarTags() {
+        return this.CarTags;
     }
 
     /**
-     * 设置分词&词性标注结果（词性表请参见附录）
-     * @param PosTokens 分词&词性标注结果（词性表请参见附录）
+     * 设置车辆属性识别的结果数组
+     * @param CarTags 车辆属性识别的结果数组
      */
-    public void setPosTokens(PosToken [] PosTokens) {
-        this.PosTokens = PosTokens;
+    public void setCarTags(CarTagItem [] CarTags) {
+        this.CarTags = CarTags;
     }
 
     /**
@@ -110,8 +95,8 @@ public class LexicalAnalysisResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "NerTokens.", this.NerTokens);
-        this.setParamArrayObj(map, prefix + "PosTokens.", this.PosTokens);
+        this.setParamArrayObj(map, prefix + "CarCoords.", this.CarCoords);
+        this.setParamArrayObj(map, prefix + "CarTags.", this.CarTags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

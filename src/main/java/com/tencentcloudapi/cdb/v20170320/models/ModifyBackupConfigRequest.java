@@ -30,7 +30,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 备份过期时间，单位为天，最小值为7天，最大值为732天。
+    * 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
     */
     @SerializedName("ExpireDays")
     @Expose
@@ -51,6 +51,13 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     private String BackupMethod;
 
     /**
+    * binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+    */
+    @SerializedName("BinlogExpireDays")
+    @Expose
+    private Integer BinlogExpireDays;
+
+    /**
      * 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      */
@@ -67,16 +74,16 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备份过期时间，单位为天，最小值为7天，最大值为732天。
-     * @return ExpireDays 备份过期时间，单位为天，最小值为7天，最大值为732天。
+     * 获取备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
+     * @return ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
      */
     public Integer getExpireDays() {
         return this.ExpireDays;
     }
 
     /**
-     * 设置备份过期时间，单位为天，最小值为7天，最大值为732天。
-     * @param ExpireDays 备份过期时间，单位为天，最小值为7天，最大值为732天。
+     * 设置备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
+     * @param ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
      */
     public void setExpireDays(Integer ExpireDays) {
         this.ExpireDays = ExpireDays;
@@ -115,6 +122,22 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
+     * 获取binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+     * @return BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+     */
+    public Integer getBinlogExpireDays() {
+        return this.BinlogExpireDays;
+    }
+
+    /**
+     * 设置binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+     * @param BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+     */
+    public void setBinlogExpireDays(Integer BinlogExpireDays) {
+        this.BinlogExpireDays = BinlogExpireDays;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpireDays", this.ExpireDays);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+        this.setParamSimple(map, prefix + "BinlogExpireDays", this.BinlogExpireDays);
 
     }
 }

@@ -260,6 +260,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     private LBChargePrepaid PrepaidAttributes;
 
     /**
+    * 负载均衡日志服务(CLS)的日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogSetId")
+    @Expose
+    private String LogSetId;
+
+    /**
+    * 负载均衡日志服务(CLS)的日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogTopicId")
+    @Expose
+    private String LogTopicId;
+
+    /**
      * 获取负载均衡实例 ID。
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -848,6 +864,46 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * 获取负载均衡日志服务(CLS)的日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LogSetId 负载均衡日志服务(CLS)的日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogSetId() {
+        return this.LogSetId;
+    }
+
+    /**
+     * 设置负载均衡日志服务(CLS)的日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogSetId 负载均衡日志服务(CLS)的日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogSetId(String LogSetId) {
+        this.LogSetId = LogSetId;
+    }
+
+    /**
+     * 获取负载均衡日志服务(CLS)的日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LogTopicId 负载均衡日志服务(CLS)的日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogTopicId() {
+        return this.LogTopicId;
+    }
+
+    /**
+     * 设置负载均衡日志服务(CLS)的日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogTopicId 负载均衡日志服务(CLS)的日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogTopicId(String LogTopicId) {
+        this.LogTopicId = LogTopicId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -881,6 +937,8 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
         this.setParamObj(map, prefix + "PrepaidAttributes.", this.PrepaidAttributes);
+        this.setParamSimple(map, prefix + "LogSetId", this.LogSetId);
+        this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
 
     }
 }

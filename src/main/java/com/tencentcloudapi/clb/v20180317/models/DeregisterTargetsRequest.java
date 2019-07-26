@@ -37,7 +37,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     private String ListenerId;
 
     /**
-    * 要解绑的后端机器列表，数组长度最大支持20
+    * 要解绑的后端服务列表，数组长度最大支持20
     */
     @SerializedName("Targets")
     @Expose
@@ -97,16 +97,16 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要解绑的后端机器列表，数组长度最大支持20
-     * @return Targets 要解绑的后端机器列表，数组长度最大支持20
+     * 获取要解绑的后端服务列表，数组长度最大支持20
+     * @return Targets 要解绑的后端服务列表，数组长度最大支持20
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * 设置要解绑的后端机器列表，数组长度最大支持20
-     * @param Targets 要解绑的后端机器列表，数组长度最大支持20
+     * 设置要解绑的后端服务列表，数组长度最大支持20
+     * @param Targets 要解绑的后端服务列表，数组长度最大支持20
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;

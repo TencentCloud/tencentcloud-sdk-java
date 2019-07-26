@@ -37,7 +37,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-    * 周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。您可前往账单概览页面顶部查看确认您的账单统计周期类型。
+    * 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
     */
     @SerializedName("PeriodType")
     @Expose
@@ -105,16 +105,16 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。您可前往账单概览页面顶部查看确认您的账单统计周期类型。
-     * @return PeriodType 周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。您可前往账单概览页面顶部查看确认您的账单统计周期类型。
+     * 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     * @return PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
      */
     public String getPeriodType() {
         return this.PeriodType;
     }
 
     /**
-     * 设置周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。您可前往账单概览页面顶部查看确认您的账单统计周期类型。
-     * @param PeriodType 周期类型，byPayTime按扣费周期/byUsedTime按计费周期。需要与费用中心该月份账单的周期保持一致。您可前往账单概览页面顶部查看确认您的账单统计周期类型。
+     * 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     * @param PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
      */
     public void setPeriodType(String PeriodType) {
         this.PeriodType = PeriodType;

@@ -67,54 +67,54 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Integer ProjectId;
 
     /**
-    * IP版本，IPV4 | IPV6，默认值 IPV4。
+    * 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
     */
     @SerializedName("AddressIPVersion")
     @Expose
     private String AddressIPVersion;
 
     /**
-    * 创建负载均衡的个数
+    * 创建负载均衡的个数，默认值 1。
     */
     @SerializedName("Number")
     @Expose
     private Integer Number;
 
     /**
-    * 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+    * 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
     */
     @SerializedName("MasterZoneId")
     @Expose
     private String MasterZoneId;
 
     /**
-    * 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+    * 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Anycast的发布域，可取 ZONE_A 或 ZONE_B
+    * 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
     */
     @SerializedName("AnycastZone")
     @Expose
     private String AnycastZone;
 
     /**
-    * 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+    * 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
     */
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
 
     /**
-    * CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+    * 购买负载均衡同时，给负载均衡打上标签
     */
-    @SerializedName("VipIsp")
+    @SerializedName("Tags")
     @Expose
-    private String VipIsp;
+    private TagInfo [] Tags;
 
     /**
      * 获取负载均衡实例的网络类型：
@@ -221,119 +221,119 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取IP版本，IPV4 | IPV6，默认值 IPV4。
-     * @return AddressIPVersion IP版本，IPV4 | IPV6，默认值 IPV4。
+     * 获取仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+     * @return AddressIPVersion 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
      */
     public String getAddressIPVersion() {
         return this.AddressIPVersion;
     }
 
     /**
-     * 设置IP版本，IPV4 | IPV6，默认值 IPV4。
-     * @param AddressIPVersion IP版本，IPV4 | IPV6，默认值 IPV4。
+     * 设置仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+     * @param AddressIPVersion 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
      */
     public void setAddressIPVersion(String AddressIPVersion) {
         this.AddressIPVersion = AddressIPVersion;
     }
 
     /**
-     * 获取创建负载均衡的个数
-     * @return Number 创建负载均衡的个数
+     * 获取创建负载均衡的个数，默认值 1。
+     * @return Number 创建负载均衡的个数，默认值 1。
      */
     public Integer getNumber() {
         return this.Number;
     }
 
     /**
-     * 设置创建负载均衡的个数
-     * @param Number 创建负载均衡的个数
+     * 设置创建负载均衡的个数，默认值 1。
+     * @param Number 创建负载均衡的个数，默认值 1。
      */
     public void setNumber(Integer Number) {
         this.Number = Number;
     }
 
     /**
-     * 获取设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
-     * @return MasterZoneId 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+     * 获取仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+     * @return MasterZoneId 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
      */
     public String getMasterZoneId() {
         return this.MasterZoneId;
     }
 
     /**
-     * 设置设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
-     * @param MasterZoneId 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+     * 设置仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+     * @param MasterZoneId 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
      */
     public void setMasterZoneId(String MasterZoneId) {
         this.MasterZoneId = MasterZoneId;
     }
 
     /**
-     * 获取可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
-     * @return ZoneId 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * 获取仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * @return ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * 设置可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
-     * @param ZoneId 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * 设置仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * @param ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * 获取Anycast的发布域，可取 ZONE_A 或 ZONE_B
-     * @return AnycastZone Anycast的发布域，可取 ZONE_A 或 ZONE_B
+     * 获取仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
+     * @return AnycastZone 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
      */
     public String getAnycastZone() {
         return this.AnycastZone;
     }
 
     /**
-     * 设置Anycast的发布域，可取 ZONE_A 或 ZONE_B
-     * @param AnycastZone Anycast的发布域，可取 ZONE_A 或 ZONE_B
+     * 设置仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
+     * @param AnycastZone 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
      */
     public void setAnycastZone(String AnycastZone) {
         this.AnycastZone = AnycastZone;
     }
 
     /**
-     * 获取负载均衡的网络计费方式，此参数仅对带宽上移用户生效
-     * @return InternetAccessible 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+     * 获取仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
+     * @return InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * 设置负载均衡的网络计费方式，此参数仅对带宽上移用户生效
-     * @param InternetAccessible 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+     * 设置仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
+     * @param InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
     }
 
     /**
-     * 获取CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
-     * @return VipIsp CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+     * 获取购买负载均衡同时，给负载均衡打上标签
+     * @return Tags 购买负载均衡同时，给负载均衡打上标签
      */
-    public String getVipIsp() {
-        return this.VipIsp;
+    public TagInfo [] getTags() {
+        return this.Tags;
     }
 
     /**
-     * 设置CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
-     * @param VipIsp CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+     * 设置购买负载均衡同时，给负载均衡打上标签
+     * @param Tags 购买负载均衡同时，给负载均衡打上标签
      */
-    public void setVipIsp(String VipIsp) {
-        this.VipIsp = VipIsp;
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
     }
 
     /**
@@ -352,7 +352,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
-        this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

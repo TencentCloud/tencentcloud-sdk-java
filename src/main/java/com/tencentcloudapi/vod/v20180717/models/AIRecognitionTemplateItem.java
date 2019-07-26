@@ -52,6 +52,14 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     private HeadTailConfigureInfo HeadTailConfigure;
 
     /**
+    * 拆条识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SegmentConfigure")
+    @Expose
+    private SegmentConfigureInfo SegmentConfigure;
+
+    /**
     * 人脸识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -186,6 +194,26 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
      */
     public void setHeadTailConfigure(HeadTailConfigureInfo HeadTailConfigure) {
         this.HeadTailConfigure = HeadTailConfigure;
+    }
+
+    /**
+     * 获取拆条识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SegmentConfigure 拆条识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SegmentConfigureInfo getSegmentConfigure() {
+        return this.SegmentConfigure;
+    }
+
+    /**
+     * 设置拆条识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SegmentConfigure 拆条识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSegmentConfigure(SegmentConfigureInfo SegmentConfigure) {
+        this.SegmentConfigure = SegmentConfigure;
     }
 
     /**
@@ -364,6 +392,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "HeadTailConfigure.", this.HeadTailConfigure);
+        this.setParamObj(map, prefix + "SegmentConfigure.", this.SegmentConfigure);
         this.setParamObj(map, prefix + "FaceConfigure.", this.FaceConfigure);
         this.setParamObj(map, prefix + "OcrFullTextConfigure.", this.OcrFullTextConfigure);
         this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
