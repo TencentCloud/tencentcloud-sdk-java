@@ -44,7 +44,10 @@ public class DescribeBillBandwidthAndFluxListRequest  extends AbstractModel{
     private String [] PlayDomains;
 
     /**
-    * 国内还是国外，若不填，表示国内+国外。
+    * 可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据。
+默认：查询国内+国外的数据。
     */
     @SerializedName("MainlandOrOversea")
     @Expose
@@ -52,9 +55,10 @@ public class DescribeBillBandwidthAndFluxListRequest  extends AbstractModel{
 
     /**
     * 数据粒度，支持如下粒度：
-5：5分钟粒度，默认值（跨度不支持超过1天）；
-60：1小时粒度（跨度不支持超过一个月）；
+5：5分钟粒度，（跨度不支持超过1天），
+60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
+默认值：5。
     */
     @SerializedName("Granularity")
     @Expose
@@ -109,16 +113,28 @@ public class DescribeBillBandwidthAndFluxListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取国内还是国外，若不填，表示国内+国外。
-     * @return MainlandOrOversea 国内还是国外，若不填，表示国内+国外。
+     * 获取可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据。
+默认：查询国内+国外的数据。
+     * @return MainlandOrOversea 可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据。
+默认：查询国内+国外的数据。
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * 设置国内还是国外，若不填，表示国内+国外。
-     * @param MainlandOrOversea 国内还是国外，若不填，表示国内+国外。
+     * 设置可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据。
+默认：查询国内+国外的数据。
+     * @param MainlandOrOversea 可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据。
+默认：查询国内+国外的数据。
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;
@@ -126,13 +142,15 @@ public class DescribeBillBandwidthAndFluxListRequest  extends AbstractModel{
 
     /**
      * 获取数据粒度，支持如下粒度：
-5：5分钟粒度，默认值（跨度不支持超过1天）；
-60：1小时粒度（跨度不支持超过一个月）；
+5：5分钟粒度，（跨度不支持超过1天），
+60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
+默认值：5。
      * @return Granularity 数据粒度，支持如下粒度：
-5：5分钟粒度，默认值（跨度不支持超过1天）；
-60：1小时粒度（跨度不支持超过一个月）；
+5：5分钟粒度，（跨度不支持超过1天），
+60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
+默认值：5。
      */
     public Integer getGranularity() {
         return this.Granularity;
@@ -140,13 +158,15 @@ public class DescribeBillBandwidthAndFluxListRequest  extends AbstractModel{
 
     /**
      * 设置数据粒度，支持如下粒度：
-5：5分钟粒度，默认值（跨度不支持超过1天）；
-60：1小时粒度（跨度不支持超过一个月）；
+5：5分钟粒度，（跨度不支持超过1天），
+60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
+默认值：5。
      * @param Granularity 数据粒度，支持如下粒度：
-5：5分钟粒度，默认值（跨度不支持超过1天）；
-60：1小时粒度（跨度不支持超过一个月）；
+5：5分钟粒度，（跨度不支持超过1天），
+60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
+默认值：5。
      */
     public void setGranularity(Integer Granularity) {
         this.Granularity = Granularity;

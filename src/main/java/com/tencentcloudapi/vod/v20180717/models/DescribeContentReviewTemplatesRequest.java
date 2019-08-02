@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
 
     /**
-    * 内容审核模板唯一标识过滤条件，数组长度限制：50。
+    * 内容审核模板唯一标识过滤条件，数组长度限制：100。
     */
     @SerializedName("Definitions")
     @Expose
@@ -37,7 +37,7 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-    * 返回记录条数，默认值：10，最大值：50。
+    * 返回记录条数，默认值：10，最大值：100。
     */
     @SerializedName("Limit")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取内容审核模板唯一标识过滤条件，数组长度限制：50。
-     * @return Definitions 内容审核模板唯一标识过滤条件，数组长度限制：50。
+     * 获取内容审核模板唯一标识过滤条件，数组长度限制：100。
+     * @return Definitions 内容审核模板唯一标识过滤条件，数组长度限制：100。
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * 设置内容审核模板唯一标识过滤条件，数组长度限制：50。
-     * @param Definitions 内容审核模板唯一标识过滤条件，数组长度限制：50。
+     * 设置内容审核模板唯一标识过滤条件，数组长度限制：100。
+     * @param Definitions 内容审核模板唯一标识过滤条件，数组长度限制：100。
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
@@ -83,16 +83,16 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录条数，默认值：10，最大值：50。
-     * @return Limit 返回记录条数，默认值：10，最大值：50。
+     * 获取返回记录条数，默认值：10，最大值：100。
+     * @return Limit 返回记录条数，默认值：10，最大值：100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置返回记录条数，默认值：10，最大值：50。
-     * @param Limit 返回记录条数，默认值：10，最大值：50。
+     * 设置返回记录条数，默认值：10，最大值：100。
+     * @param Limit 返回记录条数，默认值：10，最大值：100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

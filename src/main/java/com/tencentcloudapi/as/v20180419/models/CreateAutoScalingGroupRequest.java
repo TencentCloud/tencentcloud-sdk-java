@@ -93,7 +93,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     private ForwardLoadBalancer [] ForwardLoadBalancers;
 
     /**
-    * 子网ID列表，VPC场景下必须指定子网
+    * 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -109,7 +109,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     private String [] TerminationPolicies;
 
     /**
-    * 可用区列表，基础网络场景下必须指定可用区
+    * 可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
     */
     @SerializedName("Zones")
     @Expose
@@ -312,16 +312,16 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID列表，VPC场景下必须指定子网
-     * @return SubnetIds 子网ID列表，VPC场景下必须指定子网
+     * 获取子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+     * @return SubnetIds 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * 设置子网ID列表，VPC场景下必须指定子网
-     * @param SubnetIds 子网ID列表，VPC场景下必须指定子网
+     * 设置子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+     * @param SubnetIds 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
@@ -352,16 +352,16 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可用区列表，基础网络场景下必须指定可用区
-     * @return Zones 可用区列表，基础网络场景下必须指定可用区
+     * 获取可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+     * @return Zones 可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * 设置可用区列表，基础网络场景下必须指定可用区
-     * @param Zones 可用区列表，基础网络场景下必须指定可用区
+     * 设置可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+     * @param Zones 可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;

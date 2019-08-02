@@ -37,7 +37,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     private String TemplateName;
 
     /**
-    * 截图时间间隔。5-300
+    * 截图时间间隔。5-300秒。
     */
     @SerializedName("SnapshotInterval")
     @Expose
@@ -125,16 +125,16 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取截图时间间隔。5-300
-     * @return SnapshotInterval 截图时间间隔。5-300
+     * 获取截图时间间隔。5-300秒。
+     * @return SnapshotInterval 截图时间间隔。5-300秒。
      */
     public Integer getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
     /**
-     * 设置截图时间间隔。5-300
-     * @param SnapshotInterval 截图时间间隔。5-300
+     * 设置截图时间间隔。5-300秒。
+     * @param SnapshotInterval 截图时间间隔。5-300秒。
      */
     public void setSnapshotInterval(Integer SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;

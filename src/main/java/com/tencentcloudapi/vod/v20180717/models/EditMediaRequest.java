@@ -44,11 +44,27 @@ public class EditMediaRequest  extends AbstractModel{
     private EditMediaStreamInfo [] StreamInfos;
 
     /**
+    * 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
+<li>10：拼接时，以分辨率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准；</li>
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
     * [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
     */
     @SerializedName("ProcedureName")
     @Expose
     private String ProcedureName;
+
+    /**
+    * 编辑后生成的文件配置。
+    */
+    @SerializedName("OutputConfig")
+    @Expose
+    private EditMediaOutputConfig OutputConfig;
 
     /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -106,6 +122,30 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
+     * 获取编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
+<li>10：拼接时，以分辨率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准；</li>
+     * @return Definition 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
+<li>10：拼接时，以分辨率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准；</li>
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * 设置编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
+<li>10：拼接时，以分辨率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准；</li>
+     * @param Definition 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
+<li>10：拼接时，以分辨率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准；</li>
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
      * 获取[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
      * @return ProcedureName [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
      */
@@ -119,6 +159,22 @@ public class EditMediaRequest  extends AbstractModel{
      */
     public void setProcedureName(String ProcedureName) {
         this.ProcedureName = ProcedureName;
+    }
+
+    /**
+     * 获取编辑后生成的文件配置。
+     * @return OutputConfig 编辑后生成的文件配置。
+     */
+    public EditMediaOutputConfig getOutputConfig() {
+        return this.OutputConfig;
+    }
+
+    /**
+     * 设置编辑后生成的文件配置。
+     * @param OutputConfig 编辑后生成的文件配置。
+     */
+    public void setOutputConfig(EditMediaOutputConfig OutputConfig) {
+        this.OutputConfig = OutputConfig;
     }
 
     /**
@@ -144,7 +200,9 @@ public class EditMediaRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "InputType", this.InputType);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
+        this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

@@ -30,6 +30,27 @@ public class AllocateAddressesRequest  extends AbstractModel{
     private Integer AddressCount;
 
     /**
+    * 运营商名称，可选值[BGP|CTCC|CMCC|CUCC]，默认BGP。
+    */
+    @SerializedName("InternetServiceProvider")
+    @Expose
+    private String InternetServiceProvider;
+
+    /**
+    * EIP类型，EIP|AnycastEIP，默认EIP。
+    */
+    @SerializedName("AddressType")
+    @Expose
+    private String AddressType;
+
+    /**
+    * Anycast发布域，ANYCAST_ZONE_A|ANYCAST_ZONE_B，默认为当前地域可选的任一发布域。
+    */
+    @SerializedName("AnycastZone")
+    @Expose
+    private String AnycastZone;
+
+    /**
      * 获取申请 EIP 数量，默认值为1。
      * @return AddressCount 申请 EIP 数量，默认值为1。
      */
@@ -46,10 +67,61 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取运营商名称，可选值[BGP|CTCC|CMCC|CUCC]，默认BGP。
+     * @return InternetServiceProvider 运营商名称，可选值[BGP|CTCC|CMCC|CUCC]，默认BGP。
+     */
+    public String getInternetServiceProvider() {
+        return this.InternetServiceProvider;
+    }
+
+    /**
+     * 设置运营商名称，可选值[BGP|CTCC|CMCC|CUCC]，默认BGP。
+     * @param InternetServiceProvider 运营商名称，可选值[BGP|CTCC|CMCC|CUCC]，默认BGP。
+     */
+    public void setInternetServiceProvider(String InternetServiceProvider) {
+        this.InternetServiceProvider = InternetServiceProvider;
+    }
+
+    /**
+     * 获取EIP类型，EIP|AnycastEIP，默认EIP。
+     * @return AddressType EIP类型，EIP|AnycastEIP，默认EIP。
+     */
+    public String getAddressType() {
+        return this.AddressType;
+    }
+
+    /**
+     * 设置EIP类型，EIP|AnycastEIP，默认EIP。
+     * @param AddressType EIP类型，EIP|AnycastEIP，默认EIP。
+     */
+    public void setAddressType(String AddressType) {
+        this.AddressType = AddressType;
+    }
+
+    /**
+     * 获取Anycast发布域，ANYCAST_ZONE_A|ANYCAST_ZONE_B，默认为当前地域可选的任一发布域。
+     * @return AnycastZone Anycast发布域，ANYCAST_ZONE_A|ANYCAST_ZONE_B，默认为当前地域可选的任一发布域。
+     */
+    public String getAnycastZone() {
+        return this.AnycastZone;
+    }
+
+    /**
+     * 设置Anycast发布域，ANYCAST_ZONE_A|ANYCAST_ZONE_B，默认为当前地域可选的任一发布域。
+     * @param AnycastZone Anycast发布域，ANYCAST_ZONE_A|ANYCAST_ZONE_B，默认为当前地域可选的任一发布域。
+     */
+    public void setAnycastZone(String AnycastZone) {
+        this.AnycastZone = AnycastZone;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressCount", this.AddressCount);
+        this.setParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+        this.setParamSimple(map, prefix + "AddressType", this.AddressType);
+        this.setParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
 
     }
 }

@@ -30,7 +30,7 @@ public class ClearInstanceRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * redis的实例密码
+    * redis的实例密码（免密实例不需要传密码，非免密实例必传）
     */
     @SerializedName("Password")
     @Expose
@@ -53,16 +53,16 @@ public class ClearInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取redis的实例密码
-     * @return Password redis的实例密码
+     * 获取redis的实例密码（免密实例不需要传密码，非免密实例必传）
+     * @return Password redis的实例密码（免密实例不需要传密码，非免密实例必传）
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * 设置redis的实例密码
-     * @param Password redis的实例密码
+     * 设置redis的实例密码（免密实例不需要传密码，非免密实例必传）
+     * @param Password redis的实例密码（免密实例不需要传密码，非免密实例必传）
      */
     public void setPassword(String Password) {
         this.Password = Password;

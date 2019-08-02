@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
 
     /**
-    * 视频内容识别模板唯一标识过滤条件，数组长度限制：10。
+    * 视频内容识别模板唯一标识过滤条件，数组长度限制：100。
     */
     @SerializedName("Definitions")
     @Expose
@@ -37,7 +37,7 @@ public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-    * 返回记录条数，默认值：10，最大值：50。
+    * 返回记录条数，默认值：10，最大值：100。
     */
     @SerializedName("Limit")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取视频内容识别模板唯一标识过滤条件，数组长度限制：10。
-     * @return Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：10。
+     * 获取视频内容识别模板唯一标识过滤条件，数组长度限制：100。
+     * @return Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：100。
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * 设置视频内容识别模板唯一标识过滤条件，数组长度限制：10。
-     * @param Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：10。
+     * 设置视频内容识别模板唯一标识过滤条件，数组长度限制：100。
+     * @param Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：100。
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
@@ -83,16 +83,16 @@ public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录条数，默认值：10，最大值：50。
-     * @return Limit 返回记录条数，默认值：10，最大值：50。
+     * 获取返回记录条数，默认值：10，最大值：100。
+     * @return Limit 返回记录条数，默认值：10，最大值：100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置返回记录条数，默认值：10，最大值：50。
-     * @param Limit 返回记录条数，默认值：10，最大值：50。
+     * 设置返回记录条数，默认值：10，最大值：100。
+     * @param Limit 返回记录条数，默认值：10，最大值：100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

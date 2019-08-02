@@ -79,6 +79,13 @@ public class InstanceIntegerParam  extends AbstractModel{
     private String Max;
 
     /**
+    * 参数状态, 1: 修改中， 2：修改完成
+    */
+    @SerializedName("Status")
+    @Expose
+    private Integer Status;
+
+    /**
      * 获取参数名
      * @return ParamName 参数名
      */
@@ -207,6 +214,22 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
+     * 获取参数状态, 1: 修改中， 2：修改完成
+     * @return Status 参数状态, 1: 修改中， 2：修改完成
+     */
+    public Integer getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * 设置参数状态, 1: 修改中， 2：修改完成
+     * @param Status 参数状态, 1: 修改中， 2：修改完成
+     */
+    public void setStatus(Integer Status) {
+        this.Status = Status;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class InstanceIntegerParam  extends AbstractModel{
         this.setParamSimple(map, prefix + "Tips", this.Tips);
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamSimple(map, prefix + "Max", this.Max);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

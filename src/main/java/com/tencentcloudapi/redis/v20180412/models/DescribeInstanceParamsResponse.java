@@ -51,6 +51,13 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     private InstanceTextParam [] InstanceTextParam;
 
     /**
+    * 实例多选项型参数
+    */
+    @SerializedName("InstanceMultiParam")
+    @Expose
+    private InstanceMultiParam [] InstanceMultiParam;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
+     * 获取实例多选项型参数
+     * @return InstanceMultiParam 实例多选项型参数
+     */
+    public InstanceMultiParam [] getInstanceMultiParam() {
+        return this.InstanceMultiParam;
+    }
+
+    /**
+     * 设置实例多选项型参数
+     * @param InstanceMultiParam 实例多选项型参数
+     */
+    public void setInstanceMultiParam(InstanceMultiParam [] InstanceMultiParam) {
+        this.InstanceMultiParam = InstanceMultiParam;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -145,6 +168,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "InstanceEnumParam.", this.InstanceEnumParam);
         this.setParamArrayObj(map, prefix + "InstanceIntegerParam.", this.InstanceIntegerParam);
         this.setParamArrayObj(map, prefix + "InstanceTextParam.", this.InstanceTextParam);
+        this.setParamArrayObj(map, prefix + "InstanceMultiParam.", this.InstanceMultiParam);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

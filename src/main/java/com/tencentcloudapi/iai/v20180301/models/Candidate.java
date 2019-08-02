@@ -49,6 +49,30 @@ public class Candidate  extends AbstractModel{
     private Float Score;
 
     /**
+    * 人员名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PersonName")
+    @Expose
+    private String PersonName;
+
+    /**
+    * 人员性别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Gender")
+    @Expose
+    private Integer Gender;
+
+    /**
+    * 包含此人员的人员库及描述字段内容列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PersonGroupInfos")
+    @Expose
+    private PersonGroupInfo [] PersonGroupInfos;
+
+    /**
      * 获取人员ID
      * @return PersonId 人员ID
      */
@@ -117,12 +141,75 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
+     * 获取人员名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return PersonName 人员名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPersonName() {
+        return this.PersonName;
+    }
+
+    /**
+     * 设置人员名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PersonName 人员名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPersonName(String PersonName) {
+        this.PersonName = PersonName;
+    }
+
+    /**
+     * 获取人员性别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Gender 人员性别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getGender() {
+        return this.Gender;
+    }
+
+    /**
+     * 设置人员性别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Gender 人员性别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGender(Integer Gender) {
+        this.Gender = Gender;
+    }
+
+    /**
+     * 获取包含此人员的人员库及描述字段内容列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return PersonGroupInfos 包含此人员的人员库及描述字段内容列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PersonGroupInfo [] getPersonGroupInfos() {
+        return this.PersonGroupInfos;
+    }
+
+    /**
+     * 设置包含此人员的人员库及描述字段内容列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PersonGroupInfos 包含此人员的人员库及描述字段内容列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPersonGroupInfos(PersonGroupInfo [] PersonGroupInfos) {
+        this.PersonGroupInfos = PersonGroupInfos;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamSimple(map, prefix + "FaceId", this.FaceId);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "PersonName", this.PersonName);
+        this.setParamSimple(map, prefix + "Gender", this.Gender);
+        this.setParamArrayObj(map, prefix + "PersonGroupInfos.", this.PersonGroupInfos);
 
     }
 }

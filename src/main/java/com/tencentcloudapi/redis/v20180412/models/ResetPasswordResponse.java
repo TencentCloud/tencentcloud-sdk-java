@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResetPasswordResponse  extends AbstractModel{
 
     /**
-    * 任务ID
+    * 任务ID（修改密码时的任务ID，如果时切换免密码或者非免密码实例，则无需关注此返回值）
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class ResetPasswordResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务ID
-     * @return TaskId 任务ID
+     * 获取任务ID（修改密码时的任务ID，如果时切换免密码或者非免密码实例，则无需关注此返回值）
+     * @return TaskId 任务ID（修改密码时的任务ID，如果时切换免密码或者非免密码实例，则无需关注此返回值）
      */
     public Integer getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置任务ID
-     * @param TaskId 任务ID
+     * 设置任务ID（修改密码时的任务ID，如果时切换免密码或者非免密码实例，则无需关注此返回值）
+     * @param TaskId 任务ID（修改密码时的任务ID，如果时切换免密码或者非免密码实例，则无需关注此返回值）
      */
     public void setTaskId(Integer TaskId) {
         this.TaskId = TaskId;

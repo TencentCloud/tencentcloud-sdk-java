@@ -37,7 +37,7 @@ public class TextArithmetic  extends AbstractModel{
     private Boolean Result;
 
     /**
-    * 置信度 0 ~100
+    * 保留字段，暂无意义
     */
     @SerializedName("Confidence")
     @Expose
@@ -52,7 +52,7 @@ public class TextArithmetic  extends AbstractModel{
     private Coord [] Polygon;
 
     /**
-    * 此字段为扩展字段。
+    * 此字段为扩展字段
     */
     @SerializedName("AdvancedInfo")
     @Expose
@@ -91,16 +91,16 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取置信度 0 ~100
-     * @return Confidence 置信度 0 ~100
+     * 获取保留字段，暂无意义
+     * @return Confidence 保留字段，暂无意义
      */
     public Integer getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * 设置置信度 0 ~100
-     * @param Confidence 置信度 0 ~100
+     * 设置保留字段，暂无意义
+     * @param Confidence 保留字段，暂无意义
      */
     public void setConfidence(Integer Confidence) {
         this.Confidence = Confidence;
@@ -127,16 +127,16 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取此字段为扩展字段。
-     * @return AdvancedInfo 此字段为扩展字段。
+     * 获取此字段为扩展字段
+     * @return AdvancedInfo 此字段为扩展字段
      */
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * 设置此字段为扩展字段。
-     * @param AdvancedInfo 此字段为扩展字段。
+     * 设置此字段为扩展字段
+     * @param AdvancedInfo 此字段为扩展字段
      */
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;

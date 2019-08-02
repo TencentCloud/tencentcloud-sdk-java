@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAIAnalysisTemplatesRequest  extends AbstractModel{
 
     /**
-    * 视频内容分析模板唯一标识过滤条件，数组长度限制：10。
+    * 视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
     */
     @SerializedName("Definitions")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeAIAnalysisTemplatesRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取视频内容分析模板唯一标识过滤条件，数组长度限制：10。
-     * @return Definitions 视频内容分析模板唯一标识过滤条件，数组长度限制：10。
+     * 获取视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
+     * @return Definitions 视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * 设置视频内容分析模板唯一标识过滤条件，数组长度限制：10。
-     * @param Definitions 视频内容分析模板唯一标识过滤条件，数组长度限制：10。
+     * 设置视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
+     * @param Definitions 视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

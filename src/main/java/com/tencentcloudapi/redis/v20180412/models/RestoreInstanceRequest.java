@@ -30,18 +30,18 @@ public class RestoreInstanceRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 实例密码，恢复实例时，需要校验实例密码
-    */
-    @SerializedName("Password")
-    @Expose
-    private String Password;
-
-    /**
     * 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
     */
     @SerializedName("BackupId")
     @Expose
     private String BackupId;
+
+    /**
+    * 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
 
     /**
      * 获取待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
@@ -57,22 +57,6 @@ public class RestoreInstanceRequest  extends AbstractModel{
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
-    }
-
-    /**
-     * 获取实例密码，恢复实例时，需要校验实例密码
-     * @return Password 实例密码，恢复实例时，需要校验实例密码
-     */
-    public String getPassword() {
-        return this.Password;
-    }
-
-    /**
-     * 设置实例密码，恢复实例时，需要校验实例密码
-     * @param Password 实例密码，恢复实例时，需要校验实例密码
-     */
-    public void setPassword(String Password) {
-        this.Password = Password;
     }
 
     /**
@@ -92,12 +76,28 @@ public class RestoreInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
+     * @return Password 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * 设置实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
+     * @param Password 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
+        this.setParamSimple(map, prefix + "Password", this.Password);
 
     }
 }

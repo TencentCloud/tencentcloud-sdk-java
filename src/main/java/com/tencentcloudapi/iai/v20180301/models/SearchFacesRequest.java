@@ -47,28 +47,36 @@ public class SearchFacesRequest  extends AbstractModel{
     private String Url;
 
     /**
-    * 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
-MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
+    * 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
+MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
+例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
     */
     @SerializedName("MaxFaceNum")
     @Expose
     private Integer MaxFaceNum;
 
     /**
-    * 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+    * 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
     */
     @SerializedName("MinFaceSize")
     @Expose
     private Integer MinFaceSize;
 
     /**
-    * 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+    * 单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
+例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
+值越大，需要处理的时间越长。建议不要超过10。
     */
     @SerializedName("MaxPersonNum")
     @Expose
     private Integer MaxPersonNum;
+
+    /**
+    * 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+    */
+    @SerializedName("NeedPersonInfo")
+    @Expose
+    private Integer NeedPersonInfo;
 
     /**
      * 获取希望搜索的人员库列表，上限100个。
@@ -131,63 +139,83 @@ MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸�
     }
 
     /**
-     * 获取最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
-MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
-     * @return MaxFaceNum 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
-MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
+     * 获取最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
+MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
+例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
+     * @return MaxFaceNum 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
+MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
+例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
      */
     public Integer getMaxFaceNum() {
         return this.MaxFaceNum;
     }
 
     /**
-     * 设置最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
-MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
-     * @param MaxFaceNum 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
-MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
+     * 设置最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
+MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
+例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
+     * @param MaxFaceNum 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
+MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
+例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
      */
     public void setMaxFaceNum(Integer MaxFaceNum) {
         this.MaxFaceNum = MaxFaceNum;
     }
 
     /**
-     * 获取人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
-     * @return MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+     * 获取人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
+     * @return MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
      */
     public Integer getMinFaceSize() {
         return this.MinFaceSize;
     }
 
     /**
-     * 设置人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
-     * @param MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+     * 设置人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
+     * @param MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
      */
     public void setMinFaceSize(Integer MinFaceSize) {
         this.MinFaceSize = MinFaceSize;
     }
 
     /**
-     * 获取被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
-     * @return MaxPersonNum 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+     * 获取单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
+例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
+值越大，需要处理的时间越长。建议不要超过10。
+     * @return MaxPersonNum 单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
+例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
+值越大，需要处理的时间越长。建议不要超过10。
      */
     public Integer getMaxPersonNum() {
         return this.MaxPersonNum;
     }
 
     /**
-     * 设置被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
-     * @param MaxPersonNum 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+     * 设置单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
+例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
+值越大，需要处理的时间越长。建议不要超过10。
+     * @param MaxPersonNum 单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
+例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
+值越大，需要处理的时间越长。建议不要超过10。
      */
     public void setMaxPersonNum(Integer MaxPersonNum) {
         this.MaxPersonNum = MaxPersonNum;
+    }
+
+    /**
+     * 获取是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     * @return NeedPersonInfo 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     */
+    public Integer getNeedPersonInfo() {
+        return this.NeedPersonInfo;
+    }
+
+    /**
+     * 设置是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     * @param NeedPersonInfo 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     */
+    public void setNeedPersonInfo(Integer NeedPersonInfo) {
+        this.NeedPersonInfo = NeedPersonInfo;
     }
 
     /**
@@ -200,6 +228,7 @@ MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸�
         this.setParamSimple(map, prefix + "MaxFaceNum", this.MaxFaceNum);
         this.setParamSimple(map, prefix + "MinFaceSize", this.MinFaceSize);
         this.setParamSimple(map, prefix + "MaxPersonNum", this.MaxPersonNum);
+        this.setParamSimple(map, prefix + "NeedPersonInfo", this.NeedPersonInfo);
 
     }
 }

@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class CreateLiveCallbackTemplateRequest  extends AbstractModel{
 
     /**
-    * 模板名称。非空的字符串
+    * 模板名称，非空的字符串。
+长度上限：255字节。
     */
     @SerializedName("TemplateName")
     @Expose
@@ -31,6 +32,7 @@ public class CreateLiveCallbackTemplateRequest  extends AbstractModel{
 
     /**
     * 描述信息。
+长度上限：1024字节。
     */
     @SerializedName("Description")
     @Expose
@@ -84,16 +86,20 @@ public class CreateLiveCallbackTemplateRequest  extends AbstractModel{
     private String CallbackKey;
 
     /**
-     * 获取模板名称。非空的字符串
-     * @return TemplateName 模板名称。非空的字符串
+     * 获取模板名称，非空的字符串。
+长度上限：255字节。
+     * @return TemplateName 模板名称，非空的字符串。
+长度上限：255字节。
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * 设置模板名称。非空的字符串
-     * @param TemplateName 模板名称。非空的字符串
+     * 设置模板名称，非空的字符串。
+长度上限：255字节。
+     * @param TemplateName 模板名称，非空的字符串。
+长度上限：255字节。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -101,7 +107,9 @@ public class CreateLiveCallbackTemplateRequest  extends AbstractModel{
 
     /**
      * 获取描述信息。
+长度上限：1024字节。
      * @return Description 描述信息。
+长度上限：1024字节。
      */
     public String getDescription() {
         return this.Description;
@@ -109,7 +117,9 @@ public class CreateLiveCallbackTemplateRequest  extends AbstractModel{
 
     /**
      * 设置描述信息。
+长度上限：1024字节。
      * @param Description 描述信息。
+长度上限：1024字节。
      */
     public void setDescription(String Description) {
         this.Description = Description;

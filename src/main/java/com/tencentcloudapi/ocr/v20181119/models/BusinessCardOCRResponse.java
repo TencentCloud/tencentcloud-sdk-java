@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BusinessCardOCRResponse  extends AbstractModel{
 
     /**
-    * 名片识别内容。
+    * 名片识别结果，具体内容请点击左侧链接。
     */
     @SerializedName("BusinessCardInfos")
     @Expose
@@ -44,16 +44,16 @@ public class BusinessCardOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取名片识别内容。
-     * @return BusinessCardInfos 名片识别内容。
+     * 获取名片识别结果，具体内容请点击左侧链接。
+     * @return BusinessCardInfos 名片识别结果，具体内容请点击左侧链接。
      */
     public BusinessCardInfo [] getBusinessCardInfos() {
         return this.BusinessCardInfos;
     }
 
     /**
-     * 设置名片识别内容。
-     * @param BusinessCardInfos 名片识别内容。
+     * 设置名片识别结果，具体内容请点击左侧链接。
+     * @param BusinessCardInfos 名片识别结果，具体内容请点击左侧链接。
      */
     public void setBusinessCardInfos(BusinessCardInfo [] BusinessCardInfos) {
         this.BusinessCardInfos = BusinessCardInfos;

@@ -30,6 +30,13 @@ public class ModifyInstanceParamsResponse  extends AbstractModel{
     private Boolean Changed;
 
     /**
+    * 任务ID
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Integer TaskId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class ModifyInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
+     * 获取任务ID
+     * @return TaskId 任务ID
+     */
+    public Integer getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * 设置任务ID
+     * @param TaskId 任务ID
+     */
+    public void setTaskId(Integer TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class ModifyInstanceParamsResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Changed", this.Changed);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -270,6 +270,14 @@ public class InstanceSet  extends AbstractModel{
     private String ProjectName;
 
     /**
+    * 是否为免密实例，true-免密实例；false-非免密实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NoAuth")
+    @Expose
+    private Boolean NoAuth;
+
+    /**
      * 获取实例名称
      * @return InstanceName 实例名称
      */
@@ -838,6 +846,26 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
+     * 获取是否为免密实例，true-免密实例；false-非免密实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return NoAuth 是否为免密实例，true-免密实例；false-非免密实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getNoAuth() {
+        return this.NoAuth;
+    }
+
+    /**
+     * 设置是否为免密实例，true-免密实例；false-非免密实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NoAuth 是否为免密实例，true-免密实例；false-非免密实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNoAuth(Boolean NoAuth) {
+        this.NoAuth = NoAuth;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -876,6 +904,7 @@ public class InstanceSet  extends AbstractModel{
         this.setParamSimple(map, prefix + "SlaveReadWeight", this.SlaveReadWeight);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
+        this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
 
     }
 }

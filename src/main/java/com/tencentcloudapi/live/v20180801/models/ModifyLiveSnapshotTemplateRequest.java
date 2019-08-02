@@ -31,6 +31,7 @@ public class ModifyLiveSnapshotTemplateRequest  extends AbstractModel{
 
     /**
     * 模板名称。
+长度上限：255字节。
     */
     @SerializedName("TemplateName")
     @Expose
@@ -38,27 +39,29 @@ public class ModifyLiveSnapshotTemplateRequest  extends AbstractModel{
 
     /**
     * 描述信息。
+长度上限：1024字节。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 截图时间间隔
+    * 截图间隔，单位s，默认10s。
+范围： 5s ~ 600s。
     */
     @SerializedName("SnapshotInterval")
     @Expose
     private Integer SnapshotInterval;
 
     /**
-    * 截图宽度。
+    * 截图宽度。默认：0（原始宽）。
     */
     @SerializedName("Width")
     @Expose
     private Integer Width;
 
     /**
-    * 截图高度。
+    * 截图高度。默认：0（原始高）。
     */
     @SerializedName("Height")
     @Expose
@@ -110,7 +113,9 @@ public class ModifyLiveSnapshotTemplateRequest  extends AbstractModel{
 
     /**
      * 获取模板名称。
+长度上限：255字节。
      * @return TemplateName 模板名称。
+长度上限：255字节。
      */
     public String getTemplateName() {
         return this.TemplateName;
@@ -118,7 +123,9 @@ public class ModifyLiveSnapshotTemplateRequest  extends AbstractModel{
 
     /**
      * 设置模板名称。
+长度上限：255字节。
      * @param TemplateName 模板名称。
+长度上限：255字节。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -126,7 +133,9 @@ public class ModifyLiveSnapshotTemplateRequest  extends AbstractModel{
 
     /**
      * 获取描述信息。
+长度上限：1024字节。
      * @return Description 描述信息。
+长度上限：1024字节。
      */
     public String getDescription() {
         return this.Description;
@@ -134,55 +143,61 @@ public class ModifyLiveSnapshotTemplateRequest  extends AbstractModel{
 
     /**
      * 设置描述信息。
+长度上限：1024字节。
      * @param Description 描述信息。
+长度上限：1024字节。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * 获取截图时间间隔
-     * @return SnapshotInterval 截图时间间隔
+     * 获取截图间隔，单位s，默认10s。
+范围： 5s ~ 600s。
+     * @return SnapshotInterval 截图间隔，单位s，默认10s。
+范围： 5s ~ 600s。
      */
     public Integer getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
     /**
-     * 设置截图时间间隔
-     * @param SnapshotInterval 截图时间间隔
+     * 设置截图间隔，单位s，默认10s。
+范围： 5s ~ 600s。
+     * @param SnapshotInterval 截图间隔，单位s，默认10s。
+范围： 5s ~ 600s。
      */
     public void setSnapshotInterval(Integer SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
     }
 
     /**
-     * 获取截图宽度。
-     * @return Width 截图宽度。
+     * 获取截图宽度。默认：0（原始宽）。
+     * @return Width 截图宽度。默认：0（原始宽）。
      */
     public Integer getWidth() {
         return this.Width;
     }
 
     /**
-     * 设置截图宽度。
-     * @param Width 截图宽度。
+     * 设置截图宽度。默认：0（原始宽）。
+     * @param Width 截图宽度。默认：0（原始宽）。
      */
     public void setWidth(Integer Width) {
         this.Width = Width;
     }
 
     /**
-     * 获取截图高度。
-     * @return Height 截图高度。
+     * 获取截图高度。默认：0（原始高）。
+     * @return Height 截图高度。默认：0（原始高）。
      */
     public Integer getHeight() {
         return this.Height;
     }
 
     /**
-     * 设置截图高度。
-     * @param Height 截图高度。
+     * 设置截图高度。默认：0（原始高）。
+     * @param Height 截图高度。默认：0（原始高）。
      */
     public void setHeight(Integer Height) {
         this.Height = Height;

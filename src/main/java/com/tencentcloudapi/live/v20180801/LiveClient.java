@@ -1488,7 +1488,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *停用使用某个直播域名
+     *停止使用某个直播域名。
      * @param req ForbidLiveDomainRequest
      * @return ForbidLiveDomainResponse
      * @throws TencentCloudSDKException

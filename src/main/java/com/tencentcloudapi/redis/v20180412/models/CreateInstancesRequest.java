@@ -30,7 +30,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     private Integer ZoneId;
 
     /**
-    * 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
+    * 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
     */
     @SerializedName("TypeId")
     @Expose
@@ -58,18 +58,18 @@ public class CreateInstancesRequest  extends AbstractModel{
     private Integer Period;
 
     /**
-    * 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种
-    */
-    @SerializedName("Password")
-    @Expose
-    private String Password;
-
-    /**
     * 付费方式:0-按量计费，1-包年包月。
     */
     @SerializedName("BillingMode")
     @Expose
     private Integer BillingMode;
+
+    /**
+    * 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
 
     /**
     * 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
@@ -114,7 +114,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     private Integer VPort;
 
     /**
-    * 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+    * 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
     */
     @SerializedName("RedisShardNum")
     @Expose
@@ -142,6 +142,13 @@ public class CreateInstancesRequest  extends AbstractModel{
     private String InstanceName;
 
     /**
+    * 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+    */
+    @SerializedName("NoAuth")
+    @Expose
+    private Boolean NoAuth;
+
+    /**
      * 获取实例所属的可用区id
      * @return ZoneId 实例所属的可用区id
      */
@@ -158,16 +165,16 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
-     * @return TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
+     * 获取实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
+     * @return TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      */
     public Integer getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * 设置实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
-     * @param TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
+     * 设置实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
+     * @param TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      */
     public void setTypeId(Integer TypeId) {
         this.TypeId = TypeId;
@@ -222,22 +229,6 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种
-     * @return Password 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种
-     */
-    public String getPassword() {
-        return this.Password;
-    }
-
-    /**
-     * 设置实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种
-     * @param Password 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种
-     */
-    public void setPassword(String Password) {
-        this.Password = Password;
-    }
-
-    /**
      * 获取付费方式:0-按量计费，1-包年包月。
      * @return BillingMode 付费方式:0-按量计费，1-包年包月。
      */
@@ -251,6 +242,22 @@ public class CreateInstancesRequest  extends AbstractModel{
      */
     public void setBillingMode(Integer BillingMode) {
         this.BillingMode = BillingMode;
+    }
+
+    /**
+     * 获取实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+     * @return Password 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * 设置实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+     * @param Password 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
     }
 
     /**
@@ -350,16 +357,16 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
-     * @return RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * 获取实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
+     * @return RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      */
     public Integer getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * 设置实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
-     * @param RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * 设置实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
+     * @param RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      */
     public void setRedisShardNum(Integer RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
@@ -414,6 +421,22 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+     * @return NoAuth 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+     */
+    public Boolean getNoAuth() {
+        return this.NoAuth;
+    }
+
+    /**
+     * 设置是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+     * @param NoAuth 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+     */
+    public void setNoAuth(Boolean NoAuth) {
+        this.NoAuth = NoAuth;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -422,8 +445,8 @@ public class CreateInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
         this.setParamSimple(map, prefix + "Period", this.Period);
-        this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
+        this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
@@ -434,6 +457,7 @@ public class CreateInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
         this.setParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
 
     }
 }

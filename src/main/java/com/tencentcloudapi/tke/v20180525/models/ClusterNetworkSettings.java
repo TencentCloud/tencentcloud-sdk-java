@@ -65,6 +65,13 @@ public class ClusterNetworkSettings  extends AbstractModel{
     private String VpcId;
 
     /**
+    * 网络插件是否启用CNI(默认开启)
+    */
+    @SerializedName("Cni")
+    @Expose
+    private Boolean Cni;
+
+    /**
      * 获取用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      */
@@ -161,6 +168,22 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
+     * 获取网络插件是否启用CNI(默认开启)
+     * @return Cni 网络插件是否启用CNI(默认开启)
+     */
+    public Boolean getCni() {
+        return this.Cni;
+    }
+
+    /**
+     * 设置网络插件是否启用CNI(默认开启)
+     * @param Cni 网络插件是否启用CNI(默认开启)
+     */
+    public void setCni(Boolean Cni) {
+        this.Cni = Cni;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxClusterServiceNum", this.MaxClusterServiceNum);
         this.setParamSimple(map, prefix + "Ipvs", this.Ipvs);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "Cni", this.Cni);
 
     }
 }

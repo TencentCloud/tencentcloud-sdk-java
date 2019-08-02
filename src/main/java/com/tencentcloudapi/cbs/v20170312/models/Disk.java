@@ -244,6 +244,22 @@ public class Disk  extends AbstractModel{
     private String [] InstanceIdList;
 
     /**
+    * 云硬盘挂载目标设备的ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttachDeviceId")
+    @Expose
+    private String AttachDeviceId;
+
+    /**
+    * 云硬盘挂载目标设备的类型，目前包括CVM和POD
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttachDeviceType")
+    @Expose
+    private String AttachDeviceType;
+
+    /**
      * 获取云硬盘ID。
      * @return DiskId 云硬盘ID。
      */
@@ -768,6 +784,46 @@ public class Disk  extends AbstractModel{
     }
 
     /**
+     * 获取云硬盘挂载目标设备的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AttachDeviceId 云硬盘挂载目标设备的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAttachDeviceId() {
+        return this.AttachDeviceId;
+    }
+
+    /**
+     * 设置云硬盘挂载目标设备的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttachDeviceId 云硬盘挂载目标设备的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttachDeviceId(String AttachDeviceId) {
+        this.AttachDeviceId = AttachDeviceId;
+    }
+
+    /**
+     * 获取云硬盘挂载目标设备的类型，目前包括CVM和POD
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AttachDeviceType 云硬盘挂载目标设备的类型，目前包括CVM和POD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAttachDeviceType() {
+        return this.AttachDeviceType;
+    }
+
+    /**
+     * 设置云硬盘挂载目标设备的类型，目前包括CVM和POD
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttachDeviceType 云硬盘挂载目标设备的类型，目前包括CVM和POD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttachDeviceType(String AttachDeviceType) {
+        this.AttachDeviceType = AttachDeviceType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -801,6 +857,8 @@ public class Disk  extends AbstractModel{
         this.setParamSimple(map, prefix + "MigratePercent", this.MigratePercent);
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
+        this.setParamSimple(map, prefix + "AttachDeviceId", this.AttachDeviceId);
+        this.setParamSimple(map, prefix + "AttachDeviceType", this.AttachDeviceType);
 
     }
 }

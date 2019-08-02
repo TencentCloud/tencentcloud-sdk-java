@@ -107,6 +107,13 @@ public class Instance  extends AbstractModel{
     private Integer VersionNumber;
 
     /**
+    * 伸缩组名称
+    */
+    @SerializedName("AutoScalingGroupName")
+    @Expose
+    private String AutoScalingGroupName;
+
+    /**
      * 获取实例ID
      * @return InstanceId 实例ID
      */
@@ -299,6 +306,22 @@ public class Instance  extends AbstractModel{
     }
 
     /**
+     * 获取伸缩组名称
+     * @return AutoScalingGroupName 伸缩组名称
+     */
+    public String getAutoScalingGroupName() {
+        return this.AutoScalingGroupName;
+    }
+
+    /**
+     * 设置伸缩组名称
+     * @param AutoScalingGroupName 伸缩组名称
+     */
+    public void setAutoScalingGroupName(String AutoScalingGroupName) {
+        this.AutoScalingGroupName = AutoScalingGroupName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class Instance  extends AbstractModel{
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
+        this.setParamSimple(map, prefix + "AutoScalingGroupName", this.AutoScalingGroupName);
 
     }
 }

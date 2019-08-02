@@ -135,6 +135,13 @@ public class Snapshot  extends AbstractModel{
     private Integer ImageCount;
 
     /**
+    * 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+    */
+    @SerializedName("SnapshotType")
+    @Expose
+    private String SnapshotType;
+
+    /**
      * 获取快照ID。
      * @return SnapshotId 快照ID。
      */
@@ -391,6 +398,22 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
+     * 获取快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     * @return SnapshotType 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     */
+    public String getSnapshotType() {
+        return this.SnapshotType;
+    }
+
+    /**
+     * 设置快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     * @param SnapshotType 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     */
+    public void setSnapshotType(String SnapshotType) {
+        this.SnapshotType = SnapshotType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class Snapshot  extends AbstractModel{
         this.setParamSimple(map, prefix + "CopyFromRemote", this.CopyFromRemote);
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamSimple(map, prefix + "ImageCount", this.ImageCount);
+        this.setParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
 
     }
 }

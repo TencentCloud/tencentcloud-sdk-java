@@ -43,14 +43,17 @@ public class AddLiveDomainRequest  extends AbstractModel{
 1：国内，
 2：全球，
 3：境外。
+默认值：1。
     */
     @SerializedName("PlayType")
     @Expose
     private Integer PlayType;
 
     /**
-    * 默认 0 ：普通直播，
-1：慢直播。
+    * 是否是慢直播：
+0： 普通直播，
+1 ：慢直播 。
+默认值： 0。
     */
     @SerializedName("IsDelayLive")
     @Expose
@@ -101,10 +104,12 @@ public class AddLiveDomainRequest  extends AbstractModel{
 1：国内，
 2：全球，
 3：境外。
+默认值：1。
      * @return PlayType 拉流域名类型：
 1：国内，
 2：全球，
 3：境外。
+默认值：1。
      */
     public Integer getPlayType() {
         return this.PlayType;
@@ -115,30 +120,40 @@ public class AddLiveDomainRequest  extends AbstractModel{
 1：国内，
 2：全球，
 3：境外。
+默认值：1。
      * @param PlayType 拉流域名类型：
 1：国内，
 2：全球，
 3：境外。
+默认值：1。
      */
     public void setPlayType(Integer PlayType) {
         this.PlayType = PlayType;
     }
 
     /**
-     * 获取默认 0 ：普通直播，
-1：慢直播。
-     * @return IsDelayLive 默认 0 ：普通直播，
-1：慢直播。
+     * 获取是否是慢直播：
+0： 普通直播，
+1 ：慢直播 。
+默认值： 0。
+     * @return IsDelayLive 是否是慢直播：
+0： 普通直播，
+1 ：慢直播 。
+默认值： 0。
      */
     public Integer getIsDelayLive() {
         return this.IsDelayLive;
     }
 
     /**
-     * 设置默认 0 ：普通直播，
-1：慢直播。
-     * @param IsDelayLive 默认 0 ：普通直播，
-1：慢直播。
+     * 设置是否是慢直播：
+0： 普通直播，
+1 ：慢直播 。
+默认值： 0。
+     * @param IsDelayLive 是否是慢直播：
+0： 普通直播，
+1 ：慢直播 。
+默认值： 0。
      */
     public void setIsDelayLive(Integer IsDelayLive) {
         this.IsDelayLive = IsDelayLive;

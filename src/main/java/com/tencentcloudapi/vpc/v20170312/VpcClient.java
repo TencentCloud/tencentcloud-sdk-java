@@ -234,6 +234,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(AssociateNatGatewayAddress)用于NAT网关绑定弹性IP（EIP）。
+     * @param req AssociateNatGatewayAddressRequest
+     * @return AssociateNatGatewayAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateNatGatewayAddressResponse AssociateNatGatewayAddress(AssociateNatGatewayAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateNatGatewayAddressResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateNatGatewayAddressResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateNatGatewayAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（AttachCcnInstances）用于将网络实例加载到云联网实例中，网络实例包括VPC和专线网关。<br />
 每个云联网能够关联的网络实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
      * @param req AttachCcnInstancesRequest
@@ -496,6 +514,42 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateIp6TranslatorsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateIp6Translators"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(CreateNatGateway)用于创建NAT网关。
+     * @param req CreateNatGatewayRequest
+     * @return CreateNatGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNatGatewayResponse CreateNatGateway(CreateNatGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNatGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNatGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNatGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(CreateNatGatewayDestinationIpPortTranslationNatRule)用于创建NAT网关端口转发规则。
+     * @param req CreateNatGatewayDestinationIpPortTranslationNatRuleRequest
+     * @return CreateNatGatewayDestinationIpPortTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNatGatewayDestinationIpPortTranslationNatRuleResponse CreateNatGatewayDestinationIpPortTranslationNatRule(CreateNatGatewayDestinationIpPortTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNatGatewayDestinationIpPortTranslationNatRule"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -929,6 +983,43 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteIp6TranslatorsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteIp6Translators"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteNatGateway）用于删除NAT网关。
+删除 NAT 网关后，系统会自动删除路由表中包含此 NAT 网关的路由项，同时也会解绑弹性公网IP（EIP）。
+     * @param req DeleteNatGatewayRequest
+     * @return DeleteNatGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNatGatewayResponse DeleteNatGateway(DeleteNatGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNatGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNatGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNatGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteNatGatewayDestinationIpPortTranslationNatRule）用于删除NAT网关端口转发规则。
+     * @param req DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest
+     * @return DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse DeleteNatGatewayDestinationIpPortTranslationNatRule(DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNatGatewayDestinationIpPortTranslationNatRule"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1543,6 +1634,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeNatGatewayDestinationIpPortTranslationNatRules）用于查询NAT网关端口转发规则对象数组。
+     * @param req DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest
+     * @return DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse DescribeNatGatewayDestinationIpPortTranslationNatRules(DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNatGatewayDestinationIpPortTranslationNatRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeNatGateways）用于查询 NAT 网关。
      * @param req DescribeNatGatewaysRequest
      * @return DescribeNatGatewaysResponse
@@ -1939,6 +2048,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DisassociateAddressResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DisassociateAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DisassociateNatGatewayAddress）用于NAT网关解绑弹性IP。
+     * @param req DisassociateNatGatewayAddressRequest
+     * @return DisassociateNatGatewayAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateNatGatewayAddressResponse DisassociateNatGatewayAddress(DisassociateNatGatewayAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateNatGatewayAddressResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateNatGatewayAddressResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateNatGatewayAddress"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -2368,6 +2495,42 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyNatGatewayAttribute）用于修改NAT网关的属性。
+     * @param req ModifyNatGatewayAttributeRequest
+     * @return ModifyNatGatewayAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNatGatewayAttributeResponse ModifyNatGatewayAttribute(ModifyNatGatewayAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNatGatewayAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNatGatewayAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNatGatewayAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyNatGatewayDestinationIpPortTranslationNatRule）用于修改NAT网关端口转发规则。
+     * @param req ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest
+     * @return ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse ModifyNatGatewayDestinationIpPortTranslationNatRule(ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNatGatewayDestinationIpPortTranslationNatRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyNetworkInterfaceAttribute）用于修改弹性网卡属性。
      * @param req ModifyNetworkInterfaceAttributeRequest
      * @return ModifyNetworkInterfaceAttributeResponse
@@ -2754,6 +2917,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetAttachCcnInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ResetAttachCcnInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ResetNatGatewayConnection）用来NAT网关并发连接上限。
+     * @param req ResetNatGatewayConnectionRequest
+     * @return ResetNatGatewayConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetNatGatewayConnectionResponse ResetNatGatewayConnection(ResetNatGatewayConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetNatGatewayConnectionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetNatGatewayConnectionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ResetNatGatewayConnection"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

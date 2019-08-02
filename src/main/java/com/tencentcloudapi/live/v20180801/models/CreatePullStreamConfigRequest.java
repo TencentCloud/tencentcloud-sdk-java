@@ -37,14 +37,23 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     private String ToUrl;
 
     /**
-    * 区域id,1-深圳,2-上海，3-天津,4-香港。
+    * 区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-香港。
     */
     @SerializedName("AreaId")
     @Expose
     private Integer AreaId;
 
     /**
-    * 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
+    * 运营商id：
+1-电信，
+2-移动，
+3-联通，
+4-其他。
+注：AreaId为4的时候,IspId只能为其他。
     */
     @SerializedName("IspId")
     @Expose
@@ -104,32 +113,68 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区域id,1-深圳,2-上海，3-天津,4-香港。
-     * @return AreaId 区域id,1-深圳,2-上海，3-天津,4-香港。
+     * 获取区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-香港。
+     * @return AreaId 区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-香港。
      */
     public Integer getAreaId() {
         return this.AreaId;
     }
 
     /**
-     * 设置区域id,1-深圳,2-上海，3-天津,4-香港。
-     * @param AreaId 区域id,1-深圳,2-上海，3-天津,4-香港。
+     * 设置区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-香港。
+     * @param AreaId 区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-香港。
      */
     public void setAreaId(Integer AreaId) {
         this.AreaId = AreaId;
     }
 
     /**
-     * 获取运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
-     * @return IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
+     * 获取运营商id：
+1-电信，
+2-移动，
+3-联通，
+4-其他。
+注：AreaId为4的时候,IspId只能为其他。
+     * @return IspId 运营商id：
+1-电信，
+2-移动，
+3-联通，
+4-其他。
+注：AreaId为4的时候,IspId只能为其他。
      */
     public Integer getIspId() {
         return this.IspId;
     }
 
     /**
-     * 设置运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
-     * @param IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
+     * 设置运营商id：
+1-电信，
+2-移动，
+3-联通，
+4-其他。
+注：AreaId为4的时候,IspId只能为其他。
+     * @param IspId 运营商id：
+1-电信，
+2-移动，
+3-联通，
+4-其他。
+注：AreaId为4的时候,IspId只能为其他。
      */
     public void setIspId(Integer IspId) {
         this.IspId = IspId;

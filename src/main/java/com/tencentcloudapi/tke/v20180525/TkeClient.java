@@ -85,6 +85,42 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *扩展(新建)集群节点
+     * @param req CreateClusterInstancesRequest
+     * @return CreateClusterInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterInstancesResponse CreateClusterInstances(CreateClusterInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClusterInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除集群(YUNAPI V3版本)
+     * @param req DeleteClusterRequest
+     * @return DeleteClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterResponse DeleteCluster(DeleteClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteCluster"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除集群中的实例
      * @param req DeleteClusterInstancesRequest
      * @return DeleteClusterInstancesResponse
@@ -121,6 +157,24 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *集群的密钥信息
+     * @param req DescribeClusterSecurityRequest
+     * @return DescribeClusterSecurityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterSecurityResponse DescribeClusterSecurity(DescribeClusterSecurityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterSecurityResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterSecurityResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterSecurity"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群列表
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse
@@ -132,6 +186,24 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusters"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询已经存在的节点，判断是否可以加入集群
+     * @param req DescribeExistedInstancesRequest
+     * @return DescribeExistedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExistedInstancesResponse DescribeExistedInstances(DescribeExistedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExistedInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExistedInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeExistedInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

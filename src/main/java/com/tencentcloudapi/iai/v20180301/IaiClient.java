@@ -50,6 +50,9 @@ public class IaiClient extends AbstractClient{
 
     /**
      *对请求图片进行五官定位（也称人脸关键点定位），计算构成人脸轮廓的 90 个点，包括眉毛（左右各 8 点）、眼睛（左右各 8 点）、鼻子（13 点）、嘴巴（22 点）、脸型轮廓（21 点）、眼珠[或瞳孔]（2点）。
+
+>     
+- 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
      * @param req AnalyzeFaceRequest
      * @return AnalyzeFaceResponse
      * @throws TencentCloudSDKException
@@ -72,6 +75,9 @@ public class IaiClient extends AbstractClient{
 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://cloud.tencent.com/document/product/867/32806)接口。
 
 若您需要判断图片中人脸的具体身份信息，如是否是身份证上对应的人，建议使用[人脸核身·云智慧眼](https://cloud.tencent.com/product/facein)产品。
+
+>     
+- 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
      * @param req CompareFaceRequest
      * @return CompareFaceResponse
      * @throws TencentCloudSDKException
@@ -108,6 +114,9 @@ public class IaiClient extends AbstractClient{
 
     /**
      *将一组人脸图片添加到一个人员中。一个人员最多允许包含 5 张图片。若该人员存在多个人员库中，所有人员库中该人员图片均会增加。
+
+>     
+- 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
      * @param req CreateFaceRequest
      * @return CreateFaceResponse
      * @throws TencentCloudSDKException
@@ -144,6 +153,9 @@ public class IaiClient extends AbstractClient{
 
     /**
      *创建人员，添加人脸、姓名、性别及其他相关信息。
+
+>     
+- 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
      * @param req CreatePersonRequest
      * @return CreatePersonResponse
      * @throws TencentCloudSDKException
@@ -248,6 +260,9 @@ public class IaiClient extends AbstractClient{
 
 4） [人脸融合](https://cloud.tencent.com/product/facefusion)：保证上传的人脸质量，人脸融合的效果更好。
 
+>     
+- 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+
 
      * @param req DetectFaceRequest
      * @return DetectFaceResponse
@@ -272,6 +287,9 @@ public class IaiClient extends AbstractClient{
 
 >     
 - 图片的宽高比请接近3：4，不符合宽高比的图片返回的分值不具备参考意义。本接口适用于类手机自拍场景，非类手机自拍照返回的分值不具备参考意义。
+
+>     
+- 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
      * @param req DetectLiveFaceRequest
      * @return DetectLiveFaceResponse
      * @throws TencentCloudSDKException
@@ -435,6 +453,9 @@ public class IaiClient extends AbstractClient{
     /**
      *用于对一张待识别的人脸图片，在一个或多个人员库中识别出最相似的 TopN 人员，识别结果按照相似度从大到小排序。单次搜索的人员库人脸总数量不得超过 100 万张。
 此接口需与[人员库管理相关接口](https://cloud.tencent.com/document/product/867/32794)结合使用。
+
+>     
+- 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
      * @param req SearchFacesRequest
      * @return SearchFacesResponse
      * @throws TencentCloudSDKException
@@ -453,6 +474,9 @@ public class IaiClient extends AbstractClient{
 
     /**
      *给定一张人脸图片和一个 PersonId，判断图片中的人和 PersonId 对应的人是否为同一人。PersonId 请参考[人员库管理相关接口](https://cloud.tencent.com/document/product/867/32794)。 和[人脸比对](https://cloud.tencent.com/document/product/867/32802)接口不同的是，[人脸验证](https://cloud.tencent.com/document/product/867/32806)用于判断 “此人是否是此人”，“此人”的信息已存于人员库中，“此人”可能存在多张人脸图片；而[人脸比对](https://cloud.tencent.com/document/product/867/32802)用于判断两张人脸的相似度。
+
+>     
+- 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
      * @param req VerifyFaceRequest
      * @return VerifyFaceResponse
      * @throws TencentCloudSDKException

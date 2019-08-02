@@ -30,6 +30,13 @@ public class CreateInstancesResponse  extends AbstractModel{
     private String DealId;
 
     /**
+    * 实例ID(该字段灰度中，部分地域不可见)
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class CreateInstancesResponse  extends AbstractModel{
     }
 
     /**
+     * 获取实例ID(该字段灰度中，部分地域不可见)
+     * @return InstanceIds 实例ID(该字段灰度中，部分地域不可见)
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * 设置实例ID(该字段灰度中，部分地域不可见)
+     * @param InstanceIds 实例ID(该字段灰度中，部分地域不可见)
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class CreateInstancesResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealId", this.DealId);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

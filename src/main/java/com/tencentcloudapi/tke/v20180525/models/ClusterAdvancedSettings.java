@@ -37,6 +37,13 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     private Boolean AsEnabled;
 
     /**
+    * 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+    */
+    @SerializedName("ContainerRuntime")
+    @Expose
+    private String ContainerRuntime;
+
+    /**
      * 获取是否启用IPVS
      * @return IPVS 是否启用IPVS
      */
@@ -69,11 +76,28 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
+     * 获取集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+     * @return ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+     */
+    public String getContainerRuntime() {
+        return this.ContainerRuntime;
+    }
+
+    /**
+     * 设置集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+     * @param ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+     */
+    public void setContainerRuntime(String ContainerRuntime) {
+        this.ContainerRuntime = ContainerRuntime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IPVS", this.IPVS);
         this.setParamSimple(map, prefix + "AsEnabled", this.AsEnabled);
+        this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
 
     }
 }

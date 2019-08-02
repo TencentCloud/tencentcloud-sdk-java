@@ -88,7 +88,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     private TextWatermarkTemplateInputForUpdate TextTemplate;
 
     /**
-    * SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+    * SVG 水印模板，该字段仅对 SVG 水印模板有效。
     */
     @SerializedName("SvgTemplate")
     @Expose
@@ -266,16 +266,16 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
-     * @return SvgTemplate SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+     * 获取SVG 水印模板，该字段仅对 SVG 水印模板有效。
+     * @return SvgTemplate SVG 水印模板，该字段仅对 SVG 水印模板有效。
      */
     public SvgWatermarkInputForUpdate getSvgTemplate() {
         return this.SvgTemplate;
     }
 
     /**
-     * 设置SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
-     * @param SvgTemplate SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+     * 设置SVG 水印模板，该字段仅对 SVG 水印模板有效。
+     * @param SvgTemplate SVG 水印模板，该字段仅对 SVG 水印模板有效。
      */
     public void setSvgTemplate(SvgWatermarkInputForUpdate SvgTemplate) {
         this.SvgTemplate = SvgTemplate;

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class ForbidLiveDomainRequest  extends AbstractModel{
 
     /**
-    * 停用的直播域名
+    * 待停用的直播域名。
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-     * 获取停用的直播域名
-     * @return DomainName 停用的直播域名
+     * 获取待停用的直播域名。
+     * @return DomainName 待停用的直播域名。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * 设置停用的直播域名
-     * @param DomainName 停用的直播域名
+     * 设置待停用的直播域名。
+     * @param DomainName 待停用的直播域名。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;

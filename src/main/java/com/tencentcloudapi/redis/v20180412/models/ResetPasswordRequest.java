@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ResetPasswordRequest  extends AbstractModel{
 
     /**
-    * 重置的密码
-    */
-    @SerializedName("Password")
-    @Expose
-    private String Password;
-
-    /**
     * Redis实例ID
     */
     @SerializedName("InstanceId")
@@ -37,20 +30,18 @@ public class ResetPasswordRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取重置的密码
-     * @return Password 重置的密码
-     */
-    public String getPassword() {
-        return this.Password;
-    }
+    * 重置的密码（切换为免密实例时，可不传；其他情况必传）
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
 
     /**
-     * 设置重置的密码
-     * @param Password 重置的密码
-     */
-    public void setPassword(String Password) {
-        this.Password = Password;
-    }
+    * 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+    */
+    @SerializedName("NoAuth")
+    @Expose
+    private Boolean NoAuth;
 
     /**
      * 获取Redis实例ID
@@ -69,11 +60,44 @@ public class ResetPasswordRequest  extends AbstractModel{
     }
 
     /**
+     * 获取重置的密码（切换为免密实例时，可不传；其他情况必传）
+     * @return Password 重置的密码（切换为免密实例时，可不传；其他情况必传）
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * 设置重置的密码（切换为免密实例时，可不传；其他情况必传）
+     * @param Password 重置的密码（切换为免密实例时，可不传；其他情况必传）
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
+     * 获取是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+     * @return NoAuth 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+     */
+    public Boolean getNoAuth() {
+        return this.NoAuth;
+    }
+
+    /**
+     * 设置是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+     * @param NoAuth 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+     */
+    public void setNoAuth(Boolean NoAuth) {
+        this.NoAuth = NoAuth;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
 
     }
 }

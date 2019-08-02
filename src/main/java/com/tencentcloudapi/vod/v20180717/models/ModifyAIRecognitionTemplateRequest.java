@@ -51,6 +51,13 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     private HeadTailConfigureInfoForUpdate HeadTailConfigure;
 
     /**
+    * 视频拆条识别控制参数。
+    */
+    @SerializedName("SegmentConfigure")
+    @Expose
+    private SegmentConfigureInfoForUpdate SegmentConfigure;
+
+    /**
     * 人脸识别控制参数。
     */
     @SerializedName("FaceConfigure")
@@ -168,6 +175,22 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
      */
     public void setHeadTailConfigure(HeadTailConfigureInfoForUpdate HeadTailConfigure) {
         this.HeadTailConfigure = HeadTailConfigure;
+    }
+
+    /**
+     * 获取视频拆条识别控制参数。
+     * @return SegmentConfigure 视频拆条识别控制参数。
+     */
+    public SegmentConfigureInfoForUpdate getSegmentConfigure() {
+        return this.SegmentConfigure;
+    }
+
+    /**
+     * 设置视频拆条识别控制参数。
+     * @param SegmentConfigure 视频拆条识别控制参数。
+     */
+    public void setSegmentConfigure(SegmentConfigureInfoForUpdate SegmentConfigure) {
+        this.SegmentConfigure = SegmentConfigure;
     }
 
     /**
@@ -306,6 +329,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "HeadTailConfigure.", this.HeadTailConfigure);
+        this.setParamObj(map, prefix + "SegmentConfigure.", this.SegmentConfigure);
         this.setParamObj(map, prefix + "FaceConfigure.", this.FaceConfigure);
         this.setParamObj(map, prefix + "OcrFullTextConfigure.", this.OcrFullTextConfigure);
         this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);

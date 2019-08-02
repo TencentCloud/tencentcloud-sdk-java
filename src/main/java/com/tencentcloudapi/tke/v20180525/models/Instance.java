@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class Instance  extends AbstractModel{
 
     /**
-    * 实例的附加信息
-    */
-    @SerializedName("InstanceAdvanceSettings")
-    @Expose
-    private InstanceAdvancedSettings InstanceAdvanceSettings;
-
-    /**
     * 实例ID
     */
     @SerializedName("InstanceId")
@@ -56,22 +49,6 @@ public class Instance  extends AbstractModel{
     @SerializedName("InstanceState")
     @Expose
     private String InstanceState;
-
-    /**
-     * 获取实例的附加信息
-     * @return InstanceAdvanceSettings 实例的附加信息
-     */
-    public InstanceAdvancedSettings getInstanceAdvanceSettings() {
-        return this.InstanceAdvanceSettings;
-    }
-
-    /**
-     * 设置实例的附加信息
-     * @param InstanceAdvanceSettings 实例的附加信息
-     */
-    public void setInstanceAdvanceSettings(InstanceAdvancedSettings InstanceAdvanceSettings) {
-        this.InstanceAdvanceSettings = InstanceAdvanceSettings;
-    }
 
     /**
      * 获取实例ID
@@ -141,7 +118,6 @@ public class Instance  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "InstanceAdvanceSettings.", this.InstanceAdvanceSettings);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
         this.setParamSimple(map, prefix + "FailedReason", this.FailedReason);

@@ -23,11 +23,80 @@ import java.util.HashMap;
 public class AddExistedInstancesResponse  extends AbstractModel{
 
     /**
+    * 失败的节点ID
+    */
+    @SerializedName("FailedInstanceIds")
+    @Expose
+    private String [] FailedInstanceIds;
+
+    /**
+    * 成功的节点ID
+    */
+    @SerializedName("SuccInstanceIds")
+    @Expose
+    private String [] SuccInstanceIds;
+
+    /**
+    * 超时未返回出来节点的ID(可能失败，也可能成功)
+    */
+    @SerializedName("TimeoutInstanceIds")
+    @Expose
+    private String [] TimeoutInstanceIds;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * 获取失败的节点ID
+     * @return FailedInstanceIds 失败的节点ID
+     */
+    public String [] getFailedInstanceIds() {
+        return this.FailedInstanceIds;
+    }
+
+    /**
+     * 设置失败的节点ID
+     * @param FailedInstanceIds 失败的节点ID
+     */
+    public void setFailedInstanceIds(String [] FailedInstanceIds) {
+        this.FailedInstanceIds = FailedInstanceIds;
+    }
+
+    /**
+     * 获取成功的节点ID
+     * @return SuccInstanceIds 成功的节点ID
+     */
+    public String [] getSuccInstanceIds() {
+        return this.SuccInstanceIds;
+    }
+
+    /**
+     * 设置成功的节点ID
+     * @param SuccInstanceIds 成功的节点ID
+     */
+    public void setSuccInstanceIds(String [] SuccInstanceIds) {
+        this.SuccInstanceIds = SuccInstanceIds;
+    }
+
+    /**
+     * 获取超时未返回出来节点的ID(可能失败，也可能成功)
+     * @return TimeoutInstanceIds 超时未返回出来节点的ID(可能失败，也可能成功)
+     */
+    public String [] getTimeoutInstanceIds() {
+        return this.TimeoutInstanceIds;
+    }
+
+    /**
+     * 设置超时未返回出来节点的ID(可能失败，也可能成功)
+     * @param TimeoutInstanceIds 超时未返回出来节点的ID(可能失败，也可能成功)
+     */
+    public void setTimeoutInstanceIds(String [] TimeoutInstanceIds) {
+        this.TimeoutInstanceIds = TimeoutInstanceIds;
+    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,6 +118,9 @@ public class AddExistedInstancesResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
+        this.setParamArraySimple(map, prefix + "SuccInstanceIds.", this.SuccInstanceIds);
+        this.setParamArraySimple(map, prefix + "TimeoutInstanceIds.", this.TimeoutInstanceIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -38,6 +38,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
 <li>groups.security-group-id - String - （过滤条件）绑定的安全组实例ID，例如：sg-f9ekbxeq。</li>
 <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
 <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
+<li>address-ip - String - （过滤条件）内网IPv4地址。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -82,6 +83,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
 <li>groups.security-group-id - String - （过滤条件）绑定的安全组实例ID，例如：sg-f9ekbxeq。</li>
 <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
 <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
+<li>address-ip - String - （过滤条件）内网IPv4地址。</li>
      * @return Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。</li>
@@ -90,6 +92,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
 <li>groups.security-group-id - String - （过滤条件）绑定的安全组实例ID，例如：sg-f9ekbxeq。</li>
 <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
 <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
+<li>address-ip - String - （过滤条件）内网IPv4地址。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -104,6 +107,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
 <li>groups.security-group-id - String - （过滤条件）绑定的安全组实例ID，例如：sg-f9ekbxeq。</li>
 <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
 <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
+<li>address-ip - String - （过滤条件）内网IPv4地址。</li>
      * @param Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。</li>
@@ -112,6 +116,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
 <li>groups.security-group-id - String - （过滤条件）绑定的安全组实例ID，例如：sg-f9ekbxeq。</li>
 <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
 <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
+<li>address-ip - String - （过滤条件）内网IPv4地址。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
