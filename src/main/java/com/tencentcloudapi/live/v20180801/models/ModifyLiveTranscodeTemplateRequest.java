@@ -145,6 +145,13 @@ baseline/main/high。
     private Integer FpsToOrig;
 
     /**
+    * 急速高清相比VideoBitrate少多少码率，0.1到0.5
+    */
+    @SerializedName("AdaptBitratePercent")
+    @Expose
+    private Float AdaptBitratePercent;
+
+    /**
      * 获取模板Id。
      * @return TemplateId 模板Id。
      */
@@ -429,6 +436,22 @@ baseline/main/high。
     }
 
     /**
+     * 获取急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * @return AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     */
+    public Float getAdaptBitratePercent() {
+        return this.AdaptBitratePercent;
+    }
+
+    /**
+     * 设置急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * @param AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     */
+    public void setAdaptBitratePercent(Float AdaptBitratePercent) {
+        this.AdaptBitratePercent = AdaptBitratePercent;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -449,6 +472,7 @@ baseline/main/high。
         this.setParamSimple(map, prefix + "BitrateToOrig", this.BitrateToOrig);
         this.setParamSimple(map, prefix + "HeightToOrig", this.HeightToOrig);
         this.setParamSimple(map, prefix + "FpsToOrig", this.FpsToOrig);
+        this.setParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
 
     }
 }

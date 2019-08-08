@@ -145,6 +145,20 @@ baseline/main/high。默认baseline
     private Integer FpsToOrig;
 
     /**
+    * 是否是急速高清模板，0：否，1：是。默认0。
+    */
+    @SerializedName("AiTransCode")
+    @Expose
+    private Integer AiTransCode;
+
+    /**
+    * 急速高清相比VideoBitrate少多少码率，0.1到0.5
+    */
+    @SerializedName("AdaptBitratePercent")
+    @Expose
+    private Float AdaptBitratePercent;
+
+    /**
      * 获取模板名称，例：900 900p 仅支持字母和数字的组合。
      * @return TemplateName 模板名称，例：900 900p 仅支持字母和数字的组合。
      */
@@ -429,6 +443,38 @@ baseline/main/high。默认baseline
     }
 
     /**
+     * 获取是否是急速高清模板，0：否，1：是。默认0。
+     * @return AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
+     */
+    public Integer getAiTransCode() {
+        return this.AiTransCode;
+    }
+
+    /**
+     * 设置是否是急速高清模板，0：否，1：是。默认0。
+     * @param AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
+     */
+    public void setAiTransCode(Integer AiTransCode) {
+        this.AiTransCode = AiTransCode;
+    }
+
+    /**
+     * 获取急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * @return AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     */
+    public Float getAdaptBitratePercent() {
+        return this.AdaptBitratePercent;
+    }
+
+    /**
+     * 设置急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * @param AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     */
+    public void setAdaptBitratePercent(Float AdaptBitratePercent) {
+        this.AdaptBitratePercent = AdaptBitratePercent;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -449,6 +495,8 @@ baseline/main/high。默认baseline
         this.setParamSimple(map, prefix + "BitrateToOrig", this.BitrateToOrig);
         this.setParamSimple(map, prefix + "HeightToOrig", this.HeightToOrig);
         this.setParamSimple(map, prefix + "FpsToOrig", this.FpsToOrig);
+        this.setParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
+        this.setParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
 
     }
 }

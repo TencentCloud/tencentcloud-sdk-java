@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CertificateOutput  extends AbstractModel{
 
     /**
-    * 认证类型，unidirectional：单向认证，mutual：双向认证
+    * 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
     */
     @SerializedName("SSLMode")
     @Expose
@@ -45,16 +45,16 @@ public class CertificateOutput  extends AbstractModel{
     private String CertCaId;
 
     /**
-     * 获取认证类型，unidirectional：单向认证，mutual：双向认证
-     * @return SSLMode 认证类型，unidirectional：单向认证，mutual：双向认证
+     * 获取认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+     * @return SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      */
     public String getSSLMode() {
         return this.SSLMode;
     }
 
     /**
-     * 设置认证类型，unidirectional：单向认证，mutual：双向认证
-     * @param SSLMode 认证类型，unidirectional：单向认证，mutual：双向认证
+     * 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+     * @param SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      */
     public void setSSLMode(String SSLMode) {
         this.SSLMode = SSLMode;

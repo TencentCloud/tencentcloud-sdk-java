@@ -117,7 +117,7 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
-    * 实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+    * 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
     */
     @SerializedName("InstanceTypes")
@@ -371,9 +371,9 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+     * 获取实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
-     * @return InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+     * @return InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
      */
     public String [] getInstanceTypes() {
@@ -381,9 +381,9 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+     * 设置实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
-     * @param InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+     * @param InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
      */
     public void setInstanceTypes(String [] InstanceTypes) {

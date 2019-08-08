@@ -100,7 +100,7 @@ public class SrcInfo  extends AbstractModel{
     private String UniqVpnGwId;
 
     /**
-    * 数据库实例ID,格式如：cdb-powiqx8q
+    * 数据库实例ID，格式如：cdb-powiqx8q
     */
     @SerializedName("InstanceId")
     @Expose
@@ -119,6 +119,14 @@ public class SrcInfo  extends AbstractModel{
     @SerializedName("Supplier")
     @Expose
     private String Supplier;
+
+    /**
+    * 云联网ID，如：ccn-afp6kltc
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CcnId")
+    @Expose
+    private String CcnId;
 
     /**
      * 获取阿里云AccessKey。源库是阿里云RDS5.6适用
@@ -297,16 +305,16 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据库实例ID,格式如：cdb-powiqx8q
-     * @return InstanceId 数据库实例ID,格式如：cdb-powiqx8q
+     * 获取数据库实例ID，格式如：cdb-powiqx8q
+     * @return InstanceId 数据库实例ID，格式如：cdb-powiqx8q
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置数据库实例ID,格式如：cdb-powiqx8q
-     * @param InstanceId 数据库实例ID,格式如：cdb-powiqx8q
+     * 设置数据库实例ID，格式如：cdb-powiqx8q
+     * @param InstanceId 数据库实例ID，格式如：cdb-powiqx8q
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -345,6 +353,26 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
+     * 获取云联网ID，如：ccn-afp6kltc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CcnId 云联网ID，如：ccn-afp6kltc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCcnId() {
+        return this.CcnId;
+    }
+
+    /**
+     * 设置云联网ID，如：ccn-afp6kltc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CcnId 云联网ID，如：ccn-afp6kltc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCcnId(String CcnId) {
+        this.CcnId = CcnId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +390,7 @@ public class SrcInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Supplier", this.Supplier);
+        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
 
     }
 }

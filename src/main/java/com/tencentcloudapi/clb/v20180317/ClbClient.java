@@ -607,6 +607,27 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *ReplaceCertForLoadBalancers 接口用以替换负载均衡实例所关联的证书，对于各个地域的负载均衡，如果指定的老的证书ID与其有关联关系，则会先解除关联，再建立新证书与该负载均衡的关联关系。
+此接口支持替换服务端证书或客户端证书。
+需要使用的新证书，可以通过传入证书ID来指定，如果不指定证书ID，则必须传入证书内容等相关信息，用以新建证书并绑定至负载均衡。
+注：本接口仅可从广州地域调用，其他地域存在域名解析问题，会报错。
+     * @param req ReplaceCertForLoadBalancersRequest
+     * @return ReplaceCertForLoadBalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceCertForLoadBalancersResponse ReplaceCertForLoadBalancers(ReplaceCertForLoadBalancersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReplaceCertForLoadBalancersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReplaceCertForLoadBalancersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReplaceCertForLoadBalancers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *SetLoadBalancerSecurityGroups 接口支持对一个公网负载均衡实例执行设置（绑定、解绑）安全组操作。查询一个负载均衡实例目前已绑定的安全组，可使用 DescribeLoadBalancers 接口。本接口是set语义，
 绑定操作时，入参需要传入负载均衡实例要绑定的所有安全组（已绑定的+新增绑定的）。
 解绑操作时，入参需要传入负载均衡实例执行解绑后所绑定的所有安全组；如果要解绑所有安全组，可不传此参数，或传入空数组。注意：内网负载均衡不支持绑定安全组。

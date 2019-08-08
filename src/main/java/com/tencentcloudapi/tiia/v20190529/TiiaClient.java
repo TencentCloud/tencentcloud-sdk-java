@@ -49,6 +49,44 @@ public class TiiaClient extends AbstractClient{
     }
 
     /**
+     *评估输入图片在视觉上的质量，从多个方面评估，并同时给出综合的、客观的清晰度评分，和主观的美观度评分。
+     * @param req AssessQualityRequest
+     * @return AssessQualityResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssessQualityResponse AssessQuality(AssessQualityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssessQualityResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssessQualityResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssessQuality"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *传入一张图片，可以识别图片中包含的人物是否为公众人物，如果是，输出人物的姓名、基本信息、脸部坐标。
+
+支持识别一张图片中存在的多个人脸，针对每个人脸，会给出与之最相似的公众人物。
+     * @param req DetectCelebrityRequest
+     * @return DetectCelebrityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectCelebrityResponse DetectCelebrity(DetectCelebrityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectCelebrityResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectCelebrityResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetectCelebrity"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *传入一张图片，识别出图片中存在的物体，并返回物体的名称（分类）、置信度，一张图片会给出多个可能的标签。
      * @param req DetectLabelRequest
      * @return DetectLabelResponse
@@ -78,6 +116,28 @@ public class TiiaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DetectProductResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DetectProduct"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *传入一张图片，输出清晰度提升后的图片。
+
+可以消除图片有损压缩导致的噪声，和使用滤镜、拍摄失焦导致的模糊。让图片的边缘和细节更加清晰自然。
+
+
+     * @param req EnhanceImageRequest
+     * @return EnhanceImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnhanceImageResponse EnhanceImage(EnhanceImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnhanceImageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnhanceImageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnhanceImage"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

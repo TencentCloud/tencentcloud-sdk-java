@@ -39,7 +39,7 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     private String FontSize;
 
     /**
-    * 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
+    * 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
     */
     @SerializedName("FontColor")
     @Expose
@@ -96,16 +96,16 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     }
 
     /**
-     * 获取字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
-     * @return FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
+     * 获取字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
+     * @return FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
      */
     public String getFontColor() {
         return this.FontColor;
     }
 
     /**
-     * 设置字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
-     * @param FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
+     * 设置字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
+     * @param FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
      */
     public void setFontColor(String FontColor) {
         this.FontColor = FontColor;

@@ -23,7 +23,16 @@ import java.util.HashMap;
 public class AudioTemplateInfo  extends AbstractModel{
 
     /**
-    * 音频流的编码格式，可选值：
+    * 音频流的编码格式。
+当外层参数 Container 为 mp3 时，可选值为：
+<li>libmp3lame。</li>
+当外层参数 Container 为 ogg 或 flac 时，可选值为：
+<li>flac。</li>
+当外层参数 Container 为 m4a 时，可选值为：
+<li>libfdk_aac；</li>
+<li>libmp3lame；</li>
+<li>ac3。</li>
+当外层参数 Container 为视频格式（mp4、flv 或 hls）时，可选值为：
 <li>libfdk_aac：更适合 mp4 和 hls；</li>
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
@@ -63,11 +72,29 @@ public class AudioTemplateInfo  extends AbstractModel{
     private Long AudioChannel;
 
     /**
-     * 获取音频流的编码格式，可选值：
+     * 获取音频流的编码格式。
+当外层参数 Container 为 mp3 时，可选值为：
+<li>libmp3lame。</li>
+当外层参数 Container 为 ogg 或 flac 时，可选值为：
+<li>flac。</li>
+当外层参数 Container 为 m4a 时，可选值为：
+<li>libfdk_aac；</li>
+<li>libmp3lame；</li>
+<li>ac3。</li>
+当外层参数 Container 为视频格式（mp4、flv 或 hls）时，可选值为：
 <li>libfdk_aac：更适合 mp4 和 hls；</li>
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
-     * @return Codec 音频流的编码格式，可选值：
+     * @return Codec 音频流的编码格式。
+当外层参数 Container 为 mp3 时，可选值为：
+<li>libmp3lame。</li>
+当外层参数 Container 为 ogg 或 flac 时，可选值为：
+<li>flac。</li>
+当外层参数 Container 为 m4a 时，可选值为：
+<li>libfdk_aac；</li>
+<li>libmp3lame；</li>
+<li>ac3。</li>
+当外层参数 Container 为视频格式（mp4、flv 或 hls）时，可选值为：
 <li>libfdk_aac：更适合 mp4 和 hls；</li>
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
@@ -77,11 +104,29 @@ public class AudioTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的编码格式，可选值：
+     * 设置音频流的编码格式。
+当外层参数 Container 为 mp3 时，可选值为：
+<li>libmp3lame。</li>
+当外层参数 Container 为 ogg 或 flac 时，可选值为：
+<li>flac。</li>
+当外层参数 Container 为 m4a 时，可选值为：
+<li>libfdk_aac；</li>
+<li>libmp3lame；</li>
+<li>ac3。</li>
+当外层参数 Container 为视频格式（mp4、flv 或 hls）时，可选值为：
 <li>libfdk_aac：更适合 mp4 和 hls；</li>
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
-     * @param Codec 音频流的编码格式，可选值：
+     * @param Codec 音频流的编码格式。
+当外层参数 Container 为 mp3 时，可选值为：
+<li>libmp3lame。</li>
+当外层参数 Container 为 ogg 或 flac 时，可选值为：
+<li>flac。</li>
+当外层参数 Container 为 m4a 时，可选值为：
+<li>libfdk_aac；</li>
+<li>libmp3lame；</li>
+<li>ac3。</li>
+当外层参数 Container 为视频格式（mp4、flv 或 hls）时，可选值为：
 <li>libfdk_aac：更适合 mp4 和 hls；</li>
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>

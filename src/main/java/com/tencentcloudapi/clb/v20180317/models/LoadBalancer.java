@@ -276,6 +276,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String LogTopicId;
 
     /**
+    * 负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddressIPv6")
+    @Expose
+    private String AddressIPv6;
+
+    /**
      * 获取负载均衡实例 ID。
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -904,6 +912,26 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * 获取负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AddressIPv6 负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAddressIPv6() {
+        return this.AddressIPv6;
+    }
+
+    /**
+     * 设置负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddressIPv6 负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddressIPv6(String AddressIPv6) {
+        this.AddressIPv6 = AddressIPv6;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -939,6 +967,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamObj(map, prefix + "PrepaidAttributes.", this.PrepaidAttributes);
         this.setParamSimple(map, prefix + "LogSetId", this.LogSetId);
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+        this.setParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
 
     }
 }

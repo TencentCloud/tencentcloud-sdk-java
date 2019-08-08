@@ -72,7 +72,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-    * 定时任务的重复方式。为标准[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br><br>此参数与`EndTime`需要同时指定。
+    * 定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
     */
     @SerializedName("Recurrence")
     @Expose
@@ -191,16 +191,16 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务的重复方式。为标准[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br><br>此参数与`EndTime`需要同时指定。
-     * @return Recurrence 定时任务的重复方式。为标准[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br><br>此参数与`EndTime`需要同时指定。
+     * 获取定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
+     * @return Recurrence 定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
      */
     public String getRecurrence() {
         return this.Recurrence;
     }
 
     /**
-     * 设置定时任务的重复方式。为标准[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br><br>此参数与`EndTime`需要同时指定。
-     * @param Recurrence 定时任务的重复方式。为标准[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br><br>此参数与`EndTime`需要同时指定。
+     * 设置定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
+     * @param Recurrence 定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
      */
     public void setRecurrence(String Recurrence) {
         this.Recurrence = Recurrence;

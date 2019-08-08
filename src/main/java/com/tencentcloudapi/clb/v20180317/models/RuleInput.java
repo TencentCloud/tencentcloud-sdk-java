@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class RuleInput  extends AbstractModel{
 
     /**
-    * 转发规则的域名。
+    * 转发规则的域名。长度限制为：1~80。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 转发规则的路径。
+    * 转发规则的路径。长度限制为：1~200。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 会话保持时间
+    * 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
     */
     @SerializedName("SessionExpireTime")
     @Expose
@@ -73,48 +73,48 @@ public class RuleInput  extends AbstractModel{
     private String ForwardType;
 
     /**
-     * 获取转发规则的域名。
-     * @return Domain 转发规则的域名。
+     * 获取转发规则的域名。长度限制为：1~80。
+     * @return Domain 转发规则的域名。长度限制为：1~80。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * 设置转发规则的域名。
-     * @param Domain 转发规则的域名。
+     * 设置转发规则的域名。长度限制为：1~80。
+     * @param Domain 转发规则的域名。长度限制为：1~80。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * 获取转发规则的路径。
-     * @return Url 转发规则的路径。
+     * 获取转发规则的路径。长度限制为：1~200。
+     * @return Url 转发规则的路径。长度限制为：1~200。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * 设置转发规则的路径。
-     * @param Url 转发规则的路径。
+     * 设置转发规则的路径。长度限制为：1~200。
+     * @param Url 转发规则的路径。长度限制为：1~200。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * 获取会话保持时间
-     * @return SessionExpireTime 会话保持时间
+     * 获取会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+     * @return SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
      */
     public Integer getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * 设置会话保持时间
-     * @param SessionExpireTime 会话保持时间
+     * 设置会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+     * @param SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
      */
     public void setSessionExpireTime(Integer SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;

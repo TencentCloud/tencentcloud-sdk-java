@@ -44,7 +44,7 @@ public class BankCard4EVerificationRequest  extends AbstractModel{
     private String Phone;
 
     /**
-    * 身份证号码
+    * 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
     */
     @SerializedName("IdCard")
     @Expose
@@ -114,16 +114,16 @@ public class BankCard4EVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取身份证号码
-     * @return IdCard 身份证号码
+     * 获取开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+     * @return IdCard 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * 设置身份证号码
-     * @param IdCard 身份证号码
+     * 设置开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+     * @param IdCard 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;

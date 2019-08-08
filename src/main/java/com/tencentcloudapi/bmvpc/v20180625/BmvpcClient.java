@@ -139,6 +139,24 @@ public class BmvpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateCustomerGateway）用于创建对端网关。
+     * @param req CreateCustomerGatewayRequest
+     * @return CreateCustomerGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomerGatewayResponse CreateCustomerGateway(CreateCustomerGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomerGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomerGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCustomerGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建黑石Docker子网， 如果不指定VlanId，将会分配2000--2999范围的VlanId; 子网会关闭分布式网关
      * @param req CreateDockerSubnetWithVlanRequest
      * @return CreateDockerSubnetWithVlanResponse
@@ -725,6 +743,24 @@ public class BmvpcClient extends AbstractClient{
     }
 
     /**
+     *获取对等连接列表
+     * @param req DescribeVpcPeerConnectionsRequest
+     * @return DescribeVpcPeerConnectionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcPeerConnectionsResponse DescribeVpcPeerConnections(DescribeVpcPeerConnectionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcPeerConnectionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcPeerConnectionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVpcPeerConnections"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeVpcQuota）用于查询用户VPC相关配额限制。
      * @param req DescribeVpcQuotaRequest
      * @return DescribeVpcQuotaResponse
@@ -791,6 +827,42 @@ public class BmvpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeVpcs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     * 本接口（DescribeVpnConnections）查询VPN通道列表。
+     * @param req DescribeVpnConnectionsRequest
+     * @return DescribeVpnConnectionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpnConnectionsResponse DescribeVpnConnections(DescribeVpnConnectionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpnConnectionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpnConnectionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVpnConnections"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeVpnGateways）用于查询VPN网关列表。
+     * @param req DescribeVpnGatewaysRequest
+     * @return DescribeVpnGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpnGatewaysResponse DescribeVpnGateways(DescribeVpnGatewaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpnGatewaysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewaysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVpnGateways"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
