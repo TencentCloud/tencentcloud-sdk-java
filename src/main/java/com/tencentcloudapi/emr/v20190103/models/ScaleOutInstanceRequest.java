@@ -62,7 +62,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     */
     @SerializedName("PreExecutedFileSettings")
     @Expose
-    private PreExecuteFileSettings PreExecutedFileSettings;
+    private PreExecuteFileSettings [] PreExecutedFileSettings;
 
     /**
     * 扩容Task节点数量
@@ -162,7 +162,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
      * 获取预执行脚本设置
      * @return PreExecutedFileSettings 预执行脚本设置
      */
-    public PreExecuteFileSettings getPreExecutedFileSettings() {
+    public PreExecuteFileSettings [] getPreExecutedFileSettings() {
         return this.PreExecutedFileSettings;
     }
 
@@ -170,7 +170,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
      * 设置预执行脚本设置
      * @param PreExecutedFileSettings 预执行脚本设置
      */
-    public void setPreExecutedFileSettings(PreExecuteFileSettings PreExecutedFileSettings) {
+    public void setPreExecutedFileSettings(PreExecuteFileSettings [] PreExecutedFileSettings) {
         this.PreExecutedFileSettings = PreExecutedFileSettings;
     }
 
@@ -215,7 +215,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
-        this.setParamObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
+        this.setParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
         this.setParamSimple(map, prefix + "TaskCount", this.TaskCount);
         this.setParamSimple(map, prefix + "CoreCount", this.CoreCount);
 

@@ -87,7 +87,7 @@ public class NodeSpec  extends AbstractModel{
     private String SpecName;
 
     /**
-    * 多云盘参数
+    * 多盘数据
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultiDisks")
@@ -255,9 +255,9 @@ public class NodeSpec  extends AbstractModel{
     }
 
     /**
-     * 获取多云盘参数
+     * 获取多盘数据
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return MultiDisks 多云盘参数
+     * @return MultiDisks 多盘数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MultiDisk [] getMultiDisks() {
@@ -265,9 +265,9 @@ public class NodeSpec  extends AbstractModel{
     }
 
     /**
-     * 设置多云盘参数
+     * 设置多盘数据
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultiDisks 多云盘参数
+     * @param MultiDisks 多盘数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiDisks(MultiDisk [] MultiDisks) {

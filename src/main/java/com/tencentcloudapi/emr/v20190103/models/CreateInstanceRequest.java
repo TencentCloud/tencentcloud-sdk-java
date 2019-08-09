@@ -125,7 +125,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     */
     @SerializedName("PreExecutedFileSettings")
     @Expose
-    private PreExecuteFileSettings PreExecutedFileSettings;
+    private PreExecuteFileSettings [] PreExecutedFileSettings;
 
     /**
     * 自动续费
@@ -140,6 +140,13 @@ public class CreateInstanceRequest  extends AbstractModel{
     @SerializedName("NeedMasterWan")
     @Expose
     private String NeedMasterWan;
+
+    /**
+    * 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+    */
+    @SerializedName("RemoteLoginAtCreate")
+    @Expose
+    private Integer RemoteLoginAtCreate;
 
     /**
      * 获取产品ID
@@ -369,7 +376,7 @@ public class CreateInstanceRequest  extends AbstractModel{
      * 获取预执行脚本设置
      * @return PreExecutedFileSettings 预执行脚本设置
      */
-    public PreExecuteFileSettings getPreExecutedFileSettings() {
+    public PreExecuteFileSettings [] getPreExecutedFileSettings() {
         return this.PreExecutedFileSettings;
     }
 
@@ -377,7 +384,7 @@ public class CreateInstanceRequest  extends AbstractModel{
      * 设置预执行脚本设置
      * @param PreExecutedFileSettings 预执行脚本设置
      */
-    public void setPreExecutedFileSettings(PreExecuteFileSettings PreExecutedFileSettings) {
+    public void setPreExecutedFileSettings(PreExecuteFileSettings [] PreExecutedFileSettings) {
         this.PreExecutedFileSettings = PreExecutedFileSettings;
     }
 
@@ -414,6 +421,22 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     * @return RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     */
+    public Integer getRemoteLoginAtCreate() {
+        return this.RemoteLoginAtCreate;
+    }
+
+    /**
+     * 设置是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     * @param RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     */
+    public void setRemoteLoginAtCreate(Integer RemoteLoginAtCreate) {
+        this.RemoteLoginAtCreate = RemoteLoginAtCreate;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -431,9 +454,10 @@ public class CreateInstanceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamObj(map, prefix + "COSSettings.", this.COSSettings);
         this.setParamSimple(map, prefix + "SgId", this.SgId);
-        this.setParamObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
+        this.setParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "NeedMasterWan", this.NeedMasterWan);
+        this.setParamSimple(map, prefix + "RemoteLoginAtCreate", this.RemoteLoginAtCreate);
 
     }
 }

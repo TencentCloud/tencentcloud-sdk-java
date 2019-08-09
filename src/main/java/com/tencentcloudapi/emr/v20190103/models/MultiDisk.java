@@ -37,6 +37,13 @@ public class MultiDisk  extends AbstractModel{
     private Integer Volume;
 
     /**
+    * 该类型云盘个数
+    */
+    @SerializedName("Count")
+    @Expose
+    private Integer Count;
+
+    /**
      * 获取云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
      * @return DiskType 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
      */
@@ -69,11 +76,28 @@ public class MultiDisk  extends AbstractModel{
     }
 
     /**
+     * 获取该类型云盘个数
+     * @return Count 该类型云盘个数
+     */
+    public Integer getCount() {
+        return this.Count;
+    }
+
+    /**
+     * 设置该类型云盘个数
+     * @param Count 该类型云盘个数
+     */
+    public void setCount(Integer Count) {
+        this.Count = Count;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

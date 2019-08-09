@@ -58,6 +58,55 @@ public class PreExecuteFileSettings  extends AbstractModel{
     private String Domain;
 
     /**
+    * 执行顺序
+    */
+    @SerializedName("RunOrder")
+    @Expose
+    private Integer RunOrder;
+
+    /**
+    * resourceAfter 或 clusterAfter
+    */
+    @SerializedName("WhenRun")
+    @Expose
+    private String WhenRun;
+
+    /**
+    * 脚本文件名
+    */
+    @SerializedName("CosFileName")
+    @Expose
+    private String CosFileName;
+
+    /**
+    * 脚本的cos地址
+    */
+    @SerializedName("CosFileURI")
+    @Expose
+    private String CosFileURI;
+
+    /**
+    * cos的SecretId
+    */
+    @SerializedName("CosSecretId")
+    @Expose
+    private String CosSecretId;
+
+    /**
+    * Cos的SecretKey
+    */
+    @SerializedName("CosSecretKey")
+    @Expose
+    private String CosSecretKey;
+
+    /**
+    * cos的appid
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
+
+    /**
      * 获取脚本在COS上路径
      * @return Path 脚本在COS上路径
      */
@@ -138,6 +187,118 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
+     * 获取执行顺序
+     * @return RunOrder 执行顺序
+     */
+    public Integer getRunOrder() {
+        return this.RunOrder;
+    }
+
+    /**
+     * 设置执行顺序
+     * @param RunOrder 执行顺序
+     */
+    public void setRunOrder(Integer RunOrder) {
+        this.RunOrder = RunOrder;
+    }
+
+    /**
+     * 获取resourceAfter 或 clusterAfter
+     * @return WhenRun resourceAfter 或 clusterAfter
+     */
+    public String getWhenRun() {
+        return this.WhenRun;
+    }
+
+    /**
+     * 设置resourceAfter 或 clusterAfter
+     * @param WhenRun resourceAfter 或 clusterAfter
+     */
+    public void setWhenRun(String WhenRun) {
+        this.WhenRun = WhenRun;
+    }
+
+    /**
+     * 获取脚本文件名
+     * @return CosFileName 脚本文件名
+     */
+    public String getCosFileName() {
+        return this.CosFileName;
+    }
+
+    /**
+     * 设置脚本文件名
+     * @param CosFileName 脚本文件名
+     */
+    public void setCosFileName(String CosFileName) {
+        this.CosFileName = CosFileName;
+    }
+
+    /**
+     * 获取脚本的cos地址
+     * @return CosFileURI 脚本的cos地址
+     */
+    public String getCosFileURI() {
+        return this.CosFileURI;
+    }
+
+    /**
+     * 设置脚本的cos地址
+     * @param CosFileURI 脚本的cos地址
+     */
+    public void setCosFileURI(String CosFileURI) {
+        this.CosFileURI = CosFileURI;
+    }
+
+    /**
+     * 获取cos的SecretId
+     * @return CosSecretId cos的SecretId
+     */
+    public String getCosSecretId() {
+        return this.CosSecretId;
+    }
+
+    /**
+     * 设置cos的SecretId
+     * @param CosSecretId cos的SecretId
+     */
+    public void setCosSecretId(String CosSecretId) {
+        this.CosSecretId = CosSecretId;
+    }
+
+    /**
+     * 获取Cos的SecretKey
+     * @return CosSecretKey Cos的SecretKey
+     */
+    public String getCosSecretKey() {
+        return this.CosSecretKey;
+    }
+
+    /**
+     * 设置Cos的SecretKey
+     * @param CosSecretKey Cos的SecretKey
+     */
+    public void setCosSecretKey(String CosSecretKey) {
+        this.CosSecretKey = CosSecretKey;
+    }
+
+    /**
+     * 获取cos的appid
+     * @return AppId cos的appid
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * 设置cos的appid
+     * @param AppId cos的appid
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +307,13 @@ public class PreExecuteFileSettings  extends AbstractModel{
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "RunOrder", this.RunOrder);
+        this.setParamSimple(map, prefix + "WhenRun", this.WhenRun);
+        this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
+        this.setParamSimple(map, prefix + "CosFileURI", this.CosFileURI);
+        this.setParamSimple(map, prefix + "CosSecretId", this.CosSecretId);
+        this.setParamSimple(map, prefix + "CosSecretKey", this.CosSecretKey);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }
