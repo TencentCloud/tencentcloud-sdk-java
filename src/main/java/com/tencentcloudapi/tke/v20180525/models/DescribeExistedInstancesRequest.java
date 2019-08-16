@@ -41,7 +41,7 @@ public class DescribeExistedInstancesRequest  extends AbstractModel{
     */
     @SerializedName("Filters")
     @Expose
-    private Filter Filters;
+    private Filter [] Filters;
 
     /**
     * 实例IP进行过滤(同时支持内网IP和外网IP)
@@ -107,7 +107,7 @@ public class DescribeExistedInstancesRequest  extends AbstractModel{
      * 获取过滤条件,字段和详见[CVM查询实例](https://cloud.tencent.com/document/api/213/15728)如果设置了ClusterId，会附加集群的VPCID作为查询字段，在此情况下如果在Filter中指定了"vpc-id"作为过滤字段，指定的VPCID必须与集群的VPCID相同。
      * @return Filters 过滤条件,字段和详见[CVM查询实例](https://cloud.tencent.com/document/api/213/15728)如果设置了ClusterId，会附加集群的VPCID作为查询字段，在此情况下如果在Filter中指定了"vpc-id"作为过滤字段，指定的VPCID必须与集群的VPCID相同。
      */
-    public Filter getFilters() {
+    public Filter [] getFilters() {
         return this.Filters;
     }
 
@@ -115,7 +115,7 @@ public class DescribeExistedInstancesRequest  extends AbstractModel{
      * 设置过滤条件,字段和详见[CVM查询实例](https://cloud.tencent.com/document/api/213/15728)如果设置了ClusterId，会附加集群的VPCID作为查询字段，在此情况下如果在Filter中指定了"vpc-id"作为过滤字段，指定的VPCID必须与集群的VPCID相同。
      * @param Filters 过滤条件,字段和详见[CVM查询实例](https://cloud.tencent.com/document/api/213/15728)如果设置了ClusterId，会附加集群的VPCID作为查询字段，在此情况下如果在Filter中指定了"vpc-id"作为过滤字段，指定的VPCID必须与集群的VPCID相同。
      */
-    public void setFilters(Filter Filters) {
+    public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
@@ -189,7 +189,7 @@ public class DescribeExistedInstancesRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-        this.setParamObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "VagueIpAddress", this.VagueIpAddress);
         this.setParamSimple(map, prefix + "VagueInstanceName", this.VagueInstanceName);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

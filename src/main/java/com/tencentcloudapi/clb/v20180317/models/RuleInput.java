@@ -73,6 +73,20 @@ public class RuleInput  extends AbstractModel{
     private String ForwardType;
 
     /**
+    * 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+    */
+    @SerializedName("DefaultServer")
+    @Expose
+    private Boolean DefaultServer;
+
+    /**
+    * 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+    */
+    @SerializedName("Http2")
+    @Expose
+    private Boolean Http2;
+
+    /**
      * 获取转发规则的域名。长度限制为：1~80。
      * @return Domain 转发规则的域名。长度限制为：1~80。
      */
@@ -189,6 +203,38 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
+     * 获取是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * @return DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     */
+    public Boolean getDefaultServer() {
+        return this.DefaultServer;
+    }
+
+    /**
+     * 设置是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * @param DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     */
+    public void setDefaultServer(Boolean DefaultServer) {
+        this.DefaultServer = DefaultServer;
+    }
+
+    /**
+     * 获取是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * @return Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     */
+    public Boolean getHttp2() {
+        return this.Http2;
+    }
+
+    /**
+     * 设置是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * @param Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     */
+    public void setHttp2(Boolean Http2) {
+        this.Http2 = Http2;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -199,6 +245,8 @@ public class RuleInput  extends AbstractModel{
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "ForwardType", this.ForwardType);
+        this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+        this.setParamSimple(map, prefix + "Http2", this.Http2);
 
     }
 }

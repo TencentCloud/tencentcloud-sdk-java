@@ -41,7 +41,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
 1-深圳，
 2-上海，
 3-天津，
-4-香港。
+4-中国香港。
     */
     @SerializedName("AreaId")
     @Expose
@@ -117,12 +117,12 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
 1-深圳，
 2-上海，
 3-天津，
-4-香港。
+4-中国香港。
      * @return AreaId 区域id：
 1-深圳，
 2-上海，
 3-天津，
-4-香港。
+4-中国香港。
      */
     public Integer getAreaId() {
         return this.AreaId;
@@ -133,12 +133,12 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
 1-深圳，
 2-上海，
 3-天津，
-4-香港。
+4-中国香港。
      * @param AreaId 区域id：
 1-深圳，
 2-上海，
 3-天津，
-4-香港。
+4-中国香港。
      */
     public void setAreaId(Integer AreaId) {
         this.AreaId = AreaId;

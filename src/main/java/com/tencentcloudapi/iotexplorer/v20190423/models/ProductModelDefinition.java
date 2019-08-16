@@ -51,6 +51,14 @@ public class ProductModelDefinition  extends AbstractModel{
     private Long CreateTime;
 
     /**
+    * 产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CategoryModel")
+    @Expose
+    private String CategoryModel;
+
+    /**
      * 获取产品ID
      * @return ProductId 产品ID
      */
@@ -115,6 +123,26 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
+     * 获取产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CategoryModel 产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCategoryModel() {
+        return this.CategoryModel;
+    }
+
+    /**
+     * 设置产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CategoryModel 产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCategoryModel(String CategoryModel) {
+        this.CategoryModel = CategoryModel;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +150,7 @@ public class ProductModelDefinition  extends AbstractModel{
         this.setParamSimple(map, prefix + "ModelDefine", this.ModelDefine);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "CategoryModel", this.CategoryModel);
 
     }
 }

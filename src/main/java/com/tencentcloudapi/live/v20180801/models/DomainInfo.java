@@ -81,6 +81,13 @@ public class DomainInfo  extends AbstractModel{
     private Integer IsDelayLive;
 
     /**
+    * 当前客户使用的cname信息
+    */
+    @SerializedName("CurrentCName")
+    @Expose
+    private String CurrentCName;
+
+    /**
      * 获取直播域名
      * @return Name 直播域名
      */
@@ -217,6 +224,22 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
+     * 获取当前客户使用的cname信息
+     * @return CurrentCName 当前客户使用的cname信息
+     */
+    public String getCurrentCName() {
+        return this.CurrentCName;
+    }
+
+    /**
+     * 设置当前客户使用的cname信息
+     * @param CurrentCName 当前客户使用的cname信息
+     */
+    public void setCurrentCName(String CurrentCName) {
+        this.CurrentCName = CurrentCName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -228,6 +251,7 @@ public class DomainInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetDomain", this.TargetDomain);
         this.setParamSimple(map, prefix + "PlayType", this.PlayType);
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
+        this.setParamSimple(map, prefix + "CurrentCName", this.CurrentCName);
 
     }
 }

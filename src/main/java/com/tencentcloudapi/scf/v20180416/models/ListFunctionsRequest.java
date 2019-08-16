@@ -58,6 +58,13 @@ public class ListFunctionsRequest  extends AbstractModel{
     private String SearchKey;
 
     /**
+    * 命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
     * 函数描述，支持模糊搜索
     */
     @SerializedName("Description")
@@ -155,6 +162,22 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取命名空间
+     * @return Namespace 命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * 设置命名空间
+     * @param Namespace 命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
      * 获取函数描述，支持模糊搜索
      * @return Description 函数描述，支持模糊搜索
      */
@@ -207,6 +230,7 @@ public class ListFunctionsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 

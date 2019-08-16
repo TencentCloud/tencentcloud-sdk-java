@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class TextCorrectionRequest  extends AbstractModel{
 
     /**
-    * 待纠错的文本（仅支持UTF-8格式，不超过200字）
+    * 待纠错的文本（仅支持UTF-8格式，不超过2000字）
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-     * 获取待纠错的文本（仅支持UTF-8格式，不超过200字）
-     * @return Text 待纠错的文本（仅支持UTF-8格式，不超过200字）
+     * 获取待纠错的文本（仅支持UTF-8格式，不超过2000字）
+     * @return Text 待纠错的文本（仅支持UTF-8格式，不超过2000字）
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * 设置待纠错的文本（仅支持UTF-8格式，不超过200字）
-     * @param Text 待纠错的文本（仅支持UTF-8格式，不超过200字）
+     * 设置待纠错的文本（仅支持UTF-8格式，不超过2000字）
+     * @param Text 待纠错的文本（仅支持UTF-8格式，不超过2000字）
      */
     public void setText(String Text) {
         this.Text = Text;

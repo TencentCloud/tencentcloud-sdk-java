@@ -30,6 +30,13 @@ public class DeleteFunctionRequest  extends AbstractModel{
     private String FunctionName;
 
     /**
+    * 函数所属命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
      * 获取要删除的函数名称
      * @return FunctionName 要删除的函数名称
      */
@@ -46,10 +53,27 @@ public class DeleteFunctionRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数所属命名空间
+     * @return Namespace 函数所属命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * 设置函数所属命名空间
+     * @param Namespace 函数所属命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
 
     }
 }

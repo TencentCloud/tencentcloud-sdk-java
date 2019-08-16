@@ -36,6 +36,7 @@ public class ImageData  extends AbstractModel{
 20002：色情 
 20006：涉毒违法
 20007：谩骂 
+20103：性感
 24001：暴恐
 21000：综合
     */
@@ -56,6 +57,13 @@ public class ImageData  extends AbstractModel{
     @SerializedName("IllegalDetect")
     @Expose
     private ImageIllegalDetect IllegalDetect;
+
+    /**
+    * 图片OCR详情
+    */
+    @SerializedName("OCRDetect")
+    @Expose
+    private OCRDetect OCRDetect;
 
     /**
     * 图片涉政详情
@@ -108,6 +116,7 @@ public class ImageData  extends AbstractModel{
 20002：色情 
 20006：涉毒违法
 20007：谩骂 
+20103：性感
 24001：暴恐
 21000：综合
      * @return EvilType 恶意类型
@@ -116,6 +125,7 @@ public class ImageData  extends AbstractModel{
 20002：色情 
 20006：涉毒违法
 20007：谩骂 
+20103：性感
 24001：暴恐
 21000：综合
      */
@@ -130,6 +140,7 @@ public class ImageData  extends AbstractModel{
 20002：色情 
 20006：涉毒违法
 20007：谩骂 
+20103：性感
 24001：暴恐
 21000：综合
      * @param EvilType 恶意类型
@@ -138,6 +149,7 @@ public class ImageData  extends AbstractModel{
 20002：色情 
 20006：涉毒违法
 20007：谩骂 
+20103：性感
 24001：暴恐
 21000：综合
      */
@@ -175,6 +187,22 @@ public class ImageData  extends AbstractModel{
      */
     public void setIllegalDetect(ImageIllegalDetect IllegalDetect) {
         this.IllegalDetect = IllegalDetect;
+    }
+
+    /**
+     * 获取图片OCR详情
+     * @return OCRDetect 图片OCR详情
+     */
+    public OCRDetect getOCRDetect() {
+        return this.OCRDetect;
+    }
+
+    /**
+     * 设置图片OCR详情
+     * @param OCRDetect 图片OCR详情
+     */
+    public void setOCRDetect(OCRDetect OCRDetect) {
+        this.OCRDetect = OCRDetect;
     }
 
     /**
@@ -249,6 +277,7 @@ public class ImageData  extends AbstractModel{
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
         this.setParamObj(map, prefix + "HotDetect.", this.HotDetect);
         this.setParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
+        this.setParamObj(map, prefix + "OCRDetect.", this.OCRDetect);
         this.setParamObj(map, prefix + "PolityDetect.", this.PolityDetect);
         this.setParamObj(map, prefix + "PornDetect.", this.PornDetect);
         this.setParamObj(map, prefix + "Similar.", this.Similar);

@@ -49,9 +49,7 @@ public class CrClient extends AbstractClient{
     }
 
     /**
-     *加入黑名单的客户，将停止拨打。用于：
-将客户进行黑名单的增加和移除，用于对某些客户阶段性停催。
-
+     *提交黑名单后，黑名单中有效期内的号码将停止拨打，适用于提醒、催收、回访场景。
      * @param req ApplyBlackListRequest
      * @return ApplyBlackListResponse
      * @throws TencentCloudSDKException
@@ -141,6 +139,43 @@ public class CrClient extends AbstractClient{
     }
 
     /**
+     *用于获取指定案件的对话文本内容，次日早上8:00后可查询前日对话文本内容。
+     * @param req DownloadDialogueTextRequest
+     * @return DownloadDialogueTextResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadDialogueTextResponse DownloadDialogueText(DownloadDialogueTextRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadDialogueTextResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadDialogueTextResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DownloadDialogueText"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *<p>用于获取录音下载链接清单，次日早上8:00后可查询前日录音清单。</p>
+<p>注意：录音清单中的录音下载链接仅次日20:00之前有效，请及时下载。</p>
+     * @param req DownloadRecordListRequest
+     * @return DownloadRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadRecordListResponse DownloadRecordList(DownloadRecordListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadRecordListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadRecordListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DownloadRecordList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于下载当日催收和回访结果报表。当日23:00后，可获取当日催收结果，次日00:30后，可获取昨日回访结果。
      * @param req DownloadReportRequest
      * @return DownloadReportResponse
@@ -162,8 +197,9 @@ public class CrClient extends AbstractClient{
      *<p>该接口包含上传下列文件：</p>
 <ol style="margin-bottom:10px;">
   <li>入催文件：用于每天入催文件的上传</li>
-  <li>回访文件：用于每天贷中回访文件的上传</li>
   <li>还款文件：实时上传当前已还款客户，用于还款客户的实时停催</li>
+  <li>回访文件：用于每天贷中回访文件的上传</li>
+  <li>回访停拨文件：实时上传回访停拨名单文件，文件中的名单实时停拨</li>
 </ol>
 接口返回数据任务ID，支持xlsx、xls、csv、zip格式，文档大小不超过50MB。
      * @param req UploadDataFileRequest

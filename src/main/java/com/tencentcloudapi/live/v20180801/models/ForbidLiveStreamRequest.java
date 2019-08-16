@@ -52,6 +52,15 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     private String ResumeTime;
 
     /**
+    * 禁推原因。
+注明：请务必填写禁推原因，防止误操作。
+长度限制：2048字节。
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
      * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
@@ -120,6 +129,30 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
+     * 获取禁推原因。
+注明：请务必填写禁推原因，防止误操作。
+长度限制：2048字节。
+     * @return Reason 禁推原因。
+注明：请务必填写禁推原因，防止误操作。
+长度限制：2048字节。
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * 设置禁推原因。
+注明：请务必填写禁推原因，防止误操作。
+长度限制：2048字节。
+     * @param Reason 禁推原因。
+注明：请务必填写禁推原因，防止误操作。
+长度限制：2048字节。
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -127,6 +160,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "ResumeTime", this.ResumeTime);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

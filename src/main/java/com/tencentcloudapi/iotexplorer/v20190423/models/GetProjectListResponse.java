@@ -24,6 +24,7 @@ public class GetProjectListResponse  extends AbstractModel{
 
     /**
     * 项目列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Projects")
     @Expose
@@ -31,6 +32,7 @@ public class GetProjectListResponse  extends AbstractModel{
 
     /**
     * 列表项个数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -45,7 +47,9 @@ public class GetProjectListResponse  extends AbstractModel{
 
     /**
      * 获取项目列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Projects 项目列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProjectEntryEx [] getProjects() {
         return this.Projects;
@@ -53,7 +57,9 @@ public class GetProjectListResponse  extends AbstractModel{
 
     /**
      * 设置项目列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Projects 项目列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjects(ProjectEntryEx [] Projects) {
         this.Projects = Projects;
@@ -61,7 +67,9 @@ public class GetProjectListResponse  extends AbstractModel{
 
     /**
      * 获取列表项个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Total 列表项个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -69,7 +77,9 @@ public class GetProjectListResponse  extends AbstractModel{
 
     /**
      * 设置列表项个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 列表项个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

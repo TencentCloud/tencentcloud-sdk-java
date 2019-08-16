@@ -30,7 +30,7 @@ public class BindListenerRealServersRequest  extends AbstractModel{
     private String ListenerId;
 
     /**
-    * 待绑定源站列表
+    * 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
     */
     @SerializedName("RealServerBindSet")
     @Expose
@@ -53,16 +53,16 @@ public class BindListenerRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待绑定源站列表
-     * @return RealServerBindSet 待绑定源站列表
+     * 获取待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+     * @return RealServerBindSet 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
      */
     public RealServerBindSetReq [] getRealServerBindSet() {
         return this.RealServerBindSet;
     }
 
     /**
-     * 设置待绑定源站列表
-     * @param RealServerBindSet 待绑定源站列表
+     * 设置待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+     * @param RealServerBindSet 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
      */
     public void setRealServerBindSet(RealServerBindSetReq [] RealServerBindSet) {
         this.RealServerBindSet = RealServerBindSet;

@@ -51,6 +51,13 @@ public class CreateTriggerRequest  extends AbstractModel{
     private String TriggerDesc;
 
     /**
+    * 函数的命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
     * 函数的版本
     */
     @SerializedName("Qualifier")
@@ -129,6 +136,22 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数的命名空间
+     * @return Namespace 函数的命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * 设置函数的命名空间
+     * @param Namespace 函数的命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
      * 获取函数的版本
      * @return Qualifier 函数的版本
      */
@@ -168,6 +191,7 @@ public class CreateTriggerRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "TriggerName", this.TriggerName);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "TriggerDesc", this.TriggerDesc);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
 

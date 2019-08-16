@@ -44,6 +44,13 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     private StandardVideoResult VideoResult;
 
     /**
+    * 任务状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
     * 任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
     */
     @SerializedName("TaskId")
@@ -106,6 +113,22 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
+     * 获取任务状态
+     * @return Status 任务状态
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * 设置任务状态
+     * @param Status 任务状态
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
      * 获取任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      * @return TaskId 任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      */
@@ -144,6 +167,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
         this.setParamObj(map, prefix + "AudioResult.", this.AudioResult);
         this.setParamObj(map, prefix + "ImageResult.", this.ImageResult);
         this.setParamObj(map, prefix + "VideoResult.", this.VideoResult);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

@@ -50,16 +50,16 @@ public class TrtcClient extends AbstractClient{
 
     /**
      *接口说明：把房间所有用户从房间踢出，解散房间。
-     * @param req DissloveRoomRequest
-     * @return DissloveRoomResponse
+     * @param req DissolveRoomRequest
+     * @return DissolveRoomResponse
      * @throws TencentCloudSDKException
      */
-    public DissloveRoomResponse DissloveRoom(DissloveRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DissloveRoomResponse> rsp = null;
+    public DissolveRoomResponse DissolveRoom(DissolveRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DissolveRoomResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<DissloveRoomResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DissolveRoomResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DissloveRoom"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "DissolveRoom"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

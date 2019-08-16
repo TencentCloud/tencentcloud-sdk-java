@@ -205,6 +205,27 @@ public class GetFunctionResponse  extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * EipConfig配置
+    */
+    @SerializedName("EipConfig")
+    @Expose
+    private EipOutConfig EipConfig;
+
+    /**
+    * 域名信息
+    */
+    @SerializedName("AccessInfo")
+    @Expose
+    private AccessInfo AccessInfo;
+
+    /**
+    * 函数类型，取值为HTTP或者Event
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -628,6 +649,54 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
+     * 获取EipConfig配置
+     * @return EipConfig EipConfig配置
+     */
+    public EipOutConfig getEipConfig() {
+        return this.EipConfig;
+    }
+
+    /**
+     * 设置EipConfig配置
+     * @param EipConfig EipConfig配置
+     */
+    public void setEipConfig(EipOutConfig EipConfig) {
+        this.EipConfig = EipConfig;
+    }
+
+    /**
+     * 获取域名信息
+     * @return AccessInfo 域名信息
+     */
+    public AccessInfo getAccessInfo() {
+        return this.AccessInfo;
+    }
+
+    /**
+     * 设置域名信息
+     * @param AccessInfo 域名信息
+     */
+    public void setAccessInfo(AccessInfo AccessInfo) {
+        this.AccessInfo = AccessInfo;
+    }
+
+    /**
+     * 获取函数类型，取值为HTTP或者Event
+     * @return Type 函数类型，取值为HTTP或者Event
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * 设置函数类型，取值为HTTP或者Event
+     * @param Type 函数类型，取值为HTTP或者Event
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -673,6 +742,9 @@ public class GetFunctionResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "EipConfig.", this.EipConfig);
+        this.setParamObj(map, prefix + "AccessInfo.", this.AccessInfo);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

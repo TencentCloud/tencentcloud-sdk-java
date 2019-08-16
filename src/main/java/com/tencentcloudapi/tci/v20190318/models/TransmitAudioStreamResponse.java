@@ -58,6 +58,13 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     private String AllTexts;
 
     /**
+    * 临时保存的音频链接
+    */
+    @SerializedName("AudioUrl")
+    @Expose
+    private String AudioUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -145,6 +152,22 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
+     * 获取临时保存的音频链接
+     * @return AudioUrl 临时保存的音频链接
+     */
+    public String getAudioUrl() {
+        return this.AudioUrl;
+    }
+
+    /**
+     * 设置临时保存的音频链接
+     * @param AudioUrl 临时保存的音频链接
+     */
+    public void setAudioUrl(String AudioUrl) {
+        this.AudioUrl = AudioUrl;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -169,6 +192,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VocabAnalysisDetailInfo.", this.VocabAnalysisDetailInfo);
         this.setParamArrayObj(map, prefix + "VocabAnalysisStatInfo.", this.VocabAnalysisStatInfo);
         this.setParamSimple(map, prefix + "AllTexts", this.AllTexts);
+        this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -30,6 +30,13 @@ public class DstInfo  extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 目标实例地域，如ap-guangzhou
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
     * 目标实例vip。已废弃，无需填写
     */
     @SerializedName("Ip")
@@ -42,13 +49,6 @@ public class DstInfo  extends AbstractModel{
     @SerializedName("Port")
     @Expose
     private Integer Port;
-
-    /**
-    * 目标实例地域，如ap-guangzhou
-    */
-    @SerializedName("Region")
-    @Expose
-    private String Region;
 
     /**
     * 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
@@ -71,6 +71,22 @@ public class DstInfo  extends AbstractModel{
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * 获取目标实例地域，如ap-guangzhou
+     * @return Region 目标实例地域，如ap-guangzhou
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * 设置目标实例地域，如ap-guangzhou
+     * @param Region 目标实例地域，如ap-guangzhou
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
     /**
@@ -106,22 +122,6 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例地域，如ap-guangzhou
-     * @return Region 目标实例地域，如ap-guangzhou
-     */
-    public String getRegion() {
-        return this.Region;
-    }
-
-    /**
-     * 设置目标实例地域，如ap-guangzhou
-     * @param Region 目标实例地域，如ap-guangzhou
-     */
-    public void setRegion(String Region) {
-        this.Region = Region;
-    }
-
-    /**
      * 获取目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      * @return ReadOnly 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      */
@@ -142,9 +142,9 @@ public class DstInfo  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Port", this.Port);
-        this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
 
     }

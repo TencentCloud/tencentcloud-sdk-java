@@ -13,14 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DissloveRoomResponse  extends AbstractModel{
+public class ListNamespacesResponse  extends AbstractModel{
+
+    /**
+    * namespace详情
+    */
+    @SerializedName("Namespaces")
+    @Expose
+    private Namespace [] Namespaces;
+
+    /**
+    * 返回的namespace数量
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Integer TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +42,38 @@ public class DissloveRoomResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * 获取namespace详情
+     * @return Namespaces namespace详情
+     */
+    public Namespace [] getNamespaces() {
+        return this.Namespaces;
+    }
+
+    /**
+     * 设置namespace详情
+     * @param Namespaces namespace详情
+     */
+    public void setNamespaces(Namespace [] Namespaces) {
+        this.Namespaces = Namespaces;
+    }
+
+    /**
+     * 获取返回的namespace数量
+     * @return TotalCount 返回的namespace数量
+     */
+    public Integer getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * 设置返回的namespace数量
+     * @param TotalCount 返回的namespace数量
+     */
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,6 +95,8 @@ public class DissloveRoomResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Namespaces.", this.Namespaces);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

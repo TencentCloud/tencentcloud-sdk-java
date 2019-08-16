@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tci.v20190318.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckAttendanceResponse  extends AbstractModel{
-
-    /**
-    * 任务标识符
-    */
-    @SerializedName("JobId")
-    @Expose
-    private Long JobId;
-
-    /**
-    * 没有注册的人的ID列表
-    */
-    @SerializedName("NotRegisteredSet")
-    @Expose
-    private String [] NotRegisteredSet;
+public class DeleteClusterRouteResponse  extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class CheckAttendanceResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * 获取任务标识符
-     * @return JobId 任务标识符
-     */
-    public Long getJobId() {
-        return this.JobId;
-    }
-
-    /**
-     * 设置任务标识符
-     * @param JobId 任务标识符
-     */
-    public void setJobId(Long JobId) {
-        this.JobId = JobId;
-    }
-
-    /**
-     * 获取没有注册的人的ID列表
-     * @return NotRegisteredSet 没有注册的人的ID列表
-     */
-    public String [] getNotRegisteredSet() {
-        return this.NotRegisteredSet;
-    }
-
-    /**
-     * 设置没有注册的人的ID列表
-     * @param NotRegisteredSet 没有注册的人的ID列表
-     */
-    public void setNotRegisteredSet(String [] NotRegisteredSet) {
-        this.NotRegisteredSet = NotRegisteredSet;
-    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -95,8 +49,6 @@ public class CheckAttendanceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
-        this.setParamArraySimple(map, prefix + "NotRegisteredSet.", this.NotRegisteredSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

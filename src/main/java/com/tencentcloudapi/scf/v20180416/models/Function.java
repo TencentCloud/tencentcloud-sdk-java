@@ -93,6 +93,13 @@ public class Function  extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 函数类型，取值为 HTTP 或者 Event
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * 获取修改时间
      * @return ModTime 修改时间
      */
@@ -253,6 +260,22 @@ public class Function  extends AbstractModel{
     }
 
     /**
+     * 获取函数类型，取值为 HTTP 或者 Event
+     * @return Type 函数类型，取值为 HTTP 或者 Event
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * 设置函数类型，取值为 HTTP 或者 Event
+     * @param Type 函数类型，取值为 HTTP 或者 Event
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class Function  extends AbstractModel{
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

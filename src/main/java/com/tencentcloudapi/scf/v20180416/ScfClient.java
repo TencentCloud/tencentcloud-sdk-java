@@ -49,13 +49,13 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
-     *复制一个函数，可以选择将复制出的新函数放置在同一个namespace或另一个namespace。
+     *复制一个函数，您可以选择将复制出的新函数放置在特定的Region和Namespace。
 注：本接口**不会**复制函数的以下对象或属性：
 1. 函数的触发器
 2. 除了$LATEST以外的其它版本
-3. 函数配置的日志投递到的CLS目标
+3. 函数配置的日志投递到的CLS目标。
 
-如有需要，您可以在复制后手动修改新函数。
+如有需要，您可以在复制后手动配置新函数。
      * @param req CopyFunctionRequest
      * @return CopyFunctionResponse
      * @throws TencentCloudSDKException
@@ -84,6 +84,24 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateFunctionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口根据传入的参数创建命名空间。
+     * @param req CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNamespaceResponse CreateNamespace(CreateNamespaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNamespaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNamespaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNamespace"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -127,6 +145,24 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *该接口根据传入的参数创建命名空间。
+     * @param req DeleteNamespaceRequest
+     * @return DeleteNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNamespaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNamespaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNamespace"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口根据参数传入删除已有的触发方式。
      * @param req DeleteTriggerRequest
      * @return DeleteTriggerResponse
@@ -156,6 +192,24 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetFunctionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于获取函数代码包的下载地址。
+     * @param req GetFunctionAddressRequest
+     * @return GetFunctionAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFunctionAddressResponse GetFunctionAddress(GetFunctionAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFunctionAddressResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFunctionAddressResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetFunctionAddress"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -217,6 +271,60 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *列出命名空间列表
+     * @param req ListNamespacesRequest
+     * @return ListNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListNamespacesResponse ListNamespaces(ListNamespacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListNamespacesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListNamespacesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListNamespaces"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口根据传入的参数查询函数的版本。
+     * @param req ListVersionByFunctionRequest
+     * @return ListVersionByFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListVersionByFunctionResponse ListVersionByFunction(ListVersionByFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListVersionByFunctionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListVersionByFunctionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListVersionByFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于用户发布新版本函数。
+     * @param req PublishVersionRequest
+     * @return PublishVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishVersionResponse PublishVersion(PublishVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PublishVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口根据传入参数更新函数代码。
      * @param req UpdateFunctionCodeRequest
      * @return UpdateFunctionCodeResponse
@@ -246,6 +354,24 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionConfigurationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UpdateFunctionConfiguration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新命名空间
+     * @param req UpdateNamespaceRequest
+     * @return UpdateNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateNamespaceResponse UpdateNamespace(UpdateNamespaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateNamespaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateNamespaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateNamespace"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

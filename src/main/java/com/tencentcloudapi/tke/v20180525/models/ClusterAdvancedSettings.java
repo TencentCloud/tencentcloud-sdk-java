@@ -30,7 +30,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     private Boolean IPVS;
 
     /**
-    * 是否启用集群节点扩缩容
+    * 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
     */
     @SerializedName("AsEnabled")
     @Expose
@@ -60,16 +60,16 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 获取是否启用集群节点扩缩容
-     * @return AsEnabled 是否启用集群节点扩缩容
+     * 获取是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
+     * @return AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      */
     public Boolean getAsEnabled() {
         return this.AsEnabled;
     }
 
     /**
-     * 设置是否启用集群节点扩缩容
-     * @param AsEnabled 是否启用集群节点扩缩容
+     * 设置是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
+     * @param AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      */
     public void setAsEnabled(Boolean AsEnabled) {
         this.AsEnabled = AsEnabled;

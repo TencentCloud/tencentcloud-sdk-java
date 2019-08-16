@@ -26,11 +26,6 @@ public class ImagePolityDetect  extends AbstractModel{
     * 恶意类型
 100：正常 
 20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
     */
     @SerializedName("EvilType")
     @Expose
@@ -75,19 +70,9 @@ public class ImagePolityDetect  extends AbstractModel{
      * 获取恶意类型
 100：正常 
 20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
      * @return EvilType 恶意类型
 100：正常 
 20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
      */
     public Long getEvilType() {
         return this.EvilType;
@@ -97,19 +82,9 @@ public class ImagePolityDetect  extends AbstractModel{
      * 设置恶意类型
 100：正常 
 20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
      * @param EvilType 恶意类型
 100：正常 
 20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
      */
     public void setEvilType(Long EvilType) {
         this.EvilType = EvilType;

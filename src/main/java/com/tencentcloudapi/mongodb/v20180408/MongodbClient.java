@@ -105,6 +105,24 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。目前只支持3.2版本的MongoDB实例。
+     * @param req DescribeClientConnectionsRequest
+     * @return DescribeClientConnectionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClientConnectionsResponse DescribeClientConnections(DescribeClientConnectionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClientConnectionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClientConnectionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClientConnections"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse

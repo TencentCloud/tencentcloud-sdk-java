@@ -35,7 +35,8 @@ public class TextData  extends AbstractModel{
 20001：政治
 20002：色情 
 20006：涉毒违法
-20007：谩骂 
+20007：谩骂
+20105：广告引流 
 24001：暴恐
 21000：综合
     */
@@ -72,7 +73,8 @@ public class TextData  extends AbstractModel{
 20001：政治
 20002：色情 
 20006：涉毒违法
-20007：谩骂 
+20007：谩骂
+20105：广告引流 
 24001：暴恐
 21000：综合
      * @return EvilType 恶意类型
@@ -80,7 +82,8 @@ public class TextData  extends AbstractModel{
 20001：政治
 20002：色情 
 20006：涉毒违法
-20007：谩骂 
+20007：谩骂
+20105：广告引流 
 24001：暴恐
 21000：综合
      */
@@ -94,7 +97,8 @@ public class TextData  extends AbstractModel{
 20001：政治
 20002：色情 
 20006：涉毒违法
-20007：谩骂 
+20007：谩骂
+20105：广告引流 
 24001：暴恐
 21000：综合
      * @param EvilType 恶意类型
@@ -102,7 +106,8 @@ public class TextData  extends AbstractModel{
 20001：政治
 20002：色情 
 20006：涉毒违法
-20007：谩骂 
+20007：谩骂
+20105：广告引流 
 24001：暴恐
 21000：综合
      */

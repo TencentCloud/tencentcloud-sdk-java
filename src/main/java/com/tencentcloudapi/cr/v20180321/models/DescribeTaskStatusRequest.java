@@ -23,72 +23,95 @@ import java.util.HashMap;
 public class DescribeTaskStatusRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名，本接口取值：Task
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名，本接口取值：DescribeTaskStatus
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * 任务ID，形如abc-a0b1c2xyz
+    * 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+    * 实例ID，不传默认为系统分配的初始实例。
+    */
+    @SerializedName("InstId")
+    @Expose
+    private String InstId;
+
+    /**
+     * 获取模块名，本接口取值：Task
+     * @return Module 模块名，本接口取值：Task
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名，本接口取值：Task
+     * @param Module 模块名，本接口取值：Task
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名，本接口取值：DescribeTaskStatus
+     * @return Operation 操作名，本接口取值：DescribeTaskStatus
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名，本接口取值：DescribeTaskStatus
+     * @param Operation 操作名，本接口取值：DescribeTaskStatus
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * 获取任务ID，形如abc-a0b1c2xyz
-     * @return TaskId 任务ID，形如abc-a0b1c2xyz
+     * 获取任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
+     * @return TaskId 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置任务ID，形如abc-a0b1c2xyz
-     * @param TaskId 任务ID，形如abc-a0b1c2xyz
+     * 设置任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
+     * @param TaskId 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * 获取实例ID，不传默认为系统分配的初始实例。
+     * @return InstId 实例ID，不传默认为系统分配的初始实例。
+     */
+    public String getInstId() {
+        return this.InstId;
+    }
+
+    /**
+     * 设置实例ID，不传默认为系统分配的初始实例。
+     * @param InstId 实例ID，不传默认为系统分配的初始实例。
+     */
+    public void setInstId(String InstId) {
+        this.InstId = InstId;
     }
 
     /**
@@ -98,6 +121,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "InstId", this.InstId);
 
     }
 }

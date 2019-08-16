@@ -58,7 +58,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     private Function Functions;
 
     /**
-    * 视频文件类型，默认点播，直播天 live_url
+    * 视频文件类型，默认点播，直播填 live_url
     */
     @SerializedName("FileType")
     @Expose
@@ -152,16 +152,16 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频文件类型，默认点播，直播天 live_url
-     * @return FileType 视频文件类型，默认点播，直播天 live_url
+     * 获取视频文件类型，默认点播，直播填 live_url
+     * @return FileType 视频文件类型，默认点播，直播填 live_url
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * 设置视频文件类型，默认点播，直播天 live_url
-     * @param FileType 视频文件类型，默认点播，直播天 live_url
+     * 设置视频文件类型，默认点播，直播填 live_url
+     * @param FileType 视频文件类型，默认点播，直播填 live_url
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

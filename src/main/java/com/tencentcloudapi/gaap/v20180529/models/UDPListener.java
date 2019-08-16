@@ -66,7 +66,12 @@ public class UDPListener  extends AbstractModel{
     private String Protocol;
 
     /**
-    * 监听器状态
+    * 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
     */
     @SerializedName("ListenerStatus")
     @Expose
@@ -201,16 +206,36 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器状态
-     * @return ListenerStatus 监听器状态
+     * 获取监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
+     * @return ListenerStatus 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
      */
     public Long getListenerStatus() {
         return this.ListenerStatus;
     }
 
     /**
-     * 设置监听器状态
-     * @param ListenerStatus 监听器状态
+     * 设置监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
+     * @param ListenerStatus 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
      */
     public void setListenerStatus(Long ListenerStatus) {
         this.ListenerStatus = ListenerStatus;

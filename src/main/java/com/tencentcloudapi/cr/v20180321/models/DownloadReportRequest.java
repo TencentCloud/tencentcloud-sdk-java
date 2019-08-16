@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DownloadReportRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名，本接口取值：Report
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名，本接口取值：DownloadReport
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * 报告日期
+    * 报告日期，格式为YYYY-MM-DD
     */
     @SerializedName("ReportDate")
     @Expose
@@ -51,48 +51,48 @@ public class DownloadReportRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+     * 获取模块名，本接口取值：Report
+     * @return Module 模块名，本接口取值：Report
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名，本接口取值：Report
+     * @param Module 模块名，本接口取值：Report
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名，本接口取值：DownloadReport
+     * @return Operation 操作名，本接口取值：DownloadReport
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名，本接口取值：DownloadReport
+     * @param Operation 操作名，本接口取值：DownloadReport
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * 获取报告日期
-     * @return ReportDate 报告日期
+     * 获取报告日期，格式为YYYY-MM-DD
+     * @return ReportDate 报告日期，格式为YYYY-MM-DD
      */
     public String getReportDate() {
         return this.ReportDate;
     }
 
     /**
-     * 设置报告日期
-     * @param ReportDate 报告日期
+     * 设置报告日期，格式为YYYY-MM-DD
+     * @param ReportDate 报告日期，格式为YYYY-MM-DD
      */
     public void setReportDate(String ReportDate) {
         this.ReportDate = ReportDate;

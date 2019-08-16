@@ -51,6 +51,13 @@ public class SearchStudioProductRequest  extends AbstractModel{
     private Long Offset;
 
     /**
+    * 产品Status
+    */
+    @SerializedName("DevStatus")
+    @Expose
+    private String DevStatus;
+
+    /**
      * 获取项目ID
      * @return ProjectId 项目ID
      */
@@ -115,6 +122,22 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
+     * 获取产品Status
+     * @return DevStatus 产品Status
+     */
+    public String getDevStatus() {
+        return this.DevStatus;
+    }
+
+    /**
+     * 设置产品Status
+     * @param DevStatus 产品Status
+     */
+    public void setDevStatus(String DevStatus) {
+        this.DevStatus = DevStatus;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "DevStatus", this.DevStatus);
 
     }
 }

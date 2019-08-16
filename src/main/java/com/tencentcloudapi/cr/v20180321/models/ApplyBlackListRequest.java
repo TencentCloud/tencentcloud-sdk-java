@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ApplyBlackListRequest  extends AbstractModel{
 
     /**
-    * 模块
+    * 模块名，本接口取值：account
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作
+    * 操作名，本接口取值：ApplyBlackList
     */
     @SerializedName("Operation")
     @Expose
@@ -51,32 +51,32 @@ public class ApplyBlackListRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块
-     * @return Module 模块
+     * 获取模块名，本接口取值：account
+     * @return Module 模块名，本接口取值：account
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块
-     * @param Module 模块
+     * 设置模块名，本接口取值：account
+     * @param Module 模块名，本接口取值：account
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作
-     * @return Operation 操作
+     * 获取操作名，本接口取值：ApplyBlackList
+     * @return Operation 操作名，本接口取值：ApplyBlackList
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作
-     * @param Operation 操作
+     * 设置操作名，本接口取值：ApplyBlackList
+     * @param Operation 操作名，本接口取值：ApplyBlackList
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

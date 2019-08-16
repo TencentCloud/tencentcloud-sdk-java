@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DissloveRoomRequest  extends AbstractModel{
+public class AccessInfo  extends AbstractModel{
 
     /**
-    * TRTC的SDKAppId。
+    * 域名
     */
-    @SerializedName("SdkAppId")
+    @SerializedName("Host")
     @Expose
-    private Long SdkAppId;
+    private String Host;
 
     /**
-    * 房间号。
+    * VIP
     */
-    @SerializedName("RoomId")
+    @SerializedName("Vip")
     @Expose
-    private Long RoomId;
+    private String Vip;
 
     /**
-     * 获取TRTC的SDKAppId。
-     * @return SdkAppId TRTC的SDKAppId。
+     * 获取域名
+     * @return Host 域名
      */
-    public Long getSdkAppId() {
-        return this.SdkAppId;
+    public String getHost() {
+        return this.Host;
     }
 
     /**
-     * 设置TRTC的SDKAppId。
-     * @param SdkAppId TRTC的SDKAppId。
+     * 设置域名
+     * @param Host 域名
      */
-    public void setSdkAppId(Long SdkAppId) {
-        this.SdkAppId = SdkAppId;
+    public void setHost(String Host) {
+        this.Host = Host;
     }
 
     /**
-     * 获取房间号。
-     * @return RoomId 房间号。
+     * 获取VIP
+     * @return Vip VIP
      */
-    public Long getRoomId() {
-        return this.RoomId;
+    public String getVip() {
+        return this.Vip;
     }
 
     /**
-     * 设置房间号。
-     * @param RoomId 房间号。
+     * 设置VIP
+     * @param Vip VIP
      */
-    public void setRoomId(Long RoomId) {
-        this.RoomId = RoomId;
+    public void setVip(String Vip) {
+        this.Vip = Vip;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
+        this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
 
     }
 }

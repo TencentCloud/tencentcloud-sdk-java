@@ -72,6 +72,13 @@ public class WordRsp  extends AbstractModel{
     private PhoneInfo [] PhoneInfos;
 
     /**
+    * 参考词，目前为保留字段。
+    */
+    @SerializedName("ReferenceWord")
+    @Expose
+    private String ReferenceWord;
+
+    /**
      * 获取当前单词语音起始时间点，单位为ms
      * @return MemBeginTime 当前单词语音起始时间点，单位为ms
      */
@@ -184,6 +191,22 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
+     * 获取参考词，目前为保留字段。
+     * @return ReferenceWord 参考词，目前为保留字段。
+     */
+    public String getReferenceWord() {
+        return this.ReferenceWord;
+    }
+
+    /**
+     * 设置参考词，目前为保留字段。
+     * @param ReferenceWord 参考词，目前为保留字段。
+     */
+    public void setReferenceWord(String ReferenceWord) {
+        this.ReferenceWord = ReferenceWord;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class WordRsp  extends AbstractModel{
         this.setParamSimple(map, prefix + "Word", this.Word);
         this.setParamSimple(map, prefix + "MatchTag", this.MatchTag);
         this.setParamArrayObj(map, prefix + "PhoneInfos.", this.PhoneInfos);
+        this.setParamSimple(map, prefix + "ReferenceWord", this.ReferenceWord);
 
     }
 }

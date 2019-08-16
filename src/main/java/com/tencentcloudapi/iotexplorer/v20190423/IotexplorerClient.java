@@ -67,6 +67,24 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建设备
+     * @param req CreateDeviceRequest
+     * @return CreateDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeviceResponse CreateDevice(CreateDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *为用户提供新建项目的能力，用于集中管理产品和应用。
      * @param req CreateProjectRequest
      * @return CreateProjectResponse
@@ -96,6 +114,24 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateStudioProductResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateStudioProduct"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除设备
+     * @param req DeleteDeviceRequest
+     * @return DeleteDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDevice"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

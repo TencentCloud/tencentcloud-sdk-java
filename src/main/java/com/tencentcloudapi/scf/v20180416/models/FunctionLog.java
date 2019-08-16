@@ -93,6 +93,20 @@ public class FunctionLog  extends AbstractModel{
     private String Log;
 
     /**
+    * 日志等级
+    */
+    @SerializedName("Level")
+    @Expose
+    private String Level;
+
+    /**
+    * 日志来源
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
      * 获取函数的名称
      * @return FunctionName 函数的名称
      */
@@ -253,6 +267,38 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
+     * 获取日志等级
+     * @return Level 日志等级
+     */
+    public String getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * 设置日志等级
+     * @param Level 日志等级
+     */
+    public void setLevel(String Level) {
+        this.Level = Level;
+    }
+
+    /**
+     * 获取日志来源
+     * @return Source 日志来源
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * 设置日志来源
+     * @param Source 日志来源
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +312,8 @@ public class FunctionLog  extends AbstractModel{
         this.setParamSimple(map, prefix + "BillDuration", this.BillDuration);
         this.setParamSimple(map, prefix + "MemUsage", this.MemUsage);
         this.setParamSimple(map, prefix + "Log", this.Log);
+        this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

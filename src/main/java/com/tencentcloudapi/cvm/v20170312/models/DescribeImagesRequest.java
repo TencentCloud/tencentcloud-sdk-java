@@ -37,13 +37,6 @@ public class DescribeImagesRequest  extends AbstractModel{
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
     MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
    SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
-<li> image-state - String - 是否必填： 否 - （过滤条件）按照镜像状态进行过滤。取值范围：
-    CREATING: 创建中
-    NORMAL: 正常
-    USING: 使用中
-    SYNCING: 同步中
-    IMPORTING: 导入中
-    DELETING: 删除中。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -94,13 +87,6 @@ public class DescribeImagesRequest  extends AbstractModel{
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
     MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
    SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
-<li> image-state - String - 是否必填： 否 - （过滤条件）按照镜像状态进行过滤。取值范围：
-    CREATING: 创建中
-    NORMAL: 正常
-    USING: 使用中
-    SYNCING: 同步中
-    IMPORTING: 导入中
-    DELETING: 删除中。</li>
      * @return Filters 过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
@@ -108,13 +94,6 @@ public class DescribeImagesRequest  extends AbstractModel{
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
     MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
    SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
-<li> image-state - String - 是否必填： 否 - （过滤条件）按照镜像状态进行过滤。取值范围：
-    CREATING: 创建中
-    NORMAL: 正常
-    USING: 使用中
-    SYNCING: 同步中
-    IMPORTING: 导入中
-    DELETING: 删除中。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -128,13 +107,6 @@ public class DescribeImagesRequest  extends AbstractModel{
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
     MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
    SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
-<li> image-state - String - 是否必填： 否 - （过滤条件）按照镜像状态进行过滤。取值范围：
-    CREATING: 创建中
-    NORMAL: 正常
-    USING: 使用中
-    SYNCING: 同步中
-    IMPORTING: 导入中
-    DELETING: 删除中。</li>
      * @param Filters 过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
@@ -142,13 +114,6 @@ public class DescribeImagesRequest  extends AbstractModel{
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
     MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
    SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
-<li> image-state - String - 是否必填： 否 - （过滤条件）按照镜像状态进行过滤。取值范围：
-    CREATING: 创建中
-    NORMAL: 正常
-    USING: 使用中
-    SYNCING: 同步中
-    IMPORTING: 导入中
-    DELETING: 删除中。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
