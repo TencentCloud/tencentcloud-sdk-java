@@ -63,17 +63,17 @@ public class HttpProfile {
 	private String protocol;
 	
 	/**
-	 * 读超时时间
+	 * 读超时时间（秒）
 	 */
 	private int readTimeout;
 	
 	/**
-	 * 写超时时间
+	 * 写超时时间（秒）
 	 */
 	private int writeTimeout;
 	
 	/**
-	 * 连接超时时间
+	 * 连接超时时间（秒）
 	 */
 	private int connTimeout;
 	
