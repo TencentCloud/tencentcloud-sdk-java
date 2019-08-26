@@ -5,10 +5,10 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.profile.HttpProfile;
 import com.tencentcloudapi.tci.v20190318.TciClient;
-import com.tencentcloudapi.tci.v20190318.models.DescribeAITaskResultResponse;
-import com.tencentcloudapi.tci.v20190318.models.DescribeAITaskResultRequest;
+import com.tencentcloudapi.tci.v20190318.models.SubmitTraditionalClassTaskResponse;
+import com.tencentcloudapi.tci.v20190318.models.SubmitTraditionalClassTaskRequest;
 
-public class DescribeAITaskResult {
+public class SubmitTraditionalClassTask {
     public static void main(String[] args) {
         try {
             Credential cred = new Credential("", "");
@@ -20,11 +20,12 @@ public class DescribeAITaskResult {
             clientProfile.setUnsignedPayload(true);
             clientProfile.setHttpProfile(httpProfile);
             TciClient client = new TciClient(cred, "",clientProfile);
-            DescribeAITaskResultRequest req = new DescribeAITaskResultRequest();
-            long a =2617184392L;
-            req.setTaskId(a);
-            DescribeAITaskResultResponse res = client.DescribeAITaskResult(req);
-            System.out.println(DescribeAITaskResultResponse.toJsonString(res));
+            SubmitTraditionalClassTaskRequest req = new SubmitTraditionalClassTaskRequest();
+            req.setFileContent("https://edu-test-1253131631.cos.ap-guangzhou.myqcloud.com/aieduautotest/autotest_vedio.mp4");
+            req.setFileType("vod_url");
+            req.setLibrarySet(new String[]{"library_15603955264181591716"});
+            SubmitTraditionalClassTaskResponse res = client.SubmitTraditionalClassTask(req);
+            System.out.println(SubmitTraditionalClassTaskResponse.toJsonString(res));
             System.out.println(res.getRequestId());
         } catch (TencentCloudSDKException e) {
             e.printStackTrace();
