@@ -44,14 +44,19 @@ public class HTTPSListener  extends AbstractModel{
     private Long Port;
 
     /**
-    * 监听器协议， HTTP
+    * 监听器协议， 值为：HTTP
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 监听器状态
+    * 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
     */
     @SerializedName("ListenerStatus")
     @Expose
@@ -161,32 +166,52 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议， HTTP
-     * @return Protocol 监听器协议， HTTP
+     * 获取监听器协议， 值为：HTTP
+     * @return Protocol 监听器协议， 值为：HTTP
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * 设置监听器协议， HTTP
-     * @param Protocol 监听器协议， HTTP
+     * 设置监听器协议， 值为：HTTP
+     * @param Protocol 监听器协议， 值为：HTTP
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * 获取监听器状态
-     * @return ListenerStatus 监听器状态
+     * 获取监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
+     * @return ListenerStatus 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
      */
     public Long getListenerStatus() {
         return this.ListenerStatus;
     }
 
     /**
-     * 设置监听器状态
-     * @param ListenerStatus 监听器状态
+     * 设置监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
+     * @param ListenerStatus 监听器状态，其中：
+0， 运行中；
+1， 创建中；
+2，销毁中；
+3，源站调整中；
+4，配置变更中。
      */
     public void setListenerStatus(Long ListenerStatus) {
         this.ListenerStatus = ListenerStatus;

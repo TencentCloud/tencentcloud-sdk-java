@@ -37,6 +37,13 @@ public class CreatePersonRequest  extends AbstractModel{
     private String PersonName;
 
     /**
+    * 图片数据 base64 字符串，与 Urls 参数选择一个输入
+    */
+    @SerializedName("Images")
+    @Expose
+    private String [] Images;
+
+    /**
     * 人员工作号码
     */
     @SerializedName("JobNumber")
@@ -79,6 +86,13 @@ public class CreatePersonRequest  extends AbstractModel{
     private String StudentNumber;
 
     /**
+    * 图片下载地址，与 Images 参数选择一个输入
+    */
+    @SerializedName("Urls")
+    @Expose
+    private String [] Urls;
+
+    /**
      * 获取人员库唯一标识符
      * @return LibraryId 人员库唯一标识符
      */
@@ -108,6 +122,22 @@ public class CreatePersonRequest  extends AbstractModel{
      */
     public void setPersonName(String PersonName) {
         this.PersonName = PersonName;
+    }
+
+    /**
+     * 获取图片数据 base64 字符串，与 Urls 参数选择一个输入
+     * @return Images 图片数据 base64 字符串，与 Urls 参数选择一个输入
+     */
+    public String [] getImages() {
+        return this.Images;
+    }
+
+    /**
+     * 设置图片数据 base64 字符串，与 Urls 参数选择一个输入
+     * @param Images 图片数据 base64 字符串，与 Urls 参数选择一个输入
+     */
+    public void setImages(String [] Images) {
+        this.Images = Images;
     }
 
     /**
@@ -207,17 +237,35 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
+     * 获取图片下载地址，与 Images 参数选择一个输入
+     * @return Urls 图片下载地址，与 Images 参数选择一个输入
+     */
+    public String [] getUrls() {
+        return this.Urls;
+    }
+
+    /**
+     * 设置图片下载地址，与 Images 参数选择一个输入
+     * @param Urls 图片下载地址，与 Images 参数选择一个输入
+     */
+    public void setUrls(String [] Urls) {
+        this.Urls = Urls;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LibraryId", this.LibraryId);
         this.setParamSimple(map, prefix + "PersonName", this.PersonName);
+        this.setParamArraySimple(map, prefix + "Images.", this.Images);
         this.setParamSimple(map, prefix + "JobNumber", this.JobNumber);
         this.setParamSimple(map, prefix + "Mail", this.Mail);
         this.setParamSimple(map, prefix + "Male", this.Male);
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "StudentNumber", this.StudentNumber);
+        this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
 
     }
 }

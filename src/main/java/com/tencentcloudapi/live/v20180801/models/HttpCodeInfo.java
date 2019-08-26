@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class HttpCodeInfo  extends AbstractModel{
 
     /**
-    * http协议返回码。
+    * HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
     */
     @SerializedName("HttpCode")
@@ -38,9 +38,9 @@ public class HttpCodeInfo  extends AbstractModel{
     private HttpCodeValue [] ValueList;
 
     /**
-     * 获取http协议返回码。
+     * 获取HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
-     * @return HttpCode http协议返回码。
+     * @return HttpCode HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
      */
     public String getHttpCode() {
@@ -48,9 +48,9 @@ public class HttpCodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置http协议返回码。
+     * 设置HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
-     * @param HttpCode http协议返回码。
+     * @param HttpCode HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
      */
     public void setHttpCode(String HttpCode) {

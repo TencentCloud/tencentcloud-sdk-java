@@ -37,6 +37,13 @@ public class GetFunctionLogsResponse  extends AbstractModel{
     private FunctionLog [] Data;
 
     /**
+    * 日志服务分页参数
+    */
+    @SerializedName("SearchContext")
+    @Expose
+    private LogSearchContext SearchContext;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class GetFunctionLogsResponse  extends AbstractModel{
     }
 
     /**
+     * 获取日志服务分页参数
+     * @return SearchContext 日志服务分页参数
+     */
+    public LogSearchContext getSearchContext() {
+        return this.SearchContext;
+    }
+
+    /**
+     * 设置日志服务分页参数
+     * @param SearchContext 日志服务分页参数
+     */
+    public void setSearchContext(LogSearchContext SearchContext) {
+        this.SearchContext = SearchContext;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +120,7 @@ public class GetFunctionLogsResponse  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamObj(map, prefix + "SearchContext.", this.SearchContext);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

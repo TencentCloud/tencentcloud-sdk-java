@@ -65,11 +65,46 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     private Environment Environment;
 
     /**
+    * 函数所属命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
     * 函数的私有网络配置
     */
     @SerializedName("VpcConfig")
     @Expose
     private VpcConfig VpcConfig;
+
+    /**
+    * 函数绑定的角色
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
+
+    /**
+    * 日志投递到的cls日志集ID
+    */
+    @SerializedName("ClsLogsetId")
+    @Expose
+    private String ClsLogsetId;
+
+    /**
+    * 日志投递到的cls Topic ID
+    */
+    @SerializedName("ClsTopicId")
+    @Expose
+    private String ClsTopicId;
+
+    /**
+    * 在更新时是否同步发布新版本，默认为：FALSE，不发布
+    */
+    @SerializedName("Publish")
+    @Expose
+    private String Publish;
 
     /**
      * 获取要修改的函数名称
@@ -168,6 +203,22 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数所属命名空间
+     * @return Namespace 函数所属命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * 设置函数所属命名空间
+     * @param Namespace 函数所属命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
      * 获取函数的私有网络配置
      * @return VpcConfig 函数的私有网络配置
      */
@@ -184,6 +235,70 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数绑定的角色
+     * @return Role 函数绑定的角色
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * 设置函数绑定的角色
+     * @param Role 函数绑定的角色
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
+    }
+
+    /**
+     * 获取日志投递到的cls日志集ID
+     * @return ClsLogsetId 日志投递到的cls日志集ID
+     */
+    public String getClsLogsetId() {
+        return this.ClsLogsetId;
+    }
+
+    /**
+     * 设置日志投递到的cls日志集ID
+     * @param ClsLogsetId 日志投递到的cls日志集ID
+     */
+    public void setClsLogsetId(String ClsLogsetId) {
+        this.ClsLogsetId = ClsLogsetId;
+    }
+
+    /**
+     * 获取日志投递到的cls Topic ID
+     * @return ClsTopicId 日志投递到的cls Topic ID
+     */
+    public String getClsTopicId() {
+        return this.ClsTopicId;
+    }
+
+    /**
+     * 设置日志投递到的cls Topic ID
+     * @param ClsTopicId 日志投递到的cls Topic ID
+     */
+    public void setClsTopicId(String ClsTopicId) {
+        this.ClsTopicId = ClsTopicId;
+    }
+
+    /**
+     * 获取在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * @return Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
+     */
+    public String getPublish() {
+        return this.Publish;
+    }
+
+    /**
+     * 设置在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * @param Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
+     */
+    public void setPublish(String Publish) {
+        this.Publish = Publish;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -193,7 +308,12 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "Runtime", this.Runtime);
         this.setParamObj(map, prefix + "Environment.", this.Environment);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
+        this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+        this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
+        this.setParamSimple(map, prefix + "Publish", this.Publish);
 
     }
 }

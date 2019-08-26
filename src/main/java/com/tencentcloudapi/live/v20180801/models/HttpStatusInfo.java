@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class HttpStatusInfo  extends AbstractModel{
 
     /**
-    * 播放http状态码。
+    * 播放HTTP状态码。
     */
     @SerializedName("HttpStatus")
     @Expose
@@ -37,16 +37,16 @@ public class HttpStatusInfo  extends AbstractModel{
     private Integer Num;
 
     /**
-     * 获取播放http状态码。
-     * @return HttpStatus 播放http状态码。
+     * 获取播放HTTP状态码。
+     * @return HttpStatus 播放HTTP状态码。
      */
     public String getHttpStatus() {
         return this.HttpStatus;
     }
 
     /**
-     * 设置播放http状态码。
-     * @param HttpStatus 播放http状态码。
+     * 设置播放HTTP状态码。
+     * @param HttpStatus 播放HTTP状态码。
      */
     public void setHttpStatus(String HttpStatus) {
         this.HttpStatus = HttpStatus;

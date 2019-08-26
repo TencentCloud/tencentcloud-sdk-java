@@ -65,6 +65,13 @@ public class GetFunctionLogsRequest  extends AbstractModel{
     private LogFilter Filter;
 
     /**
+    * 函数的命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
     * 函数的版本
     */
     @SerializedName("Qualifier")
@@ -91,6 +98,13 @@ public class GetFunctionLogsRequest  extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
+
+    /**
+    * 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+    */
+    @SerializedName("SearchContext")
+    @Expose
+    private LogSearchContext SearchContext;
 
     /**
      * 获取函数的名称
@@ -189,6 +203,22 @@ public class GetFunctionLogsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数的命名空间
+     * @return Namespace 函数的命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * 设置函数的命名空间
+     * @param Namespace 函数的命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
      * 获取函数的版本
      * @return Qualifier 函数的版本
      */
@@ -253,6 +283,22 @@ public class GetFunctionLogsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     * @return SearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     */
+    public LogSearchContext getSearchContext() {
+        return this.SearchContext;
+    }
+
+    /**
+     * 设置服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     * @param SearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     */
+    public void setSearchContext(LogSearchContext SearchContext) {
+        this.SearchContext = SearchContext;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -262,10 +308,12 @@ public class GetFunctionLogsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "FunctionRequestId", this.FunctionRequestId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamObj(map, prefix + "SearchContext.", this.SearchContext);
 
     }
 }

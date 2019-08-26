@@ -44,6 +44,13 @@ public class DeleteTriggerRequest  extends AbstractModel{
     private String Type;
 
     /**
+    * 函数所属命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
     * 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
     */
     @SerializedName("TriggerDesc")
@@ -106,6 +113,22 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数所属命名空间
+     * @return Namespace 函数所属命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * 设置函数所属命名空间
+     * @param Namespace 函数所属命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
      * 获取如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
      * @return TriggerDesc 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
      */
@@ -144,6 +167,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
         this.setParamSimple(map, prefix + "TriggerName", this.TriggerName);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "TriggerDesc", this.TriggerDesc);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
 

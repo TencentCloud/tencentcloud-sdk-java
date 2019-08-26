@@ -86,6 +86,20 @@ public class CreateFunctionRequest  extends AbstractModel{
     private VpcConfig VpcConfig;
 
     /**
+    * 函数所属命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * 函数绑定的角色
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
+
+    /**
     * 函数日志投递到的CLS LogsetID
     */
     @SerializedName("ClsLogsetId")
@@ -98,6 +112,20 @@ public class CreateFunctionRequest  extends AbstractModel{
     @SerializedName("ClsTopicId")
     @Expose
     private String ClsTopicId;
+
+    /**
+    * 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+    */
+    @SerializedName("CodeSource")
+    @Expose
+    private String CodeSource;
 
     /**
      * 获取创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
@@ -244,6 +272,38 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数所属命名空间
+     * @return Namespace 函数所属命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * 设置函数所属命名空间
+     * @param Namespace 函数所属命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * 获取函数绑定的角色
+     * @return Role 函数绑定的角色
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * 设置函数绑定的角色
+     * @param Role 函数绑定的角色
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
+    }
+
+    /**
      * 获取函数日志投递到的CLS LogsetID
      * @return ClsLogsetId 函数日志投递到的CLS LogsetID
      */
@@ -276,6 +336,38 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+     * @return Type 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * 设置函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+     * @param Type 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * 获取CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+     * @return CodeSource CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+     */
+    public String getCodeSource() {
+        return this.CodeSource;
+    }
+
+    /**
+     * 设置CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+     * @param CodeSource CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+     */
+    public void setCodeSource(String CodeSource) {
+        this.CodeSource = CodeSource;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -288,8 +380,12 @@ public class CreateFunctionRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "Environment.", this.Environment);
         this.setParamSimple(map, prefix + "Runtime", this.Runtime);
         this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "CodeSource", this.CodeSource);
 
     }
 }

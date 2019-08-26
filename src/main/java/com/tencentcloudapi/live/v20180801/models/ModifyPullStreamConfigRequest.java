@@ -44,7 +44,12 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     private String ToUrl;
 
     /**
-    * 区域id,1-深圳,2-上海，3-天津,4-香港。如有改动，需同时传入IspId。
+    * 区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-中国香港。
+如有改动，需同时传入IspId。
     */
     @SerializedName("AreaId")
     @Expose
@@ -128,16 +133,36 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区域id,1-深圳,2-上海，3-天津,4-香港。如有改动，需同时传入IspId。
-     * @return AreaId 区域id,1-深圳,2-上海，3-天津,4-香港。如有改动，需同时传入IspId。
+     * 获取区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-中国香港。
+如有改动，需同时传入IspId。
+     * @return AreaId 区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-中国香港。
+如有改动，需同时传入IspId。
      */
     public Integer getAreaId() {
         return this.AreaId;
     }
 
     /**
-     * 设置区域id,1-深圳,2-上海，3-天津,4-香港。如有改动，需同时传入IspId。
-     * @param AreaId 区域id,1-深圳,2-上海，3-天津,4-香港。如有改动，需同时传入IspId。
+     * 设置区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-中国香港。
+如有改动，需同时传入IspId。
+     * @param AreaId 区域id：
+1-深圳，
+2-上海，
+3-天津，
+4-中国香港。
+如有改动，需同时传入IspId。
      */
     public void setAreaId(Integer AreaId) {
         this.AreaId = AreaId;

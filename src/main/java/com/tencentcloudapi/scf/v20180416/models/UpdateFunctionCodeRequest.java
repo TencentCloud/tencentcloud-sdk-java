@@ -58,11 +58,32 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     private String ZipFile;
 
     /**
+    * 函数所属命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
     * 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
     */
     @SerializedName("CosBucketRegion")
     @Expose
     private String CosBucketRegion;
+
+    /**
+    * 函数所属环境
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
+    * 在更新时是否同步发布新版本，默认为：FALSE，不发布
+    */
+    @SerializedName("Publish")
+    @Expose
+    private String Publish;
 
     /**
      * 获取函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
@@ -145,6 +166,22 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数所属命名空间
+     * @return Namespace 函数所属命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * 设置函数所属命名空间
+     * @param Namespace 函数所属命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
      * 获取对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      * @return CosBucketRegion 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      */
@@ -161,6 +198,38 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数所属环境
+     * @return EnvId 函数所属环境
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * 设置函数所属环境
+     * @param EnvId 函数所属环境
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
+
+    /**
+     * 获取在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * @return Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
+     */
+    public String getPublish() {
+        return this.Publish;
+    }
+
+    /**
+     * 设置在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * @param Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
+     */
+    public void setPublish(String Publish) {
+        this.Publish = Publish;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -169,7 +238,10 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
         this.setParamSimple(map, prefix + "CosObjectName", this.CosObjectName);
         this.setParamSimple(map, prefix + "ZipFile", this.ZipFile);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "Publish", this.Publish);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PlayCodeTotalInfo  extends AbstractModel{
 
     /**
-    * http code，可选值包括400,403,404,500,502,503,504
+    * HTTP code，可选值包括400,403,404,500,502,503,504
     */
     @SerializedName("Code")
     @Expose
@@ -37,16 +37,16 @@ public class PlayCodeTotalInfo  extends AbstractModel{
     private Integer Num;
 
     /**
-     * 获取http code，可选值包括400,403,404,500,502,503,504
-     * @return Code http code，可选值包括400,403,404,500,502,503,504
+     * 获取HTTP code，可选值包括400,403,404,500,502,503,504
+     * @return Code HTTP code，可选值包括400,403,404,500,502,503,504
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * 设置http code，可选值包括400,403,404,500,502,503,504
-     * @param Code http code，可选值包括400,403,404,500,502,503,504
+     * 设置HTTP code，可选值包括400,403,404,500,502,503,504
+     * @param Code HTTP code，可选值包括400,403,404,500,502,503,504
      */
     public void setCode(String Code) {
         this.Code = Code;

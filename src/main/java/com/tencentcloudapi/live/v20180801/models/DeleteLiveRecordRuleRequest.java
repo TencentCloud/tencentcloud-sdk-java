@@ -24,7 +24,7 @@ public class DeleteLiveRecordRuleRequest  extends AbstractModel{
 
     /**
     * 推流域名。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
     */
     @SerializedName("DomainName")
     @Expose
@@ -32,7 +32,7 @@ public class DeleteLiveRecordRuleRequest  extends AbstractModel{
 
     /**
     * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
     */
     @SerializedName("AppName")
     @Expose
@@ -40,7 +40,7 @@ public class DeleteLiveRecordRuleRequest  extends AbstractModel{
 
     /**
     * 流名称。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
     */
     @SerializedName("StreamName")
     @Expose
@@ -48,9 +48,9 @@ public class DeleteLiveRecordRuleRequest  extends AbstractModel{
 
     /**
      * 获取推流域名。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      * @return DomainName 推流域名。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
     public String getDomainName() {
         return this.DomainName;
@@ -58,9 +58,9 @@ public class DeleteLiveRecordRuleRequest  extends AbstractModel{
 
     /**
      * 设置推流域名。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      * @param DomainName 推流域名。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
@@ -68,9 +68,9 @@ public class DeleteLiveRecordRuleRequest  extends AbstractModel{
 
     /**
      * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
     public String getAppName() {
         return this.AppName;
@@ -78,9 +78,9 @@ public class DeleteLiveRecordRuleRequest  extends AbstractModel{
 
     /**
      * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
@@ -88,9 +88,9 @@ public class DeleteLiveRecordRuleRequest  extends AbstractModel{
 
     /**
      * 获取流名称。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      * @return StreamName 流名称。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
     public String getStreamName() {
         return this.StreamName;
@@ -98,9 +98,9 @@ public class DeleteLiveRecordRuleRequest  extends AbstractModel{
 
     /**
      * 设置流名称。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      * @param StreamName 流名称。
-域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，比如AppName为空也需要传空字符串进行强匹配。
+域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;

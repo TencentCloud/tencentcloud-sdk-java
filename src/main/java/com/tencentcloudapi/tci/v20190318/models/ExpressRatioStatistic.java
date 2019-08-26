@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class ExpressRatioStatistic  extends AbstractModel{
 
     /**
-    * 表情
-    */
-    @SerializedName("Express")
-    @Expose
-    private String Express;
-
-    /**
-    * 表情所占比例
-    */
-    @SerializedName("Ratio")
-    @Expose
-    private Float Ratio;
-
-    /**
     * 出现次数
     */
     @SerializedName("Count")
@@ -44,36 +30,25 @@ public class ExpressRatioStatistic  extends AbstractModel{
     private Long Count;
 
     /**
-     * 获取表情
-     * @return Express 表情
-     */
-    public String getExpress() {
-        return this.Express;
-    }
+    * 表情
+    */
+    @SerializedName("Express")
+    @Expose
+    private String Express;
 
     /**
-     * 设置表情
-     * @param Express 表情
-     */
-    public void setExpress(String Express) {
-        this.Express = Express;
-    }
+    * 该表情时长占所有表情时长的比例
+    */
+    @SerializedName("Ratio")
+    @Expose
+    private Float Ratio;
 
     /**
-     * 获取表情所占比例
-     * @return Ratio 表情所占比例
-     */
-    public Float getRatio() {
-        return this.Ratio;
-    }
-
-    /**
-     * 设置表情所占比例
-     * @param Ratio 表情所占比例
-     */
-    public void setRatio(Float Ratio) {
-        this.Ratio = Ratio;
-    }
+    * 该表情时长占视频总时长的比例
+    */
+    @SerializedName("RatioUseDuration")
+    @Expose
+    private Float RatioUseDuration;
 
     /**
      * 获取出现次数
@@ -92,12 +67,61 @@ public class ExpressRatioStatistic  extends AbstractModel{
     }
 
     /**
+     * 获取表情
+     * @return Express 表情
+     */
+    public String getExpress() {
+        return this.Express;
+    }
+
+    /**
+     * 设置表情
+     * @param Express 表情
+     */
+    public void setExpress(String Express) {
+        this.Express = Express;
+    }
+
+    /**
+     * 获取该表情时长占所有表情时长的比例
+     * @return Ratio 该表情时长占所有表情时长的比例
+     */
+    public Float getRatio() {
+        return this.Ratio;
+    }
+
+    /**
+     * 设置该表情时长占所有表情时长的比例
+     * @param Ratio 该表情时长占所有表情时长的比例
+     */
+    public void setRatio(Float Ratio) {
+        this.Ratio = Ratio;
+    }
+
+    /**
+     * 获取该表情时长占视频总时长的比例
+     * @return RatioUseDuration 该表情时长占视频总时长的比例
+     */
+    public Float getRatioUseDuration() {
+        return this.RatioUseDuration;
+    }
+
+    /**
+     * 设置该表情时长占视频总时长的比例
+     * @param RatioUseDuration 该表情时长占视频总时长的比例
+     */
+    public void setRatioUseDuration(Float RatioUseDuration) {
+        this.RatioUseDuration = RatioUseDuration;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Express", this.Express);
         this.setParamSimple(map, prefix + "Ratio", this.Ratio);
-        this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "RatioUseDuration", this.RatioUseDuration);
 
     }
 }

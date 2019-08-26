@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tci.v20190318.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckAttendanceResponse  extends AbstractModel{
+public class ListNamespacesResponse  extends AbstractModel{
 
     /**
-    * 任务标识符
+    * namespace详情
     */
-    @SerializedName("JobId")
+    @SerializedName("Namespaces")
     @Expose
-    private Long JobId;
+    private Namespace [] Namespaces;
 
     /**
-    * 没有注册的人的ID列表
+    * 返回的namespace数量
     */
-    @SerializedName("NotRegisteredSet")
+    @SerializedName("TotalCount")
     @Expose
-    private String [] NotRegisteredSet;
+    private Integer TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class CheckAttendanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务标识符
-     * @return JobId 任务标识符
+     * 获取namespace详情
+     * @return Namespaces namespace详情
      */
-    public Long getJobId() {
-        return this.JobId;
+    public Namespace [] getNamespaces() {
+        return this.Namespaces;
     }
 
     /**
-     * 设置任务标识符
-     * @param JobId 任务标识符
+     * 设置namespace详情
+     * @param Namespaces namespace详情
      */
-    public void setJobId(Long JobId) {
-        this.JobId = JobId;
+    public void setNamespaces(Namespace [] Namespaces) {
+        this.Namespaces = Namespaces;
     }
 
     /**
-     * 获取没有注册的人的ID列表
-     * @return NotRegisteredSet 没有注册的人的ID列表
+     * 获取返回的namespace数量
+     * @return TotalCount 返回的namespace数量
      */
-    public String [] getNotRegisteredSet() {
-        return this.NotRegisteredSet;
+    public Integer getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * 设置没有注册的人的ID列表
-     * @param NotRegisteredSet 没有注册的人的ID列表
+     * 设置返回的namespace数量
+     * @param TotalCount 返回的namespace数量
      */
-    public void setNotRegisteredSet(String [] NotRegisteredSet) {
-        this.NotRegisteredSet = NotRegisteredSet;
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -95,8 +95,8 @@ public class CheckAttendanceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
-        this.setParamArraySimple(map, prefix + "NotRegisteredSet.", this.NotRegisteredSet);
+        this.setParamArrayObj(map, prefix + "Namespaces.", this.Namespaces);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

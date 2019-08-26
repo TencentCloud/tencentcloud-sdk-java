@@ -50,6 +50,28 @@ public class CmsClient extends AbstractClient{
 
     /**
      *音频内容检测（Audio Moderation, AM）服务使用了波形分析、声纹分析等技术，能识别涉黄、涉政、涉恐等违规音频，同时支持用户配置音频黑库，打击自定义的违规内容。
+
+<br>
+接口返回值说明：调用本接口有两个返回值，一个是同步返回值，一个是识别完成后的异步回调返回值。
+
+音频识别结果存在于异步回调返回值中，异步回调返回值明细：
+
+参数名 | 类型 | 描述
+-|-|-
+SeqID | String | 请求seqId唯一标识
+EvilFlag | Integer | 是否恶意：0正常，1可疑（Homology模块下：0未匹配到，1恶意，2白样本）
+EvilType | Integer | 恶意类型：100正常，20001政治，20002色情，20007谩骂
+Duration | Integer | 音频时长（单位：毫秒）
+PornDetect | | 音频智能鉴黄
+PolityDetect | | 音频涉政识别
+CurseDetect | | 音频谩骂识别
+Homology | | 相似度识别
+HitFlag | Integer | 0正常，1可疑
+Score | Integer | 判断分值
+Keywords | Array of String | 关键词明细
+StartTime | Array of String | 恶意开始时间
+EndTime | Array of String | 恶意结束时间
+SeedUrl | String | 命中的种子URL
      * @param req AudioModerationRequest
      * @return AudioModerationResponse
      * @throws TencentCloudSDKException
@@ -60,6 +82,24 @@ public class CmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<AudioModerationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "AudioModeration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过该接口可以将文件新增到样本库
+     * @param req CreateFileSampleRequest
+     * @return CreateFileSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFileSampleResponse CreateFileSample(CreateFileSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFileSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFileSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateFileSample"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -85,6 +125,24 @@ public class CmsClient extends AbstractClient{
     }
 
     /**
+     *删除文件样本库，支持批量删除，一次提交不超过20个
+     * @param req DeleteFileSampleRequest
+     * @return DeleteFileSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFileSampleResponse DeleteFileSample(DeleteFileSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFileSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFileSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteFileSample"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除文字样本库，暂时只支持单个删除
      * @param req DeleteTextSampleRequest
      * @return DeleteTextSampleResponse
@@ -96,6 +154,24 @@ public class CmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTextSampleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteTextSample"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询文件样本库，支持批量查询
+     * @param req DescribeFileSampleRequest
+     * @return DescribeFileSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileSampleResponse DescribeFileSample(DescribeFileSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFileSample"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -176,6 +252,24 @@ public class CmsClient extends AbstractClient{
 
     /**
      *视频内容检测（Video Moderation, VM）服务能识别涉黄、涉政、涉恐等违规视频，同时支持用户配置视频黑库，打击自定义的违规内容。
+
+<br>
+接口返回值说明：调用本接口有两个返回值，一个是同步返回值，一个是识别完成后的异步回调返回值。
+
+视频识别结果存在于异步回调返回值中，异步回调返回值明细：
+
+参数名 | 类型 | 描述
+-|-|-
+SeqID | String | 请求seqId唯一标识
+EvilFlag | Integer | 是否恶意：0正常，1可疑（Homology模块下：0未匹配到，1恶意，2白样本）
+EvilType | Integer | 恶意类型：100正常，20001政治，20002色情
+Duration | Integer | 视频时长（单位：秒）
+PornDetect |  | 视频智能鉴黄
+PolityDetect | | 视频涉政识别
+Homology | | 相似度识别
+HitFlag | Integer  | 0正常，1可疑
+Score | Integer | 判断分值
+SeedUrl | String | 命中的种子URL
      * @param req VideoModerationRequest
      * @return VideoModerationResponse
      * @throws TencentCloudSDKException

@@ -30,6 +30,15 @@ public class ControlDeviceDataResponse  extends AbstractModel{
     private String Data;
 
     /**
+    * JSON字符串， 返回下发控制的结果信息, 
+Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Result")
+    @Expose
+    private String Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +62,30 @@ public class ControlDeviceDataResponse  extends AbstractModel{
     }
 
     /**
+     * 获取JSON字符串， 返回下发控制的结果信息, 
+Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Result JSON字符串， 返回下发控制的结果信息, 
+Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResult() {
+        return this.Result;
+    }
+
+    /**
+     * 设置JSON字符串， 返回下发控制的结果信息, 
+Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result JSON字符串， 返回下发控制的结果信息, 
+Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResult(String Result) {
+        this.Result = Result;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +106,7 @@ public class ControlDeviceDataResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

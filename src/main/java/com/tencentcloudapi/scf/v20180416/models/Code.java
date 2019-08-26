@@ -65,6 +65,62 @@ public class Code  extends AbstractModel{
     private String TempCosObjectName;
 
     /**
+    * Git地址
+    */
+    @SerializedName("GitUrl")
+    @Expose
+    private String GitUrl;
+
+    /**
+    * Git用户名
+    */
+    @SerializedName("GitUserName")
+    @Expose
+    private String GitUserName;
+
+    /**
+    * Git密码
+    */
+    @SerializedName("GitPassword")
+    @Expose
+    private String GitPassword;
+
+    /**
+    * 加密后的Git密码，一般无需指定
+    */
+    @SerializedName("GitPasswordSecret")
+    @Expose
+    private String GitPasswordSecret;
+
+    /**
+    * Git分支
+    */
+    @SerializedName("GitBranch")
+    @Expose
+    private String GitBranch;
+
+    /**
+    * 代码在Git仓库中的路径
+    */
+    @SerializedName("GitDirectory")
+    @Expose
+    private String GitDirectory;
+
+    /**
+    * 指定要拉取的版本
+    */
+    @SerializedName("GitCommitId")
+    @Expose
+    private String GitCommitId;
+
+    /**
+    * 加密后的Git用户名，一般无需指定
+    */
+    @SerializedName("GitUserNameSecret")
+    @Expose
+    private String GitUserNameSecret;
+
+    /**
      * 获取对象存储桶名称
      * @return CosBucketName 对象存储桶名称
      */
@@ -161,6 +217,134 @@ public class Code  extends AbstractModel{
     }
 
     /**
+     * 获取Git地址
+     * @return GitUrl Git地址
+     */
+    public String getGitUrl() {
+        return this.GitUrl;
+    }
+
+    /**
+     * 设置Git地址
+     * @param GitUrl Git地址
+     */
+    public void setGitUrl(String GitUrl) {
+        this.GitUrl = GitUrl;
+    }
+
+    /**
+     * 获取Git用户名
+     * @return GitUserName Git用户名
+     */
+    public String getGitUserName() {
+        return this.GitUserName;
+    }
+
+    /**
+     * 设置Git用户名
+     * @param GitUserName Git用户名
+     */
+    public void setGitUserName(String GitUserName) {
+        this.GitUserName = GitUserName;
+    }
+
+    /**
+     * 获取Git密码
+     * @return GitPassword Git密码
+     */
+    public String getGitPassword() {
+        return this.GitPassword;
+    }
+
+    /**
+     * 设置Git密码
+     * @param GitPassword Git密码
+     */
+    public void setGitPassword(String GitPassword) {
+        this.GitPassword = GitPassword;
+    }
+
+    /**
+     * 获取加密后的Git密码，一般无需指定
+     * @return GitPasswordSecret 加密后的Git密码，一般无需指定
+     */
+    public String getGitPasswordSecret() {
+        return this.GitPasswordSecret;
+    }
+
+    /**
+     * 设置加密后的Git密码，一般无需指定
+     * @param GitPasswordSecret 加密后的Git密码，一般无需指定
+     */
+    public void setGitPasswordSecret(String GitPasswordSecret) {
+        this.GitPasswordSecret = GitPasswordSecret;
+    }
+
+    /**
+     * 获取Git分支
+     * @return GitBranch Git分支
+     */
+    public String getGitBranch() {
+        return this.GitBranch;
+    }
+
+    /**
+     * 设置Git分支
+     * @param GitBranch Git分支
+     */
+    public void setGitBranch(String GitBranch) {
+        this.GitBranch = GitBranch;
+    }
+
+    /**
+     * 获取代码在Git仓库中的路径
+     * @return GitDirectory 代码在Git仓库中的路径
+     */
+    public String getGitDirectory() {
+        return this.GitDirectory;
+    }
+
+    /**
+     * 设置代码在Git仓库中的路径
+     * @param GitDirectory 代码在Git仓库中的路径
+     */
+    public void setGitDirectory(String GitDirectory) {
+        this.GitDirectory = GitDirectory;
+    }
+
+    /**
+     * 获取指定要拉取的版本
+     * @return GitCommitId 指定要拉取的版本
+     */
+    public String getGitCommitId() {
+        return this.GitCommitId;
+    }
+
+    /**
+     * 设置指定要拉取的版本
+     * @param GitCommitId 指定要拉取的版本
+     */
+    public void setGitCommitId(String GitCommitId) {
+        this.GitCommitId = GitCommitId;
+    }
+
+    /**
+     * 获取加密后的Git用户名，一般无需指定
+     * @return GitUserNameSecret 加密后的Git用户名，一般无需指定
+     */
+    public String getGitUserNameSecret() {
+        return this.GitUserNameSecret;
+    }
+
+    /**
+     * 设置加密后的Git用户名，一般无需指定
+     * @param GitUserNameSecret 加密后的Git用户名，一般无需指定
+     */
+    public void setGitUserNameSecret(String GitUserNameSecret) {
+        this.GitUserNameSecret = GitUserNameSecret;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +354,14 @@ public class Code  extends AbstractModel{
         this.setParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
         this.setParamSimple(map, prefix + "DemoId", this.DemoId);
         this.setParamSimple(map, prefix + "TempCosObjectName", this.TempCosObjectName);
+        this.setParamSimple(map, prefix + "GitUrl", this.GitUrl);
+        this.setParamSimple(map, prefix + "GitUserName", this.GitUserName);
+        this.setParamSimple(map, prefix + "GitPassword", this.GitPassword);
+        this.setParamSimple(map, prefix + "GitPasswordSecret", this.GitPasswordSecret);
+        this.setParamSimple(map, prefix + "GitBranch", this.GitBranch);
+        this.setParamSimple(map, prefix + "GitDirectory", this.GitDirectory);
+        this.setParamSimple(map, prefix + "GitCommitId", this.GitCommitId);
+        this.setParamSimple(map, prefix + "GitUserNameSecret", this.GitUserNameSecret);
 
     }
 }

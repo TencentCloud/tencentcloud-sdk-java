@@ -27,7 +27,7 @@ public class ProjectEntryEx  extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private String ProjectId;
 
     /**
     * 项目名称
@@ -82,7 +82,7 @@ public class ProjectEntryEx  extends AbstractModel{
      * 获取项目ID
      * @return ProjectId 项目ID
      */
-    public Long getProjectId() {
+    public String getProjectId() {
         return this.ProjectId;
     }
 
@@ -90,7 +90,7 @@ public class ProjectEntryEx  extends AbstractModel{
      * 设置项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 

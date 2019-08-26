@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeTaskStatusResponse  extends AbstractModel{
 
     /**
-    * 任务结果，例如上传成功时返回“File Uploading Task Success.”
+    * <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
     */
     @SerializedName("TaskResult")
     @Expose
     private String TaskResult;
 
     /**
-    * <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+    * <p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
@@ -52,32 +52,32 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务结果，例如上传成功时返回“File Uploading Task Success.”
-     * @return TaskResult 任务结果，例如上传成功时返回“File Uploading Task Success.”
+     * 获取<p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
+     * @return TaskResult <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
      */
     public String getTaskResult() {
         return this.TaskResult;
     }
 
     /**
-     * 设置任务结果，例如上传成功时返回“File Uploading Task Success.”
-     * @param TaskResult 任务结果，例如上传成功时返回“File Uploading Task Success.”
+     * 设置<p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
+     * @param TaskResult <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
      */
     public void setTaskResult(String TaskResult) {
         this.TaskResult = TaskResult;
     }
 
     /**
-     * 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
-     * @return TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * @return TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
-     * @param TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * @param TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

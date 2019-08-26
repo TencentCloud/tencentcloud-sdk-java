@@ -37,6 +37,13 @@ public class GetFunctionRequest  extends AbstractModel{
     private String Qualifier;
 
     /**
+    * 函数所属命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
     * 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
     */
     @SerializedName("ShowCode")
@@ -76,6 +83,22 @@ public class GetFunctionRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数所属命名空间
+     * @return Namespace 函数所属命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * 设置函数所属命名空间
+     * @param Namespace 函数所属命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
      * 获取是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
      * @return ShowCode 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
      */
@@ -97,6 +120,7 @@ public class GetFunctionRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "ShowCode", this.ShowCode);
 
     }

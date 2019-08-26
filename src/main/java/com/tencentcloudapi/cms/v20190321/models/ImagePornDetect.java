@@ -24,13 +24,8 @@ public class ImagePornDetect  extends AbstractModel{
 
     /**
     * 恶意类型
-100：正常 
-20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
+100：正常
+20002：色情
     */
     @SerializedName("EvilType")
     @Expose
@@ -66,21 +61,11 @@ public class ImagePornDetect  extends AbstractModel{
 
     /**
      * 获取恶意类型
-100：正常 
-20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
+100：正常
+20002：色情
      * @return EvilType 恶意类型
-100：正常 
-20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
+100：正常
+20002：色情
      */
     public Long getEvilType() {
         return this.EvilType;
@@ -88,21 +73,11 @@ public class ImagePornDetect  extends AbstractModel{
 
     /**
      * 设置恶意类型
-100：正常 
-20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
+100：正常
+20002：色情
      * @param EvilType 恶意类型
-100：正常 
-20001：政治
-20002：色情 
-20006：涉毒违法
-20007：谩骂 
-24001：暴恐
-21000：综合
+100：正常
+20002：色情
      */
     public void setEvilType(Long EvilType) {
         this.EvilType = EvilType;

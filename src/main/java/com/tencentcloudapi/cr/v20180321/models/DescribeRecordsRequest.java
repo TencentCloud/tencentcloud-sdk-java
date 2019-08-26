@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeRecordsRequest  extends AbstractModel{
 
     /**
-    * 模块
+    * 模块名，本接口取值：Record
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作
+    * 操作名，本接口取值：List
     */
     @SerializedName("Operation")
     @Expose
@@ -58,28 +58,28 @@ public class DescribeRecordsRequest  extends AbstractModel{
     private String CalledPhone;
 
     /**
-    * 查询起始日期
+    * 查询起始日期，格式为YYYY-MM-DD
     */
     @SerializedName("StartBizDate")
     @Expose
     private String StartBizDate;
 
     /**
-    * 查询结束日期
+    * 查询结束日期，格式为YYYY-MM-DD
     */
     @SerializedName("EndBizDate")
     @Expose
     private String EndBizDate;
 
     /**
-    * 分页参数，索引，从0开始
+    * 分页参数，索引，默认为0
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * 分页参数，页长
+    * 分页参数，页长，默认为20
     */
     @SerializedName("Limit")
     @Expose
@@ -93,32 +93,32 @@ public class DescribeRecordsRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块
-     * @return Module 模块
+     * 获取模块名，本接口取值：Record
+     * @return Module 模块名，本接口取值：Record
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块
-     * @param Module 模块
+     * 设置模块名，本接口取值：Record
+     * @param Module 模块名，本接口取值：Record
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作
-     * @return Operation 操作
+     * 获取操作名，本接口取值：List
+     * @return Operation 操作名，本接口取值：List
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作
-     * @param Operation 操作
+     * 设置操作名，本接口取值：List
+     * @param Operation 操作名，本接口取值：List
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -173,64 +173,64 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询起始日期
-     * @return StartBizDate 查询起始日期
+     * 获取查询起始日期，格式为YYYY-MM-DD
+     * @return StartBizDate 查询起始日期，格式为YYYY-MM-DD
      */
     public String getStartBizDate() {
         return this.StartBizDate;
     }
 
     /**
-     * 设置查询起始日期
-     * @param StartBizDate 查询起始日期
+     * 设置查询起始日期，格式为YYYY-MM-DD
+     * @param StartBizDate 查询起始日期，格式为YYYY-MM-DD
      */
     public void setStartBizDate(String StartBizDate) {
         this.StartBizDate = StartBizDate;
     }
 
     /**
-     * 获取查询结束日期
-     * @return EndBizDate 查询结束日期
+     * 获取查询结束日期，格式为YYYY-MM-DD
+     * @return EndBizDate 查询结束日期，格式为YYYY-MM-DD
      */
     public String getEndBizDate() {
         return this.EndBizDate;
     }
 
     /**
-     * 设置查询结束日期
-     * @param EndBizDate 查询结束日期
+     * 设置查询结束日期，格式为YYYY-MM-DD
+     * @param EndBizDate 查询结束日期，格式为YYYY-MM-DD
      */
     public void setEndBizDate(String EndBizDate) {
         this.EndBizDate = EndBizDate;
     }
 
     /**
-     * 获取分页参数，索引，从0开始
-     * @return Offset 分页参数，索引，从0开始
+     * 获取分页参数，索引，默认为0
+     * @return Offset 分页参数，索引，默认为0
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置分页参数，索引，从0开始
-     * @param Offset 分页参数，索引，从0开始
+     * 设置分页参数，索引，默认为0
+     * @param Offset 分页参数，索引，默认为0
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取分页参数，页长
-     * @return Limit 分页参数，页长
+     * 获取分页参数，页长，默认为20
+     * @return Limit 分页参数，页长，默认为20
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页参数，页长
-     * @param Limit 分页参数，页长
+     * 设置分页参数，页长，默认为20
+     * @param Limit 分页参数，页长，默认为20
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;

@@ -30,13 +30,6 @@ public class RealServerBindSetReq  extends AbstractModel{
     private String RealServerId;
 
     /**
-    * 源站权重
-    */
-    @SerializedName("RealServerWeight")
-    @Expose
-    private Long RealServerWeight;
-
-    /**
     * 源站端口
     */
     @SerializedName("RealServerPort")
@@ -49,6 +42,13 @@ public class RealServerBindSetReq  extends AbstractModel{
     @SerializedName("RealServerIP")
     @Expose
     private String RealServerIP;
+
+    /**
+    * 源站权重
+    */
+    @SerializedName("RealServerWeight")
+    @Expose
+    private Long RealServerWeight;
 
     /**
      * 获取源站id
@@ -64,22 +64,6 @@ public class RealServerBindSetReq  extends AbstractModel{
      */
     public void setRealServerId(String RealServerId) {
         this.RealServerId = RealServerId;
-    }
-
-    /**
-     * 获取源站权重
-     * @return RealServerWeight 源站权重
-     */
-    public Long getRealServerWeight() {
-        return this.RealServerWeight;
-    }
-
-    /**
-     * 设置源站权重
-     * @param RealServerWeight 源站权重
-     */
-    public void setRealServerWeight(Long RealServerWeight) {
-        this.RealServerWeight = RealServerWeight;
     }
 
     /**
@@ -115,13 +99,29 @@ public class RealServerBindSetReq  extends AbstractModel{
     }
 
     /**
+     * 获取源站权重
+     * @return RealServerWeight 源站权重
+     */
+    public Long getRealServerWeight() {
+        return this.RealServerWeight;
+    }
+
+    /**
+     * 设置源站权重
+     * @param RealServerWeight 源站权重
+     */
+    public void setRealServerWeight(Long RealServerWeight) {
+        this.RealServerWeight = RealServerWeight;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealServerId", this.RealServerId);
-        this.setParamSimple(map, prefix + "RealServerWeight", this.RealServerWeight);
         this.setParamSimple(map, prefix + "RealServerPort", this.RealServerPort);
         this.setParamSimple(map, prefix + "RealServerIP", this.RealServerIP);
+        this.setParamSimple(map, prefix + "RealServerWeight", this.RealServerWeight);
 
     }
 }

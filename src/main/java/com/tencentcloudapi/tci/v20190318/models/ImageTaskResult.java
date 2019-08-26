@@ -100,6 +100,13 @@ public class ImageTaskResult  extends AbstractModel{
     private BodyMovementResult TeacherBodyMovement;
 
     /**
+    * 教师是否在屏幕内判断结果
+    */
+    @SerializedName("TeacherOutScreen")
+    @Expose
+    private TeacherOutScreenResult TeacherOutScreen;
+
+    /**
     * 时间统计结果
     */
     @SerializedName("TimeInfo")
@@ -283,6 +290,22 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
+     * 获取教师是否在屏幕内判断结果
+     * @return TeacherOutScreen 教师是否在屏幕内判断结果
+     */
+    public TeacherOutScreenResult getTeacherOutScreen() {
+        return this.TeacherOutScreen;
+    }
+
+    /**
+     * 设置教师是否在屏幕内判断结果
+     * @param TeacherOutScreen 教师是否在屏幕内判断结果
+     */
+    public void setTeacherOutScreen(TeacherOutScreenResult TeacherOutScreen) {
+        this.TeacherOutScreen = TeacherOutScreen;
+    }
+
+    /**
      * 获取时间统计结果
      * @return TimeInfo 时间统计结果
      */
@@ -313,6 +336,7 @@ public class ImageTaskResult  extends AbstractModel{
         this.setParamObj(map, prefix + "Light.", this.Light);
         this.setParamObj(map, prefix + "StudentBodyMovement.", this.StudentBodyMovement);
         this.setParamObj(map, prefix + "TeacherBodyMovement.", this.TeacherBodyMovement);
+        this.setParamObj(map, prefix + "TeacherOutScreen.", this.TeacherOutScreen);
         this.setParamObj(map, prefix + "TimeInfo.", this.TimeInfo);
 
     }

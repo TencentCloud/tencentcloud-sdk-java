@@ -103,6 +103,42 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建集群路由
+     * @param req CreateClusterRouteRequest
+     * @return CreateClusterRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterRouteResponse CreateClusterRoute(CreateClusterRouteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterRouteResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterRouteResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClusterRoute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建集群路由表
+     * @param req CreateClusterRouteTableRequest
+     * @return CreateClusterRouteTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterRouteTableResponse CreateClusterRouteTable(CreateClusterRouteTableRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterRouteTableResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterRouteTableResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClusterRouteTable"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除集群(YUNAPI V3版本)
      * @param req DeleteClusterRequest
      * @return DeleteClusterResponse
@@ -139,6 +175,42 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *删除集群路由
+     * @param req DeleteClusterRouteRequest
+     * @return DeleteClusterRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterRouteResponse DeleteClusterRoute(DeleteClusterRouteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterRouteResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterRouteResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteClusterRoute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除集群路由表
+     * @param req DeleteClusterRouteTableRequest
+     * @return DeleteClusterRouteTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterRouteTableResponse DeleteClusterRouteTable(DeleteClusterRouteTableRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterRouteTableResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterRouteTableResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteClusterRouteTable"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      * 查询集群下节点实例信息 
      * @param req DescribeClusterInstancesRequest
      * @return DescribeClusterInstancesResponse
@@ -150,6 +222,42 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询集群路由表
+     * @param req DescribeClusterRouteTablesRequest
+     * @return DescribeClusterRouteTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterRouteTablesResponse DescribeClusterRouteTables(DescribeClusterRouteTablesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterRouteTablesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterRouteTablesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterRouteTables"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询集群路由
+     * @param req DescribeClusterRoutesRequest
+     * @return DescribeClusterRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterRoutesResponse DescribeClusterRoutes(DescribeClusterRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterRoutes"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -204,6 +312,24 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeExistedInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeExistedInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询路由表冲突列表
+     * @param req DescribeRouteTableConflictsRequest
+     * @return DescribeRouteTableConflictsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRouteTableConflictsResponse DescribeRouteTableConflicts(DescribeRouteTableConflictsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRouteTableConflictsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRouteTableConflictsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRouteTableConflicts"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CreatePersonResponse  extends AbstractModel{
 
     /**
+    * 人脸操作结果信息
+    */
+    @SerializedName("FaceInfoSet")
+    @Expose
+    private FaceInfo [] FaceInfoSet;
+
+    /**
     * 人员库唯一标识符
     */
     @SerializedName("LibraryId")
@@ -49,6 +56,22 @@ public class CreatePersonResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * 获取人脸操作结果信息
+     * @return FaceInfoSet 人脸操作结果信息
+     */
+    public FaceInfo [] getFaceInfoSet() {
+        return this.FaceInfoSet;
+    }
+
+    /**
+     * 设置人脸操作结果信息
+     * @param FaceInfoSet 人脸操作结果信息
+     */
+    public void setFaceInfoSet(FaceInfo [] FaceInfoSet) {
+        this.FaceInfoSet = FaceInfoSet;
+    }
 
     /**
      * 获取人员库唯一标识符
@@ -118,6 +141,7 @@ public class CreatePersonResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "FaceInfoSet.", this.FaceInfoSet);
         this.setParamSimple(map, prefix + "LibraryId", this.LibraryId);
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamSimple(map, prefix + "PersonName", this.PersonName);

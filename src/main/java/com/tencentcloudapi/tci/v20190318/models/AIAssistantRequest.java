@@ -51,6 +51,13 @@ public class AIAssistantRequest  extends AbstractModel{
     private String [] LibrarySet;
 
     /**
+    * 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+    */
+    @SerializedName("MaxVideoDuration")
+    @Expose
+    private Long MaxVideoDuration;
+
+    /**
     * 标准化模板选择：0：AI助教基础版本，1：AI评教基础版本，2：AI评教标准版本。AI 助教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、学生动作选项，音频信息分析，微笑识别。AI 评教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、音频信息分析。AI 评教标准版功能包括人脸检索、人脸检测、人脸表情识别、手势识别、音频信息分析、音频关键词分析、视频精彩集锦分析。
     */
     @SerializedName("Template")
@@ -143,6 +150,22 @@ public class AIAssistantRequest  extends AbstractModel{
     }
 
     /**
+     * 获取直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * @return MaxVideoDuration 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     */
+    public Long getMaxVideoDuration() {
+        return this.MaxVideoDuration;
+    }
+
+    /**
+     * 设置直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * @param MaxVideoDuration 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     */
+    public void setMaxVideoDuration(Long MaxVideoDuration) {
+        this.MaxVideoDuration = MaxVideoDuration;
+    }
+
+    /**
      * 获取标准化模板选择：0：AI助教基础版本，1：AI评教基础版本，2：AI评教标准版本。AI 助教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、学生动作选项，音频信息分析，微笑识别。AI 评教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、音频信息分析。AI 评教标准版功能包括人脸检索、人脸检测、人脸表情识别、手势识别、音频信息分析、音频关键词分析、视频精彩集锦分析。
      * @return Template 标准化模板选择：0：AI助教基础版本，1：AI评教基础版本，2：AI评教标准版本。AI 助教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、学生动作选项，音频信息分析，微笑识别。AI 评教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、音频信息分析。AI 评教标准版功能包括人脸检索、人脸检测、人脸表情识别、手势识别、音频信息分析、音频关键词分析、视频精彩集锦分析。
      */
@@ -214,6 +237,7 @@ public class AIAssistantRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "Lang", this.Lang);
         this.setParamArraySimple(map, prefix + "LibrarySet.", this.LibrarySet);
+        this.setParamSimple(map, prefix + "MaxVideoDuration", this.MaxVideoDuration);
         this.setParamSimple(map, prefix + "Template", this.Template);
         this.setParamArraySimple(map, prefix + "VocabLibNameList.", this.VocabLibNameList);
         this.setParamSimple(map, prefix + "VoiceEncodeType", this.VoiceEncodeType);

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CopyFunctionRequest  extends AbstractModel{
 
     /**
-    * 函数名
+    * 要复制的函数的名称
     */
     @SerializedName("FunctionName")
     @Expose
@@ -37,7 +37,7 @@ public class CopyFunctionRequest  extends AbstractModel{
     private String NewFunctionName;
 
     /**
-    * 命名空间，默认为default
+    * 要复制的函数所在的命名空间，默认为default
     */
     @SerializedName("Namespace")
     @Expose
@@ -51,7 +51,7 @@ public class CopyFunctionRequest  extends AbstractModel{
     private String TargetNamespace;
 
     /**
-    * 函数描述
+    * 新函数的描述
     */
     @SerializedName("Description")
     @Expose
@@ -65,16 +65,35 @@ public class CopyFunctionRequest  extends AbstractModel{
     private String TargetRegion;
 
     /**
-     * 获取函数名
-     * @return FunctionName 函数名
+    * 如果目标Namespace下已有同名函数，是否覆盖，默认为否
+（注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
+TRUE：覆盖同名函数
+FALSE：不覆盖同名函数
+    */
+    @SerializedName("Override")
+    @Expose
+    private Boolean Override;
+
+    /**
+    * 是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+TRUE：复制函数配置
+FALSE：不复制函数配置
+    */
+    @SerializedName("CopyConfiguration")
+    @Expose
+    private Boolean CopyConfiguration;
+
+    /**
+     * 获取要复制的函数的名称
+     * @return FunctionName 要复制的函数的名称
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * 设置函数名
-     * @param FunctionName 函数名
+     * 设置要复制的函数的名称
+     * @param FunctionName 要复制的函数的名称
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
@@ -97,16 +116,16 @@ public class CopyFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间，默认为default
-     * @return Namespace 命名空间，默认为default
+     * 获取要复制的函数所在的命名空间，默认为default
+     * @return Namespace 要复制的函数所在的命名空间，默认为default
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * 设置命名空间，默认为default
-     * @param Namespace 命名空间，默认为default
+     * 设置要复制的函数所在的命名空间，默认为default
+     * @param Namespace 要复制的函数所在的命名空间，默认为default
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
@@ -129,16 +148,16 @@ public class CopyFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数描述
-     * @return Description 函数描述
+     * 获取新函数的描述
+     * @return Description 新函数的描述
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * 设置函数描述
-     * @param Description 函数描述
+     * 设置新函数的描述
+     * @param Description 新函数的描述
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -161,6 +180,58 @@ public class CopyFunctionRequest  extends AbstractModel{
     }
 
     /**
+     * 获取如果目标Namespace下已有同名函数，是否覆盖，默认为否
+（注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
+TRUE：覆盖同名函数
+FALSE：不覆盖同名函数
+     * @return Override 如果目标Namespace下已有同名函数，是否覆盖，默认为否
+（注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
+TRUE：覆盖同名函数
+FALSE：不覆盖同名函数
+     */
+    public Boolean getOverride() {
+        return this.Override;
+    }
+
+    /**
+     * 设置如果目标Namespace下已有同名函数，是否覆盖，默认为否
+（注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
+TRUE：覆盖同名函数
+FALSE：不覆盖同名函数
+     * @param Override 如果目标Namespace下已有同名函数，是否覆盖，默认为否
+（注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
+TRUE：覆盖同名函数
+FALSE：不覆盖同名函数
+     */
+    public void setOverride(Boolean Override) {
+        this.Override = Override;
+    }
+
+    /**
+     * 获取是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+TRUE：复制函数配置
+FALSE：不复制函数配置
+     * @return CopyConfiguration 是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+TRUE：复制函数配置
+FALSE：不复制函数配置
+     */
+    public Boolean getCopyConfiguration() {
+        return this.CopyConfiguration;
+    }
+
+    /**
+     * 设置是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+TRUE：复制函数配置
+FALSE：不复制函数配置
+     * @param CopyConfiguration 是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+TRUE：复制函数配置
+FALSE：不复制函数配置
+     */
+    public void setCopyConfiguration(Boolean CopyConfiguration) {
+        this.CopyConfiguration = CopyConfiguration;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +241,8 @@ public class CopyFunctionRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetNamespace", this.TargetNamespace);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "TargetRegion", this.TargetRegion);
+        this.setParamSimple(map, prefix + "Override", this.Override);
+        this.setParamSimple(map, prefix + "CopyConfiguration", this.CopyConfiguration);
 
     }
 }

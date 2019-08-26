@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UploadDataFileRequest  extends AbstractModel{
 
     /**
-    * 模块名
+    * 模块名，本接口取值：Data
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作名
+    * 操作名，本接口取值：Upload
     */
     @SerializedName("Operation")
     @Expose
@@ -44,7 +44,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     private String FileName;
 
     /**
-    * <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：催收文件</li><li>repay：还款文件</li><li>callback：回访文件</li></ul>
+    * <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：入催文件</li><li>repay：还款文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
     */
     @SerializedName("UploadModel")
     @Expose
@@ -72,32 +72,32 @@ public class UploadDataFileRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块名
-     * @return Module 模块名
+     * 获取模块名，本接口取值：Data
+     * @return Module 模块名，本接口取值：Data
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块名
-     * @param Module 模块名
+     * 设置模块名，本接口取值：Data
+     * @param Module 模块名，本接口取值：Data
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作名
-     * @return Operation 操作名
+     * 获取操作名，本接口取值：Upload
+     * @return Operation 操作名，本接口取值：Upload
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作名
-     * @param Operation 操作名
+     * 设置操作名，本接口取值：Upload
+     * @param Operation 操作名，本接口取值：Upload
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -120,16 +120,16 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取<p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：催收文件</li><li>repay：还款文件</li><li>callback：回访文件</li></ul>
-     * @return UploadModel <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：催收文件</li><li>repay：还款文件</li><li>callback：回访文件</li></ul>
+     * 获取<p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：入催文件</li><li>repay：还款文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
+     * @return UploadModel <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：入催文件</li><li>repay：还款文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
      */
     public String getUploadModel() {
         return this.UploadModel;
     }
 
     /**
-     * 设置<p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：催收文件</li><li>repay：还款文件</li><li>callback：回访文件</li></ul>
-     * @param UploadModel <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：催收文件</li><li>repay：还款文件</li><li>callback：回访文件</li></ul>
+     * 设置<p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：入催文件</li><li>repay：还款文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
+     * @param UploadModel <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：入催文件</li><li>repay：还款文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
      */
     public void setUploadModel(String UploadModel) {
         this.UploadModel = UploadModel;

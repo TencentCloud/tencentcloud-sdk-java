@@ -44,14 +44,14 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     private String [] LibraryIds;
 
     /**
-    * 确定出勤阀值；默认为0.92
+    * 确定出勤阈值；默认为0.92
     */
     @SerializedName("AttendanceThreshold")
     @Expose
     private Float AttendanceThreshold;
 
     /**
-    * 是否开启陌生人模式，开启后才会推送陌生人事件，默认不开启
+    * 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
     */
     @SerializedName("EnableStranger")
     @Expose
@@ -136,32 +136,32 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取确定出勤阀值；默认为0.92
-     * @return AttendanceThreshold 确定出勤阀值；默认为0.92
+     * 获取确定出勤阈值；默认为0.92
+     * @return AttendanceThreshold 确定出勤阈值；默认为0.92
      */
     public Float getAttendanceThreshold() {
         return this.AttendanceThreshold;
     }
 
     /**
-     * 设置确定出勤阀值；默认为0.92
-     * @param AttendanceThreshold 确定出勤阀值；默认为0.92
+     * 设置确定出勤阈值；默认为0.92
+     * @param AttendanceThreshold 确定出勤阈值；默认为0.92
      */
     public void setAttendanceThreshold(Float AttendanceThreshold) {
         this.AttendanceThreshold = AttendanceThreshold;
     }
 
     /**
-     * 获取是否开启陌生人模式，开启后才会推送陌生人事件，默认不开启
-     * @return EnableStranger 是否开启陌生人模式，开启后才会推送陌生人事件，默认不开启
+     * 获取是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
+     * @return EnableStranger 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
      */
     public Boolean getEnableStranger() {
         return this.EnableStranger;
     }
 
     /**
-     * 设置是否开启陌生人模式，开启后才会推送陌生人事件，默认不开启
-     * @param EnableStranger 是否开启陌生人模式，开启后才会推送陌生人事件，默认不开启
+     * 设置是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
+     * @param EnableStranger 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
      */
     public void setEnableStranger(Boolean EnableStranger) {
         this.EnableStranger = EnableStranger;

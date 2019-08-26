@@ -79,6 +79,13 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     private Long Lang;
 
     /**
+    * 是否临时保存 音频链接
+    */
+    @SerializedName("StorageMode")
+    @Expose
+    private Long StorageMode;
+
+    /**
     * 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
     */
     @SerializedName("VocabLibNameList")
@@ -214,6 +221,22 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否临时保存 音频链接
+     * @return StorageMode 是否临时保存 音频链接
+     */
+    public Long getStorageMode() {
+        return this.StorageMode;
+    }
+
+    /**
+     * 设置是否临时保存 音频链接
+     * @param StorageMode 是否临时保存 音频链接
+     */
+    public void setStorageMode(Long StorageMode) {
+        this.StorageMode = StorageMode;
+    }
+
+    /**
      * 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      * @return VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
@@ -241,6 +264,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "VoiceFileType", this.VoiceFileType);
         this.setParamSimple(map, prefix + "IsEnd", this.IsEnd);
         this.setParamSimple(map, prefix + "Lang", this.Lang);
+        this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
         this.setParamArraySimple(map, prefix + "VocabLibNameList.", this.VocabLibNameList);
 
     }

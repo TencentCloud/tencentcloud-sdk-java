@@ -65,6 +65,21 @@ public class PhoneInfo  extends AbstractModel{
     private Boolean Stress;
 
     /**
+    * 参考音素，在单词诊断模式下，代表标准
+音素
+    */
+    @SerializedName("ReferencePhone")
+    @Expose
+    private String ReferencePhone;
+
+    /**
+    * 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+    */
+    @SerializedName("MatchTag")
+    @Expose
+    private Integer MatchTag;
+
+    /**
      * 获取当前音节语音起始时间点，单位为ms
      * @return MemBeginTime 当前音节语音起始时间点，单位为ms
      */
@@ -161,6 +176,42 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
+     * 获取参考音素，在单词诊断模式下，代表标准
+音素
+     * @return ReferencePhone 参考音素，在单词诊断模式下，代表标准
+音素
+     */
+    public String getReferencePhone() {
+        return this.ReferencePhone;
+    }
+
+    /**
+     * 设置参考音素，在单词诊断模式下，代表标准
+音素
+     * @param ReferencePhone 参考音素，在单词诊断模式下，代表标准
+音素
+     */
+    public void setReferencePhone(String ReferencePhone) {
+        this.ReferencePhone = ReferencePhone;
+    }
+
+    /**
+     * 获取当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     * @return MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     */
+    public Integer getMatchTag() {
+        return this.MatchTag;
+    }
+
+    /**
+     * 设置当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     * @param MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     */
+    public void setMatchTag(Integer MatchTag) {
+        this.MatchTag = MatchTag;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +221,8 @@ public class PhoneInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "DetectedStress", this.DetectedStress);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Stress", this.Stress);
+        this.setParamSimple(map, prefix + "ReferencePhone", this.ReferencePhone);
+        this.setParamSimple(map, prefix + "MatchTag", this.MatchTag);
 
     }
 }

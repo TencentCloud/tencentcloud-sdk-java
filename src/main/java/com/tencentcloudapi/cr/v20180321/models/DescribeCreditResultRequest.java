@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCreditResultRequest  extends AbstractModel{
 
     /**
-    * 模块
+    * 模块名，本接口取值：Credit
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 操作
+    * 操作名，本接口取值：Get
     */
     @SerializedName("Operation")
     @Expose
@@ -58,39 +58,39 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     private String CaseId;
 
     /**
-    * 请求日期
+    * 请求日期，格式为YYYY-MM-DD
     */
     @SerializedName("RequestDate")
     @Expose
     private String RequestDate;
 
     /**
-     * 获取模块
-     * @return Module 模块
+     * 获取模块名，本接口取值：Credit
+     * @return Module 模块名，本接口取值：Credit
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * 设置模块
-     * @param Module 模块
+     * 设置模块名，本接口取值：Credit
+     * @param Module 模块名，本接口取值：Credit
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * 获取操作
-     * @return Operation 操作
+     * 获取操作名，本接口取值：Get
+     * @return Operation 操作名，本接口取值：Get
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * 设置操作
-     * @param Operation 操作
+     * 设置操作名，本接口取值：Get
+     * @param Operation 操作名，本接口取值：Get
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -145,16 +145,16 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取请求日期
-     * @return RequestDate 请求日期
+     * 获取请求日期，格式为YYYY-MM-DD
+     * @return RequestDate 请求日期，格式为YYYY-MM-DD
      */
     public String getRequestDate() {
         return this.RequestDate;
     }
 
     /**
-     * 设置请求日期
-     * @param RequestDate 请求日期
+     * 设置请求日期，格式为YYYY-MM-DD
+     * @param RequestDate 请求日期，格式为YYYY-MM-DD
      */
     public void setRequestDate(String RequestDate) {
         this.RequestDate = RequestDate;

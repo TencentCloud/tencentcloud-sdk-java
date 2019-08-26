@@ -86,6 +86,13 @@ public class ImageTaskFunction  extends AbstractModel{
     private Boolean EnableTeacherBodyMovements;
 
     /**
+    * 判断老师是否在屏幕中
+    */
+    @SerializedName("EnableTeacherOutScreen")
+    @Expose
+    private Boolean EnableTeacherOutScreen;
+
+    /**
      * 获取大教室场景学生肢体动作识别选项
      * @return EnableActionClass 大教室场景学生肢体动作识别选项
      */
@@ -230,6 +237,22 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
+     * 获取判断老师是否在屏幕中
+     * @return EnableTeacherOutScreen 判断老师是否在屏幕中
+     */
+    public Boolean getEnableTeacherOutScreen() {
+        return this.EnableTeacherOutScreen;
+    }
+
+    /**
+     * 设置判断老师是否在屏幕中
+     * @param EnableTeacherOutScreen 判断老师是否在屏幕中
+     */
+    public void setEnableTeacherOutScreen(Boolean EnableTeacherOutScreen) {
+        this.EnableTeacherOutScreen = EnableTeacherOutScreen;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class ImageTaskFunction  extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableLightJudge", this.EnableLightJudge);
         this.setParamSimple(map, prefix + "EnableStudentBodyMovements", this.EnableStudentBodyMovements);
         this.setParamSimple(map, prefix + "EnableTeacherBodyMovements", this.EnableTeacherBodyMovements);
+        this.setParamSimple(map, prefix + "EnableTeacherOutScreen", this.EnableTeacherOutScreen);
 
     }
 }

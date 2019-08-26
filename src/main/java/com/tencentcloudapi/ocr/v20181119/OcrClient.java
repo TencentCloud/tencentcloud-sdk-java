@@ -121,6 +121,24 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持机动车销售统一发票和二手车销售统一发票的识别，包括发票号码、发票代码、合计金额、合计税额等二十多个字段。
+     * @param req CarInvoiceOCRRequest
+     * @return CarInvoiceOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public CarInvoiceOCRResponse CarInvoiceOCR(CarInvoiceOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CarInvoiceOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CarInvoiceOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CarInvoiceOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持对驾驶证主页所有字段的自动定位与识别，包含证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限等。
      * @param req DriverLicenseOCRRequest
      * @return DriverLicenseOCRResponse
@@ -150,6 +168,24 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EnglishOCRResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "EnglishOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持机票行程单关键字段的识别，包括姓名、身份证件号码、航班号、票价 、合计、电子客票号码、填开日期等。
+     * @param req FlightInvoiceOCRRequest
+     * @return FlightInvoiceOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public FlightInvoiceOCRResponse FlightInvoiceOCR(FlightInvoiceOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FlightInvoiceOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FlightInvoiceOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FlightInvoiceOCR"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -265,6 +301,42 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持对卡式港澳台通行证的识别，包括签发地点、签发机关、有效期限、性别、出生日期、英文姓名、姓名、证件号等字段。
+     * @param req PermitOCRRequest
+     * @return PermitOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public PermitOCRResponse PermitOCR(PermitOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PermitOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PermitOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PermitOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持定额发票的发票号码、发票代码及金额等关键字段的识别。
+     * @param req QuotaInvoiceOCRRequest
+     * @return QuotaInvoiceOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public QuotaInvoiceOCRResponse QuotaInvoiceOCR(QuotaInvoiceOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QuotaInvoiceOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QuotaInvoiceOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QuotaInvoiceOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。
      * @param req TableOCRRequest
      * @return TableOCRResponse
@@ -276,6 +348,43 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<TableOCRResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "TableOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持出租车发票关键字段的识别，包括发票号码、发票代码、金额、日期等字段。
+     * @param req TaxiInvoiceOCRRequest
+     * @return TaxiInvoiceOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public TaxiInvoiceOCRResponse TaxiInvoiceOCR(TaxiInvoiceOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TaxiInvoiceOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TaxiInvoiceOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TaxiInvoiceOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持火车票全字段的识别，包括编号、票价、姓名、座位号、出发时间、出发站、到达站、车次、席别等。
+
+     * @param req TrainTicketOCRRequest
+     * @return TrainTicketOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public TrainTicketOCRResponse TrainTicketOCR(TrainTicketOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TrainTicketOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TrainTicketOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TrainTicketOCR"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

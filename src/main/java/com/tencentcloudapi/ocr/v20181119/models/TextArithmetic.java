@@ -44,7 +44,7 @@ public class TextArithmetic  extends AbstractModel{
     private Integer Confidence;
 
     /**
-    * 文本行坐标，以四个顶点坐标表示
+    * 文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Polygon")
@@ -107,9 +107,9 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取文本行坐标，以四个顶点坐标表示
+     * 获取文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Polygon 文本行坐标，以四个顶点坐标表示
+     * @return Polygon 文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getPolygon() {
@@ -117,9 +117,9 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 设置文本行坐标，以四个顶点坐标表示
+     * 设置文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Polygon 文本行坐标，以四个顶点坐标表示
+     * @param Polygon 文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolygon(Coord [] Polygon) {

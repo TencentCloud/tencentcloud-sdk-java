@@ -171,6 +171,17 @@ public class RunInstancesRequest  extends AbstractModel{
     private String UserData;
 
     /**
+    * 是否只预检此次请求。
+true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
+如果检查不通过，则返回对应错误码；
+如果检查通过，则返回RequestId.
+false（默认）：发送正常请求，通过检查后直接创建实例
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
      * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
      */
@@ -511,6 +522,38 @@ public class RunInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否只预检此次请求。
+true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
+如果检查不通过，则返回对应错误码；
+如果检查通过，则返回RequestId.
+false（默认）：发送正常请求，通过检查后直接创建实例
+     * @return DryRun 是否只预检此次请求。
+true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
+如果检查不通过，则返回对应错误码；
+如果检查通过，则返回RequestId.
+false（默认）：发送正常请求，通过检查后直接创建实例
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * 设置是否只预检此次请求。
+true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
+如果检查不通过，则返回对应错误码；
+如果检查通过，则返回RequestId.
+false（默认）：发送正常请求，通过检查后直接创建实例
+     * @param DryRun 是否只预检此次请求。
+true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
+如果检查不通过，则返回对应错误码；
+如果检查通过，则返回RequestId.
+false（默认）：发送正常请求，通过检查后直接创建实例
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -535,6 +578,7 @@ public class RunInstancesRequest  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }
