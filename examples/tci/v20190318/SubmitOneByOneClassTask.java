@@ -5,10 +5,10 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.profile.HttpProfile;
 import com.tencentcloudapi.tci.v20190318.TciClient;
-import com.tencentcloudapi.tci.v20190318.models.CreatePersonResponse;
-import com.tencentcloudapi.tci.v20190318.models.CreatePersonRequest;
+import com.tencentcloudapi.tci.v20190318.models.SubmitOneByOneClassTaskResponse;
+import com.tencentcloudapi.tci.v20190318.models.SubmitOneByOneClassTaskRequest;
 
-public class CreatePerson {
+public class SubmitOneByOneClassTask {
     public static void main(String[] args) {
         try {
             Credential cred = new Credential("", "");
@@ -20,16 +20,19 @@ public class CreatePerson {
             clientProfile.setUnsignedPayload(true);
             clientProfile.setHttpProfile(httpProfile);
             TciClient client = new TciClient(cred, "",clientProfile);
-            CreatePersonRequest req = new CreatePersonRequest();
-            req.setLibraryId("tci_library_156403897035611372834");
-            req.setPersonName("fxh");
-            req.setJobNumber("3512635");
-            req.setStudentNumber("3628642364");
-            final long b=1;
-            req.setMale(b);
-            req.setMail("79322391@qq.com");
-            CreatePersonResponse res = client.CreatePerson(req);
-            System.out.println(CreatePersonResponse.toJsonString(res));
+            SubmitOneByOneClassTaskRequest req = new SubmitOneByOneClassTaskRequest();
+            req.setFileContent("https://edu-test-1253131631.cos.ap-guangzhou.myqcloud.com/aieduautotest/autotest_vedio.mp4");
+            req.setFileType("vod_url");
+            long lang=0;
+            req.setLang(lang);
+            req.setLibrarySet(new String[] {"library_15603955264181591716"});
+            req.setVocabLibNameList(new String[] {"testlib2"});
+            long EncodeType=1;
+            req.setVoiceEncodeType(EncodeType);
+            long FileType=10;
+            req.setVoiceFileType(FileType);
+            SubmitOneByOneClassTaskResponse res = client.SubmitOneByOneClassTask(req);
+            System.out.println(SubmitOneByOneClassTaskResponse.toJsonString(res));
             System.out.println(res.getRequestId());
         } catch (TencentCloudSDKException e) {
             e.printStackTrace();
