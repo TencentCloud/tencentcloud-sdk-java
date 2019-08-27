@@ -5,10 +5,10 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.profile.HttpProfile;
 import com.tencentcloudapi.tci.v20190318.TciClient;
-import com.tencentcloudapi.tci.v20190318.models.CreateLibraryResponse;
-import com.tencentcloudapi.tci.v20190318.models.CreateLibraryRequest;
+import com.tencentcloudapi.tci.v20190318.models.SubmitFullBodyClassTaskResponse;
+import com.tencentcloudapi.tci.v20190318.models.SubmitFullBodyClassTaskRequest;
 
-public class CreateLibrary {
+public class SubmitFullBodyClassTask {
     public static void main(String[] args) {
         try {
             Credential cred = new Credential("", "");
@@ -20,10 +20,19 @@ public class CreateLibrary {
             clientProfile.setUnsignedPayload(true);
             clientProfile.setHttpProfile(httpProfile);
             TciClient client = new TciClient(cred, "",clientProfile);
-            CreateLibraryRequest req = new CreateLibraryRequest();
-            req.setLibraryName("testfxh1");
-            CreateLibraryResponse res = client.CreateLibrary(req);
-            System.out.println(CreateLibraryResponse.toJsonString(res));
+            SubmitFullBodyClassTaskRequest req = new SubmitFullBodyClassTaskRequest();
+            req.setFileContent("https://edu-test-1253131631.cos.ap-guangzhou.myqcloud.com/aieduautotest/autotest_vedio.mp4");
+            req.setFileType("vod_url");
+            long lang=0;
+            req.setLang(lang);
+            req.setLibrarySet(new String[]{"library_15603955264181591716"});
+            req.setVocabLibNameList(new String[]{"testlib2"});
+            long EncodeType=1;
+            req.setVoiceEncodeType(EncodeType);
+            long FileType=10;
+            req.setVoiceFileType(FileType);
+            SubmitFullBodyClassTaskResponse res = client.SubmitFullBodyClassTask(req);
+            System.out.println(SubmitFullBodyClassTaskResponse.toJsonString(res));
             System.out.println(res.getRequestId());
         } catch (TencentCloudSDKException e) {
             e.printStackTrace();

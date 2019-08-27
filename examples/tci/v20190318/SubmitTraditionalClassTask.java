@@ -5,10 +5,10 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.profile.HttpProfile;
 import com.tencentcloudapi.tci.v20190318.TciClient;
-import com.tencentcloudapi.tci.v20190318.models.CreateFaceResponse;
-import com.tencentcloudapi.tci.v20190318.models.CreateFaceRequest;
+import com.tencentcloudapi.tci.v20190318.models.SubmitTraditionalClassTaskResponse;
+import com.tencentcloudapi.tci.v20190318.models.SubmitTraditionalClassTaskRequest;
 
-public class CreateFace {
+public class SubmitTraditionalClassTask {
     public static void main(String[] args) {
         try {
             Credential cred = new Credential("", "");
@@ -20,13 +20,12 @@ public class CreateFace {
             clientProfile.setUnsignedPayload(true);
             clientProfile.setHttpProfile(httpProfile);
             TciClient client = new TciClient(cred, "",clientProfile);
-            CreateFaceRequest req = new CreateFaceRequest();
-            req.setLibraryId("tci_library_156403897035611372834");
-            req.setPersonId("tci_person_1564039695429032573626");
-            String[] str= {"https://img-blog.csdn.net/20161128171723259"} ;
-            req.setUrls(str);
-            CreateFaceResponse res = client.CreateFace(req);
-            System.out.println(CreateFaceResponse.toJsonString(res));
+            SubmitTraditionalClassTaskRequest req = new SubmitTraditionalClassTaskRequest();
+            req.setFileContent("https://edu-test-1253131631.cos.ap-guangzhou.myqcloud.com/aieduautotest/autotest_vedio.mp4");
+            req.setFileType("vod_url");
+            req.setLibrarySet(new String[]{"library_15603955264181591716"});
+            SubmitTraditionalClassTaskResponse res = client.SubmitTraditionalClassTask(req);
+            System.out.println(SubmitTraditionalClassTaskResponse.toJsonString(res));
             System.out.println(res.getRequestId());
         } catch (TencentCloudSDKException e) {
             e.printStackTrace();
