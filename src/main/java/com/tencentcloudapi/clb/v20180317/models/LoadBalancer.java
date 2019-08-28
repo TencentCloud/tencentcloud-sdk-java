@@ -284,6 +284,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String AddressIPv6;
 
     /**
+    * 暂做保留，一般用户无需关注。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtraInfo")
+    @Expose
+    private ExtraInfo ExtraInfo;
+
+    /**
      * 获取负载均衡实例 ID。
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -932,6 +940,26 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * 获取暂做保留，一般用户无需关注。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ExtraInfo 暂做保留，一般用户无需关注。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExtraInfo getExtraInfo() {
+        return this.ExtraInfo;
+    }
+
+    /**
+     * 设置暂做保留，一般用户无需关注。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraInfo 暂做保留，一般用户无需关注。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtraInfo(ExtraInfo ExtraInfo) {
+        this.ExtraInfo = ExtraInfo;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -968,6 +996,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "LogSetId", this.LogSetId);
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
         this.setParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
+        this.setParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
 
     }
 }

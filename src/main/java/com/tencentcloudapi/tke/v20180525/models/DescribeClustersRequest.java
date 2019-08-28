@@ -38,7 +38,7 @@ public class DescribeClustersRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-    * 最大输出条数，默认20
+    * 最大输出条数，默认20，最大为100
     */
     @SerializedName("Limit")
     @Expose
@@ -88,16 +88,16 @@ public class DescribeClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大输出条数，默认20
-     * @return Limit 最大输出条数，默认20
+     * 获取最大输出条数，默认20，最大为100
+     * @return Limit 最大输出条数，默认20，最大为100
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置最大输出条数，默认20
-     * @param Limit 最大输出条数，默认20
+     * 设置最大输出条数，默认20，最大为100
+     * @param Limit 最大输出条数，默认20，最大为100
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

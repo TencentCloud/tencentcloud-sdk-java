@@ -37,7 +37,7 @@ public class AssignPrivateIpAddressesRequest  extends AbstractModel{
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
 
     /**
-    * 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+    * 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
     */
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
@@ -76,16 +76,16 @@ public class AssignPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
-     * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * 获取新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
+     * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
      */
     public Integer getSecondaryPrivateIpAddressCount() {
         return this.SecondaryPrivateIpAddressCount;
     }
 
     /**
-     * 设置新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
-     * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * 设置新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
+     * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
      */
     public void setSecondaryPrivateIpAddressCount(Integer SecondaryPrivateIpAddressCount) {
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;

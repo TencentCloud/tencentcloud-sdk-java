@@ -107,6 +107,14 @@ public class Vpc  extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * 辅助CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssistantCidrSet")
+    @Expose
+    private AssistantCidr [] AssistantCidrSet;
+
+    /**
      * 获取`VPC`名称。
      * @return VpcName `VPC`名称。
      */
@@ -299,6 +307,26 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
+     * 获取辅助CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AssistantCidrSet 辅助CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AssistantCidr [] getAssistantCidrSet() {
+        return this.AssistantCidrSet;
+    }
+
+    /**
+     * 设置辅助CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssistantCidrSet 辅助CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssistantCidrSet(AssistantCidr [] AssistantCidrSet) {
+        this.AssistantCidrSet = AssistantCidrSet;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +342,7 @@ public class Vpc  extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableDhcp", this.EnableDhcp);
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
 
     }
 }

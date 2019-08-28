@@ -63,20 +63,20 @@ public class TextResetResponse  extends AbstractModel{
     private String InputText;
 
     /**
-    * 机器人回答。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ResponseText")
-    @Expose
-    private String ResponseText;
-
-    /**
-    * 透传字段，由endpoint服务返回。
+    * 透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionAttributes")
     @Expose
     private String SessionAttributes;
+
+    /**
+    * 机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResponseText")
+    @Expose
+    private String ResponseText;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -186,29 +186,9 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取机器人回答。
+     * 获取透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return ResponseText 机器人回答。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getResponseText() {
-        return this.ResponseText;
-    }
-
-    /**
-     * 设置机器人回答。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseText 机器人回答。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setResponseText(String ResponseText) {
-        this.ResponseText = ResponseText;
-    }
-
-    /**
-     * 获取透传字段，由endpoint服务返回。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return SessionAttributes 透传字段，由endpoint服务返回。
+     * @return SessionAttributes 透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionAttributes() {
@@ -216,13 +196,33 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置透传字段，由endpoint服务返回。
+     * 设置透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SessionAttributes 透传字段，由endpoint服务返回。
+     * @param SessionAttributes 透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionAttributes(String SessionAttributes) {
         this.SessionAttributes = SessionAttributes;
+    }
+
+    /**
+     * 获取机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ResponseText 机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResponseText() {
+        return this.ResponseText;
+    }
+
+    /**
+     * 设置机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResponseText 机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResponseText(String ResponseText) {
+        this.ResponseText = ResponseText;
     }
 
     /**
@@ -250,8 +250,8 @@ public class TextResetResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "IntentName", this.IntentName);
         this.setParamArrayObj(map, prefix + "SlotInfoList.", this.SlotInfoList);
         this.setParamSimple(map, prefix + "InputText", this.InputText);
-        this.setParamSimple(map, prefix + "ResponseText", this.ResponseText);
         this.setParamSimple(map, prefix + "SessionAttributes", this.SessionAttributes);
+        this.setParamSimple(map, prefix + "ResponseText", this.ResponseText);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

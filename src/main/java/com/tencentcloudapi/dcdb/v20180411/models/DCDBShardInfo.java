@@ -149,6 +149,20 @@ public class DCDBShardInfo  extends AbstractModel{
     private Integer ShardId;
 
     /**
+    * 产品ProductID
+    */
+    @SerializedName("Pid")
+    @Expose
+    private Integer Pid;
+
+    /**
+    * Proxy版本
+    */
+    @SerializedName("ProxyVersion")
+    @Expose
+    private String ProxyVersion;
+
+    /**
      * 获取所属实例Id
      * @return InstanceId 所属实例Id
      */
@@ -437,6 +451,38 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
+     * 获取产品ProductID
+     * @return Pid 产品ProductID
+     */
+    public Integer getPid() {
+        return this.Pid;
+    }
+
+    /**
+     * 设置产品ProductID
+     * @param Pid 产品ProductID
+     */
+    public void setPid(Integer Pid) {
+        this.Pid = Pid;
+    }
+
+    /**
+     * 获取Proxy版本
+     * @return ProxyVersion Proxy版本
+     */
+    public String getProxyVersion() {
+        return this.ProxyVersion;
+    }
+
+    /**
+     * 设置Proxy版本
+     * @param ProxyVersion Proxy版本
+     */
+    public void setProxyVersion(String ProxyVersion) {
+        this.ProxyVersion = ProxyVersion;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +504,8 @@ public class DCDBShardInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "StorageUsage", this.StorageUsage);
         this.setParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
         this.setParamSimple(map, prefix + "ShardId", this.ShardId);
+        this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
 
     }
 }

@@ -37,7 +37,7 @@ public class CreateClusterRequest  extends AbstractModel{
     private String ClusterType;
 
     /**
-    * CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+    * CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
     */
     @SerializedName("RunInstancesForNode")
     @Expose
@@ -65,7 +65,7 @@ public class CreateClusterRequest  extends AbstractModel{
     private InstanceAdvancedSettings InstanceAdvancedSettings;
 
     /**
-    * 已存在实例的配置信息
+    * 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
     */
     @SerializedName("ExistedInstancesForNode")
     @Expose
@@ -104,16 +104,16 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
-     * @return RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+     * 获取CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
+     * @return RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
      */
     public RunInstancesForNode [] getRunInstancesForNode() {
         return this.RunInstancesForNode;
     }
 
     /**
-     * 设置CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
-     * @param RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+     * 设置CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
+     * @param RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
      */
     public void setRunInstancesForNode(RunInstancesForNode [] RunInstancesForNode) {
         this.RunInstancesForNode = RunInstancesForNode;
@@ -168,16 +168,16 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取已存在实例的配置信息
-     * @return ExistedInstancesForNode 已存在实例的配置信息
+     * 获取已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+     * @return ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
      */
     public ExistedInstancesForNode [] getExistedInstancesForNode() {
         return this.ExistedInstancesForNode;
     }
 
     /**
-     * 设置已存在实例的配置信息
-     * @param ExistedInstancesForNode 已存在实例的配置信息
+     * 设置已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+     * @param ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
      */
     public void setExistedInstancesForNode(ExistedInstancesForNode [] ExistedInstancesForNode) {
         this.ExistedInstancesForNode = ExistedInstancesForNode;

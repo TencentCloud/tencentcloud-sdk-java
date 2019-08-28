@@ -69,7 +69,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     */
     @SerializedName("SimThreshold")
     @Expose
-    private Long SimThreshold;
+    private Float SimThreshold;
 
     /**
     * 老师视频url
@@ -178,7 +178,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
      * 获取人脸检索的相似度阈值，默认值0.89。建议留空。
      * @return SimThreshold 人脸检索的相似度阈值，默认值0.89。建议留空。
      */
-    public Long getSimThreshold() {
+    public Float getSimThreshold() {
         return this.SimThreshold;
     }
 
@@ -186,7 +186,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
      * 设置人脸检索的相似度阈值，默认值0.89。建议留空。
      * @param SimThreshold 人脸检索的相似度阈值，默认值0.89。建议留空。
      */
-    public void setSimThreshold(Long SimThreshold) {
+    public void setSimThreshold(Float SimThreshold) {
         this.SimThreshold = SimThreshold;
     }
 

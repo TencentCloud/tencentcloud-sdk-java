@@ -30,7 +30,7 @@ public class VerifyFaceRequest  extends AbstractModel{
     private String PersonId;
 
     /**
-    * 图片 base64 数据。
+    * 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
@@ -39,7 +39,8 @@ public class VerifyFaceRequest  extends AbstractModel{
     private String Image;
 
     /**
-    * 图片的 Url 。 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+    * 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
@@ -66,10 +67,10 @@ public class VerifyFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片 base64 数据。
+     * 获取图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @return Image 图片 base64 数据。
+     * @return Image 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
@@ -78,10 +79,10 @@ public class VerifyFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片 base64 数据。
+     * 设置图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param Image 图片 base64 数据。
+     * @param Image 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
@@ -90,12 +91,14 @@ public class VerifyFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片的 Url 。 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @return Url 图片的 Url 。 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @return Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
@@ -106,12 +109,14 @@ public class VerifyFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片的 Url 。 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param Url 图片的 Url 。 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @param Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。

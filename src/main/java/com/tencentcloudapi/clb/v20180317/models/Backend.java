@@ -30,7 +30,7 @@ public class Backend  extends AbstractModel{
     private String Type;
 
     /**
-    * 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+    * 后端服务的唯一 ID，如 ins-abcd1234
     */
     @SerializedName("InstanceId")
     @Expose
@@ -83,7 +83,7 @@ public class Backend  extends AbstractModel{
     private String RegisteredTime;
 
     /**
-    * 弹性网卡唯一ID
+    * 弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EniId")
@@ -107,16 +107,16 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
-     * @return InstanceId 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * 获取后端服务的唯一 ID，如 ins-abcd1234
+     * @return InstanceId 后端服务的唯一 ID，如 ins-abcd1234
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * 设置后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
-     * @param InstanceId 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+     * 设置后端服务的唯一 ID，如 ins-abcd1234
+     * @param InstanceId 后端服务的唯一 ID，如 ins-abcd1234
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -235,9 +235,9 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡唯一ID
+     * 获取弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return EniId 弹性网卡唯一ID
+     * @return EniId 弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEniId() {
@@ -245,9 +245,9 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡唯一ID
+     * 设置弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EniId 弹性网卡唯一ID
+     * @param EniId 弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEniId(String EniId) {

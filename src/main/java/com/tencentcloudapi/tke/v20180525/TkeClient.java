@@ -85,6 +85,24 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *为已经存在的集群创建伸缩组
+     * @param req CreateClusterAsGroupRequest
+     * @return CreateClusterAsGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterAsGroupResponse CreateClusterAsGroup(CreateClusterAsGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterAsGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterAsGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClusterAsGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *扩展(新建)集群节点
      * @param req CreateClusterInstancesRequest
      * @return CreateClusterInstancesResponse

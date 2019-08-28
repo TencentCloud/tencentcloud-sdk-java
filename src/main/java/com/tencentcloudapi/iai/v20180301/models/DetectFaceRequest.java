@@ -38,14 +38,16 @@ public class DetectFaceRequest  extends AbstractModel{
     private Integer MinFaceSize;
 
     /**
-    * 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+    * 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
     @SerializedName("Image")
     @Expose
     private String Image;
 
     /**
-    * 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+    * 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -73,6 +75,15 @@ public class DetectFaceRequest  extends AbstractModel{
     @SerializedName("NeedQualityDetection")
     @Expose
     private Integer NeedQualityDetection;
+
+    /**
+    * 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+默认为"2.0"。 
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
+    */
+    @SerializedName("FaceModelVersion")
+    @Expose
+    private String FaceModelVersion;
 
     /**
      * 获取最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
@@ -111,27 +122,33 @@ public class DetectFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @return Image 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * 获取图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @return Image 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * 设置图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param Image 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * 设置图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param Image 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public void setImage(String Image) {
         this.Image = Image;
     }
 
     /**
-     * 获取图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @return Url 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @return Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -141,11 +158,13 @@ public class DetectFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param Url 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+     * @param Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -211,6 +230,30 @@ public class DetectFaceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+默认为"2.0"。 
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
+     * @return FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+默认为"2.0"。 
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
+     */
+    public String getFaceModelVersion() {
+        return this.FaceModelVersion;
+    }
+
+    /**
+     * 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+默认为"2.0"。 
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
+     * @param FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+默认为"2.0"。 
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
+     */
+    public void setFaceModelVersion(String FaceModelVersion) {
+        this.FaceModelVersion = FaceModelVersion;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -220,6 +263,7 @@ public class DetectFaceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "NeedFaceAttributes", this.NeedFaceAttributes);
         this.setParamSimple(map, prefix + "NeedQualityDetection", this.NeedQualityDetection);
+        this.setParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
 
     }
 }

@@ -30,25 +30,32 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 偏移量,默认0
+    * 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
     */
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
 
     /**
-    * 最大输出条数，默认20
+    * 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
     */
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
 
     /**
-    * 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+    * 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
+
+    /**
+    * 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+    */
+    @SerializedName("InstanceRole")
+    @Expose
+    private String InstanceRole;
 
     /**
      * 获取集群ID
@@ -67,51 +74,67 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量,默认0
-     * @return Offset 偏移量,默认0
+     * 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量,默认0
-     * @param Offset 偏移量,默认0
+     * 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取最大输出条数，默认20
-     * @return Limit 最大输出条数，默认20
+     * 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @return Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置最大输出条数，默认20
-     * @param Limit 最大输出条数，默认20
+     * 设置返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @param Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
-     * @return InstanceIds 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+     * 获取需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+     * @return InstanceIds 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * 设置需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
-     * @param InstanceIds 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
+     * 设置需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+     * @param InstanceIds 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * 获取节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     * @return InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     */
+    public String getInstanceRole() {
+        return this.InstanceRole;
+    }
+
+    /**
+     * 设置节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     * @param InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     */
+    public void setInstanceRole(String InstanceRole) {
+        this.InstanceRole = InstanceRole;
     }
 
     /**
@@ -122,6 +145,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
 
     }
 }

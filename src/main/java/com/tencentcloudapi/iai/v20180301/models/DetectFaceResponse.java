@@ -44,6 +44,13 @@ public class DetectFaceResponse  extends AbstractModel{
     private FaceInfo [] FaceInfos;
 
     /**
+    * 人脸识别所用的算法模型版本。
+    */
+    @SerializedName("FaceModelVersion")
+    @Expose
+    private String FaceModelVersion;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class DetectFaceResponse  extends AbstractModel{
     }
 
     /**
+     * 获取人脸识别所用的算法模型版本。
+     * @return FaceModelVersion 人脸识别所用的算法模型版本。
+     */
+    public String getFaceModelVersion() {
+        return this.FaceModelVersion;
+    }
+
+    /**
+     * 设置人脸识别所用的算法模型版本。
+     * @param FaceModelVersion 人脸识别所用的算法模型版本。
+     */
+    public void setFaceModelVersion(String FaceModelVersion) {
+        this.FaceModelVersion = FaceModelVersion;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -121,6 +144,7 @@ public class DetectFaceResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
         this.setParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
         this.setParamArrayObj(map, prefix + "FaceInfos.", this.FaceInfos);
+        this.setParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

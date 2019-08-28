@@ -37,7 +37,7 @@ public class TargetHealth  extends AbstractModel{
     private Integer Port;
 
     /**
-    * 当前健康状态，true：健康，false：不健康。
+    * 当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
     */
     @SerializedName("HealthStatus")
     @Expose
@@ -49,6 +49,13 @@ public class TargetHealth  extends AbstractModel{
     @SerializedName("TargetId")
     @Expose
     private String TargetId;
+
+    /**
+    * 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+    */
+    @SerializedName("HealthStatusDetial")
+    @Expose
+    private String HealthStatusDetial;
 
     /**
      * 获取Target的内网IP
@@ -83,16 +90,16 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 获取当前健康状态，true：健康，false：不健康。
-     * @return HealthStatus 当前健康状态，true：健康，false：不健康。
+     * 获取当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
+     * @return HealthStatus 当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
      */
     public Boolean getHealthStatus() {
         return this.HealthStatus;
     }
 
     /**
-     * 设置当前健康状态，true：健康，false：不健康。
-     * @param HealthStatus 当前健康状态，true：健康，false：不健康。
+     * 设置当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
+     * @param HealthStatus 当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
      */
     public void setHealthStatus(Boolean HealthStatus) {
         this.HealthStatus = HealthStatus;
@@ -115,6 +122,22 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
+     * 获取当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     * @return HealthStatusDetial 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     */
+    public String getHealthStatusDetial() {
+        return this.HealthStatusDetial;
+    }
+
+    /**
+     * 设置当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     * @param HealthStatusDetial 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     */
+    public void setHealthStatusDetial(String HealthStatusDetial) {
+        this.HealthStatusDetial = HealthStatusDetial;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class TargetHealth  extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
         this.setParamSimple(map, prefix + "TargetId", this.TargetId);
+        this.setParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
 
     }
 }

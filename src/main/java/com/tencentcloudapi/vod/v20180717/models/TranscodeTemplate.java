@@ -96,6 +96,14 @@ public class TranscodeTemplate  extends AbstractModel{
     private AudioTemplateInfo AudioTemplate;
 
     /**
+    * 极速高清转码参数，需联系商务架构师开通后才能使用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TEHDConfig")
+    @Expose
+    private TEHDConfig TEHDConfig;
+
+    /**
     * 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
@@ -303,6 +311,26 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
+     * 获取极速高清转码参数，需联系商务架构师开通后才能使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TEHDConfig getTEHDConfig() {
+        return this.TEHDConfig;
+    }
+
+    /**
+     * 设置极速高清转码参数，需联系商务架构师开通后才能使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTEHDConfig(TEHDConfig TEHDConfig) {
+        this.TEHDConfig = TEHDConfig;
+    }
+
+    /**
      * 获取封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
@@ -371,6 +399,7 @@ public class TranscodeTemplate  extends AbstractModel{
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
+        this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamSimple(map, prefix + "ContainerType", this.ContainerType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

@@ -66,6 +66,14 @@ public class AiAnalysisResult  extends AbstractModel{
     private AiAnalysisTaskFrameTagResult FrameTagTask;
 
     /**
+    * 视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HighlightsTask")
+    @Expose
+    private AiAnalysisTaskHighlightResult [] HighlightsTask;
+
+    /**
      * 获取任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -178,6 +186,26 @@ public class AiAnalysisResult  extends AbstractModel{
     }
 
     /**
+     * 获取视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return HighlightsTask 视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskHighlightResult [] getHighlightsTask() {
+        return this.HighlightsTask;
+    }
+
+    /**
+     * 设置视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HighlightsTask 视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHighlightsTask(AiAnalysisTaskHighlightResult [] HighlightsTask) {
+        this.HighlightsTask = HighlightsTask;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -186,6 +214,7 @@ public class AiAnalysisResult  extends AbstractModel{
         this.setParamObj(map, prefix + "CoverTask.", this.CoverTask);
         this.setParamObj(map, prefix + "TagTask.", this.TagTask);
         this.setParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
+        this.setParamArrayObj(map, prefix + "HighlightsTask.", this.HighlightsTask);
 
     }
 }

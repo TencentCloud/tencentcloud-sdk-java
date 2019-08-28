@@ -30,7 +30,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     private Long Definition;
 
     /**
-    * 截图时间点列表，单位为秒。
+    * 截图时间点列表，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeOffsetSet")
@@ -62,9 +62,9 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取截图时间点列表，单位为秒。
+     * 获取截图时间点列表，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return TimeOffsetSet 截图时间点列表，单位为秒。
+     * @return TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float [] getTimeOffsetSet() {
@@ -72,9 +72,9 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置截图时间点列表，单位为秒。
+     * 设置截图时间点列表，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeOffsetSet 截图时间点列表，单位为秒。
+     * @param TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeOffsetSet(Float [] TimeOffsetSet) {

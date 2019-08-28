@@ -37,7 +37,7 @@ public class Address  extends AbstractModel{
     private String AddressName;
 
     /**
-    * `EIP`状态。
+    * `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
     */
     @SerializedName("AddressStatus")
     @Expose
@@ -146,16 +146,16 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取`EIP`状态。
-     * @return AddressStatus `EIP`状态。
+     * 获取`EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
+     * @return AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
      */
     public String getAddressStatus() {
         return this.AddressStatus;
     }
 
     /**
-     * 设置`EIP`状态。
-     * @param AddressStatus `EIP`状态。
+     * 设置`EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
+     * @param AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
      */
     public void setAddressStatus(String AddressStatus) {
         this.AddressStatus = AddressStatus;

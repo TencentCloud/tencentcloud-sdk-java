@@ -51,7 +51,7 @@ public class TextProcessRequest  extends AbstractModel{
     private String BotEnv;
 
     /**
-    * 透传字段，透传给endpoint服务。
+    * 透传字段，透传给用户自定义的WebService服务。
     */
     @SerializedName("SessionAttributes")
     @Expose
@@ -122,16 +122,16 @@ public class TextProcessRequest  extends AbstractModel{
     }
 
     /**
-     * 获取透传字段，透传给endpoint服务。
-     * @return SessionAttributes 透传字段，透传给endpoint服务。
+     * 获取透传字段，透传给用户自定义的WebService服务。
+     * @return SessionAttributes 透传字段，透传给用户自定义的WebService服务。
      */
     public String getSessionAttributes() {
         return this.SessionAttributes;
     }
 
     /**
-     * 设置透传字段，透传给endpoint服务。
-     * @param SessionAttributes 透传字段，透传给endpoint服务。
+     * 设置透传字段，透传给用户自定义的WebService服务。
+     * @param SessionAttributes 透传字段，透传给用户自定义的WebService服务。
      */
     public void setSessionAttributes(String SessionAttributes) {
         this.SessionAttributes = SessionAttributes;

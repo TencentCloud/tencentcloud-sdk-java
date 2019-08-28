@@ -139,6 +139,24 @@ public class TagClient extends AbstractClient{
     }
 
     /**
+     *通过标签查询资源列表
+     * @param req DescribeResourcesByTagsRequest
+     * @return DescribeResourcesByTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourcesByTagsResponse DescribeResourcesByTags(DescribeResourcesByTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourcesByTagsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourcesByTagsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeResourcesByTags"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询已建立的标签列表中的标签键。
 
      * @param req DescribeTagKeysRequest

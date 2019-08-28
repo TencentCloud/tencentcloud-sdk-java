@@ -67,6 +67,24 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
+     *创建黑石计算环境
+     * @param req CreateCpmComputeEnvRequest
+     * @return CreateCpmComputeEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCpmComputeEnvResponse CreateCpmComputeEnv(CreateCpmComputeEnvRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCpmComputeEnvResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCpmComputeEnvResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCpmComputeEnv"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于创建任务模板
      * @param req CreateTaskTemplateRequest
      * @return CreateTaskTemplateResponse

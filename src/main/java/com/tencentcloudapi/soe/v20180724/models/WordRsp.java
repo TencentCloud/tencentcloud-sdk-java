@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class WordRsp  extends AbstractModel{
 
     /**
-    * 当前单词语音起始时间点，单位为ms
+    * 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
     */
     @SerializedName("MemBeginTime")
     @Expose
     private Integer MemBeginTime;
 
     /**
-    * 当前单词语音终止时间点，单位为ms
+    * 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
     */
     @SerializedName("MemEndTime")
     @Expose
@@ -79,32 +79,32 @@ public class WordRsp  extends AbstractModel{
     private String ReferenceWord;
 
     /**
-     * 获取当前单词语音起始时间点，单位为ms
-     * @return MemBeginTime 当前单词语音起始时间点，单位为ms
+     * 获取当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
+     * @return MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      */
     public Integer getMemBeginTime() {
         return this.MemBeginTime;
     }
 
     /**
-     * 设置当前单词语音起始时间点，单位为ms
-     * @param MemBeginTime 当前单词语音起始时间点，单位为ms
+     * 设置当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
+     * @param MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      */
     public void setMemBeginTime(Integer MemBeginTime) {
         this.MemBeginTime = MemBeginTime;
     }
 
     /**
-     * 获取当前单词语音终止时间点，单位为ms
-     * @return MemEndTime 当前单词语音终止时间点，单位为ms
+     * 获取当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
+     * @return MemEndTime 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      */
     public Integer getMemEndTime() {
         return this.MemEndTime;
     }
 
     /**
-     * 设置当前单词语音终止时间点，单位为ms
-     * @param MemEndTime 当前单词语音终止时间点，单位为ms
+     * 设置当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
+     * @param MemEndTime 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      */
     public void setMemEndTime(Integer MemEndTime) {
         this.MemEndTime = MemEndTime;

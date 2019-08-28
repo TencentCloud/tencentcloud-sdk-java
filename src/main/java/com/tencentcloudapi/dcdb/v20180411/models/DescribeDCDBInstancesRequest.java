@@ -114,6 +114,13 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     private Boolean IsFilterExcluster;
 
     /**
+    * 独享集群ID
+    */
+    @SerializedName("ExclusterIds")
+    @Expose
+    private String [] ExclusterIds;
+
+    /**
      * 获取按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
      * @return InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
      */
@@ -322,6 +329,22 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取独享集群ID
+     * @return ExclusterIds 独享集群ID
+     */
+    public String [] getExclusterIds() {
+        return this.ExclusterIds;
+    }
+
+    /**
+     * 设置独享集群ID
+     * @param ExclusterIds 独享集群ID
+     */
+    public void setExclusterIds(String [] ExclusterIds) {
+        this.ExclusterIds = ExclusterIds;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
         this.setParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
+        this.setParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
 
     }
 }
