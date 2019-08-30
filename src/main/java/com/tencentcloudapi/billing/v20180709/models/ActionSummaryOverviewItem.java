@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ActionSummaryOverviewItem  extends AbstractModel{
 
     /**
-    * 交易类型
+    * 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
     */
     @SerializedName("ActionType")
     @Expose
@@ -51,16 +51,16 @@ public class ActionSummaryOverviewItem  extends AbstractModel{
     private String RealTotalCostRatio;
 
     /**
-     * 获取交易类型
-     * @return ActionType 交易类型
+     * 获取交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+     * @return ActionType 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * 设置交易类型
-     * @param ActionType 交易类型
+     * 设置交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+     * @param ActionType 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;

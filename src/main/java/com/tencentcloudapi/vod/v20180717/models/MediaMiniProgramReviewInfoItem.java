@@ -59,7 +59,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     */
     @SerializedName("ReviewSummery")
     @Expose
-    private MediaMiniProgramReviewElem ReviewSummery;
+    private MediaMiniProgramReviewElem [] ReviewSummery;
 
     /**
      * 获取模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
@@ -143,7 +143,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
      * @return ReviewSummery 小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public MediaMiniProgramReviewElem getReviewSummery() {
+    public MediaMiniProgramReviewElem [] getReviewSummery() {
         return this.ReviewSummery;
     }
 
@@ -153,7 +153,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
      * @param ReviewSummery 小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setReviewSummery(MediaMiniProgramReviewElem ReviewSummery) {
+    public void setReviewSummery(MediaMiniProgramReviewElem [] ReviewSummery) {
         this.ReviewSummery = ReviewSummery;
     }
 
@@ -165,7 +165,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "ReviewResult", this.ReviewResult);
-        this.setParamObj(map, prefix + "ReviewSummery.", this.ReviewSummery);
+        this.setParamArrayObj(map, prefix + "ReviewSummery.", this.ReviewSummery);
 
     }
 }

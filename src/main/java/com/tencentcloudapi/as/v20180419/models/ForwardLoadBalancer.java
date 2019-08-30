@@ -44,7 +44,7 @@ public class ForwardLoadBalancer  extends AbstractModel{
     private TargetAttribute [] TargetAttributes;
 
     /**
-    * 转发规则ID
+    * 转发规则ID，注意：针对七层监听器此参数必填
     */
     @SerializedName("LocationId")
     @Expose
@@ -99,16 +99,16 @@ public class ForwardLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则ID
-     * @return LocationId 转发规则ID
+     * 获取转发规则ID，注意：针对七层监听器此参数必填
+     * @return LocationId 转发规则ID，注意：针对七层监听器此参数必填
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * 设置转发规则ID
-     * @param LocationId 转发规则ID
+     * 设置转发规则ID，注意：针对七层监听器此参数必填
+     * @param LocationId 转发规则ID，注意：针对七层监听器此参数必填
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;

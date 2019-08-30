@@ -30,21 +30,21 @@ public class TextArithmetic  extends AbstractModel{
     private String DetectedText;
 
     /**
-    * 结果
+    * 算式运算结果
     */
     @SerializedName("Result")
     @Expose
     private Boolean Result;
 
     /**
-    * 保留字段，暂无意义
+    * 保留字段，暂不支持
     */
     @SerializedName("Confidence")
     @Expose
     private Integer Confidence;
 
     /**
-    * 文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
+    * 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Polygon")
@@ -52,7 +52,7 @@ public class TextArithmetic  extends AbstractModel{
     private Coord [] Polygon;
 
     /**
-    * 此字段为扩展字段
+    * 保留字段，暂不支持
     */
     @SerializedName("AdvancedInfo")
     @Expose
@@ -75,41 +75,41 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取结果
-     * @return Result 结果
+     * 获取算式运算结果
+     * @return Result 算式运算结果
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * 设置结果
-     * @param Result 结果
+     * 设置算式运算结果
+     * @param Result 算式运算结果
      */
     public void setResult(Boolean Result) {
         this.Result = Result;
     }
 
     /**
-     * 获取保留字段，暂无意义
-     * @return Confidence 保留字段，暂无意义
+     * 获取保留字段，暂不支持
+     * @return Confidence 保留字段，暂不支持
      */
     public Integer getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * 设置保留字段，暂无意义
-     * @param Confidence 保留字段，暂无意义
+     * 设置保留字段，暂不支持
+     * @param Confidence 保留字段，暂不支持
      */
     public void setConfidence(Integer Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * 获取文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
+     * 获取文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Polygon 文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
+     * @return Polygon 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getPolygon() {
@@ -117,9 +117,9 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 设置文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
+     * 设置文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Polygon 文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
+     * @param Polygon 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolygon(Coord [] Polygon) {
@@ -127,16 +127,16 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取此字段为扩展字段
-     * @return AdvancedInfo 此字段为扩展字段
+     * 获取保留字段，暂不支持
+     * @return AdvancedInfo 保留字段，暂不支持
      */
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * 设置此字段为扩展字段
-     * @param AdvancedInfo 此字段为扩展字段
+     * 设置保留字段，暂不支持
+     * @param AdvancedInfo 保留字段，暂不支持
      */
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;

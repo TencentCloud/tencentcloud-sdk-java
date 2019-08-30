@@ -87,6 +87,14 @@ public class ApplicationForPage  extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 应用资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationResourceType")
+    @Expose
+    private String ApplicationResourceType;
+
+    /**
      * 获取应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @return ApplicationId 应用ID
@@ -247,6 +255,26 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
+     * 获取应用资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ApplicationResourceType 应用资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationResourceType() {
+        return this.ApplicationResourceType;
+    }
+
+    /**
+     * 设置应用资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationResourceType 应用资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationResourceType(String ApplicationResourceType) {
+        this.ApplicationResourceType = ApplicationResourceType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +286,7 @@ public class ApplicationForPage  extends AbstractModel{
         this.setParamSimple(map, prefix + "ProgLang", this.ProgLang);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
 
     }
 }

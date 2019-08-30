@@ -58,6 +58,13 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     private String MicroserviceType;
 
     /**
+    * 资源类型数组
+    */
+    @SerializedName("ApplicationResourceTypeList")
+    @Expose
+    private String [] ApplicationResourceTypeList;
+
+    /**
      * 获取应用ID列表
      * @return ApplicationIdList 应用ID列表
      */
@@ -138,6 +145,22 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取资源类型数组
+     * @return ApplicationResourceTypeList 资源类型数组
+     */
+    public String [] getApplicationResourceTypeList() {
+        return this.ApplicationResourceTypeList;
+    }
+
+    /**
+     * 设置资源类型数组
+     * @param ApplicationResourceTypeList 资源类型数组
+     */
+    public void setApplicationResourceTypeList(String [] ApplicationResourceTypeList) {
+        this.ApplicationResourceTypeList = ApplicationResourceTypeList;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
+        this.setParamArraySimple(map, prefix + "ApplicationResourceTypeList.", this.ApplicationResourceTypeList);
 
     }
 }

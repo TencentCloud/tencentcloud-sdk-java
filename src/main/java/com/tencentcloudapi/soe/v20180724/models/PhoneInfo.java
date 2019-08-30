@@ -65,8 +65,7 @@ public class PhoneInfo  extends AbstractModel{
     private Boolean Stress;
 
     /**
-    * 参考音素，在单词诊断模式下，代表标准
-音素
+    * 参考音素，在单词诊断模式下，代表标准音素
     */
     @SerializedName("ReferencePhone")
     @Expose
@@ -176,20 +175,16 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取参考音素，在单词诊断模式下，代表标准
-音素
-     * @return ReferencePhone 参考音素，在单词诊断模式下，代表标准
-音素
+     * 获取参考音素，在单词诊断模式下，代表标准音素
+     * @return ReferencePhone 参考音素，在单词诊断模式下，代表标准音素
      */
     public String getReferencePhone() {
         return this.ReferencePhone;
     }
 
     /**
-     * 设置参考音素，在单词诊断模式下，代表标准
-音素
-     * @param ReferencePhone 参考音素，在单词诊断模式下，代表标准
-音素
+     * 设置参考音素，在单词诊断模式下，代表标准音素
+     * @param ReferencePhone 参考音素，在单词诊断模式下，代表标准音素
      */
     public void setReferencePhone(String ReferencePhone) {
         this.ReferencePhone = ReferencePhone;

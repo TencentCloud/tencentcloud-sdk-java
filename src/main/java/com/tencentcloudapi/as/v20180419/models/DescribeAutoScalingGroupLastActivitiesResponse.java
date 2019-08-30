@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20180301.models;
+package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPersonBaseInfoResponse  extends AbstractModel{
+public class DescribeAutoScalingGroupLastActivitiesResponse  extends AbstractModel{
 
     /**
-    * 人员名称
+    * 符合条件的伸缩活动信息集合。说明：伸缩组伸缩活动不存在的则不返回，如传50个伸缩组ID，返回45条数据，说明其中有5个伸缩组伸缩活动不存在。
     */
-    @SerializedName("PersonName")
+    @SerializedName("ActivitySet")
     @Expose
-    private String PersonName;
-
-    /**
-    * 人员性别
-    */
-    @SerializedName("Gender")
-    @Expose
-    private Integer Gender;
-
-    /**
-    * 包含的人脸 ID 列表
-    */
-    @SerializedName("FaceIds")
-    @Expose
-    private String [] FaceIds;
+    private Activity [] ActivitySet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人员名称
-     * @return PersonName 人员名称
+     * 获取符合条件的伸缩活动信息集合。说明：伸缩组伸缩活动不存在的则不返回，如传50个伸缩组ID，返回45条数据，说明其中有5个伸缩组伸缩活动不存在。
+     * @return ActivitySet 符合条件的伸缩活动信息集合。说明：伸缩组伸缩活动不存在的则不返回，如传50个伸缩组ID，返回45条数据，说明其中有5个伸缩组伸缩活动不存在。
      */
-    public String getPersonName() {
-        return this.PersonName;
+    public Activity [] getActivitySet() {
+        return this.ActivitySet;
     }
 
     /**
-     * 设置人员名称
-     * @param PersonName 人员名称
+     * 设置符合条件的伸缩活动信息集合。说明：伸缩组伸缩活动不存在的则不返回，如传50个伸缩组ID，返回45条数据，说明其中有5个伸缩组伸缩活动不存在。
+     * @param ActivitySet 符合条件的伸缩活动信息集合。说明：伸缩组伸缩活动不存在的则不返回，如传50个伸缩组ID，返回45条数据，说明其中有5个伸缩组伸缩活动不存在。
      */
-    public void setPersonName(String PersonName) {
-        this.PersonName = PersonName;
-    }
-
-    /**
-     * 获取人员性别
-     * @return Gender 人员性别
-     */
-    public Integer getGender() {
-        return this.Gender;
-    }
-
-    /**
-     * 设置人员性别
-     * @param Gender 人员性别
-     */
-    public void setGender(Integer Gender) {
-        this.Gender = Gender;
-    }
-
-    /**
-     * 获取包含的人脸 ID 列表
-     * @return FaceIds 包含的人脸 ID 列表
-     */
-    public String [] getFaceIds() {
-        return this.FaceIds;
-    }
-
-    /**
-     * 设置包含的人脸 ID 列表
-     * @param FaceIds 包含的人脸 ID 列表
-     */
-    public void setFaceIds(String [] FaceIds) {
-        this.FaceIds = FaceIds;
+    public void setActivitySet(Activity [] ActivitySet) {
+        this.ActivitySet = ActivitySet;
     }
 
     /**
@@ -118,9 +72,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PersonName", this.PersonName);
-        this.setParamSimple(map, prefix + "Gender", this.Gender);
-        this.setParamArraySimple(map, prefix + "FaceIds.", this.FaceIds);
+        this.setParamArrayObj(map, prefix + "ActivitySet.", this.ActivitySet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

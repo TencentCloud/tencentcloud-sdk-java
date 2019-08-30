@@ -175,6 +175,24 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *用于查看某个设备的详细信息
+     * @param req DescribeDeviceRequest
+     * @return DescribeDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceResponse DescribeDevice(DescribeDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDevice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据设备产品ID、设备名称，获取设备上报的属性数据。
      * @param req DescribeDeviceDataRequest
      * @return DescribeDeviceDataResponse
@@ -265,6 +283,24 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *用于查询某个产品下的设备列表
+     * @param req GetDeviceListRequest
+     * @return GetDeviceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDeviceListResponse GetDeviceList(GetDeviceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDeviceListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDeviceListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetDeviceList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提供查询用户所创建的项目列表查询功能。
      * @param req GetProjectListRequest
      * @return GetProjectListResponse
@@ -294,6 +330,24 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetStudioProductListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetStudioProductList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设备的历史事件
+     * @param req ListEventHistoryRequest
+     * @return ListEventHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListEventHistoryResponse ListEventHistory(ListEventHistoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListEventHistoryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListEventHistoryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListEventHistory"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

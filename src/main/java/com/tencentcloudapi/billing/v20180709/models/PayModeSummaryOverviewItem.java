@@ -51,7 +51,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     private String RealTotalCostRatio;
 
     /**
-    * 按交易类型汇总消费详情
+    * 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
     */
     @SerializedName("Detail")
     @Expose
@@ -122,16 +122,16 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取按交易类型汇总消费详情
-     * @return Detail 按交易类型汇总消费详情
+     * 获取按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+     * @return Detail 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
      */
     public ActionSummaryOverviewItem [] getDetail() {
         return this.Detail;
     }
 
     /**
-     * 设置按交易类型汇总消费详情
-     * @param Detail 按交易类型汇总消费详情
+     * 设置按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+     * @param Detail 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
      */
     public void setDetail(ActionSummaryOverviewItem [] Detail) {
         this.Detail = Detail;

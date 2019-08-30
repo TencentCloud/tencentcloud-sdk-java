@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class BillDetail  extends AbstractModel{
 
     /**
-    * 产品名称
+    * 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * 子产品名称
+    * 子产品名称：云产品子类，如云服务器CVM-标准型S1
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * 计费模式
+    * 计费模式：包年包月和按量计费
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-    * 项目
+    * 项目:资源所属项目
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * 区域
+    * 区域：资源所属地域，如华南地区（广州）
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * 可用区
+    * 可用区：资源所属可用区，如广州三区
     */
     @SerializedName("ZoneName")
     @Expose
@@ -149,96 +149,96 @@ public class BillDetail  extends AbstractModel{
     private String OperateUin;
 
     /**
-     * 获取产品名称
-     * @return BusinessCodeName 产品名称
+     * 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * 设置产品名称
-     * @param BusinessCodeName 产品名称
+     * 设置产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * @param BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * 获取子产品名称
-     * @return ProductCodeName 子产品名称
+     * 获取子产品名称：云产品子类，如云服务器CVM-标准型S1
+     * @return ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * 设置子产品名称
-     * @param ProductCodeName 子产品名称
+     * 设置子产品名称：云产品子类，如云服务器CVM-标准型S1
+     * @param ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * 获取计费模式
-     * @return PayModeName 计费模式
+     * 获取计费模式：包年包月和按量计费
+     * @return PayModeName 计费模式：包年包月和按量计费
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * 设置计费模式
-     * @param PayModeName 计费模式
+     * 设置计费模式：包年包月和按量计费
+     * @param PayModeName 计费模式：包年包月和按量计费
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * 获取项目
-     * @return ProjectName 项目
+     * 获取项目:资源所属项目
+     * @return ProjectName 项目:资源所属项目
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * 设置项目
-     * @param ProjectName 项目
+     * 设置项目:资源所属项目
+     * @param ProjectName 项目:资源所属项目
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * 获取区域
-     * @return RegionName 区域
+     * 获取区域：资源所属地域，如华南地区（广州）
+     * @return RegionName 区域：资源所属地域，如华南地区（广州）
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * 设置区域
-     * @param RegionName 区域
+     * 设置区域：资源所属地域，如华南地区（广州）
+     * @param RegionName 区域：资源所属地域，如华南地区（广州）
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * 获取可用区
-     * @return ZoneName 可用区
+     * 获取可用区：资源所属可用区，如广州三区
+     * @return ZoneName 可用区：资源所属可用区，如广州三区
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * 设置可用区
-     * @param ZoneName 可用区
+     * 设置可用区：资源所属可用区，如广州三区
+     * @param ZoneName 可用区：资源所属可用区，如广州三区
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

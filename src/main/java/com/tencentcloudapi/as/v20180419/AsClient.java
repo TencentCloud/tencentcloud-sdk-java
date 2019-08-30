@@ -385,6 +385,24 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeAutoScalingGroupLastActivities）用于查询伸缩组的最新一次伸缩活动记录。
+     * @param req DescribeAutoScalingGroupLastActivitiesRequest
+     * @return DescribeAutoScalingGroupLastActivitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScalingGroupLastActivitiesResponse DescribeAutoScalingGroupLastActivities(DescribeAutoScalingGroupLastActivitiesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAutoScalingGroupLastActivitiesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingGroupLastActivitiesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAutoScalingGroupLastActivities"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeAutoScalingGroups）用于查询伸缩组信息。
 
 * 可以根据伸缩组ID、伸缩组名称或者启动配置ID等信息来查询伸缩组的详细信息。过滤信息详细请见过滤器`Filter`。

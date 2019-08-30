@@ -13,22 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNamespaceResponse  extends AbstractModel{
+public class GetDeviceListResponse  extends AbstractModel{
 
     /**
-    * 成功时为命名空间ID，失败为null
+    * 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("Devices")
     @Expose
-    private String Result;
+    private DeviceInfo [] Devices;
+
+    /**
+    * 产品下的设备总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +46,43 @@ public class CreateNamespaceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取成功时为命名空间ID，失败为null
+     * 获取返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Result 成功时为命名空间ID，失败为null
+     * @return Devices 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getResult() {
-        return this.Result;
+    public DeviceInfo [] getDevices() {
+        return this.Devices;
     }
 
     /**
-     * 设置成功时为命名空间ID，失败为null
+     * 设置返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 成功时为命名空间ID，失败为null
+     * @param Devices 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(String Result) {
-        this.Result = Result;
+    public void setDevices(DeviceInfo [] Devices) {
+        this.Devices = Devices;
+    }
+
+    /**
+     * 获取产品下的设备总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Total 产品下的设备总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * 设置产品下的设备总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 产品下的设备总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -77,7 +105,8 @@ public class CreateNamespaceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamArrayObj(map, prefix + "Devices.", this.Devices);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

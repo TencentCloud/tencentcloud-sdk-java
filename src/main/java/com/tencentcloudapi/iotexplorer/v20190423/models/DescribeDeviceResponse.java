@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20180301.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPersonBaseInfoResponse  extends AbstractModel{
+public class DescribeDeviceResponse  extends AbstractModel{
 
     /**
-    * 人员名称
+    * 设备信息
     */
-    @SerializedName("PersonName")
+    @SerializedName("Device")
     @Expose
-    private String PersonName;
-
-    /**
-    * 人员性别
-    */
-    @SerializedName("Gender")
-    @Expose
-    private Integer Gender;
-
-    /**
-    * 包含的人脸 ID 列表
-    */
-    @SerializedName("FaceIds")
-    @Expose
-    private String [] FaceIds;
+    private DeviceInfo Device;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人员名称
-     * @return PersonName 人员名称
+     * 获取设备信息
+     * @return Device 设备信息
      */
-    public String getPersonName() {
-        return this.PersonName;
+    public DeviceInfo getDevice() {
+        return this.Device;
     }
 
     /**
-     * 设置人员名称
-     * @param PersonName 人员名称
+     * 设置设备信息
+     * @param Device 设备信息
      */
-    public void setPersonName(String PersonName) {
-        this.PersonName = PersonName;
-    }
-
-    /**
-     * 获取人员性别
-     * @return Gender 人员性别
-     */
-    public Integer getGender() {
-        return this.Gender;
-    }
-
-    /**
-     * 设置人员性别
-     * @param Gender 人员性别
-     */
-    public void setGender(Integer Gender) {
-        this.Gender = Gender;
-    }
-
-    /**
-     * 获取包含的人脸 ID 列表
-     * @return FaceIds 包含的人脸 ID 列表
-     */
-    public String [] getFaceIds() {
-        return this.FaceIds;
-    }
-
-    /**
-     * 设置包含的人脸 ID 列表
-     * @param FaceIds 包含的人脸 ID 列表
-     */
-    public void setFaceIds(String [] FaceIds) {
-        this.FaceIds = FaceIds;
+    public void setDevice(DeviceInfo Device) {
+        this.Device = Device;
     }
 
     /**
@@ -118,9 +72,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PersonName", this.PersonName);
-        this.setParamSimple(map, prefix + "Gender", this.Gender);
-        this.setParamArraySimple(map, prefix + "FaceIds.", this.FaceIds);
+        this.setParamObj(map, prefix + "Device.", this.Device);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

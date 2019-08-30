@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class BillResourceSummary  extends AbstractModel{
 
     /**
-    * 产品
+    * 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * 子产品
+    * 子产品：云产品子类，如云服务器CVM-标准型S1
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * 计费模式
+    * 计费模式：包年包月和按量计费
     */
     @SerializedName("PayModeName")
     @Expose
@@ -79,7 +79,7 @@ public class BillResourceSummary  extends AbstractModel{
     private String ResourceName;
 
     /**
-    * 交易类型
+    * 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
     */
     @SerializedName("ActionTypeName")
     @Expose
@@ -205,48 +205,48 @@ public class BillResourceSummary  extends AbstractModel{
     private String ExtendField5;
 
     /**
-     * 获取产品
-     * @return BusinessCodeName 产品
+     * 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * 设置产品
-     * @param BusinessCodeName 产品
+     * 设置产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * @param BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * 获取子产品
-     * @return ProductCodeName 子产品
+     * 获取子产品：云产品子类，如云服务器CVM-标准型S1
+     * @return ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * 设置子产品
-     * @param ProductCodeName 子产品
+     * 设置子产品：云产品子类，如云服务器CVM-标准型S1
+     * @param ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * 获取计费模式
-     * @return PayModeName 计费模式
+     * 获取计费模式：包年包月和按量计费
+     * @return PayModeName 计费模式：包年包月和按量计费
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * 设置计费模式
-     * @param PayModeName 计费模式
+     * 设置计费模式：包年包月和按量计费
+     * @param PayModeName 计费模式：包年包月和按量计费
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
@@ -333,16 +333,16 @@ public class BillResourceSummary  extends AbstractModel{
     }
 
     /**
-     * 获取交易类型
-     * @return ActionTypeName 交易类型
+     * 获取交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+     * @return ActionTypeName 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * 设置交易类型
-     * @param ActionTypeName 交易类型
+     * 设置交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+     * @param ActionTypeName 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;

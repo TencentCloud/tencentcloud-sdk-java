@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaMiniProgramReviewInfo  extends AbstractModel{
+public class ScanVoiceResult  extends AbstractModel{
 
     /**
-    * 审核信息列表。
+    * 数据ID
     */
-    @SerializedName("MiniProgramReviewList")
+    @SerializedName("DataId")
     @Expose
-    private MediaMiniProgramReviewInfoItem [] MiniProgramReviewList;
+    private String DataId;
 
     /**
-     * 获取审核信息列表。
-     * @return MiniProgramReviewList 审核信息列表。
+    * 任务ID
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+     * 获取数据ID
+     * @return DataId 数据ID
      */
-    public MediaMiniProgramReviewInfoItem [] getMiniProgramReviewList() {
-        return this.MiniProgramReviewList;
+    public String getDataId() {
+        return this.DataId;
     }
 
     /**
-     * 设置审核信息列表。
-     * @param MiniProgramReviewList 审核信息列表。
+     * 设置数据ID
+     * @param DataId 数据ID
      */
-    public void setMiniProgramReviewList(MediaMiniProgramReviewInfoItem [] MiniProgramReviewList) {
-        this.MiniProgramReviewList = MiniProgramReviewList;
+    public void setDataId(String DataId) {
+        this.DataId = DataId;
+    }
+
+    /**
+     * 获取任务ID
+     * @return TaskId 任务ID
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * 设置任务ID
+     * @param TaskId 任务ID
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "MiniProgramReviewList.", this.MiniProgramReviewList);
+        this.setParamSimple(map, prefix + "DataId", this.DataId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

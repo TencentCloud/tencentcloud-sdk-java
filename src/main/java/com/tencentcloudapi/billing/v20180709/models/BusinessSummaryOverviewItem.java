@@ -31,7 +31,7 @@ public class BusinessSummaryOverviewItem  extends AbstractModel{
     private String BusinessCode;
 
     /**
-    * 产品名称
+    * 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
     */
     @SerializedName("BusinessCodeName")
     @Expose
@@ -72,16 +72,16 @@ public class BusinessSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取产品名称
-     * @return BusinessCodeName 产品名称
+     * 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * 设置产品名称
-     * @param BusinessCodeName 产品名称
+     * 设置产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * @param BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;

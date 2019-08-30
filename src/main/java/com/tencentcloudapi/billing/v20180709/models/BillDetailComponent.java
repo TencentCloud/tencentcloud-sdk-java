@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class BillDetailComponent  extends AbstractModel{
 
     /**
-    * 组件名称
+    * 组件类型:资源组件类型的名称，如内存、硬盘等
     */
     @SerializedName("ComponentCodeName")
     @Expose
     private String ComponentCodeName;
 
     /**
-    * 组件类型名称
+    * 组件名称:资源组件的名称，如云数据库MySQL-内存等
     */
     @SerializedName("ItemCodeName")
     @Expose
     private String ItemCodeName;
 
     /**
-    * 组件刊例价
+    * 组件刊例价:资源组件的原始价格，保持原始粒度
     */
     @SerializedName("SinglePrice")
     @Expose
@@ -135,48 +135,48 @@ public class BillDetailComponent  extends AbstractModel{
     private String IncentivePayAmount;
 
     /**
-     * 获取组件名称
-     * @return ComponentCodeName 组件名称
+     * 获取组件类型:资源组件类型的名称，如内存、硬盘等
+     * @return ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
      */
     public String getComponentCodeName() {
         return this.ComponentCodeName;
     }
 
     /**
-     * 设置组件名称
-     * @param ComponentCodeName 组件名称
+     * 设置组件类型:资源组件类型的名称，如内存、硬盘等
+     * @param ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
      */
     public void setComponentCodeName(String ComponentCodeName) {
         this.ComponentCodeName = ComponentCodeName;
     }
 
     /**
-     * 获取组件类型名称
-     * @return ItemCodeName 组件类型名称
+     * 获取组件名称:资源组件的名称，如云数据库MySQL-内存等
+     * @return ItemCodeName 组件名称:资源组件的名称，如云数据库MySQL-内存等
      */
     public String getItemCodeName() {
         return this.ItemCodeName;
     }
 
     /**
-     * 设置组件类型名称
-     * @param ItemCodeName 组件类型名称
+     * 设置组件名称:资源组件的名称，如云数据库MySQL-内存等
+     * @param ItemCodeName 组件名称:资源组件的名称，如云数据库MySQL-内存等
      */
     public void setItemCodeName(String ItemCodeName) {
         this.ItemCodeName = ItemCodeName;
     }
 
     /**
-     * 获取组件刊例价
-     * @return SinglePrice 组件刊例价
+     * 获取组件刊例价:资源组件的原始价格，保持原始粒度
+     * @return SinglePrice 组件刊例价:资源组件的原始价格，保持原始粒度
      */
     public String getSinglePrice() {
         return this.SinglePrice;
     }
 
     /**
-     * 设置组件刊例价
-     * @param SinglePrice 组件刊例价
+     * 设置组件刊例价:资源组件的原始价格，保持原始粒度
+     * @param SinglePrice 组件刊例价:资源组件的原始价格，保持原始粒度
      */
     public void setSinglePrice(String SinglePrice) {
         this.SinglePrice = SinglePrice;

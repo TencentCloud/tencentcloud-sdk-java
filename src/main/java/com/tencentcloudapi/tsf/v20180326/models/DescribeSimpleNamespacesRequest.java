@@ -58,6 +58,13 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     private String NamespaceId;
 
     /**
+    * 查询资源类型列表
+    */
+    @SerializedName("NamespaceResourceTypeList")
+    @Expose
+    private String [] NamespaceResourceTypeList;
+
+    /**
      * 获取命名空间ID列表，不传入时查询全量
      * @return NamespaceIdList 命名空间ID列表，不传入时查询全量
      */
@@ -138,6 +145,22 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取查询资源类型列表
+     * @return NamespaceResourceTypeList 查询资源类型列表
+     */
+    public String [] getNamespaceResourceTypeList() {
+        return this.NamespaceResourceTypeList;
+    }
+
+    /**
+     * 设置查询资源类型列表
+     * @param NamespaceResourceTypeList 查询资源类型列表
+     */
+    public void setNamespaceResourceTypeList(String [] NamespaceResourceTypeList) {
+        this.NamespaceResourceTypeList = NamespaceResourceTypeList;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+        this.setParamArraySimple(map, prefix + "NamespaceResourceTypeList.", this.NamespaceResourceTypeList);
 
     }
 }

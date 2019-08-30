@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaMiniProgramReviewInfo  extends AbstractModel{
+public class DescribeAutoScalingGroupLastActivitiesRequest  extends AbstractModel{
 
     /**
-    * 审核信息列表。
+    * 伸缩组ID列表
     */
-    @SerializedName("MiniProgramReviewList")
+    @SerializedName("AutoScalingGroupIds")
     @Expose
-    private MediaMiniProgramReviewInfoItem [] MiniProgramReviewList;
+    private String [] AutoScalingGroupIds;
 
     /**
-     * 获取审核信息列表。
-     * @return MiniProgramReviewList 审核信息列表。
+     * 获取伸缩组ID列表
+     * @return AutoScalingGroupIds 伸缩组ID列表
      */
-    public MediaMiniProgramReviewInfoItem [] getMiniProgramReviewList() {
-        return this.MiniProgramReviewList;
+    public String [] getAutoScalingGroupIds() {
+        return this.AutoScalingGroupIds;
     }
 
     /**
-     * 设置审核信息列表。
-     * @param MiniProgramReviewList 审核信息列表。
+     * 设置伸缩组ID列表
+     * @param AutoScalingGroupIds 伸缩组ID列表
      */
-    public void setMiniProgramReviewList(MediaMiniProgramReviewInfoItem [] MiniProgramReviewList) {
-        this.MiniProgramReviewList = MiniProgramReviewList;
+    public void setAutoScalingGroupIds(String [] AutoScalingGroupIds) {
+        this.AutoScalingGroupIds = AutoScalingGroupIds;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "MiniProgramReviewList.", this.MiniProgramReviewList);
+        this.setParamArraySimple(map, prefix + "AutoScalingGroupIds.", this.AutoScalingGroupIds);
 
     }
 }

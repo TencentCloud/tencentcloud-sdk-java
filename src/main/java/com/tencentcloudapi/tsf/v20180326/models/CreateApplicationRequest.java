@@ -58,6 +58,13 @@ public class CreateApplicationRequest  extends AbstractModel{
     private String MicroserviceType;
 
     /**
+    * 应有资源类型
+    */
+    @SerializedName("ApplicationResourceType")
+    @Expose
+    private String ApplicationResourceType;
+
+    /**
      * 获取应用名称
      * @return ApplicationName 应用名称
      */
@@ -138,6 +145,22 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取应有资源类型
+     * @return ApplicationResourceType 应有资源类型
+     */
+    public String getApplicationResourceType() {
+        return this.ApplicationResourceType;
+    }
+
+    /**
+     * 设置应有资源类型
+     * @param ApplicationResourceType 应有资源类型
+     */
+    public void setApplicationResourceType(String ApplicationResourceType) {
+        this.ApplicationResourceType = ApplicationResourceType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateApplicationRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationDesc", this.ApplicationDesc);
         this.setParamSimple(map, prefix + "ApplicationLogConfig", this.ApplicationLogConfig);
         this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
+        this.setParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
 
     }
 }

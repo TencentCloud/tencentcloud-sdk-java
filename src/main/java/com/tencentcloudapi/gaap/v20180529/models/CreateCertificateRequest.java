@@ -51,7 +51,7 @@ public class CreateCertificateRequest  extends AbstractModel{
     private String CertificateAlias;
 
     /**
-    * 秘钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+    * 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
     */
     @SerializedName("CertificateKey")
     @Expose
@@ -134,16 +134,16 @@ public class CreateCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取秘钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
-     * @return CertificateKey 秘钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+     * 获取密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+     * @return CertificateKey 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
      */
     public String getCertificateKey() {
         return this.CertificateKey;
     }
 
     /**
-     * 设置秘钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
-     * @param CertificateKey 秘钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+     * 设置密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+     * @param CertificateKey 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
      */
     public void setCertificateKey(String CertificateKey) {
         this.CertificateKey = CertificateKey;

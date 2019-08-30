@@ -79,6 +79,13 @@ public class DescribeGroupsRequest  extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 部署组资源类型列表
+    */
+    @SerializedName("GroupResourceTypeList")
+    @Expose
+    private String [] GroupResourceTypeList;
+
+    /**
      * 获取搜索字段
      * @return SearchWord 搜索字段
      */
@@ -207,6 +214,22 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取部署组资源类型列表
+     * @return GroupResourceTypeList 部署组资源类型列表
+     */
+    public String [] getGroupResourceTypeList() {
+        return this.GroupResourceTypeList;
+    }
+
+    /**
+     * 设置部署组资源类型列表
+     * @param GroupResourceTypeList 部署组资源类型列表
+     */
+    public void setGroupResourceTypeList(String [] GroupResourceTypeList) {
+        this.GroupResourceTypeList = GroupResourceTypeList;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "GroupResourceTypeList.", this.GroupResourceTypeList);
 
     }
 }

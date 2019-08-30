@@ -13,35 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20180301.models;
+package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPersonBaseInfoResponse  extends AbstractModel{
+public class ScanVoiceResponse  extends AbstractModel{
 
     /**
-    * 人员名称
+    * 语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li>
+<li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
     */
-    @SerializedName("PersonName")
+    @SerializedName("Data")
     @Expose
-    private String PersonName;
-
-    /**
-    * 人员性别
-    */
-    @SerializedName("Gender")
-    @Expose
-    private Integer Gender;
-
-    /**
-    * 包含的人脸 ID 列表
-    */
-    @SerializedName("FaceIds")
-    @Expose
-    private String [] FaceIds;
+    private ScanVoiceResult [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +38,23 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人员名称
-     * @return PersonName 人员名称
+     * 获取语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li>
+<li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+     * @return Data 语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li>
+<li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
      */
-    public String getPersonName() {
-        return this.PersonName;
+    public ScanVoiceResult [] getData() {
+        return this.Data;
     }
 
     /**
-     * 设置人员名称
-     * @param PersonName 人员名称
+     * 设置语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li>
+<li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+     * @param Data 语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li>
+<li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
      */
-    public void setPersonName(String PersonName) {
-        this.PersonName = PersonName;
-    }
-
-    /**
-     * 获取人员性别
-     * @return Gender 人员性别
-     */
-    public Integer getGender() {
-        return this.Gender;
-    }
-
-    /**
-     * 设置人员性别
-     * @param Gender 人员性别
-     */
-    public void setGender(Integer Gender) {
-        this.Gender = Gender;
-    }
-
-    /**
-     * 获取包含的人脸 ID 列表
-     * @return FaceIds 包含的人脸 ID 列表
-     */
-    public String [] getFaceIds() {
-        return this.FaceIds;
-    }
-
-    /**
-     * 设置包含的人脸 ID 列表
-     * @param FaceIds 包含的人脸 ID 列表
-     */
-    public void setFaceIds(String [] FaceIds) {
-        this.FaceIds = FaceIds;
+    public void setData(ScanVoiceResult [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -118,9 +77,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PersonName", this.PersonName);
-        this.setParamSimple(map, prefix + "Gender", this.Gender);
-        this.setParamArraySimple(map, prefix + "FaceIds.", this.FaceIds);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

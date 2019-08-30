@@ -44,6 +44,13 @@ public class CreateNamespaceRequest  extends AbstractModel{
     private String NamespaceDesc;
 
     /**
+    * 命名空间资源类型(默认值为DEF)
+    */
+    @SerializedName("NamespaceResourceType")
+    @Expose
+    private String NamespaceResourceType;
+
+    /**
      * 获取集群ID
      * @return ClusterId 集群ID
      */
@@ -92,12 +99,29 @@ public class CreateNamespaceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取命名空间资源类型(默认值为DEF)
+     * @return NamespaceResourceType 命名空间资源类型(默认值为DEF)
+     */
+    public String getNamespaceResourceType() {
+        return this.NamespaceResourceType;
+    }
+
+    /**
+     * 设置命名空间资源类型(默认值为DEF)
+     * @param NamespaceResourceType 命名空间资源类型(默认值为DEF)
+     */
+    public void setNamespaceResourceType(String NamespaceResourceType) {
+        this.NamespaceResourceType = NamespaceResourceType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "NamespaceDesc", this.NamespaceDesc);
+        this.setParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
 
     }
 }
