@@ -387,8 +387,10 @@ abstract public class AbstractClient {
             .add("X-TC-Action", action)
             .add("X-TC-Timestamp", timestamp)
             .add("X-TC-Version", this.apiVersion)
-            .add("X-TC-Region", this.getRegion())
             .add("X-TC-RequestClient", SDK_VERSION);
+        if (null != this.getRegion()) {
+            hb.add("X-TC-Region", this.getRegion());
+        }
         String token = this.credential.getToken();
         if (token != null && ! token.isEmpty()) {
             hb.add("X-TC-Token", token);
