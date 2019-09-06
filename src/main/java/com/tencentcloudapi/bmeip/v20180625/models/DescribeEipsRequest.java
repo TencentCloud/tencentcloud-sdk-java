@@ -118,7 +118,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     */
     @SerializedName("AclId")
     @Expose
-    private Integer AclId;
+    private String AclId;
 
     /**
     * 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
@@ -339,7 +339,7 @@ public class DescribeEipsRequest  extends AbstractModel{
      * 获取EIP ACL实例ID
      * @return AclId EIP ACL实例ID
      */
-    public Integer getAclId() {
+    public String getAclId() {
         return this.AclId;
     }
 
@@ -347,7 +347,7 @@ public class DescribeEipsRequest  extends AbstractModel{
      * 设置EIP ACL实例ID
      * @param AclId EIP ACL实例ID
      */
-    public void setAclId(Integer AclId) {
+    public void setAclId(String AclId) {
         this.AclId = AclId;
     }
 

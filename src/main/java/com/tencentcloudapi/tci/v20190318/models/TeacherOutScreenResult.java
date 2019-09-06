@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class TeacherOutScreenResult  extends AbstractModel{
 
     /**
-    * 动作识别结果
+    * 动作识别结果，InScreen：在屏幕内
+OutScreen：不在屏幕内
     */
     @SerializedName("Class")
     @Expose
@@ -58,17 +59,21 @@ public class TeacherOutScreenResult  extends AbstractModel{
     private Long Width;
 
     /**
-     * 获取动作识别结果
+     * 获取动作识别结果，InScreen：在屏幕内
+OutScreen：不在屏幕内
      * Java getClass cannot and should not be overrided, hence we have to transfer it to a new name which should never conflict with another attribute. The underscode(_) is used as a postfix, because it is invalid in API 3.0, but can be used in Java, even it is not recommended.
-     * @return Class 动作识别结果
+     * @return Class 动作识别结果，InScreen：在屏幕内
+OutScreen：不在屏幕内
      */
     public String getClass_() {
         return this.Class;
     }
 
     /**
-     * 设置动作识别结果
-     * @param Class 动作识别结果
+     * 设置动作识别结果，InScreen：在屏幕内
+OutScreen：不在屏幕内
+     * @param Class 动作识别结果，InScreen：在屏幕内
+OutScreen：不在屏幕内
      */
     public void setClass(String Class) {
         this.Class = Class;

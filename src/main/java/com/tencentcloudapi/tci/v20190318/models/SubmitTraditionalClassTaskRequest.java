@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class SubmitTraditionalClassTaskRequest  extends AbstractModel{
 
     /**
-    * 输入分析对象内容，仅支持url，暂不支持直接上传base64图片
+    * 输入分析对象内容，输入数据格式参考FileType参数释义
     */
     @SerializedName("FileContent")
     @Expose
     private String FileContent;
 
     /**
-    * 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+    * 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture：图片二进制数据的BASE64编码
     */
     @SerializedName("FileType")
     @Expose
@@ -44,39 +44,39 @@ public class SubmitTraditionalClassTaskRequest  extends AbstractModel{
     private String [] LibrarySet;
 
     /**
-    * 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+    * 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
     */
     @SerializedName("MaxVideoDuration")
     @Expose
     private Long MaxVideoDuration;
 
     /**
-     * 获取输入分析对象内容，仅支持url，暂不支持直接上传base64图片
-     * @return FileContent 输入分析对象内容，仅支持url，暂不支持直接上传base64图片
+     * 获取输入分析对象内容，输入数据格式参考FileType参数释义
+     * @return FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public String getFileContent() {
         return this.FileContent;
     }
 
     /**
-     * 设置输入分析对象内容，仅支持url，暂不支持直接上传base64图片
-     * @param FileContent 输入分析对象内容，仅支持url，暂不支持直接上传base64图片
+     * 设置输入分析对象内容，输入数据格式参考FileType参数释义
+     * @param FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;
     }
 
     /**
-     * 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
-     * @return FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+     * 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture：图片二进制数据的BASE64编码
+     * @return FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture：图片二进制数据的BASE64编码
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
-     * @param FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+     * 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture：图片二进制数据的BASE64编码
+     * @param FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture：图片二进制数据的BASE64编码
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
@@ -99,16 +99,16 @@ public class SubmitTraditionalClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
-     * @return MaxVideoDuration 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * 获取视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * @return MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public Long getMaxVideoDuration() {
         return this.MaxVideoDuration;
     }
 
     /**
-     * 设置直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
-     * @param MaxVideoDuration 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * 设置视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * @param MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public void setMaxVideoDuration(Long MaxVideoDuration) {
         this.MaxVideoDuration = MaxVideoDuration;

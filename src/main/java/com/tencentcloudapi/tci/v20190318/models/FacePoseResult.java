@@ -30,21 +30,21 @@ public class FacePoseResult  extends AbstractModel{
     private String Direction;
 
     /**
-    * Pitch
+    * 围绕Z轴旋转角度，俯仰角
     */
     @SerializedName("Pitch")
     @Expose
     private Float Pitch;
 
     /**
-    * Roll
+    * 围绕X轴旋转角度，翻滚角
     */
     @SerializedName("Roll")
     @Expose
     private Float Roll;
 
     /**
-    * 角度信息选填
+    * 围绕Y轴旋转角度，偏航角
     */
     @SerializedName("Yaw")
     @Expose
@@ -67,48 +67,48 @@ public class FacePoseResult  extends AbstractModel{
     }
 
     /**
-     * 获取Pitch
-     * @return Pitch Pitch
+     * 获取围绕Z轴旋转角度，俯仰角
+     * @return Pitch 围绕Z轴旋转角度，俯仰角
      */
     public Float getPitch() {
         return this.Pitch;
     }
 
     /**
-     * 设置Pitch
-     * @param Pitch Pitch
+     * 设置围绕Z轴旋转角度，俯仰角
+     * @param Pitch 围绕Z轴旋转角度，俯仰角
      */
     public void setPitch(Float Pitch) {
         this.Pitch = Pitch;
     }
 
     /**
-     * 获取Roll
-     * @return Roll Roll
+     * 获取围绕X轴旋转角度，翻滚角
+     * @return Roll 围绕X轴旋转角度，翻滚角
      */
     public Float getRoll() {
         return this.Roll;
     }
 
     /**
-     * 设置Roll
-     * @param Roll Roll
+     * 设置围绕X轴旋转角度，翻滚角
+     * @param Roll 围绕X轴旋转角度，翻滚角
      */
     public void setRoll(Float Roll) {
         this.Roll = Roll;
     }
 
     /**
-     * 获取角度信息选填
-     * @return Yaw 角度信息选填
+     * 获取围绕Y轴旋转角度，偏航角
+     * @return Yaw 围绕Y轴旋转角度，偏航角
      */
     public Float getYaw() {
         return this.Yaw;
     }
 
     /**
-     * 设置角度信息选填
-     * @param Yaw 角度信息选填
+     * 设置围绕Y轴旋转角度，偏航角
+     * @param Yaw 围绕Y轴旋转角度，偏航角
      */
     public void setYaw(Float Yaw) {
         this.Yaw = Yaw;

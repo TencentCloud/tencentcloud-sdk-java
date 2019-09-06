@@ -30,6 +30,20 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     private Long Lang;
 
     /**
+    * 学生音频流
+    */
+    @SerializedName("StudentUrl")
+    @Expose
+    private String StudentUrl;
+
+    /**
+    * 教师音频流
+    */
+    @SerializedName("TeacherUrl")
+    @Expose
+    private String TeacherUrl;
+
+    /**
     * 语音编码类型 1:pcm
     */
     @SerializedName("VoiceEncodeType")
@@ -49,20 +63,6 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     @SerializedName("Functions")
     @Expose
     private Function Functions;
-
-    /**
-    * 学生音频流
-    */
-    @SerializedName("StudentUrl")
-    @Expose
-    private String StudentUrl;
-
-    /**
-    * 教师音频流
-    */
-    @SerializedName("TeacherUrl")
-    @Expose
-    private String TeacherUrl;
 
     /**
     * 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
@@ -85,6 +85,38 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
      */
     public void setLang(Long Lang) {
         this.Lang = Lang;
+    }
+
+    /**
+     * 获取学生音频流
+     * @return StudentUrl 学生音频流
+     */
+    public String getStudentUrl() {
+        return this.StudentUrl;
+    }
+
+    /**
+     * 设置学生音频流
+     * @param StudentUrl 学生音频流
+     */
+    public void setStudentUrl(String StudentUrl) {
+        this.StudentUrl = StudentUrl;
+    }
+
+    /**
+     * 获取教师音频流
+     * @return TeacherUrl 教师音频流
+     */
+    public String getTeacherUrl() {
+        return this.TeacherUrl;
+    }
+
+    /**
+     * 设置教师音频流
+     * @param TeacherUrl 教师音频流
+     */
+    public void setTeacherUrl(String TeacherUrl) {
+        this.TeacherUrl = TeacherUrl;
     }
 
     /**
@@ -136,38 +168,6 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取学生音频流
-     * @return StudentUrl 学生音频流
-     */
-    public String getStudentUrl() {
-        return this.StudentUrl;
-    }
-
-    /**
-     * 设置学生音频流
-     * @param StudentUrl 学生音频流
-     */
-    public void setStudentUrl(String StudentUrl) {
-        this.StudentUrl = StudentUrl;
-    }
-
-    /**
-     * 获取教师音频流
-     * @return TeacherUrl 教师音频流
-     */
-    public String getTeacherUrl() {
-        return this.TeacherUrl;
-    }
-
-    /**
-     * 设置教师音频流
-     * @param TeacherUrl 教师音频流
-     */
-    public void setTeacherUrl(String TeacherUrl) {
-        this.TeacherUrl = TeacherUrl;
-    }
-
-    /**
      * 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      * @return VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
@@ -188,11 +188,11 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Lang", this.Lang);
+        this.setParamSimple(map, prefix + "StudentUrl", this.StudentUrl);
+        this.setParamSimple(map, prefix + "TeacherUrl", this.TeacherUrl);
         this.setParamSimple(map, prefix + "VoiceEncodeType", this.VoiceEncodeType);
         this.setParamSimple(map, prefix + "VoiceFileType", this.VoiceFileType);
         this.setParamObj(map, prefix + "Functions.", this.Functions);
-        this.setParamSimple(map, prefix + "StudentUrl", this.StudentUrl);
-        this.setParamSimple(map, prefix + "TeacherUrl", this.TeacherUrl);
         this.setParamArraySimple(map, prefix + "VocabLibNameList.", this.VocabLibNameList);
 
     }

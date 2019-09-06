@@ -53,6 +53,22 @@ public class ScanPiece  extends AbstractModel{
     private ScanDetail [] ScanDetail;
 
     /**
+    * gme实时语音房间id，透传任务传入时的RoomId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RoomId")
+    @Expose
+    private String RoomId;
+
+    /**
+    * gme实时语音用户id，透传任务传入时的OpenId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OpenId")
+    @Expose
+    private String OpenId;
+
+    /**
      * 获取流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
      * @return DumpUrl 流检测时返回，音频转存地址，保留30min
@@ -125,6 +141,46 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
+     * 获取gme实时语音房间id，透传任务传入时的RoomId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return RoomId gme实时语音房间id，透传任务传入时的RoomId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRoomId() {
+        return this.RoomId;
+    }
+
+    /**
+     * 设置gme实时语音房间id，透传任务传入时的RoomId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RoomId gme实时语音房间id，透传任务传入时的RoomId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRoomId(String RoomId) {
+        this.RoomId = RoomId;
+    }
+
+    /**
+     * 获取gme实时语音用户id，透传任务传入时的OpenId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return OpenId gme实时语音用户id，透传任务传入时的OpenId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOpenId() {
+        return this.OpenId;
+    }
+
+    /**
+     * 设置gme实时语音用户id，透传任务传入时的OpenId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OpenId gme实时语音用户id，透传任务传入时的OpenId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOpenId(String OpenId) {
+        this.OpenId = OpenId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -132,6 +188,8 @@ public class ScanPiece  extends AbstractModel{
         this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
         this.setParamSimple(map, prefix + "MainType", this.MainType);
         this.setParamArrayObj(map, prefix + "ScanDetail.", this.ScanDetail);
+        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
+        this.setParamSimple(map, prefix + "OpenId", this.OpenId);
 
     }
 }

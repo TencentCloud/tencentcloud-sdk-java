@@ -37,7 +37,7 @@ public class OutputMappingConfig  extends AbstractModel{
     private Integer WorkerNum;
 
     /**
-    * worker分块大小
+    * worker分块大小，单位MB
     */
     @SerializedName("WorkerPartSize")
     @Expose
@@ -76,16 +76,16 @@ public class OutputMappingConfig  extends AbstractModel{
     }
 
     /**
-     * 获取worker分块大小
-     * @return WorkerPartSize worker分块大小
+     * 获取worker分块大小，单位MB
+     * @return WorkerPartSize worker分块大小，单位MB
      */
     public Integer getWorkerPartSize() {
         return this.WorkerPartSize;
     }
 
     /**
-     * 设置worker分块大小
-     * @param WorkerPartSize worker分块大小
+     * 设置worker分块大小，单位MB
+     * @param WorkerPartSize worker分块大小，单位MB
      */
     public void setWorkerPartSize(Integer WorkerPartSize) {
         this.WorkerPartSize = WorkerPartSize;

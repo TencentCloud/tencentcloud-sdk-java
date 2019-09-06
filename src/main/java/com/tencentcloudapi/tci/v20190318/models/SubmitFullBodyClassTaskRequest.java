@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SubmitFullBodyClassTaskRequest  extends AbstractModel{
 
     /**
-    * 输入分析对象内容
+    * 输入分析对象内容，输入数据格式参考FileType参数释义
     */
     @SerializedName("FileContent")
     @Expose
@@ -51,7 +51,7 @@ public class SubmitFullBodyClassTaskRequest  extends AbstractModel{
     private String [] LibrarySet;
 
     /**
-    * 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+    * 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
     */
     @SerializedName("MaxVideoDuration")
     @Expose
@@ -79,16 +79,16 @@ public class SubmitFullBodyClassTaskRequest  extends AbstractModel{
     private Long VoiceFileType;
 
     /**
-     * 获取输入分析对象内容
-     * @return FileContent 输入分析对象内容
+     * 获取输入分析对象内容，输入数据格式参考FileType参数释义
+     * @return FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public String getFileContent() {
         return this.FileContent;
     }
 
     /**
-     * 设置输入分析对象内容
-     * @param FileContent 输入分析对象内容
+     * 设置输入分析对象内容，输入数据格式参考FileType参数释义
+     * @param FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;
@@ -143,16 +143,16 @@ public class SubmitFullBodyClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
-     * @return MaxVideoDuration 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * 获取视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * @return MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public Long getMaxVideoDuration() {
         return this.MaxVideoDuration;
     }
 
     /**
-     * 设置直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
-     * @param MaxVideoDuration 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * 设置视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * @param MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public void setMaxVideoDuration(Long MaxVideoDuration) {
         this.MaxVideoDuration = MaxVideoDuration;

@@ -52,7 +52,9 @@ public class AddDelayLiveStreamRequest  extends AbstractModel{
 
     /**
     * 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-注意：默认7天后过期，且最长支持7天内生效。
+注意：
+1. 默认7天后过期，且最长支持7天内生效。
+2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -124,9 +126,13 @@ public class AddDelayLiveStreamRequest  extends AbstractModel{
 
     /**
      * 获取延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-注意：默认7天后过期，且最长支持7天内生效。
+注意：
+1. 默认7天后过期，且最长支持7天内生效。
+2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @return ExpireTime 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-注意：默认7天后过期，且最长支持7天内生效。
+注意：
+1. 默认7天后过期，且最长支持7天内生效。
+2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -134,9 +140,13 @@ public class AddDelayLiveStreamRequest  extends AbstractModel{
 
     /**
      * 设置延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-注意：默认7天后过期，且最长支持7天内生效。
+注意：
+1. 默认7天后过期，且最长支持7天内生效。
+2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param ExpireTime 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-注意：默认7天后过期，且最长支持7天内生效。
+注意：
+1. 默认7天后过期，且最长支持7天内生效。
+2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

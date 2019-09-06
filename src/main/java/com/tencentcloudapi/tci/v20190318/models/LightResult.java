@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class LightResult  extends AbstractModel{
 
     /**
-    * 光照程度
+    * 光照程度，参考提交任务时的LightStandard指定的Name参数
     */
     @SerializedName("LightLevel")
     @Expose
@@ -37,16 +37,16 @@ public class LightResult  extends AbstractModel{
     private Float LightValue;
 
     /**
-     * 获取光照程度
-     * @return LightLevel 光照程度
+     * 获取光照程度，参考提交任务时的LightStandard指定的Name参数
+     * @return LightLevel 光照程度，参考提交任务时的LightStandard指定的Name参数
      */
     public String getLightLevel() {
         return this.LightLevel;
     }
 
     /**
-     * 设置光照程度
-     * @param LightLevel 光照程度
+     * 设置光照程度，参考提交任务时的LightStandard指定的Name参数
+     * @param LightLevel 光照程度，参考提交任务时的LightStandard指定的Name参数
      */
     public void setLightLevel(String LightLevel) {
         this.LightLevel = LightLevel;

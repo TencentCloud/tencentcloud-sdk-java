@@ -30,7 +30,7 @@ public class FaceExpressionResult  extends AbstractModel{
     private Float Confidence;
 
     /**
-    * 表情识别结果
+    * 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
     */
     @SerializedName("Expression")
     @Expose
@@ -53,16 +53,16 @@ public class FaceExpressionResult  extends AbstractModel{
     }
 
     /**
-     * 获取表情识别结果
-     * @return Expression 表情识别结果
+     * 获取表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
+     * @return Expression 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
      */
     public String getExpression() {
         return this.Expression;
     }
 
     /**
-     * 设置表情识别结果
-     * @param Expression 表情识别结果
+     * 设置表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
+     * @param Expression 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
      */
     public void setExpression(String Expression) {
         this.Expression = Expression;

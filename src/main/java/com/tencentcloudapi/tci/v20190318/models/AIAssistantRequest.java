@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class AIAssistantRequest  extends AbstractModel{
 
     /**
-    * 输入分析对象内容
+    * 输入分析对象内容，输入数据格式参考FileType参数释义
     */
     @SerializedName("FileContent")
     @Expose
     private String FileContent;
 
     /**
-    * 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,audio_url: 音频文件
+    * 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
     */
     @SerializedName("FileType")
     @Expose
@@ -51,7 +51,7 @@ public class AIAssistantRequest  extends AbstractModel{
     private String [] LibrarySet;
 
     /**
-    * 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+    * 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
     */
     @SerializedName("MaxVideoDuration")
     @Expose
@@ -86,32 +86,32 @@ public class AIAssistantRequest  extends AbstractModel{
     private Long VoiceFileType;
 
     /**
-     * 获取输入分析对象内容
-     * @return FileContent 输入分析对象内容
+     * 获取输入分析对象内容，输入数据格式参考FileType参数释义
+     * @return FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public String getFileContent() {
         return this.FileContent;
     }
 
     /**
-     * 设置输入分析对象内容
-     * @param FileContent 输入分析对象内容
+     * 设置输入分析对象内容，输入数据格式参考FileType参数释义
+     * @param FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;
     }
 
     /**
-     * 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,audio_url: 音频文件
-     * @return FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,audio_url: 音频文件
+     * 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
+     * @return FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,audio_url: 音频文件
-     * @param FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,audio_url: 音频文件
+     * 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
+     * @param FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
@@ -150,16 +150,16 @@ public class AIAssistantRequest  extends AbstractModel{
     }
 
     /**
-     * 获取直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
-     * @return MaxVideoDuration 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * 获取视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * @return MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public Long getMaxVideoDuration() {
         return this.MaxVideoDuration;
     }
 
     /**
-     * 设置直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
-     * @param MaxVideoDuration 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+     * 设置视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * @param MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public void setMaxVideoDuration(Long MaxVideoDuration) {
         this.MaxVideoDuration = MaxVideoDuration;

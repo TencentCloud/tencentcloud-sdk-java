@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SubmitImageTaskRequest  extends AbstractModel{
 
     /**
-    * 输入分析对象内容
+    * 输入分析对象内容，输入数据格式参考FileType参数释义
     */
     @SerializedName("FileContent")
     @Expose
@@ -65,7 +65,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     private String [] LibrarySet;
 
     /**
-    * 最大的视频长度，单位毫秒，默认值为两小时
+    * 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
     */
     @SerializedName("MaxVideoDuration")
     @Expose
@@ -79,16 +79,16 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     private Float SimThreshold;
 
     /**
-     * 获取输入分析对象内容
-     * @return FileContent 输入分析对象内容
+     * 获取输入分析对象内容，输入数据格式参考FileType参数释义
+     * @return FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public String getFileContent() {
         return this.FileContent;
     }
 
     /**
-     * 设置输入分析对象内容
-     * @param FileContent 输入分析对象内容
+     * 设置输入分析对象内容，输入数据格式参考FileType参数释义
+     * @param FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;
@@ -175,16 +175,16 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大的视频长度，单位毫秒，默认值为两小时
-     * @return MaxVideoDuration 最大的视频长度，单位毫秒，默认值为两小时
+     * 获取视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * @return MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public Long getMaxVideoDuration() {
         return this.MaxVideoDuration;
     }
 
     /**
-     * 设置最大的视频长度，单位毫秒，默认值为两小时
-     * @param MaxVideoDuration 最大的视频长度，单位毫秒，默认值为两小时
+     * 设置视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * @param MaxVideoDuration 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public void setMaxVideoDuration(Long MaxVideoDuration) {
         this.MaxVideoDuration = MaxVideoDuration;

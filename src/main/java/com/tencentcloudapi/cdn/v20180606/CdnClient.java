@@ -76,6 +76,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeCdnIp 用于查询 CDN IP 归属。
+     * @param req DescribeCdnIpRequest
+     * @return DescribeCdnIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCdnIpResponse DescribeCdnIp(DescribeCdnIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCdnIpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCdnIpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCdnIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeIpVisit 用于查询 5 分钟活跃用户数，及日活跃用户数明细
 
 + 5 分钟活跃用户数：根据日志中客户端 IP，5 分钟粒度去重统计
@@ -161,6 +179,42 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
+     * @param req DescribePurgeTasksRequest
+     * @return DescribePurgeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePurgeTasksResponse DescribePurgeTasks(DescribePurgeTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePurgeTasksResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePurgeTasksResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePurgeTasks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribePushTasks 用于查询预热任务提交历史记录及执行进度。（接口尚在批量公测中，暂未全量开放使用）
+     * @param req DescribePushTasksRequest
+     * @return DescribePushTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePushTasksResponse DescribePushTasks(DescribePushTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePushTasksResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePushTasksResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePushTasks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，全网访问会直接返回 403。（接口尚在内测中，暂未全量开放使用）
      * @param req DisableCachesRequest
      * @return DisableCachesResponse
@@ -232,6 +286,60 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListTopDataResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ListTopData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *PurgeUrlsCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+     * @param req PurgePathCacheRequest
+     * @return PurgePathCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public PurgePathCacheResponse PurgePathCache(PurgePathCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PurgePathCacheResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PurgePathCacheResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PurgePathCache"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
+     * @param req PurgeUrlsCacheRequest
+     * @return PurgeUrlsCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public PurgeUrlsCacheResponse PurgeUrlsCache(PurgeUrlsCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PurgeUrlsCacheResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PurgeUrlsCacheResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PurgeUrlsCache"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *PushUrlsCache 用于将指定 URL 资源列表加载至 CDN 节点，默认情况下每次调用可提交 20 条 URL，每日一共可提交 1000 条。
+     * @param req PushUrlsCacheRequest
+     * @return PushUrlsCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public PushUrlsCacheResponse PushUrlsCache(PushUrlsCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PushUrlsCacheResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PushUrlsCacheResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PushUrlsCache"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

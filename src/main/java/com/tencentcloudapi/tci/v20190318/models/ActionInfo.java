@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class ActionInfo  extends AbstractModel{
 
     /**
-    * 躯体动作识别结果
+    * 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
     */
     @SerializedName("BodyPosture")
     @Expose
     private ActionType BodyPosture;
 
     /**
-    * 举手识别结果
+    * 举手识别结果，包含举手（hand）和未检测到举手（nothand）
     */
     @SerializedName("Handup")
     @Expose
     private ActionType Handup;
 
     /**
-    * 是否低头识别结果
+    * 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
     */
     @SerializedName("LookHead")
     @Expose
     private ActionType LookHead;
 
     /**
-    * 是否写字识别结果
+    * 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
     */
     @SerializedName("Writing")
     @Expose
@@ -79,64 +79,64 @@ public class ActionInfo  extends AbstractModel{
     private Long Width;
 
     /**
-     * 获取躯体动作识别结果
-     * @return BodyPosture 躯体动作识别结果
+     * 获取躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
+     * @return BodyPosture 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
      */
     public ActionType getBodyPosture() {
         return this.BodyPosture;
     }
 
     /**
-     * 设置躯体动作识别结果
-     * @param BodyPosture 躯体动作识别结果
+     * 设置躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
+     * @param BodyPosture 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
      */
     public void setBodyPosture(ActionType BodyPosture) {
         this.BodyPosture = BodyPosture;
     }
 
     /**
-     * 获取举手识别结果
-     * @return Handup 举手识别结果
+     * 获取举手识别结果，包含举手（hand）和未检测到举手（nothand）
+     * @return Handup 举手识别结果，包含举手（hand）和未检测到举手（nothand）
      */
     public ActionType getHandup() {
         return this.Handup;
     }
 
     /**
-     * 设置举手识别结果
-     * @param Handup 举手识别结果
+     * 设置举手识别结果，包含举手（hand）和未检测到举手（nothand）
+     * @param Handup 举手识别结果，包含举手（hand）和未检测到举手（nothand）
      */
     public void setHandup(ActionType Handup) {
         this.Handup = Handup;
     }
 
     /**
-     * 获取是否低头识别结果
-     * @return LookHead 是否低头识别结果
+     * 获取是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
+     * @return LookHead 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
      */
     public ActionType getLookHead() {
         return this.LookHead;
     }
 
     /**
-     * 设置是否低头识别结果
-     * @param LookHead 是否低头识别结果
+     * 设置是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
+     * @param LookHead 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
      */
     public void setLookHead(ActionType LookHead) {
         this.LookHead = LookHead;
     }
 
     /**
-     * 获取是否写字识别结果
-     * @return Writing 是否写字识别结果
+     * 获取是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
+     * @return Writing 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
      */
     public ActionType getWriting() {
         return this.Writing;
     }
 
     /**
-     * 设置是否写字识别结果
-     * @param Writing 是否写字识别结果
+     * 设置是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
+     * @param Writing 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
      */
     public void setWriting(ActionType Writing) {
         this.Writing = Writing;

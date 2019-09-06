@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribePersonRequest  extends AbstractModel{
 
     /**
-    * 人员唯一标识符
-    */
-    @SerializedName("PersonId")
-    @Expose
-    private String PersonId;
-
-    /**
     * 人员库唯一标识符
     */
     @SerializedName("LibraryId")
@@ -37,20 +30,11 @@ public class DescribePersonRequest  extends AbstractModel{
     private String LibraryId;
 
     /**
-     * 获取人员唯一标识符
-     * @return PersonId 人员唯一标识符
-     */
-    public String getPersonId() {
-        return this.PersonId;
-    }
-
-    /**
-     * 设置人员唯一标识符
-     * @param PersonId 人员唯一标识符
-     */
-    public void setPersonId(String PersonId) {
-        this.PersonId = PersonId;
-    }
+    * 人员唯一标识符
+    */
+    @SerializedName("PersonId")
+    @Expose
+    private String PersonId;
 
     /**
      * 获取人员库唯一标识符
@@ -69,11 +53,27 @@ public class DescribePersonRequest  extends AbstractModel{
     }
 
     /**
+     * 获取人员唯一标识符
+     * @return PersonId 人员唯一标识符
+     */
+    public String getPersonId() {
+        return this.PersonId;
+    }
+
+    /**
+     * 设置人员唯一标识符
+     * @param PersonId 人员唯一标识符
+     */
+    public void setPersonId(String PersonId) {
+        this.PersonId = PersonId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamSimple(map, prefix + "LibraryId", this.LibraryId);
+        this.setParamSimple(map, prefix + "PersonId", this.PersonId);
 
     }
 }

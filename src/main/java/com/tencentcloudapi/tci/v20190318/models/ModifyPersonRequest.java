@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class ModifyPersonRequest  extends AbstractModel{
 
     /**
+    * 人员库唯一标识符
+    */
+    @SerializedName("LibraryId")
+    @Expose
+    private String LibraryId;
+
+    /**
     * 人员唯一标识符
     */
     @SerializedName("PersonId")
@@ -35,13 +42,6 @@ public class ModifyPersonRequest  extends AbstractModel{
     @SerializedName("JobNumber")
     @Expose
     private String JobNumber;
-
-    /**
-    * 人员库唯一标识符
-    */
-    @SerializedName("LibraryId")
-    @Expose
-    private String LibraryId;
 
     /**
     * 人员邮箱
@@ -79,6 +79,22 @@ public class ModifyPersonRequest  extends AbstractModel{
     private String StudentNumber;
 
     /**
+     * 获取人员库唯一标识符
+     * @return LibraryId 人员库唯一标识符
+     */
+    public String getLibraryId() {
+        return this.LibraryId;
+    }
+
+    /**
+     * 设置人员库唯一标识符
+     * @param LibraryId 人员库唯一标识符
+     */
+    public void setLibraryId(String LibraryId) {
+        this.LibraryId = LibraryId;
+    }
+
+    /**
      * 获取人员唯一标识符
      * @return PersonId 人员唯一标识符
      */
@@ -108,22 +124,6 @@ public class ModifyPersonRequest  extends AbstractModel{
      */
     public void setJobNumber(String JobNumber) {
         this.JobNumber = JobNumber;
-    }
-
-    /**
-     * 获取人员库唯一标识符
-     * @return LibraryId 人员库唯一标识符
-     */
-    public String getLibraryId() {
-        return this.LibraryId;
-    }
-
-    /**
-     * 设置人员库唯一标识符
-     * @param LibraryId 人员库唯一标识符
-     */
-    public void setLibraryId(String LibraryId) {
-        this.LibraryId = LibraryId;
     }
 
     /**
@@ -210,9 +210,9 @@ public class ModifyPersonRequest  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "LibraryId", this.LibraryId);
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamSimple(map, prefix + "JobNumber", this.JobNumber);
-        this.setParamSimple(map, prefix + "LibraryId", this.LibraryId);
         this.setParamSimple(map, prefix + "Mail", this.Mail);
         this.setParamSimple(map, prefix + "Male", this.Male);
         this.setParamSimple(map, prefix + "PersonName", this.PersonName);

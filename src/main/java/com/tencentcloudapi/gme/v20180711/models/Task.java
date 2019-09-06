@@ -37,6 +37,20 @@ public class Task  extends AbstractModel{
     private String Url;
 
     /**
+    * gme实时语音房间id，通过gme实时语音进行语音分析时输入
+    */
+    @SerializedName("RoomId")
+    @Expose
+    private String RoomId;
+
+    /**
+    * gme实时语音用户id，通过gme实时语音进行语音分析时输入
+    */
+    @SerializedName("OpenId")
+    @Expose
+    private String OpenId;
+
+    /**
      * 获取数据的唯一ID
      * @return DataId 数据的唯一ID
      */
@@ -69,11 +83,45 @@ public class Task  extends AbstractModel{
     }
 
     /**
+     * 获取gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     * @return RoomId gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     */
+    public String getRoomId() {
+        return this.RoomId;
+    }
+
+    /**
+     * 设置gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     * @param RoomId gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     */
+    public void setRoomId(String RoomId) {
+        this.RoomId = RoomId;
+    }
+
+    /**
+     * 获取gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     * @return OpenId gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     */
+    public String getOpenId() {
+        return this.OpenId;
+    }
+
+    /**
+     * 设置gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     * @param OpenId gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     */
+    public void setOpenId(String OpenId) {
+        this.OpenId = OpenId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
+        this.setParamSimple(map, prefix + "OpenId", this.OpenId);
 
     }
 }

@@ -90,7 +90,7 @@ public class ImageTaskResult  extends AbstractModel{
     */
     @SerializedName("StudentBodyMovement")
     @Expose
-    private BodyMovementResult StudentBodyMovement;
+    private StudentBodyMovementResult StudentBodyMovement;
 
     /**
     * 老师肢体动作识别结果
@@ -261,7 +261,7 @@ public class ImageTaskResult  extends AbstractModel{
      * 获取学生肢体动作识别结果
      * @return StudentBodyMovement 学生肢体动作识别结果
      */
-    public BodyMovementResult getStudentBodyMovement() {
+    public StudentBodyMovementResult getStudentBodyMovement() {
         return this.StudentBodyMovement;
     }
 
@@ -269,7 +269,7 @@ public class ImageTaskResult  extends AbstractModel{
      * 设置学生肢体动作识别结果
      * @param StudentBodyMovement 学生肢体动作识别结果
      */
-    public void setStudentBodyMovement(BodyMovementResult StudentBodyMovement) {
+    public void setStudentBodyMovement(StudentBodyMovementResult StudentBodyMovement) {
         this.StudentBodyMovement = StudentBodyMovement;
     }
 

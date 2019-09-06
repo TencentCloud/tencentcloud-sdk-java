@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GestureResult  extends AbstractModel{
 
     /**
-    * 识别结果
+    * 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
     */
     @SerializedName("Class")
     @Expose
@@ -65,17 +65,17 @@ public class GestureResult  extends AbstractModel{
     private Long Width;
 
     /**
-     * 获取识别结果
+     * 获取识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
      * Java getClass cannot and should not be overrided, hence we have to transfer it to a new name which should never conflict with another attribute. The underscode(_) is used as a postfix, because it is invalid in API 3.0, but can be used in Java, even it is not recommended.
-     * @return Class 识别结果
+     * @return Class 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
      */
     public String getClass_() {
         return this.Class;
     }
 
     /**
-     * 设置识别结果
-     * @param Class 识别结果
+     * 设置识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
+     * @param Class 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
      */
     public void setClass(String Class) {
         this.Class = Class;
