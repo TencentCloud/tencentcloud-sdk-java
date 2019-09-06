@@ -164,6 +164,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建用户自定义转动图模板，数量上限：16。
+     * @param req CreateAnimatedGraphicsTemplateRequest
+     * @return CreateAnimatedGraphicsTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(CreateAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAnimatedGraphicsTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAnimatedGraphicsTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAnimatedGraphicsTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 用于对媒体进行分类管理；
 * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
 * 分类层次不可超过 4 层。
@@ -203,6 +221,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建用户自定义雪碧图模板，数量上限：16。
+     * @param req CreateImageSpriteTemplateRequest
+     * @return CreateImageSpriteTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(CreateImageSpriteTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImageSpriteTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImageSpriteTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateImageSpriteTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于创建人物样本，用于通过人脸识别等技术，进行内容识别、内容审核等视频处理。
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
@@ -232,6 +268,42 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateProcedureTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateProcedureTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建用户自定义采样截图模板，数量上限：16。
+     * @param req CreateSampleSnapshotTemplateRequest
+     * @return CreateSampleSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(CreateSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSampleSnapshotTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSampleSnapshotTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSampleSnapshotTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建用户自定义指定时间点截图模板，数量上限：16。
+     * @param req CreateSnapshotByTimeOffsetTemplateRequest
+     * @return CreateSnapshotByTimeOffsetTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(CreateSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSnapshotByTimeOffsetTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -331,6 +403,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *删除用户自定义转动图模板。
+     * @param req DeleteAnimatedGraphicsTemplateRequest
+     * @return DeleteAnimatedGraphicsTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(DeleteAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAnimatedGraphicsTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 仅当待删分类无子分类且无媒体关联情况下，可删除分类；
 * 否则，请先执行[删除媒体](/document/product/266/31764)及子分类，再删除该分类；
      * @param req DeleteClassRequest
@@ -361,6 +451,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteContentReviewTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteContentReviewTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除雪碧图模板。
+     * @param req DeleteImageSpriteTemplateRequest
+     * @return DeleteImageSpriteTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(DeleteImageSpriteTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImageSpriteTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImageSpriteTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteImageSpriteTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -416,6 +524,42 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteProcedureTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteProcedureTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户自定义采样截图模板。
+     * @param req DeleteSampleSnapshotTemplateRequest
+     * @return DeleteSampleSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(DeleteSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSampleSnapshotTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSampleSnapshotTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteSampleSnapshotTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户自定义指定时间点截图模板。
+     * @param req DeleteSnapshotByTimeOffsetTemplateRequest
+     * @return DeleteSnapshotByTimeOffsetTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(DeleteSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteSnapshotByTimeOffsetTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -531,6 +675,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *查询转动图模板列表，支持根据条件，分页查询。
+     * @param req DescribeAnimatedGraphicsTemplatesRequest
+     * @return DescribeAnimatedGraphicsTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(DescribeAnimatedGraphicsTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAnimatedGraphicsTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据视频内容审核模板唯一标识，获取视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
@@ -542,6 +704,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeContentReviewTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeContentReviewTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询雪碧图模板，支持根据条件，分页查询。
+     * @param req DescribeImageSpriteTemplatesRequest
+     * @return DescribeImageSpriteTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageSpriteTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageSpriteTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImageSpriteTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -615,8 +795,8 @@ public class VodClient extends AbstractClient{
     /**
      *该接口返回查询时间范围内每天使用的视频内容审核时长数据，单位： 秒。
 
-1. 可以查询最近90天内的视频内容审核时长统计数据。
-2. 查询时间跨度不超过60天。
+1. 可以查询最近365天内的视频内容审核时长统计数据。
+2. 查询时间跨度不超过90天。
      * @param req DescribeReviewDetailsRequest
      * @return DescribeReviewDetailsResponse
      * @throws TencentCloudSDKException
@@ -627,6 +807,42 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeReviewDetailsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeReviewDetails"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询采样截图模板，支持根据条件，分页查询。
+     * @param req DescribeSampleSnapshotTemplatesRequest
+     * @return DescribeSampleSnapshotTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(DescribeSampleSnapshotTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSampleSnapshotTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSampleSnapshotTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSampleSnapshotTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询指定时间点截图模板，支持根据条件，分页查询。
+     * @param req DescribeSnapshotByTimeOffsetTemplatesRequest
+     * @return DescribeSnapshotByTimeOffsetTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(DescribeSnapshotByTimeOffsetTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSnapshotByTimeOffsetTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -870,6 +1086,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *修改用户自定义转动图模板。
+     * @param req ModifyAnimatedGraphicsTemplateRequest
+     * @return ModifyAnimatedGraphicsTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(ModifyAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAnimatedGraphicsTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改媒体分类属性。
      * @param req ModifyClassRequest
      * @return ModifyClassResponse
@@ -906,6 +1140,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *修改用户自定义雪碧图模板。
+     * @param req ModifyImageSpriteTemplateRequest
+     * @return ModifyImageSpriteTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(ModifyImageSpriteTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyImageSpriteTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyImageSpriteTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyImageSpriteTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改媒体文件的属性，包括分类、名称、描述、标签、过期时间、打点信息、视频封面等。
      * @param req ModifyMediaInfoRequest
      * @return ModifyMediaInfoResponse
@@ -935,6 +1187,42 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonSampleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyPersonSample"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户自定义采样截图模板。
+     * @param req ModifySampleSnapshotTemplateRequest
+     * @return ModifySampleSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(ModifySampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySampleSnapshotTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySampleSnapshotTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySampleSnapshotTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户自定义指定时间点截图模板。
+     * @param req ModifySnapshotByTimeOffsetTemplateRequest
+     * @return ModifySnapshotByTimeOffsetTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(ModifySnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySnapshotByTimeOffsetTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

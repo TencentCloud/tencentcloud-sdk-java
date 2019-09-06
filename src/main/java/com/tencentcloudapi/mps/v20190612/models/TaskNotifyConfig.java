@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TaskNotifyConfig  extends AbstractModel{
 
     /**
-    * CMQ 的模型，有 Queue 和 Topic 两种。
+    * CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
     */
     @SerializedName("CmqModel")
     @Expose
@@ -58,16 +58,16 @@ public class TaskNotifyConfig  extends AbstractModel{
     private String NotifyMode;
 
     /**
-     * 获取CMQ 的模型，有 Queue 和 Topic 两种。
-     * @return CmqModel CMQ 的模型，有 Queue 和 Topic 两种。
+     * 获取CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+     * @return CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
      */
     public String getCmqModel() {
         return this.CmqModel;
     }
 
     /**
-     * 设置CMQ 的模型，有 Queue 和 Topic 两种。
-     * @param CmqModel CMQ 的模型，有 Queue 和 Topic 两种。
+     * 设置CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+     * @param CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
      */
     public void setCmqModel(String CmqModel) {
         this.CmqModel = CmqModel;

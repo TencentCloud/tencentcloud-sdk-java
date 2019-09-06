@@ -49,6 +49,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（BindDevices）用于网关设备批量绑定子设备
+     * @param req BindDevicesRequest
+     * @return BindDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindDevicesResponse BindDevices(BindDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BindDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CancelTask）用于取消一个未被调度的任务。
      * @param req CancelTaskRequest
      * @return CancelTaskResponse
@@ -564,6 +582,42 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetDeviceStateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ResetDeviceState"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UnbindDevices）用于网关设备批量解绑子设备
+     * @param req UnbindDevicesRequest
+     * @return UnbindDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindDevicesResponse UnbindDevices(UnbindDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UnbindDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用或者禁用设备
+     * @param req UpdateDeviceAvailableStateRequest
+     * @return UpdateDeviceAvailableStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDeviceAvailableStateResponse UpdateDeviceAvailableState(UpdateDeviceAvailableStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDeviceAvailableStateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDeviceAvailableStateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateDeviceAvailableState"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

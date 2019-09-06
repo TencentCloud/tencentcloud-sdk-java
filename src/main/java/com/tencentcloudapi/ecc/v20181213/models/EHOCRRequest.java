@@ -30,11 +30,74 @@ public class EHOCRRequest  extends AbstractModel{
     private String Image;
 
     /**
-    * 输出图片类型，0表示Image字段是图片所在的url，1表示Image字段是base64编码后的图像数据
+    * 输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据
     */
     @SerializedName("InputType")
     @Expose
     private Long InputType;
+
+    /**
+    * 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+    */
+    @SerializedName("EccAppid")
+    @Expose
+    private String EccAppid;
+
+    /**
+    * 图像识别唯一标识，一次识别一个 SessionId，使用识别功能时 SessionId 可用于使用文本批改接口，此时按图像批改价格收费；如使用文本批改接口时没有传入 SessionId，则需要收取文本批改的费用
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * 服务类型，0：“图像识别”，只返回识别结果，1：“图像批改”，同时返回识别结果与批改结果。默认为 0
+    */
+    @SerializedName("ServerType")
+    @Expose
+    private Long ServerType;
+
+    /**
+    * 作文题目，可选参数
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * 年级标准， 默认以 cet4 为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及 cet4 和 cet6 分别表示 英语4级和6级。
+    */
+    @SerializedName("Grade")
+    @Expose
+    private String Grade;
+
+    /**
+    * 作文提纲，可选参数，作文的写作要求。
+    */
+    @SerializedName("Requirement")
+    @Expose
+    private String Requirement;
+
+    /**
+    * 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+    */
+    @SerializedName("ModelTitle")
+    @Expose
+    private String ModelTitle;
+
+    /**
+    * 范文内容，可选参数，同上，范文的正文部分。
+    */
+    @SerializedName("ModelContent")
+    @Expose
+    private String ModelContent;
+
+    /**
+    * 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+    */
+    @SerializedName("IsAsync")
+    @Expose
+    private Long IsAsync;
 
     /**
      * 获取图片所在的url或base64编码后的图像数据，依据InputType而定
@@ -53,19 +116,163 @@ public class EHOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输出图片类型，0表示Image字段是图片所在的url，1表示Image字段是base64编码后的图像数据
-     * @return InputType 输出图片类型，0表示Image字段是图片所在的url，1表示Image字段是base64编码后的图像数据
+     * 获取输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据
+     * @return InputType 输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据
      */
     public Long getInputType() {
         return this.InputType;
     }
 
     /**
-     * 设置输出图片类型，0表示Image字段是图片所在的url，1表示Image字段是base64编码后的图像数据
-     * @param InputType 输出图片类型，0表示Image字段是图片所在的url，1表示Image字段是base64编码后的图像数据
+     * 设置输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据
+     * @param InputType 输出图片类型，0 表示 Image 字段是图片所在的 url，1 表示 Image 字段是 base64 编码后的图像数据
      */
     public void setInputType(Long InputType) {
         this.InputType = InputType;
+    }
+
+    /**
+     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+     * @return EccAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+     */
+    public String getEccAppid() {
+        return this.EccAppid;
+    }
+
+    /**
+     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+     * @param EccAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+     */
+    public void setEccAppid(String EccAppid) {
+        this.EccAppid = EccAppid;
+    }
+
+    /**
+     * 获取图像识别唯一标识，一次识别一个 SessionId，使用识别功能时 SessionId 可用于使用文本批改接口，此时按图像批改价格收费；如使用文本批改接口时没有传入 SessionId，则需要收取文本批改的费用
+     * @return SessionId 图像识别唯一标识，一次识别一个 SessionId，使用识别功能时 SessionId 可用于使用文本批改接口，此时按图像批改价格收费；如使用文本批改接口时没有传入 SessionId，则需要收取文本批改的费用
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * 设置图像识别唯一标识，一次识别一个 SessionId，使用识别功能时 SessionId 可用于使用文本批改接口，此时按图像批改价格收费；如使用文本批改接口时没有传入 SessionId，则需要收取文本批改的费用
+     * @param SessionId 图像识别唯一标识，一次识别一个 SessionId，使用识别功能时 SessionId 可用于使用文本批改接口，此时按图像批改价格收费；如使用文本批改接口时没有传入 SessionId，则需要收取文本批改的费用
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * 获取服务类型，0：“图像识别”，只返回识别结果，1：“图像批改”，同时返回识别结果与批改结果。默认为 0
+     * @return ServerType 服务类型，0：“图像识别”，只返回识别结果，1：“图像批改”，同时返回识别结果与批改结果。默认为 0
+     */
+    public Long getServerType() {
+        return this.ServerType;
+    }
+
+    /**
+     * 设置服务类型，0：“图像识别”，只返回识别结果，1：“图像批改”，同时返回识别结果与批改结果。默认为 0
+     * @param ServerType 服务类型，0：“图像识别”，只返回识别结果，1：“图像批改”，同时返回识别结果与批改结果。默认为 0
+     */
+    public void setServerType(Long ServerType) {
+        this.ServerType = ServerType;
+    }
+
+    /**
+     * 获取作文题目，可选参数
+     * @return Title 作文题目，可选参数
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * 设置作文题目，可选参数
+     * @param Title 作文题目，可选参数
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * 获取年级标准， 默认以 cet4 为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及 cet4 和 cet6 分别表示 英语4级和6级。
+     * @return Grade 年级标准， 默认以 cet4 为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及 cet4 和 cet6 分别表示 英语4级和6级。
+     */
+    public String getGrade() {
+        return this.Grade;
+    }
+
+    /**
+     * 设置年级标准， 默认以 cet4 为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及 cet4 和 cet6 分别表示 英语4级和6级。
+     * @param Grade 年级标准， 默认以 cet4 为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及 cet4 和 cet6 分别表示 英语4级和6级。
+     */
+    public void setGrade(String Grade) {
+        this.Grade = Grade;
+    }
+
+    /**
+     * 获取作文提纲，可选参数，作文的写作要求。
+     * @return Requirement 作文提纲，可选参数，作文的写作要求。
+     */
+    public String getRequirement() {
+        return this.Requirement;
+    }
+
+    /**
+     * 设置作文提纲，可选参数，作文的写作要求。
+     * @param Requirement 作文提纲，可选参数，作文的写作要求。
+     */
+    public void setRequirement(String Requirement) {
+        this.Requirement = Requirement;
+    }
+
+    /**
+     * 获取范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+     * @return ModelTitle 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+     */
+    public String getModelTitle() {
+        return this.ModelTitle;
+    }
+
+    /**
+     * 设置范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+     * @param ModelTitle 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+     */
+    public void setModelTitle(String ModelTitle) {
+        this.ModelTitle = ModelTitle;
+    }
+
+    /**
+     * 获取范文内容，可选参数，同上，范文的正文部分。
+     * @return ModelContent 范文内容，可选参数，同上，范文的正文部分。
+     */
+    public String getModelContent() {
+        return this.ModelContent;
+    }
+
+    /**
+     * 设置范文内容，可选参数，同上，范文的正文部分。
+     * @param ModelContent 范文内容，可选参数，同上，范文的正文部分。
+     */
+    public void setModelContent(String ModelContent) {
+        this.ModelContent = ModelContent;
+    }
+
+    /**
+     * 获取异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+     * @return IsAsync 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+     */
+    public Long getIsAsync() {
+        return this.IsAsync;
+    }
+
+    /**
+     * 设置异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+     * @param IsAsync 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+     */
+    public void setIsAsync(Long IsAsync) {
+        this.IsAsync = IsAsync;
     }
 
     /**
@@ -74,6 +281,15 @@ public class EHOCRRequest  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "InputType", this.InputType);
+        this.setParamSimple(map, prefix + "EccAppid", this.EccAppid);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "ServerType", this.ServerType);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "Grade", this.Grade);
+        this.setParamSimple(map, prefix + "Requirement", this.Requirement);
+        this.setParamSimple(map, prefix + "ModelTitle", this.ModelTitle);
+        this.setParamSimple(map, prefix + "ModelContent", this.ModelContent);
+        this.setParamSimple(map, prefix + "IsAsync", this.IsAsync);
 
     }
 }

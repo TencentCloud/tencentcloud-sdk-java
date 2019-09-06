@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class SentenceCom  extends AbstractModel{
 
     /**
-    * 点评内容
+    * 句子错误纠正信息
     */
     @SerializedName("Suggestions")
     @Expose
     private SentenceSuggest [] Suggestions;
 
     /**
-    * 点评的句子信息
+    * 句子信息
     */
     @SerializedName("Sentence")
     @Expose
     private SentenceItem Sentence;
 
     /**
-     * 获取点评内容
-     * @return Suggestions 点评内容
+     * 获取句子错误纠正信息
+     * @return Suggestions 句子错误纠正信息
      */
     public SentenceSuggest [] getSuggestions() {
         return this.Suggestions;
     }
 
     /**
-     * 设置点评内容
-     * @param Suggestions 点评内容
+     * 设置句子错误纠正信息
+     * @param Suggestions 句子错误纠正信息
      */
     public void setSuggestions(SentenceSuggest [] Suggestions) {
         this.Suggestions = Suggestions;
     }
 
     /**
-     * 获取点评的句子信息
-     * @return Sentence 点评的句子信息
+     * 获取句子信息
+     * @return Sentence 句子信息
      */
     public SentenceItem getSentence() {
         return this.Sentence;
     }
 
     /**
-     * 设置点评的句子信息
-     * @param Sentence 点评的句子信息
+     * 设置句子信息
+     * @param Sentence 句子信息
      */
     public void setSentence(SentenceItem Sentence) {
         this.Sentence = Sentence;

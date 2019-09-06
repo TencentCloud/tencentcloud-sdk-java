@@ -28,6 +28,7 @@ public class AiAnalysisResult  extends AbstractModel{
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
+<li>Highlight：智能精彩集锦</li>
     */
     @SerializedName("Type")
     @Expose
@@ -66,12 +67,12 @@ public class AiAnalysisResult  extends AbstractModel{
     private AiAnalysisTaskFrameTagResult FrameTagTask;
 
     /**
-    * 视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+    * 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("HighlightsTask")
+    @SerializedName("HighlightTask")
     @Expose
-    private AiAnalysisTaskHighlightResult [] HighlightsTask;
+    private AiAnalysisTaskHighlightResult HighlightTask;
 
     /**
      * 获取任务的类型，可以取的值有：
@@ -79,11 +80,13 @@ public class AiAnalysisResult  extends AbstractModel{
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
+<li>Highlight：智能精彩集锦</li>
      * @return Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
+<li>Highlight：智能精彩集锦</li>
      */
     public String getType() {
         return this.Type;
@@ -95,11 +98,13 @@ public class AiAnalysisResult  extends AbstractModel{
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
+<li>Highlight：智能精彩集锦</li>
      * @param Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
+<li>Highlight：智能精彩集锦</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -186,23 +191,23 @@ public class AiAnalysisResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+     * 获取视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return HighlightsTask 视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+     * @return HighlightTask 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AiAnalysisTaskHighlightResult [] getHighlightsTask() {
-        return this.HighlightsTask;
+    public AiAnalysisTaskHighlightResult getHighlightTask() {
+        return this.HighlightTask;
     }
 
     /**
-     * 设置视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+     * 设置视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HighlightsTask 视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+     * @param HighlightTask 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setHighlightsTask(AiAnalysisTaskHighlightResult [] HighlightsTask) {
-        this.HighlightsTask = HighlightsTask;
+    public void setHighlightTask(AiAnalysisTaskHighlightResult HighlightTask) {
+        this.HighlightTask = HighlightTask;
     }
 
     /**
@@ -214,7 +219,7 @@ public class AiAnalysisResult  extends AbstractModel{
         this.setParamObj(map, prefix + "CoverTask.", this.CoverTask);
         this.setParamObj(map, prefix + "TagTask.", this.TagTask);
         this.setParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
-        this.setParamArrayObj(map, prefix + "HighlightsTask.", this.HighlightsTask);
+        this.setParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
 
     }
 }

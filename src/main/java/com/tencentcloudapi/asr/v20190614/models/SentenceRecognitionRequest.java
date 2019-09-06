@@ -37,7 +37,7 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     private Long SubServiceType;
 
     /**
-    * 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
+    * 引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
     */
     @SerializedName("EngSerViceType")
     @Expose
@@ -51,7 +51,7 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     private Long SourceType;
 
     /**
-    * 识别音频的音频格式（支持mp3,wav）。
+    * 识别音频的音频格式。mp3、wav。
     */
     @SerializedName("VoiceFormat")
     @Expose
@@ -118,16 +118,16 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
-     * @return EngSerViceType 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
+     * 获取引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
+     * @return EngSerViceType 引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
      */
     public String getEngSerViceType() {
         return this.EngSerViceType;
     }
 
     /**
-     * 设置引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
-     * @param EngSerViceType 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
+     * 设置引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
+     * @param EngSerViceType 引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
      */
     public void setEngSerViceType(String EngSerViceType) {
         this.EngSerViceType = EngSerViceType;
@@ -150,16 +150,16 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取识别音频的音频格式（支持mp3,wav）。
-     * @return VoiceFormat 识别音频的音频格式（支持mp3,wav）。
+     * 获取识别音频的音频格式。mp3、wav。
+     * @return VoiceFormat 识别音频的音频格式。mp3、wav。
      */
     public String getVoiceFormat() {
         return this.VoiceFormat;
     }
 
     /**
-     * 设置识别音频的音频格式（支持mp3,wav）。
-     * @param VoiceFormat 识别音频的音频格式（支持mp3,wav）。
+     * 设置识别音频的音频格式。mp3、wav。
+     * @param VoiceFormat 识别音频的音频格式。mp3、wav。
      */
     public void setVoiceFormat(String VoiceFormat) {
         this.VoiceFormat = VoiceFormat;

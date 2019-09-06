@@ -30,6 +30,30 @@ public class CompostionContext  extends AbstractModel{
     private String Content;
 
     /**
+    * 批改结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CorrectData")
+    @Expose
+    private CorrectData CorrectData;
+
+    /**
+    * 任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+    * 图像识别唯一标识，一次识别一个 SessionId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
      * 获取作文内容
      * @return Content 作文内容
      */
@@ -46,10 +70,73 @@ public class CompostionContext  extends AbstractModel{
     }
 
     /**
+     * 获取批改结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CorrectData 批改结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CorrectData getCorrectData() {
+        return this.CorrectData;
+    }
+
+    /**
+     * 设置批改结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CorrectData 批改结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCorrectData(CorrectData CorrectData) {
+        this.CorrectData = CorrectData;
+    }
+
+    /**
+     * 获取任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TaskId 任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * 设置任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskId 任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * 获取图像识别唯一标识，一次识别一个 SessionId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SessionId 图像识别唯一标识，一次识别一个 SessionId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * 设置图像识别唯一标识，一次识别一个 SessionId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionId 图像识别唯一标识，一次识别一个 SessionId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamObj(map, prefix + "CorrectData.", this.CorrectData);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }

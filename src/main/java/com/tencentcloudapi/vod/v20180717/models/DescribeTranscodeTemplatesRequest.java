@@ -48,6 +48,15 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     private String ContainerType;
 
     /**
+    * 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+    */
+    @SerializedName("TEHDType")
+    @Expose
+    private String TEHDType;
+
+    /**
     * 分页偏移量，默认值：0。
     */
     @SerializedName("Offset")
@@ -133,6 +142,30 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+     * @return TEHDType 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+     */
+    public String getTEHDType() {
+        return this.TEHDType;
+    }
+
+    /**
+     * 设置极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+     * @param TEHDType 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+     */
+    public void setTEHDType(String TEHDType) {
+        this.TEHDType = TEHDType;
+    }
+
+    /**
      * 获取分页偏移量，默认值：0。
      * @return Offset 分页偏移量，默认值：0。
      */
@@ -187,6 +220,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ContainerType", this.ContainerType);
+        this.setParamSimple(map, prefix + "TEHDType", this.TEHDType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);

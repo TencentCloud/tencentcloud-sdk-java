@@ -68,4 +68,22 @@ public class FacefusionClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *选脸融合
+     * @param req FuseFaceRequest
+     * @return FuseFaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public FuseFaceResponse FuseFace(FuseFaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FuseFaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FuseFaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FuseFace"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

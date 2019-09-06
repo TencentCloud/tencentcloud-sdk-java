@@ -23,95 +23,141 @@ import java.util.HashMap;
 public class ScoreCategory  extends AbstractModel{
 
     /**
-    * 词汇项
+    * 词汇维度
     */
     @SerializedName("Words")
     @Expose
     private Aspect Words;
 
     /**
-    * 句子项
+    * 句子维度
     */
     @SerializedName("Sentences")
     @Expose
     private Aspect Sentences;
 
     /**
-    * 篇章结构
+    * 篇章结构维度
     */
     @SerializedName("Structure")
     @Expose
     private Aspect Structure;
 
     /**
-    * 内容
+    * 内容维度
     */
     @SerializedName("Content")
     @Expose
     private Aspect Content;
 
     /**
-     * 获取词汇项
-     * @return Words 词汇项
+    * 维度得分
+    */
+    @SerializedName("Score")
+    @Expose
+    private Float Score;
+
+    /**
+    * 维度分数占比
+    */
+    @SerializedName("Percentage")
+    @Expose
+    private Float Percentage;
+
+    /**
+     * 获取词汇维度
+     * @return Words 词汇维度
      */
     public Aspect getWords() {
         return this.Words;
     }
 
     /**
-     * 设置词汇项
-     * @param Words 词汇项
+     * 设置词汇维度
+     * @param Words 词汇维度
      */
     public void setWords(Aspect Words) {
         this.Words = Words;
     }
 
     /**
-     * 获取句子项
-     * @return Sentences 句子项
+     * 获取句子维度
+     * @return Sentences 句子维度
      */
     public Aspect getSentences() {
         return this.Sentences;
     }
 
     /**
-     * 设置句子项
-     * @param Sentences 句子项
+     * 设置句子维度
+     * @param Sentences 句子维度
      */
     public void setSentences(Aspect Sentences) {
         this.Sentences = Sentences;
     }
 
     /**
-     * 获取篇章结构
-     * @return Structure 篇章结构
+     * 获取篇章结构维度
+     * @return Structure 篇章结构维度
      */
     public Aspect getStructure() {
         return this.Structure;
     }
 
     /**
-     * 设置篇章结构
-     * @param Structure 篇章结构
+     * 设置篇章结构维度
+     * @param Structure 篇章结构维度
      */
     public void setStructure(Aspect Structure) {
         this.Structure = Structure;
     }
 
     /**
-     * 获取内容
-     * @return Content 内容
+     * 获取内容维度
+     * @return Content 内容维度
      */
     public Aspect getContent() {
         return this.Content;
     }
 
     /**
-     * 设置内容
-     * @param Content 内容
+     * 设置内容维度
+     * @param Content 内容维度
      */
     public void setContent(Aspect Content) {
         this.Content = Content;
+    }
+
+    /**
+     * 获取维度得分
+     * @return Score 维度得分
+     */
+    public Float getScore() {
+        return this.Score;
+    }
+
+    /**
+     * 设置维度得分
+     * @param Score 维度得分
+     */
+    public void setScore(Float Score) {
+        this.Score = Score;
+    }
+
+    /**
+     * 获取维度分数占比
+     * @return Percentage 维度分数占比
+     */
+    public Float getPercentage() {
+        return this.Percentage;
+    }
+
+    /**
+     * 设置维度分数占比
+     * @param Percentage 维度分数占比
+     */
+    public void setPercentage(Float Percentage) {
+        this.Percentage = Percentage;
     }
 
     /**
@@ -122,6 +168,8 @@ public class ScoreCategory  extends AbstractModel{
         this.setParamObj(map, prefix + "Sentences.", this.Sentences);
         this.setParamObj(map, prefix + "Structure.", this.Structure);
         this.setParamObj(map, prefix + "Content.", this.Content);
+        this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "Percentage", this.Percentage);
 
     }
 }

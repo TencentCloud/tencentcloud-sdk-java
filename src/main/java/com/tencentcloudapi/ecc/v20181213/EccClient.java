@@ -49,6 +49,24 @@ public class EccClient extends AbstractClient{
     }
 
     /**
+     *异步任务结果查询接口
+     * @param req DescribeTaskRequest
+     * @return DescribeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口请求域名： ecc.tencentcloudapi.com 
 纯文本英语作文批改
      * @param req ECCRequest
@@ -69,7 +87,7 @@ public class EccClient extends AbstractClient{
 
     /**
      *https://ecc.tencentcloudapi.com/?Action=EHOCR
-作文识别
+图像识别批改接口
      * @param req EHOCRRequest
      * @return EHOCRResponse
      * @throws TencentCloudSDKException

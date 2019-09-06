@@ -65,6 +65,13 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     private FrameTagConfigureInfo FrameTagConfigure;
 
     /**
+    * 智能精彩集锦任务控制参数。
+    */
+    @SerializedName("HighlightConfigure")
+    @Expose
+    private HighlightsConfigureInfo HighlightConfigure;
+
+    /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
@@ -168,6 +175,22 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
+     * 获取智能精彩集锦任务控制参数。
+     * @return HighlightConfigure 智能精彩集锦任务控制参数。
+     */
+    public HighlightsConfigureInfo getHighlightConfigure() {
+        return this.HighlightConfigure;
+    }
+
+    /**
+     * 设置智能精彩集锦任务控制参数。
+     * @param HighlightConfigure 智能精彩集锦任务控制参数。
+     */
+    public void setHighlightConfigure(HighlightsConfigureInfo HighlightConfigure) {
+        this.HighlightConfigure = HighlightConfigure;
+    }
+
+    /**
      * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
@@ -193,6 +216,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "TagConfigure.", this.TagConfigure);
         this.setParamObj(map, prefix + "CoverConfigure.", this.CoverConfigure);
         this.setParamObj(map, prefix + "FrameTagConfigure.", this.FrameTagConfigure);
+        this.setParamObj(map, prefix + "HighlightConfigure.", this.HighlightConfigure);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

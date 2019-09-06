@@ -24,10 +24,19 @@ public class ECCResponse  extends AbstractModel{
 
     /**
     * 整体的批改结果
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
     private CorrectData Data;
+
+    /**
+    * 任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +47,9 @@ public class ECCResponse  extends AbstractModel{
 
     /**
      * 获取整体的批改结果
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Data 整体的批改结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CorrectData getData() {
         return this.Data;
@@ -46,10 +57,32 @@ public class ECCResponse  extends AbstractModel{
 
     /**
      * 设置整体的批改结果
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 整体的批改结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CorrectData Data) {
         this.Data = Data;
+    }
+
+    /**
+     * 获取任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TaskId 任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * 设置任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskId 任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -73,6 +106,7 @@ public class ECCResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

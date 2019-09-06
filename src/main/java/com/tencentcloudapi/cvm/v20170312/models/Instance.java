@@ -193,6 +193,13 @@ public class Instance  extends AbstractModel{
     private String StopChargingMode;
 
     /**
+    * 实例全局唯一ID
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private String Uuid;
+
+    /**
      * 获取实例所在的位置。
      * @return Placement 实例所在的位置。
      */
@@ -585,6 +592,22 @@ public class Instance  extends AbstractModel{
     }
 
     /**
+     * 获取实例全局唯一ID
+     * @return Uuid 实例全局唯一ID
+     */
+    public String getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * 设置实例全局唯一ID
+     * @param Uuid 实例全局唯一ID
+     */
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -612,6 +635,7 @@ public class Instance  extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "StopChargingMode", this.StopChargingMode);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
 
     }
 }

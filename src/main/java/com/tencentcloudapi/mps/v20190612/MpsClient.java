@@ -635,6 +635,29 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *对直播流媒体发起处理任务，功能包括：
+
+1. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
+2. 智能内容分析（精彩集锦）。
+
+直播流处理事件通知实时写入用户指定的消息队列 CMQ 中，用户需要从消息队列 CMQ 中获取事件通知结果，同时处理过程中存在输出文件的，会写入用户指定的输出文件的目标存储中。
+     * @param req ProcessLiveMediaRequest
+     * @return ProcessLiveMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessLiveMediaResponse ProcessLiveMedia(ProcessLiveMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ProcessLiveMediaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ProcessLiveMediaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ProcessLiveMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对 COS 中的媒体文件发起处理任务，功能包括：
 1. 视频转码（带水印）；
 2. 视频转动图；

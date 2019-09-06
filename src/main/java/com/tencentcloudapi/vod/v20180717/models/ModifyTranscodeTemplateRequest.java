@@ -83,6 +83,13 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
+    * 极速高清转码参数，需联系商务架构师开通后才能使用。
+    */
+    @SerializedName("TEHDConfig")
+    @Expose
+    private TEHDConfigForUpdate TEHDConfig;
+
+    /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
@@ -234,6 +241,22 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
+     * 获取极速高清转码参数，需联系商务架构师开通后才能使用。
+     * @return TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
+     */
+    public TEHDConfigForUpdate getTEHDConfig() {
+        return this.TEHDConfig;
+    }
+
+    /**
+     * 设置极速高清转码参数，需联系商务架构师开通后才能使用。
+     * @param TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
+     */
+    public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
+        this.TEHDConfig = TEHDConfig;
+    }
+
+    /**
      * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
@@ -261,6 +284,7 @@ public class ModifyTranscodeTemplateRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
+        this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

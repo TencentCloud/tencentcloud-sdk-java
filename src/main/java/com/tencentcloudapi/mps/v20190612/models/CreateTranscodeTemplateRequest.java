@@ -78,6 +78,13 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     private AudioTemplateInfo AudioTemplate;
 
     /**
+    * 极速高清转码参数，需联系商务架构师开通后才能使用。
+    */
+    @SerializedName("TEHDConfig")
+    @Expose
+    private TEHDConfig TEHDConfig;
+
+    /**
      * 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
@@ -214,6 +221,22 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
+     * 获取极速高清转码参数，需联系商务架构师开通后才能使用。
+     * @return TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
+     */
+    public TEHDConfig getTEHDConfig() {
+        return this.TEHDConfig;
+    }
+
+    /**
+     * 设置极速高清转码参数，需联系商务架构师开通后才能使用。
+     * @param TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
+     */
+    public void setTEHDConfig(TEHDConfig TEHDConfig) {
+        this.TEHDConfig = TEHDConfig;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -224,6 +247,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
+        this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
 
     }
 }

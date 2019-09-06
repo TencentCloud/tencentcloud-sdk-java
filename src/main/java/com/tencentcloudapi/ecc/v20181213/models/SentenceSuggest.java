@@ -58,6 +58,20 @@ public class SentenceSuggest  extends AbstractModel{
     private String Message;
 
     /**
+    * 维度单词位置，在句子的第几个到第几个单词之间
+    */
+    @SerializedName("ErrorPosition")
+    @Expose
+    private Long [] ErrorPosition;
+
+    /**
+    * 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+    */
+    @SerializedName("ErrorCoordinates")
+    @Expose
+    private ErrorCoordinate [] ErrorCoordinates;
+
+    /**
      * 获取类型
      * @return Type 类型
      */
@@ -138,6 +152,38 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
+     * 获取维度单词位置，在句子的第几个到第几个单词之间
+     * @return ErrorPosition 维度单词位置，在句子的第几个到第几个单词之间
+     */
+    public Long [] getErrorPosition() {
+        return this.ErrorPosition;
+    }
+
+    /**
+     * 设置维度单词位置，在句子的第几个到第几个单词之间
+     * @param ErrorPosition 维度单词位置，在句子的第几个到第几个单词之间
+     */
+    public void setErrorPosition(Long [] ErrorPosition) {
+        this.ErrorPosition = ErrorPosition;
+    }
+
+    /**
+     * 获取维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+     * @return ErrorCoordinates 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+     */
+    public ErrorCoordinate [] getErrorCoordinates() {
+        return this.ErrorCoordinates;
+    }
+
+    /**
+     * 设置维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+     * @param ErrorCoordinates 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+     */
+    public void setErrorCoordinates(ErrorCoordinate [] ErrorCoordinates) {
+        this.ErrorCoordinates = ErrorCoordinates;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class SentenceSuggest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Origin", this.Origin);
         this.setParamSimple(map, prefix + "Replace", this.Replace);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamArraySimple(map, prefix + "ErrorPosition.", this.ErrorPosition);
+        this.setParamArrayObj(map, prefix + "ErrorCoordinates.", this.ErrorCoordinates);
 
     }
 }

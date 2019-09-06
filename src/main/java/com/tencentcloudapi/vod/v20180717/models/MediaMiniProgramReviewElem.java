@@ -51,7 +51,7 @@ public class MediaMiniProgramReviewElem  extends AbstractModel{
     */
     @SerializedName("Confidence")
     @Expose
-    private String Confidence;
+    private Float Confidence;
 
     /**
      * 获取审核类型。 
@@ -129,7 +129,7 @@ public class MediaMiniProgramReviewElem  extends AbstractModel{
      * 获取审核结果置信度。取值 0~100。
      * @return Confidence 审核结果置信度。取值 0~100。
      */
-    public String getConfidence() {
+    public Float getConfidence() {
         return this.Confidence;
     }
 
@@ -137,7 +137,7 @@ public class MediaMiniProgramReviewElem  extends AbstractModel{
      * 设置审核结果置信度。取值 0~100。
      * @param Confidence 审核结果置信度。取值 0~100。
      */
-    public void setConfidence(String Confidence) {
+    public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 

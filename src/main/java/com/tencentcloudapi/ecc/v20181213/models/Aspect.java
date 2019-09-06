@@ -23,49 +23,72 @@ import java.util.HashMap;
 public class Aspect  extends AbstractModel{
 
     /**
-    * 项目 名字
+    * 维度名字
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 该项得分
+    * 维度得分
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-     * 获取项目 名字
-     * @return Name 项目 名字
+    * 维度分数占比
+    */
+    @SerializedName("Percentage")
+    @Expose
+    private Float Percentage;
+
+    /**
+     * 获取维度名字
+     * @return Name 维度名字
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * 设置项目 名字
-     * @param Name 项目 名字
+     * 设置维度名字
+     * @param Name 维度名字
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * 获取该项得分
-     * @return Score 该项得分
+     * 获取维度得分
+     * @return Score 维度得分
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * 设置该项得分
-     * @param Score 该项得分
+     * 设置维度得分
+     * @param Score 维度得分
      */
     public void setScore(Float Score) {
         this.Score = Score;
+    }
+
+    /**
+     * 获取维度分数占比
+     * @return Percentage 维度分数占比
+     */
+    public Float getPercentage() {
+        return this.Percentage;
+    }
+
+    /**
+     * 设置维度分数占比
+     * @param Percentage 维度分数占比
+     */
+    public void setPercentage(Float Percentage) {
+        this.Percentage = Percentage;
     }
 
     /**
@@ -74,6 +97,7 @@ public class Aspect  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "Percentage", this.Percentage);
 
     }
 }

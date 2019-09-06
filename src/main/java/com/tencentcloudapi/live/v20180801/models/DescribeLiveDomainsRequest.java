@@ -58,6 +58,13 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     private Integer IsDelayLive;
 
     /**
+    * 域名前缀
+    */
+    @SerializedName("DomainPrefix")
+    @Expose
+    private String DomainPrefix;
+
+    /**
      * 获取域名状态过滤。0-停用，1-启用
      * @return DomainStatus 域名状态过滤。0-停用，1-启用
      */
@@ -138,6 +145,22 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取域名前缀
+     * @return DomainPrefix 域名前缀
+     */
+    public String getDomainPrefix() {
+        return this.DomainPrefix;
+    }
+
+    /**
+     * 设置域名前缀
+     * @param DomainPrefix 域名前缀
+     */
+    public void setDomainPrefix(String DomainPrefix) {
+        this.DomainPrefix = DomainPrefix;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
+        this.setParamSimple(map, prefix + "DomainPrefix", this.DomainPrefix);
 
     }
 }

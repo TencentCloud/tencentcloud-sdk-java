@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EHOCRResponse  extends AbstractModel{
 
     /**
-    * 识别后的作文内容
+    * 接口返回数据
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class EHOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取识别后的作文内容
-     * @return Data 识别后的作文内容
+     * 获取接口返回数据
+     * @return Data 接口返回数据
      */
     public CompostionContext getData() {
         return this.Data;
     }
 
     /**
-     * 设置识别后的作文内容
-     * @param Data 识别后的作文内容
+     * 设置接口返回数据
+     * @param Data 接口返回数据
      */
     public void setData(CompostionContext Data) {
         this.Data = Data;

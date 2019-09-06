@@ -44,7 +44,8 @@ public class CreateImageRequest  extends AbstractModel{
     private String ImageDescription;
 
     /**
-    * 软关机失败时是否执行强制关机以制作镜像
+    * 是否执行强制关机以制作镜像。
+取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
     */
     @SerializedName("ForcePoweroff")
     @Expose
@@ -58,13 +59,6 @@ public class CreateImageRequest  extends AbstractModel{
     private String Sysprep;
 
     /**
-    * 实例处于运行中时，是否允许关机执行制作镜像任务。
-    */
-    @SerializedName("Reboot")
-    @Expose
-    private String Reboot;
-
-    /**
     * 实例需要制作镜像的数据盘Id
     */
     @SerializedName("DataDiskIds")
@@ -72,7 +66,7 @@ public class CreateImageRequest  extends AbstractModel{
     private String [] DataDiskIds;
 
     /**
-    * 需要制作镜像的快照Id,必须包含一个系统盘快照
+    * 需要制作镜像的快照ID,必须包含一个系统盘快照
     */
     @SerializedName("SnapshotIds")
     @Expose
@@ -134,16 +128,20 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取软关机失败时是否执行强制关机以制作镜像
-     * @return ForcePoweroff 软关机失败时是否执行强制关机以制作镜像
+     * 获取是否执行强制关机以制作镜像。
+取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+     * @return ForcePoweroff 是否执行强制关机以制作镜像。
+取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
      */
     public String getForcePoweroff() {
         return this.ForcePoweroff;
     }
 
     /**
-     * 设置软关机失败时是否执行强制关机以制作镜像
-     * @param ForcePoweroff 软关机失败时是否执行强制关机以制作镜像
+     * 设置是否执行强制关机以制作镜像。
+取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+     * @param ForcePoweroff 是否执行强制关机以制作镜像。
+取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
      */
     public void setForcePoweroff(String ForcePoweroff) {
         this.ForcePoweroff = ForcePoweroff;
@@ -166,22 +164,6 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例处于运行中时，是否允许关机执行制作镜像任务。
-     * @return Reboot 实例处于运行中时，是否允许关机执行制作镜像任务。
-     */
-    public String getReboot() {
-        return this.Reboot;
-    }
-
-    /**
-     * 设置实例处于运行中时，是否允许关机执行制作镜像任务。
-     * @param Reboot 实例处于运行中时，是否允许关机执行制作镜像任务。
-     */
-    public void setReboot(String Reboot) {
-        this.Reboot = Reboot;
-    }
-
-    /**
      * 获取实例需要制作镜像的数据盘Id
      * @return DataDiskIds 实例需要制作镜像的数据盘Id
      */
@@ -198,16 +180,16 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要制作镜像的快照Id,必须包含一个系统盘快照
-     * @return SnapshotIds 需要制作镜像的快照Id,必须包含一个系统盘快照
+     * 获取需要制作镜像的快照ID,必须包含一个系统盘快照
+     * @return SnapshotIds 需要制作镜像的快照ID,必须包含一个系统盘快照
      */
     public String [] getSnapshotIds() {
         return this.SnapshotIds;
     }
 
     /**
-     * 设置需要制作镜像的快照Id,必须包含一个系统盘快照
-     * @param SnapshotIds 需要制作镜像的快照Id,必须包含一个系统盘快照
+     * 设置需要制作镜像的快照ID,必须包含一个系统盘快照
+     * @param SnapshotIds 需要制作镜像的快照ID,必须包含一个系统盘快照
      */
     public void setSnapshotIds(String [] SnapshotIds) {
         this.SnapshotIds = SnapshotIds;
@@ -238,7 +220,6 @@ public class CreateImageRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
         this.setParamSimple(map, prefix + "ForcePoweroff", this.ForcePoweroff);
         this.setParamSimple(map, prefix + "Sysprep", this.Sysprep);
-        this.setParamSimple(map, prefix + "Reboot", this.Reboot);
         this.setParamArraySimple(map, prefix + "DataDiskIds.", this.DataDiskIds);
         this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);

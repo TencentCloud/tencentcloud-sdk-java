@@ -76,6 +76,13 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     private FrameTagConfigureInfo FrameTagConfigure;
 
     /**
+    * 智能精彩集锦任务控制参数。
+    */
+    @SerializedName("HighlightConfigure")
+    @Expose
+    private HighlightsConfigureInfo HighlightConfigure;
+
+    /**
     * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
     */
     @SerializedName("CreateTime")
@@ -218,6 +225,22 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
+     * 获取智能精彩集锦任务控制参数。
+     * @return HighlightConfigure 智能精彩集锦任务控制参数。
+     */
+    public HighlightsConfigureInfo getHighlightConfigure() {
+        return this.HighlightConfigure;
+    }
+
+    /**
+     * 设置智能精彩集锦任务控制参数。
+     * @param HighlightConfigure 智能精彩集锦任务控制参数。
+     */
+    public void setHighlightConfigure(HighlightsConfigureInfo HighlightConfigure) {
+        this.HighlightConfigure = HighlightConfigure;
+    }
+
+    /**
      * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
@@ -260,6 +283,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
         this.setParamObj(map, prefix + "TagConfigure.", this.TagConfigure);
         this.setParamObj(map, prefix + "CoverConfigure.", this.CoverConfigure);
         this.setParamObj(map, prefix + "FrameTagConfigure.", this.FrameTagConfigure);
+        this.setParamObj(map, prefix + "HighlightConfigure.", this.HighlightConfigure);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

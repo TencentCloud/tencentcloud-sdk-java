@@ -44,6 +44,13 @@ public class BillDataInfo  extends AbstractModel{
     private Float Flux;
 
     /**
+    * 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+    */
+    @SerializedName("PeakTime")
+    @Expose
+    private String PeakTime;
+
+    /**
      * 获取时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @return Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
@@ -92,12 +99,29 @@ public class BillDataInfo  extends AbstractModel{
     }
 
     /**
+     * 获取峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+     * @return PeakTime 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+     */
+    public String getPeakTime() {
+        return this.PeakTime;
+    }
+
+    /**
+     * 设置峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+     * @param PeakTime 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+     */
+    public void setPeakTime(String PeakTime) {
+        this.PeakTime = PeakTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Flux", this.Flux);
+        this.setParamSimple(map, prefix + "PeakTime", this.PeakTime);
 
     }
 }
