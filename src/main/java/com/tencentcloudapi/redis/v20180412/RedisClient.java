@@ -301,6 +301,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询实例慢查询记录
+     * @param req DescribeSlowLogRequest
+     * @return DescribeSlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogResponse DescribeSlowLog(DescribeSlowLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLog"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询任务结果
      * @param req DescribeTaskInfoRequest
      * @return DescribeTaskInfoResponse

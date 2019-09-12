@@ -175,6 +175,24 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
+     * @param req IdCardOCRVerificationRequest
+     * @return IdCardOCRVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public IdCardOCRVerificationResponse IdCardOCRVerification(IdCardOCRVerificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IdCardOCRVerificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<IdCardOCRVerificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "IdCardOCRVerification"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *传入姓名和身份证号，校验两者的真实性和一致性。
      * @param req IdCardVerificationRequest
      * @return IdCardVerificationResponse

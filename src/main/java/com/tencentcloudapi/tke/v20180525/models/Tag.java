@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iottid.v20190411.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeliverTidsRequest  extends AbstractModel{
+public class Tag  extends AbstractModel{
 
     /**
-    * 订单ID
+    * 标签键
     */
-    @SerializedName("OrderId")
+    @SerializedName("Key")
     @Expose
-    private String OrderId;
+    private String Key;
 
     /**
-    * 数量，1~100
+    * 标签值
     */
-    @SerializedName("Quantity")
+    @SerializedName("Value")
     @Expose
-    private Long Quantity;
+    private String Value;
 
     /**
-     * 获取订单ID
-     * @return OrderId 订单ID
+     * 获取标签键
+     * @return Key 标签键
      */
-    public String getOrderId() {
-        return this.OrderId;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * 设置订单ID
-     * @param OrderId 订单ID
+     * 设置标签键
+     * @param Key 标签键
      */
-    public void setOrderId(String OrderId) {
-        this.OrderId = OrderId;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
     /**
-     * 获取数量，1~100
-     * @return Quantity 数量，1~100
+     * 获取标签值
+     * @return Value 标签值
      */
-    public Long getQuantity() {
-        return this.Quantity;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * 设置数量，1~100
-     * @param Quantity 数量，1~100
+     * 设置标签值
+     * @param Value 标签值
      */
-    public void setQuantity(Long Quantity) {
-        this.Quantity = Quantity;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OrderId", this.OrderId);
-        this.setParamSimple(map, prefix + "Quantity", this.Quantity);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

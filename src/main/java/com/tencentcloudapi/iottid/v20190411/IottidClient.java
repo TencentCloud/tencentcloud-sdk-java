@@ -49,7 +49,7 @@ public class IottidClient extends AbstractClient{
     }
 
     /**
-     *单向认证测试TID
+     *单向认证测试TID 
      * @param req AuthTestTidRequest
      * @return AuthTestTidResponse
      * @throws TencentCloudSDKException
@@ -67,7 +67,7 @@ public class IottidClient extends AbstractClient{
     }
 
     /**
-     *安全芯片TID烧录回执
+     *安全芯片TID烧录回执 
      * @param req BurnTidNotifyRequest
      * @return BurnTidNotifyResponse
      * @throws TencentCloudSDKException
@@ -85,7 +85,7 @@ public class IottidClient extends AbstractClient{
     }
 
     /**
-     *安全芯片为载体的TID空发回执，绑定TID与订单号。
+     *安全芯片为载体的TID空发回执，绑定TID与订单号。 
      * @param req DeliverTidNotifyRequest
      * @return DeliverTidNotifyResponse
      * @throws TencentCloudSDKException
@@ -103,7 +103,7 @@ public class IottidClient extends AbstractClient{
     }
 
     /**
-     *设备服务商请求空发产品订单的TID信息
+     *设备服务商请求空发产品订单的TID信息 
      * @param req DeliverTidsRequest
      * @return DeliverTidsResponse
      * @throws TencentCloudSDKException
@@ -121,7 +121,25 @@ public class IottidClient extends AbstractClient{
     }
 
     /**
-     *查询企业用户TID平台控制台权限
+     *查询指定订单的可空发的白盒秘钥数量
+     * @param req DescribeAvailableLibCountRequest
+     * @return DescribeAvailableLibCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAvailableLibCountResponse DescribeAvailableLibCount(DescribeAvailableLibCountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAvailableLibCountResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAvailableLibCountResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAvailableLibCount"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询企业用户TID平台控制台权限 
      * @param req DescribePermissionRequest
      * @return DescribePermissionResponse
      * @throws TencentCloudSDKException
@@ -139,7 +157,7 @@ public class IottidClient extends AbstractClient{
     }
 
     /**
-     *下载芯片订单的TID
+     *下载芯片订单的TID 
      * @param req DownloadTidsRequest
      * @return DownloadTidsResponse
      * @throws TencentCloudSDKException
@@ -157,7 +175,7 @@ public class IottidClient extends AbstractClient{
     }
 
     /**
-     *下载控制台验证芯片烧录信息，保证TID与中心信息一致
+     *下载控制台验证芯片烧录信息，保证TID与中心信息一致 
      * @param req VerifyChipBurnInfoRequest
      * @return VerifyChipBurnInfoResponse
      * @throws TencentCloudSDKException

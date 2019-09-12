@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iottid.v20190411.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyChipBurnInfoResponse  extends AbstractModel{
+public class DescribeSlowLogResponse  extends AbstractModel{
 
     /**
-    * 验证结果
+    * 慢查询总数
     */
-    @SerializedName("Pass")
+    @SerializedName("TotalCount")
     @Expose
-    private Boolean Pass;
+    private Integer TotalCount;
 
     /**
-    * 已验证次数
+    * 慢查询详情
     */
-    @SerializedName("VerifiedTimes")
+    @SerializedName("InstanceSlowlogDetail")
     @Expose
-    private Long VerifiedTimes;
-
-    /**
-    * 剩余验证次数
-    */
-    @SerializedName("LeftTimes")
-    @Expose
-    private Long LeftTimes;
+    private InstanceSlowlogDetail [] InstanceSlowlogDetail;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取验证结果
-     * @return Pass 验证结果
+     * 获取慢查询总数
+     * @return TotalCount 慢查询总数
      */
-    public Boolean getPass() {
-        return this.Pass;
+    public Integer getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * 设置验证结果
-     * @param Pass 验证结果
+     * 设置慢查询总数
+     * @param TotalCount 慢查询总数
      */
-    public void setPass(Boolean Pass) {
-        this.Pass = Pass;
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取已验证次数
-     * @return VerifiedTimes 已验证次数
+     * 获取慢查询详情
+     * @return InstanceSlowlogDetail 慢查询详情
      */
-    public Long getVerifiedTimes() {
-        return this.VerifiedTimes;
+    public InstanceSlowlogDetail [] getInstanceSlowlogDetail() {
+        return this.InstanceSlowlogDetail;
     }
 
     /**
-     * 设置已验证次数
-     * @param VerifiedTimes 已验证次数
+     * 设置慢查询详情
+     * @param InstanceSlowlogDetail 慢查询详情
      */
-    public void setVerifiedTimes(Long VerifiedTimes) {
-        this.VerifiedTimes = VerifiedTimes;
-    }
-
-    /**
-     * 获取剩余验证次数
-     * @return LeftTimes 剩余验证次数
-     */
-    public Long getLeftTimes() {
-        return this.LeftTimes;
-    }
-
-    /**
-     * 设置剩余验证次数
-     * @param LeftTimes 剩余验证次数
-     */
-    public void setLeftTimes(Long LeftTimes) {
-        this.LeftTimes = LeftTimes;
+    public void setInstanceSlowlogDetail(InstanceSlowlogDetail [] InstanceSlowlogDetail) {
+        this.InstanceSlowlogDetail = InstanceSlowlogDetail;
     }
 
     /**
@@ -118,9 +95,8 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Pass", this.Pass);
-        this.setParamSimple(map, prefix + "VerifiedTimes", this.VerifiedTimes);
-        this.setParamSimple(map, prefix + "LeftTimes", this.LeftTimes);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "InstanceSlowlogDetail.", this.InstanceSlowlogDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

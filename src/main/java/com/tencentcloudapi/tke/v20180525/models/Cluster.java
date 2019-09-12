@@ -86,6 +86,14 @@ public class Cluster  extends AbstractModel{
     private Integer ProjectId;
 
     /**
+    * 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * 获取集群ID
      * @return ClusterId 集群ID
      */
@@ -230,6 +238,26 @@ public class Cluster  extends AbstractModel{
     }
 
     /**
+     * 获取标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TagSpecification 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * 设置标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSpecification 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +270,7 @@ public class Cluster  extends AbstractModel{
         this.setParamObj(map, prefix + "ClusterNetworkSettings.", this.ClusterNetworkSettings);
         this.setParamSimple(map, prefix + "ClusterNodeNum", this.ClusterNodeNum);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

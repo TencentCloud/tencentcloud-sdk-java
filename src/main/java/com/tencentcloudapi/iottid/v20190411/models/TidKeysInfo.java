@@ -51,6 +51,20 @@ public class TidKeysInfo  extends AbstractModel{
     private String Psk;
 
     /**
+    * 软加固白盒秘钥下载地址
+    */
+    @SerializedName("DownloadUrl")
+    @Expose
+    private String DownloadUrl;
+
+    /**
+    * 软加固设备标识码
+    */
+    @SerializedName("DeviceCode")
+    @Expose
+    private String DeviceCode;
+
+    /**
      * 获取TID号码
      * @return Tid TID号码
      */
@@ -115,6 +129,38 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
+     * 获取软加固白盒秘钥下载地址
+     * @return DownloadUrl 软加固白盒秘钥下载地址
+     */
+    public String getDownloadUrl() {
+        return this.DownloadUrl;
+    }
+
+    /**
+     * 设置软加固白盒秘钥下载地址
+     * @param DownloadUrl 软加固白盒秘钥下载地址
+     */
+    public void setDownloadUrl(String DownloadUrl) {
+        this.DownloadUrl = DownloadUrl;
+    }
+
+    /**
+     * 获取软加固设备标识码
+     * @return DeviceCode 软加固设备标识码
+     */
+    public String getDeviceCode() {
+        return this.DeviceCode;
+    }
+
+    /**
+     * 设置软加固设备标识码
+     * @param DeviceCode 软加固设备标识码
+     */
+    public void setDeviceCode(String DeviceCode) {
+        this.DeviceCode = DeviceCode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +168,8 @@ public class TidKeysInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicKey", this.PublicKey);
         this.setParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
         this.setParamSimple(map, prefix + "Psk", this.Psk);
+        this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "DeviceCode", this.DeviceCode);
 
     }
 }

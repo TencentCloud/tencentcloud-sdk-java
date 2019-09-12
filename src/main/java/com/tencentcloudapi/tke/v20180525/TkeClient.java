@@ -175,6 +175,24 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *删除集群伸缩组
+     * @param req DeleteClusterAsGroupsRequest
+     * @return DeleteClusterAsGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterAsGroupsResponse DeleteClusterAsGroups(DeleteClusterAsGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterAsGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterAsGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteClusterAsGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除集群中的实例
      * @param req DeleteClusterInstancesRequest
      * @return DeleteClusterInstancesResponse

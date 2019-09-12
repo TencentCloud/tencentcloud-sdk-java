@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iottid.v20190411.models;
+package com.tencentcloudapi.tts.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyChipBurnInfoResponse  extends AbstractModel{
+public class TextToVoiceResponse  extends AbstractModel{
 
     /**
-    * 验证结果
+    * base64编码的wav/mp3音频数据
     */
-    @SerializedName("Pass")
+    @SerializedName("Audio")
     @Expose
-    private Boolean Pass;
+    private String Audio;
 
     /**
-    * 已验证次数
+    * 一次请求对应一个SessionId
     */
-    @SerializedName("VerifiedTimes")
+    @SerializedName("SessionId")
     @Expose
-    private Long VerifiedTimes;
-
-    /**
-    * 剩余验证次数
-    */
-    @SerializedName("LeftTimes")
-    @Expose
-    private Long LeftTimes;
+    private String SessionId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取验证结果
-     * @return Pass 验证结果
+     * 获取base64编码的wav/mp3音频数据
+     * @return Audio base64编码的wav/mp3音频数据
      */
-    public Boolean getPass() {
-        return this.Pass;
+    public String getAudio() {
+        return this.Audio;
     }
 
     /**
-     * 设置验证结果
-     * @param Pass 验证结果
+     * 设置base64编码的wav/mp3音频数据
+     * @param Audio base64编码的wav/mp3音频数据
      */
-    public void setPass(Boolean Pass) {
-        this.Pass = Pass;
+    public void setAudio(String Audio) {
+        this.Audio = Audio;
     }
 
     /**
-     * 获取已验证次数
-     * @return VerifiedTimes 已验证次数
+     * 获取一次请求对应一个SessionId
+     * @return SessionId 一次请求对应一个SessionId
      */
-    public Long getVerifiedTimes() {
-        return this.VerifiedTimes;
+    public String getSessionId() {
+        return this.SessionId;
     }
 
     /**
-     * 设置已验证次数
-     * @param VerifiedTimes 已验证次数
+     * 设置一次请求对应一个SessionId
+     * @param SessionId 一次请求对应一个SessionId
      */
-    public void setVerifiedTimes(Long VerifiedTimes) {
-        this.VerifiedTimes = VerifiedTimes;
-    }
-
-    /**
-     * 获取剩余验证次数
-     * @return LeftTimes 剩余验证次数
-     */
-    public Long getLeftTimes() {
-        return this.LeftTimes;
-    }
-
-    /**
-     * 设置剩余验证次数
-     * @param LeftTimes 剩余验证次数
-     */
-    public void setLeftTimes(Long LeftTimes) {
-        this.LeftTimes = LeftTimes;
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
     }
 
     /**
@@ -118,9 +95,8 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Pass", this.Pass);
-        this.setParamSimple(map, prefix + "VerifiedTimes", this.VerifiedTimes);
-        this.setParamSimple(map, prefix + "LeftTimes", this.LeftTimes);
+        this.setParamSimple(map, prefix + "Audio", this.Audio);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

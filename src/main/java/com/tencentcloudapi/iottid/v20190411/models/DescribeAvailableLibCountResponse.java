@@ -20,28 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyChipBurnInfoResponse  extends AbstractModel{
+public class DescribeAvailableLibCountResponse  extends AbstractModel{
 
     /**
-    * 验证结果
+    * 可空发的白盒秘钥数量
     */
-    @SerializedName("Pass")
+    @SerializedName("Quantity")
     @Expose
-    private Boolean Pass;
-
-    /**
-    * 已验证次数
-    */
-    @SerializedName("VerifiedTimes")
-    @Expose
-    private Long VerifiedTimes;
-
-    /**
-    * 剩余验证次数
-    */
-    @SerializedName("LeftTimes")
-    @Expose
-    private Long LeftTimes;
+    private Long Quantity;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取验证结果
-     * @return Pass 验证结果
+     * 获取可空发的白盒秘钥数量
+     * @return Quantity 可空发的白盒秘钥数量
      */
-    public Boolean getPass() {
-        return this.Pass;
+    public Long getQuantity() {
+        return this.Quantity;
     }
 
     /**
-     * 设置验证结果
-     * @param Pass 验证结果
+     * 设置可空发的白盒秘钥数量
+     * @param Quantity 可空发的白盒秘钥数量
      */
-    public void setPass(Boolean Pass) {
-        this.Pass = Pass;
-    }
-
-    /**
-     * 获取已验证次数
-     * @return VerifiedTimes 已验证次数
-     */
-    public Long getVerifiedTimes() {
-        return this.VerifiedTimes;
-    }
-
-    /**
-     * 设置已验证次数
-     * @param VerifiedTimes 已验证次数
-     */
-    public void setVerifiedTimes(Long VerifiedTimes) {
-        this.VerifiedTimes = VerifiedTimes;
-    }
-
-    /**
-     * 获取剩余验证次数
-     * @return LeftTimes 剩余验证次数
-     */
-    public Long getLeftTimes() {
-        return this.LeftTimes;
-    }
-
-    /**
-     * 设置剩余验证次数
-     * @param LeftTimes 剩余验证次数
-     */
-    public void setLeftTimes(Long LeftTimes) {
-        this.LeftTimes = LeftTimes;
+    public void setQuantity(Long Quantity) {
+        this.Quantity = Quantity;
     }
 
     /**
@@ -118,9 +72,7 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Pass", this.Pass);
-        this.setParamSimple(map, prefix + "VerifiedTimes", this.VerifiedTimes);
-        this.setParamSimple(map, prefix + "LeftTimes", this.LeftTimes);
+        this.setParamSimple(map, prefix + "Quantity", this.Quantity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
