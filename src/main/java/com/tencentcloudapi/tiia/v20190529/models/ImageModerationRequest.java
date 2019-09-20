@@ -27,6 +27,7 @@ public class ImageModerationRequest  extends AbstractModel{
 1. PORN，即色情识别
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
+4. TEXT, 即图像文本识别
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
     */
@@ -38,7 +39,7 @@ public class ImageModerationRequest  extends AbstractModel{
     * 图片URL地址。 
 图片限制： 
  • 图片格式：PNG、JPG、JPEG。 
- • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
+ • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 TEXT场景要求图片经Base64编码后不超过3M。
  • 图片像素：大于50*50像素，否则影响识别效果； 
  • 长宽比：长边：短边<5； 
 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
@@ -73,12 +74,14 @@ public class ImageModerationRequest  extends AbstractModel{
 1. PORN，即色情识别
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
+4. TEXT, 即图像文本识别
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
      * @return Scenes 本次调用支持的识别场景，可选值如下：
 1. PORN，即色情识别
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
+4. TEXT, 即图像文本识别
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
      */
@@ -91,12 +94,14 @@ public class ImageModerationRequest  extends AbstractModel{
 1. PORN，即色情识别
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
+4. TEXT, 即图像文本识别
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
      * @param Scenes 本次调用支持的识别场景，可选值如下：
 1. PORN，即色情识别
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
+4. TEXT, 即图像文本识别
 
 支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
      */
@@ -108,14 +113,14 @@ public class ImageModerationRequest  extends AbstractModel{
      * 获取图片URL地址。 
 图片限制： 
  • 图片格式：PNG、JPG、JPEG。 
- • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
+ • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 TEXT场景要求图片经Base64编码后不超过3M。
  • 图片像素：大于50*50像素，否则影响识别效果； 
  • 长宽比：长边：短边<5； 
 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
      * @return ImageUrl 图片URL地址。 
 图片限制： 
  • 图片格式：PNG、JPG、JPEG。 
- • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
+ • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 TEXT场景要求图片经Base64编码后不超过3M。
  • 图片像素：大于50*50像素，否则影响识别效果； 
  • 长宽比：长边：短边<5； 
 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
@@ -128,14 +133,14 @@ public class ImageModerationRequest  extends AbstractModel{
      * 设置图片URL地址。 
 图片限制： 
  • 图片格式：PNG、JPG、JPEG。 
- • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
+ • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 TEXT场景要求图片经Base64编码后不超过3M。
  • 图片像素：大于50*50像素，否则影响识别效果； 
  • 长宽比：长边：短边<5； 
 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
      * @param ImageUrl 图片URL地址。 
 图片限制： 
  • 图片格式：PNG、JPG、JPEG。 
- • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
+ • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 TEXT场景要求图片经Base64编码后不超过3M。
  • 图片像素：大于50*50像素，否则影响识别效果； 
  • 长宽比：长边：短边<5； 
 接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。

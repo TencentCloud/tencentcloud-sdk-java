@@ -103,6 +103,24 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *续费询价。
+     * @param req InquiryPriceRenewInstanceRequest
+     * @return InquiryPriceRenewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(InquiryPriceRenewInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceRenewInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *扩容询价. 当扩容时候，请通过该接口查询价格。
      * @param req InquiryPriceScaleOutInstanceRequest
      * @return InquiryPriceScaleOutInstanceResponse
@@ -114,6 +132,24 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceScaleOutInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *变配询价
+     * @param req InquiryPriceUpdateInstanceRequest
+     * @return InquiryPriceUpdateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstance(InquiryPriceUpdateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceUpdateInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceUpdateInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EMRProductConfigSettings  extends AbstractModel{
+public class EmrProductConfigOutter  extends AbstractModel{
 
     /**
-    * 集群软件信息
+    * 软件信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SoftInfo")
@@ -31,7 +31,7 @@ public class EMRProductConfigSettings  extends AbstractModel{
     private String [] SoftInfo;
 
     /**
-    * master节点数量
+    * Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterNodeSize")
@@ -39,7 +39,7 @@ public class EMRProductConfigSettings  extends AbstractModel{
     private Integer MasterNodeSize;
 
     /**
-    * core节点数量
+    * Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoreNodeSize")
@@ -47,7 +47,7 @@ public class EMRProductConfigSettings  extends AbstractModel{
     private Integer CoreNodeSize;
 
     /**
-    * task节点数量
+    * Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskNodeSize")
@@ -55,7 +55,7 @@ public class EMRProductConfigSettings  extends AbstractModel{
     private Integer TaskNodeSize;
 
     /**
-    * common节点数量
+    * Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComNodeSize")
@@ -63,57 +63,57 @@ public class EMRProductConfigSettings  extends AbstractModel{
     private Integer ComNodeSize;
 
     /**
-    * master规格
+    * Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("MasterResourceSpec")
+    @SerializedName("MasterResource")
     @Expose
-    private NodeSpec MasterResourceSpec;
+    private OutterResource MasterResource;
 
     /**
-    * core规格
+    * Core节点资源
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CoreResourceSpec")
+    @SerializedName("CoreResource")
     @Expose
-    private NodeSpec CoreResourceSpec;
+    private OutterResource CoreResource;
 
     /**
-    * task规格
+    * Task节点资源
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TaskResourceSpec")
+    @SerializedName("TaskResource")
     @Expose
-    private NodeSpec TaskResourceSpec;
+    private OutterResource TaskResource;
 
     /**
-    * common规格
+    * Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CommonResourceSpec")
+    @SerializedName("ComResource")
     @Expose
-    private NodeSpec CommonResourceSpec;
+    private OutterResource ComResource;
 
     /**
     * 是否使用COS
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Oncos")
+    @SerializedName("OnCos")
     @Expose
-    private Boolean Oncos;
+    private Boolean OnCos;
 
     /**
-    * COS配置
+    * 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("COSSettings")
+    @SerializedName("ChargeType")
     @Expose
-    private COSSettings COSSettings;
+    private Integer ChargeType;
 
     /**
-     * 获取集群软件信息
+     * 获取软件信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return SoftInfo 集群软件信息
+     * @return SoftInfo 软件信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSoftInfo() {
@@ -121,9 +121,9 @@ public class EMRProductConfigSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群软件信息
+     * 设置软件信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SoftInfo 集群软件信息
+     * @param SoftInfo 软件信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSoftInfo(String [] SoftInfo) {
@@ -131,9 +131,9 @@ public class EMRProductConfigSettings  extends AbstractModel{
     }
 
     /**
-     * 获取master节点数量
+     * 获取Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return MasterNodeSize master节点数量
+     * @return MasterNodeSize Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getMasterNodeSize() {
@@ -141,9 +141,9 @@ public class EMRProductConfigSettings  extends AbstractModel{
     }
 
     /**
-     * 设置master节点数量
+     * 设置Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MasterNodeSize master节点数量
+     * @param MasterNodeSize Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterNodeSize(Integer MasterNodeSize) {
@@ -151,9 +151,9 @@ public class EMRProductConfigSettings  extends AbstractModel{
     }
 
     /**
-     * 获取core节点数量
+     * 获取Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return CoreNodeSize core节点数量
+     * @return CoreNodeSize Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getCoreNodeSize() {
@@ -161,9 +161,9 @@ public class EMRProductConfigSettings  extends AbstractModel{
     }
 
     /**
-     * 设置core节点数量
+     * 设置Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CoreNodeSize core节点数量
+     * @param CoreNodeSize Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoreNodeSize(Integer CoreNodeSize) {
@@ -171,9 +171,9 @@ public class EMRProductConfigSettings  extends AbstractModel{
     }
 
     /**
-     * 获取task节点数量
+     * 获取Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return TaskNodeSize task节点数量
+     * @return TaskNodeSize Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getTaskNodeSize() {
@@ -181,9 +181,9 @@ public class EMRProductConfigSettings  extends AbstractModel{
     }
 
     /**
-     * 设置task节点数量
+     * 设置Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskNodeSize task节点数量
+     * @param TaskNodeSize Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskNodeSize(Integer TaskNodeSize) {
@@ -191,9 +191,9 @@ public class EMRProductConfigSettings  extends AbstractModel{
     }
 
     /**
-     * 获取common节点数量
+     * 获取Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return ComNodeSize common节点数量
+     * @return ComNodeSize Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getComNodeSize() {
@@ -201,9 +201,9 @@ public class EMRProductConfigSettings  extends AbstractModel{
     }
 
     /**
-     * 设置common节点数量
+     * 设置Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComNodeSize common节点数量
+     * @param ComNodeSize Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComNodeSize(Integer ComNodeSize) {
@@ -211,123 +211,123 @@ public class EMRProductConfigSettings  extends AbstractModel{
     }
 
     /**
-     * 获取master规格
+     * 获取Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return MasterResourceSpec master规格
+     * @return MasterResource Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public NodeSpec getMasterResourceSpec() {
-        return this.MasterResourceSpec;
+    public OutterResource getMasterResource() {
+        return this.MasterResource;
     }
 
     /**
-     * 设置master规格
+     * 设置Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MasterResourceSpec master规格
+     * @param MasterResource Master节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMasterResourceSpec(NodeSpec MasterResourceSpec) {
-        this.MasterResourceSpec = MasterResourceSpec;
+    public void setMasterResource(OutterResource MasterResource) {
+        this.MasterResource = MasterResource;
     }
 
     /**
-     * 获取core规格
+     * 获取Core节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return CoreResourceSpec core规格
+     * @return CoreResource Core节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public NodeSpec getCoreResourceSpec() {
-        return this.CoreResourceSpec;
+    public OutterResource getCoreResource() {
+        return this.CoreResource;
     }
 
     /**
-     * 设置core规格
+     * 设置Core节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CoreResourceSpec core规格
+     * @param CoreResource Core节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCoreResourceSpec(NodeSpec CoreResourceSpec) {
-        this.CoreResourceSpec = CoreResourceSpec;
+    public void setCoreResource(OutterResource CoreResource) {
+        this.CoreResource = CoreResource;
     }
 
     /**
-     * 获取task规格
+     * 获取Task节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return TaskResourceSpec task规格
+     * @return TaskResource Task节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public NodeSpec getTaskResourceSpec() {
-        return this.TaskResourceSpec;
+    public OutterResource getTaskResource() {
+        return this.TaskResource;
     }
 
     /**
-     * 设置task规格
+     * 设置Task节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskResourceSpec task规格
+     * @param TaskResource Task节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTaskResourceSpec(NodeSpec TaskResourceSpec) {
-        this.TaskResourceSpec = TaskResourceSpec;
+    public void setTaskResource(OutterResource TaskResource) {
+        this.TaskResource = TaskResource;
     }
 
     /**
-     * 获取common规格
+     * 获取Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return CommonResourceSpec common规格
+     * @return ComResource Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public NodeSpec getCommonResourceSpec() {
-        return this.CommonResourceSpec;
+    public OutterResource getComResource() {
+        return this.ComResource;
     }
 
     /**
-     * 设置common规格
+     * 设置Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CommonResourceSpec common规格
+     * @param ComResource Common节点资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCommonResourceSpec(NodeSpec CommonResourceSpec) {
-        this.CommonResourceSpec = CommonResourceSpec;
+    public void setComResource(OutterResource ComResource) {
+        this.ComResource = ComResource;
     }
 
     /**
      * 获取是否使用COS
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Oncos 是否使用COS
+     * @return OnCos 是否使用COS
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Boolean getOncos() {
-        return this.Oncos;
+    public Boolean getOnCos() {
+        return this.OnCos;
     }
 
     /**
      * 设置是否使用COS
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Oncos 是否使用COS
+     * @param OnCos 是否使用COS
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setOncos(Boolean Oncos) {
-        this.Oncos = Oncos;
+    public void setOnCos(Boolean OnCos) {
+        this.OnCos = OnCos;
     }
 
     /**
-     * 获取COS配置
+     * 获取收费类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return COSSettings COS配置
+     * @return ChargeType 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public COSSettings getCOSSettings() {
-        return this.COSSettings;
+    public Integer getChargeType() {
+        return this.ChargeType;
     }
 
     /**
-     * 设置COS配置
+     * 设置收费类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param COSSettings COS配置
+     * @param ChargeType 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCOSSettings(COSSettings COSSettings) {
-        this.COSSettings = COSSettings;
+    public void setChargeType(Integer ChargeType) {
+        this.ChargeType = ChargeType;
     }
 
     /**
@@ -339,12 +339,12 @@ public class EMRProductConfigSettings  extends AbstractModel{
         this.setParamSimple(map, prefix + "CoreNodeSize", this.CoreNodeSize);
         this.setParamSimple(map, prefix + "TaskNodeSize", this.TaskNodeSize);
         this.setParamSimple(map, prefix + "ComNodeSize", this.ComNodeSize);
-        this.setParamObj(map, prefix + "MasterResourceSpec.", this.MasterResourceSpec);
-        this.setParamObj(map, prefix + "CoreResourceSpec.", this.CoreResourceSpec);
-        this.setParamObj(map, prefix + "TaskResourceSpec.", this.TaskResourceSpec);
-        this.setParamObj(map, prefix + "CommonResourceSpec.", this.CommonResourceSpec);
-        this.setParamSimple(map, prefix + "Oncos", this.Oncos);
-        this.setParamObj(map, prefix + "COSSettings.", this.COSSettings);
+        this.setParamObj(map, prefix + "MasterResource.", this.MasterResource);
+        this.setParamObj(map, prefix + "CoreResource.", this.CoreResource);
+        this.setParamObj(map, prefix + "TaskResource.", this.TaskResource);
+        this.setParamObj(map, prefix + "ComResource.", this.ComResource);
+        this.setParamSimple(map, prefix + "OnCos", this.OnCos);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
 
     }
 }

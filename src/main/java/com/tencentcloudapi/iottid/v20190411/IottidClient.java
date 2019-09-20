@@ -121,7 +121,7 @@ public class IottidClient extends AbstractClient{
     }
 
     /**
-     *查询指定订单的可空发的白盒秘钥数量
+     *查询指定订单的可空发的白盒密钥数量
      * @param req DescribeAvailableLibCountRequest
      * @return DescribeAvailableLibCountResponse
      * @throws TencentCloudSDKException

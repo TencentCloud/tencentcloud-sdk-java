@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAvailableLibCountResponse  extends AbstractModel{
 
     /**
-    * 可空发的白盒秘钥数量
+    * 可空发的白盒密钥数量
     */
     @SerializedName("Quantity")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeAvailableLibCountResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取可空发的白盒秘钥数量
-     * @return Quantity 可空发的白盒秘钥数量
+     * 获取可空发的白盒密钥数量
+     * @return Quantity 可空发的白盒密钥数量
      */
     public Long getQuantity() {
         return this.Quantity;
     }
 
     /**
-     * 设置可空发的白盒秘钥数量
-     * @param Quantity 可空发的白盒秘钥数量
+     * 设置可空发的白盒密钥数量
+     * @param Quantity 可空发的白盒密钥数量
      */
     public void setQuantity(Long Quantity) {
         this.Quantity = Quantity;

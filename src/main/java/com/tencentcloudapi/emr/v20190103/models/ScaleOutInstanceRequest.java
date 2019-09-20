@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ScaleOutInstanceRequest  extends AbstractModel{
 
     /**
-    * Token
-    */
-    @SerializedName("ClientToken")
-    @Expose
-    private String ClientToken;
-
-    /**
     * 时间单位
     */
     @SerializedName("TimeUnit")
@@ -58,6 +51,13 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     private Integer PayMode;
 
     /**
+    * Token
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
+
+    /**
     * 预执行脚本设置
     */
     @SerializedName("PreExecutedFileSettings")
@@ -79,20 +79,11 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     private Integer CoreCount;
 
     /**
-     * 获取Token
-     * @return ClientToken Token
-     */
-    public String getClientToken() {
-        return this.ClientToken;
-    }
-
-    /**
-     * 设置Token
-     * @param ClientToken Token
-     */
-    public void setClientToken(String ClientToken) {
-        this.ClientToken = ClientToken;
-    }
+    * 扩容时不需要安装的进程
+    */
+    @SerializedName("UnNecessaryNodeList")
+    @Expose
+    private Integer [] UnNecessaryNodeList;
 
     /**
      * 获取时间单位
@@ -159,6 +150,22 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取Token
+     * @return ClientToken Token
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * 设置Token
+     * @param ClientToken Token
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
+    /**
      * 获取预执行脚本设置
      * @return PreExecutedFileSettings 预执行脚本设置
      */
@@ -207,17 +214,34 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取扩容时不需要安装的进程
+     * @return UnNecessaryNodeList 扩容时不需要安装的进程
+     */
+    public Integer [] getUnNecessaryNodeList() {
+        return this.UnNecessaryNodeList;
+    }
+
+    /**
+     * 设置扩容时不需要安装的进程
+     * @param UnNecessaryNodeList 扩容时不需要安装的进程
+     */
+    public void setUnNecessaryNodeList(Integer [] UnNecessaryNodeList) {
+        this.UnNecessaryNodeList = UnNecessaryNodeList;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
         this.setParamSimple(map, prefix + "TaskCount", this.TaskCount);
         this.setParamSimple(map, prefix + "CoreCount", this.CoreCount);
+        this.setParamArraySimple(map, prefix + "UnNecessaryNodeList.", this.UnNecessaryNodeList);
 
     }
 }

@@ -31,7 +31,7 @@ public class LexicalAnalysisRequest  extends AbstractModel{
 
     /**
     * 词法分析模式（默认取1值）：
-1、高精度；
+1、高精度（具备混合粒度分词能力）；
 2、高性能；
     */
     @SerializedName("Flag")
@@ -56,10 +56,10 @@ public class LexicalAnalysisRequest  extends AbstractModel{
 
     /**
      * 获取词法分析模式（默认取1值）：
-1、高精度；
+1、高精度（具备混合粒度分词能力）；
 2、高性能；
      * @return Flag 词法分析模式（默认取1值）：
-1、高精度；
+1、高精度（具备混合粒度分词能力）；
 2、高性能；
      */
     public Long getFlag() {
@@ -68,10 +68,10 @@ public class LexicalAnalysisRequest  extends AbstractModel{
 
     /**
      * 设置词法分析模式（默认取1值）：
-1、高精度；
+1、高精度（具备混合粒度分词能力）；
 2、高性能；
      * @param Flag 词法分析模式（默认取1值）：
-1、高精度；
+1、高精度（具备混合粒度分词能力）；
 2、高性能；
      */
     public void setFlag(Long Flag) {

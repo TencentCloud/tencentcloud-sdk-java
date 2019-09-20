@@ -23,11 +23,36 @@ import java.util.HashMap;
 public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
 
     /**
-    * 询价结果
+    * 刊例价
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("OriginalCost")
     @Expose
-    private InquiryPriceResult Result;
+    private Float OriginalCost;
+
+    /**
+    * 折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountCost")
+    @Expose
+    private Float DiscountCost;
+
+    /**
+    * 时间单位，"s","m"
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeUnit")
+    @Expose
+    private String TimeUnit;
+
+    /**
+    * 时间数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeSpan")
+    @Expose
+    private Integer TimeSpan;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +62,83 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取询价结果
-     * @return Result 询价结果
+     * 获取刊例价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return OriginalCost 刊例价
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public InquiryPriceResult getResult() {
-        return this.Result;
+    public Float getOriginalCost() {
+        return this.OriginalCost;
     }
 
     /**
-     * 设置询价结果
-     * @param Result 询价结果
+     * 设置刊例价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalCost 刊例价
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(InquiryPriceResult Result) {
-        this.Result = Result;
+    public void setOriginalCost(Float OriginalCost) {
+        this.OriginalCost = OriginalCost;
+    }
+
+    /**
+     * 获取折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return DiscountCost 折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDiscountCost() {
+        return this.DiscountCost;
+    }
+
+    /**
+     * 设置折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountCost 折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountCost(Float DiscountCost) {
+        this.DiscountCost = DiscountCost;
+    }
+
+    /**
+     * 获取时间单位，"s","m"
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TimeUnit 时间单位，"s","m"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTimeUnit() {
+        return this.TimeUnit;
+    }
+
+    /**
+     * 设置时间单位，"s","m"
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeUnit 时间单位，"s","m"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeUnit(String TimeUnit) {
+        this.TimeUnit = TimeUnit;
+    }
+
+    /**
+     * 获取时间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TimeSpan 时间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getTimeSpan() {
+        return this.TimeSpan;
+    }
+
+    /**
+     * 设置时间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeSpan 时间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeSpan(Integer TimeSpan) {
+        this.TimeSpan = TimeSpan;
     }
 
     /**
@@ -72,7 +161,10 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "OriginalCost", this.OriginalCost);
+        this.setParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
+        this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

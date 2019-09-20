@@ -25,9 +25,17 @@ public class DescribeInstancesResponse  extends AbstractModel{
     /**
     * 实例数量
     */
-    @SerializedName("Result")
+    @SerializedName("TotalCnt")
     @Expose
-    private ClusterInfoResult Result;
+    private Integer TotalCnt;
+
+    /**
+    * 集群实例信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterList")
+    @Expose
+    private ClusterInstancesInfo [] ClusterList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,18 +46,38 @@ public class DescribeInstancesResponse  extends AbstractModel{
 
     /**
      * 获取实例数量
-     * @return Result 实例数量
+     * @return TotalCnt 实例数量
      */
-    public ClusterInfoResult getResult() {
-        return this.Result;
+    public Integer getTotalCnt() {
+        return this.TotalCnt;
     }
 
     /**
      * 设置实例数量
-     * @param Result 实例数量
+     * @param TotalCnt 实例数量
      */
-    public void setResult(ClusterInfoResult Result) {
-        this.Result = Result;
+    public void setTotalCnt(Integer TotalCnt) {
+        this.TotalCnt = TotalCnt;
+    }
+
+    /**
+     * 获取集群实例信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ClusterList 集群实例信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClusterInstancesInfo [] getClusterList() {
+        return this.ClusterList;
+    }
+
+    /**
+     * 设置集群实例信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterList 集群实例信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterList(ClusterInstancesInfo [] ClusterList) {
+        this.ClusterList = ClusterList;
     }
 
     /**
@@ -72,7 +100,8 @@ public class DescribeInstancesResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
+        this.setParamArrayObj(map, prefix + "ClusterList.", this.ClusterList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

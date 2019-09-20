@@ -65,6 +65,14 @@ B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
     private String UrlB;
 
     /**
+    * 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+    */
+    @SerializedName("FaceModelVersion")
+    @Expose
+    private String FaceModelVersion;
+
+    /**
      * 获取A 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -185,6 +193,26 @@ B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
+     * 获取人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+     * @return FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+     */
+    public String getFaceModelVersion() {
+        return this.FaceModelVersion;
+    }
+
+    /**
+     * 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+     * @param FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+     */
+    public void setFaceModelVersion(String FaceModelVersion) {
+        this.FaceModelVersion = FaceModelVersion;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -192,6 +220,7 @@ B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
         this.setParamSimple(map, prefix + "ImageB", this.ImageB);
         this.setParamSimple(map, prefix + "UrlA", this.UrlA);
         this.setParamSimple(map, prefix + "UrlB", this.UrlB);
+        this.setParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
 
     }
 }

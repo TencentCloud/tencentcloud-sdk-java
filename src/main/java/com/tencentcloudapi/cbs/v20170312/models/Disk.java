@@ -244,20 +244,18 @@ public class Disk  extends AbstractModel{
     private String [] InstanceIdList;
 
     /**
-    * 云硬盘挂载目标设备的ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * 云盘拥有的快照总数。
     */
-    @SerializedName("AttachDeviceId")
+    @SerializedName("SnapshotCount")
     @Expose
-    private String AttachDeviceId;
+    private Integer SnapshotCount;
 
     /**
-    * 云硬盘挂载目标设备的类型，目前包括CVM和POD
-注意：此字段可能返回 null，表示取不到有效值。
+    * 云盘拥有的快照总容量，单位为MB。
     */
-    @SerializedName("AttachDeviceType")
+    @SerializedName("SnapshotSize")
     @Expose
-    private String AttachDeviceType;
+    private Integer SnapshotSize;
 
     /**
      * 获取云硬盘ID。
@@ -784,43 +782,35 @@ public class Disk  extends AbstractModel{
     }
 
     /**
-     * 获取云硬盘挂载目标设备的ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return AttachDeviceId 云硬盘挂载目标设备的ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * 获取云盘拥有的快照总数。
+     * @return SnapshotCount 云盘拥有的快照总数。
      */
-    public String getAttachDeviceId() {
-        return this.AttachDeviceId;
+    public Integer getSnapshotCount() {
+        return this.SnapshotCount;
     }
 
     /**
-     * 设置云硬盘挂载目标设备的ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttachDeviceId 云硬盘挂载目标设备的ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * 设置云盘拥有的快照总数。
+     * @param SnapshotCount 云盘拥有的快照总数。
      */
-    public void setAttachDeviceId(String AttachDeviceId) {
-        this.AttachDeviceId = AttachDeviceId;
+    public void setSnapshotCount(Integer SnapshotCount) {
+        this.SnapshotCount = SnapshotCount;
     }
 
     /**
-     * 获取云硬盘挂载目标设备的类型，目前包括CVM和POD
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return AttachDeviceType 云硬盘挂载目标设备的类型，目前包括CVM和POD
-注意：此字段可能返回 null，表示取不到有效值。
+     * 获取云盘拥有的快照总容量，单位为MB。
+     * @return SnapshotSize 云盘拥有的快照总容量，单位为MB。
      */
-    public String getAttachDeviceType() {
-        return this.AttachDeviceType;
+    public Integer getSnapshotSize() {
+        return this.SnapshotSize;
     }
 
     /**
-     * 设置云硬盘挂载目标设备的类型，目前包括CVM和POD
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttachDeviceType 云硬盘挂载目标设备的类型，目前包括CVM和POD
-注意：此字段可能返回 null，表示取不到有效值。
+     * 设置云盘拥有的快照总容量，单位为MB。
+     * @param SnapshotSize 云盘拥有的快照总容量，单位为MB。
      */
-    public void setAttachDeviceType(String AttachDeviceType) {
-        this.AttachDeviceType = AttachDeviceType;
+    public void setSnapshotSize(Integer SnapshotSize) {
+        this.SnapshotSize = SnapshotSize;
     }
 
     /**
@@ -857,8 +847,8 @@ public class Disk  extends AbstractModel{
         this.setParamSimple(map, prefix + "MigratePercent", this.MigratePercent);
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
-        this.setParamSimple(map, prefix + "AttachDeviceId", this.AttachDeviceId);
-        this.setParamSimple(map, prefix + "AttachDeviceType", this.AttachDeviceType);
+        this.setParamSimple(map, prefix + "SnapshotCount", this.SnapshotCount);
+        this.setParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
 
     }
 }

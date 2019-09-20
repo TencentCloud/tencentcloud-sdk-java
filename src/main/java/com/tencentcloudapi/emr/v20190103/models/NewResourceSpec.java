@@ -20,35 +20,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceSpec  extends AbstractModel{
-
-    /**
-    * Common节点数量
-    */
-    @SerializedName("CommonCount")
-    @Expose
-    private Integer CommonCount;
+public class NewResourceSpec  extends AbstractModel{
 
     /**
     * 描述Master节点资源
     */
     @SerializedName("MasterResourceSpec")
     @Expose
-    private NodeSpec MasterResourceSpec;
+    private Resource MasterResourceSpec;
 
     /**
     * 描述Core节点资源
     */
     @SerializedName("CoreResourceSpec")
     @Expose
-    private NodeSpec CoreResourceSpec;
+    private Resource CoreResourceSpec;
 
     /**
     * 描述Task节点资源
     */
     @SerializedName("TaskResourceSpec")
     @Expose
-    private NodeSpec TaskResourceSpec;
+    private Resource TaskResourceSpec;
 
     /**
     * Master节点数量
@@ -76,29 +69,20 @@ public class ResourceSpec  extends AbstractModel{
     */
     @SerializedName("CommonResourceSpec")
     @Expose
-    private NodeSpec CommonResourceSpec;
+    private Resource CommonResourceSpec;
 
     /**
-     * 获取Common节点数量
-     * @return CommonCount Common节点数量
-     */
-    public Integer getCommonCount() {
-        return this.CommonCount;
-    }
-
-    /**
-     * 设置Common节点数量
-     * @param CommonCount Common节点数量
-     */
-    public void setCommonCount(Integer CommonCount) {
-        this.CommonCount = CommonCount;
-    }
+    * Common节点数量
+    */
+    @SerializedName("CommonCount")
+    @Expose
+    private Integer CommonCount;
 
     /**
      * 获取描述Master节点资源
      * @return MasterResourceSpec 描述Master节点资源
      */
-    public NodeSpec getMasterResourceSpec() {
+    public Resource getMasterResourceSpec() {
         return this.MasterResourceSpec;
     }
 
@@ -106,7 +90,7 @@ public class ResourceSpec  extends AbstractModel{
      * 设置描述Master节点资源
      * @param MasterResourceSpec 描述Master节点资源
      */
-    public void setMasterResourceSpec(NodeSpec MasterResourceSpec) {
+    public void setMasterResourceSpec(Resource MasterResourceSpec) {
         this.MasterResourceSpec = MasterResourceSpec;
     }
 
@@ -114,7 +98,7 @@ public class ResourceSpec  extends AbstractModel{
      * 获取描述Core节点资源
      * @return CoreResourceSpec 描述Core节点资源
      */
-    public NodeSpec getCoreResourceSpec() {
+    public Resource getCoreResourceSpec() {
         return this.CoreResourceSpec;
     }
 
@@ -122,7 +106,7 @@ public class ResourceSpec  extends AbstractModel{
      * 设置描述Core节点资源
      * @param CoreResourceSpec 描述Core节点资源
      */
-    public void setCoreResourceSpec(NodeSpec CoreResourceSpec) {
+    public void setCoreResourceSpec(Resource CoreResourceSpec) {
         this.CoreResourceSpec = CoreResourceSpec;
     }
 
@@ -130,7 +114,7 @@ public class ResourceSpec  extends AbstractModel{
      * 获取描述Task节点资源
      * @return TaskResourceSpec 描述Task节点资源
      */
-    public NodeSpec getTaskResourceSpec() {
+    public Resource getTaskResourceSpec() {
         return this.TaskResourceSpec;
     }
 
@@ -138,7 +122,7 @@ public class ResourceSpec  extends AbstractModel{
      * 设置描述Task节点资源
      * @param TaskResourceSpec 描述Task节点资源
      */
-    public void setTaskResourceSpec(NodeSpec TaskResourceSpec) {
+    public void setTaskResourceSpec(Resource TaskResourceSpec) {
         this.TaskResourceSpec = TaskResourceSpec;
     }
 
@@ -194,7 +178,7 @@ public class ResourceSpec  extends AbstractModel{
      * 获取描述Common节点资源
      * @return CommonResourceSpec 描述Common节点资源
      */
-    public NodeSpec getCommonResourceSpec() {
+    public Resource getCommonResourceSpec() {
         return this.CommonResourceSpec;
     }
 
@@ -202,15 +186,30 @@ public class ResourceSpec  extends AbstractModel{
      * 设置描述Common节点资源
      * @param CommonResourceSpec 描述Common节点资源
      */
-    public void setCommonResourceSpec(NodeSpec CommonResourceSpec) {
+    public void setCommonResourceSpec(Resource CommonResourceSpec) {
         this.CommonResourceSpec = CommonResourceSpec;
+    }
+
+    /**
+     * 获取Common节点数量
+     * @return CommonCount Common节点数量
+     */
+    public Integer getCommonCount() {
+        return this.CommonCount;
+    }
+
+    /**
+     * 设置Common节点数量
+     * @param CommonCount Common节点数量
+     */
+    public void setCommonCount(Integer CommonCount) {
+        this.CommonCount = CommonCount;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CommonCount", this.CommonCount);
         this.setParamObj(map, prefix + "MasterResourceSpec.", this.MasterResourceSpec);
         this.setParamObj(map, prefix + "CoreResourceSpec.", this.CoreResourceSpec);
         this.setParamObj(map, prefix + "TaskResourceSpec.", this.TaskResourceSpec);
@@ -218,6 +217,7 @@ public class ResourceSpec  extends AbstractModel{
         this.setParamSimple(map, prefix + "CoreCount", this.CoreCount);
         this.setParamSimple(map, prefix + "TaskCount", this.TaskCount);
         this.setParamObj(map, prefix + "CommonResourceSpec.", this.CommonResourceSpec);
+        this.setParamSimple(map, prefix + "CommonCount", this.CommonCount);
 
     }
 }

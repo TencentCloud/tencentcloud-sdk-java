@@ -23,34 +23,11 @@ import java.util.HashMap;
 public class TerminateInstanceResponse  extends AbstractModel{
 
     /**
-    * 退单描述
-    */
-    @SerializedName("Result")
-    @Expose
-    private TerminateResult Result;
-
-    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * 获取退单描述
-     * @return Result 退单描述
-     */
-    public TerminateResult getResult() {
-        return this.Result;
-    }
-
-    /**
-     * 设置退单描述
-     * @param Result 退单描述
-     */
-    public void setResult(TerminateResult Result) {
-        this.Result = Result;
-    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -72,7 +49,6 @@ public class TerminateInstanceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

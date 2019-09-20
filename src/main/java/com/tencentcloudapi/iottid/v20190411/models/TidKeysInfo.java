@@ -51,7 +51,7 @@ public class TidKeysInfo  extends AbstractModel{
     private String Psk;
 
     /**
-    * 软加固白盒秘钥下载地址
+    * 软加固白盒密钥下载地址
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -129,16 +129,16 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 获取软加固白盒秘钥下载地址
-     * @return DownloadUrl 软加固白盒秘钥下载地址
+     * 获取软加固白盒密钥下载地址
+     * @return DownloadUrl 软加固白盒密钥下载地址
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * 设置软加固白盒秘钥下载地址
-     * @param DownloadUrl 软加固白盒秘钥下载地址
+     * 设置软加固白盒密钥下载地址
+     * @param DownloadUrl 软加固白盒密钥下载地址
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

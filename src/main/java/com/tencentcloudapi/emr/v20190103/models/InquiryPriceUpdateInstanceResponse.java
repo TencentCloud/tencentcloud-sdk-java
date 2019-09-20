@@ -20,30 +20,39 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScaleOutInstanceResponse  extends AbstractModel{
+public class InquiryPriceUpdateInstanceResponse  extends AbstractModel{
 
     /**
-    * 实例ID
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
-    * 订单号
+    * 刊例价
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DealNames")
+    @SerializedName("OriginalCost")
     @Expose
-    private String [] DealNames;
+    private Float OriginalCost;
 
     /**
-    * token
+    * 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ClientToken")
+    @SerializedName("DiscountCost")
     @Expose
-    private String ClientToken;
+    private Float DiscountCost;
+
+    /**
+    * 时间单位，"s","m"
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeUnit")
+    @Expose
+    private String TimeUnit;
+
+    /**
+    * 时间数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeSpan")
+    @Expose
+    private Integer TimeSpan;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -53,59 +62,83 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例ID
-     * @return InstanceId 实例ID
+     * 获取刊例价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return OriginalCost 刊例价
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public Float getOriginalCost() {
+        return this.OriginalCost;
     }
 
     /**
-     * 设置实例ID
-     * @param InstanceId 实例ID
+     * 设置刊例价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalCost 刊例价
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setOriginalCost(Float OriginalCost) {
+        this.OriginalCost = OriginalCost;
     }
 
     /**
-     * 获取订单号
+     * 获取折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return DealNames 订单号
+     * @return DiscountCost 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getDealNames() {
-        return this.DealNames;
+    public Float getDiscountCost() {
+        return this.DiscountCost;
     }
 
     /**
-     * 设置订单号
+     * 设置折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealNames 订单号
+     * @param DiscountCost 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDealNames(String [] DealNames) {
-        this.DealNames = DealNames;
+    public void setDiscountCost(Float DiscountCost) {
+        this.DiscountCost = DiscountCost;
     }
 
     /**
-     * 获取token
+     * 获取时间单位，"s","m"
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return ClientToken token
+     * @return TimeUnit 时间单位，"s","m"
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getClientToken() {
-        return this.ClientToken;
+    public String getTimeUnit() {
+        return this.TimeUnit;
     }
 
     /**
-     * 设置token
+     * 设置时间单位，"s","m"
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientToken token
+     * @param TimeUnit 时间单位，"s","m"
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setClientToken(String ClientToken) {
-        this.ClientToken = ClientToken;
+    public void setTimeUnit(String TimeUnit) {
+        this.TimeUnit = TimeUnit;
+    }
+
+    /**
+     * 获取时间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TimeSpan 时间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getTimeSpan() {
+        return this.TimeSpan;
+    }
+
+    /**
+     * 设置时间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeSpan 时间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeSpan(Integer TimeSpan) {
+        this.TimeSpan = TimeSpan;
     }
 
     /**
@@ -128,9 +161,10 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
-        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "OriginalCost", this.OriginalCost);
+        this.setParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
+        this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

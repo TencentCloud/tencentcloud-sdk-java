@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.emr.v20190103.models;
+package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerminateTasksResponse  extends AbstractModel{
+public class TextApprovalResponse  extends AbstractModel{
+
+    /**
+    * 文本审核输出结果
+    */
+    @SerializedName("EvilTokens")
+    @Expose
+    private EvilToken [] EvilTokens;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class TerminateTasksResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * 获取文本审核输出结果
+     * @return EvilTokens 文本审核输出结果
+     */
+    public EvilToken [] getEvilTokens() {
+        return this.EvilTokens;
+    }
+
+    /**
+     * 设置文本审核输出结果
+     * @param EvilTokens 文本审核输出结果
+     */
+    public void setEvilTokens(EvilToken [] EvilTokens) {
+        this.EvilTokens = EvilTokens;
+    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,6 +72,7 @@ public class TerminateTasksResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "EvilTokens.", this.EvilTokens);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

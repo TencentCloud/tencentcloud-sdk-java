@@ -20,52 +20,57 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeywordsExtractionRequest  extends AbstractModel{
+public class TextApprovalRequest  extends AbstractModel{
 
     /**
-    * 待处理的文本（仅支持UTF-8格式，不超过2000字）
+    * 待审核的文本（仅支持UTF-8格式，不超过2000字）
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 指定关键词个数上限（默认值为5）
+    * 文本审核模式（默认取1值）：
+1、全领域审核
     */
-    @SerializedName("Num")
+    @SerializedName("Flag")
     @Expose
-    private Long Num;
+    private Long Flag;
 
     /**
-     * 获取待处理的文本（仅支持UTF-8格式，不超过2000字）
-     * @return Text 待处理的文本（仅支持UTF-8格式，不超过2000字）
+     * 获取待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * @return Text 待审核的文本（仅支持UTF-8格式，不超过2000字）
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * 设置待处理的文本（仅支持UTF-8格式，不超过2000字）
-     * @param Text 待处理的文本（仅支持UTF-8格式，不超过2000字）
+     * 设置待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * @param Text 待审核的文本（仅支持UTF-8格式，不超过2000字）
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * 获取指定关键词个数上限（默认值为5）
-     * @return Num 指定关键词个数上限（默认值为5）
+     * 获取文本审核模式（默认取1值）：
+1、全领域审核
+     * @return Flag 文本审核模式（默认取1值）：
+1、全领域审核
      */
-    public Long getNum() {
-        return this.Num;
+    public Long getFlag() {
+        return this.Flag;
     }
 
     /**
-     * 设置指定关键词个数上限（默认值为5）
-     * @param Num 指定关键词个数上限（默认值为5）
+     * 设置文本审核模式（默认取1值）：
+1、全领域审核
+     * @param Flag 文本审核模式（默认取1值）：
+1、全领域审核
      */
-    public void setNum(Long Num) {
-        this.Num = Num;
+    public void setFlag(Long Flag) {
+        this.Flag = Flag;
     }
 
     /**
@@ -73,7 +78,7 @@ public class KeywordsExtractionRequest  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);
-        this.setParamSimple(map, prefix + "Num", this.Num);
+        this.setParamSimple(map, prefix + "Flag", this.Flag);
 
     }
 }

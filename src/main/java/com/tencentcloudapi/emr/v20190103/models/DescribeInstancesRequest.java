@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class DescribeInstancesRequest  extends AbstractModel{
 
     /**
+    * 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+    */
+    @SerializedName("DisplayStrategy")
+    @Expose
+    private String DisplayStrategy;
+
+    /**
     * 查询列表,  如果不填写，返回该AppId下所有实例列表
     */
     @SerializedName("InstanceIds")
@@ -42,6 +49,43 @@ public class DescribeInstancesRequest  extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
+
+    /**
+    * 项目列表，默认值-1
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Integer ProjectId;
+
+    /**
+    * 排序字段，当前支持以下排序字段：clusterId、addTime、status
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方法，0降序，1升序
+    */
+    @SerializedName("Asc")
+    @Expose
+    private Integer Asc;
+
+    /**
+     * 获取集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+     * @return DisplayStrategy 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+     */
+    public String getDisplayStrategy() {
+        return this.DisplayStrategy;
+    }
+
+    /**
+     * 设置集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+     * @param DisplayStrategy 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+     */
+    public void setDisplayStrategy(String DisplayStrategy) {
+        this.DisplayStrategy = DisplayStrategy;
+    }
 
     /**
      * 获取查询列表,  如果不填写，返回该AppId下所有实例列表
@@ -92,12 +136,64 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取项目列表，默认值-1
+     * @return ProjectId 项目列表，默认值-1
+     */
+    public Integer getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * 设置项目列表，默认值-1
+     * @param ProjectId 项目列表，默认值-1
+     */
+    public void setProjectId(Integer ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * 获取排序字段，当前支持以下排序字段：clusterId、addTime、status
+     * @return OrderField 排序字段，当前支持以下排序字段：clusterId、addTime、status
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * 设置排序字段，当前支持以下排序字段：clusterId、addTime、status
+     * @param OrderField 排序字段，当前支持以下排序字段：clusterId、addTime、status
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * 获取排序方法，0降序，1升序
+     * @return Asc 排序方法，0降序，1升序
+     */
+    public Integer getAsc() {
+        return this.Asc;
+    }
+
+    /**
+     * 设置排序方法，0降序，1升序
+     * @param Asc 排序方法，0降序，1升序
+     */
+    public void setAsc(Integer Asc) {
+        this.Asc = Asc;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DisplayStrategy", this.DisplayStrategy);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "Asc", this.Asc);
 
     }
 }

@@ -23,11 +23,36 @@ import java.util.HashMap;
 public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
 
     /**
-    * 扩容价格
+    * 刊例价
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("OriginalCost")
     @Expose
-    private InquiryPriceResult Result;
+    private String OriginalCost;
+
+    /**
+    * 折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountCost")
+    @Expose
+    private String DiscountCost;
+
+    /**
+    * 单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Unit")
+    @Expose
+    private String Unit;
+
+    /**
+    * 询价配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PriceSpec")
+    @Expose
+    private PriceResource PriceSpec;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +62,83 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取扩容价格
-     * @return Result 扩容价格
+     * 获取刊例价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return OriginalCost 刊例价
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public InquiryPriceResult getResult() {
-        return this.Result;
+    public String getOriginalCost() {
+        return this.OriginalCost;
     }
 
     /**
-     * 设置扩容价格
-     * @param Result 扩容价格
+     * 设置刊例价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalCost 刊例价
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(InquiryPriceResult Result) {
-        this.Result = Result;
+    public void setOriginalCost(String OriginalCost) {
+        this.OriginalCost = OriginalCost;
+    }
+
+    /**
+     * 获取折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return DiscountCost 折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiscountCost() {
+        return this.DiscountCost;
+    }
+
+    /**
+     * 设置折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountCost 折扣价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountCost(String DiscountCost) {
+        this.DiscountCost = DiscountCost;
+    }
+
+    /**
+     * 获取单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Unit 单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUnit() {
+        return this.Unit;
+    }
+
+    /**
+     * 设置单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Unit 单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnit(String Unit) {
+        this.Unit = Unit;
+    }
+
+    /**
+     * 获取询价配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return PriceSpec 询价配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PriceResource getPriceSpec() {
+        return this.PriceSpec;
+    }
+
+    /**
+     * 设置询价配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PriceSpec 询价配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPriceSpec(PriceResource PriceSpec) {
+        this.PriceSpec = PriceSpec;
     }
 
     /**
@@ -72,7 +161,10 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "OriginalCost", this.OriginalCost);
+        this.setParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
+        this.setParamSimple(map, prefix + "Unit", this.Unit);
+        this.setParamObj(map, prefix + "PriceSpec.", this.PriceSpec);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

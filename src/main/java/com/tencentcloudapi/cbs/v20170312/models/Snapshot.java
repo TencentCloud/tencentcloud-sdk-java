@@ -142,6 +142,13 @@ public class Snapshot  extends AbstractModel{
     private String SnapshotType;
 
     /**
+    * 快照当前被共享数
+    */
+    @SerializedName("ShareReference")
+    @Expose
+    private Integer ShareReference;
+
+    /**
      * 获取快照ID。
      * @return SnapshotId 快照ID。
      */
@@ -414,6 +421,22 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
+     * 获取快照当前被共享数
+     * @return ShareReference 快照当前被共享数
+     */
+    public Integer getShareReference() {
+        return this.ShareReference;
+    }
+
+    /**
+     * 设置快照当前被共享数
+     * @param ShareReference 快照当前被共享数
+     */
+    public void setShareReference(Integer ShareReference) {
+        this.ShareReference = ShareReference;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +457,7 @@ public class Snapshot  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamSimple(map, prefix + "ImageCount", this.ImageCount);
         this.setParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
+        this.setParamSimple(map, prefix + "ShareReference", this.ShareReference);
 
     }
 }

@@ -41,7 +41,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     */
     @SerializedName("ResourceSpec")
     @Expose
-    private ResourceSpec ResourceSpec;
+    private NewResourceSpec ResourceSpec;
 
     /**
     * 货币种类
@@ -121,7 +121,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
      * 获取询价资源描述
      * @return ResourceSpec 询价资源描述
      */
-    public ResourceSpec getResourceSpec() {
+    public NewResourceSpec getResourceSpec() {
         return this.ResourceSpec;
     }
 
@@ -129,7 +129,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
      * 设置询价资源描述
      * @param ResourceSpec 询价资源描述
      */
-    public void setResourceSpec(ResourceSpec ResourceSpec) {
+    public void setResourceSpec(NewResourceSpec ResourceSpec) {
         this.ResourceSpec = ResourceSpec;
     }
 

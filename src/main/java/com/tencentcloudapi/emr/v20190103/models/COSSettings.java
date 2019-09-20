@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class COSSettings  extends AbstractModel{
 
     /**
-    * 日志存储在COS上的路径
-    */
-    @SerializedName("LogOnCosPath")
-    @Expose
-    private String LogOnCosPath;
-
-    /**
     * COS SecretId
     */
     @SerializedName("CosSecretId")
@@ -44,20 +37,11 @@ public class COSSettings  extends AbstractModel{
     private String CosSecretKey;
 
     /**
-     * 获取日志存储在COS上的路径
-     * @return LogOnCosPath 日志存储在COS上的路径
-     */
-    public String getLogOnCosPath() {
-        return this.LogOnCosPath;
-    }
-
-    /**
-     * 设置日志存储在COS上的路径
-     * @param LogOnCosPath 日志存储在COS上的路径
-     */
-    public void setLogOnCosPath(String LogOnCosPath) {
-        this.LogOnCosPath = LogOnCosPath;
-    }
+    * 日志存储在COS上的路径
+    */
+    @SerializedName("LogOnCosPath")
+    @Expose
+    private String LogOnCosPath;
 
     /**
      * 获取COS SecretId
@@ -92,12 +76,28 @@ public class COSSettings  extends AbstractModel{
     }
 
     /**
+     * 获取日志存储在COS上的路径
+     * @return LogOnCosPath 日志存储在COS上的路径
+     */
+    public String getLogOnCosPath() {
+        return this.LogOnCosPath;
+    }
+
+    /**
+     * 设置日志存储在COS上的路径
+     * @param LogOnCosPath 日志存储在COS上的路径
+     */
+    public void setLogOnCosPath(String LogOnCosPath) {
+        this.LogOnCosPath = LogOnCosPath;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LogOnCosPath", this.LogOnCosPath);
         this.setParamSimple(map, prefix + "CosSecretId", this.CosSecretId);
         this.setParamSimple(map, prefix + "CosSecretKey", this.CosSecretKey);
+        this.setParamSimple(map, prefix + "LogOnCosPath", this.LogOnCosPath);
 
     }
 }

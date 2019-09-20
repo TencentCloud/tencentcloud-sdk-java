@@ -72,6 +72,14 @@ BLOCK：违规
     private DisgustResult DisgustResult;
 
     /**
+    * 文字识别结果。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TextResult")
+    @Expose
+    private TextResult TextResult;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -203,6 +211,26 @@ BLOCK：违规
     }
 
     /**
+     * 获取文字识别结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TextResult 文字识别结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TextResult getTextResult() {
+        return this.TextResult;
+    }
+
+    /**
+     * 设置文字识别结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextResult 文字识别结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTextResult(TextResult TextResult) {
+        this.TextResult = TextResult;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -228,6 +256,7 @@ BLOCK：违规
         this.setParamObj(map, prefix + "PoliticsResult.", this.PoliticsResult);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamObj(map, prefix + "DisgustResult.", this.DisgustResult);
+        this.setParamObj(map, prefix + "TextResult.", this.TextResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

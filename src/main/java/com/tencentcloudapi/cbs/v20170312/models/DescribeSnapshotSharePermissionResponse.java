@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.emr.v20190103.models;
+package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerminateTasksResponse  extends AbstractModel{
+public class DescribeSnapshotSharePermissionResponse  extends AbstractModel{
+
+    /**
+    * 快照的分享信息的集合
+    */
+    @SerializedName("SharePermissionSet")
+    @Expose
+    private SharePermission [] SharePermissionSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class TerminateTasksResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * 获取快照的分享信息的集合
+     * @return SharePermissionSet 快照的分享信息的集合
+     */
+    public SharePermission [] getSharePermissionSet() {
+        return this.SharePermissionSet;
+    }
+
+    /**
+     * 设置快照的分享信息的集合
+     * @param SharePermissionSet 快照的分享信息的集合
+     */
+    public void setSharePermissionSet(SharePermission [] SharePermissionSet) {
+        this.SharePermissionSet = SharePermissionSet;
+    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,6 +72,7 @@ public class TerminateTasksResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "SharePermissionSet.", this.SharePermissionSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

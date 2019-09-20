@@ -48,7 +48,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     */
     @SerializedName("ResourceSpec")
     @Expose
-    private ResourceSpec ResourceSpec;
+    private NewResourceSpec ResourceSpec;
 
     /**
     * 支持HA
@@ -100,13 +100,6 @@ public class CreateInstanceRequest  extends AbstractModel{
     private LoginSettings LoginSettings;
 
     /**
-    * 客户端Token
-    */
-    @SerializedName("ClientToken")
-    @Expose
-    private String ClientToken;
-
-    /**
     * COS设置参数
     */
     @SerializedName("COSSettings")
@@ -135,6 +128,13 @@ public class CreateInstanceRequest  extends AbstractModel{
     private Integer AutoRenew;
 
     /**
+    * 客户端Token
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
+
+    /**
     * 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
     */
     @SerializedName("NeedMasterWan")
@@ -147,6 +147,20 @@ public class CreateInstanceRequest  extends AbstractModel{
     @SerializedName("RemoteLoginAtCreate")
     @Expose
     private Integer RemoteLoginAtCreate;
+
+    /**
+    * 是否开启安全集群，0表示不开启，非0表示开启
+    */
+    @SerializedName("CheckSecurity")
+    @Expose
+    private Integer CheckSecurity;
+
+    /**
+    * 访问外部文件系统
+    */
+    @SerializedName("ExtendFsField")
+    @Expose
+    private String ExtendFsField;
 
     /**
      * 获取产品ID
@@ -200,7 +214,7 @@ public class CreateInstanceRequest  extends AbstractModel{
      * 获取资源描述
      * @return ResourceSpec 资源描述
      */
-    public ResourceSpec getResourceSpec() {
+    public NewResourceSpec getResourceSpec() {
         return this.ResourceSpec;
     }
 
@@ -208,7 +222,7 @@ public class CreateInstanceRequest  extends AbstractModel{
      * 设置资源描述
      * @param ResourceSpec 资源描述
      */
-    public void setResourceSpec(ResourceSpec ResourceSpec) {
+    public void setResourceSpec(NewResourceSpec ResourceSpec) {
         this.ResourceSpec = ResourceSpec;
     }
 
@@ -325,22 +339,6 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端Token
-     * @return ClientToken 客户端Token
-     */
-    public String getClientToken() {
-        return this.ClientToken;
-    }
-
-    /**
-     * 设置客户端Token
-     * @param ClientToken 客户端Token
-     */
-    public void setClientToken(String ClientToken) {
-        this.ClientToken = ClientToken;
-    }
-
-    /**
      * 获取COS设置参数
      * @return COSSettings COS设置参数
      */
@@ -405,6 +403,22 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取客户端Token
+     * @return ClientToken 客户端Token
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * 设置客户端Token
+     * @param ClientToken 客户端Token
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
+    /**
      * 获取是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
      * @return NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
      */
@@ -437,6 +451,38 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否开启安全集群，0表示不开启，非0表示开启
+     * @return CheckSecurity 是否开启安全集群，0表示不开启，非0表示开启
+     */
+    public Integer getCheckSecurity() {
+        return this.CheckSecurity;
+    }
+
+    /**
+     * 设置是否开启安全集群，0表示不开启，非0表示开启
+     * @param CheckSecurity 是否开启安全集群，0表示不开启，非0表示开启
+     */
+    public void setCheckSecurity(Integer CheckSecurity) {
+        this.CheckSecurity = CheckSecurity;
+    }
+
+    /**
+     * 获取访问外部文件系统
+     * @return ExtendFsField 访问外部文件系统
+     */
+    public String getExtendFsField() {
+        return this.ExtendFsField;
+    }
+
+    /**
+     * 设置访问外部文件系统
+     * @param ExtendFsField 访问外部文件系统
+     */
+    public void setExtendFsField(String ExtendFsField) {
+        this.ExtendFsField = ExtendFsField;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -451,13 +497,15 @@ public class CreateInstanceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
-        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamObj(map, prefix + "COSSettings.", this.COSSettings);
         this.setParamSimple(map, prefix + "SgId", this.SgId);
         this.setParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "NeedMasterWan", this.NeedMasterWan);
         this.setParamSimple(map, prefix + "RemoteLoginAtCreate", this.RemoteLoginAtCreate);
+        this.setParamSimple(map, prefix + "CheckSecurity", this.CheckSecurity);
+        this.setParamSimple(map, prefix + "ExtendFsField", this.ExtendFsField);
 
     }
 }

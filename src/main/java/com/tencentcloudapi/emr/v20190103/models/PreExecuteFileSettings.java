@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PreExecuteFileSettings  extends AbstractModel{
 
     /**
-    * 脚本在COS上路径
+    * 脚本在COS上路径，已废弃
     */
     @SerializedName("Path")
     @Expose
@@ -37,21 +37,21 @@ public class PreExecuteFileSettings  extends AbstractModel{
     private String [] Args;
 
     /**
-    * COS的Bucket名称
+    * COS的Bucket名称，已废弃
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * COS的Region名称
+    * COS的Region名称，已废弃
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * COS的Domain数据
+    * COS的Domain数据，已废弃
     */
     @SerializedName("Domain")
     @Expose
@@ -72,7 +72,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     private String WhenRun;
 
     /**
-    * 脚本文件名
+    * 脚本文件名，已废弃
     */
     @SerializedName("CosFileName")
     @Expose
@@ -100,23 +100,23 @@ public class PreExecuteFileSettings  extends AbstractModel{
     private String CosSecretKey;
 
     /**
-    * cos的appid
+    * cos的appid，已废弃
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-     * 获取脚本在COS上路径
-     * @return Path 脚本在COS上路径
+     * 获取脚本在COS上路径，已废弃
+     * @return Path 脚本在COS上路径，已废弃
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * 设置脚本在COS上路径
-     * @param Path 脚本在COS上路径
+     * 设置脚本在COS上路径，已废弃
+     * @param Path 脚本在COS上路径，已废弃
      */
     public void setPath(String Path) {
         this.Path = Path;
@@ -139,48 +139,48 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取COS的Bucket名称
-     * @return Bucket COS的Bucket名称
+     * 获取COS的Bucket名称，已废弃
+     * @return Bucket COS的Bucket名称，已废弃
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * 设置COS的Bucket名称
-     * @param Bucket COS的Bucket名称
+     * 设置COS的Bucket名称，已废弃
+     * @param Bucket COS的Bucket名称，已废弃
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * 获取COS的Region名称
-     * @return Region COS的Region名称
+     * 获取COS的Region名称，已废弃
+     * @return Region COS的Region名称，已废弃
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * 设置COS的Region名称
-     * @param Region COS的Region名称
+     * 设置COS的Region名称，已废弃
+     * @param Region COS的Region名称，已废弃
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * 获取COS的Domain数据
-     * @return Domain COS的Domain数据
+     * 获取COS的Domain数据，已废弃
+     * @return Domain COS的Domain数据，已废弃
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * 设置COS的Domain数据
-     * @param Domain COS的Domain数据
+     * 设置COS的Domain数据，已废弃
+     * @param Domain COS的Domain数据，已废弃
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -219,16 +219,16 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取脚本文件名
-     * @return CosFileName 脚本文件名
+     * 获取脚本文件名，已废弃
+     * @return CosFileName 脚本文件名，已废弃
      */
     public String getCosFileName() {
         return this.CosFileName;
     }
 
     /**
-     * 设置脚本文件名
-     * @param CosFileName 脚本文件名
+     * 设置脚本文件名，已废弃
+     * @param CosFileName 脚本文件名，已废弃
      */
     public void setCosFileName(String CosFileName) {
         this.CosFileName = CosFileName;
@@ -283,16 +283,16 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取cos的appid
-     * @return AppId cos的appid
+     * 获取cos的appid，已废弃
+     * @return AppId cos的appid，已废弃
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * 设置cos的appid
-     * @param AppId cos的appid
+     * 设置cos的appid，已废弃
+     * @param AppId cos的appid，已废弃
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;

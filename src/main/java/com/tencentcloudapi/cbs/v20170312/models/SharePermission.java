@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.emr.v20190103.models;
+package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerminateResult  extends AbstractModel{
+public class SharePermission  extends AbstractModel{
 
     /**
-    * 退单集群ID
+    * 快照分享的时间
     */
-    @SerializedName("InstanceId")
+    @SerializedName("CreatedTime")
     @Expose
-    private String InstanceId;
+    private String CreatedTime;
 
     /**
-    * 资源资源ID
+    * 分享的账号Id
     */
-    @SerializedName("ResourceIds")
+    @SerializedName("AccountId")
     @Expose
-    private String [] ResourceIds;
+    private String AccountId;
 
     /**
-     * 获取退单集群ID
-     * @return InstanceId 退单集群ID
+     * 获取快照分享的时间
+     * @return CreatedTime 快照分享的时间
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getCreatedTime() {
+        return this.CreatedTime;
     }
 
     /**
-     * 设置退单集群ID
-     * @param InstanceId 退单集群ID
+     * 设置快照分享的时间
+     * @param CreatedTime 快照分享的时间
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
     }
 
     /**
-     * 获取资源资源ID
-     * @return ResourceIds 资源资源ID
+     * 获取分享的账号Id
+     * @return AccountId 分享的账号Id
      */
-    public String [] getResourceIds() {
-        return this.ResourceIds;
+    public String getAccountId() {
+        return this.AccountId;
     }
 
     /**
-     * 设置资源资源ID
-     * @param ResourceIds 资源资源ID
+     * 设置分享的账号Id
+     * @param AccountId 分享的账号Id
      */
-    public void setResourceIds(String [] ResourceIds) {
-        this.ResourceIds = ResourceIds;
+    public void setAccountId(String AccountId) {
+        this.AccountId = AccountId;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "AccountId", this.AccountId);
 
     }
 }

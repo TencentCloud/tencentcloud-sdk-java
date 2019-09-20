@@ -23,34 +23,11 @@ import java.util.HashMap;
 public class CreateInstanceResponse  extends AbstractModel{
 
     /**
-    * 创建实例结果信息
-    */
-    @SerializedName("Result")
-    @Expose
-    private CreateInstanceResult Result;
-
-    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * 获取创建实例结果信息
-     * @return Result 创建实例结果信息
-     */
-    public CreateInstanceResult getResult() {
-        return this.Result;
-    }
-
-    /**
-     * 设置创建实例结果信息
-     * @param Result 创建实例结果信息
-     */
-    public void setResult(CreateInstanceResult Result) {
-        this.Result = Result;
-    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -72,7 +49,6 @@ public class CreateInstanceResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

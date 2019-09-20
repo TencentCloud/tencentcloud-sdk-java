@@ -30,6 +30,13 @@ public class TerminateInstanceRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 销毁节点ID
+    */
+    @SerializedName("ResourceIds")
+    @Expose
+    private String [] ResourceIds;
+
+    /**
      * 获取被销毁的实例ID
      * @return InstanceId 被销毁的实例ID
      */
@@ -46,10 +53,27 @@ public class TerminateInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取销毁节点ID
+     * @return ResourceIds 销毁节点ID
+     */
+    public String [] getResourceIds() {
+        return this.ResourceIds;
+    }
+
+    /**
+     * 设置销毁节点ID
+     * @param ResourceIds 销毁节点ID
+     */
+    public void setResourceIds(String [] ResourceIds) {
+        this.ResourceIds = ResourceIds;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
 
     }
 }
