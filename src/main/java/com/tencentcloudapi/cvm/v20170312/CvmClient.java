@@ -568,6 +568,42 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口(DescribeReservedInstances)可提供列出用户已购买的预留实例
+     * @param req DescribeReservedInstancesRequest
+     * @return DescribeReservedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstancesResponse DescribeReservedInstances(DescribeReservedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReservedInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置
+     * @param req DescribeReservedInstancesOfferingsRequest
+     * @return DescribeReservedInstancesOfferingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferings(DescribeReservedInstancesOfferingsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReservedInstancesOfferingsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesOfferingsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReservedInstancesOfferings"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeZoneInstanceConfigInfos) 获取可用区的机型信息。
      * @param req DescribeZoneInstanceConfigInfosRequest
      * @return DescribeZoneInstanceConfigInfosResponse
@@ -1036,6 +1072,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<ModifyKeyPairAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyKeyPairAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例
+     * @param req PurchaseReservedInstancesOfferingRequest
+     * @return PurchaseReservedInstancesOfferingResponse
+     * @throws TencentCloudSDKException
+     */
+    public PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOffering(PurchaseReservedInstancesOfferingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PurchaseReservedInstancesOfferingResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PurchaseReservedInstancesOfferingResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PurchaseReservedInstancesOffering"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

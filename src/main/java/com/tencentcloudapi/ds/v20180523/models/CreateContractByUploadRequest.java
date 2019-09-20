@@ -72,7 +72,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     private String Remarks;
 
     /**
-    * 过期时间
+    * 合同长时间未签署的过期时间
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -191,16 +191,16 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过期时间
-     * @return ExpireTime 过期时间
+     * 获取合同长时间未签署的过期时间
+     * @return ExpireTime 合同长时间未签署的过期时间
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * 设置过期时间
-     * @param ExpireTime 过期时间
+     * 设置合同长时间未签署的过期时间
+     * @param ExpireTime 合同长时间未签署的过期时间
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

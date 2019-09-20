@@ -200,6 +200,33 @@ public class Instance  extends AbstractModel{
     private String Uuid;
 
     /**
+    * 实例的最新操作。例：StopInstances、ResetInstance。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestOperation")
+    @Expose
+    private String LatestOperation;
+
+    /**
+    * 实例的最新操作状态。取值范围：<br>
+<li>SUCCESS：表示操作成功<br>
+<li>OPERATING：表示操作执行中<br>
+<li>FAILED：表示操作失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestOperationState")
+    @Expose
+    private String LatestOperationState;
+
+    /**
+    * 实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestOperationRequestId")
+    @Expose
+    private String LatestOperationRequestId;
+
+    /**
      * 获取实例所在的位置。
      * @return Placement 实例所在的位置。
      */
@@ -608,6 +635,78 @@ public class Instance  extends AbstractModel{
     }
 
     /**
+     * 获取实例的最新操作。例：StopInstances、ResetInstance。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LatestOperation 实例的最新操作。例：StopInstances、ResetInstance。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestOperation() {
+        return this.LatestOperation;
+    }
+
+    /**
+     * 设置实例的最新操作。例：StopInstances、ResetInstance。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestOperation 实例的最新操作。例：StopInstances、ResetInstance。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestOperation(String LatestOperation) {
+        this.LatestOperation = LatestOperation;
+    }
+
+    /**
+     * 获取实例的最新操作状态。取值范围：<br>
+<li>SUCCESS：表示操作成功<br>
+<li>OPERATING：表示操作执行中<br>
+<li>FAILED：表示操作失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LatestOperationState 实例的最新操作状态。取值范围：<br>
+<li>SUCCESS：表示操作成功<br>
+<li>OPERATING：表示操作执行中<br>
+<li>FAILED：表示操作失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestOperationState() {
+        return this.LatestOperationState;
+    }
+
+    /**
+     * 设置实例的最新操作状态。取值范围：<br>
+<li>SUCCESS：表示操作成功<br>
+<li>OPERATING：表示操作执行中<br>
+<li>FAILED：表示操作失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestOperationState 实例的最新操作状态。取值范围：<br>
+<li>SUCCESS：表示操作成功<br>
+<li>OPERATING：表示操作执行中<br>
+<li>FAILED：表示操作失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestOperationState(String LatestOperationState) {
+        this.LatestOperationState = LatestOperationState;
+    }
+
+    /**
+     * 获取实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LatestOperationRequestId 实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestOperationRequestId() {
+        return this.LatestOperationRequestId;
+    }
+
+    /**
+     * 设置实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestOperationRequestId 实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestOperationRequestId(String LatestOperationRequestId) {
+        this.LatestOperationRequestId = LatestOperationRequestId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -636,6 +735,9 @@ public class Instance  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "StopChargingMode", this.StopChargingMode);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
+        this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
+        this.setParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
 
     }
 }

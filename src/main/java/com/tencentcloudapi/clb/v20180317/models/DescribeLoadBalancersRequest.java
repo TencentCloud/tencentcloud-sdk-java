@@ -38,7 +38,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String LoadBalancerType;
 
     /**
-    * 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
+    * 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
     */
     @SerializedName("Forward")
     @Expose
@@ -129,8 +129,8 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Integer WithRs;
 
     /**
-    * 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
-基础网络不支持通过VpcId查询。
+    * 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+基础网络可传入'0'。
     */
     @SerializedName("VpcId")
     @Expose
@@ -187,16 +187,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
-     * @return Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
+     * 获取负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
+     * @return Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      */
     public Integer getForward() {
         return this.Forward;
     }
 
     /**
-     * 设置负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
-     * @param Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
+     * 设置负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
+     * @param Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      */
     public void setForward(Integer Forward) {
         this.Forward = Forward;
@@ -395,20 +395,20 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
-基础网络不支持通过VpcId查询。
-     * @return VpcId 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
-基础网络不支持通过VpcId查询。
+     * 获取负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+基础网络可传入'0'。
+     * @return VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+基础网络可传入'0'。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
-基础网络不支持通过VpcId查询。
-     * @param VpcId 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
-基础网络不支持通过VpcId查询。
+     * 设置负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+基础网络可传入'0'。
+     * @param VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+基础网络可传入'0'。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

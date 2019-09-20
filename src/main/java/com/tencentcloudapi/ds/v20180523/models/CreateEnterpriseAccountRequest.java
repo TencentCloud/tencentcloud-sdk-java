@@ -44,7 +44,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     private String Name;
 
     /**
-    * 企业用户证件类型，8代表营业执照
+    * 企业用户证件类型，8代表营业执照，详情请见常见问题
     */
     @SerializedName("IdentType")
     @Expose
@@ -141,16 +141,16 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取企业用户证件类型，8代表营业执照
-     * @return IdentType 企业用户证件类型，8代表营业执照
+     * 获取企业用户证件类型，8代表营业执照，详情请见常见问题
+     * @return IdentType 企业用户证件类型，8代表营业执照，详情请见常见问题
      */
     public Integer getIdentType() {
         return this.IdentType;
     }
 
     /**
-     * 设置企业用户证件类型，8代表营业执照
-     * @param IdentType 企业用户证件类型，8代表营业执照
+     * 设置企业用户证件类型，8代表营业执照，详情请见常见问题
+     * @param IdentType 企业用户证件类型，8代表营业执照，详情请见常见问题
      */
     public void setIdentType(Integer IdentType) {
         this.IdentType = IdentType;

@@ -100,6 +100,14 @@ public class Listener  extends AbstractModel{
     private String ListenerName;
 
     /**
+    * 监听器的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * 获取负载均衡监听器 ID
      * @return ListenerId 负载均衡监听器 ID
      */
@@ -288,6 +296,26 @@ public class Listener  extends AbstractModel{
     }
 
     /**
+     * 获取监听器的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return CreateTime 监听器的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * 设置监听器的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 监听器的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -301,6 +329,7 @@ public class Listener  extends AbstractModel{
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

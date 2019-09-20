@@ -45,6 +45,14 @@ public class FileUploadTask  extends AbstractModel{
     private String ProcedureTaskId;
 
     /**
+    * 元信息。包括大小、时长、视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
      * 获取文件唯一 ID。
      * @return FileId 文件唯一 ID。
      */
@@ -97,12 +105,33 @@ public class FileUploadTask  extends AbstractModel{
     }
 
     /**
+     * 获取元信息。包括大小、时长、视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * 设置元信息。包括大小、时长、视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamObj(map, prefix + "MediaBasicInfo.", this.MediaBasicInfo);
         this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+        this.setParamObj(map, prefix + "MetaData.", this.MetaData);
 
     }
 }

@@ -72,7 +72,7 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     private SignLocation [] SignLocations;
 
     /**
-    * 印章ID
+    * 签章ID
     */
     @SerializedName("SealResId")
     @Expose
@@ -205,16 +205,16 @@ public class SignContractByCoordinateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取印章ID
-     * @return SealResId 印章ID
+     * 获取签章ID
+     * @return SealResId 签章ID
      */
     public String getSealResId() {
         return this.SealResId;
     }
 
     /**
-     * 设置印章ID
-     * @param SealResId 印章ID
+     * 设置签章ID
+     * @param SealResId 签章ID
      */
     public void setSealResId(String SealResId) {
         this.SealResId = SealResId;

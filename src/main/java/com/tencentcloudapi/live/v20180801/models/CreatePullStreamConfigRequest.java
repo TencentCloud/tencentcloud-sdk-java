@@ -37,7 +37,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     private String ToUrl;
 
     /**
-    * 区域id：
+    * 选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
@@ -48,7 +48,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     private Integer AreaId;
 
     /**
-    * 运营商id：
+    * 选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，
@@ -115,12 +115,12 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区域id：
+     * 获取选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
 4-中国香港。
-     * @return AreaId 区域id：
+     * @return AreaId 选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
@@ -131,12 +131,12 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区域id：
+     * 设置选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
 4-中国香港。
-     * @param AreaId 区域id：
+     * @param AreaId 选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
@@ -147,13 +147,13 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运营商id：
+     * 获取选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，
 4-其他。
 注：AreaId为4的时候,IspId只能为其他。
-     * @return IspId 运营商id：
+     * @return IspId 选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，
@@ -165,13 +165,13 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运营商id：
+     * 设置选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，
 4-其他。
 注：AreaId为4的时候,IspId只能为其他。
-     * @param IspId 运营商id：
+     * @param IspId 选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，

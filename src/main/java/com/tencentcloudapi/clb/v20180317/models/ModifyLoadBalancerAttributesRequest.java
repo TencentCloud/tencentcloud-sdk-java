@@ -44,6 +44,13 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     private TargetRegionInfo TargetRegionInfo;
 
     /**
+    * 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+    */
+    @SerializedName("InternetChargeInfo")
+    @Expose
+    private InternetAccessible InternetChargeInfo;
+
+    /**
      * 获取负载均衡的唯一ID
      * @return LoadBalancerId 负载均衡的唯一ID
      */
@@ -92,12 +99,29 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+     * @return InternetChargeInfo 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+     */
+    public InternetAccessible getInternetChargeInfo() {
+        return this.InternetChargeInfo;
+    }
+
+    /**
+     * 设置网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+     * @param InternetChargeInfo 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+     */
+    public void setInternetChargeInfo(InternetAccessible InternetChargeInfo) {
+        this.InternetChargeInfo = InternetChargeInfo;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
         this.setParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
+        this.setParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
 
     }
 }

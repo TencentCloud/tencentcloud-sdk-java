@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
 
     /**
+    * 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
     * 视频拆条片段 Url。
     */
     @SerializedName("SegmentUrl")
@@ -63,6 +70,22 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     @SerializedName("SpecialInfo")
     @Expose
     private String SpecialInfo;
+
+    /**
+     * 获取文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
+     * @return FileId 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * 设置文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
+     * @param FileId 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
 
     /**
      * 获取视频拆条片段 Url。
@@ -164,6 +187,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "SegmentUrl", this.SegmentUrl);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

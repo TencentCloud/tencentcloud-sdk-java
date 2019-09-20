@@ -65,7 +65,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     private Target [] Targets;
 
     /**
-    * 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+    * 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
     */
     @SerializedName("Weight")
     @Expose
@@ -168,16 +168,16 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
-     * @return Weight 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     * 获取后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     * @return Weight 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
     public Integer getWeight() {
         return this.Weight;
     }
 
     /**
-     * 设置后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
-     * @param Weight 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     * 设置后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     * @param Weight 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
     public void setWeight(Integer Weight) {
         this.Weight = Weight;

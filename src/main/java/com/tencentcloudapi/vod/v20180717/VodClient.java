@@ -657,6 +657,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *查询转自适应码流模板，支持根据条件，分页查询。
+     * @param req DescribeAdaptiveDynamicStreamingTemplatesRequest
+     * @return DescribeAdaptiveDynamicStreamingTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 获得用户的所有分类信息。
      * @param req DescribeAllClassRequest
      * @return DescribeAllClassResponse
@@ -686,6 +704,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeAnimatedGraphicsTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取转自适应码流音频轨模板列表，支持根据条件，分页查询。
+     * @param req DescribeAudioTrackTemplatesRequest
+     * @return DescribeAudioTrackTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAudioTrackTemplatesResponse DescribeAudioTrackTemplates(DescribeAudioTrackTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAudioTrackTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAudioTrackTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAudioTrackTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -918,6 +954,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTranscodeTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取转自适应码流视频轨模板列表，支持根据条件，分页查询。
+     * @param req DescribeVideoTrackTemplatesRequest
+     * @return DescribeVideoTrackTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoTrackTemplatesResponse DescribeVideoTrackTemplates(DescribeVideoTrackTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVideoTrackTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVideoTrackTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVideoTrackTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

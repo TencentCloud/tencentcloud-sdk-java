@@ -126,6 +126,13 @@ public class RuleOutput  extends AbstractModel{
     private String ForwardType;
 
     /**
+    * 转发规则的创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * 获取转发规则的 ID
      * @return LocationId 转发规则的 ID
      */
@@ -370,6 +377,22 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
+     * 获取转发规则的创建时间
+     * @return CreateTime 转发规则的创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * 设置转发规则的创建时间
+     * @param CreateTime 转发规则的创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -387,6 +410,7 @@ public class RuleOutput  extends AbstractModel{
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
         this.setParamSimple(map, prefix + "Http2", this.Http2);
         this.setParamSimple(map, prefix + "ForwardType", this.ForwardType);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

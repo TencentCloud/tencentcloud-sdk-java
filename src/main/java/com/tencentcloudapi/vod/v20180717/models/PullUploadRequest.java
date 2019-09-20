@@ -24,7 +24,7 @@ public class PullUploadRequest  extends AbstractModel{
 
     /**
     * 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
+支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
     */
     @SerializedName("MediaUrl")
     @Expose
@@ -95,9 +95,9 @@ public class PullUploadRequest  extends AbstractModel{
 
     /**
      * 获取要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
+支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
      * @return MediaUrl 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
+支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
      */
     public String getMediaUrl() {
         return this.MediaUrl;
@@ -105,9 +105,9 @@ public class PullUploadRequest  extends AbstractModel{
 
     /**
      * 设置要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
+支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
      * @param MediaUrl 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-<li>URL 里文件名需要包括扩展名, 比如 ```https://xxxx.mp4``` ，扩展名为 mp4，支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。</li>
+支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;

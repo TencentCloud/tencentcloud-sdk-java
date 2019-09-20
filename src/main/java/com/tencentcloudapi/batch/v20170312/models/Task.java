@@ -142,6 +142,13 @@ public class Task  extends AbstractModel{
     private Boolean RestartComputeNode;
 
     /**
+    * 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+    */
+    @SerializedName("ResourceMaxRetryCount")
+    @Expose
+    private Integer ResourceMaxRetryCount;
+
+    /**
      * 获取应用程序信息
      * @return Application 应用程序信息
      */
@@ -414,6 +421,22 @@ public class Task  extends AbstractModel{
     }
 
     /**
+     * 获取启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+     * @return ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+     */
+    public Integer getResourceMaxRetryCount() {
+        return this.ResourceMaxRetryCount;
+    }
+
+    /**
+     * 设置启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+     * @param ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+     */
+    public void setResourceMaxRetryCount(Integer ResourceMaxRetryCount) {
+        this.ResourceMaxRetryCount = ResourceMaxRetryCount;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +457,7 @@ public class Task  extends AbstractModel{
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "MaxConcurrentNum", this.MaxConcurrentNum);
         this.setParamSimple(map, prefix + "RestartComputeNode", this.RestartComputeNode);
+        this.setParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
 
     }
 }
