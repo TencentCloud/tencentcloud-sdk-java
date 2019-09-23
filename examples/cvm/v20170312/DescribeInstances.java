@@ -18,7 +18,7 @@ public class DescribeInstances {
 
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
             HttpProfile httpProfile = new HttpProfile();
-            httpProfile.setReqMethod("GET"); // post请求(默认为post请求)
+            httpProfile.setReqMethod("GET"); // get请求(默认为post请求)
             httpProfile.setConnTimeout(30); // 请求连接超时时间，单位为秒(默认60秒)
             httpProfile.setEndpoint("cvm.ap-shanghai.tencentcloudapi.com"); // 指定接入地域域名(默认就近接入)
 
