@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitImageTaskRequest  extends AbstractModel{
+public class SubmitImageTaskPlusRequest  extends AbstractModel{
 
     /**
     * 输入分析对象内容，输入数据格式参考FileType参数释义
     */
     @SerializedName("FileContent")
     @Expose
-    private String FileContent;
+    private String [] FileContent;
 
     /**
     * 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
@@ -82,7 +82,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
      * 获取输入分析对象内容，输入数据格式参考FileType参数释义
      * @return FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
-    public String getFileContent() {
+    public String [] getFileContent() {
         return this.FileContent;
     }
 
@@ -90,7 +90,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
      * 设置输入分析对象内容，输入数据格式参考FileType参数释义
      * @param FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
-    public void setFileContent(String FileContent) {
+    public void setFileContent(String [] FileContent) {
         this.FileContent = FileContent;
     }
 
@@ -210,7 +210,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileContent", this.FileContent);
+        this.setParamArraySimple(map, prefix + "FileContent.", this.FileContent);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamObj(map, prefix + "Functions.", this.Functions);
         this.setParamArrayObj(map, prefix + "LightStandardSet.", this.LightStandardSet);

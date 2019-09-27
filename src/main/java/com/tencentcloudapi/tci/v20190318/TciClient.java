@@ -584,6 +584,24 @@ public class TciClient extends AbstractClient{
     }
 
     /**
+     *支持多路视频流，提交高级人员考勤任务
+     * @param req SubmitCheckAttendanceTaskPlusRequest
+     * @return SubmitCheckAttendanceTaskPlusResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitCheckAttendanceTaskPlusResponse SubmitCheckAttendanceTaskPlus(SubmitCheckAttendanceTaskPlusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SubmitCheckAttendanceTaskPlus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对话任务分析接口
      * @param req SubmitConversationTaskRequest
      * @return SubmitConversationTaskResponse
@@ -674,6 +692,24 @@ public class TciClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SubmitImageTaskResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SubmitImageTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *高级图像分析任务，开放了图像任务里的所有开关，可以根据场景深度定制图像分析任务。支持的图像类别有，图片链接、图片二进制数据、点播链接和直播链接。
+     * @param req SubmitImageTaskPlusRequest
+     * @return SubmitImageTaskPlusResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitImageTaskPlusResponse SubmitImageTaskPlus(SubmitImageTaskPlusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SubmitImageTaskPlusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SubmitImageTaskPlusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SubmitImageTaskPlus"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
