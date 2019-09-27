@@ -58,6 +58,13 @@ public class DealInfo  extends AbstractModel{
     private String OwnerUin;
 
     /**
+    * 实例付费类型
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
      * 获取订单名
      * @return DealName 订单名
      */
@@ -138,6 +145,22 @@ public class DealInfo  extends AbstractModel{
     }
 
     /**
+     * 获取实例付费类型
+     * @return InstanceChargeType 实例付费类型
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * 设置实例付费类型
+     * @param InstanceChargeType 实例付费类型
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DealInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
 
     }
 }

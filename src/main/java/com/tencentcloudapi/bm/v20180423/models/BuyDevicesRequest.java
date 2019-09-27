@@ -220,7 +220,7 @@ public class BuyDevicesRequest  extends AbstractModel{
 
     /**
     * CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
     */
     @SerializedName("CpuId")
     @Expose
@@ -281,6 +281,13 @@ public class BuyDevicesRequest  extends AbstractModel{
     @SerializedName("FileSystem")
     @Expose
     private String FileSystem;
+
+    /**
+    * 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名做为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+    */
+    @SerializedName("BuySession")
+    @Expose
+    private String BuySession;
 
     /**
      * 获取可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
@@ -732,9 +739,9 @@ public class BuyDevicesRequest  extends AbstractModel{
 
     /**
      * 获取CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
      * @return CpuId CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
      */
     public Integer getCpuId() {
         return this.CpuId;
@@ -742,9 +749,9 @@ public class BuyDevicesRequest  extends AbstractModel{
 
     /**
      * 设置CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
      * @param CpuId CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
      */
     public void setCpuId(Integer CpuId) {
         this.CpuId = CpuId;
@@ -879,6 +886,22 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名做为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+     * @return BuySession 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名做为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+     */
+    public String getBuySession() {
+        return this.BuySession;
+    }
+
+    /**
+     * 设置此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名做为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+     * @param BuySession 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名做为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+     */
+    public void setBuySession(String BuySession) {
+        this.BuySession = BuySession;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -919,6 +942,7 @@ public class BuyDevicesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "DataDiskCount", this.DataDiskCount);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "FileSystem", this.FileSystem);
+        this.setParamSimple(map, prefix + "BuySession", this.BuySession);
 
     }
 }

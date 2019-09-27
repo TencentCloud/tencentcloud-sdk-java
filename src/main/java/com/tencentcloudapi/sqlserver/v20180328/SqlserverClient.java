@@ -733,6 +733,24 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(TerminateDBInstance)用于主动销毁按量计费实例。
+     * @param req TerminateDBInstanceRequest
+     * @return TerminateDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateDBInstanceResponse TerminateDBInstance(TerminateDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TerminateDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（UpgradeDBInstance）用于升级实例
      * @param req UpgradeDBInstanceRequest
      * @return UpgradeDBInstanceResponse

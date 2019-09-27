@@ -100,11 +100,26 @@ public class SpecInfo  extends AbstractModel{
     private String SuitInfo;
 
     /**
-    * 此规格对应的Pid
+    * 此规格对应的包年包月Pid
     */
     @SerializedName("Pid")
     @Expose
     private Integer Pid;
+
+    /**
+    * 此规格对应的按量计费Pid列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PostPid")
+    @Expose
+    private Integer [] PostPid;
+
+    /**
+    * 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+    */
+    @SerializedName("PayModeStatus")
+    @Expose
+    private String PayModeStatus;
 
     /**
      * 获取实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
@@ -283,19 +298,55 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 获取此规格对应的Pid
-     * @return Pid 此规格对应的Pid
+     * 获取此规格对应的包年包月Pid
+     * @return Pid 此规格对应的包年包月Pid
      */
     public Integer getPid() {
         return this.Pid;
     }
 
     /**
-     * 设置此规格对应的Pid
-     * @param Pid 此规格对应的Pid
+     * 设置此规格对应的包年包月Pid
+     * @param Pid 此规格对应的包年包月Pid
      */
     public void setPid(Integer Pid) {
         this.Pid = Pid;
+    }
+
+    /**
+     * 获取此规格对应的按量计费Pid列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return PostPid 此规格对应的按量计费Pid列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer [] getPostPid() {
+        return this.PostPid;
+    }
+
+    /**
+     * 设置此规格对应的按量计费Pid列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PostPid 此规格对应的按量计费Pid列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPostPid(Integer [] PostPid) {
+        this.PostPid = PostPid;
+    }
+
+    /**
+     * 获取此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+     * @return PayModeStatus 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+     */
+    public String getPayModeStatus() {
+        return this.PayModeStatus;
+    }
+
+    /**
+     * 设置此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+     * @param PayModeStatus 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+     */
+    public void setPayModeStatus(String PayModeStatus) {
+        this.PayModeStatus = PayModeStatus;
     }
 
     /**
@@ -314,6 +365,8 @@ public class SpecInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "QPS", this.QPS);
         this.setParamSimple(map, prefix + "SuitInfo", this.SuitInfo);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamArraySimple(map, prefix + "PostPid.", this.PostPid);
+        this.setParamSimple(map, prefix + "PayModeStatus", this.PayModeStatus);
 
     }
 }

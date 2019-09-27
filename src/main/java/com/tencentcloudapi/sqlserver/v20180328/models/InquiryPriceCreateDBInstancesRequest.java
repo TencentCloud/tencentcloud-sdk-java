@@ -44,7 +44,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     private Integer Storage;
 
     /**
-    * 计费类型，当前只支持预付费，即包年包月，取值为PREPAID。默认值为PREPAID
+    * 计费类型，取值支持 PREPAID，POSTPAID。
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -65,7 +65,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     private Integer GoodsNum;
 
     /**
-    * sqlserver版本，目前只支持：2008R2（SQL Server 2008 R2），2012SP3（SQL Server 2012），2016SP1（SQL Server 2016 SP1）两种版本。默认为2008R2版本
+    * sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
     */
     @SerializedName("DBVersion")
     @Expose
@@ -120,16 +120,16 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费类型，当前只支持预付费，即包年包月，取值为PREPAID。默认值为PREPAID
-     * @return InstanceChargeType 计费类型，当前只支持预付费，即包年包月，取值为PREPAID。默认值为PREPAID
+     * 获取计费类型，取值支持 PREPAID，POSTPAID。
+     * @return InstanceChargeType 计费类型，取值支持 PREPAID，POSTPAID。
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * 设置计费类型，当前只支持预付费，即包年包月，取值为PREPAID。默认值为PREPAID
-     * @param InstanceChargeType 计费类型，当前只支持预付费，即包年包月，取值为PREPAID。默认值为PREPAID
+     * 设置计费类型，取值支持 PREPAID，POSTPAID。
+     * @param InstanceChargeType 计费类型，取值支持 PREPAID，POSTPAID。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -168,16 +168,16 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取sqlserver版本，目前只支持：2008R2（SQL Server 2008 R2），2012SP3（SQL Server 2012），2016SP1（SQL Server 2016 SP1）两种版本。默认为2008R2版本
-     * @return DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 R2），2012SP3（SQL Server 2012），2016SP1（SQL Server 2016 SP1）两种版本。默认为2008R2版本
+     * 获取sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
+     * @return DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * 设置sqlserver版本，目前只支持：2008R2（SQL Server 2008 R2），2012SP3（SQL Server 2012），2016SP1（SQL Server 2016 SP1）两种版本。默认为2008R2版本
-     * @param DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 R2），2012SP3（SQL Server 2012），2016SP1（SQL Server 2016 SP1）两种版本。默认为2008R2版本
+     * 设置sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
+     * @param DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;

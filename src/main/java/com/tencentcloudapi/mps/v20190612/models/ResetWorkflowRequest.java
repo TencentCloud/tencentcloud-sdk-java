@@ -65,7 +65,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+    * 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
     */
     @SerializedName("TaskPriority")
     @Expose
@@ -175,16 +175,16 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
-     * @return TaskPriority 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * 获取工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * @return TaskPriority 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public Long getTaskPriority() {
         return this.TaskPriority;
     }
 
     /**
-     * 设置任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
-     * @param TaskPriority 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * 设置工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * @param TaskPriority 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public void setTaskPriority(Long TaskPriority) {
         this.TaskPriority = TaskPriority;

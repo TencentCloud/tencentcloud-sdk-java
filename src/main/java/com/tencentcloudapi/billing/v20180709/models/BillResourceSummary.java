@@ -30,7 +30,7 @@ public class BillResourceSummary  extends AbstractModel{
     private String BusinessCodeName;
 
     /**
-    * 子产品：云产品子类，如云服务器CVM-标准型S1
+    * 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -205,6 +205,35 @@ public class BillResourceSummary  extends AbstractModel{
     private String ExtendField5;
 
     /**
+    * Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private BillTagInfo [] Tags;
+
+    /**
+    * 付款方uin
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
+    * 资源所有者uin,无值则返回"-"
+    */
+    @SerializedName("OwnerUin")
+    @Expose
+    private String OwnerUin;
+
+    /**
+    * 操作者uin,无值则返回"-"
+    */
+    @SerializedName("OperateUin")
+    @Expose
+    private String OperateUin;
+
+    /**
      * 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
@@ -221,16 +250,16 @@ public class BillResourceSummary  extends AbstractModel{
     }
 
     /**
-     * 获取子产品：云产品子类，如云服务器CVM-标准型S1
-     * @return ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1
+     * 获取子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+     * @return ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * 设置子产品：云产品子类，如云服务器CVM-标准型S1
-     * @param ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1
+     * 设置子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+     * @param ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
@@ -621,6 +650,74 @@ public class BillResourceSummary  extends AbstractModel{
     }
 
     /**
+     * 获取Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Tags Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BillTagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(BillTagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * 获取付款方uin
+     * @return PayerUin 付款方uin
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * 设置付款方uin
+     * @param PayerUin 付款方uin
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
+    /**
+     * 获取资源所有者uin,无值则返回"-"
+     * @return OwnerUin 资源所有者uin,无值则返回"-"
+     */
+    public String getOwnerUin() {
+        return this.OwnerUin;
+    }
+
+    /**
+     * 设置资源所有者uin,无值则返回"-"
+     * @param OwnerUin 资源所有者uin,无值则返回"-"
+     */
+    public void setOwnerUin(String OwnerUin) {
+        this.OwnerUin = OwnerUin;
+    }
+
+    /**
+     * 获取操作者uin,无值则返回"-"
+     * @return OperateUin 操作者uin,无值则返回"-"
+     */
+    public String getOperateUin() {
+        return this.OperateUin;
+    }
+
+    /**
+     * 设置操作者uin,无值则返回"-"
+     * @param OperateUin 操作者uin,无值则返回"-"
+     */
+    public void setOperateUin(String OperateUin) {
+        this.OperateUin = OperateUin;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -650,6 +747,10 @@ public class BillResourceSummary  extends AbstractModel{
         this.setParamSimple(map, prefix + "ExtendField3", this.ExtendField3);
         this.setParamSimple(map, prefix + "ExtendField4", this.ExtendField4);
         this.setParamSimple(map, prefix + "ExtendField5", this.ExtendField5);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
+        this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+        this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
 
     }
 }

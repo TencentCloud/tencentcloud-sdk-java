@@ -44,10 +44,10 @@ public class BindRealServer  extends AbstractModel{
     private Long RealServerWeight;
 
     /**
-    * 源站状态，异常状态包括IP连接不上和域名解析失败（源站为域名）。其中：
-0，源站正常；
-1，IP异常；
-2，域名解析异常。
+    * 源站健康检查状态，其中：
+0，正常；
+1，异常。
+未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealServerStatus")
@@ -63,7 +63,7 @@ public class BindRealServer  extends AbstractModel{
     private Long RealServerPort;
 
     /**
-    * 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。
+    * 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
     */
     @SerializedName("DownIPList")
     @Expose
@@ -118,15 +118,15 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 获取源站状态，异常状态包括IP连接不上和域名解析失败（源站为域名）。其中：
-0，源站正常；
-1，IP异常；
-2，域名解析异常。
+     * 获取源站健康检查状态，其中：
+0，正常；
+1，异常。
+未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return RealServerStatus 源站状态，异常状态包括IP连接不上和域名解析失败（源站为域名）。其中：
-0，源站正常；
-1，IP异常；
-2，域名解析异常。
+     * @return RealServerStatus 源站健康检查状态，其中：
+0，正常；
+1，异常。
+未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealServerStatus() {
@@ -134,15 +134,15 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 设置源站状态，异常状态包括IP连接不上和域名解析失败（源站为域名）。其中：
-0，源站正常；
-1，IP异常；
-2，域名解析异常。
+     * 设置源站健康检查状态，其中：
+0，正常；
+1，异常。
+未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RealServerStatus 源站状态，异常状态包括IP连接不上和域名解析失败（源站为域名）。其中：
-0，源站正常；
-1，IP异常；
-2，域名解析异常。
+     * @param RealServerStatus 源站健康检查状态，其中：
+0，正常；
+1，异常。
+未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealServerStatus(Long RealServerStatus) {
@@ -170,16 +170,16 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 获取当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。
-     * @return DownIPList 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。
+     * 获取当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
+     * @return DownIPList 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
      */
     public String [] getDownIPList() {
         return this.DownIPList;
     }
 
     /**
-     * 设置当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。
-     * @param DownIPList 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。
+     * 设置当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
+     * @param DownIPList 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
      */
     public void setDownIPList(String [] DownIPList) {
         this.DownIPList = DownIPList;

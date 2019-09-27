@@ -226,6 +226,13 @@ public class GetFunctionResponse  extends AbstractModel{
     private String Type;
 
     /**
+    * 是否启用L5
+    */
+    @SerializedName("L5Enable")
+    @Expose
+    private String L5Enable;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -697,6 +704,22 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
+     * 获取是否启用L5
+     * @return L5Enable 是否启用L5
+     */
+    public String getL5Enable() {
+        return this.L5Enable;
+    }
+
+    /**
+     * 设置是否启用L5
+     * @param L5Enable 是否启用L5
+     */
+    public void setL5Enable(String L5Enable) {
+        this.L5Enable = L5Enable;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -745,6 +768,7 @@ public class GetFunctionResponse  extends AbstractModel{
         this.setParamObj(map, prefix + "EipConfig.", this.EipConfig);
         this.setParamObj(map, prefix + "AccessInfo.", this.AccessInfo);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "L5Enable", this.L5Enable);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

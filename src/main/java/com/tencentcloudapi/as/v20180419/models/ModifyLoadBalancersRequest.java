@@ -44,6 +44,15 @@ public class ModifyLoadBalancersRequest  extends AbstractModel{
     private ForwardLoadBalancer [] ForwardLoadBalancers;
 
     /**
+    * 负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
+<br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
+<br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
+    */
+    @SerializedName("LoadBalancersCheckPolicy")
+    @Expose
+    private String LoadBalancersCheckPolicy;
+
+    /**
      * 获取伸缩组ID
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -92,12 +101,37 @@ public class ModifyLoadBalancersRequest  extends AbstractModel{
     }
 
     /**
+     * 获取负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
+<br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
+<br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
+     * @return LoadBalancersCheckPolicy 负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
+<br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
+<br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
+     */
+    public String getLoadBalancersCheckPolicy() {
+        return this.LoadBalancersCheckPolicy;
+    }
+
+    /**
+     * 设置负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
+<br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
+<br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
+     * @param LoadBalancersCheckPolicy 负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
+<br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
+<br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
+     */
+    public void setLoadBalancersCheckPolicy(String LoadBalancersCheckPolicy) {
+        this.LoadBalancersCheckPolicy = LoadBalancersCheckPolicy;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
         this.setParamArrayObj(map, prefix + "ForwardLoadBalancers.", this.ForwardLoadBalancers);
+        this.setParamSimple(map, prefix + "LoadBalancersCheckPolicy", this.LoadBalancersCheckPolicy);
 
     }
 }

@@ -72,6 +72,14 @@ public class SlowlogInfo  extends AbstractModel{
     private String ExternalAddr;
 
     /**
+    * 状态（1成功 2失败）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Integer Status;
+
+    /**
      * 获取慢查询日志文件唯一标识
      * @return Id 慢查询日志文件唯一标识
      */
@@ -184,6 +192,26 @@ public class SlowlogInfo  extends AbstractModel{
     }
 
     /**
+     * 获取状态（1成功 2失败）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Status 状态（1成功 2失败）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * 设置状态（1成功 2失败）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 状态（1成功 2失败）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Integer Status) {
+        this.Status = Status;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +222,7 @@ public class SlowlogInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "InternalAddr", this.InternalAddr);
         this.setParamSimple(map, prefix + "ExternalAddr", this.ExternalAddr);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

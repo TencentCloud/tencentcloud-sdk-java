@@ -73,6 +73,27 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     private Integer NeedRecordNum;
 
     /**
+    * 查询指定产品信息
+    */
+    @SerializedName("ProductCode")
+    @Expose
+    private String ProductCode;
+
+    /**
+    * 付费模式 prePay/postPay
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
+    * 查询指定资源信息
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * 获取偏移量
      * @return Offset 偏移量
      */
@@ -189,6 +210,54 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
+     * 获取查询指定产品信息
+     * @return ProductCode 查询指定产品信息
+     */
+    public String getProductCode() {
+        return this.ProductCode;
+    }
+
+    /**
+     * 设置查询指定产品信息
+     * @param ProductCode 查询指定产品信息
+     */
+    public void setProductCode(String ProductCode) {
+        this.ProductCode = ProductCode;
+    }
+
+    /**
+     * 获取付费模式 prePay/postPay
+     * @return PayMode 付费模式 prePay/postPay
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * 设置付费模式 prePay/postPay
+     * @param PayMode 付费模式 prePay/postPay
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * 获取查询指定资源信息
+     * @return ResourceId 查询指定资源信息
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * 设置查询指定资源信息
+     * @param ResourceId 查询指定资源信息
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -199,6 +268,9 @@ public class DescribeBillDetailRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
+        this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

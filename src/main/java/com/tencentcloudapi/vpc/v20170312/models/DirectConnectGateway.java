@@ -109,6 +109,13 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     private Boolean EnableBGP;
 
     /**
+    * 开启和关闭BGP的community属性。
+    */
+    @SerializedName("EnableBGPCommunity")
+    @Expose
+    private Boolean EnableBGPCommunity;
+
+    /**
      * 获取专线网关`ID`。
      * @return DirectConnectGatewayId 专线网关`ID`。
      */
@@ -321,6 +328,22 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
+     * 获取开启和关闭BGP的community属性。
+     * @return EnableBGPCommunity 开启和关闭BGP的community属性。
+     */
+    public Boolean getEnableBGPCommunity() {
+        return this.EnableBGPCommunity;
+    }
+
+    /**
+     * 设置开启和关闭BGP的community属性。
+     * @param EnableBGPCommunity 开启和关闭BGP的community属性。
+     */
+    public void setEnableBGPCommunity(Boolean EnableBGPCommunity) {
+        this.EnableBGPCommunity = EnableBGPCommunity;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -335,6 +358,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
         this.setParamSimple(map, prefix + "EnableBGP", this.EnableBGP);
+        this.setParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
 
     }
 }

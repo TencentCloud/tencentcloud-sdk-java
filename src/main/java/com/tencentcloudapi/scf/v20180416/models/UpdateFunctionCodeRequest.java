@@ -86,6 +86,20 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     private String Publish;
 
     /**
+    * 函数代码
+    */
+    @SerializedName("Code")
+    @Expose
+    private Code Code;
+
+    /**
+    * 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+    */
+    @SerializedName("CodeSource")
+    @Expose
+    private String CodeSource;
+
+    /**
      * 获取函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
      * @return Handler 函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
      */
@@ -230,6 +244,38 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
+     * 获取函数代码
+     * @return Code 函数代码
+     */
+    public Code getCode() {
+        return this.Code;
+    }
+
+    /**
+     * 设置函数代码
+     * @param Code 函数代码
+     */
+    public void setCode(Code Code) {
+        this.Code = Code;
+    }
+
+    /**
+     * 获取代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     * @return CodeSource 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     */
+    public String getCodeSource() {
+        return this.CodeSource;
+    }
+
+    /**
+     * 设置代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     * @param CodeSource 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     */
+    public void setCodeSource(String CodeSource) {
+        this.CodeSource = CodeSource;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +288,8 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "Publish", this.Publish);
+        this.setParamObj(map, prefix + "Code.", this.Code);
+        this.setParamSimple(map, prefix + "CodeSource", this.CodeSource);
 
     }
 }

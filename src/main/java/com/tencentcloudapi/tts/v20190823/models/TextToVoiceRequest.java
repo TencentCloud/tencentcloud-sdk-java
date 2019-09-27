@@ -67,7 +67,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+    * 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
     */
     @SerializedName("VoiceType")
     @Expose
@@ -199,16 +199,16 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
-     * @return VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * 获取音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * @return VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
     public Long getVoiceType() {
         return this.VoiceType;
     }
 
     /**
-     * 设置音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
-     * @param VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * 设置音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * @param VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
     public void setVoiceType(Long VoiceType) {
         this.VoiceType = VoiceType;

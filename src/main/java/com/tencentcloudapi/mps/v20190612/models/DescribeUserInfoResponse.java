@@ -36,11 +36,19 @@ public class DescribeUserInfoResponse  extends AbstractModel{
     * 用户付费类型，取值：
 <li>DailyPayment：日结付费 ；</li>
 <li>MonthlyPayment：月结付费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PaymentType")
     @Expose
     private String PaymentType;
+
+    /**
+    * 是否是旧版视频处理用户，取值：
+<li>0：否 ；</li>
+<li>1：是。</li>
+    */
+    @SerializedName("OldMpsUser")
+    @Expose
+    private Long OldMpsUser;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -81,11 +89,9 @@ public class DescribeUserInfoResponse  extends AbstractModel{
      * 获取用户付费类型，取值：
 <li>DailyPayment：日结付费 ；</li>
 <li>MonthlyPayment：月结付费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @return PaymentType 用户付费类型，取值：
 <li>DailyPayment：日结付费 ；</li>
 <li>MonthlyPayment：月结付费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPaymentType() {
         return this.PaymentType;
@@ -95,14 +101,36 @@ public class DescribeUserInfoResponse  extends AbstractModel{
      * 设置用户付费类型，取值：
 <li>DailyPayment：日结付费 ；</li>
 <li>MonthlyPayment：月结付费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PaymentType 用户付费类型，取值：
 <li>DailyPayment：日结付费 ；</li>
 <li>MonthlyPayment：月结付费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaymentType(String PaymentType) {
         this.PaymentType = PaymentType;
+    }
+
+    /**
+     * 获取是否是旧版视频处理用户，取值：
+<li>0：否 ；</li>
+<li>1：是。</li>
+     * @return OldMpsUser 是否是旧版视频处理用户，取值：
+<li>0：否 ；</li>
+<li>1：是。</li>
+     */
+    public Long getOldMpsUser() {
+        return this.OldMpsUser;
+    }
+
+    /**
+     * 设置是否是旧版视频处理用户，取值：
+<li>0：否 ；</li>
+<li>1：是。</li>
+     * @param OldMpsUser 是否是旧版视频处理用户，取值：
+<li>0：否 ；</li>
+<li>1：是。</li>
+     */
+    public void setOldMpsUser(Long OldMpsUser) {
+        this.OldMpsUser = OldMpsUser;
     }
 
     /**
@@ -127,6 +155,7 @@ public class DescribeUserInfoResponse  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "PaymentType", this.PaymentType);
+        this.setParamSimple(map, prefix + "OldMpsUser", this.OldMpsUser);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

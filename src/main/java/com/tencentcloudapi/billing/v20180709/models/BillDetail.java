@@ -149,6 +149,14 @@ public class BillDetail  extends AbstractModel{
     private String OperateUin;
 
     /**
+    * Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private BillTagInfo [] Tags;
+
+    /**
      * 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
@@ -437,6 +445,26 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
+     * 获取Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Tags Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BillTagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(BillTagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +486,7 @@ public class BillDetail  extends AbstractModel{
         this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

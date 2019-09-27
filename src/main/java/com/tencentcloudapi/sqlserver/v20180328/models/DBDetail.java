@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DBDetail  extends AbstractModel{
 
     /**
-    * 实例id
+    * 数据库名称
     */
     @SerializedName("Name")
     @Expose
@@ -72,16 +72,16 @@ public class DBDetail  extends AbstractModel{
     private String InternalStatus;
 
     /**
-     * 获取实例id
-     * @return Name 实例id
+     * 获取数据库名称
+     * @return Name 数据库名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * 设置实例id
-     * @param Name 实例id
+     * 设置数据库名称
+     * @param Name 数据库名称
      */
     public void setName(String Name) {
         this.Name = Name;

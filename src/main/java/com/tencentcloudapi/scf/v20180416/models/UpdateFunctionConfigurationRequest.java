@@ -107,6 +107,13 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     private String Publish;
 
     /**
+    * 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+    */
+    @SerializedName("L5Enable")
+    @Expose
+    private String L5Enable;
+
+    /**
      * 获取要修改的函数名称
      * @return FunctionName 要修改的函数名称
      */
@@ -299,6 +306,22 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+     * @return L5Enable 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+     */
+    public String getL5Enable() {
+        return this.L5Enable;
+    }
+
+    /**
+     * 设置是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+     * @param L5Enable 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+     */
+    public void setL5Enable(String L5Enable) {
+        this.L5Enable = L5Enable;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "Publish", this.Publish);
+        this.setParamSimple(map, prefix + "L5Enable", this.L5Enable);
 
     }
 }

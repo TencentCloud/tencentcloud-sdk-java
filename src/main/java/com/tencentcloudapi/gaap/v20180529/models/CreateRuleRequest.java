@@ -80,6 +80,13 @@ public class CreateRuleRequest  extends AbstractModel{
     private String ForwardProtocol;
 
     /**
+    * 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+    */
+    @SerializedName("ForwardHost")
+    @Expose
+    private String ForwardHost;
+
+    /**
      * 获取7层监听器ID
      * @return ListenerId 7层监听器ID
      */
@@ -212,6 +219,22 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
+     * 获取加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     * @return ForwardHost 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     */
+    public String getForwardHost() {
+        return this.ForwardHost;
+    }
+
+    /**
+     * 设置加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     * @param ForwardHost 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     */
+    public void setForwardHost(String ForwardHost) {
+        this.ForwardHost = ForwardHost;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -223,6 +246,7 @@ public class CreateRuleRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
         this.setParamObj(map, prefix + "CheckParams.", this.CheckParams);
         this.setParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
+        this.setParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
 
     }
 }

@@ -37,7 +37,14 @@ public class DescribeAccountsResponse  extends AbstractModel{
     private AccountDetail [] Accounts;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 总数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Integer TotalCount;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -76,16 +83,32 @@ public class DescribeAccountsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取总数
+     * @return TotalCount 总数
+     */
+    public Integer getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * 设置总数
+     * @param TotalCount 总数
+     */
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -97,6 +120,7 @@ public class DescribeAccountsResponse  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

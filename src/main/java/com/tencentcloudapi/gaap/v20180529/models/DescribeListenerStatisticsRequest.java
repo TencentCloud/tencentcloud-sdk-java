@@ -44,7 +44,7 @@ public class DescribeListenerStatisticsRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-    * 统计指标名称列表，支持["InBandwidth", "OutBandwidth", "Concurrent", "InPackets", "OutPackets"]
+    * 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets。
     */
     @SerializedName("MetricNames")
     @Expose
@@ -52,9 +52,9 @@ public class DescribeListenerStatisticsRequest  extends AbstractModel{
 
     /**
     * 监控粒度，目前支持300，3600，86400，单位：秒。
-当时间范围<=1d，支持最小粒度300s；
-当时间范围<=7d，支持最小粒度3600s；
-当时间范围>7d，支持最小粒度86400s。
+查询时间范围不超过1天，支持最小粒度300秒；
+查询间范围不超过7天，支持最小粒度3600秒；
+查询间范围超过7天，支持最小粒度86400秒。
     */
     @SerializedName("Granularity")
     @Expose
@@ -109,16 +109,16 @@ public class DescribeListenerStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取统计指标名称列表，支持["InBandwidth", "OutBandwidth", "Concurrent", "InPackets", "OutPackets"]
-     * @return MetricNames 统计指标名称列表，支持["InBandwidth", "OutBandwidth", "Concurrent", "InPackets", "OutPackets"]
+     * 获取统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets。
+     * @return MetricNames 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets。
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * 设置统计指标名称列表，支持["InBandwidth", "OutBandwidth", "Concurrent", "InPackets", "OutPackets"]
-     * @param MetricNames 统计指标名称列表，支持["InBandwidth", "OutBandwidth", "Concurrent", "InPackets", "OutPackets"]
+     * 设置统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets。
+     * @param MetricNames 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets。
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
@@ -126,13 +126,13 @@ public class DescribeListenerStatisticsRequest  extends AbstractModel{
 
     /**
      * 获取监控粒度，目前支持300，3600，86400，单位：秒。
-当时间范围<=1d，支持最小粒度300s；
-当时间范围<=7d，支持最小粒度3600s；
-当时间范围>7d，支持最小粒度86400s。
+查询时间范围不超过1天，支持最小粒度300秒；
+查询间范围不超过7天，支持最小粒度3600秒；
+查询间范围超过7天，支持最小粒度86400秒。
      * @return Granularity 监控粒度，目前支持300，3600，86400，单位：秒。
-当时间范围<=1d，支持最小粒度300s；
-当时间范围<=7d，支持最小粒度3600s；
-当时间范围>7d，支持最小粒度86400s。
+查询时间范围不超过1天，支持最小粒度300秒；
+查询间范围不超过7天，支持最小粒度3600秒；
+查询间范围超过7天，支持最小粒度86400秒。
      */
     public Long getGranularity() {
         return this.Granularity;
@@ -140,13 +140,13 @@ public class DescribeListenerStatisticsRequest  extends AbstractModel{
 
     /**
      * 设置监控粒度，目前支持300，3600，86400，单位：秒。
-当时间范围<=1d，支持最小粒度300s；
-当时间范围<=7d，支持最小粒度3600s；
-当时间范围>7d，支持最小粒度86400s。
+查询时间范围不超过1天，支持最小粒度300秒；
+查询间范围不超过7天，支持最小粒度3600秒；
+查询间范围超过7天，支持最小粒度86400秒。
      * @param Granularity 监控粒度，目前支持300，3600，86400，单位：秒。
-当时间范围<=1d，支持最小粒度300s；
-当时间范围<=7d，支持最小粒度3600s；
-当时间范围>7d，支持最小粒度86400s。
+查询时间范围不超过1天，支持最小粒度300秒；
+查询间范围不超过7天，支持最小粒度3600秒；
+查询间范围超过7天，支持最小粒度86400秒。
      */
     public void setGranularity(Long Granularity) {
         this.Granularity = Granularity;

@@ -87,6 +87,14 @@ public class CreateProxyRequest  extends AbstractModel{
     private TagPair [] TagSet;
 
     /**
+    * 被复制的通道ID。只有处于运行中状态的通道可以被复制。
+当设置该参数时，表示复制该通道。
+    */
+    @SerializedName("ClonedProxyId")
+    @Expose
+    private String ClonedProxyId;
+
+    /**
      * 获取通道的项目ID。
      * @return ProjectId 通道的项目ID。
      */
@@ -235,6 +243,26 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
+     * 获取被复制的通道ID。只有处于运行中状态的通道可以被复制。
+当设置该参数时，表示复制该通道。
+     * @return ClonedProxyId 被复制的通道ID。只有处于运行中状态的通道可以被复制。
+当设置该参数时，表示复制该通道。
+     */
+    public String getClonedProxyId() {
+        return this.ClonedProxyId;
+    }
+
+    /**
+     * 设置被复制的通道ID。只有处于运行中状态的通道可以被复制。
+当设置该参数时，表示复制该通道。
+     * @param ClonedProxyId 被复制的通道ID。只有处于运行中状态的通道可以被复制。
+当设置该参数时，表示复制该通道。
+     */
+    public void setClonedProxyId(String ClonedProxyId) {
+        this.ClonedProxyId = ClonedProxyId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -247,6 +275,7 @@ public class CreateProxyRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "ClonedProxyId", this.ClonedProxyId);
 
     }
 }

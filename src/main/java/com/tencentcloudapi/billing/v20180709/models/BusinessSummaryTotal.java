@@ -30,6 +30,27 @@ public class BusinessSummaryTotal  extends AbstractModel{
     private String RealTotalCost;
 
     /**
+    * 代金券金额
+    */
+    @SerializedName("VoucherPayAmount")
+    @Expose
+    private String VoucherPayAmount;
+
+    /**
+    * 赠送金金额
+    */
+    @SerializedName("IncentivePayAmount")
+    @Expose
+    private String IncentivePayAmount;
+
+    /**
+    * 现金金额
+    */
+    @SerializedName("CashPayAmount")
+    @Expose
+    private String CashPayAmount;
+
+    /**
      * 获取总花费
      * @return RealTotalCost 总花费
      */
@@ -46,10 +67,61 @@ public class BusinessSummaryTotal  extends AbstractModel{
     }
 
     /**
+     * 获取代金券金额
+     * @return VoucherPayAmount 代金券金额
+     */
+    public String getVoucherPayAmount() {
+        return this.VoucherPayAmount;
+    }
+
+    /**
+     * 设置代金券金额
+     * @param VoucherPayAmount 代金券金额
+     */
+    public void setVoucherPayAmount(String VoucherPayAmount) {
+        this.VoucherPayAmount = VoucherPayAmount;
+    }
+
+    /**
+     * 获取赠送金金额
+     * @return IncentivePayAmount 赠送金金额
+     */
+    public String getIncentivePayAmount() {
+        return this.IncentivePayAmount;
+    }
+
+    /**
+     * 设置赠送金金额
+     * @param IncentivePayAmount 赠送金金额
+     */
+    public void setIncentivePayAmount(String IncentivePayAmount) {
+        this.IncentivePayAmount = IncentivePayAmount;
+    }
+
+    /**
+     * 获取现金金额
+     * @return CashPayAmount 现金金额
+     */
+    public String getCashPayAmount() {
+        return this.CashPayAmount;
+    }
+
+    /**
+     * 设置现金金额
+     * @param CashPayAmount 现金金额
+     */
+    public void setCashPayAmount(String CashPayAmount) {
+        this.CashPayAmount = CashPayAmount;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
+        this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+        this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+        this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
 
     }
 }

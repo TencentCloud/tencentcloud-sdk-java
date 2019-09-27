@@ -175,6 +175,24 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *获取按标签汇总费用分布
+     * @param req DescribeBillSummaryByTagRequest
+     * @return DescribeBillSummaryByTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryByTagResponse DescribeBillSummaryByTag(DescribeBillSummaryByTagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillSummaryByTagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryByTagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBillSummaryByTag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询订单
      * @param req DescribeDealsByCondRequest
      * @return DescribeDealsByCondResponse

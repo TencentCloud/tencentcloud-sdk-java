@@ -44,6 +44,20 @@ public class CreateCcnRequest  extends AbstractModel{
     private String QosLevel;
 
     /**
+    * 计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
+    * 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
+    */
+    @SerializedName("BandwidthLimitType")
+    @Expose
+    private String BandwidthLimitType;
+
+    /**
      * 获取CCN名称，最大长度不能超过60个字节。
      * @return CcnName CCN名称，最大长度不能超过60个字节。
      */
@@ -92,12 +106,46 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
+     * 获取计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
+     * @return InstanceChargeType 计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * 设置计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
+     * @param InstanceChargeType 计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * 获取限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
+     * @return BandwidthLimitType 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
+     */
+    public String getBandwidthLimitType() {
+        return this.BandwidthLimitType;
+    }
+
+    /**
+     * 设置限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
+     * @param BandwidthLimitType 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
+     */
+    public void setBandwidthLimitType(String BandwidthLimitType) {
+        this.BandwidthLimitType = BandwidthLimitType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnName", this.CcnName);
         this.setParamSimple(map, prefix + "CcnDescription", this.CcnDescription);
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
 
     }
 }

@@ -167,7 +167,7 @@ public class LaunchConfiguration  extends AbstractModel{
     private Integer VersionNumber;
 
     /**
-    * 更新时间
+    * 更新时间。
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -179,6 +179,13 @@ public class LaunchConfiguration  extends AbstractModel{
     @SerializedName("CamRoleName")
     @Expose
     private String CamRoleName;
+
+    /**
+    * 上次操作时，InstanceTypesCheckPolicy 取值。
+    */
+    @SerializedName("LastOperationInstanceTypesCheckPolicy")
+    @Expose
+    private String LastOperationInstanceTypesCheckPolicy;
 
     /**
      * 获取实例所属项目ID。
@@ -517,16 +524,16 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
-     * @return UpdatedTime 更新时间
+     * 获取更新时间。
+     * @return UpdatedTime 更新时间。
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * 设置更新时间
-     * @param UpdatedTime 更新时间
+     * 设置更新时间。
+     * @param UpdatedTime 更新时间。
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
@@ -546,6 +553,22 @@ public class LaunchConfiguration  extends AbstractModel{
      */
     public void setCamRoleName(String CamRoleName) {
         this.CamRoleName = CamRoleName;
+    }
+
+    /**
+     * 获取上次操作时，InstanceTypesCheckPolicy 取值。
+     * @return LastOperationInstanceTypesCheckPolicy 上次操作时，InstanceTypesCheckPolicy 取值。
+     */
+    public String getLastOperationInstanceTypesCheckPolicy() {
+        return this.LastOperationInstanceTypesCheckPolicy;
+    }
+
+    /**
+     * 设置上次操作时，InstanceTypesCheckPolicy 取值。
+     * @param LastOperationInstanceTypesCheckPolicy 上次操作时，InstanceTypesCheckPolicy 取值。
+     */
+    public void setLastOperationInstanceTypesCheckPolicy(String LastOperationInstanceTypesCheckPolicy) {
+        this.LastOperationInstanceTypesCheckPolicy = LastOperationInstanceTypesCheckPolicy;
     }
 
     /**
@@ -574,6 +597,7 @@ public class LaunchConfiguration  extends AbstractModel{
         this.setParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+        this.setParamSimple(map, prefix + "LastOperationInstanceTypesCheckPolicy", this.LastOperationInstanceTypesCheckPolicy);
 
     }
 }

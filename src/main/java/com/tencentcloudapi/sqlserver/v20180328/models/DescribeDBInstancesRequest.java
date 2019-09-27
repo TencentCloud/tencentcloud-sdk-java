@@ -49,14 +49,14 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Integer Status;
 
     /**
-    * 偏移量，默认为 0
+    * 页数，默认为 0
     */
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
 
     /**
-    * 返回数量，默认为50
+    * 页大小，默认为50
     */
     @SerializedName("Limit")
     @Expose
@@ -68,6 +68,13 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     @SerializedName("InstanceIdSet")
     @Expose
     private String [] InstanceIdSet;
+
+    /**
+    * 付费类型检索 1-包年包月，0-按量计费
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Integer PayMode;
 
     /**
      * 获取项目ID
@@ -150,32 +157,32 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为 0
-     * @return Offset 偏移量，默认为 0
+     * 获取页数，默认为 0
+     * @return Offset 页数，默认为 0
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量，默认为 0
-     * @param Offset 偏移量，默认为 0
+     * 设置页数，默认为 0
+     * @param Offset 页数，默认为 0
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取返回数量，默认为50
-     * @return Limit 返回数量，默认为50
+     * 获取页大小，默认为50
+     * @return Limit 页大小，默认为50
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置返回数量，默认为50
-     * @param Limit 返回数量，默认为50
+     * 设置页大小，默认为50
+     * @param Limit 页大小，默认为50
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;
@@ -198,6 +205,22 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取付费类型检索 1-包年包月，0-按量计费
+     * @return PayMode 付费类型检索 1-包年包月，0-按量计费
+     */
+    public Integer getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * 设置付费类型检索 1-包年包月，0-按量计费
+     * @param PayMode 付费类型检索 1-包年包月，0-按量计费
+     */
+    public void setPayMode(Integer PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -206,6 +229,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

@@ -191,6 +191,48 @@ public class DBInstance  extends AbstractModel{
     private String BackupTime;
 
     /**
+    * 实例付费模式， 0-按量计费，1-包年包月
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Integer PayMode;
+
+    /**
+    * 实例唯一UID
+    */
+    @SerializedName("Uid")
+    @Expose
+    private String Uid;
+
+    /**
+    * 实例cpu核心数
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Integer Cpu;
+
+    /**
+    * 实例版本代号
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * 物理机代号
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 计费ID
+    */
+    @SerializedName("Pid")
+    @Expose
+    private Integer Pid;
+
+    /**
      * 获取实例ID
      * @return InstanceId 实例ID
      */
@@ -575,6 +617,102 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
+     * 获取实例付费模式， 0-按量计费，1-包年包月
+     * @return PayMode 实例付费模式， 0-按量计费，1-包年包月
+     */
+    public Integer getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * 设置实例付费模式， 0-按量计费，1-包年包月
+     * @param PayMode 实例付费模式， 0-按量计费，1-包年包月
+     */
+    public void setPayMode(Integer PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * 获取实例唯一UID
+     * @return Uid 实例唯一UID
+     */
+    public String getUid() {
+        return this.Uid;
+    }
+
+    /**
+     * 设置实例唯一UID
+     * @param Uid 实例唯一UID
+     */
+    public void setUid(String Uid) {
+        this.Uid = Uid;
+    }
+
+    /**
+     * 获取实例cpu核心数
+     * @return Cpu 实例cpu核心数
+     */
+    public Integer getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * 设置实例cpu核心数
+     * @param Cpu 实例cpu核心数
+     */
+    public void setCpu(Integer Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * 获取实例版本代号
+     * @return Version 实例版本代号
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * 设置实例版本代号
+     * @param Version 实例版本代号
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * 获取物理机代号
+     * @return Type 物理机代号
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * 设置物理机代号
+     * @param Type 物理机代号
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * 获取计费ID
+     * @return Pid 计费ID
+     */
+    public Integer getPid() {
+        return this.Pid;
+    }
+
+    /**
+     * 设置计费ID
+     * @param Pid 计费ID
+     */
+    public void setPid(Integer Pid) {
+        this.Pid = Pid;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -602,6 +740,12 @@ public class DBInstance  extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "BackupTime", this.BackupTime);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "Uid", this.Uid);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Pid", this.Pid);
 
     }
 }
