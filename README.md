@@ -80,7 +80,16 @@ public class DescribeZones
 
 ## 代理
 
-目前 Java SDK 不支持指定代理，只能读取系统的代理。您可以在代码中请求发起前设置：
+指定代理访问，目前仅支持 HTTP 代理：
+
+```
+HttpProfile httpProfile = new HttpProfile();
+httpProfile.setEndpoint("cvm.tencentcloudapi.com");
+httpProfile.setProxyHost("真实代理ip");
+httpProfile.setProxyPort(真实代理端口);
+```
+
+或者设置系统代理，您可以在代码中请求发起前设置：
 
 ```
 System.setProperty("https.proxyHost", "真实代理ip");

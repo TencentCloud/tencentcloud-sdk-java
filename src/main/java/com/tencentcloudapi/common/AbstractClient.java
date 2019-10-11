@@ -34,12 +34,17 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
 import java.lang.Math;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
 import java.net.URLEncoder;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
+import com.squareup.okhttp.Authenticator;
+import com.squareup.okhttp.Credentials;
 import com.squareup.okhttp.Headers;
 import com.squareup.okhttp.Headers.Builder;
+import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.http.HttpConnection;
@@ -200,6 +205,7 @@ abstract public class AbstractClient {
 
         HttpConnection conn = new HttpConnection(this.profile.getHttpProfile().getConnTimeout(),
                 this.profile.getHttpProfile().getReadTimeout(), this.profile.getHttpProfile().getWriteTimeout());
+        this.trySetProxy(conn);
         String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
         Builder hb = new Headers.Builder();
         hb.add("Content-Type", contentType).add("Host", endpoint).add("Authorization", authorization)
@@ -237,6 +243,35 @@ abstract public class AbstractClient {
                     errResp.response.requestId);
         }
         return respbody;
+    }
+
+    private void trySetProxy(HttpConnection conn) {
+        String host = this.profile.getHttpProfile().getProxyHost();
+        int port = this.profile.getHttpProfile().getProxyPort();
+
+        if (host == null || host.isEmpty()) {
+            return;
+        }
+        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
+        conn.setProxy(proxy);
+
+        final String username = this.profile.getHttpProfile().getProxyUsername();
+        final String password = this.profile.getHttpProfile().getProxyPassword();
+        if (username == null || username.isEmpty()) {
+            return;
+        }
+        conn.setAuthenticator(new Authenticator() {
+            @Override
+            public Request authenticate(Proxy proxy, Response response) throws IOException {
+                String credential = Credentials.basic(username, password);
+                return response.request().newBuilder().header("Proxy-Authorization", credential).build();
+            }
+
+            @Override
+            public Request authenticateProxy(Proxy proxy, Response response) throws IOException {
+                return authenticate(proxy, response);
+            }
+        });
     }
 
     protected String internalRequest(AbstractModel request, String actionName) throws TencentCloudSDKException {
@@ -305,6 +340,7 @@ abstract public class AbstractClient {
                 this.profile.getHttpProfile().getConnTimeout(),
                 this.profile.getHttpProfile().getReadTimeout(),
                 this.profile.getHttpProfile().getWriteTimeout());
+        this.trySetProxy(conn);
         String reqMethod = this.profile.getHttpProfile().getReqMethod();
         String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
         if (reqMethod.equals(HttpProfile.REQ_GET)) {
@@ -379,6 +415,7 @@ abstract public class AbstractClient {
                 this.profile.getHttpProfile().getConnTimeout(),
                 this.profile.getHttpProfile().getReadTimeout(),
                 this.profile.getHttpProfile().getWriteTimeout());
+        this.trySetProxy(conn);
         String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
         Builder hb = new Headers.Builder();
         hb.add("Content-Type", contentType)

@@ -21,12 +21,14 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import com.squareup.okhttp.Authenticator;
 import com.squareup.okhttp.Headers;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.RequestBody;
 
 import java.util.concurrent.TimeUnit;
-import java.io.IOException;;
+import java.io.IOException;
+import java.net.Proxy;;
 
 /**
  * http连接类
@@ -40,9 +42,15 @@ public class HttpConnection {
     	this.client.setConnectTimeout(connTimeout, TimeUnit.SECONDS);
     	this.client.setReadTimeout(readTimeout, TimeUnit.SECONDS);
     	this.client.setWriteTimeout(writeTimeout, TimeUnit.SECONDS);
-    	
     }
     
+    public void setProxy(Proxy proxy) {
+        this.client.setProxy(proxy);
+    }
+    
+    public void setAuthenticator(Authenticator authenticator) {
+        this.client.setAuthenticator(authenticator);
+    }
     
     public Response doRequest(Request request) throws TencentCloudSDKException {
     	Response response = null;

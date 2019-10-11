@@ -77,6 +77,25 @@ public class HttpProfile {
 	 */
 	private int connTimeout;
 	
+	/**
+	 * http proxy host
+	 */
+	private String proxyHost;
+	
+	/**
+	 * http proxy port
+	 */
+	private int proxyPort;
+	
+	/**
+	 * http proxy user name
+	 */
+	private String proxyUsername;
+	
+	/**
+	 * http proxy password
+	 */
+	private String proxyPassword;
 	
 	public HttpProfile() {
 		this.reqMethod = HttpProfile.REQ_POST;
@@ -182,4 +201,36 @@ public class HttpProfile {
 	public String getProtocol() {
 		return this.protocol;
 	}
+
+    public String getProxyHost() {
+        return proxyHost;
+    }
+
+    public void setProxyHost(String proxyHost) {
+        this.proxyHost = proxyHost;
+    }
+
+    public int getProxyPort() {
+        return proxyPort;
+    }
+
+    public void setProxyPort(int proxyPort) {
+        this.proxyPort = proxyPort;
+    }
+
+    public String getProxyUsername() {
+        return proxyUsername;
+    }
+
+    public void setProxyUsername(String proxyUsername) {
+        this.proxyUsername = proxyUsername;
+    }
+
+    public String getProxyPassword() {
+        return proxyPassword;
+    }
+
+    public void setProxyPassword(String proxyPassword) {
+        this.proxyPassword = proxyPassword;
+    }
 }
