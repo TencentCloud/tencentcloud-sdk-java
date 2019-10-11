@@ -39,16 +39,14 @@ public class WorkflowTask  extends AbstractModel{
     private String Status;
 
     /**
-    * 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+    * 已弃用，请使用各个具体任务的 ErrCode。
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 错误信息。
+    * 已弃用，请使用各个具体任务的 Message。
     */
     @SerializedName("Message")
     @Expose
@@ -118,40 +116,32 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 获取错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
-     * @return ErrCode 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+     * 获取已弃用，请使用各个具体任务的 ErrCode。
+     * @return ErrCode 已弃用，请使用各个具体任务的 ErrCode。
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * 设置错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
-     * @param ErrCode 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+     * 设置已弃用，请使用各个具体任务的 ErrCode。
+     * @param ErrCode 已弃用，请使用各个具体任务的 ErrCode。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * 获取错误信息。
-     * @return Message 错误信息。
+     * 获取已弃用，请使用各个具体任务的 Message。
+     * @return Message 已弃用，请使用各个具体任务的 Message。
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * 设置错误信息。
-     * @param Message 错误信息。
+     * 设置已弃用，请使用各个具体任务的 Message。
+     * @param Message 已弃用，请使用各个具体任务的 Message。
      */
     public void setMessage(String Message) {
         this.Message = Message;

@@ -193,6 +193,24 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持数学试题内容的识别和结构化输出，包括通用文本解析和小学/初中/高中数学公式解析能力（包括91种题型，180种符号）。
+     * @param req EduPaperOCRRequest
+     * @return EduPaperOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public EduPaperOCRResponse EduPaperOCR(EduPaperOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EduPaperOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EduPaperOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EduPaperOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持图像英文文字的检测和识别，返回文字框位置与文字内容。支持多场景、任意版面下的英文、字母、数字和常见字符的识别，同时覆盖英文印刷体和英文手写体识别。
      * @param req EnglishOCRRequest
      * @return EnglishOCRResponse
@@ -211,6 +229,63 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持不动产权证关键字段的识别，包括使用期限、面积、用途、权利性质、权利类型、坐落、共有情况、权利人、权利其他状况等。
+
+
+
+     * @param req EstateCertOCRRequest
+     * @return EstateCertOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public EstateCertOCRResponse EstateCertOCR(EstateCertOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EstateCertOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EstateCertOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EstateCertOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持常见银行票据的自动分类和识别。整单识别包括支票（含现金支票、普通支票、转账支票），承兑汇票（含银行承兑汇票、商业承兑汇票）以及进账单等，适用于中国人民银行印发的 2010 版银行票据凭证版式（银发[2010]299 号）。
+     * @param req FinanBillOCRRequest
+     * @return FinanBillOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public FinanBillOCRResponse FinanBillOCR(FinanBillOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FinanBillOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FinanBillOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FinanBillOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持常见银行票据的自动分类和识别。切片识别包括金融行业常见票据的重要切片字段识别，包括金额、账号、日期、凭证号码等。（金融票据切片：金融票据中待识别字段及其周围局部区域的裁剪图像。）
+     * @param req FinanBillSliceOCRRequest
+     * @return FinanBillSliceOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public FinanBillSliceOCRResponse FinanBillSliceOCR(FinanBillSliceOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FinanBillSliceOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FinanBillSliceOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FinanBillSliceOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持机票行程单关键字段的识别，包括姓名、身份证件号码、航班号、票价 、合计、电子客票号码、填开日期等。
      * @param req FlightInvoiceOCRRequest
      * @return FlightInvoiceOCRResponse
@@ -222,6 +297,24 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<FlightInvoiceOCRResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "FlightInvoiceOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持识别主流初高中数学符号和公式，返回公式的 Latex 格式文本。
+     * @param req FormulaOCRRequest
+     * @return FormulaOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public FormulaOCRResponse FormulaOCR(FormulaOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FormulaOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FormulaOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FormulaOCR"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -330,6 +423,24 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<IDCardOCRResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "IDCardOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持事业单位法人证书关键字段识别，包括注册号、有效期、住所、名称、法定代表人等。
+     * @param req InstitutionOCRRequest
+     * @return InstitutionOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstitutionOCRResponse InstitutionOCR(InstitutionOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InstitutionOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InstitutionOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InstitutionOCR"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -448,6 +559,24 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持组织机构代码证关键字段的识别，包括代码、有效期、地址、机构名称等。
+     * @param req OrgCodeCertOCRRequest
+     * @return OrgCodeCertOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public OrgCodeCertOCRResponse OrgCodeCertOCR(OrgCodeCertOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OrgCodeCertOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OrgCodeCertOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OrgCodeCertOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持中国大陆护照、中国香港护照、泰国护照及其他国外护照个人资料页多个字段的检测与识别。其中中国大陆居民护照识别，已支持字段包括英文姓名、中文姓名、国家码、护照号、出生地、出生日期、国籍英文、性别英文、有效期、签发地点英文、签发日期、持证人签名、护照机读码（MRZ码）等。中国香港护照、泰国护照及其他国外护照识别，已支持字段包括英文姓名、国籍、签发日期、性别、护照号码等。
      * @param req PassportOCRRequest
      * @return PassportOCRResponse
@@ -477,6 +606,25 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PermitOCRResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PermitOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持条形码和二维码的识别（包括 DataMatrix 和 PDF417）。
+本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+     * @param req QrcodeOCRRequest
+     * @return QrcodeOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public QrcodeOCRResponse QrcodeOCR(QrcodeOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QrcodeOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QrcodeOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QrcodeOCR"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -658,6 +806,24 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<VehicleLicenseOCRResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "VehicleLicenseOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持国内机动车登记证书主要字段的结构化识别，包括机动车所有人、身份证明名称、号码、车辆型号、车辆识别代号、发动机号、制造厂名称等。
+     * @param req VehicleRegCertOCRRequest
+     * @return VehicleRegCertOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public VehicleRegCertOCRResponse VehicleRegCertOCR(VehicleRegCertOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VehicleRegCertOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<VehicleRegCertOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "VehicleRegCertOCR"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -45,6 +45,13 @@ public class ImageData  extends AbstractModel{
     private Long EvilType;
 
     /**
+    * 图片二维码详情
+    */
+    @SerializedName("CodeDetect")
+    @Expose
+    private CodeDetect CodeDetect;
+
+    /**
     * 图片性感详情
     */
     @SerializedName("HotDetect")
@@ -155,6 +162,22 @@ public class ImageData  extends AbstractModel{
      */
     public void setEvilType(Long EvilType) {
         this.EvilType = EvilType;
+    }
+
+    /**
+     * 获取图片二维码详情
+     * @return CodeDetect 图片二维码详情
+     */
+    public CodeDetect getCodeDetect() {
+        return this.CodeDetect;
+    }
+
+    /**
+     * 设置图片二维码详情
+     * @param CodeDetect 图片二维码详情
+     */
+    public void setCodeDetect(CodeDetect CodeDetect) {
+        this.CodeDetect = CodeDetect;
     }
 
     /**
@@ -275,6 +298,7 @@ public class ImageData  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
+        this.setParamObj(map, prefix + "CodeDetect.", this.CodeDetect);
         this.setParamObj(map, prefix + "HotDetect.", this.HotDetect);
         this.setParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
         this.setParamObj(map, prefix + "OCRDetect.", this.OCRDetect);

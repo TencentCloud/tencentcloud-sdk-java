@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class VideoModerationRequest  extends AbstractModel{
 
     /**
-    * 回调Url
+    * 回调URL，音频识别结果将以POST请求方式发送到此地址
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -51,16 +51,16 @@ public class VideoModerationRequest  extends AbstractModel{
     private String FileUrl;
 
     /**
-     * 获取回调Url
-     * @return CallbackUrl 回调Url
+     * 获取回调URL，音频识别结果将以POST请求方式发送到此地址
+     * @return CallbackUrl 回调URL，音频识别结果将以POST请求方式发送到此地址
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * 设置回调Url
-     * @param CallbackUrl 回调Url
+     * 设置回调URL，音频识别结果将以POST请求方式发送到此地址
+     * @param CallbackUrl 回调URL，音频识别结果将以POST请求方式发送到此地址
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;

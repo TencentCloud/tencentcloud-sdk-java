@@ -292,14 +292,6 @@ OPEN：公网属性， INTERNAL：内网属性。
     private ExtraInfo ExtraInfo;
 
     /**
-    * 是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("LoadBalancerPassToTarget")
-    @Expose
-    private Boolean LoadBalancerPassToTarget;
-
-    /**
      * 获取负载均衡实例 ID。
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -968,26 +960,6 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return LoadBalancerPassToTarget 是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Boolean getLoadBalancerPassToTarget() {
-        return this.LoadBalancerPassToTarget;
-    }
-
-    /**
-     * 设置是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoadBalancerPassToTarget 是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
-        this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1025,7 +997,6 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
         this.setParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
         this.setParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
-        this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
 
     }
 }

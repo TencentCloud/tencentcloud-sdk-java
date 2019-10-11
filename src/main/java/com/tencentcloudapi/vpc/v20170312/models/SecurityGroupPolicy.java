@@ -86,6 +86,13 @@ public class SecurityGroupPolicy  extends AbstractModel{
     private String PolicyDescription;
 
     /**
+    * 安全组最近修改时间。
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
      * 获取安全组规则索引号。
      * @return PolicyIndex 安全组规则索引号。
      */
@@ -230,6 +237,22 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
+     * 获取安全组最近修改时间。
+     * @return ModifyTime 安全组最近修改时间。
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * 设置安全组最近修改时间。
+     * @param ModifyTime 安全组最近修改时间。
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
         this.setParamObj(map, prefix + "AddressTemplate.", this.AddressTemplate);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "PolicyDescription", this.PolicyDescription);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
 
     }
 }

@@ -30,7 +30,10 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     private String Status;
 
     /**
-    * 错误码，0：成功，其他值：失败。
+    * 错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -75,16 +78,28 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 获取错误码，0：成功，其他值：失败。
-     * @return ErrCode 错误码，0：成功，其他值：失败。
+     * 获取错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
+     * @return ErrCode 错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * 设置错误码，0：成功，其他值：失败。
-     * @param ErrCode 错误码，0：成功，其他值：失败。
+     * 设置错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
+     * @param ErrCode 错误码，0 表示成功，其他值表示失败：
+<li>40000：输入参数不合法，请检查输入参数；</li>
+<li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+<li>70000：内部服务错误，建议重试。</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;

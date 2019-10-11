@@ -62,15 +62,23 @@ SeqID | String | 请求seqId唯一标识
 EvilFlag | Integer | 是否恶意：0正常，1可疑（Homology模块下：0未匹配到，1恶意，2白样本）
 EvilType | Integer | 恶意类型：100正常，20001政治，20002色情，20007谩骂
 Duration | Integer | 音频时长（单位：毫秒）
-PornDetect | | 音频智能鉴黄
-PolityDetect | | 音频涉政识别
-CurseDetect | | 音频谩骂识别
-Homology | | 相似度识别
+PornDetect | [AudioDetectData](#ADD) | 音频智能鉴黄
+PolityDetect | [AudioDetectData](#ADD)| 音频涉政识别
+CurseDetect | [AudioDetectData](#ADD) | 音频谩骂识别
+CustomizedDetect | [AudioDetectData](#ADD) | 自定义识别
+Homology | [AudioDetectData](#ADD) | 相似度识别
+
+
+<span id="ADD"> AudioDetectData </span>
+
+参数名 | 类型 | 描述
+-|-|-
 HitFlag | Integer | 0正常，1可疑
 Score | Integer | 判断分值
+EvilType | Integer | 恶意类型：100正常，20001政治，20002色情，20007谩骂
 Keywords | Array of String | 关键词明细
-StartTime | Array of String | 恶意开始时间
-EndTime | Array of String | 恶意结束时间
+StartTime | Array of String | 恶意开始时间（Homology、CustomizedDetect无此字段）
+EndTime | Array of String | 恶意结束时间（Homology、CustomizedDetect无此字段）
 SeedUrl | String | 命中的种子URL
      * @param req AudioModerationRequest
      * @return AudioModerationResponse
@@ -264,11 +272,19 @@ SeqID | String | 请求seqId唯一标识
 EvilFlag | Integer | 是否恶意：0正常，1可疑（Homology模块下：0未匹配到，1恶意，2白样本）
 EvilType | Integer | 恶意类型：100正常，20001政治，20002色情
 Duration | Integer | 视频时长（单位：秒）
-PornDetect |  | 视频智能鉴黄
-PolityDetect | | 视频涉政识别
-Homology | | 相似度识别
+PornDetect | [VideoDetectData](#VDD) | 视频智能鉴黄
+PolityDetect | [VideoDetectData](#VDD) | 视频涉政识别
+Homology | [VideoDetectData](#VDD) | 相似度识别
+
+
+<span id="VDD">VideoDetectData</span>
+
+参数名 | 类型 | 描述
+-|-|-
 HitFlag | Integer  | 0正常，1可疑
 Score | Integer | 判断分值
+EvilType | Integer | 恶意类型：100正常，20001政治，20002色情
+Keywords | Array of String | 关键词明细
 SeedUrl | String | 命中的种子URL
      * @param req VideoModerationRequest
      * @return VideoModerationResponse

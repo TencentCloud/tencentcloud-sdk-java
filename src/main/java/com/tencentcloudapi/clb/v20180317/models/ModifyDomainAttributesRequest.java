@@ -30,7 +30,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 应用型负载均衡监听器 ID
+    * 负载均衡监听器 ID
     */
     @SerializedName("ListenerId")
     @Expose
@@ -88,16 +88,16 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用型负载均衡监听器 ID
-     * @return ListenerId 应用型负载均衡监听器 ID
+     * 获取负载均衡监听器 ID
+     * @return ListenerId 负载均衡监听器 ID
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * 设置应用型负载均衡监听器 ID
-     * @param ListenerId 应用型负载均衡监听器 ID
+     * 设置负载均衡监听器 ID
+     * @param ListenerId 负载均衡监听器 ID
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
