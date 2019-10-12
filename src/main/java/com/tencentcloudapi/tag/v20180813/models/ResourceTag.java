@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourcesTag  extends AbstractModel{
+public class ResourceTag  extends AbstractModel{
 
     /**
     * 资源所在地域

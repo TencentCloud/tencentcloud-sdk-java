@@ -103,6 +103,24 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建配置项
+     * @param req CreateConfigRequest
+     * @return CreateConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConfigResponse CreateConfig(CreateConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建容器部署组
      * @param req CreateContainGroupRequest
      * @return CreateContainGroupResponse
@@ -175,6 +193,24 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建公共配置项
+     * @param req CreatePublicConfigRequest
+     * @return CreatePublicConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePublicConfigResponse CreatePublicConfig(CreatePublicConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePublicConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePublicConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePublicConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除应用
      * @param req DeleteApplicationRequest
      * @return DeleteApplicationResponse
@@ -186,6 +222,24 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteApplication"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除配置项
+     * @param req DeleteConfigRequest
+     * @return DeleteConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConfigResponse DeleteConfig(DeleteConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -302,6 +356,24 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *删除公共配置项
+     * @param req DeletePublicConfigRequest
+     * @return DeletePublicConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePublicConfigResponse DeletePublicConfig(DeletePublicConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePublicConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePublicConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePublicConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *部署容器应用
      * @param req DeployContainerGroupRequest
      * @return DeployContainerGroupResponse
@@ -403,6 +475,96 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询配置
+     * @param req DescribeConfigRequest
+     * @return DescribeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigResponse DescribeConfig(DescribeConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询配置发布历史
+     * @param req DescribeConfigReleaseLogsRequest
+     * @return DescribeConfigReleaseLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigReleaseLogsResponse DescribeConfigReleaseLogs(DescribeConfigReleaseLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConfigReleaseLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConfigReleaseLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeConfigReleaseLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询配置发布信息
+     * @param req DescribeConfigReleasesRequest
+     * @return DescribeConfigReleasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigReleasesResponse DescribeConfigReleases(DescribeConfigReleasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConfigReleasesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConfigReleasesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeConfigReleases"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询配置汇总列表
+     * @param req DescribeConfigSummaryRequest
+     * @return DescribeConfigSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigSummaryResponse DescribeConfigSummary(DescribeConfigSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConfigSummaryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConfigSummaryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeConfigSummary"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询配置项列表
+     * @param req DescribeConfigsRequest
+     * @return DescribeConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigsResponse DescribeConfigs(DescribeConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConfigsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConfigsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeConfigs"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -584,6 +746,114 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribePkgsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribePkgs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询公共配置（单条）
+     * @param req DescribePublicConfigRequest
+     * @return DescribePublicConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicConfigResponse DescribePublicConfig(DescribePublicConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublicConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePublicConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePublicConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询公共配置发布历史
+     * @param req DescribePublicConfigReleaseLogsRequest
+     * @return DescribePublicConfigReleaseLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicConfigReleaseLogsResponse DescribePublicConfigReleaseLogs(DescribePublicConfigReleaseLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublicConfigReleaseLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePublicConfigReleaseLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePublicConfigReleaseLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询公共配置发布信息
+     * @param req DescribePublicConfigReleasesRequest
+     * @return DescribePublicConfigReleasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicConfigReleasesResponse DescribePublicConfigReleases(DescribePublicConfigReleasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublicConfigReleasesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePublicConfigReleasesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePublicConfigReleases"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询公共配置汇总列表
+     * @param req DescribePublicConfigSummaryRequest
+     * @return DescribePublicConfigSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicConfigSummaryResponse DescribePublicConfigSummary(DescribePublicConfigSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublicConfigSummaryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePublicConfigSummaryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePublicConfigSummary"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询公共配置项列表
+     * @param req DescribePublicConfigsRequest
+     * @return DescribePublicConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicConfigsResponse DescribePublicConfigs(DescribePublicConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublicConfigsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePublicConfigsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePublicConfigs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询group发布的配置
+     * @param req DescribeReleasedConfigRequest
+     * @return DescribeReleasedConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReleasedConfigResponse DescribeReleasedConfig(DescribeReleasedConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReleasedConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReleasedConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReleasedConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -773,6 +1043,42 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *发布配置
+     * @param req ReleaseConfigRequest
+     * @return ReleaseConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseConfigResponse ReleaseConfig(ReleaseConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReleaseConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *发布公共配置
+     * @param req ReleasePublicConfigRequest
+     * @return ReleasePublicConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleasePublicConfigResponse ReleasePublicConfig(ReleasePublicConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleasePublicConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleasePublicConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReleasePublicConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *从 TSF 集群中批量移除云主机节点
      * @param req RemoveInstancesRequest
      * @return RemoveInstancesResponse
@@ -784,6 +1090,60 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<RemoveInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RemoveInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *撤回已发布的配置
+     * @param req RevocationConfigRequest
+     * @return RevocationConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevocationConfigResponse RevocationConfig(RevocationConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RevocationConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RevocationConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RevocationConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *撤回已发布的公共配置
+     * @param req RevocationPublicConfigRequest
+     * @return RevocationPublicConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevocationPublicConfigResponse RevocationPublicConfig(RevocationPublicConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RevocationPublicConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RevocationPublicConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RevocationPublicConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *回滚配置
+     * @param req RollbackConfigRequest
+     * @return RollbackConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollbackConfigResponse RollbackConfig(RollbackConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RollbackConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RollbackConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RollbackConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

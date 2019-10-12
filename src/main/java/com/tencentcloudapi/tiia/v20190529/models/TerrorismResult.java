@@ -57,9 +57,9 @@ Type为LABEL时：
 86到91，Suggestion建议为REVIEW
 91到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
     */
     @SerializedName("Confidence")
     @Expose
@@ -169,18 +169,18 @@ Type为LABEL时：
 86到91，Suggestion建议为REVIEW
 91到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
      * @return Confidence 图像涉恐的分数，0-100之间，分数越高涉恐几率越大。
 Type为LABEL时：
 0到86，Suggestion建议为PASS
 86到91，Suggestion建议为REVIEW
 91到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
      */
     public Long getConfidence() {
         return this.Confidence;
@@ -193,18 +193,18 @@ Type为LABEL时：
 86到91，Suggestion建议为REVIEW
 91到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
      * @param Confidence 图像涉恐的分数，0-100之间，分数越高涉恐几率越大。
 Type为LABEL时：
 0到86，Suggestion建议为PASS
 86到91，Suggestion建议为REVIEW
 91到100，Suggestion建议为BLOCK
 Type为FACE时：
-0到55，Suggestion建议为PASS
-55到60，Suggestion建议为REVIEW
-60到100，Suggestion建议为BLOCK
+0到70，Suggestion建议为PASS
+70到80，Suggestion建议为REVIEW
+80到100，Suggestion建议为BLOCK
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;

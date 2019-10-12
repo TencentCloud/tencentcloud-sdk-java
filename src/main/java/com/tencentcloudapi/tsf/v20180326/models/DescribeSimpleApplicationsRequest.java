@@ -65,6 +65,13 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     private String [] ApplicationResourceTypeList;
 
     /**
+    * 通过id和name进行关键词过滤
+    */
+    @SerializedName("SearchWord")
+    @Expose
+    private String SearchWord;
+
+    /**
      * 获取应用ID列表
      * @return ApplicationIdList 应用ID列表
      */
@@ -161,6 +168,22 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取通过id和name进行关键词过滤
+     * @return SearchWord 通过id和name进行关键词过滤
+     */
+    public String getSearchWord() {
+        return this.SearchWord;
+    }
+
+    /**
+     * 设置通过id和name进行关键词过滤
+     * @param SearchWord 通过id和name进行关键词过滤
+     */
+    public void setSearchWord(String SearchWord) {
+        this.SearchWord = SearchWord;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
         this.setParamArraySimple(map, prefix + "ApplicationResourceTypeList.", this.ApplicationResourceTypeList);
+        this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
 
     }
 }

@@ -51,6 +51,13 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     private Long Limit;
 
     /**
+    * 对id和name进行关键词过滤
+    */
+    @SerializedName("SearchWord")
+    @Expose
+    private String SearchWord;
+
+    /**
      * 获取需要查询的集群ID列表，不填或不传入时查询所有内容
      * @return ClusterIdList 需要查询的集群ID列表，不填或不传入时查询所有内容
      */
@@ -115,6 +122,22 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
+     * 获取对id和name进行关键词过滤
+     * @return SearchWord 对id和name进行关键词过滤
+     */
+    public String getSearchWord() {
+        return this.SearchWord;
+    }
+
+    /**
+     * 设置对id和name进行关键词过滤
+     * @param SearchWord 对id和name进行关键词过滤
+     */
+    public void setSearchWord(String SearchWord) {
+        this.SearchWord = SearchWord;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
 
     }
 }

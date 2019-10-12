@@ -65,6 +65,20 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     private String [] NamespaceResourceTypeList;
 
     /**
+    * 通过id和name进行过滤
+    */
+    @SerializedName("SearchWord")
+    @Expose
+    private String SearchWord;
+
+    /**
+    * 查询的命名空间类型列表
+    */
+    @SerializedName("NamespaceTypeList")
+    @Expose
+    private String [] NamespaceTypeList;
+
+    /**
      * 获取命名空间ID列表，不传入时查询全量
      * @return NamespaceIdList 命名空间ID列表，不传入时查询全量
      */
@@ -161,6 +175,38 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取通过id和name进行过滤
+     * @return SearchWord 通过id和name进行过滤
+     */
+    public String getSearchWord() {
+        return this.SearchWord;
+    }
+
+    /**
+     * 设置通过id和name进行过滤
+     * @param SearchWord 通过id和name进行过滤
+     */
+    public void setSearchWord(String SearchWord) {
+        this.SearchWord = SearchWord;
+    }
+
+    /**
+     * 获取查询的命名空间类型列表
+     * @return NamespaceTypeList 查询的命名空间类型列表
+     */
+    public String [] getNamespaceTypeList() {
+        return this.NamespaceTypeList;
+    }
+
+    /**
+     * 设置查询的命名空间类型列表
+     * @param NamespaceTypeList 查询的命名空间类型列表
+     */
+    public void setNamespaceTypeList(String [] NamespaceTypeList) {
+        this.NamespaceTypeList = NamespaceTypeList;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +216,8 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamArraySimple(map, prefix + "NamespaceResourceTypeList.", this.NamespaceResourceTypeList);
+        this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
+        this.setParamArraySimple(map, prefix + "NamespaceTypeList.", this.NamespaceTypeList);
 
     }
 }

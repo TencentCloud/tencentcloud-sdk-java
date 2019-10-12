@@ -191,6 +191,13 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     private TagInfo [] ResourceTags;
 
     /**
+    * 置放群组 ID。
+    */
+    @SerializedName("DeployGroupId")
+    @Expose
+    private String DeployGroupId;
+
+    /**
      * 获取实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @return Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      */
@@ -575,6 +582,22 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取置放群组 ID。
+     * @return DeployGroupId 置放群组 ID。
+     */
+    public String getDeployGroupId() {
+        return this.DeployGroupId;
+    }
+
+    /**
+     * 设置置放群组 ID。
+     * @param DeployGroupId 置放群组 ID。
+     */
+    public void setDeployGroupId(String DeployGroupId) {
+        this.DeployGroupId = DeployGroupId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -602,6 +625,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "RoGroup.", this.RoGroup);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
 
     }
 }

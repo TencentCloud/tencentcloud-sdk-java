@@ -27,7 +27,7 @@ public class DescribeResourcesByTagsRequest  extends AbstractModel{
     */
     @SerializedName("TagFilters")
     @Expose
-    private TagFilters [] TagFilters;
+    private TagFilter [] TagFilters;
 
     /**
     * 创建标签者uin
@@ -82,7 +82,7 @@ public class DescribeResourcesByTagsRequest  extends AbstractModel{
      * 获取标签过滤数组
      * @return TagFilters 标签过滤数组
      */
-    public TagFilters [] getTagFilters() {
+    public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
@@ -90,7 +90,7 @@ public class DescribeResourcesByTagsRequest  extends AbstractModel{
      * 设置标签过滤数组
      * @param TagFilters 标签过滤数组
      */
-    public void setTagFilters(TagFilters [] TagFilters) {
+    public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
     }
 

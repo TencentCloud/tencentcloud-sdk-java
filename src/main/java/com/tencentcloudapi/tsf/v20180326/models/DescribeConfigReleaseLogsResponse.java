@@ -13,43 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tag.v20180813.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourcesByTagsResponse  extends AbstractModel{
+public class DescribeConfigReleaseLogsResponse  extends AbstractModel{
 
     /**
-    * 结果总数
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 数据位移偏量
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
-    * 每页大小
+    * 分页的配置项发布历史列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Limit")
+    @SerializedName("Result")
     @Expose
-    private Long Limit;
-
-    /**
-    * 资源标签
-    */
-    @SerializedName("Rows")
-    @Expose
-    private ResourceTag [] Rows;
+    private TsfPageConfigReleaseLog Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,71 +38,23 @@ public class DescribeResourcesByTagsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取结果总数
-     * @return TotalCount 结果总数
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * 设置结果总数
-     * @param TotalCount 结果总数
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * 获取数据位移偏量
-     * @return Offset 数据位移偏量
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * 设置数据位移偏量
-     * @param Offset 数据位移偏量
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    /**
-     * 获取每页大小
+     * 获取分页的配置项发布历史列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Limit 每页大小
+     * @return Result 分页的配置项发布历史列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getLimit() {
-        return this.Limit;
+    public TsfPageConfigReleaseLog getResult() {
+        return this.Result;
     }
 
     /**
-     * 设置每页大小
+     * 设置分页的配置项发布历史列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Limit 每页大小
+     * @param Result 分页的配置项发布历史列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * 获取资源标签
-     * @return Rows 资源标签
-     */
-    public ResourceTag [] getRows() {
-        return this.Rows;
-    }
-
-    /**
-     * 设置资源标签
-     * @param Rows 资源标签
-     */
-    public void setRows(ResourceTag [] Rows) {
-        this.Rows = Rows;
+    public void setResult(TsfPageConfigReleaseLog Result) {
+        this.Result = Result;
     }
 
     /**
@@ -146,10 +77,7 @@ public class DescribeResourcesByTagsResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamArrayObj(map, prefix + "Rows.", this.Rows);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

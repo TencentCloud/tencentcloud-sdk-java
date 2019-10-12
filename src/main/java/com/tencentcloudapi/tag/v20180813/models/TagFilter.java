@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagFilters  extends AbstractModel{
+public class TagFilter  extends AbstractModel{
 
     /**
     * 标签键

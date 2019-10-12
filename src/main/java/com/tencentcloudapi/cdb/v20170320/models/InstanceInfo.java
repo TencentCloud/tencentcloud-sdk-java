@@ -45,6 +45,7 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
     * 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoVipInfo")
     @Expose
@@ -73,6 +74,7 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
     * 备机信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveInfo")
     @Expose
@@ -108,6 +110,7 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
     * 只读组详细信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoGroups")
     @Expose
@@ -164,6 +167,7 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
     * 主实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterInfo")
     @Expose
@@ -192,6 +196,7 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
     * 灾备实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DrInfo")
     @Expose
@@ -346,7 +351,9 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
      * 获取只读vip信息。单独开通只读实例访问的只读实例才有该字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @return RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public RoVipInfo getRoVipInfo() {
         return this.RoVipInfo;
@@ -354,7 +361,9 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
      * 设置只读vip信息。单独开通只读实例访问的只读实例才有该字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoVipInfo(RoVipInfo RoVipInfo) {
         this.RoVipInfo = RoVipInfo;
@@ -410,7 +419,9 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
      * 获取备机信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return SlaveInfo 备机信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlaveInfo getSlaveInfo() {
         return this.SlaveInfo;
@@ -418,7 +429,9 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
      * 设置备机信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveInfo 备机信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveInfo(SlaveInfo SlaveInfo) {
         this.SlaveInfo = SlaveInfo;
@@ -490,7 +503,9 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
      * 获取只读组详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return RoGroups 只读组详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public RoGroup [] getRoGroups() {
         return this.RoGroups;
@@ -498,7 +513,9 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
      * 设置只读组详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RoGroups 只读组详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoGroups(RoGroup [] RoGroups) {
         this.RoGroups = RoGroups;
@@ -618,7 +635,9 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
      * 获取主实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return MasterInfo 主实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MasterInfo getMasterInfo() {
         return this.MasterInfo;
@@ -626,7 +645,9 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
      * 设置主实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterInfo 主实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterInfo(MasterInfo MasterInfo) {
         this.MasterInfo = MasterInfo;
@@ -682,7 +703,9 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
      * 获取灾备实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @return DrInfo 灾备实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DrInfo [] getDrInfo() {
         return this.DrInfo;
@@ -690,7 +713,9 @@ public class InstanceInfo  extends AbstractModel{
 
     /**
      * 设置灾备实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DrInfo 灾备实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDrInfo(DrInfo [] DrInfo) {
         this.DrInfo = DrInfo;

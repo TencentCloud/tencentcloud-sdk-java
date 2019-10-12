@@ -184,6 +184,13 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     private TagInfo [] ResourceTags;
 
     /**
+    * 置放群组 ID。
+    */
+    @SerializedName("DeployGroupId")
+    @Expose
+    private String DeployGroupId;
+
+    /**
      * 获取实例数量，默认值为 1，最小值 1，最大值为 100。
      * @return GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
@@ -552,6 +559,22 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
+     * 获取置放群组 ID。
+     * @return DeployGroupId 置放群组 ID。
+     */
+    public String getDeployGroupId() {
+        return this.DeployGroupId;
+    }
+
+    /**
+     * 设置置放群组 ID。
+     * @param DeployGroupId 置放群组 ID。
+     */
+    public void setDeployGroupId(String DeployGroupId) {
+        this.DeployGroupId = DeployGroupId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -578,6 +601,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
 
     }
 }

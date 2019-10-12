@@ -13,72 +13,77 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SlaveInfo  extends AbstractModel{
+public class TsfPageConfigRelease  extends AbstractModel{
 
     /**
-    * 第一备机信息
-    */
-    @SerializedName("First")
-    @Expose
-    private SlaveInstanceInfo First;
-
-    /**
-    * 第二备机信息
+    * 总条数
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Second")
+    @SerializedName("TotalCount")
     @Expose
-    private SlaveInstanceInfo Second;
+    private Long TotalCount;
 
     /**
-     * 获取第一备机信息
-     * @return First 第一备机信息
+    * 配置项发布信息数组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Content")
+    @Expose
+    private ConfigRelease [] Content;
+
+    /**
+     * 获取总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TotalCount 总条数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public SlaveInstanceInfo getFirst() {
-        return this.First;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * 设置第一备机信息
-     * @param First 第一备机信息
+     * 设置总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 总条数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFirst(SlaveInstanceInfo First) {
-        this.First = First;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取第二备机信息
+     * 获取配置项发布信息数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Second 第二备机信息
+     * @return Content 配置项发布信息数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public SlaveInstanceInfo getSecond() {
-        return this.Second;
+    public ConfigRelease [] getContent() {
+        return this.Content;
     }
 
     /**
-     * 设置第二备机信息
+     * 设置配置项发布信息数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Second 第二备机信息
+     * @param Content 配置项发布信息数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSecond(SlaveInstanceInfo Second) {
-        this.Second = Second;
+    public void setContent(ConfigRelease [] Content) {
+        this.Content = Content;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "First.", this.First);
-        this.setParamObj(map, prefix + "Second.", this.Second);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Content.", this.Content);
 
     }
 }
