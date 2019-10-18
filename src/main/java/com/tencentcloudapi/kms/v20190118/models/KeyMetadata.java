@@ -51,7 +51,7 @@ public class KeyMetadata  extends AbstractModel{
     private String Description;
 
     /**
-    * CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
+    * CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
     */
     @SerializedName("KeyState")
     @Expose
@@ -65,7 +65,7 @@ public class KeyMetadata  extends AbstractModel{
     private String KeyUsage;
 
     /**
-    * CMK类型，当前为 1 普通类型
+    * CMK类型，2 表示符合FIPS标准，4表示符合国密标准
     */
     @SerializedName("Type")
     @Expose
@@ -106,6 +106,22 @@ public class KeyMetadata  extends AbstractModel{
     @SerializedName("DeletionDate")
     @Expose
     private Long DeletionDate;
+
+    /**
+    * CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Origin")
+    @Expose
+    private String Origin;
+
+    /**
+    * 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValidTo")
+    @Expose
+    private Long ValidTo;
 
     /**
      * 获取CMK的全局唯一标识
@@ -172,16 +188,16 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
-     * @return KeyState CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
+     * 获取CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+     * @return KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
      */
     public String getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * 设置CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
-     * @param KeyState CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
+     * 设置CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+     * @param KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
      */
     public void setKeyState(String KeyState) {
         this.KeyState = KeyState;
@@ -204,16 +220,16 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取CMK类型，当前为 1 普通类型
-     * @return Type CMK类型，当前为 1 普通类型
+     * 获取CMK类型，2 表示符合FIPS标准，4表示符合国密标准
+     * @return Type CMK类型，2 表示符合FIPS标准，4表示符合国密标准
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * 设置CMK类型，当前为 1 普通类型
-     * @param Type CMK类型，当前为 1 普通类型
+     * 设置CMK类型，2 表示符合FIPS标准，4表示符合国密标准
+     * @param Type CMK类型，2 表示符合FIPS标准，4表示符合国密标准
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -304,6 +320,46 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
+     * 获取CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Origin CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrigin() {
+        return this.Origin;
+    }
+
+    /**
+     * 设置CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Origin CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrigin(String Origin) {
+        this.Origin = Origin;
+    }
+
+    /**
+     * 获取在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getValidTo() {
+        return this.ValidTo;
+    }
+
+    /**
+     * 设置在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValidTo(Long ValidTo) {
+        this.ValidTo = ValidTo;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -319,6 +375,8 @@ public class KeyMetadata  extends AbstractModel{
         this.setParamSimple(map, prefix + "Owner", this.Owner);
         this.setParamSimple(map, prefix + "NextRotateTime", this.NextRotateTime);
         this.setParamSimple(map, prefix + "DeletionDate", this.DeletionDate);
+        this.setParamSimple(map, prefix + "Origin", this.Origin);
+        this.setParamSimple(map, prefix + "ValidTo", this.ValidTo);
 
     }
 }

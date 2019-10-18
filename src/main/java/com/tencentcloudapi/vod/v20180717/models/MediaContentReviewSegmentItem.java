@@ -24,7 +24,6 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
     * 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -32,7 +31,6 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
     * 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -40,7 +38,6 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
     * 嫌疑片段涉黄分数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -48,7 +45,6 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
     * 嫌疑片段鉴黄结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -59,7 +55,6 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -68,25 +63,28 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
     /**
     * 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 该字段已废弃，请使用 PicUrlExpireTime。
     */
     @SerializedName("PicUrlExpireTimeStamp")
     @Expose
     private Long PicUrlExpireTimeStamp;
 
     /**
+    * 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    */
+    @SerializedName("PicUrlExpireTime")
+    @Expose
+    private String PicUrlExpireTime;
+
+    /**
      * 获取嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
@@ -94,9 +92,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
      * 设置嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
@@ -104,9 +100,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
      * 获取嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
@@ -114,9 +108,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
      * 设置嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
@@ -124,9 +116,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
      * 获取嫌疑片段涉黄分数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return Confidence 嫌疑片段涉黄分数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -134,9 +124,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
      * 设置嫌疑片段涉黄分数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 嫌疑片段涉黄分数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -144,9 +132,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
      * 获取嫌疑片段鉴黄结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return Label 嫌疑片段鉴黄结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -154,9 +140,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 
     /**
      * 设置嫌疑片段鉴黄结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 嫌疑片段鉴黄结果标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -167,12 +151,10 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @return Suggestion 嫌疑片段鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -183,12 +165,10 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 嫌疑片段鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
@@ -197,10 +177,8 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
     /**
      * 获取嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return Url 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -209,33 +187,43 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
     /**
      * 设置嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return PicUrlExpireTimeStamp 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * 获取该字段已废弃，请使用 PicUrlExpireTime。
+     * @return PicUrlExpireTimeStamp 该字段已废弃，请使用 PicUrlExpireTime。
      */
     public Long getPicUrlExpireTimeStamp() {
         return this.PicUrlExpireTimeStamp;
     }
 
     /**
-     * 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PicUrlExpireTimeStamp 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * 设置该字段已废弃，请使用 PicUrlExpireTime。
+     * @param PicUrlExpireTimeStamp 该字段已废弃，请使用 PicUrlExpireTime。
      */
     public void setPicUrlExpireTimeStamp(Long PicUrlExpireTimeStamp) {
         this.PicUrlExpireTimeStamp = PicUrlExpireTimeStamp;
+    }
+
+    /**
+     * 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @return PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     */
+    public String getPicUrlExpireTime() {
+        return this.PicUrlExpireTime;
+    }
+
+    /**
+     * 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     */
+    public void setPicUrlExpireTime(String PicUrlExpireTime) {
+        this.PicUrlExpireTime = PicUrlExpireTime;
     }
 
     /**
@@ -249,6 +237,7 @@ public class MediaContentReviewSegmentItem  extends AbstractModel{
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "PicUrlExpireTimeStamp", this.PicUrlExpireTimeStamp);
+        this.setParamSimple(map, prefix + "PicUrlExpireTime", this.PicUrlExpireTime);
 
     }
 }

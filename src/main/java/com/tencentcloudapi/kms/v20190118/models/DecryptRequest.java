@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DecryptRequest  extends AbstractModel{
 
     /**
-    * 被加密的密文数据
+    * 待解密的密文数据
     */
     @SerializedName("CiphertextBlob")
     @Expose
@@ -37,16 +37,16 @@ public class DecryptRequest  extends AbstractModel{
     private String EncryptionContext;
 
     /**
-     * 获取被加密的密文数据
-     * @return CiphertextBlob 被加密的密文数据
+     * 获取待解密的密文数据
+     * @return CiphertextBlob 待解密的密文数据
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
     }
 
     /**
-     * 设置被加密的密文数据
-     * @param CiphertextBlob 被加密的密文数据
+     * 设置待解密的密文数据
+     * @param CiphertextBlob 待解密的密文数据
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;

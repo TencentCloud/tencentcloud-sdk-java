@@ -130,6 +130,14 @@ public class AgentAuditedClient  extends AbstractModel{
     private String SalesName;
 
     /**
+    * 代客邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Mail")
+    @Expose
+    private String Mail;
+
+    /**
      * 获取代理商账号ID
      * @return Uin 代理商账号ID
      */
@@ -378,6 +386,26 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
+     * 获取代客邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Mail 代客邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMail() {
+        return this.Mail;
+    }
+
+    /**
+     * 设置代客邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Mail 代客邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMail(String Mail) {
+        this.Mail = Mail;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -396,6 +424,7 @@ public class AgentAuditedClient  extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectType", this.ProjectType);
         this.setParamSimple(map, prefix + "SalesUin", this.SalesUin);
         this.setParamSimple(map, prefix + "SalesName", this.SalesName);
+        this.setParamSimple(map, prefix + "Mail", this.Mail);
 
     }
 }

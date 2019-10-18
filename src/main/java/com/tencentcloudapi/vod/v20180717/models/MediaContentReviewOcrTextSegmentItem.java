@@ -74,6 +74,21 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
     private Long [] AreaCoordSet;
 
     /**
+    * 嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    */
+    @SerializedName("PicUrlExpireTime")
+    @Expose
+    private Long PicUrlExpireTime;
+
+    /**
      * 获取嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @return StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
@@ -206,6 +221,42 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
     }
 
     /**
+     * 获取嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。
+     * @return Url 嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * 设置嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。
+     * @param Url 嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @return PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     */
+    public Long getPicUrlExpireTime() {
+        return this.PicUrlExpireTime;
+    }
+
+    /**
+     * 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     */
+    public void setPicUrlExpireTime(Long PicUrlExpireTime) {
+        this.PicUrlExpireTime = PicUrlExpireTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -215,6 +266,8 @@ public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamArraySimple(map, prefix + "KeywordSet.", this.KeywordSet);
         this.setParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "PicUrlExpireTime", this.PicUrlExpireTime);
 
     }
 }

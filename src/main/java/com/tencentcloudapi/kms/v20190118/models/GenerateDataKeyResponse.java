@@ -37,7 +37,7 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     private String Plaintext;
 
     /**
-    * DataKey加密后的密文，用户需要自行保存密文
+    * DataKey加密后经过base64编码的密文，用户需要自行保存密文
     */
     @SerializedName("CiphertextBlob")
     @Expose
@@ -83,16 +83,16 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取DataKey加密后的密文，用户需要自行保存密文
-     * @return CiphertextBlob DataKey加密后的密文，用户需要自行保存密文
+     * 获取DataKey加密后经过base64编码的密文，用户需要自行保存密文
+     * @return CiphertextBlob DataKey加密后经过base64编码的密文，用户需要自行保存密文
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
     }
 
     /**
-     * 设置DataKey加密后的密文，用户需要自行保存密文
-     * @param CiphertextBlob DataKey加密后的密文，用户需要自行保存密文
+     * 设置DataKey加密后经过base64编码的密文，用户需要自行保存密文
+     * @param CiphertextBlob DataKey加密后经过base64编码的密文，用户需要自行保存密文
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;

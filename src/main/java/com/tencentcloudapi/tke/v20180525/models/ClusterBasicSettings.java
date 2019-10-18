@@ -79,6 +79,13 @@ public class ClusterBasicSettings  extends AbstractModel{
     private String OsCustomizeType;
 
     /**
+    * 是否开启节点的默认安全组(默认: 否，Aphla特性)
+    */
+    @SerializedName("NeedWorkSecurityGroup")
+    @Expose
+    private Boolean NeedWorkSecurityGroup;
+
+    /**
      * 获取集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      * @return ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      */
@@ -207,6 +214,22 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
+     * 获取是否开启节点的默认安全组(默认: 否，Aphla特性)
+     * @return NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Aphla特性)
+     */
+    public Boolean getNeedWorkSecurityGroup() {
+        return this.NeedWorkSecurityGroup;
+    }
+
+    /**
+     * 设置是否开启节点的默认安全组(默认: 否，Aphla特性)
+     * @param NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Aphla特性)
+     */
+    public void setNeedWorkSecurityGroup(Boolean NeedWorkSecurityGroup) {
+        this.NeedWorkSecurityGroup = NeedWorkSecurityGroup;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class ClusterBasicSettings  extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+        this.setParamSimple(map, prefix + "NeedWorkSecurityGroup", this.NeedWorkSecurityGroup);
 
     }
 }

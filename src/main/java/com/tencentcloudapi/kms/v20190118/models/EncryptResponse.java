@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EncryptResponse  extends AbstractModel{
 
     /**
-    * 加密后的密文
+    * 加密后经过base64编码的密文
     */
     @SerializedName("CiphertextBlob")
     @Expose
@@ -44,16 +44,16 @@ public class EncryptResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取加密后的密文
-     * @return CiphertextBlob 加密后的密文
+     * 获取加密后经过base64编码的密文
+     * @return CiphertextBlob 加密后经过base64编码的密文
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
     }
 
     /**
-     * 设置加密后的密文
-     * @param CiphertextBlob 加密后的密文
+     * 设置加密后经过base64编码的密文
+     * @param CiphertextBlob 加密后经过base64编码的密文
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;

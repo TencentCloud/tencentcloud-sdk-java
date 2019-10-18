@@ -51,6 +51,13 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     private Integer Unschedulable;
 
     /**
+    * 节点Label数组
+    */
+    @SerializedName("Labels")
+    @Expose
+    private Label [] Labels;
+
+    /**
      * 获取数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
      * @return MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
      */
@@ -115,6 +122,22 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
+     * 获取节点Label数组
+     * @return Labels 节点Label数组
+     */
+    public Label [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * 设置节点Label数组
+     * @param Labels 节点Label数组
+     */
+    public void setLabels(Label [] Labels) {
+        this.Labels = Labels;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
         this.setParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
         this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
+        this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
 
     }
 }

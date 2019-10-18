@@ -94,6 +94,13 @@ public class Cluster  extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
+    * 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+    */
+    @SerializedName("ClusterStatus")
+    @Expose
+    private String ClusterStatus;
+
+    /**
      * 获取集群ID
      * @return ClusterId 集群ID
      */
@@ -258,6 +265,22 @@ public class Cluster  extends AbstractModel{
     }
 
     /**
+     * 获取集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+     * @return ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+     */
+    public String getClusterStatus() {
+        return this.ClusterStatus;
+    }
+
+    /**
+     * 设置集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+     * @param ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+     */
+    public void setClusterStatus(String ClusterStatus) {
+        this.ClusterStatus = ClusterStatus;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -271,6 +294,7 @@ public class Cluster  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterNodeNum", this.ClusterNodeNum);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
 
     }
 }

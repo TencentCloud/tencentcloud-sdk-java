@@ -58,7 +58,7 @@ public class SrcInfo  extends AbstractModel{
     private String Password;
 
     /**
-    * 阿里云RDS实例ID。源库是阿里云RDS5.6适用
+    * 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
     */
     @SerializedName("RdsInstanceId")
     @Expose
@@ -127,6 +127,13 @@ public class SrcInfo  extends AbstractModel{
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
+
+    /**
+    * 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+    */
+    @SerializedName("EngineVersion")
+    @Expose
+    private String EngineVersion;
 
     /**
      * 获取阿里云AccessKey。源库是阿里云RDS5.6适用
@@ -209,16 +216,16 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取阿里云RDS实例ID。源库是阿里云RDS5.6适用
-     * @return RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6适用
+     * 获取阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
+     * @return RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
      */
     public String getRdsInstanceId() {
         return this.RdsInstanceId;
     }
 
     /**
-     * 设置阿里云RDS实例ID。源库是阿里云RDS5.6适用
-     * @param RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6适用
+     * 设置阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
+     * @param RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
      */
     public void setRdsInstanceId(String RdsInstanceId) {
         this.RdsInstanceId = RdsInstanceId;
@@ -373,6 +380,22 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
+     * 获取数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+     * @return EngineVersion 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+     */
+    public String getEngineVersion() {
+        return this.EngineVersion;
+    }
+
+    /**
+     * 设置数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+     * @param EngineVersion 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+     */
+    public void setEngineVersion(String EngineVersion) {
+        this.EngineVersion = EngineVersion;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -391,6 +414,7 @@ public class SrcInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Supplier", this.Supplier);
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
+        this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
 
     }
 }

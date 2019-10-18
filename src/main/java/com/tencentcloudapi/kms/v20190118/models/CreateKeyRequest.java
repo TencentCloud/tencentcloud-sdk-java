@@ -44,7 +44,7 @@ public class CreateKeyRequest  extends AbstractModel{
     private String KeyUsage;
 
     /**
-    * 指定key类型，1为当前地域默认类型，默认为1，且当前只支持该类型
+    * 指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
     */
     @SerializedName("Type")
     @Expose
@@ -99,16 +99,16 @@ public class CreateKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定key类型，1为当前地域默认类型，默认为1，且当前只支持该类型
-     * @return Type 指定key类型，1为当前地域默认类型，默认为1，且当前只支持该类型
+     * 获取指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
+     * @return Type 指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * 设置指定key类型，1为当前地域默认类型，默认为1，且当前只支持该类型
-     * @param Type 指定key类型，1为当前地域默认类型，默认为1，且当前只支持该类型
+     * 设置指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
+     * @param Type 指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
      */
     public void setType(Long Type) {
         this.Type = Type;

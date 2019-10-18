@@ -103,6 +103,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *用于删除导入的密钥材料，仅对EXTERNAL类型的CMK有效，该接口将CMK设置为PendingImport 状态，并不会删除CMK，在重新进行密钥导入后可继续使用。彻底删除CMK请使用 ScheduleKeyDeletion 接口。
+     * @param req DeleteImportedKeyMaterialRequest
+     * @return DeleteImportedKeyMaterialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImportedKeyMaterialResponse DeleteImportedKeyMaterial(DeleteImportedKeyMaterialRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImportedKeyMaterialResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImportedKeyMaterialResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteImportedKeyMaterial"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于获取指定KeyId的主密钥属性详情信息。
      * @param req DescribeKeyRequest
      * @return DescribeKeyResponse
@@ -301,6 +319,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *获取导入主密钥（CMK）材料的参数，返回的Token作为执行ImportKeyMaterial的参数之一，返回的PublicKey用于对自主导入密钥材料进行加密。返回的Token和PublicKey 24小时后失效，失效后如需重新导入，需要再次调用该接口获取新的Token和PublicKey。
+     * @param req GetParametersForImportRequest
+     * @return GetParametersForImportResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetParametersForImportResponse GetParametersForImport(GetParametersForImportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetParametersForImportResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetParametersForImportResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetParametersForImport"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询该用户是否已开通KMS服务
      * @param req GetServiceStatusRequest
      * @return GetServiceStatusResponse
@@ -312,6 +348,25 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetServiceStatusResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetServiceStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于导入密钥材料。只有类型为EXTERNAL 的CMK 才可以导入，导入的密钥材料使用 GetParametersForImport 获取的密钥进行加密。可以为指定的 CMK 重新导入密钥材料，并重新指定过期时间，但必须导入相同的密钥材料。CMK 密钥材料导入后不可以更换密钥材料。导入的密钥材料过期或者被删除后，指定的CMK将无法使用，需要再次导入相同的密钥材料才能正常使用。CMK是独立的，同样的密钥材料可导入不同的 CMK 中，但使用其中一个 CMK 加密的数据无法使用另一个 CMK解密。
+只有Enabled 和 PendingImport状态的CMK可以导入密钥材料。
+     * @param req ImportKeyMaterialRequest
+     * @return ImportKeyMaterialResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportKeyMaterialResponse ImportKeyMaterial(ImportKeyMaterialRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImportKeyMaterialResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImportKeyMaterialResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ImportKeyMaterial"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -337,7 +392,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *列出账号下面的密钥列表（KeyId信息）。
+     *列出账号下面状态为Enabled， Disabled 和 PendingImport 的CMK KeyId 列表
      * @param req ListKeysRequest
      * @return ListKeysResponse
      * @throws TencentCloudSDKException
@@ -391,7 +446,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *用于修改CMK的别名。
+     *用于修改CMK的别名。对于处于PendingDelete状态的CMK禁止修改。
      * @param req UpdateAliasRequest
      * @return UpdateAliasResponse
      * @throws TencentCloudSDKException
@@ -409,7 +464,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *该接口用于对指定的cmk修改描述信息。
+     *该接口用于对指定的cmk修改描述信息。对于处于PendingDelete状态的CMK禁止修改。
      * @param req UpdateKeyDescriptionRequest
      * @return UpdateKeyDescriptionResponse
      * @throws TencentCloudSDKException

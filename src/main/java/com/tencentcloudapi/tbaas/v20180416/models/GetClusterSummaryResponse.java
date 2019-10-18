@@ -37,25 +37,11 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     private Integer MyChannelCount;
 
     /**
-    * 其组织创建的通道数量
-    */
-    @SerializedName("OtherChannelCount")
-    @Expose
-    private Integer OtherChannelCount;
-
-    /**
     * 当前组织加入的通道数量
     */
     @SerializedName("JoinChannelCount")
     @Expose
     private Integer JoinChannelCount;
-
-    /**
-    * 与当前组织无关的通道数量
-    */
-    @SerializedName("NoneChannelCount")
-    @Expose
-    private Integer NoneChannelCount;
 
     /**
     * 网络节点总数量
@@ -74,9 +60,9 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     /**
     * 其他组织创建的节点数量
     */
-    @SerializedName("OtherPeerCount")
+    @SerializedName("OrderCount")
     @Expose
-    private Integer OtherPeerCount;
+    private Integer OrderCount;
 
     /**
     * 网络组织总数量
@@ -91,13 +77,6 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     @SerializedName("MyGroupCount")
     @Expose
     private Integer MyGroupCount;
-
-    /**
-    * 其他组织创建的组织数量
-    */
-    @SerializedName("OtherGroupCount")
-    @Expose
-    private Integer OtherGroupCount;
 
     /**
     * 网络智能合约总数量
@@ -121,13 +100,6 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     private Integer MyChaincodeCount;
 
     /**
-    * 其组织发起的智能合约数量
-    */
-    @SerializedName("OtherChaincodeCount")
-    @Expose
-    private Integer OtherChaincodeCount;
-
-    /**
     * 当前组织的证书总数量
     */
     @SerializedName("TotalCertCount")
@@ -147,13 +119,6 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     @SerializedName("PeerCertCount")
     @Expose
     private Integer PeerCertCount;
-
-    /**
-    * 网络排序节点证书数量
-    */
-    @SerializedName("OrderCertCount")
-    @Expose
-    private Integer OrderCertCount;
 
     /**
     * 当前组织业务证书数量
@@ -202,22 +167,6 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取其组织创建的通道数量
-     * @return OtherChannelCount 其组织创建的通道数量
-     */
-    public Integer getOtherChannelCount() {
-        return this.OtherChannelCount;
-    }
-
-    /**
-     * 设置其组织创建的通道数量
-     * @param OtherChannelCount 其组织创建的通道数量
-     */
-    public void setOtherChannelCount(Integer OtherChannelCount) {
-        this.OtherChannelCount = OtherChannelCount;
-    }
-
-    /**
      * 获取当前组织加入的通道数量
      * @return JoinChannelCount 当前组织加入的通道数量
      */
@@ -231,22 +180,6 @@ public class GetClusterSummaryResponse  extends AbstractModel{
      */
     public void setJoinChannelCount(Integer JoinChannelCount) {
         this.JoinChannelCount = JoinChannelCount;
-    }
-
-    /**
-     * 获取与当前组织无关的通道数量
-     * @return NoneChannelCount 与当前组织无关的通道数量
-     */
-    public Integer getNoneChannelCount() {
-        return this.NoneChannelCount;
-    }
-
-    /**
-     * 设置与当前组织无关的通道数量
-     * @param NoneChannelCount 与当前组织无关的通道数量
-     */
-    public void setNoneChannelCount(Integer NoneChannelCount) {
-        this.NoneChannelCount = NoneChannelCount;
     }
 
     /**
@@ -283,18 +216,18 @@ public class GetClusterSummaryResponse  extends AbstractModel{
 
     /**
      * 获取其他组织创建的节点数量
-     * @return OtherPeerCount 其他组织创建的节点数量
+     * @return OrderCount 其他组织创建的节点数量
      */
-    public Integer getOtherPeerCount() {
-        return this.OtherPeerCount;
+    public Integer getOrderCount() {
+        return this.OrderCount;
     }
 
     /**
      * 设置其他组织创建的节点数量
-     * @param OtherPeerCount 其他组织创建的节点数量
+     * @param OrderCount 其他组织创建的节点数量
      */
-    public void setOtherPeerCount(Integer OtherPeerCount) {
-        this.OtherPeerCount = OtherPeerCount;
+    public void setOrderCount(Integer OrderCount) {
+        this.OrderCount = OrderCount;
     }
 
     /**
@@ -327,22 +260,6 @@ public class GetClusterSummaryResponse  extends AbstractModel{
      */
     public void setMyGroupCount(Integer MyGroupCount) {
         this.MyGroupCount = MyGroupCount;
-    }
-
-    /**
-     * 获取其他组织创建的组织数量
-     * @return OtherGroupCount 其他组织创建的组织数量
-     */
-    public Integer getOtherGroupCount() {
-        return this.OtherGroupCount;
-    }
-
-    /**
-     * 设置其他组织创建的组织数量
-     * @param OtherGroupCount 其他组织创建的组织数量
-     */
-    public void setOtherGroupCount(Integer OtherGroupCount) {
-        this.OtherGroupCount = OtherGroupCount;
     }
 
     /**
@@ -394,22 +311,6 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取其组织发起的智能合约数量
-     * @return OtherChaincodeCount 其组织发起的智能合约数量
-     */
-    public Integer getOtherChaincodeCount() {
-        return this.OtherChaincodeCount;
-    }
-
-    /**
-     * 设置其组织发起的智能合约数量
-     * @param OtherChaincodeCount 其组织发起的智能合约数量
-     */
-    public void setOtherChaincodeCount(Integer OtherChaincodeCount) {
-        this.OtherChaincodeCount = OtherChaincodeCount;
-    }
-
-    /**
      * 获取当前组织的证书总数量
      * @return TotalCertCount 当前组织的证书总数量
      */
@@ -458,22 +359,6 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取网络排序节点证书数量
-     * @return OrderCertCount 网络排序节点证书数量
-     */
-    public Integer getOrderCertCount() {
-        return this.OrderCertCount;
-    }
-
-    /**
-     * 设置网络排序节点证书数量
-     * @param OrderCertCount 网络排序节点证书数量
-     */
-    public void setOrderCertCount(Integer OrderCertCount) {
-        this.OrderCertCount = OrderCertCount;
-    }
-
-    /**
      * 获取当前组织业务证书数量
      * @return ClientCertCount 当前组织业务证书数量
      */
@@ -511,23 +396,18 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalChannelCount", this.TotalChannelCount);
         this.setParamSimple(map, prefix + "MyChannelCount", this.MyChannelCount);
-        this.setParamSimple(map, prefix + "OtherChannelCount", this.OtherChannelCount);
         this.setParamSimple(map, prefix + "JoinChannelCount", this.JoinChannelCount);
-        this.setParamSimple(map, prefix + "NoneChannelCount", this.NoneChannelCount);
         this.setParamSimple(map, prefix + "TotalPeerCount", this.TotalPeerCount);
         this.setParamSimple(map, prefix + "MyPeerCount", this.MyPeerCount);
-        this.setParamSimple(map, prefix + "OtherPeerCount", this.OtherPeerCount);
+        this.setParamSimple(map, prefix + "OrderCount", this.OrderCount);
         this.setParamSimple(map, prefix + "TotalGroupCount", this.TotalGroupCount);
         this.setParamSimple(map, prefix + "MyGroupCount", this.MyGroupCount);
-        this.setParamSimple(map, prefix + "OtherGroupCount", this.OtherGroupCount);
         this.setParamSimple(map, prefix + "TotalChaincodeCount", this.TotalChaincodeCount);
         this.setParamSimple(map, prefix + "RecentChaincodeCount", this.RecentChaincodeCount);
         this.setParamSimple(map, prefix + "MyChaincodeCount", this.MyChaincodeCount);
-        this.setParamSimple(map, prefix + "OtherChaincodeCount", this.OtherChaincodeCount);
         this.setParamSimple(map, prefix + "TotalCertCount", this.TotalCertCount);
         this.setParamSimple(map, prefix + "TlsCertCount", this.TlsCertCount);
         this.setParamSimple(map, prefix + "PeerCertCount", this.PeerCertCount);
-        this.setParamSimple(map, prefix + "OrderCertCount", this.OrderCertCount);
         this.setParamSimple(map, prefix + "ClientCertCount", this.ClientCertCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

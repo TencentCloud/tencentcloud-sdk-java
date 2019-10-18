@@ -52,6 +52,13 @@ public class TextTranslateRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
+    * 用来标记不希望被翻译的文本内容，如句子中的特殊符号、人名、地名等；每次请求只支持配置一个不被翻译的单词；仅支持配置人名、地名等名词，不要配置动词或短语，否则会影响翻译结果。
+    */
+    @SerializedName("UntranslatedText")
+    @Expose
+    private String UntranslatedText;
+
+    /**
      * 获取待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本会翻译失败。单次请求的文本长度需要低于2000。
      * @return SourceText 待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本会翻译失败。单次请求的文本长度需要低于2000。
      */
@@ -120,6 +127,22 @@ public class TextTranslateRequest  extends AbstractModel{
     }
 
     /**
+     * 获取用来标记不希望被翻译的文本内容，如句子中的特殊符号、人名、地名等；每次请求只支持配置一个不被翻译的单词；仅支持配置人名、地名等名词，不要配置动词或短语，否则会影响翻译结果。
+     * @return UntranslatedText 用来标记不希望被翻译的文本内容，如句子中的特殊符号、人名、地名等；每次请求只支持配置一个不被翻译的单词；仅支持配置人名、地名等名词，不要配置动词或短语，否则会影响翻译结果。
+     */
+    public String getUntranslatedText() {
+        return this.UntranslatedText;
+    }
+
+    /**
+     * 设置用来标记不希望被翻译的文本内容，如句子中的特殊符号、人名、地名等；每次请求只支持配置一个不被翻译的单词；仅支持配置人名、地名等名词，不要配置动词或短语，否则会影响翻译结果。
+     * @param UntranslatedText 用来标记不希望被翻译的文本内容，如句子中的特殊符号、人名、地名等；每次请求只支持配置一个不被翻译的单词；仅支持配置人名、地名等名词，不要配置动词或短语，否则会影响翻译结果。
+     */
+    public void setUntranslatedText(String UntranslatedText) {
+        this.UntranslatedText = UntranslatedText;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -127,6 +150,7 @@ public class TextTranslateRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "UntranslatedText", this.UntranslatedText);
 
     }
 }

@@ -44,6 +44,13 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     private String InstanceDeleteMode;
 
     /**
+    * 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+    */
+    @SerializedName("ForceDelete")
+    @Expose
+    private Boolean ForceDelete;
+
+    /**
      * 获取集群ID
      * @return ClusterId 集群ID
      */
@@ -92,12 +99,29 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+     * @return ForceDelete 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+     */
+    public Boolean getForceDelete() {
+        return this.ForceDelete;
+    }
+
+    /**
+     * 设置是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+     * @param ForceDelete 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+     */
+    public void setForceDelete(Boolean ForceDelete) {
+        this.ForceDelete = ForceDelete;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "InstanceDeleteMode", this.InstanceDeleteMode);
+        this.setParamSimple(map, prefix + "ForceDelete", this.ForceDelete);
 
     }
 }

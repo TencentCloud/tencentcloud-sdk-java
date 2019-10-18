@@ -62,6 +62,38 @@ public class AttachPolicyInfo  extends AbstractModel{
     private String PolicyType;
 
     /**
+    * 策略备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * 策略关联操作者主张号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperateOwnerUin")
+    @Expose
+    private Long OperateOwnerUin;
+
+    /**
+    * 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperateUin")
+    @Expose
+    private Long OperateUin;
+
+    /**
+    * UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperateUinType")
+    @Expose
+    private Long OperateUinType;
+
+    /**
      * 获取策略id
      * @return PolicyId 策略id
      */
@@ -158,6 +190,86 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
+     * 获取策略备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Remark 策略备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * 设置策略备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark 策略备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * 获取策略关联操作者主张号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return OperateOwnerUin 策略关联操作者主张号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOperateOwnerUin() {
+        return this.OperateOwnerUin;
+    }
+
+    /**
+     * 设置策略关联操作者主张号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperateOwnerUin 策略关联操作者主张号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperateOwnerUin(Long OperateOwnerUin) {
+        this.OperateOwnerUin = OperateOwnerUin;
+    }
+
+    /**
+     * 获取策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return OperateUin 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOperateUin() {
+        return this.OperateUin;
+    }
+
+    /**
+     * 设置策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperateUin 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperateUin(Long OperateUin) {
+        this.OperateUin = OperateUin;
+    }
+
+    /**
+     * 获取UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return OperateUinType UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOperateUinType() {
+        return this.OperateUinType;
+    }
+
+    /**
+     * 设置UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperateUinType UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperateUinType(Long OperateUinType) {
+        this.OperateUinType = OperateUinType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -166,6 +278,10 @@ public class AttachPolicyInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "CreateMode", this.CreateMode);
         this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "OperateOwnerUin", this.OperateOwnerUin);
+        this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
+        this.setParamSimple(map, prefix + "OperateUinType", this.OperateUinType);
 
     }
 }

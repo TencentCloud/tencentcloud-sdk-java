@@ -30,6 +30,15 @@ public class ProcedureTemplate  extends AbstractModel{
     private String Name;
 
     /**
+    * 任务流模板类型，取值范围：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 视频处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -89,6 +98,30 @@ public class ProcedureTemplate  extends AbstractModel{
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * 获取任务流模板类型，取值范围：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+     * @return Type 任务流模板类型，取值范围：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * 设置任务流模板类型，取值范围：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+     * @param Type 任务流模板类型，取值范围：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
@@ -208,6 +241,7 @@ public class ProcedureTemplate  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);

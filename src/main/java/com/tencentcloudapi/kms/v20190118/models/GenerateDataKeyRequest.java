@@ -30,14 +30,14 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     private String KeyId;
 
     /**
-    * 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
+    * 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
     */
     @SerializedName("KeySpec")
     @Expose
     private String KeySpec;
 
     /**
-    * 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024
+    * 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
     */
     @SerializedName("NumberOfBytes")
     @Expose
@@ -67,32 +67,32 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
-     * @return KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
+     * 获取指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
+     * @return KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
      */
     public String getKeySpec() {
         return this.KeySpec;
     }
 
     /**
-     * 设置指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
-     * @param KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
+     * 设置指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
+     * @param KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
      */
     public void setKeySpec(String KeySpec) {
         this.KeySpec = KeySpec;
     }
 
     /**
-     * 获取生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024
-     * @return NumberOfBytes 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024
+     * 获取生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
+     * @return NumberOfBytes 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
      */
     public Long getNumberOfBytes() {
         return this.NumberOfBytes;
     }
 
     /**
-     * 设置生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024
-     * @param NumberOfBytes 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024
+     * 设置生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
+     * @param NumberOfBytes 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
      */
     public void setNumberOfBytes(Long NumberOfBytes) {
         this.NumberOfBytes = NumberOfBytes;

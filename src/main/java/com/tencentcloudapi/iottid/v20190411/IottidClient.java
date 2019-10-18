@@ -175,6 +175,24 @@ public class IottidClient extends AbstractClient{
     }
 
     /**
+     *上传硬件唯一标识码，是软加固设备身份参数。本接口如遇到错误数据，则所有当次上传数据失效。
+     * @param req UploadDeviceUniqueCodeRequest
+     * @return UploadDeviceUniqueCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadDeviceUniqueCodeResponse UploadDeviceUniqueCode(UploadDeviceUniqueCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadDeviceUniqueCodeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadDeviceUniqueCodeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UploadDeviceUniqueCode"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *下载控制台验证芯片烧录信息，保证TID与中心信息一致 
      * @param req VerifyChipBurnInfoRequest
      * @return VerifyChipBurnInfoResponse

@@ -1670,6 +1670,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeNetworkInterfaceLimit）根据CVM实例ID查询弹性网卡配额，返回该CVM实例能绑定的弹性网卡配额，以及每个弹性网卡可以分配的ip配额
+     * @param req DescribeNetworkInterfaceLimitRequest
+     * @return DescribeNetworkInterfaceLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkInterfaceLimitResponse DescribeNetworkInterfaceLimit(DescribeNetworkInterfaceLimitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNetworkInterfaceLimitResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNetworkInterfaceLimitResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNetworkInterfaceLimit"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
      * @param req DescribeNetworkInterfacesRequest
      * @return DescribeNetworkInterfacesResponse

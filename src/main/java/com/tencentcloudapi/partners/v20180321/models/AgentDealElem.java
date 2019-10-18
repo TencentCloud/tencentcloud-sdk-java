@@ -203,6 +203,14 @@ public class AgentDealElem  extends AbstractModel{
     private String PayerMode;
 
     /**
+    * 活动ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ActivityId")
+    @Expose
+    private String ActivityId;
+
+    /**
      * 获取订单自增 ID
      * @return DealId 订单自增 ID
      */
@@ -647,6 +655,26 @@ public class AgentDealElem  extends AbstractModel{
     }
 
     /**
+     * 获取活动ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ActivityId 活动ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getActivityId() {
+        return this.ActivityId;
+    }
+
+    /**
+     * 设置活动ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ActivityId 活动ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setActivityId(String ActivityId) {
+        this.ActivityId = ActivityId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -673,6 +701,7 @@ public class AgentDealElem  extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectType", this.ProjectType);
         this.setParamSimple(map, prefix + "SalesUin", this.SalesUin);
         this.setParamSimple(map, prefix + "PayerMode", this.PayerMode);
+        this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
 
     }
 }

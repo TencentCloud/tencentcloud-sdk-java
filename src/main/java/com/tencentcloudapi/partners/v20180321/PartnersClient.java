@@ -103,6 +103,24 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *合作伙伴为客户创建强代付关系
+     * @param req CreatePayRelationForClientRequest
+     * @return CreatePayRelationForClientResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePayRelationForClientResponse CreatePayRelationForClient(CreatePayRelationForClientRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePayRelationForClientResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePayRelationForClientResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePayRelationForClient"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询已审核客户列表
      * @param req DescribeAgentAuditedClientsRequest
      * @return DescribeAgentAuditedClientsResponse
@@ -258,6 +276,24 @@ public class PartnersClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyClientRemarkResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyClientRemark"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *合作伙伴为客户消除强代付关系
+     * @param req RemovePayRelationForClientRequest
+     * @return RemovePayRelationForClientResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemovePayRelationForClientResponse RemovePayRelationForClient(RemovePayRelationForClientRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemovePayRelationForClientResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemovePayRelationForClientResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RemovePayRelationForClient"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

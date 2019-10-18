@@ -58,6 +58,13 @@ public class SecurityGroupPolicy  extends AbstractModel{
     private String CidrBlock;
 
     /**
+    * 网段或IPv6(互斥)。
+    */
+    @SerializedName("Ipv6CidrBlock")
+    @Expose
+    private String Ipv6CidrBlock;
+
+    /**
     * 安全组实例ID，例如：sg-ohuuioma。
     */
     @SerializedName("SecurityGroupId")
@@ -173,6 +180,22 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
+     * 获取网段或IPv6(互斥)。
+     * @return Ipv6CidrBlock 网段或IPv6(互斥)。
+     */
+    public String getIpv6CidrBlock() {
+        return this.Ipv6CidrBlock;
+    }
+
+    /**
+     * 设置网段或IPv6(互斥)。
+     * @param Ipv6CidrBlock 网段或IPv6(互斥)。
+     */
+    public void setIpv6CidrBlock(String Ipv6CidrBlock) {
+        this.Ipv6CidrBlock = Ipv6CidrBlock;
+    }
+
+    /**
      * 获取安全组实例ID，例如：sg-ohuuioma。
      * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      */
@@ -261,6 +284,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamObj(map, prefix + "ServiceTemplate.", this.ServiceTemplate);
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
+        this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         this.setParamObj(map, prefix + "AddressTemplate.", this.AddressTemplate);
         this.setParamSimple(map, prefix + "Action", this.Action);
