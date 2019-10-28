@@ -37,6 +37,13 @@ public class Function  extends AbstractModel{
     private Boolean EnableKeyword;
 
     /**
+    * 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+    */
+    @SerializedName("EnableMuteDetect")
+    @Expose
+    private Boolean EnableMuteDetect;
+
+    /**
     * 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
     */
     @SerializedName("EnableVadInfo")
@@ -83,6 +90,22 @@ public class Function  extends AbstractModel{
     }
 
     /**
+     * 获取静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+     * @return EnableMuteDetect 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+     */
+    public Boolean getEnableMuteDetect() {
+        return this.EnableMuteDetect;
+    }
+
+    /**
+     * 设置静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+     * @param EnableMuteDetect 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+     */
+    public void setEnableMuteDetect(Boolean EnableMuteDetect) {
+        this.EnableMuteDetect = EnableMuteDetect;
+    }
+
+    /**
      * 获取输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
      * @return EnableVadInfo 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
      */
@@ -120,6 +143,7 @@ public class Function  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableAllText", this.EnableAllText);
         this.setParamSimple(map, prefix + "EnableKeyword", this.EnableKeyword);
+        this.setParamSimple(map, prefix + "EnableMuteDetect", this.EnableMuteDetect);
         this.setParamSimple(map, prefix + "EnableVadInfo", this.EnableVadInfo);
         this.setParamSimple(map, prefix + "EnableVolume", this.EnableVolume);
 

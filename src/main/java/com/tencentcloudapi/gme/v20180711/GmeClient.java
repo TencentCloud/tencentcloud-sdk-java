@@ -49,6 +49,42 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateApp)用于创建一个GME应用
+     * @param req CreateAppRequest
+     * @return CreateAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAppResponse CreateApp(CreateAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAppResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAppResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateApp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeAppStatistics)用户获取某个GME应用的用量数据。包括实时语音，离线语音，语音过滤等。最长查询周期为最近30天。
+     * @param req DescribeAppStatisticsRequest
+     * @return DescribeAppStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppStatisticsResponse DescribeAppStatistics(DescribeAppStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAppStatisticsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAppStatisticsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAppStatistics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据应用ID和文件ID查询识别结果
      * @param req DescribeFilterResultRequest
      * @return DescribeFilterResultResponse
@@ -104,8 +140,31 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
-     *本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。
+     *本接口(ModifyAppStatus)用于修改应用总开关状态。
+     * @param req ModifyAppStatusRequest
+     * @return ModifyAppStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAppStatusResponse ModifyAppStatus(ModifyAppStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAppStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAppStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAppStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
 </br></br>
+
+<h4><b>功能试用说明：</b></h4>
+<li>打开前往<a href="https://console.cloud.tencent.com/gamegme/tryout">控制台 - 产品试用</a>免费试用语音分析服务。</li>
+</br>
+
 <h4><b>接口功能说明：</b></h4>
 <li>支持对语音流或语音文件进行检测，判断其中是否包含违规内容。</li>
 <li>支持设置回调地址 Callback 获取检测结果，同时支持通过接口(查询语音检测结果)主动轮询获取检测结果。</li>
@@ -145,7 +204,7 @@ public class GmeClient extends AbstractClient{
 <p>ad :广告</p>
 <p>terrorism:暴恐</p>
 <p>contraband :违禁</p>
-<p>customized:自定义词库</p>
+<p>customized:自定义词库。目前白名单开放，如有需要请<a href="https://cloud.tencent.com/apply/p/8809fjcik56">联系我们</a>。</p>
 </td>
 </tr>
 </tbody>
@@ -182,14 +241,8 @@ public class GmeClient extends AbstractClient{
 	</ul>
 </ul>
 
-<ul>
-<li>
-回调请求 Body 的字段说明见结构：
-<a href="https://cloud.tencent.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>
-</li>
-</ul>
-
-<li>回调示例如下<font color="red">（详细字段说明见上述表格中 Data 字段说明）</font>：</li>
+<li>回调示例如下<font color="red">（详细字段说明见结构：
+<a href="https://cloud.tencent.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>）</font>：</li>
 <pre><code>{
 	"Code": 0,
 	"DataId": "1400000000_test_data_id",
@@ -203,6 +256,7 @@ public class GmeClient extends AbstractClient{
 		"MainType": "abuse",
 		"RoomId": "123",
 		"OpenId": "xxx",
+		"Info":"",
 		"ScanDetail": [{
 			"EndTime": 1110,
 			"KeyWord": "xxx",

@@ -24,6 +24,7 @@ public class DescribeAsyncRequestInfoResponse  extends AbstractModel{
 
     /**
     * 任务执行结果。可能的取值：INITIAL - 初始化，RUNNING - 运行中，SUCCESS - 执行成功，FAILED - 执行失败，KILLED - 已终止，REMOVED - 已删除，PAUSED - 终止中。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -31,6 +32,7 @@ public class DescribeAsyncRequestInfoResponse  extends AbstractModel{
 
     /**
     * 任务执行信息描述。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
     @Expose
@@ -45,7 +47,9 @@ public class DescribeAsyncRequestInfoResponse  extends AbstractModel{
 
     /**
      * 获取任务执行结果。可能的取值：INITIAL - 初始化，RUNNING - 运行中，SUCCESS - 执行成功，FAILED - 执行失败，KILLED - 已终止，REMOVED - 已删除，PAUSED - 终止中。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Status 任务执行结果。可能的取值：INITIAL - 初始化，RUNNING - 运行中，SUCCESS - 执行成功，FAILED - 执行失败，KILLED - 已终止，REMOVED - 已删除，PAUSED - 终止中。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -53,7 +57,9 @@ public class DescribeAsyncRequestInfoResponse  extends AbstractModel{
 
     /**
      * 设置任务执行结果。可能的取值：INITIAL - 初始化，RUNNING - 运行中，SUCCESS - 执行成功，FAILED - 执行失败，KILLED - 已终止，REMOVED - 已删除，PAUSED - 终止中。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务执行结果。可能的取值：INITIAL - 初始化，RUNNING - 运行中，SUCCESS - 执行成功，FAILED - 执行失败，KILLED - 已终止，REMOVED - 已删除，PAUSED - 终止中。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -61,7 +67,9 @@ public class DescribeAsyncRequestInfoResponse  extends AbstractModel{
 
     /**
      * 获取任务执行信息描述。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Info 任务执行信息描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInfo() {
         return this.Info;
@@ -69,7 +77,9 @@ public class DescribeAsyncRequestInfoResponse  extends AbstractModel{
 
     /**
      * 设置任务执行信息描述。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 任务执行信息描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(String Info) {
         this.Info = Info;

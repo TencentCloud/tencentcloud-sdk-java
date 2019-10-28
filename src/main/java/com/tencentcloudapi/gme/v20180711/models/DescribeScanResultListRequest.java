@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeScanResultListRequest  extends AbstractModel{
 
     /**
-    * 应用 ID，在控制台统一创建。
+    * 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
     */
     @SerializedName("BizId")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeScanResultListRequest  extends AbstractModel{
     private String [] TaskIdList;
 
     /**
-     * 获取应用 ID，在控制台统一创建。
-     * @return BizId 应用 ID，在控制台统一创建。
+     * 获取应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * @return BizId 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * 设置应用 ID，在控制台统一创建。
-     * @param BizId 应用 ID，在控制台统一创建。
+     * 设置应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * @param BizId 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;

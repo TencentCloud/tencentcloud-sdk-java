@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProIspPlaySumInfo  extends AbstractModel{
 
     /**
-    * 省份/运营商。
+    * 省份/运营商/国家或地区。
     */
     @SerializedName("Name")
     @Expose
@@ -51,16 +51,16 @@ public class ProIspPlaySumInfo  extends AbstractModel{
     private Float AvgFluxPerSecond;
 
     /**
-     * 获取省份/运营商。
-     * @return Name 省份/运营商。
+     * 获取省份/运营商/国家或地区。
+     * @return Name 省份/运营商/国家或地区。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * 设置省份/运营商。
-     * @param Name 省份/运营商。
+     * 设置省份/运营商/国家或地区。
+     * @param Name 省份/运营商/国家或地区。
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ScanVoiceRequest  extends AbstractModel{
 
     /**
-    * 应用ID，登录控制台创建应用得到的AppID。
+    * 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
     */
     @SerializedName("BizId")
     @Expose
@@ -60,16 +60,16 @@ public class ScanVoiceRequest  extends AbstractModel{
     private String Callback;
 
     /**
-     * 获取应用ID，登录控制台创建应用得到的AppID。
-     * @return BizId 应用ID，登录控制台创建应用得到的AppID。
+     * 获取应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * @return BizId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * 设置应用ID，登录控制台创建应用得到的AppID。
-     * @param BizId 应用ID，登录控制台创建应用得到的AppID。
+     * 设置应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * @param BizId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;

@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class CreateRecTaskRequest  extends AbstractModel{
 
     /**
-    * 引擎类型。8k_0：电话 8k 通用模型；16k_0：16k 通用模型；8k_6: 电话场景下单声道话者分离模型。
+    * 引擎类型。
+8k_0：电话 8k 通用模型；
+16k_0：16k 通用模型；
+8k_6: 电话场景下单声道话者分离模型。
     */
     @SerializedName("EngineModelType")
     @Expose
@@ -51,7 +54,7 @@ public class CreateRecTaskRequest  extends AbstractModel{
     private Long SourceType;
 
     /**
-    * 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。
+    * 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -79,16 +82,28 @@ public class CreateRecTaskRequest  extends AbstractModel{
     private Long DataLen;
 
     /**
-     * 获取引擎类型。8k_0：电话 8k 通用模型；16k_0：16k 通用模型；8k_6: 电话场景下单声道话者分离模型。
-     * @return EngineModelType 引擎类型。8k_0：电话 8k 通用模型；16k_0：16k 通用模型；8k_6: 电话场景下单声道话者分离模型。
+     * 获取引擎类型。
+8k_0：电话 8k 通用模型；
+16k_0：16k 通用模型；
+8k_6: 电话场景下单声道话者分离模型。
+     * @return EngineModelType 引擎类型。
+8k_0：电话 8k 通用模型；
+16k_0：16k 通用模型；
+8k_6: 电话场景下单声道话者分离模型。
      */
     public String getEngineModelType() {
         return this.EngineModelType;
     }
 
     /**
-     * 设置引擎类型。8k_0：电话 8k 通用模型；16k_0：16k 通用模型；8k_6: 电话场景下单声道话者分离模型。
-     * @param EngineModelType 引擎类型。8k_0：电话 8k 通用模型；16k_0：16k 通用模型；8k_6: 电话场景下单声道话者分离模型。
+     * 设置引擎类型。
+8k_0：电话 8k 通用模型；
+16k_0：16k 通用模型；
+8k_6: 电话场景下单声道话者分离模型。
+     * @param EngineModelType 引擎类型。
+8k_0：电话 8k 通用模型；
+16k_0：16k 通用模型；
+8k_6: 电话场景下单声道话者分离模型。
      */
     public void setEngineModelType(String EngineModelType) {
         this.EngineModelType = EngineModelType;
@@ -143,16 +158,16 @@ public class CreateRecTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。
-     * @return CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。
+     * 获取回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
+     * @return CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * 设置回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。
-     * @param CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。
+     * 设置回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
+     * @param CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;

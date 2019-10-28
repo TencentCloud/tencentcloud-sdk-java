@@ -65,6 +65,13 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     private String FileType;
 
     /**
+    * 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+    */
+    @SerializedName("MuteThreshold")
+    @Expose
+    private Long MuteThreshold;
+
+    /**
     * 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
     */
     @SerializedName("VocabLibNameList")
@@ -168,6 +175,22 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
+     * 获取静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+     * @return MuteThreshold 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+     */
+    public Long getMuteThreshold() {
+        return this.MuteThreshold;
+    }
+
+    /**
+     * 设置静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+     * @param MuteThreshold 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+     */
+    public void setMuteThreshold(Long MuteThreshold) {
+        this.MuteThreshold = MuteThreshold;
+    }
+
+    /**
      * 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      * @return VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
@@ -193,6 +216,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "VoiceFileType", this.VoiceFileType);
         this.setParamObj(map, prefix + "Functions.", this.Functions);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamSimple(map, prefix + "MuteThreshold", this.MuteThreshold);
         this.setParamArraySimple(map, prefix + "VocabLibNameList.", this.VocabLibNameList);
 
     }

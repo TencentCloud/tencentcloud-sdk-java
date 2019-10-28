@@ -301,6 +301,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *随机数生成接口。
+     * @param req GenerateRandomRequest
+     * @return GenerateRandomResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateRandomResponse GenerateRandom(GenerateRandomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateRandomResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateRandomResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GenerateRandom"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询指定的CMK是否开启了密钥轮换功能。
      * @param req GetKeyRotationStatusRequest
      * @return GetKeyRotationStatusResponse

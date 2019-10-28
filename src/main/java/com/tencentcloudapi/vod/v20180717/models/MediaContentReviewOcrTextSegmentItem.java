@@ -86,7 +86,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
-    private Long PicUrlExpireTime;
+    private String PicUrlExpireTime;
 
     /**
      * 获取嫌疑片段起始的偏移时间，单位：秒。
@@ -244,7 +244,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
      * 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @return PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
-    public Long getPicUrlExpireTime() {
+    public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
@@ -252,7 +252,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
      * 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
-    public void setPicUrlExpireTime(Long PicUrlExpireTime) {
+    public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;
     }
 

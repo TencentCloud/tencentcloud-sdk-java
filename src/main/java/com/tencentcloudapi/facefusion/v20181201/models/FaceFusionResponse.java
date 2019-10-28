@@ -30,7 +30,7 @@ public class FaceFusionResponse  extends AbstractModel{
     private String Image;
 
     /**
-    * 鉴黄鉴政结果
+    * 鉴政结果
     */
     @SerializedName("ReviewResultSet")
     @Expose
@@ -60,16 +60,16 @@ public class FaceFusionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取鉴黄鉴政结果
-     * @return ReviewResultSet 鉴黄鉴政结果
+     * 获取鉴政结果
+     * @return ReviewResultSet 鉴政结果
      */
     public FuseFaceReviewResult [] getReviewResultSet() {
         return this.ReviewResultSet;
     }
 
     /**
-     * 设置鉴黄鉴政结果
-     * @param ReviewResultSet 鉴黄鉴政结果
+     * 设置鉴政结果
+     * @param ReviewResultSet 鉴政结果
      */
     public void setReviewResultSet(FuseFaceReviewResult [] ReviewResultSet) {
         this.ReviewResultSet = ReviewResultSet;

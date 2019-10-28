@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProcessMediaRequest  extends AbstractModel{
 
     /**
-    * 媒体文件 ID。
+    * 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
     */
     @SerializedName("FileId")
     @Expose
@@ -93,16 +93,16 @@ public class ProcessMediaRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取媒体文件 ID。
-     * @return FileId 媒体文件 ID。
+     * 获取媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     * @return FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * 设置媒体文件 ID。
-     * @param FileId 媒体文件 ID。
+     * 设置媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     * @param FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

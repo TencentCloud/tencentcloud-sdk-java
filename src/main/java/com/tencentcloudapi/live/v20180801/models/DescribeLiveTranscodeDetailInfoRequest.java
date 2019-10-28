@@ -23,15 +23,6 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
 
     /**
-    * 起始时间，北京时间，
-格式：yyyymmdd。
-注意：当前只支持查询近30天内某天的详细数据。
-    */
-    @SerializedName("DayTime")
-    @Expose
-    private String DayTime;
-
-    /**
     * 推流域名。
     */
     @SerializedName("PushDomain")
@@ -44,6 +35,15 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
+
+    /**
+    * 查询时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内某天的详细数据。
+    */
+    @SerializedName("DayTime")
+    @Expose
+    private String DayTime;
 
     /**
     * 页数，默认1，
@@ -62,28 +62,22 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     private Integer PageSize;
 
     /**
-     * 获取起始时间，北京时间，
+    * 起始天时间，北京时间，
 格式：yyyymmdd。
-注意：当前只支持查询近30天内某天的详细数据。
-     * @return DayTime 起始时间，北京时间，
-格式：yyyymmdd。
-注意：当前只支持查询近30天内某天的详细数据。
-     */
-    public String getDayTime() {
-        return this.DayTime;
-    }
+注意：支持查询近3个月内的详细数据。
+    */
+    @SerializedName("StartDayTime")
+    @Expose
+    private String StartDayTime;
 
     /**
-     * 设置起始时间，北京时间，
+    * 结束天时间，北京时间，
 格式：yyyymmdd。
-注意：当前只支持查询近30天内某天的详细数据。
-     * @param DayTime 起始时间，北京时间，
-格式：yyyymmdd。
-注意：当前只支持查询近30天内某天的详细数据。
-     */
-    public void setDayTime(String DayTime) {
-        this.DayTime = DayTime;
-    }
+注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+    */
+    @SerializedName("EndDayTime")
+    @Expose
+    private String EndDayTime;
 
     /**
      * 获取推流域名。
@@ -115,6 +109,30 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
+    }
+
+    /**
+     * 获取查询时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内某天的详细数据。
+     * @return DayTime 查询时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内某天的详细数据。
+     */
+    public String getDayTime() {
+        return this.DayTime;
+    }
+
+    /**
+     * 设置查询时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内某天的详细数据。
+     * @param DayTime 查询时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内某天的详细数据。
+     */
+    public void setDayTime(String DayTime) {
+        this.DayTime = DayTime;
     }
 
     /**
@@ -158,14 +176,64 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
+     * 获取起始天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据。
+     * @return StartDayTime 起始天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据。
+     */
+    public String getStartDayTime() {
+        return this.StartDayTime;
+    }
+
+    /**
+     * 设置起始天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据。
+     * @param StartDayTime 起始天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据。
+     */
+    public void setStartDayTime(String StartDayTime) {
+        this.StartDayTime = StartDayTime;
+    }
+
+    /**
+     * 获取结束天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+     * @return EndDayTime 结束天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+     */
+    public String getEndDayTime() {
+        return this.EndDayTime;
+    }
+
+    /**
+     * 设置结束天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+     * @param EndDayTime 结束天时间，北京时间，
+格式：yyyymmdd。
+注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+     */
+    public void setEndDayTime(String EndDayTime) {
+        this.EndDayTime = EndDayTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DayTime", this.DayTime);
         this.setParamSimple(map, prefix + "PushDomain", this.PushDomain);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
+        this.setParamSimple(map, prefix + "DayTime", this.DayTime);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "StartDayTime", this.StartDayTime);
+        this.setParamSimple(map, prefix + "EndDayTime", this.EndDayTime);
 
     }
 }

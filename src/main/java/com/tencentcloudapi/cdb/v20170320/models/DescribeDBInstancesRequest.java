@@ -177,21 +177,21 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Integer InitFlag;
 
     /**
-    * 是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
+    * 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
     */
     @SerializedName("WithDr")
     @Expose
     private Integer WithDr;
 
     /**
-    * 是否包含只读实例，可取值：0 - 不包含，1 - 包含。
+    * 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
     */
     @SerializedName("WithRo")
     @Expose
     private Integer WithRo;
 
     /**
-    * 是否包含主实例，可取值：0 - 不包含，1 - 包含。
+    * 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
     */
     @SerializedName("WithMaster")
     @Expose
@@ -550,48 +550,48 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
-     * @return WithDr 是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
+     * 获取是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
+     * @return WithDr 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
      */
     public Integer getWithDr() {
         return this.WithDr;
     }
 
     /**
-     * 设置是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
-     * @param WithDr 是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
+     * 设置是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
+     * @param WithDr 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
      */
     public void setWithDr(Integer WithDr) {
         this.WithDr = WithDr;
     }
 
     /**
-     * 获取是否包含只读实例，可取值：0 - 不包含，1 - 包含。
-     * @return WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。
+     * 获取是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * @return WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
     public Integer getWithRo() {
         return this.WithRo;
     }
 
     /**
-     * 设置是否包含只读实例，可取值：0 - 不包含，1 - 包含。
-     * @param WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。
+     * 设置是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * @param WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
     public void setWithRo(Integer WithRo) {
         this.WithRo = WithRo;
     }
 
     /**
-     * 获取是否包含主实例，可取值：0 - 不包含，1 - 包含。
-     * @return WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。
+     * 获取是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * @return WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
     public Integer getWithMaster() {
         return this.WithMaster;
     }
 
     /**
-     * 设置是否包含主实例，可取值：0 - 不包含，1 - 包含。
-     * @param WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。
+     * 设置是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * @param WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
     public void setWithMaster(Integer WithMaster) {
         this.WithMaster = WithMaster;

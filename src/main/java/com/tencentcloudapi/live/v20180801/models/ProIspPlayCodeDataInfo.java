@@ -37,6 +37,20 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     private String IspName;
 
     /**
+    * 错误码为2开头的次数。
+    */
+    @SerializedName("Code2xx")
+    @Expose
+    private Integer Code2xx;
+
+    /**
+    * 错误码为3开头的次数。
+    */
+    @SerializedName("Code3xx")
+    @Expose
+    private Integer Code3xx;
+
+    /**
     * 错误码为4开头的次数。
     */
     @SerializedName("Code4xx")
@@ -83,6 +97,38 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
+     * 获取错误码为2开头的次数。
+     * @return Code2xx 错误码为2开头的次数。
+     */
+    public Integer getCode2xx() {
+        return this.Code2xx;
+    }
+
+    /**
+     * 设置错误码为2开头的次数。
+     * @param Code2xx 错误码为2开头的次数。
+     */
+    public void setCode2xx(Integer Code2xx) {
+        this.Code2xx = Code2xx;
+    }
+
+    /**
+     * 获取错误码为3开头的次数。
+     * @return Code3xx 错误码为3开头的次数。
+     */
+    public Integer getCode3xx() {
+        return this.Code3xx;
+    }
+
+    /**
+     * 设置错误码为3开头的次数。
+     * @param Code3xx 错误码为3开头的次数。
+     */
+    public void setCode3xx(Integer Code3xx) {
+        this.Code3xx = Code3xx;
+    }
+
+    /**
      * 获取错误码为4开头的次数。
      * @return Code4xx 错误码为4开头的次数。
      */
@@ -120,6 +166,8 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProvinceName", this.ProvinceName);
         this.setParamSimple(map, prefix + "IspName", this.IspName);
+        this.setParamSimple(map, prefix + "Code2xx", this.Code2xx);
+        this.setParamSimple(map, prefix + "Code3xx", this.Code3xx);
         this.setParamSimple(map, prefix + "Code4xx", this.Code4xx);
         this.setParamSimple(map, prefix + "Code5xx", this.Code5xx);
 

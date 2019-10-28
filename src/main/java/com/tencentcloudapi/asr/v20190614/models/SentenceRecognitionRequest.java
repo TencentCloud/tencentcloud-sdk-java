@@ -37,7 +37,11 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     private Long SubServiceType;
 
     /**
-    * 引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
+    * 引擎类型。
+8k：电话 8k 中文普通话通用；
+16k：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
     */
     @SerializedName("EngSerViceType")
     @Expose
@@ -118,16 +122,32 @@ public class SentenceRecognitionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
-     * @return EngSerViceType 引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
+     * 获取引擎类型。
+8k：电话 8k 中文普通话通用；
+16k：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
+     * @return EngSerViceType 引擎类型。
+8k：电话 8k 中文普通话通用；
+16k：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
      */
     public String getEngSerViceType() {
         return this.EngSerViceType;
     }
 
     /**
-     * 设置引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
-     * @param EngSerViceType 引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
+     * 设置引擎类型。
+8k：电话 8k 中文普通话通用；
+16k：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
+     * @param EngSerViceType 引擎类型。
+8k：电话 8k 中文普通话通用；
+16k：16k 中文普通话通用；
+16k_en：16k 英语；
+16k_ca：16k 粤语。
      */
     public void setEngSerViceType(String EngSerViceType) {
         this.EngSerViceType = EngSerViceType;

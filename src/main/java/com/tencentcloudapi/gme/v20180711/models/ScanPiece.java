@@ -69,6 +69,14 @@ public class ScanPiece  extends AbstractModel{
     private String OpenId;
 
     /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Info")
+    @Expose
+    private String Info;
+
+    /**
      * 获取流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
      * @return DumpUrl 流检测时返回，音频转存地址，保留30min
@@ -181,6 +189,26 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
+     * 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Info 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInfo() {
+        return this.Info;
+    }
+
+    /**
+     * 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Info 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInfo(String Info) {
+        this.Info = Info;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -190,6 +218,7 @@ public class ScanPiece  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ScanDetail.", this.ScanDetail);
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
+        this.setParamSimple(map, prefix + "Info", this.Info);
 
     }
 }

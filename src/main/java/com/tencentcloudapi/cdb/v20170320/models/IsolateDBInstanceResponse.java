@@ -24,6 +24,7 @@ public class IsolateDBInstanceResponse  extends AbstractModel{
 
     /**
     * 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,7 +39,9 @@ public class IsolateDBInstanceResponse  extends AbstractModel{
 
     /**
      * 获取异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
@@ -46,7 +49,9 @@ public class IsolateDBInstanceResponse  extends AbstractModel{
 
     /**
      * 设置异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class DescribeAttendanceResultResponse  extends AbstractModel{
 
     /**
+    * 缺失人员的ID列表(只针对请求中的libids字段)
+    */
+    @SerializedName("AbsenceSetInLibs")
+    @Expose
+    private AbsenceInfo [] AbsenceSetInLibs;
+
+    /**
     * 确定出勤人员列表
     */
     @SerializedName("AttendanceSet")
@@ -37,7 +44,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     private SuspectedInfo [] SuspectedSet;
 
     /**
-    * 缺失人员的ID列表
+    * 缺失人员的ID列表(只针对请求中的personids字段)
     */
     @SerializedName("AbsenceSet")
     @Expose
@@ -56,6 +63,22 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * 获取缺失人员的ID列表(只针对请求中的libids字段)
+     * @return AbsenceSetInLibs 缺失人员的ID列表(只针对请求中的libids字段)
+     */
+    public AbsenceInfo [] getAbsenceSetInLibs() {
+        return this.AbsenceSetInLibs;
+    }
+
+    /**
+     * 设置缺失人员的ID列表(只针对请求中的libids字段)
+     * @param AbsenceSetInLibs 缺失人员的ID列表(只针对请求中的libids字段)
+     */
+    public void setAbsenceSetInLibs(AbsenceInfo [] AbsenceSetInLibs) {
+        this.AbsenceSetInLibs = AbsenceSetInLibs;
+    }
 
     /**
      * 获取确定出勤人员列表
@@ -90,16 +113,16 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取缺失人员的ID列表
-     * @return AbsenceSet 缺失人员的ID列表
+     * 获取缺失人员的ID列表(只针对请求中的personids字段)
+     * @return AbsenceSet 缺失人员的ID列表(只针对请求中的personids字段)
      */
     public String [] getAbsenceSet() {
         return this.AbsenceSet;
     }
 
     /**
-     * 设置缺失人员的ID列表
-     * @param AbsenceSet 缺失人员的ID列表
+     * 设置缺失人员的ID列表(只针对请求中的personids字段)
+     * @param AbsenceSet 缺失人员的ID列表(只针对请求中的personids字段)
      */
     public void setAbsenceSet(String [] AbsenceSet) {
         this.AbsenceSet = AbsenceSet;
@@ -141,6 +164,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "AbsenceSetInLibs.", this.AbsenceSetInLibs);
         this.setParamArrayObj(map, prefix + "AttendanceSet.", this.AttendanceSet);
         this.setParamArrayObj(map, prefix + "SuspectedSet.", this.SuspectedSet);
         this.setParamArraySimple(map, prefix + "AbsenceSet.", this.AbsenceSet);

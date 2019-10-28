@@ -71,6 +71,14 @@ public class ProcedureTemplate  extends AbstractModel{
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
+    * 微信小程序发布任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MiniProgramPublishTask")
+    @Expose
+    private WechatMiniProgramPublishTaskInput MiniProgramPublishTask;
+
+    /**
     * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
     */
     @SerializedName("CreateTime")
@@ -205,6 +213,26 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
+     * 获取微信小程序发布任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return MiniProgramPublishTask 微信小程序发布任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WechatMiniProgramPublishTaskInput getMiniProgramPublishTask() {
+        return this.MiniProgramPublishTask;
+    }
+
+    /**
+     * 设置微信小程序发布任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MiniProgramPublishTask 微信小程序发布任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMiniProgramPublishTask(WechatMiniProgramPublishTaskInput MiniProgramPublishTask) {
+        this.MiniProgramPublishTask = MiniProgramPublishTask;
+    }
+
+    /**
      * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
@@ -246,6 +274,7 @@ public class ProcedureTemplate  extends AbstractModel{
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+        this.setParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

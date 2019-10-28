@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class DescribeAudioTaskResponse  extends AbstractModel{
 
     /**
+    * 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+    */
+    @SerializedName("AllMuteSlice")
+    @Expose
+    private AllMuteSlice AllMuteSlice;
+
+    /**
     * 返回的当前音频的统计信息。当进度为100时返回。
     */
     @SerializedName("AsrStat")
@@ -84,6 +91,22 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * 获取如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+     * @return AllMuteSlice 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+     */
+    public AllMuteSlice getAllMuteSlice() {
+        return this.AllMuteSlice;
+    }
+
+    /**
+     * 设置如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+     * @param AllMuteSlice 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+     */
+    public void setAllMuteSlice(AllMuteSlice AllMuteSlice) {
+        this.AllMuteSlice = AllMuteSlice;
+    }
 
     /**
      * 获取返回的当前音频的统计信息。当进度为100时返回。
@@ -233,6 +256,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "AllMuteSlice.", this.AllMuteSlice);
         this.setParamObj(map, prefix + "AsrStat.", this.AsrStat);
         this.setParamArrayObj(map, prefix + "Texts.", this.Texts);
         this.setParamArrayObj(map, prefix + "VocabAnalysisDetailInfo.", this.VocabAnalysisDetailInfo);

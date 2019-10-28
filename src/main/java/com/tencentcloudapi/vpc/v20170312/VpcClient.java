@@ -313,6 +313,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(CheckNetDetectState)用于验证网络探测。
+     * @param req CheckNetDetectStateRequest
+     * @return CheckNetDetectStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckNetDetectStateResponse CheckNetDetectState(CheckNetDetectStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckNetDetectStateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckNetDetectStateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CheckNetDetectState"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateAddressTemplate）用于创建IP地址模版
      * @param req CreateAddressTemplateRequest
      * @return CreateAddressTemplateResponse
@@ -550,6 +568,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateNatGatewayDestinationIpPortTranslationNatRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(CreateNetDetect)用于创建网络探测。
+     * @param req CreateNetDetectRequest
+     * @return CreateNetDetectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNetDetectResponse CreateNetDetect(CreateNetDetectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNetDetectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNetDetectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNetDetect"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1020,6 +1056,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteNatGatewayDestinationIpPortTranslationNatRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DeleteNetDetect)用于删除网络探测实例。
+     * @param req DeleteNetDetectRequest
+     * @return DeleteNetDetectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNetDetectResponse DeleteNetDetect(DeleteNetDetectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNetDetectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNetDetectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNetDetect"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1663,6 +1717,42 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNatGatewaysResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeNatGateways"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeNetDetectStates)用于查询网络探测验证结果列表。
+     * @param req DescribeNetDetectStatesRequest
+     * @return DescribeNetDetectStatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetDetectStatesResponse DescribeNetDetectStates(DescribeNetDetectStatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNetDetectStatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNetDetectStatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNetDetectStates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeNetDetects）用于查询网络探测列表。
+     * @param req DescribeNetDetectsRequest
+     * @return DescribeNetDetectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetDetectsResponse DescribeNetDetects(DescribeNetDetectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNetDetectsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNetDetectsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNetDetects"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -2542,6 +2632,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyNatGatewayDestinationIpPortTranslationNatRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyNetDetect)用于修改网络探测参数。
+     * @param req ModifyNetDetectRequest
+     * @return ModifyNetDetectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetDetectResponse ModifyNetDetect(ModifyNetDetectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetDetectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetDetectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNetDetect"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

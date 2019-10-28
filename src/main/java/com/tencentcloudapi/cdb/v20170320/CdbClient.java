@@ -211,6 +211,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *创建放置实例的置放群组
+     * @param req CreateDeployGroupRequest
+     * @return CreateDeployGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeployGroupResponse CreateDeployGroup(CreateDeployGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDeployGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDeployGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDeployGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（CreateParamTemplate）用于创建参数模板。
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
@@ -258,6 +276,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteBackupResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteBackup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据置放群组ID删除置放群组（置放群组中有资源存在时不能删除该置放群组）
+     * @param req DeleteDeployGroupsRequest
+     * @return DeleteDeployGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeployGroupsResponse DeleteDeployGroups(DeleteDeployGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDeployGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDeployGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDeployGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -660,6 +696,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDefaultParamsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDefaultParams"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据置放群组 ID 或置放群组名称查询置放群组列表
+     * @param req DescribeDeployGroupListRequest
+     * @return DescribeDeployGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeployGroupListResponse DescribeDeployGroupList(DescribeDeployGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeployGroupListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeployGroupListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDeployGroupList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1182,6 +1236,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceTagResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyInstanceTag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改置放群组的名称或者描述
+     * @param req ModifyNameOrDescByDpIdRequest
+     * @return ModifyNameOrDescByDpIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNameOrDescByDpIdResponse ModifyNameOrDescByDpId(ModifyNameOrDescByDpIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNameOrDescByDpIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNameOrDescByDpIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNameOrDescByDpId"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

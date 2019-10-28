@@ -58,7 +58,7 @@ public class TextProcessRequest  extends AbstractModel{
     private String SessionAttributes;
 
     /**
-    * 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
+    * 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
     */
     @SerializedName("PlatformType")
     @Expose
@@ -145,16 +145,16 @@ public class TextProcessRequest  extends AbstractModel{
     }
 
     /**
-     * 获取平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
-     * @return PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
+     * 获取平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
+     * @return PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
      */
     public String getPlatformType() {
         return this.PlatformType;
     }
 
     /**
-     * 设置平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
-     * @param PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
+     * 设置平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
+     * @param PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
      */
     public void setPlatformType(String PlatformType) {
         this.PlatformType = PlatformType;
