@@ -81,6 +81,27 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     private Integer NeedPersonInfo;
 
     /**
+    * 图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
+0: 不进行控制， 
+1:较低的质量要求， 
+2: 一般的质量要求， 
+3: 较高的质量要求。 
+4: 很高的质量要求。 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+    */
+    @SerializedName("QualityControl")
+    @Expose
+    private Integer QualityControl;
+
+    /**
+    * 出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
+    */
+    @SerializedName("FaceMatchThreshold")
+    @Expose
+    private Float FaceMatchThreshold;
+
+    /**
      * 获取希望搜索的人员库列表，上限100个。
      * @return GroupIds 希望搜索的人员库列表，上限100个。
      */
@@ -229,6 +250,66 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
+     * 获取图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
+0: 不进行控制， 
+1:较低的质量要求， 
+2: 一般的质量要求， 
+3: 较高的质量要求。 
+4: 很高的质量要求。 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     * @return QualityControl 图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
+0: 不进行控制， 
+1:较低的质量要求， 
+2: 一般的质量要求， 
+3: 较高的质量要求。 
+4: 很高的质量要求。 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     */
+    public Integer getQualityControl() {
+        return this.QualityControl;
+    }
+
+    /**
+     * 设置图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
+0: 不进行控制， 
+1:较低的质量要求， 
+2: 一般的质量要求， 
+3: 较高的质量要求。 
+4: 很高的质量要求。 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     * @param QualityControl 图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
+0: 不进行控制， 
+1:较低的质量要求， 
+2: 一般的质量要求， 
+3: 较高的质量要求。 
+4: 很高的质量要求。 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     */
+    public void setQualityControl(Integer QualityControl) {
+        this.QualityControl = QualityControl;
+    }
+
+    /**
+     * 获取出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
+     * @return FaceMatchThreshold 出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
+     */
+    public Float getFaceMatchThreshold() {
+        return this.FaceMatchThreshold;
+    }
+
+    /**
+     * 设置出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
+     * @param FaceMatchThreshold 出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
+     */
+    public void setFaceMatchThreshold(Float FaceMatchThreshold) {
+        this.FaceMatchThreshold = FaceMatchThreshold;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -239,6 +320,8 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
         this.setParamSimple(map, prefix + "MinFaceSize", this.MinFaceSize);
         this.setParamSimple(map, prefix + "MaxPersonNum", this.MaxPersonNum);
         this.setParamSimple(map, prefix + "NeedPersonInfo", this.NeedPersonInfo);
+        this.setParamSimple(map, prefix + "QualityControl", this.QualityControl);
+        this.setParamSimple(map, prefix + "FaceMatchThreshold", this.FaceMatchThreshold);
 
     }
 }

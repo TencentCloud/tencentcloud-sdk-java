@@ -67,6 +67,26 @@ public class TiiaClient extends AbstractClient{
     }
 
     /**
+     *根据输入的裁剪比例，智能判断一张图片的最佳裁剪区域，确保原图的主体区域不受影响。
+
+可以自动裁剪图片，适应不同平台、设备的展示要求，避免简单拉伸带来的变形。
+     * @param req CropImageRequest
+     * @return CropImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CropImageResponse CropImage(CropImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CropImageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CropImageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CropImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *传入一张图片，可以识别图片中包含的人物是否为公众人物，如果是，输出人物的姓名、基本信息、脸部坐标。
 
 支持识别一张图片中存在的多个人脸，针对每个人脸，会给出与之最相似的公众人物。
@@ -87,6 +107,26 @@ public class TiiaClient extends AbstractClient{
     }
 
     /**
+     *输入一张图片，返回AI针对一张图片是否是恶心的一系列判断值。
+
+通过恶心图片识别, 可以判断一张图片是否令人恶心, 同时给出它属于的潜在类别, 让您能够过滤掉使人不愉快的图片.
+     * @param req DetectDisgustRequest
+     * @return DetectDisgustResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectDisgustResponse DetectDisgust(DetectDisgustRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectDisgustResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectDisgustResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetectDisgust"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *传入一张图片，识别出图片中存在的物体，并返回物体的名称（分类）、置信度，一张图片会给出多个可能的标签。
      * @param req DetectLabelRequest
      * @return DetectLabelResponse
@@ -98,6 +138,24 @@ public class TiiaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DetectLabelResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DetectLabel"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *可以识别输入的图片中是否包含不良行为，例如打架斗殴、赌博、抽烟等，可以应用于广告图、直播截图、短视频截图等审核，减少不良行为对平台内容质量的影响，维护健康向上的互联网环境。
+     * @param req DetectMisbehaviorRequest
+     * @return DetectMisbehaviorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectMisbehaviorResponse DetectMisbehavior(DetectMisbehaviorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectMisbehaviorResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectMisbehaviorResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetectMisbehavior"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

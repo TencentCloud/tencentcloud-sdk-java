@@ -37,6 +37,14 @@ public class Result  extends AbstractModel{
     private FaceRect FaceRect;
 
     /**
+    * 检测出的人脸图片状态返回码。0 表示正常。 
+-1601代表不符合图片质量控制要求，此时Candidate内容为空。
+    */
+    @SerializedName("RetCode")
+    @Expose
+    private Integer RetCode;
+
+    /**
      * 获取识别出的最相似候选人
      * @return Candidates 识别出的最相似候选人
      */
@@ -69,11 +77,32 @@ public class Result  extends AbstractModel{
     }
 
     /**
+     * 获取检测出的人脸图片状态返回码。0 表示正常。 
+-1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     * @return RetCode 检测出的人脸图片状态返回码。0 表示正常。 
+-1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     */
+    public Integer getRetCode() {
+        return this.RetCode;
+    }
+
+    /**
+     * 设置检测出的人脸图片状态返回码。0 表示正常。 
+-1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     * @param RetCode 检测出的人脸图片状态返回码。0 表示正常。 
+-1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     */
+    public void setRetCode(Integer RetCode) {
+        this.RetCode = RetCode;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Candidates.", this.Candidates);
         this.setParamObj(map, prefix + "FaceRect.", this.FaceRect);
+        this.setParamSimple(map, prefix + "RetCode", this.RetCode);
 
     }
 }

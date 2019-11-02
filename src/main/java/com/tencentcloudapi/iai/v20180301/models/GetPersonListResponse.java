@@ -46,6 +46,14 @@ public class GetPersonListResponse  extends AbstractModel{
     private Integer FaceNum;
 
     /**
+    * 人脸识别所用的算法模型版本。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FaceModelVersion")
+    @Expose
+    private String FaceModelVersion;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -109,6 +117,26 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
+     * 获取人脸识别所用的算法模型版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return FaceModelVersion 人脸识别所用的算法模型版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFaceModelVersion() {
+        return this.FaceModelVersion;
+    }
+
+    /**
+     * 设置人脸识别所用的算法模型版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FaceModelVersion 人脸识别所用的算法模型版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFaceModelVersion(String FaceModelVersion) {
+        this.FaceModelVersion = FaceModelVersion;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +159,7 @@ public class GetPersonListResponse  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PersonInfos.", this.PersonInfos);
         this.setParamSimple(map, prefix + "PersonNum", this.PersonNum);
         this.setParamSimple(map, prefix + "FaceNum", this.FaceNum);
+        this.setParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

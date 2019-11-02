@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class GetDisableRecordsRequest  extends AbstractModel{
 
     /**
-    * 开始时间
+    * 开始时间，如：2018-12-12 10:24:00。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间，如：2018-12-14 10:24:00。
     */
     @SerializedName("EndTime")
     @Expose
@@ -53,32 +53,46 @@ enable：当前为可用状态，已解禁，可正常访问
     private String Status;
 
     /**
-     * 获取开始时间
-     * @return StartTime 开始时间
+    * 分页查询偏移量，默认为 0 （第一页）。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Integer Offset;
+
+    /**
+    * 分页查询限制数目，默认为20。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Integer Limit;
+
+    /**
+     * 获取开始时间，如：2018-12-12 10:24:00。
+     * @return StartTime 开始时间，如：2018-12-12 10:24:00。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * 设置开始时间
-     * @param StartTime 开始时间
+     * 设置开始时间，如：2018-12-12 10:24:00。
+     * @param StartTime 开始时间，如：2018-12-12 10:24:00。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * 获取结束时间
-     * @return EndTime 结束时间
+     * 获取结束时间，如：2018-12-14 10:24:00。
+     * @return EndTime 结束时间，如：2018-12-14 10:24:00。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * 设置结束时间
-     * @param EndTime 结束时间
+     * 设置结束时间，如：2018-12-14 10:24:00。
+     * @param EndTime 结束时间，如：2018-12-14 10:24:00。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -125,6 +139,38 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
+     * 获取分页查询偏移量，默认为 0 （第一页）。
+     * @return Offset 分页查询偏移量，默认为 0 （第一页）。
+     */
+    public Integer getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * 设置分页查询偏移量，默认为 0 （第一页）。
+     * @param Offset 分页查询偏移量，默认为 0 （第一页）。
+     */
+    public void setOffset(Integer Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * 获取分页查询限制数目，默认为20。
+     * @return Limit 分页查询限制数目，默认为20。
+     */
+    public Integer getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * 设置分页查询限制数目，默认为20。
+     * @param Limit 分页查询限制数目，默认为20。
+     */
+    public void setLimit(Integer Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -132,6 +178,8 @@ enable：当前为可用状态，已解禁，可正常访问
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

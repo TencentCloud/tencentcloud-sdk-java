@@ -30,11 +30,18 @@ public class EduPaperOCRResponse  extends AbstractModel{
     private TextEduPaper [] EduPaperInfos;
 
     /**
-    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
     */
     @SerializedName("Angle")
     @Expose
     private Integer Angle;
+
+    /**
+    * 结构化方式输出，具体内容请点击左侧链接。
+    */
+    @SerializedName("QuestionBlockInfos")
+    @Expose
+    private QuestionBlockObj [] QuestionBlockInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -60,19 +67,35 @@ public class EduPaperOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
-     * @return Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     * 获取图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+     * @return Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
      */
     public Integer getAngle() {
         return this.Angle;
     }
 
     /**
-     * 设置图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
-     * @param Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     * 设置图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+     * @param Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
      */
     public void setAngle(Integer Angle) {
         this.Angle = Angle;
+    }
+
+    /**
+     * 获取结构化方式输出，具体内容请点击左侧链接。
+     * @return QuestionBlockInfos 结构化方式输出，具体内容请点击左侧链接。
+     */
+    public QuestionBlockObj [] getQuestionBlockInfos() {
+        return this.QuestionBlockInfos;
+    }
+
+    /**
+     * 设置结构化方式输出，具体内容请点击左侧链接。
+     * @param QuestionBlockInfos 结构化方式输出，具体内容请点击左侧链接。
+     */
+    public void setQuestionBlockInfos(QuestionBlockObj [] QuestionBlockInfos) {
+        this.QuestionBlockInfos = QuestionBlockInfos;
     }
 
     /**
@@ -97,6 +120,7 @@ public class EduPaperOCRResponse  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "EduPaperInfos.", this.EduPaperInfos);
         this.setParamSimple(map, prefix + "Angle", this.Angle);
+        this.setParamArrayObj(map, prefix + "QuestionBlockInfos.", this.QuestionBlockInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

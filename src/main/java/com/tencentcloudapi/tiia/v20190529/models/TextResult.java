@@ -47,6 +47,11 @@ public class TextResult  extends AbstractModel{
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
+
+Suggestion由Type决定：
+Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
+Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
+其他情况下Suggestion为REVIEW。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -151,10 +156,20 @@ OTHERS：其他
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
+
+Suggestion由Type决定：
+Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
+Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
+其他情况下Suggestion为REVIEW。
      * @return Suggestion 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
+
+Suggestion由Type决定：
+Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
+Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
+其他情况下Suggestion为REVIEW。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -165,10 +180,20 @@ BLOCK：违规
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
+
+Suggestion由Type决定：
+Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
+Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
+其他情况下Suggestion为REVIEW。
      * @param Suggestion 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
+
+Suggestion由Type决定：
+Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
+Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
+其他情况下Suggestion为REVIEW。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;

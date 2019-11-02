@@ -85,6 +85,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *创建实例子账号
+     * @param req CreateInstanceAccountRequest
+     * @return CreateInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceAccountResponse CreateInstanceAccount(CreateInstanceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstanceAccountResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstanceAccountResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateInstanceAccount"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建redis实例
      * @param req CreateInstancesRequest
      * @return CreateInstancesResponse
@@ -96,6 +114,24 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除实例子账号
+     * @param req DeleteInstanceAccountRequest
+     * @return DeleteInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceAccountResponse DeleteInstanceAccount(DeleteInstanceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteInstanceAccountResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteInstanceAccountResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteInstanceAccount"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -139,6 +175,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查看实例子账号信息
+     * @param req DescribeInstanceAccountRequest
+     * @return DescribeInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceAccountResponse DescribeInstanceAccount(DescribeInstanceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceAccountResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceAccountResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceAccount"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询 CRS 实例备份列表
      * @param req DescribeInstanceBackupsRequest
      * @return DescribeInstanceBackupsResponse
@@ -168,6 +222,150 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceDealDetailResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceDealDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例大Key
+     * @param req DescribeInstanceMonitorBigKeyRequest
+     * @return DescribeInstanceMonitorBigKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceMonitorBigKeyResponse DescribeInstanceMonitorBigKey(DescribeInstanceMonitorBigKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceMonitorBigKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorBigKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceMonitorBigKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例大Key大小分布
+     * @param req DescribeInstanceMonitorBigKeySizeDistRequest
+     * @return DescribeInstanceMonitorBigKeySizeDistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceMonitorBigKeySizeDistResponse DescribeInstanceMonitorBigKeySizeDist(DescribeInstanceMonitorBigKeySizeDistRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceMonitorBigKeySizeDistResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorBigKeySizeDistResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceMonitorBigKeySizeDist"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例大Key类型分布
+     * @param req DescribeInstanceMonitorBigKeyTypeDistRequest
+     * @return DescribeInstanceMonitorBigKeyTypeDistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceMonitorBigKeyTypeDistResponse DescribeInstanceMonitorBigKeyTypeDist(DescribeInstanceMonitorBigKeyTypeDistRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceMonitorBigKeyTypeDist"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例热Key
+     * @param req DescribeInstanceMonitorHotKeyRequest
+     * @return DescribeInstanceMonitorHotKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceMonitorHotKeyResponse DescribeInstanceMonitorHotKey(DescribeInstanceMonitorHotKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceMonitorHotKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorHotKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceMonitorHotKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例访问来源信息
+     * @param req DescribeInstanceMonitorSIPRequest
+     * @return DescribeInstanceMonitorSIPResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceMonitorSIPResponse DescribeInstanceMonitorSIP(DescribeInstanceMonitorSIPRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceMonitorSIPResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorSIPResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceMonitorSIP"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例大Key大小分布
+     * @param req DescribeInstanceMonitorTookDistRequest
+     * @return DescribeInstanceMonitorTookDistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceMonitorTookDistResponse DescribeInstanceMonitorTookDist(DescribeInstanceMonitorTookDistRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceMonitorTookDistResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorTookDistResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceMonitorTookDist"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例访问命令
+     * @param req DescribeInstanceMonitorTopNCmdRequest
+     * @return DescribeInstanceMonitorTopNCmdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceMonitorTopNCmdResponse DescribeInstanceMonitorTopNCmd(DescribeInstanceMonitorTopNCmdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceMonitorTopNCmd"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例CPU耗时
+     * @param req DescribeInstanceMonitorTopNCmdTookRequest
+     * @return DescribeInstanceMonitorTopNCmdTookResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceMonitorTopNCmdTookResponse DescribeInstanceMonitorTopNCmdTook(DescribeInstanceMonitorTopNCmdTookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceMonitorTopNCmdTookResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorTopNCmdTookResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceMonitorTopNCmdTook"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -474,6 +672,24 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改实例子账号
+     * @param req ModifyInstanceAccountRequest
+     * @return ModifyInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceAccountResponse ModifyInstanceAccount(ModifyInstanceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceAccountResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceAccountResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyInstanceAccount"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

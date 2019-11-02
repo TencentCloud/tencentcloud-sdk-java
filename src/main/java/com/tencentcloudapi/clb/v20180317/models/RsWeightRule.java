@@ -30,18 +30,18 @@ public class RsWeightRule  extends AbstractModel{
     private String ListenerId;
 
     /**
-    * 转发规则的ID
-    */
-    @SerializedName("LocationId")
-    @Expose
-    private String LocationId;
-
-    /**
     * 要修改权重的后端机器列表
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
+
+    /**
+    * 转发规则的ID，七层规则时需要此参数，4层规则不需要
+    */
+    @SerializedName("LocationId")
+    @Expose
+    private String LocationId;
 
     /**
     * 目标规则的域名，提供LocationId参数时本参数不生效
@@ -81,22 +81,6 @@ public class RsWeightRule  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的ID
-     * @return LocationId 转发规则的ID
-     */
-    public String getLocationId() {
-        return this.LocationId;
-    }
-
-    /**
-     * 设置转发规则的ID
-     * @param LocationId 转发规则的ID
-     */
-    public void setLocationId(String LocationId) {
-        this.LocationId = LocationId;
-    }
-
-    /**
      * 获取要修改权重的后端机器列表
      * @return Targets 要修改权重的后端机器列表
      */
@@ -110,6 +94,22 @@ public class RsWeightRule  extends AbstractModel{
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
+    }
+
+    /**
+     * 获取转发规则的ID，七层规则时需要此参数，4层规则不需要
+     * @return LocationId 转发规则的ID，七层规则时需要此参数，4层规则不需要
+     */
+    public String getLocationId() {
+        return this.LocationId;
+    }
+
+    /**
+     * 设置转发规则的ID，七层规则时需要此参数，4层规则不需要
+     * @param LocationId 转发规则的ID，七层规则时需要此参数，4层规则不需要
+     */
+    public void setLocationId(String LocationId) {
+        this.LocationId = LocationId;
     }
 
     /**
@@ -165,8 +165,8 @@ public class RsWeightRule  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
-        this.setParamSimple(map, prefix + "LocationId", this.LocationId);
         this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
+        this.setParamSimple(map, prefix + "LocationId", this.LocationId);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Weight", this.Weight);

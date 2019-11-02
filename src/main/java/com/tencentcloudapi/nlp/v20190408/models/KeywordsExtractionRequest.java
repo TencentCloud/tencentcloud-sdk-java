@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class KeywordsExtractionRequest  extends AbstractModel{
 
     /**
-    * 待处理的文本（仅支持UTF-8格式，不超过2000字）
+    * 待处理的文本（仅支持UTF-8格式，不超过10000字）
     */
     @SerializedName("Text")
     @Expose
@@ -37,16 +37,16 @@ public class KeywordsExtractionRequest  extends AbstractModel{
     private Long Num;
 
     /**
-     * 获取待处理的文本（仅支持UTF-8格式，不超过2000字）
-     * @return Text 待处理的文本（仅支持UTF-8格式，不超过2000字）
+     * 获取待处理的文本（仅支持UTF-8格式，不超过10000字）
+     * @return Text 待处理的文本（仅支持UTF-8格式，不超过10000字）
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * 设置待处理的文本（仅支持UTF-8格式，不超过2000字）
-     * @param Text 待处理的文本（仅支持UTF-8格式，不超过2000字）
+     * 设置待处理的文本（仅支持UTF-8格式，不超过10000字）
+     * @param Text 待处理的文本（仅支持UTF-8格式，不超过10000字）
      */
     public void setText(String Text) {
         this.Text = Text;

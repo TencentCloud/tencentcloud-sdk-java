@@ -86,6 +86,13 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     private String SeatCategory;
 
     /**
+    * 身份证号
+    */
+    @SerializedName("ID")
+    @Expose
+    private String ID;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -237,6 +244,22 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
+     * 获取身份证号
+     * @return ID 身份证号
+     */
+    public String getID() {
+        return this.ID;
+    }
+
+    /**
+     * 设置身份证号
+     * @param ID 身份证号
+     */
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -265,6 +288,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "SeatCategory", this.SeatCategory);
+        this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

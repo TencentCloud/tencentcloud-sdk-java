@@ -30,6 +30,22 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     private MapInfo [] MapInfoList;
 
     /**
+    * 服务端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServerRegionRelation")
+    @Expose
+    private RegionMapRelation [] ServerRegionRelation;
+
+    /**
+    * 客户端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientRegionRelation")
+    @Expose
+    private RegionMapRelation [] ClientRegionRelation;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +69,46 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     }
 
     /**
+     * 获取服务端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ServerRegionRelation 服务端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RegionMapRelation [] getServerRegionRelation() {
+        return this.ServerRegionRelation;
+    }
+
+    /**
+     * 设置服务端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServerRegionRelation 服务端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServerRegionRelation(RegionMapRelation [] ServerRegionRelation) {
+        this.ServerRegionRelation = ServerRegionRelation;
+    }
+
+    /**
+     * 获取客户端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ClientRegionRelation 客户端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RegionMapRelation [] getClientRegionRelation() {
+        return this.ClientRegionRelation;
+    }
+
+    /**
+     * 设置客户端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientRegionRelation 客户端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientRegionRelation(RegionMapRelation [] ClientRegionRelation) {
+        this.ClientRegionRelation = ClientRegionRelation;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +129,8 @@ public class DescribeMapInfoResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "MapInfoList.", this.MapInfoList);
+        this.setParamArrayObj(map, prefix + "ServerRegionRelation.", this.ServerRegionRelation);
+        this.setParamArrayObj(map, prefix + "ClientRegionRelation.", this.ClientRegionRelation);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

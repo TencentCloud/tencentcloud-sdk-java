@@ -51,14 +51,15 @@ public class FaceFusionRequest  extends AbstractModel{
     private String RspImgType;
 
     /**
-    * 0表示不需要鉴黄，1表示需要鉴黄。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1.
+    * 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
     */
     @SerializedName("PornDetect")
     @Expose
     private Integer PornDetect;
 
     /**
-    * 0表示不需要鉴政，1表示需要鉴政。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1。鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
+    * 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
     */
     @SerializedName("CelebrityIdentify")
     @Expose
@@ -129,32 +130,36 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取0表示不需要鉴黄，1表示需要鉴黄。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1.
-     * @return PornDetect 0表示不需要鉴黄，1表示需要鉴黄。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1.
+     * 获取历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
+     * @return PornDetect 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      */
     public Integer getPornDetect() {
         return this.PornDetect;
     }
 
     /**
-     * 设置0表示不需要鉴黄，1表示需要鉴黄。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1.
-     * @param PornDetect 0表示不需要鉴黄，1表示需要鉴黄。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1.
+     * 设置历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
+     * @param PornDetect 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      */
     public void setPornDetect(Integer PornDetect) {
         this.PornDetect = PornDetect;
     }
 
     /**
-     * 获取0表示不需要鉴政，1表示需要鉴政。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1。鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
-     * @return CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1。鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
+     * 获取0表示不需要鉴政，1表示需要鉴政。默认值为0。
+鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
+     * @return CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
      */
     public Integer getCelebrityIdentify() {
         return this.CelebrityIdentify;
     }
 
     /**
-     * 设置0表示不需要鉴政，1表示需要鉴政。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1。鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
-     * @param CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1。鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
+     * 设置0表示不需要鉴政，1表示需要鉴政。默认值为0。
+鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
+     * @param CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
      */
     public void setCelebrityIdentify(Integer CelebrityIdentify) {
         this.CelebrityIdentify = CelebrityIdentify;

@@ -292,6 +292,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     private ExtraInfo ExtraInfo;
 
     /**
+    * 是否可绑定高防包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDDos")
+    @Expose
+    private Boolean IsDDos;
+
+    /**
+    * 负载均衡维度的个性化配置ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigId")
+    @Expose
+    private String ConfigId;
+
+    /**
      * 获取负载均衡实例 ID。
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -960,6 +976,46 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * 获取是否可绑定高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return IsDDos 是否可绑定高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDDos() {
+        return this.IsDDos;
+    }
+
+    /**
+     * 设置是否可绑定高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDDos 是否可绑定高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDDos(Boolean IsDDos) {
+        this.IsDDos = IsDDos;
+    }
+
+    /**
+     * 获取负载均衡维度的个性化配置ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ConfigId 负载均衡维度的个性化配置ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConfigId() {
+        return this.ConfigId;
+    }
+
+    /**
+     * 设置负载均衡维度的个性化配置ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigId 负载均衡维度的个性化配置ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigId(String ConfigId) {
+        this.ConfigId = ConfigId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -997,6 +1053,8 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
         this.setParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
         this.setParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
+        this.setParamSimple(map, prefix + "IsDDos", this.IsDDos);
+        this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
 
     }
 }

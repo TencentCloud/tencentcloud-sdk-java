@@ -58,6 +58,13 @@ public class PushTask  extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 预热区域，mainland，overseas或global。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * 获取预热任务Id，前十位为时间戳。
      * @return TaskId 预热任务Id，前十位为时间戳。
      */
@@ -138,6 +145,22 @@ public class PushTask  extends AbstractModel{
     }
 
     /**
+     * 获取预热区域，mainland，overseas或global。
+     * @return Area 预热区域，mainland，overseas或global。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * 设置预热区域，mainland，overseas或global。
+     * @param Area 预热区域，mainland，overseas或global。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class PushTask  extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Percent", this.Percent);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

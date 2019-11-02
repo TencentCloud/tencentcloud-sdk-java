@@ -31,6 +31,14 @@ public class GetDisableRecordsResponse  extends AbstractModel{
     private UrlRecord [] UrlRecordList;
 
     /**
+    * 任务总数，用于分页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Integer TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -58,6 +66,26 @@ public class GetDisableRecordsResponse  extends AbstractModel{
     }
 
     /**
+     * 获取任务总数，用于分页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return TotalCount 任务总数，用于分页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * 设置任务总数，用于分页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 任务总数，用于分页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -78,6 +106,7 @@ public class GetDisableRecordsResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "UrlRecordList.", this.UrlRecordList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

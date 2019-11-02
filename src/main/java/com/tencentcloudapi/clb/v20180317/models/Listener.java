@@ -108,6 +108,14 @@ public class Listener  extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EndPort")
+    @Expose
+    private Integer EndPort;
+
+    /**
      * 获取负载均衡监听器 ID
      * @return ListenerId 负载均衡监听器 ID
      */
@@ -316,6 +324,26 @@ public class Listener  extends AbstractModel{
     }
 
     /**
+     * 获取端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return EndPort 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getEndPort() {
+        return this.EndPort;
+    }
+
+    /**
+     * 设置端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndPort 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndPort(Integer EndPort) {
+        this.EndPort = EndPort;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -330,6 +358,7 @@ public class Listener  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "EndPort", this.EndPort);
 
     }
 }

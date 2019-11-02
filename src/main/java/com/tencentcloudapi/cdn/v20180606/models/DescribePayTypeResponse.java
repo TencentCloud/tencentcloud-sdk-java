@@ -26,6 +26,7 @@ public class DescribePayTypeResponse  extends AbstractModel{
     * 计费类型：
 flux：流量计费
 bandwidth：带宽计费
+如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
     */
     @SerializedName("PayType")
     @Expose
@@ -53,6 +54,24 @@ max：峰值带宽计费，日结模式
     private String StatType;
 
     /**
+    * 地区计费方式，仅在查询中国境外 CDN 计费方式时可用
+all：表示全地区统一计费
+multiple：表示分地区计费。
+    */
+    @SerializedName("RegionType")
+    @Expose
+    private String RegionType;
+
+    /**
+    * 当前计费类型：
+flux：流量计费
+bandwidth：带宽计费
+    */
+    @SerializedName("CurrentPayType")
+    @Expose
+    private String CurrentPayType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -63,9 +82,11 @@ max：峰值带宽计费，日结模式
      * 获取计费类型：
 flux：流量计费
 bandwidth：带宽计费
+如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
      * @return PayType 计费类型：
 flux：流量计费
 bandwidth：带宽计费
+如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
      */
     public String getPayType() {
         return this.PayType;
@@ -75,9 +96,11 @@ bandwidth：带宽计费
      * 设置计费类型：
 flux：流量计费
 bandwidth：带宽计费
+如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
      * @param PayType 计费类型：
 flux：流量计费
 bandwidth：带宽计费
+如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
      */
     public void setPayType(String PayType) {
         this.PayType = PayType;
@@ -144,6 +167,54 @@ max：峰值带宽计费，日结模式
     }
 
     /**
+     * 获取地区计费方式，仅在查询中国境外 CDN 计费方式时可用
+all：表示全地区统一计费
+multiple：表示分地区计费。
+     * @return RegionType 地区计费方式，仅在查询中国境外 CDN 计费方式时可用
+all：表示全地区统一计费
+multiple：表示分地区计费。
+     */
+    public String getRegionType() {
+        return this.RegionType;
+    }
+
+    /**
+     * 设置地区计费方式，仅在查询中国境外 CDN 计费方式时可用
+all：表示全地区统一计费
+multiple：表示分地区计费。
+     * @param RegionType 地区计费方式，仅在查询中国境外 CDN 计费方式时可用
+all：表示全地区统一计费
+multiple：表示分地区计费。
+     */
+    public void setRegionType(String RegionType) {
+        this.RegionType = RegionType;
+    }
+
+    /**
+     * 获取当前计费类型：
+flux：流量计费
+bandwidth：带宽计费
+     * @return CurrentPayType 当前计费类型：
+flux：流量计费
+bandwidth：带宽计费
+     */
+    public String getCurrentPayType() {
+        return this.CurrentPayType;
+    }
+
+    /**
+     * 设置当前计费类型：
+flux：流量计费
+bandwidth：带宽计费
+     * @param CurrentPayType 当前计费类型：
+flux：流量计费
+bandwidth：带宽计费
+     */
+    public void setCurrentPayType(String CurrentPayType) {
+        this.CurrentPayType = CurrentPayType;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -166,6 +237,8 @@ max：峰值带宽计费，日结模式
         this.setParamSimple(map, prefix + "PayType", this.PayType);
         this.setParamSimple(map, prefix + "BillingCycle", this.BillingCycle);
         this.setParamSimple(map, prefix + "StatType", this.StatType);
+        this.setParamSimple(map, prefix + "RegionType", this.RegionType);
+        this.setParamSimple(map, prefix + "CurrentPayType", this.CurrentPayType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

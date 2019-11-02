@@ -87,6 +87,13 @@ public class RuleInput  extends AbstractModel{
     private Boolean Http2;
 
     /**
+    * 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+    */
+    @SerializedName("TargetType")
+    @Expose
+    private String TargetType;
+
+    /**
      * 获取转发规则的域名。长度限制为：1~80。
      * @return Domain 转发规则的域名。长度限制为：1~80。
      */
@@ -235,6 +242,22 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
+     * 获取后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     * @return TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     */
+    public String getTargetType() {
+        return this.TargetType;
+    }
+
+    /**
+     * 设置后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     * @param TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     */
+    public void setTargetType(String TargetType) {
+        this.TargetType = TargetType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -247,6 +270,7 @@ public class RuleInput  extends AbstractModel{
         this.setParamSimple(map, prefix + "ForwardType", this.ForwardType);
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
         this.setParamSimple(map, prefix + "Http2", this.Http2);
+        this.setParamSimple(map, prefix + "TargetType", this.TargetType);
 
     }
 }

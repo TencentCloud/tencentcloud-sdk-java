@@ -58,6 +58,14 @@ public class PersonInfo  extends AbstractModel{
     private String [] FaceIds;
 
     /**
+    * Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+    */
+    @SerializedName("CreationTimestamp")
+    @Expose
+    private Integer CreationTimestamp;
+
+    /**
      * 获取人员名称
      * @return PersonName 人员名称
      */
@@ -138,6 +146,26 @@ public class PersonInfo  extends AbstractModel{
     }
 
     /**
+     * 获取Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * @return CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     */
+    public Integer getCreationTimestamp() {
+        return this.CreationTimestamp;
+    }
+
+    /**
+     * 设置Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * @param CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     */
+    public void setCreationTimestamp(Integer CreationTimestamp) {
+        this.CreationTimestamp = CreationTimestamp;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +174,7 @@ public class PersonInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "Gender", this.Gender);
         this.setParamArraySimple(map, prefix + "PersonExDescriptions.", this.PersonExDescriptions);
         this.setParamArraySimple(map, prefix + "FaceIds.", this.FaceIds);
+        this.setParamSimple(map, prefix + "CreationTimestamp", this.CreationTimestamp);
 
     }
 }

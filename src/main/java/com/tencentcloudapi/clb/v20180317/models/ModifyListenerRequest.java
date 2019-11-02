@@ -73,6 +73,13 @@ public class ModifyListenerRequest  extends AbstractModel{
     private String Scheduler;
 
     /**
+    * 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+    */
+    @SerializedName("SniSwitch")
+    @Expose
+    private Integer SniSwitch;
+
+    /**
      * 获取负载均衡实例 ID
      * @return LoadBalancerId 负载均衡实例 ID
      */
@@ -189,6 +196,22 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+     * @return SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+     */
+    public Integer getSniSwitch() {
+        return this.SniSwitch;
+    }
+
+    /**
+     * 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+     * @param SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+     */
+    public void setSniSwitch(Integer SniSwitch) {
+        this.SniSwitch = SniSwitch;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -199,6 +222,7 @@ public class ModifyListenerRequest  extends AbstractModel{
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
+        this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
 
     }
 }

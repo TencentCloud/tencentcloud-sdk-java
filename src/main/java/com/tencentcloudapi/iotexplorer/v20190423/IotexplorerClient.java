@@ -49,6 +49,42 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *提供给用户异步调用设备动作的能力
+     * @param req CallDeviceActionAsyncRequest
+     * @return CallDeviceActionAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CallDeviceActionAsyncResponse CallDeviceActionAsync(CallDeviceActionAsyncRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CallDeviceActionAsyncResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CallDeviceActionAsyncResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CallDeviceActionAsync"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *为用户提供同步调用设备动作的能力。
+     * @param req CallDeviceActionSyncRequest
+     * @return CallDeviceActionSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CallDeviceActionSyncResponse CallDeviceActionSync(CallDeviceActionSyncRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CallDeviceActionSyncResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CallDeviceActionSyncResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CallDeviceActionSync"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据设备产品ID、设备名称，设置控制设备的属性数据。
      * @param req ControlDeviceDataRequest
      * @return ControlDeviceDataResponse

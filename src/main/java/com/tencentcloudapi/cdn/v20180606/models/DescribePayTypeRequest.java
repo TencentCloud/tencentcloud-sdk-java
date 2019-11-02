@@ -23,9 +23,43 @@ import java.util.HashMap;
 public class DescribePayTypeRequest  extends AbstractModel{
 
     /**
+    * 指定服务地域查询，不填充表示查询中国境内 CDN 计费方式
+mainland：指定查询中国境内 CDN 计费方式
+overseas：指定查询中国境外 CDN 计费方式
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+     * 获取指定服务地域查询，不填充表示查询中国境内 CDN 计费方式
+mainland：指定查询中国境内 CDN 计费方式
+overseas：指定查询中国境外 CDN 计费方式
+     * @return Area 指定服务地域查询，不填充表示查询中国境内 CDN 计费方式
+mainland：指定查询中国境内 CDN 计费方式
+overseas：指定查询中国境外 CDN 计费方式
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * 设置指定服务地域查询，不填充表示查询中国境内 CDN 计费方式
+mainland：指定查询中国境内 CDN 计费方式
+overseas：指定查询中国境外 CDN 计费方式
+     * @param Area 指定服务地域查询，不填充表示查询中国境内 CDN 计费方式
+mainland：指定查询中国境内 CDN 计费方式
+overseas：指定查询中国境外 CDN 计费方式
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

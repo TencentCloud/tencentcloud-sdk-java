@@ -75,7 +75,7 @@ statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 �
 
     /**
     * 时间粒度，支持以下几种模式：
-min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据
+min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据（指定查询服务地域为中国境外时不支持 1 分钟粒度）
 5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
 hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
 day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
@@ -93,16 +93,19 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
     private Boolean Detail;
 
     /**
-    * 指定运营商查询，不填充表示查询所有运营商
+    * 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
 运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+指定运营商查询时，不可同时指定省份、IP协议查询
     */
     @SerializedName("Isp")
     @Expose
     private Integer Isp;
 
     /**
-    * 指定省份查询，不填充表示查询所有省份
-省份编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+    * 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
+查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
     */
     @SerializedName("District")
     @Expose
@@ -128,12 +131,31 @@ https：指定查询 HTTPS 对应指标
     /**
     * 指定IP协议查询，不填充表示查询所有协议
 all：所有协议
-ipv4：指定查询 ipv4对应指标
+ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
+指定IP协议查询时，不可同时指定省份、运营商查询
     */
     @SerializedName("IpProtocol")
     @Expose
     private String IpProtocol;
+
+    /**
+    * 指定服务地域查询，不填充表示查询中国境内CDN数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+    * 查询中国境外CDN数据时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas 时可用）
+server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
+client：指定查询客户端地区（用户请求终端所在地区）数据
+    */
+    @SerializedName("AreaType")
+    @Expose
+    private String AreaType;
 
     /**
      * 获取查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
@@ -281,12 +303,12 @@ statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 �
 
     /**
      * 获取时间粒度，支持以下几种模式：
-min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据
+min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据（指定查询服务地域为中国境外时不支持 1 分钟粒度）
 5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
 hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
 day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
      * @return Interval 时间粒度，支持以下几种模式：
-min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据
+min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据（指定查询服务地域为中国境外时不支持 1 分钟粒度）
 5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
 hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
 day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
@@ -297,12 +319,12 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 
     /**
      * 设置时间粒度，支持以下几种模式：
-min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据
+min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据（指定查询服务地域为中国境外时不支持 1 分钟粒度）
 5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
 hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
 day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
      * @param Interval 时间粒度，支持以下几种模式：
-min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据
+min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据（指定查询服务地域为中国境外时不支持 1 分钟粒度）
 5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
 hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
 day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
@@ -332,40 +354,52 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
     }
 
     /**
-     * 获取指定运营商查询，不填充表示查询所有运营商
+     * 获取查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
 运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
-     * @return Isp 指定运营商查询，不填充表示查询所有运营商
+指定运营商查询时，不可同时指定省份、IP协议查询
+     * @return Isp 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
 运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+指定运营商查询时，不可同时指定省份、IP协议查询
      */
     public Integer getIsp() {
         return this.Isp;
     }
 
     /**
-     * 设置指定运营商查询，不填充表示查询所有运营商
+     * 设置查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
 运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
-     * @param Isp 指定运营商查询，不填充表示查询所有运营商
+指定运营商查询时，不可同时指定省份、IP协议查询
+     * @param Isp 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
 运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+指定运营商查询时，不可同时指定省份、IP协议查询
      */
     public void setIsp(Integer Isp) {
         this.Isp = Isp;
     }
 
     /**
-     * 获取指定省份查询，不填充表示查询所有省份
-省份编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
-     * @return District 指定省份查询，不填充表示查询所有省份
-省份编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+     * 获取查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
+查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
+     * @return District 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
+查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
      */
     public Integer getDistrict() {
         return this.District;
     }
 
     /**
-     * 设置指定省份查询，不填充表示查询所有省份
-省份编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
-     * @param District 指定省份查询，不填充表示查询所有省份
-省份编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+     * 设置查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
+查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
+     * @param District 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
+查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
      */
     public void setDistrict(Integer District) {
         this.District = District;
@@ -418,12 +452,14 @@ https：指定查询 HTTPS 对应指标
     /**
      * 获取指定IP协议查询，不填充表示查询所有协议
 all：所有协议
-ipv4：指定查询 ipv4对应指标
+ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
+指定IP协议查询时，不可同时指定省份、运营商查询
      * @return IpProtocol 指定IP协议查询，不填充表示查询所有协议
 all：所有协议
-ipv4：指定查询 ipv4对应指标
+ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
+指定IP协议查询时，不可同时指定省份、运营商查询
      */
     public String getIpProtocol() {
         return this.IpProtocol;
@@ -432,15 +468,65 @@ ipv6：指定查询 ipv6 对应指标
     /**
      * 设置指定IP协议查询，不填充表示查询所有协议
 all：所有协议
-ipv4：指定查询 ipv4对应指标
+ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
+指定IP协议查询时，不可同时指定省份、运营商查询
      * @param IpProtocol 指定IP协议查询，不填充表示查询所有协议
 all：所有协议
-ipv4：指定查询 ipv4对应指标
+ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
+指定IP协议查询时，不可同时指定省份、运营商查询
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;
+    }
+
+    /**
+     * 获取指定服务地域查询，不填充表示查询中国境内CDN数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据
+     * @return Area 指定服务地域查询，不填充表示查询中国境内CDN数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * 设置指定服务地域查询，不填充表示查询中国境内CDN数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据
+     * @param Area 指定服务地域查询，不填充表示查询中国境内CDN数据
+mainland：指定查询中国境内 CDN 数据
+overseas：指定查询中国境外 CDN 数据
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
+     * 获取查询中国境外CDN数据时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas 时可用）
+server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
+client：指定查询客户端地区（用户请求终端所在地区）数据
+     * @return AreaType 查询中国境外CDN数据时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas 时可用）
+server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
+client：指定查询客户端地区（用户请求终端所在地区）数据
+     */
+    public String getAreaType() {
+        return this.AreaType;
+    }
+
+    /**
+     * 设置查询中国境外CDN数据时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas 时可用）
+server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
+client：指定查询客户端地区（用户请求终端所在地区）数据
+     * @param AreaType 查询中国境外CDN数据时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas 时可用）
+server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
+client：指定查询客户端地区（用户请求终端所在地区）数据
+     */
+    public void setAreaType(String AreaType) {
+        this.AreaType = AreaType;
     }
 
     /**
@@ -459,6 +545,8 @@ ipv6：指定查询 ipv6 对应指标
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
+        this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "AreaType", this.AreaType);
 
     }
 }

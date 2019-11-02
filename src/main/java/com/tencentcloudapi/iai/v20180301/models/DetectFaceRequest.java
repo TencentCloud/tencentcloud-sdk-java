@@ -31,7 +31,9 @@ public class DetectFaceRequest  extends AbstractModel{
     private Integer MaxFaceNum;
 
     /**
-    * 人脸长和宽的最小尺寸，单位为像素。默认为40。低于此尺寸的人脸不会被检测。
+    * 人脸长和宽的最小尺寸，单位为像素。
+默认为40。建议不低于34。
+低于MinFaceSize值的人脸不会被检测。
     */
     @SerializedName("MinFaceSize")
     @Expose
@@ -106,16 +108,24 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取人脸长和宽的最小尺寸，单位为像素。默认为40。低于此尺寸的人脸不会被检测。
-     * @return MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为40。低于此尺寸的人脸不会被检测。
+     * 获取人脸长和宽的最小尺寸，单位为像素。
+默认为40。建议不低于34。
+低于MinFaceSize值的人脸不会被检测。
+     * @return MinFaceSize 人脸长和宽的最小尺寸，单位为像素。
+默认为40。建议不低于34。
+低于MinFaceSize值的人脸不会被检测。
      */
     public Integer getMinFaceSize() {
         return this.MinFaceSize;
     }
 
     /**
-     * 设置人脸长和宽的最小尺寸，单位为像素。默认为40。低于此尺寸的人脸不会被检测。
-     * @param MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为40。低于此尺寸的人脸不会被检测。
+     * 设置人脸长和宽的最小尺寸，单位为像素。
+默认为40。建议不低于34。
+低于MinFaceSize值的人脸不会被检测。
+     * @param MinFaceSize 人脸长和宽的最小尺寸，单位为像素。
+默认为40。建议不低于34。
+低于MinFaceSize值的人脸不会被检测。
      */
     public void setMinFaceSize(Integer MinFaceSize) {
         this.MinFaceSize = MinFaceSize;

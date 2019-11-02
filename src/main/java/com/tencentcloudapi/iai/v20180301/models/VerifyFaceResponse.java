@@ -24,6 +24,10 @@ public class VerifyFaceResponse  extends AbstractModel{
 
     /**
     * 给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
+
+不同算法版本返回的相似度分数不同。
+若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。 一般超过50分则可认定为同一人。
+2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。
     */
     @SerializedName("Score")
     @Expose
@@ -37,6 +41,13 @@ public class VerifyFaceResponse  extends AbstractModel{
     private Boolean IsMatch;
 
     /**
+    * 人脸识别所用的算法模型版本。
+    */
+    @SerializedName("FaceModelVersion")
+    @Expose
+    private String FaceModelVersion;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -45,7 +56,15 @@ public class VerifyFaceResponse  extends AbstractModel{
 
     /**
      * 获取给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
+
+不同算法版本返回的相似度分数不同。
+若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。 一般超过50分则可认定为同一人。
+2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。
      * @return Score 给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
+
+不同算法版本返回的相似度分数不同。
+若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。 一般超过50分则可认定为同一人。
+2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。
      */
     public Float getScore() {
         return this.Score;
@@ -53,7 +72,15 @@ public class VerifyFaceResponse  extends AbstractModel{
 
     /**
      * 设置给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
+
+不同算法版本返回的相似度分数不同。
+若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。 一般超过50分则可认定为同一人。
+2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。
      * @param Score 给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
+
+不同算法版本返回的相似度分数不同。
+若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。 一般超过50分则可认定为同一人。
+2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。
      */
     public void setScore(Float Score) {
         this.Score = Score;
@@ -73,6 +100,22 @@ public class VerifyFaceResponse  extends AbstractModel{
      */
     public void setIsMatch(Boolean IsMatch) {
         this.IsMatch = IsMatch;
+    }
+
+    /**
+     * 获取人脸识别所用的算法模型版本。
+     * @return FaceModelVersion 人脸识别所用的算法模型版本。
+     */
+    public String getFaceModelVersion() {
+        return this.FaceModelVersion;
+    }
+
+    /**
+     * 设置人脸识别所用的算法模型版本。
+     * @param FaceModelVersion 人脸识别所用的算法模型版本。
+     */
+    public void setFaceModelVersion(String FaceModelVersion) {
+        this.FaceModelVersion = FaceModelVersion;
     }
 
     /**
@@ -97,6 +140,7 @@ public class VerifyFaceResponse  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "IsMatch", this.IsMatch);
+        this.setParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

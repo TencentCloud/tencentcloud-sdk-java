@@ -53,6 +53,28 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private String [] Urls;
 
     /**
+    * 只有和该人员已有的人脸相似度超过FaceMatchThreshold值的人脸，才能增加人脸成功。 
+默认值60分。取值范围[0,100] 。
+    */
+    @SerializedName("FaceMatchThreshold")
+    @Expose
+    private Float FaceMatchThreshold;
+
+    /**
+    * 图片质量控制。 
+0: 不进行控制； 
+1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
+2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
+3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
+4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+    */
+    @SerializedName("QualityControl")
+    @Expose
+    private Integer QualityControl;
+
+    /**
      * 获取人员ID。
      * @return PersonId 人员ID。
      */
@@ -137,12 +159,78 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
+     * 获取只有和该人员已有的人脸相似度超过FaceMatchThreshold值的人脸，才能增加人脸成功。 
+默认值60分。取值范围[0,100] 。
+     * @return FaceMatchThreshold 只有和该人员已有的人脸相似度超过FaceMatchThreshold值的人脸，才能增加人脸成功。 
+默认值60分。取值范围[0,100] 。
+     */
+    public Float getFaceMatchThreshold() {
+        return this.FaceMatchThreshold;
+    }
+
+    /**
+     * 设置只有和该人员已有的人脸相似度超过FaceMatchThreshold值的人脸，才能增加人脸成功。 
+默认值60分。取值范围[0,100] 。
+     * @param FaceMatchThreshold 只有和该人员已有的人脸相似度超过FaceMatchThreshold值的人脸，才能增加人脸成功。 
+默认值60分。取值范围[0,100] 。
+     */
+    public void setFaceMatchThreshold(Float FaceMatchThreshold) {
+        this.FaceMatchThreshold = FaceMatchThreshold;
+    }
+
+    /**
+     * 获取图片质量控制。 
+0: 不进行控制； 
+1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
+2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
+3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
+4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     * @return QualityControl 图片质量控制。 
+0: 不进行控制； 
+1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
+2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
+3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
+4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     */
+    public Integer getQualityControl() {
+        return this.QualityControl;
+    }
+
+    /**
+     * 设置图片质量控制。 
+0: 不进行控制； 
+1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
+2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
+3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
+4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     * @param QualityControl 图片质量控制。 
+0: 不进行控制； 
+1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
+2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
+3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
+4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
+默认 0。 
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     */
+    public void setQualityControl(Integer QualityControl) {
+        this.QualityControl = QualityControl;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamArraySimple(map, prefix + "Images.", this.Images);
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
+        this.setParamSimple(map, prefix + "FaceMatchThreshold", this.FaceMatchThreshold);
+        this.setParamSimple(map, prefix + "QualityControl", this.QualityControl);
 
     }
 }

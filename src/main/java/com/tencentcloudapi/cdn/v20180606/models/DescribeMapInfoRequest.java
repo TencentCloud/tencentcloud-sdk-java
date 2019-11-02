@@ -25,7 +25,7 @@ public class DescribeMapInfoRequest  extends AbstractModel{
     /**
     * 映射查询类别：
 isp：运营商映射查询
-district：省份映射查询
+district：省份（中国境内）、国家/地区（中国境外）映射查询
     */
     @SerializedName("Name")
     @Expose
@@ -34,10 +34,10 @@ district：省份映射查询
     /**
      * 获取映射查询类别：
 isp：运营商映射查询
-district：省份映射查询
+district：省份（中国境内）、国家/地区（中国境外）映射查询
      * @return Name 映射查询类别：
 isp：运营商映射查询
-district：省份映射查询
+district：省份（中国境内）、国家/地区（中国境外）映射查询
      */
     public String getName() {
         return this.Name;
@@ -46,10 +46,10 @@ district：省份映射查询
     /**
      * 设置映射查询类别：
 isp：运营商映射查询
-district：省份映射查询
+district：省份（中国境内）、国家/地区（中国境外）映射查询
      * @param Name 映射查询类别：
 isp：运营商映射查询
-district：省份映射查询
+district：省份（中国境内）、国家/地区（中国境外）映射查询
      */
     public void setName(String Name) {
         this.Name = Name;

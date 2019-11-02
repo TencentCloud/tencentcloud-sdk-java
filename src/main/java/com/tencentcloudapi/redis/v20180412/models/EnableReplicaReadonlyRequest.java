@@ -30,6 +30,13 @@ public class EnableReplicaReadonlyRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+    */
+    @SerializedName("ReadonlyPolicy")
+    @Expose
+    private String [] ReadonlyPolicy;
+
+    /**
      * 获取实例序号ID
      * @return InstanceId 实例序号ID
      */
@@ -46,10 +53,27 @@ public class EnableReplicaReadonlyRequest  extends AbstractModel{
     }
 
     /**
+     * 获取账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+     * @return ReadonlyPolicy 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+     */
+    public String [] getReadonlyPolicy() {
+        return this.ReadonlyPolicy;
+    }
+
+    /**
+     * 设置账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+     * @param ReadonlyPolicy 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+     */
+    public void setReadonlyPolicy(String [] ReadonlyPolicy) {
+        this.ReadonlyPolicy = ReadonlyPolicy;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
 
     }
 }

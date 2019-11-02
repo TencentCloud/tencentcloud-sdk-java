@@ -58,7 +58,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     private CertificateInput Certificate;
 
     /**
-    * 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+    * 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
     */
     @SerializedName("Http2")
     @Expose
@@ -152,16 +152,16 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启Http2，注意，只用HTTPS域名才能开启Http2。
-     * @return Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * 获取是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * @return Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      */
     public Boolean getHttp2() {
         return this.Http2;
     }
 
     /**
-     * 设置是否开启Http2，注意，只用HTTPS域名才能开启Http2。
-     * @param Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * @param Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      */
     public void setHttp2(Boolean Http2) {
         this.Http2 = Http2;

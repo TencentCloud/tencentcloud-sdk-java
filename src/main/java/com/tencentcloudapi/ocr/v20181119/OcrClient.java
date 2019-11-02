@@ -229,6 +229,24 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持智能化识别各类企业登记证书、许可证书、企业执照、三证合一类证书，结构化输出统一社会信用代码、公司名称、法定代表人、公司地址、注册资金、企业类型、经营范围等关键字段。
+     * @param req EnterpriseLicenseOCRRequest
+     * @return EnterpriseLicenseOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnterpriseLicenseOCRResponse EnterpriseLicenseOCR(EnterpriseLicenseOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnterpriseLicenseOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnterpriseLicenseOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnterpriseLicenseOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持不动产权证关键字段的识别，包括使用期限、面积、用途、权利性质、权利类型、坐落、共有情况、权利人、权利其他状况等。
 
 
@@ -441,6 +459,24 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InstitutionOCRResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "InstitutionOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持病案首页、费用清单、结算单、医疗发票四种保险理赔单据的文本识别和结构化输出。
+     * @param req InsuranceBillOCRRequest
+     * @return InsuranceBillOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public InsuranceBillOCRResponse InsuranceBillOCR(InsuranceBillOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InsuranceBillOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InsuranceBillOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InsuranceBillOCR"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
