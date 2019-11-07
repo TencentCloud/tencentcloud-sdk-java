@@ -80,11 +80,10 @@ public class DescribeZones
 
 ## 代理
 
-指定代理访问，目前仅支持 HTTP 代理：
+指定代理访问(版本>=3.0.96)，目前仅支持 HTTP 代理：
 
 ```
 HttpProfile httpProfile = new HttpProfile();
-httpProfile.setEndpoint("cvm.tencentcloudapi.com");
 httpProfile.setProxyHost("真实代理ip");
 httpProfile.setProxyPort(真实代理端口);
 ```
