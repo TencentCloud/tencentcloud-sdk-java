@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateImageResponse  extends AbstractModel{
-
-    /**
-    * 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ImageId")
-    @Expose
-    private String ImageId;
+public class DetachCamRoleResponse  extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -36,26 +28,6 @@ public class CreateImageResponse  extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * 获取镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @return ImageId 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getImageId() {
-        return this.ImageId;
-    }
-
-    /**
-     * 设置镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageId 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setImageId(String ImageId) {
-        this.ImageId = ImageId;
-    }
 
     /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -77,7 +49,6 @@ public class CreateImageResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

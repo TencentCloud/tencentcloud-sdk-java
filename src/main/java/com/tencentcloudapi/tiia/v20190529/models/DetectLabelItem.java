@@ -37,6 +37,20 @@ public class DetectLabelItem  extends AbstractModel{
     private Long Confidence;
 
     /**
+    * 标签的一级分类
+    */
+    @SerializedName("FirstCategory")
+    @Expose
+    private String FirstCategory;
+
+    /**
+    * 标签的二级分类
+    */
+    @SerializedName("SecondCategory")
+    @Expose
+    private String SecondCategory;
+
+    /**
      * 获取图片中的物体名称。
      * @return Name 图片中的物体名称。
      */
@@ -69,11 +83,45 @@ public class DetectLabelItem  extends AbstractModel{
     }
 
     /**
+     * 获取标签的一级分类
+     * @return FirstCategory 标签的一级分类
+     */
+    public String getFirstCategory() {
+        return this.FirstCategory;
+    }
+
+    /**
+     * 设置标签的一级分类
+     * @param FirstCategory 标签的一级分类
+     */
+    public void setFirstCategory(String FirstCategory) {
+        this.FirstCategory = FirstCategory;
+    }
+
+    /**
+     * 获取标签的二级分类
+     * @return SecondCategory 标签的二级分类
+     */
+    public String getSecondCategory() {
+        return this.SecondCategory;
+    }
+
+    /**
+     * 设置标签的二级分类
+     * @param SecondCategory 标签的二级分类
+     */
+    public void setSecondCategory(String SecondCategory) {
+        this.SecondCategory = SecondCategory;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamSimple(map, prefix + "FirstCategory", this.FirstCategory);
+        this.setParamSimple(map, prefix + "SecondCategory", this.SecondCategory);
 
     }
 }

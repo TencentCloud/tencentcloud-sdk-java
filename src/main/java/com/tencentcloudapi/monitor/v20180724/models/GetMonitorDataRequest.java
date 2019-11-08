@@ -58,7 +58,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     private String StartTime;
 
     /**
-    * 结束时间，默认为当前时间。 EndTime不能小于EtartTime
+    * 结束时间，默认为当前时间。 EndTime不能小于StartTime
     */
     @SerializedName("EndTime")
     @Expose
@@ -145,16 +145,16 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，默认为当前时间。 EndTime不能小于EtartTime
-     * @return EndTime 结束时间，默认为当前时间。 EndTime不能小于EtartTime
+     * 获取结束时间，默认为当前时间。 EndTime不能小于StartTime
+     * @return EndTime 结束时间，默认为当前时间。 EndTime不能小于StartTime
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * 设置结束时间，默认为当前时间。 EndTime不能小于EtartTime
-     * @param EndTime 结束时间，默认为当前时间。 EndTime不能小于EtartTime
+     * 设置结束时间，默认为当前时间。 EndTime不能小于StartTime
+     * @param EndTime 结束时间，默认为当前时间。 EndTime不能小于StartTime
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

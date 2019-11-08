@@ -30,6 +30,15 @@ public class DescribeProcedureTemplatesRequest  extends AbstractModel{
     private String [] Names;
 
     /**
+    * 任务流模板类型过滤条件，可选值：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 分页偏移量，默认值：0。
     */
     @SerializedName("Offset")
@@ -64,6 +73,30 @@ public class DescribeProcedureTemplatesRequest  extends AbstractModel{
      */
     public void setNames(String [] Names) {
         this.Names = Names;
+    }
+
+    /**
+     * 获取任务流模板类型过滤条件，可选值：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+     * @return Type 任务流模板类型过滤条件，可选值：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * 设置任务流模板类型过滤条件，可选值：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+     * @param Type 任务流模板类型过滤条件，可选值：
+<li>Preset：系统预置任务流模板；</li>
+<li>Custom：用户自定义任务流模板。</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
@@ -119,6 +152,7 @@ public class DescribeProcedureTemplatesRequest  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Names.", this.Names);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);

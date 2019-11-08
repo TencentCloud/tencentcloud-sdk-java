@@ -65,14 +65,14 @@ public class CreateAppResponse  extends AbstractModel{
     private RealtimeSpeechConf RealtimeSpeechConf;
 
     /**
-    * 语音消息服务配置数据
+    * 语音消息及转文本服务配置数据
     */
     @SerializedName("VoiceMessageConf")
     @Expose
     private VoiceMessageConf VoiceMessageConf;
 
     /**
-    * 语音过滤服务配置数据
+    * 语音分析服务配置数据
     */
     @SerializedName("VoiceFilterConf")
     @Expose
@@ -175,32 +175,32 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 获取语音消息服务配置数据
-     * @return VoiceMessageConf 语音消息服务配置数据
+     * 获取语音消息及转文本服务配置数据
+     * @return VoiceMessageConf 语音消息及转文本服务配置数据
      */
     public VoiceMessageConf getVoiceMessageConf() {
         return this.VoiceMessageConf;
     }
 
     /**
-     * 设置语音消息服务配置数据
-     * @param VoiceMessageConf 语音消息服务配置数据
+     * 设置语音消息及转文本服务配置数据
+     * @param VoiceMessageConf 语音消息及转文本服务配置数据
      */
     public void setVoiceMessageConf(VoiceMessageConf VoiceMessageConf) {
         this.VoiceMessageConf = VoiceMessageConf;
     }
 
     /**
-     * 获取语音过滤服务配置数据
-     * @return VoiceFilterConf 语音过滤服务配置数据
+     * 获取语音分析服务配置数据
+     * @return VoiceFilterConf 语音分析服务配置数据
      */
     public VoiceFilterConf getVoiceFilterConf() {
         return this.VoiceFilterConf;
     }
 
     /**
-     * 设置语音过滤服务配置数据
-     * @param VoiceFilterConf 语音过滤服务配置数据
+     * 设置语音分析服务配置数据
+     * @param VoiceFilterConf 语音分析服务配置数据
      */
     public void setVoiceFilterConf(VoiceFilterConf VoiceFilterConf) {
         this.VoiceFilterConf = VoiceFilterConf;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ScanDetail  extends AbstractModel{
 
     /**
-    * 违规场景，参照Label定义
+    * 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
     */
     @SerializedName("Label")
     @Expose
@@ -58,16 +58,16 @@ public class ScanDetail  extends AbstractModel{
     private Long EndTime;
 
     /**
-     * 获取违规场景，参照Label定义
-     * @return Label 违规场景，参照Label定义
+     * 获取违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
+     * @return Label 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * 设置违规场景，参照Label定义
-     * @param Label 违规场景，参照Label定义
+     * 设置违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
+     * @param Label 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
      */
     public void setLabel(String Label) {
         this.Label = Label;

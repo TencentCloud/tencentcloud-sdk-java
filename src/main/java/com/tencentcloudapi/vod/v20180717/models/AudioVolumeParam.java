@@ -23,17 +23,6 @@ import java.util.HashMap;
 public class AudioVolumeParam  extends AbstractModel{
 
     /**
-    * 音频增益，取值范围0~10。仅在Mute=0时生效。
-<li>大于1表示增加音量。</li>
-<li>小于1表示降低音量。</li>
-<li>1：表示不改变。</li>
-默认是1。
-    */
-    @SerializedName("Gain")
-    @Expose
-    private Float Gain;
-
-    /**
     * 是否静音，取值范围0或1。
 <li>0表示不静音。</li>
 <li>1表示静音。</li>
@@ -44,36 +33,15 @@ public class AudioVolumeParam  extends AbstractModel{
     private Long Mute;
 
     /**
-     * 获取音频增益，取值范围0~10。仅在Mute=0时生效。
+    * 音频增益，取值范围0~10。
 <li>大于1表示增加音量。</li>
 <li>小于1表示降低音量。</li>
-<li>1：表示不改变。</li>
-默认是1。
-     * @return Gain 音频增益，取值范围0~10。仅在Mute=0时生效。
-<li>大于1表示增加音量。</li>
-<li>小于1表示降低音量。</li>
-<li>1：表示不改变。</li>
-默认是1。
-     */
-    public Float getGain() {
-        return this.Gain;
-    }
-
-    /**
-     * 设置音频增益，取值范围0~10。仅在Mute=0时生效。
-<li>大于1表示增加音量。</li>
-<li>小于1表示降低音量。</li>
-<li>1：表示不改变。</li>
-默认是1。
-     * @param Gain 音频增益，取值范围0~10。仅在Mute=0时生效。
-<li>大于1表示增加音量。</li>
-<li>小于1表示降低音量。</li>
-<li>1：表示不改变。</li>
-默认是1。
-     */
-    public void setGain(Float Gain) {
-        this.Gain = Gain;
-    }
+<li>0和1：表示不改变。</li>
+默认是0。
+    */
+    @SerializedName("Gain")
+    @Expose
+    private Float Gain;
 
     /**
      * 获取是否静音，取值范围0或1。
@@ -104,11 +72,43 @@ public class AudioVolumeParam  extends AbstractModel{
     }
 
     /**
+     * 获取音频增益，取值范围0~10。
+<li>大于1表示增加音量。</li>
+<li>小于1表示降低音量。</li>
+<li>0和1：表示不改变。</li>
+默认是0。
+     * @return Gain 音频增益，取值范围0~10。
+<li>大于1表示增加音量。</li>
+<li>小于1表示降低音量。</li>
+<li>0和1：表示不改变。</li>
+默认是0。
+     */
+    public Float getGain() {
+        return this.Gain;
+    }
+
+    /**
+     * 设置音频增益，取值范围0~10。
+<li>大于1表示增加音量。</li>
+<li>小于1表示降低音量。</li>
+<li>0和1：表示不改变。</li>
+默认是0。
+     * @param Gain 音频增益，取值范围0~10。
+<li>大于1表示增加音量。</li>
+<li>小于1表示降低音量。</li>
+<li>0和1：表示不改变。</li>
+默认是0。
+     */
+    public void setGain(Float Gain) {
+        this.Gain = Gain;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Gain", this.Gain);
         this.setParamSimple(map, prefix + "Mute", this.Mute);
+        this.setParamSimple(map, prefix + "Gain", this.Gain);
 
     }
 }

@@ -49,6 +49,24 @@ public class BmClient extends AbstractClient{
     }
 
     /**
+     *服务器绑定CAM角色，该角色授权访问黑石物理服务器服务，为黑石物理服务器提供了访问资源的权限，如请求服务器的临时证书
+     * @param req AttachCamRoleRequest
+     * @return AttachCamRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachCamRoleResponse AttachCamRole(AttachCamRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachCamRoleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachCamRoleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AttachCamRole"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *为预授权规则绑定标签
      * @param req BindPsaTagRequest
      * @return BindPsaTagResponse
@@ -628,6 +646,24 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
                 Type type = new TypeToken<JsonResponseModel<DescribeUserCmdsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeUserCmds"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *服务器绑定CAM角色
+     * @param req DetachCamRoleRequest
+     * @return DetachCamRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachCamRoleResponse DetachCamRole(DetachCamRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachCamRoleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachCamRoleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetachCamRole"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

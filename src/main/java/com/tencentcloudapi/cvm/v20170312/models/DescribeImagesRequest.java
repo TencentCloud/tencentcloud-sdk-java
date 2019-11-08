@@ -33,10 +33,9 @@ public class DescribeImagesRequest  extends AbstractModel{
     * 过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-    PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
+    PRIVATE_IMAGE: 私有镜像 (本账户创建的镜像) 
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
-    MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
-   SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
+   SHARED_IMAGE: 共享镜像(其他账户共享给本账户的镜像) 。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -83,17 +82,15 @@ public class DescribeImagesRequest  extends AbstractModel{
      * 获取过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-    PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
+    PRIVATE_IMAGE: 私有镜像 (本账户创建的镜像) 
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
-    MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
-   SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
+   SHARED_IMAGE: 共享镜像(其他账户共享给本账户的镜像) 。</li>
      * @return Filters 过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-    PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
+    PRIVATE_IMAGE: 私有镜像 (本账户创建的镜像) 
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
-    MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
-   SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
+   SHARED_IMAGE: 共享镜像(其他账户共享给本账户的镜像) 。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -103,17 +100,15 @@ public class DescribeImagesRequest  extends AbstractModel{
      * 设置过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-    PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
+    PRIVATE_IMAGE: 私有镜像 (本账户创建的镜像) 
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
-    MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
-   SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
+   SHARED_IMAGE: 共享镜像(其他账户共享给本账户的镜像) 。</li>
      * @param Filters 过滤条件，每次请求的`Filters`的上限为0，`Filters.Values`的上限为5。参数不可以同时指定`ImageIds`和`Filters`。详细的过滤条件如下：
 <li> image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤</li>
 <li> image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
-    PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
+    PRIVATE_IMAGE: 私有镜像 (本账户创建的镜像) 
     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
-    MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
-   SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
+   SHARED_IMAGE: 共享镜像(其他账户共享给本账户的镜像) 。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

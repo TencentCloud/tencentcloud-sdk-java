@@ -44,14 +44,14 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     private String Name;
 
     /**
-    * 置放群组内可容纳的云主机数量。
+    * 置放群组内可容纳的云服务器数量。
     */
     @SerializedName("CvmQuotaTotal")
     @Expose
     private Integer CvmQuotaTotal;
 
     /**
-    * 置放群组内已有的云主机数量。
+    * 置放群组内已有的云服务器数量。
     */
     @SerializedName("CurrentNum")
     @Expose
@@ -120,32 +120,32 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组内可容纳的云主机数量。
-     * @return CvmQuotaTotal 置放群组内可容纳的云主机数量。
+     * 获取置放群组内可容纳的云服务器数量。
+     * @return CvmQuotaTotal 置放群组内可容纳的云服务器数量。
      */
     public Integer getCvmQuotaTotal() {
         return this.CvmQuotaTotal;
     }
 
     /**
-     * 设置置放群组内可容纳的云主机数量。
-     * @param CvmQuotaTotal 置放群组内可容纳的云主机数量。
+     * 设置置放群组内可容纳的云服务器数量。
+     * @param CvmQuotaTotal 置放群组内可容纳的云服务器数量。
      */
     public void setCvmQuotaTotal(Integer CvmQuotaTotal) {
         this.CvmQuotaTotal = CvmQuotaTotal;
     }
 
     /**
-     * 获取置放群组内已有的云主机数量。
-     * @return CurrentNum 置放群组内已有的云主机数量。
+     * 获取置放群组内已有的云服务器数量。
+     * @return CurrentNum 置放群组内已有的云服务器数量。
      */
     public Integer getCurrentNum() {
         return this.CurrentNum;
     }
 
     /**
-     * 设置置放群组内已有的云主机数量。
-     * @param CurrentNum 置放群组内已有的云主机数量。
+     * 设置置放群组内已有的云服务器数量。
+     * @param CurrentNum 置放群组内已有的云服务器数量。
      */
     public void setCurrentNum(Integer CurrentNum) {
         this.CurrentNum = CurrentNum;

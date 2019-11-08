@@ -44,21 +44,21 @@ public class DisasterRecoverGroup  extends AbstractModel{
     private String Type;
 
     /**
-    * 分散置放群组内最大容纳云主机数量。
+    * 分散置放群组内最大容纳云服务器数量。
     */
     @SerializedName("CvmQuotaTotal")
     @Expose
     private Integer CvmQuotaTotal;
 
     /**
-    * 分散置放群组内云主机当前数量。
+    * 分散置放群组内云服务器当前数量。
     */
     @SerializedName("CurrentNum")
     @Expose
     private Integer CurrentNum;
 
     /**
-    * 分散置放群组内，云主机id列表。
+    * 分散置放群组内，云服务器id列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIds")
@@ -122,41 +122,41 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组内最大容纳云主机数量。
-     * @return CvmQuotaTotal 分散置放群组内最大容纳云主机数量。
+     * 获取分散置放群组内最大容纳云服务器数量。
+     * @return CvmQuotaTotal 分散置放群组内最大容纳云服务器数量。
      */
     public Integer getCvmQuotaTotal() {
         return this.CvmQuotaTotal;
     }
 
     /**
-     * 设置分散置放群组内最大容纳云主机数量。
-     * @param CvmQuotaTotal 分散置放群组内最大容纳云主机数量。
+     * 设置分散置放群组内最大容纳云服务器数量。
+     * @param CvmQuotaTotal 分散置放群组内最大容纳云服务器数量。
      */
     public void setCvmQuotaTotal(Integer CvmQuotaTotal) {
         this.CvmQuotaTotal = CvmQuotaTotal;
     }
 
     /**
-     * 获取分散置放群组内云主机当前数量。
-     * @return CurrentNum 分散置放群组内云主机当前数量。
+     * 获取分散置放群组内云服务器当前数量。
+     * @return CurrentNum 分散置放群组内云服务器当前数量。
      */
     public Integer getCurrentNum() {
         return this.CurrentNum;
     }
 
     /**
-     * 设置分散置放群组内云主机当前数量。
-     * @param CurrentNum 分散置放群组内云主机当前数量。
+     * 设置分散置放群组内云服务器当前数量。
+     * @param CurrentNum 分散置放群组内云服务器当前数量。
      */
     public void setCurrentNum(Integer CurrentNum) {
         this.CurrentNum = CurrentNum;
     }
 
     /**
-     * 获取分散置放群组内，云主机id列表。
+     * 获取分散置放群组内，云服务器id列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return InstanceIds 分散置放群组内，云主机id列表。
+     * @return InstanceIds 分散置放群组内，云服务器id列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstanceIds() {
@@ -164,9 +164,9 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组内，云主机id列表。
+     * 设置分散置放群组内，云服务器id列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceIds 分散置放群组内，云主机id列表。
+     * @param InstanceIds 分散置放群组内，云服务器id列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIds(String [] InstanceIds) {

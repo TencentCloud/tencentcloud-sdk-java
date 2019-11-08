@@ -37,14 +37,14 @@ public class CreateAppRequest  extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 需要支持的引擎列表，取值android, ios, uinty, cocos, unreal, windows。默认全选。
+    * 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
     */
     @SerializedName("EngineList")
     @Expose
     private String [] EngineList;
 
     /**
-    * 服务区域列表, 默认为空数组. 取值: mainland(美), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选
+    * 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
     */
     @SerializedName("RegionList")
     @Expose
@@ -58,14 +58,14 @@ public class CreateAppRequest  extends AbstractModel{
     private RealtimeSpeechConf RealtimeSpeechConf;
 
     /**
-    * 离线语音服务配置数据
+    * 语音消息及转文本服务配置数据
     */
     @SerializedName("VoiceMessageConf")
     @Expose
     private VoiceMessageConf VoiceMessageConf;
 
     /**
-    * 语音过滤服务配置数据
+    * 语音分析服务配置数据
     */
     @SerializedName("VoiceFilterConf")
     @Expose
@@ -111,32 +111,32 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要支持的引擎列表，取值android, ios, uinty, cocos, unreal, windows。默认全选。
-     * @return EngineList 需要支持的引擎列表，取值android, ios, uinty, cocos, unreal, windows。默认全选。
+     * 获取需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
+     * @return EngineList 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
      */
     public String [] getEngineList() {
         return this.EngineList;
     }
 
     /**
-     * 设置需要支持的引擎列表，取值android, ios, uinty, cocos, unreal, windows。默认全选。
-     * @param EngineList 需要支持的引擎列表，取值android, ios, uinty, cocos, unreal, windows。默认全选。
+     * 设置需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
+     * @param EngineList 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
      */
     public void setEngineList(String [] EngineList) {
         this.EngineList = EngineList;
     }
 
     /**
-     * 获取服务区域列表, 默认为空数组. 取值: mainland(美), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选
-     * @return RegionList 服务区域列表, 默认为空数组. 取值: mainland(美), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选
+     * 获取服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
+     * @return RegionList 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
      */
     public String [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * 设置服务区域列表, 默认为空数组. 取值: mainland(美), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选
-     * @param RegionList 服务区域列表, 默认为空数组. 取值: mainland(美), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选
+     * 设置服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
+     * @param RegionList 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
      */
     public void setRegionList(String [] RegionList) {
         this.RegionList = RegionList;
@@ -159,32 +159,32 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取离线语音服务配置数据
-     * @return VoiceMessageConf 离线语音服务配置数据
+     * 获取语音消息及转文本服务配置数据
+     * @return VoiceMessageConf 语音消息及转文本服务配置数据
      */
     public VoiceMessageConf getVoiceMessageConf() {
         return this.VoiceMessageConf;
     }
 
     /**
-     * 设置离线语音服务配置数据
-     * @param VoiceMessageConf 离线语音服务配置数据
+     * 设置语音消息及转文本服务配置数据
+     * @param VoiceMessageConf 语音消息及转文本服务配置数据
      */
     public void setVoiceMessageConf(VoiceMessageConf VoiceMessageConf) {
         this.VoiceMessageConf = VoiceMessageConf;
     }
 
     /**
-     * 获取语音过滤服务配置数据
-     * @return VoiceFilterConf 语音过滤服务配置数据
+     * 获取语音分析服务配置数据
+     * @return VoiceFilterConf 语音分析服务配置数据
      */
     public VoiceFilterConf getVoiceFilterConf() {
         return this.VoiceFilterConf;
     }
 
     /**
-     * 设置语音过滤服务配置数据
-     * @param VoiceFilterConf 语音过滤服务配置数据
+     * 设置语音分析服务配置数据
+     * @param VoiceFilterConf 语音分析服务配置数据
      */
     public void setVoiceFilterConf(VoiceFilterConf VoiceFilterConf) {
         this.VoiceFilterConf = VoiceFilterConf;
