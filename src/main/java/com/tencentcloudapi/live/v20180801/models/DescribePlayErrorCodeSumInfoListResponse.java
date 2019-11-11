@@ -51,7 +51,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     private Integer TotalCode5xx;
 
     /**
-    * 各状态码的总次数，暂时支持400,403,404,500,502,503,504。
+    * 各状态码的总次数。
     */
     @SerializedName("TotalCodeList")
     @Expose
@@ -84,6 +84,20 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     @SerializedName("TotalNum")
     @Expose
     private Integer TotalNum;
+
+    /**
+    * 状态码为2开头的总次数。
+    */
+    @SerializedName("TotalCode2xx")
+    @Expose
+    private Integer TotalCode2xx;
+
+    /**
+    * 状态码为3开头的总次数。
+    */
+    @SerializedName("TotalCode3xx")
+    @Expose
+    private Integer TotalCode3xx;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -157,16 +171,16 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取各状态码的总次数，暂时支持400,403,404,500,502,503,504。
-     * @return TotalCodeList 各状态码的总次数，暂时支持400,403,404,500,502,503,504。
+     * 获取各状态码的总次数。
+     * @return TotalCodeList 各状态码的总次数。
      */
     public PlayCodeTotalInfo [] getTotalCodeList() {
         return this.TotalCodeList;
     }
 
     /**
-     * 设置各状态码的总次数，暂时支持400,403,404,500,502,503,504。
-     * @param TotalCodeList 各状态码的总次数，暂时支持400,403,404,500,502,503,504。
+     * 设置各状态码的总次数。
+     * @param TotalCodeList 各状态码的总次数。
      */
     public void setTotalCodeList(PlayCodeTotalInfo [] TotalCodeList) {
         this.TotalCodeList = TotalCodeList;
@@ -237,6 +251,38 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
+     * 获取状态码为2开头的总次数。
+     * @return TotalCode2xx 状态码为2开头的总次数。
+     */
+    public Integer getTotalCode2xx() {
+        return this.TotalCode2xx;
+    }
+
+    /**
+     * 设置状态码为2开头的总次数。
+     * @param TotalCode2xx 状态码为2开头的总次数。
+     */
+    public void setTotalCode2xx(Integer TotalCode2xx) {
+        this.TotalCode2xx = TotalCode2xx;
+    }
+
+    /**
+     * 获取状态码为3开头的总次数。
+     * @return TotalCode3xx 状态码为3开头的总次数。
+     */
+    public Integer getTotalCode3xx() {
+        return this.TotalCode3xx;
+    }
+
+    /**
+     * 设置状态码为3开头的总次数。
+     * @param TotalCode3xx 状态码为3开头的总次数。
+     */
+    public void setTotalCode3xx(Integer TotalCode3xx) {
+        this.TotalCode3xx = TotalCode3xx;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -265,6 +311,8 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "TotalPage", this.TotalPage);
         this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
+        this.setParamSimple(map, prefix + "TotalCode2xx", this.TotalCode2xx);
+        this.setParamSimple(map, prefix + "TotalCode3xx", this.TotalCode3xx);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

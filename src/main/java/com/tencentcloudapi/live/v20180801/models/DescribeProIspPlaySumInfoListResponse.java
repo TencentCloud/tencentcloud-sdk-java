@@ -72,7 +72,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     private Integer TotalPage;
 
     /**
-    * 省份或运营商汇总数据列表。
+    * 省份，运营商，国家或地区汇总数据列表。
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -205,16 +205,16 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取省份或运营商汇总数据列表。
-     * @return DataInfoList 省份或运营商汇总数据列表。
+     * 获取省份，运营商，国家或地区汇总数据列表。
+     * @return DataInfoList 省份，运营商，国家或地区汇总数据列表。
      */
     public ProIspPlaySumInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * 设置省份或运营商汇总数据列表。
-     * @param DataInfoList 省份或运营商汇总数据列表。
+     * 设置省份，运营商，国家或地区汇总数据列表。
+     * @param DataInfoList 省份，运营商，国家或地区汇总数据列表。
      */
     public void setDataInfoList(ProIspPlaySumInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;

@@ -45,28 +45,39 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     private String [] PlayDomains;
 
     /**
-    * 页号，
-范围是[1,1000]，
-默认值是1。
+    * 页号，范围是[1,1000]，默认值是1。
     */
     @SerializedName("PageNum")
     @Expose
     private Integer PageNum;
 
     /**
-    * 每页个数，范围是[1,1000]，
-默认值是20。
+    * 每页个数，范围是[1,1000]，默认值是20。
     */
     @SerializedName("PageSize")
     @Expose
     private Integer PageSize;
 
     /**
-    * 排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
+    * 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
     */
     @SerializedName("OrderParam")
     @Expose
     private String OrderParam;
+
+    /**
+    * 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+    */
+    @SerializedName("MainlandOrOversea")
+    @Expose
+    private String MainlandOrOversea;
+
+    /**
+    * 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+    */
+    @SerializedName("OutLanguage")
+    @Expose
+    private String OutLanguage;
 
     /**
      * 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
@@ -121,63 +132,83 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页号，
-范围是[1,1000]，
-默认值是1。
-     * @return PageNum 页号，
-范围是[1,1000]，
-默认值是1。
+     * 获取页号，范围是[1,1000]，默认值是1。
+     * @return PageNum 页号，范围是[1,1000]，默认值是1。
      */
     public Integer getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * 设置页号，
-范围是[1,1000]，
-默认值是1。
-     * @param PageNum 页号，
-范围是[1,1000]，
-默认值是1。
+     * 设置页号，范围是[1,1000]，默认值是1。
+     * @param PageNum 页号，范围是[1,1000]，默认值是1。
      */
     public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * 获取每页个数，范围是[1,1000]，
-默认值是20。
-     * @return PageSize 每页个数，范围是[1,1000]，
-默认值是20。
+     * 获取每页个数，范围是[1,1000]，默认值是20。
+     * @return PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
     public Integer getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * 设置每页个数，范围是[1,1000]，
-默认值是20。
-     * @param PageSize 每页个数，范围是[1,1000]，
-默认值是20。
+     * 设置每页个数，范围是[1,1000]，默认值是20。
+     * @param PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
     public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * 获取排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
-     * @return OrderParam 排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
+     * 获取排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
+     * @return OrderParam 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
      */
     public String getOrderParam() {
         return this.OrderParam;
     }
 
     /**
-     * 设置排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
-     * @param OrderParam 排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
+     * 设置排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
+     * @param OrderParam 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
      */
     public void setOrderParam(String OrderParam) {
         this.OrderParam = OrderParam;
+    }
+
+    /**
+     * 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * @return MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     */
+    public String getMainlandOrOversea() {
+        return this.MainlandOrOversea;
+    }
+
+    /**
+     * 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * @param MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     */
+    public void setMainlandOrOversea(String MainlandOrOversea) {
+        this.MainlandOrOversea = MainlandOrOversea;
+    }
+
+    /**
+     * 获取输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+     * @return OutLanguage 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+     */
+    public String getOutLanguage() {
+        return this.OutLanguage;
+    }
+
+    /**
+     * 设置输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+     * @param OutLanguage 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+     */
+    public void setOutLanguage(String OutLanguage) {
+        this.OutLanguage = OutLanguage;
     }
 
     /**
@@ -190,6 +221,8 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "OrderParam", this.OrderParam);
+        this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
+        this.setParamSimple(map, prefix + "OutLanguage", this.OutLanguage);
 
     }
 }

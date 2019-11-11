@@ -58,6 +58,13 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     private Integer TotalFailedRequest;
 
     /**
+    * 客户端所在国家。
+    */
+    @SerializedName("CountryArea")
+    @Expose
+    private String CountryArea;
+
+    /**
      * 获取客户端ip，点分型。
      * @return ClientIp 客户端ip，点分型。
      */
@@ -138,6 +145,22 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
+     * 获取客户端所在国家。
+     * @return CountryArea 客户端所在国家。
+     */
+    public String getCountryArea() {
+        return this.CountryArea;
+    }
+
+    /**
+     * 设置客户端所在国家。
+     * @param CountryArea 客户端所在国家。
+     */
+    public void setCountryArea(String CountryArea) {
+        this.CountryArea = CountryArea;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalFlux", this.TotalFlux);
         this.setParamSimple(map, prefix + "TotalRequest", this.TotalRequest);
         this.setParamSimple(map, prefix + "TotalFailedRequest", this.TotalFailedRequest);
+        this.setParamSimple(map, prefix + "CountryArea", this.CountryArea);
 
     }
 }

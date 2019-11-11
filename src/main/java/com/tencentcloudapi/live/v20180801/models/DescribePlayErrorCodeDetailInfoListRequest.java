@@ -62,6 +62,13 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     private String [] PlayDomains;
 
     /**
+    * 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+    */
+    @SerializedName("MainlandOrOversea")
+    @Expose
+    private String MainlandOrOversea;
+
+    /**
      * 获取起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
      * @return StartTime 起始时间，北京时间，
@@ -158,6 +165,22 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
+     * 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * @return MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     */
+    public String getMainlandOrOversea() {
+        return this.MainlandOrOversea;
+    }
+
+    /**
+     * 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * @param MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     */
+    public void setMainlandOrOversea(String MainlandOrOversea) {
+        this.MainlandOrOversea = MainlandOrOversea;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -166,6 +189,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Granularity", this.Granularity);
         this.setParamSimple(map, prefix + "StatType", this.StatType);
         this.setParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
+        this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
 
     }
 }

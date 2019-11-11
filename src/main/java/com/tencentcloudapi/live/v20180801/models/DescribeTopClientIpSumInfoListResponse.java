@@ -23,17 +23,14 @@ import java.util.HashMap;
 public class DescribeTopClientIpSumInfoListResponse  extends AbstractModel{
 
     /**
-    * 页号，
-范围是[1,1000]，
-默认值是1。
+    * 页号，范围是[1,1000]，默认值是1。
     */
     @SerializedName("PageNum")
     @Expose
     private Integer PageNum;
 
     /**
-    * 每页个数，范围是[1,1000]，
-默认值是20。
+    * 每页个数，范围是[1,1000]，默认值是20。
     */
     @SerializedName("PageSize")
     @Expose
@@ -75,44 +72,32 @@ public class DescribeTopClientIpSumInfoListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取页号，
-范围是[1,1000]，
-默认值是1。
-     * @return PageNum 页号，
-范围是[1,1000]，
-默认值是1。
+     * 获取页号，范围是[1,1000]，默认值是1。
+     * @return PageNum 页号，范围是[1,1000]，默认值是1。
      */
     public Integer getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * 设置页号，
-范围是[1,1000]，
-默认值是1。
-     * @param PageNum 页号，
-范围是[1,1000]，
-默认值是1。
+     * 设置页号，范围是[1,1000]，默认值是1。
+     * @param PageNum 页号，范围是[1,1000]，默认值是1。
      */
     public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * 获取每页个数，范围是[1,1000]，
-默认值是20。
-     * @return PageSize 每页个数，范围是[1,1000]，
-默认值是20。
+     * 获取每页个数，范围是[1,1000]，默认值是20。
+     * @return PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
     public Integer getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * 设置每页个数，范围是[1,1000]，
-默认值是20。
-     * @param PageSize 每页个数，范围是[1,1000]，
-默认值是20。
+     * 设置每页个数，范围是[1,1000]，默认值是20。
+     * @param PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
     public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;

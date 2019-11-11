@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class ProIspPlayCodeDataInfo  extends AbstractModel{
 
     /**
+    * 国家或地区。
+    */
+    @SerializedName("CountryAreaName")
+    @Expose
+    private String CountryAreaName;
+
+    /**
     * 省份。
     */
     @SerializedName("ProvinceName")
@@ -63,6 +70,22 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     @SerializedName("Code5xx")
     @Expose
     private Integer Code5xx;
+
+    /**
+     * 获取国家或地区。
+     * @return CountryAreaName 国家或地区。
+     */
+    public String getCountryAreaName() {
+        return this.CountryAreaName;
+    }
+
+    /**
+     * 设置国家或地区。
+     * @param CountryAreaName 国家或地区。
+     */
+    public void setCountryAreaName(String CountryAreaName) {
+        this.CountryAreaName = CountryAreaName;
+    }
 
     /**
      * 获取省份。
@@ -164,6 +187,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CountryAreaName", this.CountryAreaName);
         this.setParamSimple(map, prefix + "ProvinceName", this.ProvinceName);
         this.setParamSimple(map, prefix + "IspName", this.IspName);
         this.setParamSimple(map, prefix + "Code2xx", this.Code2xx);

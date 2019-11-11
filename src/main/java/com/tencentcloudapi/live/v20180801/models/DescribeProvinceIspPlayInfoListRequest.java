@@ -67,18 +67,25 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     private String [] PlayDomains;
 
     /**
-    * 非必传参数，要查询的省份（地区）英文名称列表，如 Beijing
+    * 要查询的省份（地区）英文名称列表，如 Beijing。
     */
     @SerializedName("ProvinceNames")
     @Expose
     private String [] ProvinceNames;
 
     /**
-    * 非必传参数，要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据
+    * 要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
     */
     @SerializedName("IspNames")
     @Expose
     private String [] IspNames;
+
+    /**
+    * 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+    */
+    @SerializedName("MainlandOrOversea")
+    @Expose
+    private String MainlandOrOversea;
 
     /**
      * 获取起始时间点，当前使用北京时间，
@@ -197,35 +204,51 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取非必传参数，要查询的省份（地区）英文名称列表，如 Beijing
-     * @return ProvinceNames 非必传参数，要查询的省份（地区）英文名称列表，如 Beijing
+     * 获取要查询的省份（地区）英文名称列表，如 Beijing。
+     * @return ProvinceNames 要查询的省份（地区）英文名称列表，如 Beijing。
      */
     public String [] getProvinceNames() {
         return this.ProvinceNames;
     }
 
     /**
-     * 设置非必传参数，要查询的省份（地区）英文名称列表，如 Beijing
-     * @param ProvinceNames 非必传参数，要查询的省份（地区）英文名称列表，如 Beijing
+     * 设置要查询的省份（地区）英文名称列表，如 Beijing。
+     * @param ProvinceNames 要查询的省份（地区）英文名称列表，如 Beijing。
      */
     public void setProvinceNames(String [] ProvinceNames) {
         this.ProvinceNames = ProvinceNames;
     }
 
     /**
-     * 获取非必传参数，要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据
-     * @return IspNames 非必传参数，要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据
+     * 获取要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
+     * @return IspNames 要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
      */
     public String [] getIspNames() {
         return this.IspNames;
     }
 
     /**
-     * 设置非必传参数，要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据
-     * @param IspNames 非必传参数，要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据
+     * 设置要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
+     * @param IspNames 要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
      */
     public void setIspNames(String [] IspNames) {
         this.IspNames = IspNames;
+    }
+
+    /**
+     * 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * @return MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     */
+    public String getMainlandOrOversea() {
+        return this.MainlandOrOversea;
+    }
+
+    /**
+     * 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * @param MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     */
+    public void setMainlandOrOversea(String MainlandOrOversea) {
+        this.MainlandOrOversea = MainlandOrOversea;
     }
 
     /**
@@ -239,6 +262,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
         this.setParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
         this.setParamArraySimple(map, prefix + "ProvinceNames.", this.ProvinceNames);
         this.setParamArraySimple(map, prefix + "IspNames.", this.IspNames);
+        this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
 
     }
 }
