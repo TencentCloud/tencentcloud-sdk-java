@@ -27,21 +27,21 @@ public class FaceAttributesInfo  extends AbstractModel{
     */
     @SerializedName("Gender")
     @Expose
-    private Integer Gender;
+    private Long Gender;
 
     /**
     * 年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
     */
     @SerializedName("Age")
     @Expose
-    private Integer Age;
+    private Long Age;
 
     /**
     * 微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
     */
     @SerializedName("Expression")
     @Expose
-    private Integer Expression;
+    private Long Expression;
 
     /**
     * 是否有眼镜 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
@@ -56,7 +56,7 @@ public class FaceAttributesInfo  extends AbstractModel{
     */
     @SerializedName("Pitch")
     @Expose
-    private Integer Pitch;
+    private Long Pitch;
 
     /**
     * 左右偏移[-30,30]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
@@ -64,7 +64,7 @@ public class FaceAttributesInfo  extends AbstractModel{
     */
     @SerializedName("Yaw")
     @Expose
-    private Integer Yaw;
+    private Long Yaw;
 
     /**
     * 平面旋转[-180,180]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
@@ -72,14 +72,14 @@ public class FaceAttributesInfo  extends AbstractModel{
     */
     @SerializedName("Roll")
     @Expose
-    private Integer Roll;
+    private Long Roll;
 
     /**
     * 魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
     */
     @SerializedName("Beauty")
     @Expose
-    private Integer Beauty;
+    private Long Beauty;
 
     /**
     * 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
@@ -117,7 +117,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * 获取性别[0~49]为女性，[50，100]为男性，越接近0和100表示置信度越高。NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @return Gender 性别[0~49]为女性，[50，100]为男性，越接近0和100表示置信度越高。NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
-    public Integer getGender() {
+    public Long getGender() {
         return this.Gender;
     }
 
@@ -125,7 +125,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * 设置性别[0~49]为女性，[50，100]为男性，越接近0和100表示置信度越高。NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @param Gender 性别[0~49]为女性，[50，100]为男性，越接近0和100表示置信度越高。NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
-    public void setGender(Integer Gender) {
+    public void setGender(Long Gender) {
         this.Gender = Gender;
     }
 
@@ -133,7 +133,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * 获取年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @return Age 年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
-    public Integer getAge() {
+    public Long getAge() {
         return this.Age;
     }
 
@@ -141,7 +141,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * 设置年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @param Age 年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
-    public void setAge(Integer Age) {
+    public void setAge(Long Age) {
         this.Age = Age;
     }
 
@@ -149,7 +149,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * 获取微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @return Expression 微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
-    public Integer getExpression() {
+    public Long getExpression() {
         return this.Expression;
     }
 
@@ -157,7 +157,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * 设置微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @param Expression 微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
-    public void setExpression(Integer Expression) {
+    public void setExpression(Long Expression) {
         this.Expression = Expression;
     }
 
@@ -183,7 +183,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * @return Pitch 上下偏移[-30,30]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
 建议：人脸入库选择[-10,10]的图片。
      */
-    public Integer getPitch() {
+    public Long getPitch() {
         return this.Pitch;
     }
 
@@ -193,7 +193,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * @param Pitch 上下偏移[-30,30]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
 建议：人脸入库选择[-10,10]的图片。
      */
-    public void setPitch(Integer Pitch) {
+    public void setPitch(Long Pitch) {
         this.Pitch = Pitch;
     }
 
@@ -203,7 +203,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * @return Yaw 左右偏移[-30,30]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
 建议：人脸入库选择[-10,10]的图片。
      */
-    public Integer getYaw() {
+    public Long getYaw() {
         return this.Yaw;
     }
 
@@ -213,7 +213,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * @param Yaw 左右偏移[-30,30]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
 建议：人脸入库选择[-10,10]的图片。
      */
-    public void setYaw(Integer Yaw) {
+    public void setYaw(Long Yaw) {
         this.Yaw = Yaw;
     }
 
@@ -223,7 +223,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * @return Roll 平面旋转[-180,180]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
 建议：人脸入库选择[-20,20]的图片。
      */
-    public Integer getRoll() {
+    public Long getRoll() {
         return this.Roll;
     }
 
@@ -233,7 +233,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * @param Roll 平面旋转[-180,180]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
 建议：人脸入库选择[-20,20]的图片。
      */
-    public void setRoll(Integer Roll) {
+    public void setRoll(Long Roll) {
         this.Roll = Roll;
     }
 
@@ -241,7 +241,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * 获取魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @return Beauty 魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
-    public Integer getBeauty() {
+    public Long getBeauty() {
         return this.Beauty;
     }
 
@@ -249,7 +249,7 @@ public class FaceAttributesInfo  extends AbstractModel{
      * 设置魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @param Beauty 魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
-    public void setBeauty(Integer Beauty) {
+    public void setBeauty(Long Beauty) {
         this.Beauty = Beauty;
     }
 

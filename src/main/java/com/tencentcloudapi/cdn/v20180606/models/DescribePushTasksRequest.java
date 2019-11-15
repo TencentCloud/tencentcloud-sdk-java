@@ -37,42 +37,49 @@ public class DescribePushTasksRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-    * 提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
+    * 指定任务 ID 查询
+TaskId 和起始时间必须指定一项
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 查询关键字，请输入域名或 http(s):// 开头完整 URL。
+    * 查询关键字，请输入域名或 http(s):// 开头完整 URL
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 分页查询偏移量，默认为 0 （第一页）。
+    * 分页查询偏移量，默认为 0 （第一页）
     */
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
 
     /**
-    * 分页查询限制数目，默认为20。
+    * 分页查询限制数目，默认为 20
     */
     @SerializedName("Limit")
     @Expose
     private Integer Limit;
 
     /**
-    * 查询刷新记录指定地区。mainland：中国大陆。
+    * 指定地区查询预热纪录
+mainland：境内
+overseas：境外
+global：全球
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+    * 指定任务状态查询
+fail：预热失败
+done：预热成功
+process：预热中
     */
     @SerializedName("Status")
     @Expose
@@ -111,96 +118,124 @@ public class DescribePushTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
-     * @return TaskId 提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
+     * 获取指定任务 ID 查询
+TaskId 和起始时间必须指定一项
+     * @return TaskId 指定任务 ID 查询
+TaskId 和起始时间必须指定一项
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
-     * @param TaskId 提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
+     * 设置指定任务 ID 查询
+TaskId 和起始时间必须指定一项
+     * @param TaskId 指定任务 ID 查询
+TaskId 和起始时间必须指定一项
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * 获取查询关键字，请输入域名或 http(s):// 开头完整 URL。
-     * @return Keyword 查询关键字，请输入域名或 http(s):// 开头完整 URL。
+     * 获取查询关键字，请输入域名或 http(s):// 开头完整 URL
+     * @return Keyword 查询关键字，请输入域名或 http(s):// 开头完整 URL
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * 设置查询关键字，请输入域名或 http(s):// 开头完整 URL。
-     * @param Keyword 查询关键字，请输入域名或 http(s):// 开头完整 URL。
+     * 设置查询关键字，请输入域名或 http(s):// 开头完整 URL
+     * @param Keyword 查询关键字，请输入域名或 http(s):// 开头完整 URL
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * 获取分页查询偏移量，默认为 0 （第一页）。
-     * @return Offset 分页查询偏移量，默认为 0 （第一页）。
+     * 获取分页查询偏移量，默认为 0 （第一页）
+     * @return Offset 分页查询偏移量，默认为 0 （第一页）
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置分页查询偏移量，默认为 0 （第一页）。
-     * @param Offset 分页查询偏移量，默认为 0 （第一页）。
+     * 设置分页查询偏移量，默认为 0 （第一页）
+     * @param Offset 分页查询偏移量，默认为 0 （第一页）
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取分页查询限制数目，默认为20。
-     * @return Limit 分页查询限制数目，默认为20。
+     * 获取分页查询限制数目，默认为 20
+     * @return Limit 分页查询限制数目，默认为 20
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页查询限制数目，默认为20。
-     * @param Limit 分页查询限制数目，默认为20。
+     * 设置分页查询限制数目，默认为 20
+     * @param Limit 分页查询限制数目，默认为 20
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取查询刷新记录指定地区。mainland：中国大陆。
-     * @return Area 查询刷新记录指定地区。mainland：中国大陆。
+     * 获取指定地区查询预热纪录
+mainland：境内
+overseas：境外
+global：全球
+     * @return Area 指定地区查询预热纪录
+mainland：境内
+overseas：境外
+global：全球
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * 设置查询刷新记录指定地区。mainland：中国大陆。
-     * @param Area 查询刷新记录指定地区。mainland：中国大陆。
+     * 设置指定地区查询预热纪录
+mainland：境内
+overseas：境外
+global：全球
+     * @param Area 指定地区查询预热纪录
+mainland：境内
+overseas：境外
+global：全球
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * 获取查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
-     * @return Status 查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+     * 获取指定任务状态查询
+fail：预热失败
+done：预热成功
+process：预热中
+     * @return Status 指定任务状态查询
+fail：预热失败
+done：预热成功
+process：预热中
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
-     * @param Status 查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+     * 设置指定任务状态查询
+fail：预热失败
+done：预热成功
+process：预热中
+     * @param Status 指定任务状态查询
+fail：预热失败
+done：预热成功
+process：预热中
      */
     public void setStatus(String Status) {
         this.Status = Status;

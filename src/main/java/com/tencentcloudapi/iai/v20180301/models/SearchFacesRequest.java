@@ -55,14 +55,14 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     */
     @SerializedName("MaxFaceNum")
     @Expose
-    private Integer MaxFaceNum;
+    private Long MaxFaceNum;
 
     /**
     * 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
     */
     @SerializedName("MinFaceSize")
     @Expose
-    private Integer MinFaceSize;
+    private Long MinFaceSize;
 
     /**
     * 单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
@@ -71,28 +71,30 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     */
     @SerializedName("MaxPersonNum")
     @Expose
-    private Integer MaxPersonNum;
+    private Long MaxPersonNum;
 
     /**
     * 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
     */
     @SerializedName("NeedPersonInfo")
     @Expose
-    private Integer NeedPersonInfo;
+    private Long NeedPersonInfo;
 
     /**
-    * 图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
-0: 不进行控制， 
-1:较低的质量要求， 
-2: 一般的质量要求， 
-3: 较高的质量要求。 
-4: 很高的质量要求。 
-默认 0。 
-若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+    * 此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。
+如果判断为已有相同人在人员库中，则不会创建新的人员，返回疑似同一人的人员信息。
+如果判断没有，则完成创建人员。
+0: 不进行判断，无论是否有疑似同一人在库中均完成入库；
+1:较低的同一人判断要求（百一误识别率）；
+2: 一般的同一人判断要求（千一误识别率）；
+3: 较高的同一人判断要求（万一误识别率）；
+4: 很高的同一人判断要求（十万一误识别率）。
+默认 0。
+注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。
     */
     @SerializedName("QualityControl")
     @Expose
-    private Integer QualityControl;
+    private Long QualityControl;
 
     /**
     * 出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
@@ -177,7 +179,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
 例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
      */
-    public Integer getMaxFaceNum() {
+    public Long getMaxFaceNum() {
         return this.MaxFaceNum;
     }
 
@@ -189,7 +191,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
 例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
      */
-    public void setMaxFaceNum(Integer MaxFaceNum) {
+    public void setMaxFaceNum(Long MaxFaceNum) {
         this.MaxFaceNum = MaxFaceNum;
     }
 
@@ -197,7 +199,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
      * 获取人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
      * @return MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
      */
-    public Integer getMinFaceSize() {
+    public Long getMinFaceSize() {
         return this.MinFaceSize;
     }
 
@@ -205,7 +207,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
      * 设置人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
      * @param MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
      */
-    public void setMinFaceSize(Integer MinFaceSize) {
+    public void setMinFaceSize(Long MinFaceSize) {
         this.MinFaceSize = MinFaceSize;
     }
 
@@ -217,7 +219,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
 值越大，需要处理的时间越长。建议不要超过10。
      */
-    public Integer getMaxPersonNum() {
+    public Long getMaxPersonNum() {
         return this.MaxPersonNum;
     }
 
@@ -229,7 +231,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
 值越大，需要处理的时间越长。建议不要超过10。
      */
-    public void setMaxPersonNum(Integer MaxPersonNum) {
+    public void setMaxPersonNum(Long MaxPersonNum) {
         this.MaxPersonNum = MaxPersonNum;
     }
 
@@ -237,7 +239,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
      * 获取是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
      * @return NeedPersonInfo 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
      */
-    public Integer getNeedPersonInfo() {
+    public Long getNeedPersonInfo() {
         return this.NeedPersonInfo;
     }
 
@@ -245,51 +247,59 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
      * 设置是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
      * @param NeedPersonInfo 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
      */
-    public void setNeedPersonInfo(Integer NeedPersonInfo) {
+    public void setNeedPersonInfo(Long NeedPersonInfo) {
         this.NeedPersonInfo = NeedPersonInfo;
     }
 
     /**
-     * 获取图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
-0: 不进行控制， 
-1:较低的质量要求， 
-2: 一般的质量要求， 
-3: 较高的质量要求。 
-4: 很高的质量要求。 
-默认 0。 
-若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
-     * @return QualityControl 图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
-0: 不进行控制， 
-1:较低的质量要求， 
-2: 一般的质量要求， 
-3: 较高的质量要求。 
-4: 很高的质量要求。 
-默认 0。 
-若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     * 获取此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。
+如果判断为已有相同人在人员库中，则不会创建新的人员，返回疑似同一人的人员信息。
+如果判断没有，则完成创建人员。
+0: 不进行判断，无论是否有疑似同一人在库中均完成入库；
+1:较低的同一人判断要求（百一误识别率）；
+2: 一般的同一人判断要求（千一误识别率）；
+3: 较高的同一人判断要求（万一误识别率）；
+4: 很高的同一人判断要求（十万一误识别率）。
+默认 0。
+注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。
+     * @return QualityControl 此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。
+如果判断为已有相同人在人员库中，则不会创建新的人员，返回疑似同一人的人员信息。
+如果判断没有，则完成创建人员。
+0: 不进行判断，无论是否有疑似同一人在库中均完成入库；
+1:较低的同一人判断要求（百一误识别率）；
+2: 一般的同一人判断要求（千一误识别率）；
+3: 较高的同一人判断要求（万一误识别率）；
+4: 很高的同一人判断要求（十万一误识别率）。
+默认 0。
+注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。
      */
-    public Integer getQualityControl() {
+    public Long getQualityControl() {
         return this.QualityControl;
     }
 
     /**
-     * 设置图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
-0: 不进行控制， 
-1:较低的质量要求， 
-2: 一般的质量要求， 
-3: 较高的质量要求。 
-4: 很高的质量要求。 
-默认 0。 
-若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
-     * @param QualityControl 图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
-0: 不进行控制， 
-1:较低的质量要求， 
-2: 一般的质量要求， 
-3: 较高的质量要求。 
-4: 很高的质量要求。 
-默认 0。 
-若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+     * 设置此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。
+如果判断为已有相同人在人员库中，则不会创建新的人员，返回疑似同一人的人员信息。
+如果判断没有，则完成创建人员。
+0: 不进行判断，无论是否有疑似同一人在库中均完成入库；
+1:较低的同一人判断要求（百一误识别率）；
+2: 一般的同一人判断要求（千一误识别率）；
+3: 较高的同一人判断要求（万一误识别率）；
+4: 很高的同一人判断要求（十万一误识别率）。
+默认 0。
+注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。
+     * @param QualityControl 此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。
+如果判断为已有相同人在人员库中，则不会创建新的人员，返回疑似同一人的人员信息。
+如果判断没有，则完成创建人员。
+0: 不进行判断，无论是否有疑似同一人在库中均完成入库；
+1:较低的同一人判断要求（百一误识别率）；
+2: 一般的同一人判断要求（千一误识别率）；
+3: 较高的同一人判断要求（万一误识别率）；
+4: 很高的同一人判断要求（十万一误识别率）。
+默认 0。
+注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。
      */
-    public void setQualityControl(Integer QualityControl) {
+    public void setQualityControl(Long QualityControl) {
         this.QualityControl = QualityControl;
     }
 

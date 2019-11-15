@@ -62,7 +62,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     */
     @SerializedName("QualityControl")
     @Expose
-    private Integer QualityControl;
+    private Long QualityControl;
 
     /**
      * 获取待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
@@ -158,7 +158,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
-    public Integer getQualityControl() {
+    public Long getQualityControl() {
         return this.QualityControl;
     }
 
@@ -180,7 +180,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
-    public void setQualityControl(Integer QualityControl) {
+    public void setQualityControl(Long QualityControl) {
         this.QualityControl = QualityControl;
     }
 

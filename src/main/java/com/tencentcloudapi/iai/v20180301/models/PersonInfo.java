@@ -41,7 +41,7 @@ public class PersonInfo  extends AbstractModel{
     */
     @SerializedName("Gender")
     @Expose
-    private Integer Gender;
+    private Long Gender;
 
     /**
     * 人员描述字段内容
@@ -63,7 +63,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     */
     @SerializedName("CreationTimestamp")
     @Expose
-    private Integer CreationTimestamp;
+    private Long CreationTimestamp;
 
     /**
      * 获取人员名称
@@ -101,7 +101,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
      * 获取人员性别
      * @return Gender 人员性别
      */
-    public Integer getGender() {
+    public Long getGender() {
         return this.Gender;
     }
 
@@ -109,7 +109,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
      * 设置人员性别
      * @param Gender 人员性别
      */
-    public void setGender(Integer Gender) {
+    public void setGender(Long Gender) {
         this.Gender = Gender;
     }
 
@@ -151,7 +151,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
      * @return CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
      */
-    public Integer getCreationTimestamp() {
+    public Long getCreationTimestamp() {
         return this.CreationTimestamp;
     }
 
@@ -161,7 +161,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
      * @param CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
      */
-    public void setCreationTimestamp(Integer CreationTimestamp) {
+    public void setCreationTimestamp(Long CreationTimestamp) {
         this.CreationTimestamp = CreationTimestamp;
     }
 

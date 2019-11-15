@@ -100,6 +100,13 @@ public class EstateCertOCRResponse  extends AbstractModel{
     private Float Angle;
 
     /**
+    * 不动产权号
+    */
+    @SerializedName("Number")
+    @Expose
+    private String Number;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -283,6 +290,22 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
+     * 获取不动产权号
+     * @return Number 不动产权号
+     */
+    public String getNumber() {
+        return this.Number;
+    }
+
+    /**
+     * 设置不动产权号
+     * @param Number 不动产权号
+     */
+    public void setNumber(String Number) {
+        this.Number = Number;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -313,6 +336,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "Term", this.Term);
         this.setParamSimple(map, prefix + "Other", this.Other);
         this.setParamSimple(map, prefix + "Angle", this.Angle);
+        this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

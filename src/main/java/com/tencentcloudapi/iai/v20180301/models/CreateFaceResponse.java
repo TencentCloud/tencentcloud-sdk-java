@@ -27,7 +27,7 @@ public class CreateFaceResponse  extends AbstractModel{
     */
     @SerializedName("SucFaceNum")
     @Expose
-    private Integer SucFaceNum;
+    private Long SucFaceNum;
 
     /**
     * 加入成功的人脸ID列表
@@ -45,7 +45,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     */
     @SerializedName("RetCode")
     @Expose
-    private Integer [] RetCode;
+    private Long [] RetCode;
 
     /**
     * 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
@@ -53,7 +53,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     */
     @SerializedName("SucIndexes")
     @Expose
-    private Integer [] SucIndexes;
+    private Long [] SucIndexes;
 
     /**
     * 加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
@@ -80,7 +80,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
      * 获取加入成功的人脸数量
      * @return SucFaceNum 加入成功的人脸数量
      */
-    public Integer getSucFaceNum() {
+    public Long getSucFaceNum() {
         return this.SucFaceNum;
     }
 
@@ -88,7 +88,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
      * 设置加入成功的人脸数量
      * @param SucFaceNum 加入成功的人脸数量
      */
-    public void setSucFaceNum(Integer SucFaceNum) {
+    public void setSucFaceNum(Long SucFaceNum) {
         this.SucFaceNum = SucFaceNum;
     }
 
@@ -120,7 +120,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
 其他非 0 值代表算法服务异常。 
 RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
      */
-    public Integer [] getRetCode() {
+    public Long [] getRetCode() {
         return this.RetCode;
     }
 
@@ -136,7 +136,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
 其他非 0 值代表算法服务异常。 
 RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
      */
-    public void setRetCode(Integer [] RetCode) {
+    public void setRetCode(Long [] RetCode) {
         this.RetCode = RetCode;
     }
 
@@ -146,7 +146,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
      * @return SucIndexes 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
 例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
      */
-    public Integer [] getSucIndexes() {
+    public Long [] getSucIndexes() {
         return this.SucIndexes;
     }
 
@@ -156,7 +156,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
      * @param SucIndexes 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
 例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
      */
-    public void setSucIndexes(Integer [] SucIndexes) {
+    public void setSucIndexes(Long [] SucIndexes) {
         this.SucIndexes = SucIndexes;
     }
 

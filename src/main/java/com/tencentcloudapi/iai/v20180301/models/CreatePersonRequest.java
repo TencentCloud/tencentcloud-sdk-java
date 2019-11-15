@@ -48,7 +48,7 @@ public class CreatePersonRequest  extends AbstractModel{
     */
     @SerializedName("Gender")
     @Expose
-    private Integer Gender;
+    private Long Gender;
 
     /**
     * 人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
@@ -90,7 +90,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     */
     @SerializedName("UniquePersonControl")
     @Expose
-    private Integer UniquePersonControl;
+    private Long UniquePersonControl;
 
     /**
     * 图片质量控制。 
@@ -104,7 +104,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     */
     @SerializedName("QualityControl")
     @Expose
-    private Integer QualityControl;
+    private Long QualityControl;
 
     /**
      * 获取待加入的人员库ID。
@@ -158,7 +158,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * 获取0代表未填写，1代表男性，2代表女性。
      * @return Gender 0代表未填写，1代表男性，2代表女性。
      */
-    public Integer getGender() {
+    public Long getGender() {
         return this.Gender;
     }
 
@@ -166,7 +166,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * 设置0代表未填写，1代表男性，2代表女性。
      * @param Gender 0代表未填写，1代表男性，2代表女性。
      */
-    public void setGender(Integer Gender) {
+    public void setGender(Long Gender) {
         this.Gender = Gender;
     }
 
@@ -260,7 +260,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 默认 0。  
 注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。
      */
-    public Integer getUniquePersonControl() {
+    public Long getUniquePersonControl() {
         return this.UniquePersonControl;
     }
 
@@ -286,7 +286,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 默认 0。  
 注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。
      */
-    public void setUniquePersonControl(Integer UniquePersonControl) {
+    public void setUniquePersonControl(Long UniquePersonControl) {
         this.UniquePersonControl = UniquePersonControl;
     }
 
@@ -308,7 +308,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
-    public Integer getQualityControl() {
+    public Long getQualityControl() {
         return this.QualityControl;
     }
 
@@ -330,7 +330,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
-    public void setQualityControl(Integer QualityControl) {
+    public void setQualityControl(Long QualityControl) {
         this.QualityControl = QualityControl;
     }
 

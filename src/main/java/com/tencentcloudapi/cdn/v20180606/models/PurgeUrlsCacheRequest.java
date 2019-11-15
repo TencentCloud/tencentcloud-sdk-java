@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class PurgeUrlsCacheRequest  extends AbstractModel{
 
     /**
-    * 要刷新的Url列表，必须包含协议头部。
+    * URL 列表，需要包含协议头部 http:// 或 https://
     */
     @SerializedName("Urls")
     @Expose
     private String [] Urls;
 
     /**
-     * 获取要刷新的Url列表，必须包含协议头部。
-     * @return Urls 要刷新的Url列表，必须包含协议头部。
+     * 获取URL 列表，需要包含协议头部 http:// 或 https://
+     * @return Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
     public String [] getUrls() {
         return this.Urls;
     }
 
     /**
-     * 设置要刷新的Url列表，必须包含协议头部。
-     * @param Urls 要刷新的Url列表，必须包含协议头部。
+     * 设置URL 列表，需要包含协议头部 http:// 或 https://
+     * @param Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
     public void setUrls(String [] Urls) {
         this.Urls = Urls;

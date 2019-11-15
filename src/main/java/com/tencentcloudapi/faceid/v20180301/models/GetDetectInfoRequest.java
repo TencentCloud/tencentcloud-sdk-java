@@ -39,6 +39,7 @@ public class GetDetectInfoRequest  extends AbstractModel{
     /**
     * 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
+默认值：0
     */
     @SerializedName("InfoType")
     @Expose
@@ -79,8 +80,10 @@ public class GetDetectInfoRequest  extends AbstractModel{
     /**
      * 获取指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
+默认值：0
      * @return InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
+默认值：0
      */
     public String getInfoType() {
         return this.InfoType;
@@ -89,8 +92,10 @@ public class GetDetectInfoRequest  extends AbstractModel{
     /**
      * 设置指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
+默认值：0
      * @param InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
+默认值：0
      */
     public void setInfoType(String InfoType) {
         this.InfoType = InfoType;

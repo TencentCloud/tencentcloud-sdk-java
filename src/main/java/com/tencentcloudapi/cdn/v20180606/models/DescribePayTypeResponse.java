@@ -26,7 +26,7 @@ public class DescribePayTypeResponse  extends AbstractModel{
     * 计费类型：
 flux：流量计费
 bandwidth：带宽计费
-如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
+日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
     */
     @SerializedName("PayType")
     @Expose
@@ -54,16 +54,16 @@ max：峰值带宽计费，日结模式
     private String StatType;
 
     /**
-    * 地区计费方式，仅在查询中国境外 CDN 计费方式时可用
-all：表示全地区统一计费
-multiple：表示分地区计费。
+    * 境外计费类型：
+all：全地区统一计费
+multiple：分地区计费
     */
     @SerializedName("RegionType")
     @Expose
     private String RegionType;
 
     /**
-    * 当前计费类型：
+    * 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
     */
@@ -82,11 +82,11 @@ bandwidth：带宽计费
      * 获取计费类型：
 flux：流量计费
 bandwidth：带宽计费
-如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
+日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      * @return PayType 计费类型：
 flux：流量计费
 bandwidth：带宽计费
-如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
+日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      */
     public String getPayType() {
         return this.PayType;
@@ -96,11 +96,11 @@ bandwidth：带宽计费
      * 设置计费类型：
 flux：流量计费
 bandwidth：带宽计费
-如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
+日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      * @param PayType 计费类型：
 flux：流量计费
 bandwidth：带宽计费
-如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
+日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      */
     public void setPayType(String PayType) {
         this.PayType = PayType;
@@ -167,34 +167,34 @@ max：峰值带宽计费，日结模式
     }
 
     /**
-     * 获取地区计费方式，仅在查询中国境外 CDN 计费方式时可用
-all：表示全地区统一计费
-multiple：表示分地区计费。
-     * @return RegionType 地区计费方式，仅在查询中国境外 CDN 计费方式时可用
-all：表示全地区统一计费
-multiple：表示分地区计费。
+     * 获取境外计费类型：
+all：全地区统一计费
+multiple：分地区计费
+     * @return RegionType 境外计费类型：
+all：全地区统一计费
+multiple：分地区计费
      */
     public String getRegionType() {
         return this.RegionType;
     }
 
     /**
-     * 设置地区计费方式，仅在查询中国境外 CDN 计费方式时可用
-all：表示全地区统一计费
-multiple：表示分地区计费。
-     * @param RegionType 地区计费方式，仅在查询中国境外 CDN 计费方式时可用
-all：表示全地区统一计费
-multiple：表示分地区计费。
+     * 设置境外计费类型：
+all：全地区统一计费
+multiple：分地区计费
+     * @param RegionType 境外计费类型：
+all：全地区统一计费
+multiple：分地区计费
      */
     public void setRegionType(String RegionType) {
         this.RegionType = RegionType;
     }
 
     /**
-     * 获取当前计费类型：
+     * 获取当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
-     * @return CurrentPayType 当前计费类型：
+     * @return CurrentPayType 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
      */
@@ -203,10 +203,10 @@ bandwidth：带宽计费
     }
 
     /**
-     * 设置当前计费类型：
+     * 设置当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
-     * @param CurrentPayType 当前计费类型：
+     * @param CurrentPayType 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
      */

@@ -31,7 +31,7 @@ public class FaceQualityInfo  extends AbstractModel{
     */
     @SerializedName("Score")
     @Expose
-    private Integer Score;
+    private Long Score;
 
     /**
     * 清晰分：[0,100]，评价图片清晰程度，分数越高越清晰。 
@@ -41,7 +41,7 @@ public class FaceQualityInfo  extends AbstractModel{
     */
     @SerializedName("Sharpness")
     @Expose
-    private Integer Sharpness;
+    private Long Sharpness;
 
     /**
     * 光照分：[0,100]，评价图片光照程度，分数越高越亮。 
@@ -51,7 +51,7 @@ public class FaceQualityInfo  extends AbstractModel{
     */
     @SerializedName("Brightness")
     @Expose
-    private Integer Brightness;
+    private Long Brightness;
 
     /**
     * 五官遮挡分，评价眉毛（Eyebrow）、眼睛（Eye）、鼻子（Nose）、脸颊（Cheek）、嘴巴（Mouth）、下巴（Chin）的被遮挡程度。
@@ -73,7 +73,7 @@ public class FaceQualityInfo  extends AbstractModel{
 建议：人脸入库选取70以上的图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getScore() {
+    public Long getScore() {
         return this.Score;
     }
 
@@ -89,7 +89,7 @@ public class FaceQualityInfo  extends AbstractModel{
 建议：人脸入库选取70以上的图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setScore(Integer Score) {
+    public void setScore(Long Score) {
         this.Score = Score;
     }
 
@@ -103,7 +103,7 @@ public class FaceQualityInfo  extends AbstractModel{
 建议：人脸入库选取80以上的图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getSharpness() {
+    public Long getSharpness() {
         return this.Sharpness;
     }
 
@@ -117,7 +117,7 @@ public class FaceQualityInfo  extends AbstractModel{
 建议：人脸入库选取80以上的图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSharpness(Integer Sharpness) {
+    public void setSharpness(Long Sharpness) {
         this.Sharpness = Sharpness;
     }
 
@@ -131,7 +131,7 @@ public class FaceQualityInfo  extends AbstractModel{
 建议：人脸入库选取[30,70]的图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getBrightness() {
+    public Long getBrightness() {
         return this.Brightness;
     }
 
@@ -145,7 +145,7 @@ public class FaceQualityInfo  extends AbstractModel{
 建议：人脸入库选取[30,70]的图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBrightness(Integer Brightness) {
+    public void setBrightness(Long Brightness) {
         this.Brightness = Brightness;
     }
 

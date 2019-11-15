@@ -30,7 +30,9 @@ public class TaskSimpleInfo  extends AbstractModel{
     private String TaskId;
 
     /**
-    * 任务类型，目前仅支持 WorkflowTask。
+    * 任务类型，包含：
+<li> WorkflowTask：工作流处理任务；</li>
+<li> LiveProcessTask：直播处理任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -74,16 +76,24 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务类型，目前仅支持 WorkflowTask。
-     * @return TaskType 任务类型，目前仅支持 WorkflowTask。
+     * 获取任务类型，包含：
+<li> WorkflowTask：工作流处理任务；</li>
+<li> LiveProcessTask：直播处理任务。</li>
+     * @return TaskType 任务类型，包含：
+<li> WorkflowTask：工作流处理任务；</li>
+<li> LiveProcessTask：直播处理任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * 设置任务类型，目前仅支持 WorkflowTask。
-     * @param TaskType 任务类型，目前仅支持 WorkflowTask。
+     * 设置任务类型，包含：
+<li> WorkflowTask：工作流处理任务；</li>
+<li> LiveProcessTask：直播处理任务。</li>
+     * @param TaskType 任务类型，包含：
+<li> WorkflowTask：工作流处理任务；</li>
+<li> LiveProcessTask：直播处理任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

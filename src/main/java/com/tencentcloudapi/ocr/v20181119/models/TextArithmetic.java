@@ -44,7 +44,7 @@ public class TextArithmetic  extends AbstractModel{
     private Integer Confidence;
 
     /**
-    * 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+    * 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Polygon")
@@ -57,6 +57,31 @@ public class TextArithmetic  extends AbstractModel{
     @SerializedName("AdvancedInfo")
     @Expose
     private String AdvancedInfo;
+
+    /**
+    * 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+    */
+    @SerializedName("ItemCoord")
+    @Expose
+    private ItemCoord ItemCoord;
+
+    /**
+    * 算式题型编号：
+‘1’: 加减乘除四则
+‘2’: 加减乘除已知结果求运算因子
+‘3’: 判断大小
+‘4’: 约等于估算
+‘5’: 带余数除法
+‘6’: 分数四则运算
+‘7’: 单位换算
+‘8’: 竖式加减法
+‘9’: 竖式乘除法
+‘10’: 脱式计算
+‘11’: 解方程
+    */
+    @SerializedName("ExpressionType")
+    @Expose
+    private String ExpressionType;
 
     /**
      * 获取识别出的文本行内容
@@ -107,9 +132,9 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+     * 获取原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Polygon 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+     * @return Polygon 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getPolygon() {
@@ -117,9 +142,9 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 设置文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+     * 设置原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Polygon 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+     * @param Polygon 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolygon(Coord [] Polygon) {
@@ -143,6 +168,82 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
+     * 获取文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @return ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public ItemCoord getItemCoord() {
+        return this.ItemCoord;
+    }
+
+    /**
+     * 设置文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @param ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public void setItemCoord(ItemCoord ItemCoord) {
+        this.ItemCoord = ItemCoord;
+    }
+
+    /**
+     * 获取算式题型编号：
+‘1’: 加减乘除四则
+‘2’: 加减乘除已知结果求运算因子
+‘3’: 判断大小
+‘4’: 约等于估算
+‘5’: 带余数除法
+‘6’: 分数四则运算
+‘7’: 单位换算
+‘8’: 竖式加减法
+‘9’: 竖式乘除法
+‘10’: 脱式计算
+‘11’: 解方程
+     * @return ExpressionType 算式题型编号：
+‘1’: 加减乘除四则
+‘2’: 加减乘除已知结果求运算因子
+‘3’: 判断大小
+‘4’: 约等于估算
+‘5’: 带余数除法
+‘6’: 分数四则运算
+‘7’: 单位换算
+‘8’: 竖式加减法
+‘9’: 竖式乘除法
+‘10’: 脱式计算
+‘11’: 解方程
+     */
+    public String getExpressionType() {
+        return this.ExpressionType;
+    }
+
+    /**
+     * 设置算式题型编号：
+‘1’: 加减乘除四则
+‘2’: 加减乘除已知结果求运算因子
+‘3’: 判断大小
+‘4’: 约等于估算
+‘5’: 带余数除法
+‘6’: 分数四则运算
+‘7’: 单位换算
+‘8’: 竖式加减法
+‘9’: 竖式乘除法
+‘10’: 脱式计算
+‘11’: 解方程
+     * @param ExpressionType 算式题型编号：
+‘1’: 加减乘除四则
+‘2’: 加减乘除已知结果求运算因子
+‘3’: 判断大小
+‘4’: 约等于估算
+‘5’: 带余数除法
+‘6’: 分数四则运算
+‘7’: 单位换算
+‘8’: 竖式加减法
+‘9’: 竖式乘除法
+‘10’: 脱式计算
+‘11’: 解方程
+     */
+    public void setExpressionType(String ExpressionType) {
+        this.ExpressionType = ExpressionType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +252,8 @@ public class TextArithmetic  extends AbstractModel{
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamArrayObj(map, prefix + "Polygon.", this.Polygon);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+        this.setParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
+        this.setParamSimple(map, prefix + "ExpressionType", this.ExpressionType);
 
     }
 }

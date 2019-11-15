@@ -34,14 +34,14 @@ public class GetPersonListRequest  extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回数量，默认值为10，最大值为1000
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * 获取人员库ID
@@ -63,7 +63,7 @@ public class GetPersonListRequest  extends AbstractModel{
      * 获取起始序号，默认值为0
      * @return Offset 起始序号，默认值为0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -71,7 +71,7 @@ public class GetPersonListRequest  extends AbstractModel{
      * 设置起始序号，默认值为0
      * @param Offset 起始序号，默认值为0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -79,7 +79,7 @@ public class GetPersonListRequest  extends AbstractModel{
      * 获取返回数量，默认值为10，最大值为1000
      * @return Limit 返回数量，默认值为10，最大值为1000
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -87,7 +87,7 @@ public class GetPersonListRequest  extends AbstractModel{
      * 设置返回数量，默认值为10，最大值为1000
      * @param Limit 返回数量，默认值为10，最大值为1000
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

@@ -42,7 +42,7 @@ public class ResultsReturnsByGroup  extends AbstractModel{
     */
     @SerializedName("RetCode")
     @Expose
-    private Integer RetCode;
+    private Long RetCode;
 
     /**
      * 获取检测出的人脸框位置。
@@ -82,7 +82,7 @@ public class ResultsReturnsByGroup  extends AbstractModel{
      * @return RetCode 检测出的人脸图片状态返回码。0 表示正常。 
 -1601代表不符合图片质量控制要求，此时Candidate内容为空。
      */
-    public Integer getRetCode() {
+    public Long getRetCode() {
         return this.RetCode;
     }
 
@@ -92,7 +92,7 @@ public class ResultsReturnsByGroup  extends AbstractModel{
      * @param RetCode 检测出的人脸图片状态返回码。0 表示正常。 
 -1601代表不符合图片质量控制要求，此时Candidate内容为空。
      */
-    public void setRetCode(Integer RetCode) {
+    public void setRetCode(Long RetCode) {
         this.RetCode = RetCode;
     }
 

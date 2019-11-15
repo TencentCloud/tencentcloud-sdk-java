@@ -23,12 +23,11 @@ import java.util.HashMap;
 public class BankCard2EVerificationResponse  extends AbstractModel{
 
     /**
-    * 认证结果码。
+    * 认证结果码
+计费结果码：
   '0': '认证通过'
   '-1': '认证未通过'
-  '-2': '姓名校验不通过'
-  '-3': '银行卡号码有误'
-  '-4': '持卡人信息有误'
+ '-4': '持卡人信息有误'
   '-5': '未开通无卡支付'
   '-6': '此卡被没收'
   '-7': '无效卡号'
@@ -40,6 +39,9 @@ public class BankCard2EVerificationResponse  extends AbstractModel{
   '-13': '受限制的卡'
   '-14': '密码错误次数超限'
   '-15': '发卡行不支持此交易'
+不计费结果码：
+  '-2': '姓名校验不通过'
+  '-3': '银行卡号码有误'
   '-16': '服务繁忙'
     */
     @SerializedName("Result")
@@ -61,12 +63,11 @@ public class BankCard2EVerificationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取认证结果码。
+     * 获取认证结果码
+计费结果码：
   '0': '认证通过'
   '-1': '认证未通过'
-  '-2': '姓名校验不通过'
-  '-3': '银行卡号码有误'
-  '-4': '持卡人信息有误'
+ '-4': '持卡人信息有误'
   '-5': '未开通无卡支付'
   '-6': '此卡被没收'
   '-7': '无效卡号'
@@ -78,13 +79,15 @@ public class BankCard2EVerificationResponse  extends AbstractModel{
   '-13': '受限制的卡'
   '-14': '密码错误次数超限'
   '-15': '发卡行不支持此交易'
+不计费结果码：
+  '-2': '姓名校验不通过'
+  '-3': '银行卡号码有误'
   '-16': '服务繁忙'
-     * @return Result 认证结果码。
+     * @return Result 认证结果码
+计费结果码：
   '0': '认证通过'
   '-1': '认证未通过'
-  '-2': '姓名校验不通过'
-  '-3': '银行卡号码有误'
-  '-4': '持卡人信息有误'
+ '-4': '持卡人信息有误'
   '-5': '未开通无卡支付'
   '-6': '此卡被没收'
   '-7': '无效卡号'
@@ -96,6 +99,9 @@ public class BankCard2EVerificationResponse  extends AbstractModel{
   '-13': '受限制的卡'
   '-14': '密码错误次数超限'
   '-15': '发卡行不支持此交易'
+不计费结果码：
+  '-2': '姓名校验不通过'
+  '-3': '银行卡号码有误'
   '-16': '服务繁忙'
      */
     public String getResult() {
@@ -103,12 +109,11 @@ public class BankCard2EVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置认证结果码。
+     * 设置认证结果码
+计费结果码：
   '0': '认证通过'
   '-1': '认证未通过'
-  '-2': '姓名校验不通过'
-  '-3': '银行卡号码有误'
-  '-4': '持卡人信息有误'
+ '-4': '持卡人信息有误'
   '-5': '未开通无卡支付'
   '-6': '此卡被没收'
   '-7': '无效卡号'
@@ -120,13 +125,15 @@ public class BankCard2EVerificationResponse  extends AbstractModel{
   '-13': '受限制的卡'
   '-14': '密码错误次数超限'
   '-15': '发卡行不支持此交易'
+不计费结果码：
+  '-2': '姓名校验不通过'
+  '-3': '银行卡号码有误'
   '-16': '服务繁忙'
-     * @param Result 认证结果码。
+     * @param Result 认证结果码
+计费结果码：
   '0': '认证通过'
   '-1': '认证未通过'
-  '-2': '姓名校验不通过'
-  '-3': '银行卡号码有误'
-  '-4': '持卡人信息有误'
+ '-4': '持卡人信息有误'
   '-5': '未开通无卡支付'
   '-6': '此卡被没收'
   '-7': '无效卡号'
@@ -138,6 +145,9 @@ public class BankCard2EVerificationResponse  extends AbstractModel{
   '-13': '受限制的卡'
   '-14': '密码错误次数超限'
   '-15': '发卡行不支持此交易'
+不计费结果码：
+  '-2': '姓名校验不通过'
+  '-3': '银行卡号码有误'
   '-16': '服务繁忙'
      */
     public void setResult(String Result) {

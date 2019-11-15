@@ -24,9 +24,9 @@ public class CreateRecTaskRequest  extends AbstractModel{
 
     /**
     * 引擎类型。
-8k_0：电话 8k 通用模型；
-16k_0：16k 通用模型；
-8k_6: 电话场景下单声道话者分离模型。
+8k_0：电话 8k 通用模型，可用于双声道音频的识别；
+8k_6：电话 8k 话者分离模型，仅用于单声道；
+16k_0：16k 通用模型。
     */
     @SerializedName("EngineModelType")
     @Expose
@@ -61,7 +61,7 @@ public class CreateRecTaskRequest  extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 语音的URL地址，需要公网可下载。长度小于2048字节，当 source_type 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+    * 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
     */
     @SerializedName("Url")
     @Expose
@@ -83,13 +83,13 @@ public class CreateRecTaskRequest  extends AbstractModel{
 
     /**
      * 获取引擎类型。
-8k_0：电话 8k 通用模型；
-16k_0：16k 通用模型；
-8k_6: 电话场景下单声道话者分离模型。
+8k_0：电话 8k 通用模型，可用于双声道音频的识别；
+8k_6：电话 8k 话者分离模型，仅用于单声道；
+16k_0：16k 通用模型。
      * @return EngineModelType 引擎类型。
-8k_0：电话 8k 通用模型；
-16k_0：16k 通用模型；
-8k_6: 电话场景下单声道话者分离模型。
+8k_0：电话 8k 通用模型，可用于双声道音频的识别；
+8k_6：电话 8k 话者分离模型，仅用于单声道；
+16k_0：16k 通用模型。
      */
     public String getEngineModelType() {
         return this.EngineModelType;
@@ -97,13 +97,13 @@ public class CreateRecTaskRequest  extends AbstractModel{
 
     /**
      * 设置引擎类型。
-8k_0：电话 8k 通用模型；
-16k_0：16k 通用模型；
-8k_6: 电话场景下单声道话者分离模型。
+8k_0：电话 8k 通用模型，可用于双声道音频的识别；
+8k_6：电话 8k 话者分离模型，仅用于单声道；
+16k_0：16k 通用模型。
      * @param EngineModelType 引擎类型。
-8k_0：电话 8k 通用模型；
-16k_0：16k 通用模型；
-8k_6: 电话场景下单声道话者分离模型。
+8k_0：电话 8k 通用模型，可用于双声道音频的识别；
+8k_6：电话 8k 话者分离模型，仅用于单声道；
+16k_0：16k 通用模型。
      */
     public void setEngineModelType(String EngineModelType) {
         this.EngineModelType = EngineModelType;
@@ -174,16 +174,16 @@ public class CreateRecTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音的URL地址，需要公网可下载。长度小于2048字节，当 source_type 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
-     * @return Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 source_type 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+     * 获取语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+     * @return Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * 设置语音的URL地址，需要公网可下载。长度小于2048字节，当 source_type 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
-     * @param Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 source_type 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+     * 设置语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+     * @param Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
      */
     public void setUrl(String Url) {
         this.Url = Url;

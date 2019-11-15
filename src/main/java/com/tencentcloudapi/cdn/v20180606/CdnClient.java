@@ -76,6 +76,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeCdnDomainLogs 用于查询访问日志下载地址，仅支持 30 天以内的境内、境外访问日志下载链接查询。
+     * @param req DescribeCdnDomainLogsRequest
+     * @return DescribeCdnDomainLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCdnDomainLogsResponse DescribeCdnDomainLogs(DescribeCdnDomainLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCdnDomainLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCdnDomainLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCdnDomainLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeCdnIp 用于查询 CDN IP 归属。
      * @param req DescribeCdnIpRequest
      * @return DescribeCdnIpResponse
@@ -179,7 +197,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
+     *DescribePurgeTasks 用于查询提交的 URL 刷新、目录刷新记录及执行进度，通过 PurgePathCache 与 PurgeUrlsCache 接口提交的任务均可通过此接口进行查询。
      * @param req DescribePurgeTasksRequest
      * @return DescribePurgeTasksResponse
      * @throws TencentCloudSDKException
@@ -197,7 +215,8 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *DescribePushTasks 用于查询预热任务提交历史记录及执行进度。（接口尚在批量公测中，暂未全量开放使用）
+     *DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
+接口灰度中，暂未全量开放，敬请期待。
      * @param req DescribePushTasksRequest
      * @return DescribePushTasksResponse
      * @throws TencentCloudSDKException
@@ -208,6 +227,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePushTasksResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribePushTasks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeTrafficPackages 用于查询境内 CDN 流量包详情。
+     * @param req DescribeTrafficPackagesRequest
+     * @return DescribeTrafficPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrafficPackagesResponse DescribeTrafficPackages(DescribeTrafficPackagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrafficPackagesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrafficPackagesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTrafficPackages"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -293,7 +330,8 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+     *PurgePathCache 用于批量提交目录刷新，根据域名的加速区域进行对应区域的刷新。
+默认情况下境内、境外加速区域每日目录刷新额度为各 100 条，每次最多可提交 20 条。
      * @param req PurgePathCacheRequest
      * @return PurgePathCacheResponse
      * @throws TencentCloudSDKException
@@ -311,7 +349,8 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
+     *PurgeUrlsCache 用于批量提交 URL 进行刷新，根据 URL 中域名的当前加速区域进行对应区域的刷新。
+默认情况下境内、境外加速区域每日 URL 刷新额度各为 10000 条，每次最多可提交 1000 条。
      * @param req PurgeUrlsCacheRequest
      * @return PurgeUrlsCacheResponse
      * @throws TencentCloudSDKException
@@ -329,7 +368,9 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *PushUrlsCache 用于将指定 URL 资源列表加载至 CDN 节点，默认情况下每次调用可提交 20 条 URL，每日一共可提交 1000 条。
+     *PushUrlsCache 用于将指定 URL 资源列表加载至 CDN 节点，支持指定加速区域预热。
+默认情况下境内、境外每日预热 URL 限额为各 1000 条，每次最多可提交 20 条。
+接口灰度中，暂未全量开放，敬请期待。
      * @param req PushUrlsCacheRequest
      * @return PushUrlsCacheResponse
      * @throws TencentCloudSDKException

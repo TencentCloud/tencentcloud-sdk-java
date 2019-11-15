@@ -27,7 +27,7 @@ public class DeleteFaceResponse  extends AbstractModel{
     */
     @SerializedName("SucDeletedNum")
     @Expose
-    private Integer SucDeletedNum;
+    private Long SucDeletedNum;
 
     /**
     * 删除成功的人脸ID列表
@@ -47,7 +47,7 @@ public class DeleteFaceResponse  extends AbstractModel{
      * 获取删除成功的人脸数量
      * @return SucDeletedNum 删除成功的人脸数量
      */
-    public Integer getSucDeletedNum() {
+    public Long getSucDeletedNum() {
         return this.SucDeletedNum;
     }
 
@@ -55,7 +55,7 @@ public class DeleteFaceResponse  extends AbstractModel{
      * 设置删除成功的人脸数量
      * @param SucDeletedNum 删除成功的人脸数量
      */
-    public void setSucDeletedNum(Integer SucDeletedNum) {
+    public void setSucDeletedNum(Long SucDeletedNum) {
         this.SucDeletedNum = SucDeletedNum;
     }
 

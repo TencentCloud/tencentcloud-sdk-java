@@ -35,7 +35,7 @@ public class DescribeBillSummaryByTagResponse  extends AbstractModel{
     */
     @SerializedName("SummaryOverview")
     @Expose
-    private TagSummaryOverviewItem SummaryOverview;
+    private TagSummaryOverviewItem [] SummaryOverview;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,7 +66,7 @@ public class DescribeBillSummaryByTagResponse  extends AbstractModel{
      * @return SummaryOverview 各标签值花费分布详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TagSummaryOverviewItem getSummaryOverview() {
+    public TagSummaryOverviewItem [] getSummaryOverview() {
         return this.SummaryOverview;
     }
 
@@ -76,7 +76,7 @@ public class DescribeBillSummaryByTagResponse  extends AbstractModel{
      * @param SummaryOverview 各标签值花费分布详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSummaryOverview(TagSummaryOverviewItem SummaryOverview) {
+    public void setSummaryOverview(TagSummaryOverviewItem [] SummaryOverview) {
         this.SummaryOverview = SummaryOverview;
     }
 
@@ -101,7 +101,7 @@ public class DescribeBillSummaryByTagResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ready", this.Ready);
-        this.setParamObj(map, prefix + "SummaryOverview.", this.SummaryOverview);
+        this.setParamArrayObj(map, prefix + "SummaryOverview.", this.SummaryOverview);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

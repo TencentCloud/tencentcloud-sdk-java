@@ -34,7 +34,7 @@ public class SearchFacesResponse  extends AbstractModel{
     */
     @SerializedName("FaceNum")
     @Expose
-    private Integer FaceNum;
+    private Long FaceNum;
 
     /**
     * 人脸识别所用的算法模型版本。
@@ -70,7 +70,7 @@ public class SearchFacesResponse  extends AbstractModel{
      * 获取搜索的人员库中包含的人脸数。
      * @return FaceNum 搜索的人员库中包含的人脸数。
      */
-    public Integer getFaceNum() {
+    public Long getFaceNum() {
         return this.FaceNum;
     }
 
@@ -78,7 +78,7 @@ public class SearchFacesResponse  extends AbstractModel{
      * 设置搜索的人员库中包含的人脸数。
      * @param FaceNum 搜索的人员库中包含的人脸数。
      */
-    public void setFaceNum(Integer FaceNum) {
+    public void setFaceNum(Long FaceNum) {
         this.FaceNum = FaceNum;
     }
 

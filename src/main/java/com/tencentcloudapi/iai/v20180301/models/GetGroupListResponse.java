@@ -35,7 +35,7 @@ public class GetGroupListResponse  extends AbstractModel{
     */
     @SerializedName("GroupNum")
     @Expose
-    private Integer GroupNum;
+    private Long GroupNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,7 +66,7 @@ public class GetGroupListResponse  extends AbstractModel{
      * @return GroupNum 人员库总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getGroupNum() {
+    public Long getGroupNum() {
         return this.GroupNum;
     }
 
@@ -76,7 +76,7 @@ public class GetGroupListResponse  extends AbstractModel{
      * @param GroupNum 人员库总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setGroupNum(Integer GroupNum) {
+    public void setGroupNum(Long GroupNum) {
         this.GroupNum = GroupNum;
     }
 

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePurgeTasksResponse  extends AbstractModel{
 
     /**
-    * 刷新历史记录
+    * 详细刷新记录
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PurgeLogs")
@@ -46,9 +46,9 @@ public class DescribePurgeTasksResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取刷新历史记录
+     * 获取详细刷新记录
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return PurgeLogs 刷新历史记录
+     * @return PurgeLogs 详细刷新记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PurgeTask [] getPurgeLogs() {
@@ -56,9 +56,9 @@ public class DescribePurgeTasksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置刷新历史记录
+     * 设置详细刷新记录
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PurgeLogs 刷新历史记录
+     * @param PurgeLogs 详细刷新记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPurgeLogs(PurgeTask [] PurgeLogs) {

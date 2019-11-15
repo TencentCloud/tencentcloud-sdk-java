@@ -27,7 +27,7 @@ public class CopyPersonResponse  extends AbstractModel{
     */
     @SerializedName("SucGroupNum")
     @Expose
-    private Integer SucGroupNum;
+    private Long SucGroupNum;
 
     /**
     * 成功加入的人员库列表
@@ -47,7 +47,7 @@ public class CopyPersonResponse  extends AbstractModel{
      * 获取成功加入的人员库数量
      * @return SucGroupNum 成功加入的人员库数量
      */
-    public Integer getSucGroupNum() {
+    public Long getSucGroupNum() {
         return this.SucGroupNum;
     }
 
@@ -55,7 +55,7 @@ public class CopyPersonResponse  extends AbstractModel{
      * 设置成功加入的人员库数量
      * @param SucGroupNum 成功加入的人员库数量
      */
-    public void setSucGroupNum(Integer SucGroupNum) {
+    public void setSucGroupNum(Long SucGroupNum) {
         this.SucGroupNum = SucGroupNum;
     }
 

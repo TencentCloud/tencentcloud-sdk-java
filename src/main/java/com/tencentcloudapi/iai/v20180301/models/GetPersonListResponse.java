@@ -35,7 +35,7 @@ public class GetPersonListResponse  extends AbstractModel{
     */
     @SerializedName("PersonNum")
     @Expose
-    private Integer PersonNum;
+    private Long PersonNum;
 
     /**
     * 该人员库的人脸数量
@@ -43,7 +43,7 @@ public class GetPersonListResponse  extends AbstractModel{
     */
     @SerializedName("FaceNum")
     @Expose
-    private Integer FaceNum;
+    private Long FaceNum;
 
     /**
     * 人脸识别所用的算法模型版本。
@@ -82,7 +82,7 @@ public class GetPersonListResponse  extends AbstractModel{
      * @return PersonNum 该人员库的人员数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getPersonNum() {
+    public Long getPersonNum() {
         return this.PersonNum;
     }
 
@@ -92,7 +92,7 @@ public class GetPersonListResponse  extends AbstractModel{
      * @param PersonNum 该人员库的人员数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPersonNum(Integer PersonNum) {
+    public void setPersonNum(Long PersonNum) {
         this.PersonNum = PersonNum;
     }
 
@@ -102,7 +102,7 @@ public class GetPersonListResponse  extends AbstractModel{
      * @return FaceNum 该人员库的人脸数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getFaceNum() {
+    public Long getFaceNum() {
         return this.FaceNum;
     }
 
@@ -112,7 +112,7 @@ public class GetPersonListResponse  extends AbstractModel{
      * @param FaceNum 该人员库的人脸数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFaceNum(Integer FaceNum) {
+    public void setFaceNum(Long FaceNum) {
         this.FaceNum = FaceNum;
     }
 

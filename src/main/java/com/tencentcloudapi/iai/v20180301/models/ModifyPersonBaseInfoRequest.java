@@ -41,7 +41,7 @@ public class ModifyPersonBaseInfoRequest  extends AbstractModel{
     */
     @SerializedName("Gender")
     @Expose
-    private Integer Gender;
+    private Long Gender;
 
     /**
      * 获取人员ID
@@ -79,7 +79,7 @@ public class ModifyPersonBaseInfoRequest  extends AbstractModel{
      * 获取需要修改的人员性别
      * @return Gender 需要修改的人员性别
      */
-    public Integer getGender() {
+    public Long getGender() {
         return this.Gender;
     }
 
@@ -87,7 +87,7 @@ public class ModifyPersonBaseInfoRequest  extends AbstractModel{
      * 设置需要修改的人员性别
      * @param Gender 需要修改的人员性别
      */
-    public void setGender(Integer Gender) {
+    public void setGender(Long Gender) {
         this.Gender = Gender;
     }
 

@@ -28,7 +28,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
     */
     @SerializedName("Length")
     @Expose
-    private Integer Length;
+    private Long Length;
 
     /**
     * 0：有刘海，1：无刘海
@@ -36,7 +36,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
     */
     @SerializedName("Bang")
     @Expose
-    private Integer Bang;
+    private Long Bang;
 
     /**
     * 0：黑色，1：金色，2：棕色，3：灰白色
@@ -44,7 +44,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
     */
     @SerializedName("Color")
     @Expose
-    private Integer Color;
+    private Long Color;
 
     /**
      * 获取0：光头，1：短发，2：中发，3：长发，4：绑发
@@ -52,7 +52,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
      * @return Length 0：光头，1：短发，2：中发，3：长发，4：绑发
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getLength() {
+    public Long getLength() {
         return this.Length;
     }
 
@@ -62,7 +62,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
      * @param Length 0：光头，1：短发，2：中发，3：长发，4：绑发
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLength(Integer Length) {
+    public void setLength(Long Length) {
         this.Length = Length;
     }
 
@@ -72,7 +72,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
      * @return Bang 0：有刘海，1：无刘海
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getBang() {
+    public Long getBang() {
         return this.Bang;
     }
 
@@ -82,7 +82,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
      * @param Bang 0：有刘海，1：无刘海
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBang(Integer Bang) {
+    public void setBang(Long Bang) {
         this.Bang = Bang;
     }
 
@@ -92,7 +92,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
      * @return Color 0：黑色，1：金色，2：棕色，3：灰白色
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getColor() {
+    public Long getColor() {
         return this.Color;
     }
 
@@ -102,7 +102,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
      * @param Color 0：黑色，1：金色，2：棕色，3：灰白色
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setColor(Integer Color) {
+    public void setColor(Long Color) {
         this.Color = Color;
     }
 

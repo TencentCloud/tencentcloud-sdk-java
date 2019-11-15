@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class DeleteServiceConfigRequest  extends AbstractModel{
 
     /**
-    * 服务配置Id (deprecated)
+    * 服务配置Id
     */
     @SerializedName("ServiceConfigId")
     @Expose
-    private Long ServiceConfigId;
+    private String ServiceConfigId;
 
     /**
     * 服务配置名称
@@ -37,18 +37,18 @@ public class DeleteServiceConfigRequest  extends AbstractModel{
     private String ServiceConfigName;
 
     /**
-     * 获取服务配置Id (deprecated)
-     * @return ServiceConfigId 服务配置Id (deprecated)
+     * 获取服务配置Id
+     * @return ServiceConfigId 服务配置Id
      */
-    public Long getServiceConfigId() {
+    public String getServiceConfigId() {
         return this.ServiceConfigId;
     }
 
     /**
-     * 设置服务配置Id (deprecated)
-     * @param ServiceConfigId 服务配置Id (deprecated)
+     * 设置服务配置Id
+     * @param ServiceConfigId 服务配置Id
      */
-    public void setServiceConfigId(Long ServiceConfigId) {
+    public void setServiceConfigId(String ServiceConfigId) {
         this.ServiceConfigId = ServiceConfigId;
     }
 

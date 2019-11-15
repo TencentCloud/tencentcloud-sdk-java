@@ -67,7 +67,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     */
     @SerializedName("CreationTimestamp")
     @Expose
-    private Integer CreationTimestamp;
+    private Long CreationTimestamp;
 
     /**
      * 获取人员库名称
@@ -169,7 +169,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getCreationTimestamp() {
+    public Long getCreationTimestamp() {
         return this.CreationTimestamp;
     }
 
@@ -181,7 +181,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCreationTimestamp(Integer CreationTimestamp) {
+    public void setCreationTimestamp(Long CreationTimestamp) {
         this.CreationTimestamp = CreationTimestamp;
     }
 

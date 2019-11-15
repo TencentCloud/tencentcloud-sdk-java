@@ -27,13 +27,13 @@ public class DeleteServiceRequest  extends AbstractModel{
     */
     @SerializedName("ServiceId")
     @Expose
-    private Long ServiceId;
+    private String ServiceId;
 
     /**
      * 获取服务Id
      * @return ServiceId 服务Id
      */
-    public Long getServiceId() {
+    public String getServiceId() {
         return this.ServiceId;
     }
 
@@ -41,7 +41,7 @@ public class DeleteServiceRequest  extends AbstractModel{
      * 设置服务Id
      * @param ServiceId 服务Id
      */
-    public void setServiceId(Long ServiceId) {
+    public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 

@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class PurgePathCacheRequest  extends AbstractModel{
 
     /**
-    * 要刷新的目录列表，必须包含协议头部。
+    * 目录列表，需要包含协议头部 http:// 或 https://
     */
     @SerializedName("Paths")
     @Expose
     private String [] Paths;
 
     /**
-    * 刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
+    * 刷新类型
+flush：刷新产生更新的资源
+delete：刷新全部资源
     */
     @SerializedName("FlushType")
     @Expose
     private String FlushType;
 
     /**
-     * 获取要刷新的目录列表，必须包含协议头部。
-     * @return Paths 要刷新的目录列表，必须包含协议头部。
+     * 获取目录列表，需要包含协议头部 http:// 或 https://
+     * @return Paths 目录列表，需要包含协议头部 http:// 或 https://
      */
     public String [] getPaths() {
         return this.Paths;
     }
 
     /**
-     * 设置要刷新的目录列表，必须包含协议头部。
-     * @param Paths 要刷新的目录列表，必须包含协议头部。
+     * 设置目录列表，需要包含协议头部 http:// 或 https://
+     * @param Paths 目录列表，需要包含协议头部 http:// 或 https://
      */
     public void setPaths(String [] Paths) {
         this.Paths = Paths;
     }
 
     /**
-     * 获取刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
-     * @return FlushType 刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
+     * 获取刷新类型
+flush：刷新产生更新的资源
+delete：刷新全部资源
+     * @return FlushType 刷新类型
+flush：刷新产生更新的资源
+delete：刷新全部资源
      */
     public String getFlushType() {
         return this.FlushType;
     }
 
     /**
-     * 设置刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
-     * @param FlushType 刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
+     * 设置刷新类型
+flush：刷新产生更新的资源
+delete：刷新全部资源
+     * @param FlushType 刷新类型
+flush：刷新产生更新的资源
+delete：刷新全部资源
      */
     public void setFlushType(String FlushType) {
         this.FlushType = FlushType;

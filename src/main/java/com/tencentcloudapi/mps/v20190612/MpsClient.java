@@ -437,24 +437,6 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *用户服务信息查询，返回用户状态和计费类型；若未注册则返回相应错误提示。
-     * @param req DescribeUserInfoRequest
-     * @return DescribeUserInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeUserInfoResponse DescribeUserInfo(DescribeUserInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUserInfoResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserInfoResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeUserInfo"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询用户自定义水印模板，支持根据条件，分页查询。
      * @param req DescribeWatermarkTemplatesRequest
      * @return DescribeWatermarkTemplatesResponse
@@ -635,6 +617,44 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *从 CMQ 获取到消息后，从消息的 msgBody 字段中解析出 MPS 直播流处理事件通知的内容。
+该接口不用于发起网络调用，而是用来帮助生成各个语言平台的 SDK，您可以参考 SDK 的中解析函数的实现事件通知的解析。
+     * @param req ParseLiveStreamProcessNotificationRequest
+     * @return ParseLiveStreamProcessNotificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ParseLiveStreamProcessNotificationResponse ParseLiveStreamProcessNotification(ParseLiveStreamProcessNotificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ParseLiveStreamProcessNotificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ParseLiveStreamProcessNotificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ParseLiveStreamProcessNotification"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *从 CMQ 获取到消息后，从消息的 msgBody 字段中解析出 MPS 事件通知的内容。
+该接口不用于发起网络调用，而是用来帮助生成各个语言平台的 SDK，您可以参考 SDK 的中解析函数的实现事件通知的解析。
+     * @param req ParseNotificationRequest
+     * @return ParseNotificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ParseNotificationResponse ParseNotification(ParseNotificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ParseNotificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ParseNotificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ParseNotification"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对直播流媒体发起处理任务，功能包括：
 
 1. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
@@ -651,6 +671,28 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ProcessLiveMediaResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ProcessLiveMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对直播流媒体发起处理任务，功能包括：
+
+* 智能内容审核（画面鉴黄、鉴政、鉴暴、声音鉴黄）。
+
+直播流处理事件通知实时写入用户指定的消息队列 CMQ 中，用户需要从消息队列 CMQ 中获取事件通知结果，同时处理过程中存在输出文件的，会写入用户指定的输出文件的目标存储中。
+     * @param req ProcessLiveStreamRequest
+     * @return ProcessLiveStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessLiveStreamResponse ProcessLiveStream(ProcessLiveStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ProcessLiveStreamResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ProcessLiveStreamResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ProcessLiveStream"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

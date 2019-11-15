@@ -60,6 +60,14 @@ public class ServiceStatus  extends AbstractModel{
     private String [] Replicas;
 
     /**
+    * 运行状态对额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
      * 获取预期副本数
      * @return DesiredReplicas 预期副本数
      */
@@ -148,6 +156,26 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
+     * 获取运行状态对额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Message 运行状态对额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * 设置运行状态对额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Message 运行状态对额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -156,6 +184,7 @@ public class ServiceStatus  extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
         this.setParamArraySimple(map, prefix + "Replicas.", this.Replicas);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

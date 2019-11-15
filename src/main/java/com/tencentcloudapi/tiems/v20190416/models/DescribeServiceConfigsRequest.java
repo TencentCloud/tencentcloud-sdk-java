@@ -58,6 +58,13 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     private String OrderField;
 
     /**
+    * 是否按照配置名分页
+    */
+    @SerializedName("PageByName")
+    @Expose
+    private Boolean PageByName;
+
+    /**
      * 获取筛选选项，支持按照name等进行筛选
      * @return Filters 筛选选项，支持按照name等进行筛选
      */
@@ -138,6 +145,22 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取是否按照配置名分页
+     * @return PageByName 是否按照配置名分页
+     */
+    public Boolean getPageByName() {
+        return this.PageByName;
+    }
+
+    /**
+     * 设置是否按照配置名分页
+     * @param PageByName 是否按照配置名分页
+     */
+    public void setPageByName(Boolean PageByName) {
+        this.PageByName = PageByName;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "PageByName", this.PageByName);
 
     }
 }

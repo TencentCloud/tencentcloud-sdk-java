@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PushUrlsCacheResponse  extends AbstractModel{
 
     /**
-    * 此批次提交任务对应的 Id，值唯一
+    * 此批提交的任务 ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class PushUrlsCacheResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取此批次提交任务对应的 Id，值唯一
-     * @return TaskId 此批次提交任务对应的 Id，值唯一
+     * 获取此批提交的任务 ID
+     * @return TaskId 此批提交的任务 ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置此批次提交任务对应的 Id，值唯一
-     * @param TaskId 此批次提交任务对应的 Id，值唯一
+     * 设置此批提交的任务 ID
+     * @param TaskId 此批提交的任务 ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

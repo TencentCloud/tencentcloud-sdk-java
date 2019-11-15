@@ -27,7 +27,7 @@ public class AnalyzeFaceRequest  extends AbstractModel{
     */
     @SerializedName("Mode")
     @Expose
-    private Integer Mode;
+    private Long Mode;
 
     /**
     * 图片 base64 数据，base64 编码后大小不可超过5M。
@@ -61,7 +61,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * 获取检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
      * @return Mode 检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
      */
-    public Integer getMode() {
+    public Long getMode() {
         return this.Mode;
     }
 
@@ -69,7 +69,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * 设置检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
      * @param Mode 检测模式。0 为检测所有出现的人脸， 1 为检测面积最大的人脸。默认为 0。最多返回 10 张人脸的五官定位（人脸关键点）具体信息。
      */
-    public void setMode(Integer Mode) {
+    public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 

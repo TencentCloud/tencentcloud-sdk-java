@@ -37,14 +37,14 @@ public class PullSmsSendStatus  extends AbstractModel{
     private String NationCode;
 
     /**
-    * 手机号码（ e.164 标准）
+    * 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
     */
     @SerializedName("PurePhoneNumber")
     @Expose
     private String PurePhoneNumber;
 
     /**
-    * 手机号码
+    * 手机号码，普通格式，示例如：13711112222
     */
     @SerializedName("PhoneNumber")
     @Expose
@@ -104,32 +104,32 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 获取手机号码（ e.164 标准）
-     * @return PurePhoneNumber 手机号码（ e.164 标准）
+     * 获取手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * @return PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
      */
     public String getPurePhoneNumber() {
         return this.PurePhoneNumber;
     }
 
     /**
-     * 设置手机号码（ e.164 标准）
-     * @param PurePhoneNumber 手机号码（ e.164 标准）
+     * 设置手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * @param PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
      */
     public void setPurePhoneNumber(String PurePhoneNumber) {
         this.PurePhoneNumber = PurePhoneNumber;
     }
 
     /**
-     * 获取手机号码
-     * @return PhoneNumber 手机号码
+     * 获取手机号码，普通格式，示例如：13711112222
+     * @return PhoneNumber 手机号码，普通格式，示例如：13711112222
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * 设置手机号码
-     * @param PhoneNumber 手机号码
+     * 设置手机号码，普通格式，示例如：13711112222
+     * @param PhoneNumber 手机号码，普通格式，示例如：13711112222
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;

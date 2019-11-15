@@ -27,7 +27,7 @@ public class DescribeServiceConfigsResponse  extends AbstractModel{
     */
     @SerializedName("ServiceConfigs")
     @Expose
-    private ServiceConfig [] ServiceConfigs;
+    private Config [] ServiceConfigs;
 
     /**
     * 服务配置总数
@@ -47,7 +47,7 @@ public class DescribeServiceConfigsResponse  extends AbstractModel{
      * 获取服务配置
      * @return ServiceConfigs 服务配置
      */
-    public ServiceConfig [] getServiceConfigs() {
+    public Config [] getServiceConfigs() {
         return this.ServiceConfigs;
     }
 
@@ -55,7 +55,7 @@ public class DescribeServiceConfigsResponse  extends AbstractModel{
      * 设置服务配置
      * @param ServiceConfigs 服务配置
      */
-    public void setServiceConfigs(ServiceConfig [] ServiceConfigs) {
+    public void setServiceConfigs(Config [] ServiceConfigs) {
         this.ServiceConfigs = ServiceConfigs;
     }
 

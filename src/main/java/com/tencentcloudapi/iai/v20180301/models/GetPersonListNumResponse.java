@@ -27,14 +27,14 @@ public class GetPersonListNumResponse  extends AbstractModel{
     */
     @SerializedName("PersonNum")
     @Expose
-    private Integer PersonNum;
+    private Long PersonNum;
 
     /**
     * 人脸数量
     */
     @SerializedName("FaceNum")
     @Expose
-    private Integer FaceNum;
+    private Long FaceNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +47,7 @@ public class GetPersonListNumResponse  extends AbstractModel{
      * 获取人员数量
      * @return PersonNum 人员数量
      */
-    public Integer getPersonNum() {
+    public Long getPersonNum() {
         return this.PersonNum;
     }
 
@@ -55,7 +55,7 @@ public class GetPersonListNumResponse  extends AbstractModel{
      * 设置人员数量
      * @param PersonNum 人员数量
      */
-    public void setPersonNum(Integer PersonNum) {
+    public void setPersonNum(Long PersonNum) {
         this.PersonNum = PersonNum;
     }
 
@@ -63,7 +63,7 @@ public class GetPersonListNumResponse  extends AbstractModel{
      * 获取人脸数量
      * @return FaceNum 人脸数量
      */
-    public Integer getFaceNum() {
+    public Long getFaceNum() {
         return this.FaceNum;
     }
 
@@ -71,7 +71,7 @@ public class GetPersonListNumResponse  extends AbstractModel{
      * 设置人脸数量
      * @param FaceNum 人脸数量
      */
-    public void setFaceNum(Integer FaceNum) {
+    public void setFaceNum(Long FaceNum) {
         this.FaceNum = FaceNum;
     }
 

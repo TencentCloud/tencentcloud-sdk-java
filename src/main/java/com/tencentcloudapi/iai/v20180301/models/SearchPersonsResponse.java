@@ -34,7 +34,7 @@ public class SearchPersonsResponse  extends AbstractModel{
     */
     @SerializedName("PersonNum")
     @Expose
-    private Integer PersonNum;
+    private Long PersonNum;
 
     /**
     * 人脸识别所用的算法模型版本。
@@ -71,7 +71,7 @@ public class SearchPersonsResponse  extends AbstractModel{
      * 获取搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
      * @return PersonNum 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
      */
-    public Integer getPersonNum() {
+    public Long getPersonNum() {
         return this.PersonNum;
     }
 
@@ -79,7 +79,7 @@ public class SearchPersonsResponse  extends AbstractModel{
      * 设置搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
      * @param PersonNum 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
      */
-    public void setPersonNum(Integer PersonNum) {
+    public void setPersonNum(Long PersonNum) {
         this.PersonNum = PersonNum;
     }
 

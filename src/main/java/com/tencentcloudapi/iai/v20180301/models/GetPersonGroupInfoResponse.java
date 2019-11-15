@@ -35,7 +35,7 @@ public class GetPersonGroupInfoResponse  extends AbstractModel{
     */
     @SerializedName("GroupNum")
     @Expose
-    private Integer GroupNum;
+    private Long GroupNum;
 
     /**
     * 人脸识别服务所用的算法模型版本。
@@ -74,7 +74,7 @@ public class GetPersonGroupInfoResponse  extends AbstractModel{
      * @return GroupNum 人员库总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getGroupNum() {
+    public Long getGroupNum() {
         return this.GroupNum;
     }
 
@@ -84,7 +84,7 @@ public class GetPersonGroupInfoResponse  extends AbstractModel{
      * @param GroupNum 人员库总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setGroupNum(Integer GroupNum) {
+    public void setGroupNum(Long GroupNum) {
         this.GroupNum = GroupNum;
     }
 

@@ -76,6 +76,20 @@ public class WorkflowTask  extends AbstractModel{
     private MediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
+    * 视频内容审核任务的执行状态与结果。
+    */
+    @SerializedName("AiContentReviewResultSet")
+    @Expose
+    private AiContentReviewResult [] AiContentReviewResultSet;
+
+    /**
+    * 视频内容识别任务的执行状态与结果。
+    */
+    @SerializedName("AiRecognitionResultSet")
+    @Expose
+    private AiRecognitionResult [] AiRecognitionResultSet;
+
+    /**
      * 获取视频处理任务 ID。
      * @return TaskId 视频处理任务 ID。
      */
@@ -204,6 +218,38 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
+     * 获取视频内容审核任务的执行状态与结果。
+     * @return AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
+     */
+    public AiContentReviewResult [] getAiContentReviewResultSet() {
+        return this.AiContentReviewResultSet;
+    }
+
+    /**
+     * 设置视频内容审核任务的执行状态与结果。
+     * @param AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
+     */
+    public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
+        this.AiContentReviewResultSet = AiContentReviewResultSet;
+    }
+
+    /**
+     * 获取视频内容识别任务的执行状态与结果。
+     * @return AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
+     */
+    public AiRecognitionResult [] getAiRecognitionResultSet() {
+        return this.AiRecognitionResultSet;
+    }
+
+    /**
+     * 设置视频内容识别任务的执行状态与结果。
+     * @param AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
+     */
+    public void setAiRecognitionResultSet(AiRecognitionResult [] AiRecognitionResultSet) {
+        this.AiRecognitionResultSet = AiRecognitionResultSet;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -214,6 +260,8 @@ public class WorkflowTask  extends AbstractModel{
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamArrayObj(map, prefix + "MediaProcessResultSet.", this.MediaProcessResultSet);
+        this.setParamArrayObj(map, prefix + "AiContentReviewResultSet.", this.AiContentReviewResultSet);
+        this.setParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
 
     }
 }

@@ -65,6 +65,13 @@ public class TextProcessRequest  extends AbstractModel{
     private String PlatformType;
 
     /**
+    * 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
+    */
+    @SerializedName("PlatformId")
+    @Expose
+    private String PlatformId;
+
+    /**
      * 获取机器人标识，用于定义抽象机器人。
      * @return BotId 机器人标识，用于定义抽象机器人。
      */
@@ -161,6 +168,22 @@ public class TextProcessRequest  extends AbstractModel{
     }
 
     /**
+     * 获取当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
+     * @return PlatformId 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
+     */
+    public String getPlatformId() {
+        return this.PlatformId;
+    }
+
+    /**
+     * 设置当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
+     * @param PlatformId 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
+     */
+    public void setPlatformId(String PlatformId) {
+        this.PlatformId = PlatformId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class TextProcessRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "InputText", this.InputText);
         this.setParamSimple(map, prefix + "SessionAttributes", this.SessionAttributes);
         this.setParamSimple(map, prefix + "PlatformType", this.PlatformType);
+        this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
 
     }
 }

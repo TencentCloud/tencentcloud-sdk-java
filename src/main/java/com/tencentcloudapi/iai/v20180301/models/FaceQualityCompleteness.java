@@ -29,7 +29,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     */
     @SerializedName("Eyebrow")
     @Expose
-    private Integer Eyebrow;
+    private Long Eyebrow;
 
     /**
     * 眼睛的遮挡分数[0,100],分数越高遮挡越少。 
@@ -38,7 +38,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     */
     @SerializedName("Eye")
     @Expose
-    private Integer Eye;
+    private Long Eye;
 
     /**
     * 鼻子的遮挡分数[0,100],分数越高遮挡越少。 
@@ -47,7 +47,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     */
     @SerializedName("Nose")
     @Expose
-    private Integer Nose;
+    private Long Nose;
 
     /**
     * 脸颊的遮挡分数[0,100],分数越高遮挡越少。 
@@ -56,7 +56,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     */
     @SerializedName("Cheek")
     @Expose
-    private Integer Cheek;
+    private Long Cheek;
 
     /**
     * 嘴巴的遮挡分数[0,100],分数越高遮挡越少。 
@@ -65,7 +65,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     */
     @SerializedName("Mouth")
     @Expose
-    private Integer Mouth;
+    private Long Mouth;
 
     /**
     * 下巴的遮挡分数[0,100],分数越高遮挡越少。 
@@ -74,7 +74,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     */
     @SerializedName("Chin")
     @Expose
-    private Integer Chin;
+    private Long Chin;
 
     /**
      * 获取眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
@@ -84,7 +84,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,80]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getEyebrow() {
+    public Long getEyebrow() {
         return this.Eyebrow;
     }
 
@@ -96,7 +96,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,80]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setEyebrow(Integer Eyebrow) {
+    public void setEyebrow(Long Eyebrow) {
         this.Eyebrow = Eyebrow;
     }
 
@@ -108,7 +108,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,80]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getEye() {
+    public Long getEye() {
         return this.Eye;
     }
 
@@ -120,7 +120,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,80]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setEye(Integer Eye) {
+    public void setEye(Long Eye) {
         this.Eye = Eye;
     }
 
@@ -132,7 +132,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,60]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getNose() {
+    public Long getNose() {
         return this.Nose;
     }
 
@@ -144,7 +144,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,60]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setNose(Integer Nose) {
+    public void setNose(Long Nose) {
         this.Nose = Nose;
     }
 
@@ -156,7 +156,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,70]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getCheek() {
+    public Long getCheek() {
         return this.Cheek;
     }
 
@@ -168,7 +168,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,70]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCheek(Integer Cheek) {
+    public void setCheek(Long Cheek) {
         this.Cheek = Cheek;
     }
 
@@ -180,7 +180,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,50]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getMouth() {
+    public Long getMouth() {
         return this.Mouth;
     }
 
@@ -192,7 +192,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,50]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMouth(Integer Mouth) {
+    public void setMouth(Long Mouth) {
         this.Mouth = Mouth;
     }
 
@@ -204,7 +204,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,70]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getChin() {
+    public Long getChin() {
         return this.Chin;
     }
 
@@ -216,7 +216,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
 参考范围：[0,70]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setChin(Integer Chin) {
+    public void setChin(Long Chin) {
         this.Chin = Chin;
     }
 

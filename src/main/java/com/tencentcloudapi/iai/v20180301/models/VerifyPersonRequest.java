@@ -61,7 +61,7 @@ public class VerifyPersonRequest  extends AbstractModel{
     */
     @SerializedName("QualityControl")
     @Expose
-    private Integer QualityControl;
+    private Long QualityControl;
 
     /**
      * 获取图片 base64 数据。
@@ -153,7 +153,7 @@ public class VerifyPersonRequest  extends AbstractModel{
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
-    public Integer getQualityControl() {
+    public Long getQualityControl() {
         return this.QualityControl;
     }
 
@@ -175,7 +175,7 @@ public class VerifyPersonRequest  extends AbstractModel{
 默认 0。 
 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
      */
-    public void setQualityControl(Integer QualityControl) {
+    public void setQualityControl(Long QualityControl) {
         this.QualityControl = QualityControl;
     }
 

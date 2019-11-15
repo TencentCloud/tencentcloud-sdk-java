@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PurgePathCacheResponse  extends AbstractModel{
 
     /**
-    * 刷新任务Id，前十位为提交任务时的UTC时间。
+    * 刷新任务 ID，同一批次提交的目录共用一个任务 ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class PurgePathCacheResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取刷新任务Id，前十位为提交任务时的UTC时间。
-     * @return TaskId 刷新任务Id，前十位为提交任务时的UTC时间。
+     * 获取刷新任务 ID，同一批次提交的目录共用一个任务 ID
+     * @return TaskId 刷新任务 ID，同一批次提交的目录共用一个任务 ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置刷新任务Id，前十位为提交任务时的UTC时间。
-     * @param TaskId 刷新任务Id，前十位为提交任务时的UTC时间。
+     * 设置刷新任务 ID，同一批次提交的目录共用一个任务 ID
+     * @param TaskId 刷新任务 ID，同一批次提交的目录共用一个任务 ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

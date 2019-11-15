@@ -49,6 +49,42 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
+     *创建任务
+     * @param req CreateJobRequest
+     * @return CreateJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJobResponse CreateJob(CreateJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateJobResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateJobResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateJob"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建运行环境
+     * @param req CreateRuntimeRequest
+     * @return CreateRuntimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRuntimeResponse CreateRuntime(CreateRuntimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRuntimeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRuntimeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateRuntime"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建服务
      * @param req CreateServiceRequest
      * @return CreateServiceResponse
@@ -85,6 +121,42 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
+     *删除任务
+     * @param req DeleteJobRequest
+     * @return DeleteJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteJobResponse DeleteJob(DeleteJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteJobResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteJobResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteJob"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除运行环境
+     * @param req DeleteRuntimeRequest
+     * @return DeleteRuntimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRuntimeResponse DeleteRuntime(DeleteRuntimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRuntimeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRuntimeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteRuntime"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除服务
      * @param req DeleteServiceRequest
      * @return DeleteServiceResponse
@@ -114,6 +186,24 @@ public class TiemsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteServiceConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取节点列表
+     * @param req DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -168,6 +258,24 @@ public class TiemsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeServicesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeServices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新任务
+     * @param req UpdateJobRequest
+     * @return UpdateJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateJobResponse UpdateJob(UpdateJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateJobResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateJobResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateJob"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

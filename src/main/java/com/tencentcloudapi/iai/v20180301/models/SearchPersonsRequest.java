@@ -56,14 +56,14 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     */
     @SerializedName("MaxFaceNum")
     @Expose
-    private Integer MaxFaceNum;
+    private Long MaxFaceNum;
 
     /**
     * 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
     */
     @SerializedName("MinFaceSize")
     @Expose
-    private Integer MinFaceSize;
+    private Long MinFaceSize;
 
     /**
     * 单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。
@@ -72,7 +72,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     */
     @SerializedName("MaxPersonNum")
     @Expose
-    private Integer MaxPersonNum;
+    private Long MaxPersonNum;
 
     /**
     * 此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。 
@@ -88,7 +88,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     */
     @SerializedName("QualityControl")
     @Expose
-    private Integer QualityControl;
+    private Long QualityControl;
 
     /**
     * 出参Score中，只有大于等于FaceMatchThreshold值的结果才会返回。默认为0。取值范围[0.0,100.0) 。
@@ -177,7 +177,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。
 例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
      */
-    public Integer getMaxFaceNum() {
+    public Long getMaxFaceNum() {
         return this.MaxFaceNum;
     }
 
@@ -189,7 +189,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。
 例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
      */
-    public void setMaxFaceNum(Integer MaxFaceNum) {
+    public void setMaxFaceNum(Long MaxFaceNum) {
         this.MaxFaceNum = MaxFaceNum;
     }
 
@@ -197,7 +197,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
      * 获取人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
      * @return MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
      */
-    public Integer getMinFaceSize() {
+    public Long getMinFaceSize() {
         return this.MinFaceSize;
     }
 
@@ -205,7 +205,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
      * 设置人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
      * @param MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
      */
-    public void setMinFaceSize(Integer MinFaceSize) {
+    public void setMinFaceSize(Long MinFaceSize) {
         this.MinFaceSize = MinFaceSize;
     }
 
@@ -217,7 +217,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
 值越大，需要处理的时间越长。建议不要超过10。
      */
-    public Integer getMaxPersonNum() {
+    public Long getMaxPersonNum() {
         return this.MaxPersonNum;
     }
 
@@ -229,7 +229,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
 值越大，需要处理的时间越长。建议不要超过10。
      */
-    public void setMaxPersonNum(Integer MaxPersonNum) {
+    public void setMaxPersonNum(Long MaxPersonNum) {
         this.MaxPersonNum = MaxPersonNum;
     }
 
@@ -255,7 +255,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 默认 0。  
 注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。
      */
-    public Integer getQualityControl() {
+    public Long getQualityControl() {
         return this.QualityControl;
     }
 
@@ -281,7 +281,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 默认 0。  
 注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。
      */
-    public void setQualityControl(Integer QualityControl) {
+    public void setQualityControl(Long QualityControl) {
         this.QualityControl = QualityControl;
     }
 

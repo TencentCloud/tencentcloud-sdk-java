@@ -58,13 +58,6 @@ public class MediaProcessTaskInput  extends AbstractModel{
     private ImageSpriteTaskInput [] ImageSpriteTaskSet;
 
     /**
-    * 对视频转自适应码流任务列表。
-    */
-    @SerializedName("AdaptiveDynamicStreamingTaskSet")
-    @Expose
-    private AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet;
-
-    /**
      * 获取视频转码任务列表。
      * @return TranscodeTaskSet 视频转码任务列表。
      */
@@ -145,22 +138,6 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取对视频转自适应码流任务列表。
-     * @return AdaptiveDynamicStreamingTaskSet 对视频转自适应码流任务列表。
-     */
-    public AdaptiveDynamicStreamingTaskInput [] getAdaptiveDynamicStreamingTaskSet() {
-        return this.AdaptiveDynamicStreamingTaskSet;
-    }
-
-    /**
-     * 设置对视频转自适应码流任务列表。
-     * @param AdaptiveDynamicStreamingTaskSet 对视频转自适应码流任务列表。
-     */
-    public void setAdaptiveDynamicStreamingTaskSet(AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet) {
-        this.AdaptiveDynamicStreamingTaskSet = AdaptiveDynamicStreamingTaskSet;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -169,7 +146,6 @@ public class MediaProcessTaskInput  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SnapshotByTimeOffsetTaskSet.", this.SnapshotByTimeOffsetTaskSet);
         this.setParamArrayObj(map, prefix + "SampleSnapshotTaskSet.", this.SampleSnapshotTaskSet);
         this.setParamArrayObj(map, prefix + "ImageSpriteTaskSet.", this.ImageSpriteTaskSet);
-        this.setParamArrayObj(map, prefix + "AdaptiveDynamicStreamingTaskSet.", this.AdaptiveDynamicStreamingTaskSet);
 
     }
 }

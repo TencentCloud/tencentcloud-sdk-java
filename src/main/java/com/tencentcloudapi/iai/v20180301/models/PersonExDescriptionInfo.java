@@ -27,7 +27,7 @@ public class PersonExDescriptionInfo  extends AbstractModel{
     */
     @SerializedName("PersonExDescriptionIndex")
     @Expose
-    private Integer PersonExDescriptionIndex;
+    private Long PersonExDescriptionIndex;
 
     /**
     * 需要更新的人员描述字段内容
@@ -40,7 +40,7 @@ public class PersonExDescriptionInfo  extends AbstractModel{
      * 获取人员描述字段Index，从0开始
      * @return PersonExDescriptionIndex 人员描述字段Index，从0开始
      */
-    public Integer getPersonExDescriptionIndex() {
+    public Long getPersonExDescriptionIndex() {
         return this.PersonExDescriptionIndex;
     }
 
@@ -48,7 +48,7 @@ public class PersonExDescriptionInfo  extends AbstractModel{
      * 设置人员描述字段Index，从0开始
      * @param PersonExDescriptionIndex 人员描述字段Index，从0开始
      */
-    public void setPersonExDescriptionIndex(Integer PersonExDescriptionIndex) {
+    public void setPersonExDescriptionIndex(Long PersonExDescriptionIndex) {
         this.PersonExDescriptionIndex = PersonExDescriptionIndex;
     }
 

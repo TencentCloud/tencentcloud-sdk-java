@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class DescribeTaskDetailResponse  extends AbstractModel{
 
     /**
-    * 任务类型，目前仅有取值 WorkflowTask。
+    * 任务类型，目前取值有：
+<li>WorkflowTask：视频工作流处理任务。</li>
+<li>LiveStreamProcessTask：直播流处理任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -69,6 +71,14 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     private WorkflowTask WorkflowTask;
 
     /**
+    * 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LiveStreamProcessTask")
+    @Expose
+    private LiveStreamProcessTask LiveStreamProcessTask;
+
+    /**
     * 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -105,16 +115,24 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务类型，目前仅有取值 WorkflowTask。
-     * @return TaskType 任务类型，目前仅有取值 WorkflowTask。
+     * 获取任务类型，目前取值有：
+<li>WorkflowTask：视频工作流处理任务。</li>
+<li>LiveStreamProcessTask：直播流处理任务。</li>
+     * @return TaskType 任务类型，目前取值有：
+<li>WorkflowTask：视频工作流处理任务。</li>
+<li>LiveStreamProcessTask：直播流处理任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * 设置任务类型，目前仅有取值 WorkflowTask。
-     * @param TaskType 任务类型，目前仅有取值 WorkflowTask。
+     * 设置任务类型，目前取值有：
+<li>WorkflowTask：视频工作流处理任务。</li>
+<li>LiveStreamProcessTask：直播流处理任务。</li>
+     * @param TaskType 任务类型，目前取值有：
+<li>WorkflowTask：视频工作流处理任务。</li>
+<li>LiveStreamProcessTask：直播流处理任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -217,6 +235,26 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
+     * 获取直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LiveStreamProcessTask 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LiveStreamProcessTask getLiveStreamProcessTask() {
+        return this.LiveStreamProcessTask;
+    }
+
+    /**
+     * 设置直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveStreamProcessTask 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLiveStreamProcessTask(LiveStreamProcessTask LiveStreamProcessTask) {
+        this.LiveStreamProcessTask = LiveStreamProcessTask;
+    }
+
+    /**
      * 获取任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @return TaskNotifyConfig 任务的事件通知信息。
@@ -310,6 +348,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
+        this.setParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

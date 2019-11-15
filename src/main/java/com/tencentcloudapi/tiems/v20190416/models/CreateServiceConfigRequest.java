@@ -44,32 +44,11 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     private String ModelUri;
 
     /**
-    * 处理器配置, 单位为1/1000核；范围[100, 256000]
+    * 配置描述
     */
-    @SerializedName("Cpu")
+    @SerializedName("Description")
     @Expose
-    private Long Cpu;
-
-    /**
-    * 内存配置, 单位为1M；范围[100, 256000]
-    */
-    @SerializedName("Memory")
-    @Expose
-    private Long Memory;
-
-    /**
-    * GPU算力配置，单位为1/100 tflops，范围 [0, 256000]
-    */
-    @SerializedName("TflopUnits")
-    @Expose
-    private Long TflopUnits;
-
-    /**
-    * 显存配置, 单位为1M，范围 [0, 256000]
-    */
-    @SerializedName("GpuMemory")
-    @Expose
-    private Long GpuMemory;
+    private String Description;
 
     /**
      * 获取配置名称
@@ -120,67 +99,19 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取处理器配置, 单位为1/1000核；范围[100, 256000]
-     * @return Cpu 处理器配置, 单位为1/1000核；范围[100, 256000]
+     * 获取配置描述
+     * @return Description 配置描述
      */
-    public Long getCpu() {
-        return this.Cpu;
+    public String getDescription() {
+        return this.Description;
     }
 
     /**
-     * 设置处理器配置, 单位为1/1000核；范围[100, 256000]
-     * @param Cpu 处理器配置, 单位为1/1000核；范围[100, 256000]
+     * 设置配置描述
+     * @param Description 配置描述
      */
-    public void setCpu(Long Cpu) {
-        this.Cpu = Cpu;
-    }
-
-    /**
-     * 获取内存配置, 单位为1M；范围[100, 256000]
-     * @return Memory 内存配置, 单位为1M；范围[100, 256000]
-     */
-    public Long getMemory() {
-        return this.Memory;
-    }
-
-    /**
-     * 设置内存配置, 单位为1M；范围[100, 256000]
-     * @param Memory 内存配置, 单位为1M；范围[100, 256000]
-     */
-    public void setMemory(Long Memory) {
-        this.Memory = Memory;
-    }
-
-    /**
-     * 获取GPU算力配置，单位为1/100 tflops，范围 [0, 256000]
-     * @return TflopUnits GPU算力配置，单位为1/100 tflops，范围 [0, 256000]
-     */
-    public Long getTflopUnits() {
-        return this.TflopUnits;
-    }
-
-    /**
-     * 设置GPU算力配置，单位为1/100 tflops，范围 [0, 256000]
-     * @param TflopUnits GPU算力配置，单位为1/100 tflops，范围 [0, 256000]
-     */
-    public void setTflopUnits(Long TflopUnits) {
-        this.TflopUnits = TflopUnits;
-    }
-
-    /**
-     * 获取显存配置, 单位为1M，范围 [0, 256000]
-     * @return GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
-     */
-    public Long getGpuMemory() {
-        return this.GpuMemory;
-    }
-
-    /**
-     * 设置显存配置, 单位为1M，范围 [0, 256000]
-     * @param GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
-     */
-    public void setGpuMemory(Long GpuMemory) {
-        this.GpuMemory = GpuMemory;
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     /**
@@ -190,10 +121,7 @@ public class CreateServiceConfigRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Runtime", this.Runtime);
         this.setParamSimple(map, prefix + "ModelUri", this.ModelUri);
-        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
-        this.setParamSimple(map, prefix + "Memory", this.Memory);
-        this.setParamSimple(map, prefix + "TflopUnits", this.TflopUnits);
-        this.setParamSimple(map, prefix + "GpuMemory", this.GpuMemory);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

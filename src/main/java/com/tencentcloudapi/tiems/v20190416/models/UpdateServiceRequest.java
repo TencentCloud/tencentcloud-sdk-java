@@ -27,7 +27,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     */
     @SerializedName("ServiceId")
     @Expose
-    private Long ServiceId;
+    private String ServiceId;
 
     /**
     * 扩缩容配置
@@ -41,7 +41,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     */
     @SerializedName("ServiceConfigId")
     @Expose
-    private Long ServiceConfigId;
+    private String ServiceConfigId;
 
     /**
     * 支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
@@ -58,10 +58,24 @@ public class UpdateServiceRequest  extends AbstractModel{
     private String ServiceAction;
 
     /**
+    * 备注
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * GPU卡类型
+    */
+    @SerializedName("GpuType")
+    @Expose
+    private String GpuType;
+
+    /**
      * 获取服务Id
      * @return ServiceId 服务Id
      */
-    public Long getServiceId() {
+    public String getServiceId() {
         return this.ServiceId;
     }
 
@@ -69,7 +83,7 @@ public class UpdateServiceRequest  extends AbstractModel{
      * 设置服务Id
      * @param ServiceId 服务Id
      */
-    public void setServiceId(Long ServiceId) {
+    public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
@@ -93,7 +107,7 @@ public class UpdateServiceRequest  extends AbstractModel{
      * 获取服务配置Id
      * @return ServiceConfigId 服务配置Id
      */
-    public Long getServiceConfigId() {
+    public String getServiceConfigId() {
         return this.ServiceConfigId;
     }
 
@@ -101,7 +115,7 @@ public class UpdateServiceRequest  extends AbstractModel{
      * 设置服务配置Id
      * @param ServiceConfigId 服务配置Id
      */
-    public void setServiceConfigId(Long ServiceConfigId) {
+    public void setServiceConfigId(String ServiceConfigId) {
         this.ServiceConfigId = ServiceConfigId;
     }
 
@@ -138,6 +152,38 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取备注
+     * @return Description 备注
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * 设置备注
+     * @param Description 备注
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * 获取GPU卡类型
+     * @return GpuType GPU卡类型
+     */
+    public String getGpuType() {
+        return this.GpuType;
+    }
+
+    /**
+     * 设置GPU卡类型
+     * @param GpuType GPU卡类型
+     */
+    public void setGpuType(String GpuType) {
+        this.GpuType = GpuType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class UpdateServiceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceConfigId", this.ServiceConfigId);
         this.setParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
         this.setParamSimple(map, prefix + "ServiceAction", this.ServiceAction);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "GpuType", this.GpuType);
 
     }
 }

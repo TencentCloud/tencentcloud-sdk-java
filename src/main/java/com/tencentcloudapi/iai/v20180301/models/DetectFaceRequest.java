@@ -28,7 +28,7 @@ public class DetectFaceRequest  extends AbstractModel{
     */
     @SerializedName("MaxFaceNum")
     @Expose
-    private Integer MaxFaceNum;
+    private Long MaxFaceNum;
 
     /**
     * 人脸长和宽的最小尺寸，单位为像素。
@@ -37,7 +37,7 @@ public class DetectFaceRequest  extends AbstractModel{
     */
     @SerializedName("MinFaceSize")
     @Expose
-    private Integer MinFaceSize;
+    private Long MinFaceSize;
 
     /**
     * 图片 base64 数据，base64 编码后大小不可超过5M。
@@ -66,7 +66,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     */
     @SerializedName("NeedFaceAttributes")
     @Expose
-    private Integer NeedFaceAttributes;
+    private Long NeedFaceAttributes;
 
     /**
     * 是否开启质量检测。0 为关闭，1 为开启。默认为 0。 
@@ -76,7 +76,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     */
     @SerializedName("NeedQualityDetection")
     @Expose
-    private Integer NeedQualityDetection;
+    private Long NeedQualityDetection;
 
     /**
     * 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
@@ -93,7 +93,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @return MaxFaceNum 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
      */
-    public Integer getMaxFaceNum() {
+    public Long getMaxFaceNum() {
         return this.MaxFaceNum;
     }
 
@@ -103,7 +103,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @param MaxFaceNum 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
      */
-    public void setMaxFaceNum(Integer MaxFaceNum) {
+    public void setMaxFaceNum(Long MaxFaceNum) {
         this.MaxFaceNum = MaxFaceNum;
     }
 
@@ -115,7 +115,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 默认为40。建议不低于34。
 低于MinFaceSize值的人脸不会被检测。
      */
-    public Integer getMinFaceSize() {
+    public Long getMinFaceSize() {
         return this.MinFaceSize;
     }
 
@@ -127,7 +127,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 默认为40。建议不低于34。
 低于MinFaceSize值的人脸不会被检测。
      */
-    public void setMinFaceSize(Integer MinFaceSize) {
+    public void setMinFaceSize(Long MinFaceSize) {
         this.MinFaceSize = MinFaceSize;
     }
 
@@ -193,7 +193,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 最多返回面积最大的 5 张人脸属性信息，超过 5 张人脸（第 6 张及以后的人脸）的 FaceAttributesInfo 不具备参考意义。  
 提取人脸属性信息较为耗时，如不需要人脸属性信息，建议关闭此项功能，加快人脸检测速度。
      */
-    public Integer getNeedFaceAttributes() {
+    public Long getNeedFaceAttributes() {
         return this.NeedFaceAttributes;
     }
 
@@ -207,7 +207,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 最多返回面积最大的 5 张人脸属性信息，超过 5 张人脸（第 6 张及以后的人脸）的 FaceAttributesInfo 不具备参考意义。  
 提取人脸属性信息较为耗时，如不需要人脸属性信息，建议关闭此项功能，加快人脸检测速度。
      */
-    public void setNeedFaceAttributes(Integer NeedFaceAttributes) {
+    public void setNeedFaceAttributes(Long NeedFaceAttributes) {
         this.NeedFaceAttributes = NeedFaceAttributes;
     }
 
@@ -221,7 +221,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 最多返回面积最大的 30 张人脸质量分信息，超过 30 张人脸（第 31 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
 建议：人脸入库操作建议开启此功能。
      */
-    public Integer getNeedQualityDetection() {
+    public Long getNeedQualityDetection() {
         return this.NeedQualityDetection;
     }
 
@@ -235,7 +235,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 最多返回面积最大的 30 张人脸质量分信息，超过 30 张人脸（第 31 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
 建议：人脸入库操作建议开启此功能。
      */
-    public void setNeedQualityDetection(Integer NeedQualityDetection) {
+    public void setNeedQualityDetection(Long NeedQualityDetection) {
         this.NeedQualityDetection = NeedQualityDetection;
     }
 

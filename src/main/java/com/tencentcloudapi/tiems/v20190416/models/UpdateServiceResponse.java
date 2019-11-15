@@ -27,7 +27,7 @@ public class UpdateServiceResponse  extends AbstractModel{
     */
     @SerializedName("Service")
     @Expose
-    private Service Service;
+    private ModelService Service;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class UpdateServiceResponse  extends AbstractModel{
      * 获取服务
      * @return Service 服务
      */
-    public Service getService() {
+    public ModelService getService() {
         return this.Service;
     }
 
@@ -48,7 +48,7 @@ public class UpdateServiceResponse  extends AbstractModel{
      * 设置服务
      * @param Service 服务
      */
-    public void setService(Service Service) {
+    public void setService(ModelService Service) {
         this.Service = Service;
     }
 

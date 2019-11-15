@@ -27,20 +27,20 @@ public class Point  extends AbstractModel{
     */
     @SerializedName("X")
     @Expose
-    private Integer X;
+    private Long X;
 
     /**
     * Y坐标
     */
     @SerializedName("Y")
     @Expose
-    private Integer Y;
+    private Long Y;
 
     /**
      * 获取x坐标
      * @return X x坐标
      */
-    public Integer getX() {
+    public Long getX() {
         return this.X;
     }
 
@@ -48,7 +48,7 @@ public class Point  extends AbstractModel{
      * 设置x坐标
      * @param X x坐标
      */
-    public void setX(Integer X) {
+    public void setX(Long X) {
         this.X = X;
     }
 
@@ -56,7 +56,7 @@ public class Point  extends AbstractModel{
      * 获取Y坐标
      * @return Y Y坐标
      */
-    public Integer getY() {
+    public Long getY() {
         return this.Y;
     }
 
@@ -64,7 +64,7 @@ public class Point  extends AbstractModel{
      * 设置Y坐标
      * @param Y Y坐标
      */
-    public void setY(Integer Y) {
+    public void setY(Long Y) {
         this.Y = Y;
     }
 

@@ -20,12 +20,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserInfoRequest  extends AbstractModel{
+public class AiRecognitionTaskOcrWordsResultOutput  extends AbstractModel{
+
+    /**
+    * 文本关键词识别结果集。
+    */
+    @SerializedName("ResultSet")
+    @Expose
+    private AiRecognitionTaskOcrWordsResultItem [] ResultSet;
+
+    /**
+     * 获取文本关键词识别结果集。
+     * @return ResultSet 文本关键词识别结果集。
+     */
+    public AiRecognitionTaskOcrWordsResultItem [] getResultSet() {
+        return this.ResultSet;
+    }
+
+    /**
+     * 设置文本关键词识别结果集。
+     * @param ResultSet 文本关键词识别结果集。
+     */
+    public void setResultSet(AiRecognitionTaskOcrWordsResultItem [] ResultSet) {
+        this.ResultSet = ResultSet;
+    }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);
 
     }
 }

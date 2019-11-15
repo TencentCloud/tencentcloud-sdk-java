@@ -27,7 +27,7 @@ public class DescribeServicesResponse  extends AbstractModel{
     */
     @SerializedName("Services")
     @Expose
-    private Service [] Services;
+    private ModelService [] Services;
 
     /**
     * 服务总数
@@ -47,7 +47,7 @@ public class DescribeServicesResponse  extends AbstractModel{
      * 获取服务列表
      * @return Services 服务列表
      */
-    public Service [] getServices() {
+    public ModelService [] getServices() {
         return this.Services;
     }
 
@@ -55,7 +55,7 @@ public class DescribeServicesResponse  extends AbstractModel{
      * 设置服务列表
      * @param Services 服务列表
      */
-    public void setServices(Service [] Services) {
+    public void setServices(ModelService [] Services) {
         this.Services = Services;
     }
 

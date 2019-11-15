@@ -23,35 +23,42 @@ import java.util.HashMap;
 public class PurgeTask  extends AbstractModel{
 
     /**
-    * 刷新任务ID。
+    * 刷新任务 ID
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 刷新Url。
+    * 刷新 URL
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 刷新任务状态，fail表示失败，done表示成功，process表示刷新中。
+    * 刷新任务状态
+fail：刷新失败
+done：刷新成功
+process：刷新中
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 刷新类型，url表示url刷新，path表示目录刷新。
+    * 刷新类型
+url：URL 刷新
+path：目录刷新
     */
     @SerializedName("PurgeType")
     @Expose
     private String PurgeType;
 
     /**
-    * 刷新资源方式，flush代表刷新更新资源，delete代表刷新全部资源。
+    * 刷新方式
+flush：刷新更新资源（仅目录刷新时有此类型）
+delete：刷新全部资源
     */
     @SerializedName("FlushType")
     @Expose
@@ -65,80 +72,108 @@ public class PurgeTask  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取刷新任务ID。
-     * @return TaskId 刷新任务ID。
+     * 获取刷新任务 ID
+     * @return TaskId 刷新任务 ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * 设置刷新任务ID。
-     * @param TaskId 刷新任务ID。
+     * 设置刷新任务 ID
+     * @param TaskId 刷新任务 ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * 获取刷新Url。
-     * @return Url 刷新Url。
+     * 获取刷新 URL
+     * @return Url 刷新 URL
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * 设置刷新Url。
-     * @param Url 刷新Url。
+     * 设置刷新 URL
+     * @param Url 刷新 URL
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * 获取刷新任务状态，fail表示失败，done表示成功，process表示刷新中。
-     * @return Status 刷新任务状态，fail表示失败，done表示成功，process表示刷新中。
+     * 获取刷新任务状态
+fail：刷新失败
+done：刷新成功
+process：刷新中
+     * @return Status 刷新任务状态
+fail：刷新失败
+done：刷新成功
+process：刷新中
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置刷新任务状态，fail表示失败，done表示成功，process表示刷新中。
-     * @param Status 刷新任务状态，fail表示失败，done表示成功，process表示刷新中。
+     * 设置刷新任务状态
+fail：刷新失败
+done：刷新成功
+process：刷新中
+     * @param Status 刷新任务状态
+fail：刷新失败
+done：刷新成功
+process：刷新中
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取刷新类型，url表示url刷新，path表示目录刷新。
-     * @return PurgeType 刷新类型，url表示url刷新，path表示目录刷新。
+     * 获取刷新类型
+url：URL 刷新
+path：目录刷新
+     * @return PurgeType 刷新类型
+url：URL 刷新
+path：目录刷新
      */
     public String getPurgeType() {
         return this.PurgeType;
     }
 
     /**
-     * 设置刷新类型，url表示url刷新，path表示目录刷新。
-     * @param PurgeType 刷新类型，url表示url刷新，path表示目录刷新。
+     * 设置刷新类型
+url：URL 刷新
+path：目录刷新
+     * @param PurgeType 刷新类型
+url：URL 刷新
+path：目录刷新
      */
     public void setPurgeType(String PurgeType) {
         this.PurgeType = PurgeType;
     }
 
     /**
-     * 获取刷新资源方式，flush代表刷新更新资源，delete代表刷新全部资源。
-     * @return FlushType 刷新资源方式，flush代表刷新更新资源，delete代表刷新全部资源。
+     * 获取刷新方式
+flush：刷新更新资源（仅目录刷新时有此类型）
+delete：刷新全部资源
+     * @return FlushType 刷新方式
+flush：刷新更新资源（仅目录刷新时有此类型）
+delete：刷新全部资源
      */
     public String getFlushType() {
         return this.FlushType;
     }
 
     /**
-     * 设置刷新资源方式，flush代表刷新更新资源，delete代表刷新全部资源。
-     * @param FlushType 刷新资源方式，flush代表刷新更新资源，delete代表刷新全部资源。
+     * 设置刷新方式
+flush：刷新更新资源（仅目录刷新时有此类型）
+delete：刷新全部资源
+     * @param FlushType 刷新方式
+flush：刷新更新资源（仅目录刷新时有此类型）
+delete：刷新全部资源
      */
     public void setFlushType(String FlushType) {
         this.FlushType = FlushType;

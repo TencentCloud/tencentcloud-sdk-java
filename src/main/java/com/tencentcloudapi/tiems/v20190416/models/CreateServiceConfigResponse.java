@@ -27,7 +27,7 @@ public class CreateServiceConfigResponse  extends AbstractModel{
     */
     @SerializedName("ServiceConfig")
     @Expose
-    private ServiceConfig ServiceConfig;
+    private Config ServiceConfig;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateServiceConfigResponse  extends AbstractModel{
      * 获取服务配置
      * @return ServiceConfig 服务配置
      */
-    public ServiceConfig getServiceConfig() {
+    public Config getServiceConfig() {
         return this.ServiceConfig;
     }
 
@@ -48,7 +48,7 @@ public class CreateServiceConfigResponse  extends AbstractModel{
      * 设置服务配置
      * @param ServiceConfig 服务配置
      */
-    public void setServiceConfig(ServiceConfig ServiceConfig) {
+    public void setServiceConfig(Config ServiceConfig) {
         this.ServiceConfig = ServiceConfig;
     }
 

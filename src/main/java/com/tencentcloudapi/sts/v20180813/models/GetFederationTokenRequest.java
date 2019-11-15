@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetFederationTokenRequest  extends AbstractModel{
 
     /**
-    * 联合身份用户昵称
+    * 调用方英文名称，由字母组成。
     */
     @SerializedName("Name")
     @Expose
@@ -41,23 +41,23 @@ public class GetFederationTokenRequest  extends AbstractModel{
     private String Policy;
 
     /**
-    * 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
+    * 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
     */
     @SerializedName("DurationSeconds")
     @Expose
     private Integer DurationSeconds;
 
     /**
-     * 获取联合身份用户昵称
-     * @return Name 联合身份用户昵称
+     * 获取调用方英文名称，由字母组成。
+     * @return Name 调用方英文名称，由字母组成。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * 设置联合身份用户昵称
-     * @param Name 联合身份用户昵称
+     * 设置调用方英文名称，由字母组成。
+     * @param Name 调用方英文名称，由字母组成。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -96,16 +96,16 @@ public class GetFederationTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
-     * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
+     * 获取指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+     * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      */
     public Integer getDurationSeconds() {
         return this.DurationSeconds;
     }
 
     /**
-     * 设置指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
-     * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
+     * 设置指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+     * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      */
     public void setDurationSeconds(Integer DurationSeconds) {
         this.DurationSeconds = DurationSeconds;

@@ -27,14 +27,14 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     */
     @SerializedName("ImageWidth")
     @Expose
-    private Integer ImageWidth;
+    private Long ImageWidth;
 
     /**
     * 请求的图片高度。
     */
     @SerializedName("ImageHeight")
     @Expose
-    private Integer ImageHeight;
+    private Long ImageHeight;
 
     /**
     * 五官定位（人脸关键点）具体信息。
@@ -61,7 +61,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
      * 获取请求的图片宽度。
      * @return ImageWidth 请求的图片宽度。
      */
-    public Integer getImageWidth() {
+    public Long getImageWidth() {
         return this.ImageWidth;
     }
 
@@ -69,7 +69,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
      * 设置请求的图片宽度。
      * @param ImageWidth 请求的图片宽度。
      */
-    public void setImageWidth(Integer ImageWidth) {
+    public void setImageWidth(Long ImageWidth) {
         this.ImageWidth = ImageWidth;
     }
 
@@ -77,7 +77,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
      * 获取请求的图片高度。
      * @return ImageHeight 请求的图片高度。
      */
-    public Integer getImageHeight() {
+    public Long getImageHeight() {
         return this.ImageHeight;
     }
 
@@ -85,7 +85,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
      * 设置请求的图片高度。
      * @param ImageHeight 请求的图片高度。
      */
-    public void setImageHeight(Integer ImageHeight) {
+    public void setImageHeight(Long ImageHeight) {
         this.ImageHeight = ImageHeight;
     }
 

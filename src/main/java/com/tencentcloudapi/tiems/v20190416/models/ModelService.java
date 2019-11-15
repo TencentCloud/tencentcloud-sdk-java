@@ -20,17 +20,18 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Service  extends AbstractModel{
+public class ModelService  extends AbstractModel{
 
     /**
     * 服务ID
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private String Id;
 
     /**
     * 运行集群
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cluster")
     @Expose
@@ -72,11 +73,11 @@ public class Service  extends AbstractModel{
     private Long Memory;
 
     /**
-    * 处理器配置, 单位为1/100 tflops
+    * GPU 配置, 单位为1/1000 卡
     */
-    @SerializedName("TflopUnits")
+    @SerializedName("Gpu")
     @Expose
-    private Long TflopUnits;
+    private Long Gpu;
 
     /**
     * 显存配置, 单位为1M
@@ -121,14 +122,8 @@ public class Service  extends AbstractModel{
     private ServiceStatus Status;
 
     /**
-    * 服务地址
-    */
-    @SerializedName("ServingIp")
-    @Expose
-    private String ServingIp;
-
-    /**
     * 访问密钥
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessToken")
     @Expose
@@ -137,16 +132,16 @@ public class Service  extends AbstractModel{
     /**
     * 服务配置Id
     */
-    @SerializedName("ServiceConfigId")
+    @SerializedName("ConfigId")
     @Expose
-    private Long ServiceConfigId;
+    private String ConfigId;
 
     /**
     * 服务配置名
     */
-    @SerializedName("ServiceConfigName")
+    @SerializedName("ConfigName")
     @Expose
-    private String ServiceConfigName;
+    private String ConfigName;
 
     /**
     * 服务运行时长
@@ -157,16 +152,65 @@ public class Service  extends AbstractModel{
 
     /**
     * 配置版本
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ServiceConfigVersion")
+    @SerializedName("ConfigVersion")
     @Expose
-    private String ServiceConfigVersion;
+    private String ConfigVersion;
+
+    /**
+    * 服务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupId")
+    @Expose
+    private String ResourceGroupId;
+
+    /**
+    * 暴露方式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Exposes")
+    @Expose
+    private Expose [] Exposes;
+
+    /**
+    * Region 名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 服务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GpuType")
+    @Expose
+    private String GpuType;
 
     /**
      * 获取服务ID
      * @return Id 服务ID
      */
-    public Long getId() {
+    public String getId() {
         return this.Id;
     }
 
@@ -174,13 +218,15 @@ public class Service  extends AbstractModel{
      * 设置服务ID
      * @param Id 服务ID
      */
-    public void setId(Long Id) {
+    public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
      * 获取运行集群
+注意：此字段可能返回 null，表示取不到有效值。
      * @return Cluster 运行集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCluster() {
         return this.Cluster;
@@ -188,7 +234,9 @@ public class Service  extends AbstractModel{
 
     /**
      * 设置运行集群
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Cluster 运行集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCluster(String Cluster) {
         this.Cluster = Cluster;
@@ -275,19 +323,19 @@ public class Service  extends AbstractModel{
     }
 
     /**
-     * 获取处理器配置, 单位为1/100 tflops
-     * @return TflopUnits 处理器配置, 单位为1/100 tflops
+     * 获取GPU 配置, 单位为1/1000 卡
+     * @return Gpu GPU 配置, 单位为1/1000 卡
      */
-    public Long getTflopUnits() {
-        return this.TflopUnits;
+    public Long getGpu() {
+        return this.Gpu;
     }
 
     /**
-     * 设置处理器配置, 单位为1/100 tflops
-     * @param TflopUnits 处理器配置, 单位为1/100 tflops
+     * 设置GPU 配置, 单位为1/1000 卡
+     * @param Gpu GPU 配置, 单位为1/1000 卡
      */
-    public void setTflopUnits(Long TflopUnits) {
-        this.TflopUnits = TflopUnits;
+    public void setGpu(Long Gpu) {
+        this.Gpu = Gpu;
     }
 
     /**
@@ -387,24 +435,10 @@ public class Service  extends AbstractModel{
     }
 
     /**
-     * 获取服务地址
-     * @return ServingIp 服务地址
-     */
-    public String getServingIp() {
-        return this.ServingIp;
-    }
-
-    /**
-     * 设置服务地址
-     * @param ServingIp 服务地址
-     */
-    public void setServingIp(String ServingIp) {
-        this.ServingIp = ServingIp;
-    }
-
-    /**
      * 获取访问密钥
+注意：此字段可能返回 null，表示取不到有效值。
      * @return AccessToken 访问密钥
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessToken() {
         return this.AccessToken;
@@ -412,7 +446,9 @@ public class Service  extends AbstractModel{
 
     /**
      * 设置访问密钥
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessToken 访问密钥
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessToken(String AccessToken) {
         this.AccessToken = AccessToken;
@@ -420,34 +456,34 @@ public class Service  extends AbstractModel{
 
     /**
      * 获取服务配置Id
-     * @return ServiceConfigId 服务配置Id
+     * @return ConfigId 服务配置Id
      */
-    public Long getServiceConfigId() {
-        return this.ServiceConfigId;
+    public String getConfigId() {
+        return this.ConfigId;
     }
 
     /**
      * 设置服务配置Id
-     * @param ServiceConfigId 服务配置Id
+     * @param ConfigId 服务配置Id
      */
-    public void setServiceConfigId(Long ServiceConfigId) {
-        this.ServiceConfigId = ServiceConfigId;
+    public void setConfigId(String ConfigId) {
+        this.ConfigId = ConfigId;
     }
 
     /**
      * 获取服务配置名
-     * @return ServiceConfigName 服务配置名
+     * @return ConfigName 服务配置名
      */
-    public String getServiceConfigName() {
-        return this.ServiceConfigName;
+    public String getConfigName() {
+        return this.ConfigName;
     }
 
     /**
      * 设置服务配置名
-     * @param ServiceConfigName 服务配置名
+     * @param ConfigName 服务配置名
      */
-    public void setServiceConfigName(String ServiceConfigName) {
-        this.ServiceConfigName = ServiceConfigName;
+    public void setConfigName(String ConfigName) {
+        this.ConfigName = ConfigName;
     }
 
     /**
@@ -468,18 +504,142 @@ public class Service  extends AbstractModel{
 
     /**
      * 获取配置版本
-     * @return ServiceConfigVersion 配置版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ConfigVersion 配置版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getServiceConfigVersion() {
-        return this.ServiceConfigVersion;
+    public String getConfigVersion() {
+        return this.ConfigVersion;
     }
 
     /**
      * 设置配置版本
-     * @param ServiceConfigVersion 配置版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigVersion 配置版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setServiceConfigVersion(String ServiceConfigVersion) {
-        this.ServiceConfigVersion = ServiceConfigVersion;
+    public void setConfigVersion(String ConfigVersion) {
+        this.ConfigVersion = ConfigVersion;
+    }
+
+    /**
+     * 获取服务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ResourceGroupId 服务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupId() {
+        return this.ResourceGroupId;
+    }
+
+    /**
+     * 设置服务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupId 服务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupId(String ResourceGroupId) {
+        this.ResourceGroupId = ResourceGroupId;
+    }
+
+    /**
+     * 获取暴露方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Exposes 暴露方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Expose [] getExposes() {
+        return this.Exposes;
+    }
+
+    /**
+     * 设置暴露方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Exposes 暴露方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExposes(Expose [] Exposes) {
+        this.Exposes = Exposes;
+    }
+
+    /**
+     * 获取Region 名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Region Region 名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * 设置Region 名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region Region 名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * 获取服务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ResourceGroupName 服务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * 设置服务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupName 服务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
+    /**
+     * 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Description 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * 获取GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return GpuType GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGpuType() {
+        return this.GpuType;
+    }
+
+    /**
+     * 设置GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GpuType GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGpuType(String GpuType) {
+        this.GpuType = GpuType;
     }
 
     /**
@@ -493,19 +653,24 @@ public class Service  extends AbstractModel{
         this.setParamSimple(map, prefix + "ModelUri", this.ModelUri);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
-        this.setParamSimple(map, prefix + "TflopUnits", this.TflopUnits);
+        this.setParamSimple(map, prefix + "Gpu", this.Gpu);
         this.setParamSimple(map, prefix + "GpuMemory", this.GpuMemory);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
         this.setParamObj(map, prefix + "Scaler.", this.Scaler);
         this.setParamObj(map, prefix + "Status.", this.Status);
-        this.setParamSimple(map, prefix + "ServingIp", this.ServingIp);
         this.setParamSimple(map, prefix + "AccessToken", this.AccessToken);
-        this.setParamSimple(map, prefix + "ServiceConfigId", this.ServiceConfigId);
-        this.setParamSimple(map, prefix + "ServiceConfigName", this.ServiceConfigName);
+        this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
+        this.setParamSimple(map, prefix + "ConfigName", this.ConfigName);
         this.setParamSimple(map, prefix + "ServeSeconds", this.ServeSeconds);
-        this.setParamSimple(map, prefix + "ServiceConfigVersion", this.ServiceConfigVersion);
+        this.setParamSimple(map, prefix + "ConfigVersion", this.ConfigVersion);
+        this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+        this.setParamArrayObj(map, prefix + "Exposes.", this.Exposes);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "GpuType", this.GpuType);
 
     }
 }

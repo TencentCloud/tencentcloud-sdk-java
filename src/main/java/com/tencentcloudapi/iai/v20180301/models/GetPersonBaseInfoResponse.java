@@ -34,7 +34,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     */
     @SerializedName("Gender")
     @Expose
-    private Integer Gender;
+    private Long Gender;
 
     /**
     * 包含的人脸 ID 列表
@@ -70,7 +70,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
      * 获取人员性别
      * @return Gender 人员性别
      */
-    public Integer getGender() {
+    public Long getGender() {
         return this.Gender;
     }
 
@@ -78,7 +78,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
      * 设置人员性别
      * @param Gender 人员性别
      */
-    public void setGender(Integer Gender) {
+    public void setGender(Long Gender) {
         this.Gender = Gender;
     }
 

@@ -63,7 +63,7 @@ public class Candidate  extends AbstractModel{
     */
     @SerializedName("Gender")
     @Expose
-    private Integer Gender;
+    private Long Gender;
 
     /**
     * 包含此人员的人员库及描述字段内容列表
@@ -171,7 +171,7 @@ public class Candidate  extends AbstractModel{
      * @return Gender 人员性别
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getGender() {
+    public Long getGender() {
         return this.Gender;
     }
 
@@ -181,7 +181,7 @@ public class Candidate  extends AbstractModel{
      * @param Gender 人员性别
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setGender(Integer Gender) {
+    public void setGender(Long Gender) {
         this.Gender = Gender;
     }
 
