@@ -75,7 +75,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     */
     @SerializedName("OperateOwnerUin")
     @Expose
-    private Long OperateOwnerUin;
+    private String OperateOwnerUin;
 
     /**
     * 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
@@ -83,7 +83,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     */
     @SerializedName("OperateUin")
     @Expose
-    private Long OperateUin;
+    private String OperateUin;
 
     /**
     * UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
@@ -215,7 +215,7 @@ public class AttachPolicyInfo  extends AbstractModel{
      * @return OperateOwnerUin 策略关联操作者主张号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getOperateOwnerUin() {
+    public String getOperateOwnerUin() {
         return this.OperateOwnerUin;
     }
 
@@ -225,7 +225,7 @@ public class AttachPolicyInfo  extends AbstractModel{
      * @param OperateOwnerUin 策略关联操作者主张号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setOperateOwnerUin(Long OperateOwnerUin) {
+    public void setOperateOwnerUin(String OperateOwnerUin) {
         this.OperateOwnerUin = OperateOwnerUin;
     }
 
@@ -235,7 +235,7 @@ public class AttachPolicyInfo  extends AbstractModel{
      * @return OperateUin 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getOperateUin() {
+    public String getOperateUin() {
         return this.OperateUin;
     }
 
@@ -245,7 +245,7 @@ public class AttachPolicyInfo  extends AbstractModel{
      * @param OperateUin 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setOperateUin(Long OperateUin) {
+    public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 

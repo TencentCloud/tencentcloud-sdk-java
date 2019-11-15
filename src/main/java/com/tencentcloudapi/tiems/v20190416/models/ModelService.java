@@ -172,7 +172,7 @@ public class ModelService  extends AbstractModel{
     */
     @SerializedName("Exposes")
     @Expose
-    private Expose [] Exposes;
+    private ExposeInfo [] Exposes;
 
     /**
     * Region 名
@@ -548,7 +548,7 @@ public class ModelService  extends AbstractModel{
      * @return Exposes 暴露方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Expose [] getExposes() {
+    public ExposeInfo [] getExposes() {
         return this.Exposes;
     }
 
@@ -558,7 +558,7 @@ public class ModelService  extends AbstractModel{
      * @param Exposes 暴露方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setExposes(Expose [] Exposes) {
+    public void setExposes(ExposeInfo [] Exposes) {
         this.Exposes = Exposes;
     }
 

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Expose  extends AbstractModel{
+public class ExposeInfo  extends AbstractModel{
 
     /**
     * 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
@@ -40,17 +40,17 @@ public class Expose  extends AbstractModel{
     * 暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("UnVpcId")
+    @SerializedName("VpcId")
     @Expose
-    private String UnVpcId;
+    private String VpcId;
 
     /**
     * 暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("UnSubnetId")
+    @SerializedName("SubnetId")
     @Expose
-    private String UnSubnetId;
+    private String SubnetId;
 
     /**
      * 获取暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
@@ -87,41 +87,41 @@ public class Expose  extends AbstractModel{
     /**
      * 获取暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return UnVpcId 暴露方式为 VPC 时，打通的私有网络Id
+     * @return VpcId 暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getUnVpcId() {
-        return this.UnVpcId;
+    public String getVpcId() {
+        return this.VpcId;
     }
 
     /**
      * 设置暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UnVpcId 暴露方式为 VPC 时，打通的私有网络Id
+     * @param VpcId 暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUnVpcId(String UnVpcId) {
-        this.UnVpcId = UnVpcId;
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
     }
 
     /**
      * 获取暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return UnSubnetId 暴露方式为 VPC 时，打通的子网Id
+     * @return SubnetId 暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getUnSubnetId() {
-        return this.UnSubnetId;
+    public String getSubnetId() {
+        return this.SubnetId;
     }
 
     /**
      * 设置暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UnSubnetId 暴露方式为 VPC 时，打通的子网Id
+     * @param SubnetId 暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUnSubnetId(String UnSubnetId) {
-        this.UnSubnetId = UnSubnetId;
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     /**
@@ -130,8 +130,8 @@ public class Expose  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ExposeType", this.ExposeType);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
-        this.setParamSimple(map, prefix + "UnVpcId", this.UnVpcId);
-        this.setParamSimple(map, prefix + "UnSubnetId", this.UnSubnetId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

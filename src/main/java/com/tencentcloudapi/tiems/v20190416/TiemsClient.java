@@ -265,6 +265,24 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
+     *暴露服务
+     * @param req ExposeServiceRequest
+     * @return ExposeServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExposeServiceResponse ExposeService(ExposeServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExposeServiceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExposeServiceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ExposeService"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新任务
      * @param req UpdateJobRequest
      * @return UpdateJobResponse

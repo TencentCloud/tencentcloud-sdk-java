@@ -82,6 +82,14 @@ public class StrategyInfo  extends AbstractModel{
     private String ServiceType;
 
     /**
+    * 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAttached")
+    @Expose
+    private Long IsAttached;
+
+    /**
      * 获取策略ID。
      * @return PolicyId 策略ID。
      */
@@ -222,6 +230,26 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
+     * 获取当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return IsAttached 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsAttached() {
+        return this.IsAttached;
+    }
+
+    /**
+     * 设置当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAttached 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAttached(Long IsAttached) {
+        this.IsAttached = IsAttached;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -233,6 +261,7 @@ public class StrategyInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateMode", this.CreateMode);
         this.setParamSimple(map, prefix + "Attachments", this.Attachments);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamSimple(map, prefix + "IsAttached", this.IsAttached);
 
     }
 }
