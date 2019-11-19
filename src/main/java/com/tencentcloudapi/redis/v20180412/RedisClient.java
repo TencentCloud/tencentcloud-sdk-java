@@ -211,6 +211,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询实例DTS信息
+     * @param req DescribeInstanceDTSInfoRequest
+     * @return DescribeInstanceDTSInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceDTSInfoResponse DescribeInstanceDTSInfo(DescribeInstanceDTSInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceDTSInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceDTSInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceDTSInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询订单信息
      * @param req DescribeInstanceDealDetailRequest
      * @return DescribeInstanceDealDetailResponse
@@ -528,6 +546,24 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询任务列表信息
+     * @param req DescribeTaskListRequest
+     * @return DescribeTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskListResponse DescribeTaskList(DescribeTaskListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
