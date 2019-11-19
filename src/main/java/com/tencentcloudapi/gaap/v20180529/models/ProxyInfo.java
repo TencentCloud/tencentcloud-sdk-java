@@ -188,6 +188,14 @@ UNKNOWN，未知状态。
     private TagPair [] TagSet;
 
     /**
+    * 是否支持安全组配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportSecurity")
+    @Expose
+    private Long SupportSecurity;
+
+    /**
      * 获取（旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @return InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -596,6 +604,26 @@ UNKNOWN，未知状态。
     }
 
     /**
+     * 获取是否支持安全组配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return SupportSecurity 是否支持安全组配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSupportSecurity() {
+        return this.SupportSecurity;
+    }
+
+    /**
+     * 设置是否支持安全组配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportSecurity 是否支持安全组配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportSecurity(Long SupportSecurity) {
+        this.SupportSecurity = SupportSecurity;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -620,6 +648,7 @@ UNKNOWN，未知状态。
         this.setParamObj(map, prefix + "RealServerRegionInfo.", this.RealServerRegionInfo);
         this.setParamSimple(map, prefix + "ForwardIP", this.ForwardIP);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "SupportSecurity", this.SupportSecurity);
 
     }
 }

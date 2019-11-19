@@ -155,6 +155,14 @@ public class DomainRuleSet  extends AbstractModel{
     private String RealServerCertificateDomain;
 
     /**
+    * 多客户端证书时，返回多个证书的id和列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolyClientCertificateAliasInfo")
+    @Expose
+    private CertificateAliasInfo [] PolyClientCertificateAliasInfo;
+
+    /**
      * 获取转发规则域名。
      * @return Domain 转发规则域名。
      */
@@ -491,6 +499,26 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
+     * 获取多客户端证书时，返回多个证书的id和列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CertificateAliasInfo [] getPolyClientCertificateAliasInfo() {
+        return this.PolyClientCertificateAliasInfo;
+    }
+
+    /**
+     * 设置多客户端证书时，返回多个证书的id和列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolyClientCertificateAliasInfo(CertificateAliasInfo [] PolyClientCertificateAliasInfo) {
+        this.PolyClientCertificateAliasInfo = PolyClientCertificateAliasInfo;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -510,6 +538,7 @@ public class DomainRuleSet  extends AbstractModel{
         this.setParamSimple(map, prefix + "GaapAuth", this.GaapAuth);
         this.setParamSimple(map, prefix + "GaapCertificateAlias", this.GaapCertificateAlias);
         this.setParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
+        this.setParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
 
     }
 }

@@ -68,11 +68,18 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     private Long AuthType;
 
     /**
-    * 客户端CA证书ID，仅当双向认证时设置该参数。
+    * 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
     */
     @SerializedName("ClientCertificateId")
     @Expose
     private String ClientCertificateId;
+
+    /**
+    * 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+    */
+    @SerializedName("PolyClientCertificateIds")
+    @Expose
+    private String [] PolyClientCertificateIds;
 
     /**
      * 获取监听器名称
@@ -183,19 +190,35 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端CA证书ID，仅当双向认证时设置该参数。
-     * @return ClientCertificateId 客户端CA证书ID，仅当双向认证时设置该参数。
+     * 获取客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
+     * @return ClientCertificateId 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
      */
     public String getClientCertificateId() {
         return this.ClientCertificateId;
     }
 
     /**
-     * 设置客户端CA证书ID，仅当双向认证时设置该参数。
-     * @param ClientCertificateId 客户端CA证书ID，仅当双向认证时设置该参数。
+     * 设置客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
+     * @param ClientCertificateId 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
      */
     public void setClientCertificateId(String ClientCertificateId) {
         this.ClientCertificateId = ClientCertificateId;
+    }
+
+    /**
+     * 获取新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+     * @return PolyClientCertificateIds 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+     */
+    public String [] getPolyClientCertificateIds() {
+        return this.PolyClientCertificateIds;
+    }
+
+    /**
+     * 设置新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+     * @param PolyClientCertificateIds 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+     */
+    public void setPolyClientCertificateIds(String [] PolyClientCertificateIds) {
+        this.PolyClientCertificateIds = PolyClientCertificateIds;
     }
 
     /**
@@ -209,6 +232,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
+        this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
 
     }
 }

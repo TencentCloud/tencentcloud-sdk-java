@@ -54,14 +54,24 @@ public class ModifyDomainRequest  extends AbstractModel{
     private String CertificateId;
 
     /**
-    * 客户端CA证书ID，，仅适用于version3.0的通道。其中：
-不带该字段时，表示使用原证书；
+    * 客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId指定的证书。
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
     */
     @SerializedName("ClientCertificateId")
     @Expose
     private String ClientCertificateId;
+
+    /**
+    * 客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和ClientCertificateId时，表示使用原证书；
+携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+    */
+    @SerializedName("PolyClientCertificateIds")
+    @Expose
+    private String [] PolyClientCertificateIds;
 
     /**
      * 获取7层监听器ID
@@ -140,31 +150,59 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端CA证书ID，，仅适用于version3.0的通道。其中：
-不带该字段时，表示使用原证书；
+     * 获取客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId指定的证书。
-     * @return ClientCertificateId 客户端CA证书ID，，仅适用于version3.0的通道。其中：
-不带该字段时，表示使用原证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+     * @return ClientCertificateId 客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId指定的证书。
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
      */
     public String getClientCertificateId() {
         return this.ClientCertificateId;
     }
 
     /**
-     * 设置客户端CA证书ID，，仅适用于version3.0的通道。其中：
-不带该字段时，表示使用原证书；
+     * 设置客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId指定的证书。
-     * @param ClientCertificateId 客户端CA证书ID，，仅适用于version3.0的通道。其中：
-不带该字段时，表示使用原证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+     * @param ClientCertificateId 客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId指定的证书。
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
      */
     public void setClientCertificateId(String ClientCertificateId) {
         this.ClientCertificateId = ClientCertificateId;
+    }
+
+    /**
+     * 获取客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和ClientCertificateId时，表示使用原证书；
+携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+     * @return PolyClientCertificateIds 客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和ClientCertificateId时，表示使用原证书；
+携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+     */
+    public String [] getPolyClientCertificateIds() {
+        return this.PolyClientCertificateIds;
+    }
+
+    /**
+     * 设置客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和ClientCertificateId时，表示使用原证书；
+携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+     * @param PolyClientCertificateIds 客户端CA证书ID，仅适用于version3.0的通道。其中：
+不带该字段和ClientCertificateId时，表示使用原证书；
+携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+     */
+    public void setPolyClientCertificateIds(String [] PolyClientCertificateIds) {
+        this.PolyClientCertificateIds = PolyClientCertificateIds;
     }
 
     /**
@@ -176,6 +214,7 @@ public class ModifyDomainRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "NewDomain", this.NewDomain);
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
+        this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
 
     }
 }

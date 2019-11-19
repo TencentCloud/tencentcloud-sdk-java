@@ -195,6 +195,24 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *定制域名指定错误码的错误响应
+     * @param req CreateDomainErrorPageInfoRequest
+     * @return CreateDomainErrorPageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(CreateDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDomainErrorPageInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDomainErrorPageInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDomainErrorPageInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
      * @param req CreateHTTPListenerRequest
      * @return CreateHTTPListenerResponse
@@ -411,6 +429,24 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *删除域名的定制错误
+     * @param req DeleteDomainErrorPageInfoRequest
+     * @return DeleteDomainErrorPageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(DeleteDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDomainErrorPageInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDomainErrorPageInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDomainErrorPageInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（DeleteListeners）用于批量删除通道或通道组的监听器，包括4/7层监听器。
      * @param req DeleteListenersRequest
      * @return DeleteListenersResponse
@@ -602,6 +638,24 @@ public class GaapClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDestRegionsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDestRegions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询目前订制域名的错误响应
+     * @param req DescribeDomainErrorPageInfoRequest
+     * @return DescribeDomainErrorPageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(DescribeDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainErrorPageInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainErrorPageInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDomainErrorPageInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

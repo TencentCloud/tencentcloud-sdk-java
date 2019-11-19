@@ -47,11 +47,19 @@ public class ModifyCertificateRequest  extends AbstractModel{
     /**
     * 新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数。
+仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
     */
     @SerializedName("ClientCertificateId")
     @Expose
     private String ClientCertificateId;
+
+    /**
+    * 新的多客户端证书ID列表。其中：
+仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
+    */
+    @SerializedName("PolyClientCertificateIds")
+    @Expose
+    private String [] PolyClientCertificateIds;
 
     /**
      * 获取监听器实例ID
@@ -108,10 +116,10 @@ public class ModifyCertificateRequest  extends AbstractModel{
     /**
      * 获取新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数。
+仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
      * @return ClientCertificateId 新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数。
+仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
      */
     public String getClientCertificateId() {
         return this.ClientCertificateId;
@@ -120,13 +128,33 @@ public class ModifyCertificateRequest  extends AbstractModel{
     /**
      * 设置新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数。
+仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
      * @param ClientCertificateId 新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数。
+仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
      */
     public void setClientCertificateId(String ClientCertificateId) {
         this.ClientCertificateId = ClientCertificateId;
+    }
+
+    /**
+     * 获取新的多客户端证书ID列表。其中：
+仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
+     * @return PolyClientCertificateIds 新的多客户端证书ID列表。其中：
+仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
+     */
+    public String [] getPolyClientCertificateIds() {
+        return this.PolyClientCertificateIds;
+    }
+
+    /**
+     * 设置新的多客户端证书ID列表。其中：
+仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
+     * @param PolyClientCertificateIds 新的多客户端证书ID列表。其中：
+仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
+     */
+    public void setPolyClientCertificateIds(String [] PolyClientCertificateIds) {
+        this.PolyClientCertificateIds = PolyClientCertificateIds;
     }
 
     /**
@@ -137,6 +165,7 @@ public class ModifyCertificateRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
+        this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
 
     }
 }

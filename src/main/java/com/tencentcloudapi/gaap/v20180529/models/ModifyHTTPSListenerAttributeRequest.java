@@ -44,7 +44,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     private String ListenerName;
 
     /**
-    * 监听器后端转发源站协议类型
+    * 监听器后端转发与源站之间的协议类型
     */
     @SerializedName("ForwardProtocol")
     @Expose
@@ -58,11 +58,18 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     private String CertificateId;
 
     /**
-    * 修改后的监听器客户端证书ID
+    * 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
     */
     @SerializedName("ClientCertificateId")
     @Expose
     private String ClientCertificateId;
+
+    /**
+    * 新字段,修改后的监听器客户端证书ID
+    */
+    @SerializedName("PolyClientCertificateIds")
+    @Expose
+    private String [] PolyClientCertificateIds;
 
     /**
      * 获取监听器ID
@@ -113,16 +120,16 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器后端转发源站协议类型
-     * @return ForwardProtocol 监听器后端转发源站协议类型
+     * 获取监听器后端转发与源站之间的协议类型
+     * @return ForwardProtocol 监听器后端转发与源站之间的协议类型
      */
     public String getForwardProtocol() {
         return this.ForwardProtocol;
     }
 
     /**
-     * 设置监听器后端转发源站协议类型
-     * @param ForwardProtocol 监听器后端转发源站协议类型
+     * 设置监听器后端转发与源站之间的协议类型
+     * @param ForwardProtocol 监听器后端转发与源站之间的协议类型
      */
     public void setForwardProtocol(String ForwardProtocol) {
         this.ForwardProtocol = ForwardProtocol;
@@ -145,19 +152,35 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改后的监听器客户端证书ID
-     * @return ClientCertificateId 修改后的监听器客户端证书ID
+     * 获取修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
+     * @return ClientCertificateId 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
      */
     public String getClientCertificateId() {
         return this.ClientCertificateId;
     }
 
     /**
-     * 设置修改后的监听器客户端证书ID
-     * @param ClientCertificateId 修改后的监听器客户端证书ID
+     * 设置修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
+     * @param ClientCertificateId 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
      */
     public void setClientCertificateId(String ClientCertificateId) {
         this.ClientCertificateId = ClientCertificateId;
+    }
+
+    /**
+     * 获取新字段,修改后的监听器客户端证书ID
+     * @return PolyClientCertificateIds 新字段,修改后的监听器客户端证书ID
+     */
+    public String [] getPolyClientCertificateIds() {
+        return this.PolyClientCertificateIds;
+    }
+
+    /**
+     * 设置新字段,修改后的监听器客户端证书ID
+     * @param PolyClientCertificateIds 新字段,修改后的监听器客户端证书ID
+     */
+    public void setPolyClientCertificateIds(String [] PolyClientCertificateIds) {
+        this.PolyClientCertificateIds = PolyClientCertificateIds;
     }
 
     /**
@@ -170,6 +193,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
+        this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
 
     }
 }

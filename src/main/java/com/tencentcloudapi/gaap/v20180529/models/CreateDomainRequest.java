@@ -45,11 +45,19 @@ public class CreateDomainRequest  extends AbstractModel{
 
     /**
     * 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段。
+仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
     */
     @SerializedName("ClientCertificateId")
     @Expose
     private String ClientCertificateId;
+
+    /**
+    * 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
+    */
+    @SerializedName("PolyClientCertificateIds")
+    @Expose
+    private String [] PolyClientCertificateIds;
 
     /**
      * 获取监听器ID。
@@ -101,9 +109,9 @@ public class CreateDomainRequest  extends AbstractModel{
 
     /**
      * 获取客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段。
+仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
      * @return ClientCertificateId 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段。
+仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
      */
     public String getClientCertificateId() {
         return this.ClientCertificateId;
@@ -111,12 +119,32 @@ public class CreateDomainRequest  extends AbstractModel{
 
     /**
      * 设置客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段。
+仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
      * @param ClientCertificateId 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段。
+仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
      */
     public void setClientCertificateId(String ClientCertificateId) {
         this.ClientCertificateId = ClientCertificateId;
+    }
+
+    /**
+     * 获取客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
+     * @return PolyClientCertificateIds 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
+     */
+    public String [] getPolyClientCertificateIds() {
+        return this.PolyClientCertificateIds;
+    }
+
+    /**
+     * 设置客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
+     * @param PolyClientCertificateIds 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
+     */
+    public void setPolyClientCertificateIds(String [] PolyClientCertificateIds) {
+        this.PolyClientCertificateIds = PolyClientCertificateIds;
     }
 
     /**
@@ -127,6 +155,7 @@ public class CreateDomainRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
+        this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
 
     }
 }
