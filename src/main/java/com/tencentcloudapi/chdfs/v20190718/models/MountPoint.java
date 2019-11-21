@@ -72,6 +72,13 @@ public class MountPoint  extends AbstractModel{
     private String CreateTime;
 
     /**
+    * VPC网络类型
+    */
+    @SerializedName("VpcType")
+    @Expose
+    private Long VpcType;
+
+    /**
      * 获取挂载点ID
      * @return MountPointId 挂载点ID
      */
@@ -184,6 +191,22 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
+     * 获取VPC网络类型
+     * @return VpcType VPC网络类型
+     */
+    public Long getVpcType() {
+        return this.VpcType;
+    }
+
+    /**
+     * 设置VPC网络类型
+     * @param VpcType VPC网络类型
+     */
+    public void setVpcType(Long VpcType) {
+        this.VpcType = VpcType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class MountPoint  extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "VpcType", this.VpcType);
 
     }
 }

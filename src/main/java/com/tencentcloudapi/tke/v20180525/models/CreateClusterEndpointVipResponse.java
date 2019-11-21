@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mps.v20190612.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProcessLiveMediaResponse  extends AbstractModel{
+public class CreateClusterEndpointVipResponse  extends AbstractModel{
 
     /**
-    * 任务 ID
+    * 请求任务的FlowId
     */
-    @SerializedName("TaskId")
+    @SerializedName("RequestFlowId")
     @Expose
-    private String TaskId;
+    private Integer RequestFlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class ProcessLiveMediaResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务 ID
-     * @return TaskId 任务 ID
+     * 获取请求任务的FlowId
+     * @return RequestFlowId 请求任务的FlowId
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public Integer getRequestFlowId() {
+        return this.RequestFlowId;
     }
 
     /**
-     * 设置任务 ID
-     * @param TaskId 任务 ID
+     * 设置请求任务的FlowId
+     * @param RequestFlowId 请求任务的FlowId
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setRequestFlowId(Integer RequestFlowId) {
+        this.RequestFlowId = RequestFlowId;
     }
 
     /**
@@ -72,7 +72,7 @@ public class ProcessLiveMediaResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "RequestFlowId", this.RequestFlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -44,6 +44,13 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     private String ContainerRuntime;
 
     /**
+    * 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+    */
+    @SerializedName("NodeNameType")
+    @Expose
+    private String NodeNameType;
+
+    /**
      * 获取是否启用IPVS
      * @return IPVS 是否启用IPVS
      */
@@ -92,12 +99,29 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
+     * 获取集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+     * @return NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+     */
+    public String getNodeNameType() {
+        return this.NodeNameType;
+    }
+
+    /**
+     * 设置集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+     * @param NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+     */
+    public void setNodeNameType(String NodeNameType) {
+        this.NodeNameType = NodeNameType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IPVS", this.IPVS);
         this.setParamSimple(map, prefix + "AsEnabled", this.AsEnabled);
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+        this.setParamSimple(map, prefix + "NodeNameType", this.NodeNameType);
 
     }
 }

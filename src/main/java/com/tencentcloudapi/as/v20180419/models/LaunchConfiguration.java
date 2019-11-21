@@ -188,6 +188,13 @@ public class LaunchConfiguration  extends AbstractModel{
     private String LastOperationInstanceTypesCheckPolicy;
 
     /**
+    * 云服务器主机名（HostName）的相关设置。
+    */
+    @SerializedName("HostNameSettings")
+    @Expose
+    private HostNameSettings HostNameSettings;
+
+    /**
      * 获取实例所属项目ID。
      * @return ProjectId 实例所属项目ID。
      */
@@ -572,6 +579,22 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
+     * 获取云服务器主机名（HostName）的相关设置。
+     * @return HostNameSettings 云服务器主机名（HostName）的相关设置。
+     */
+    public HostNameSettings getHostNameSettings() {
+        return this.HostNameSettings;
+    }
+
+    /**
+     * 设置云服务器主机名（HostName）的相关设置。
+     * @param HostNameSettings 云服务器主机名（HostName）的相关设置。
+     */
+    public void setHostNameSettings(HostNameSettings HostNameSettings) {
+        this.HostNameSettings = HostNameSettings;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -598,6 +621,7 @@ public class LaunchConfiguration  extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "LastOperationInstanceTypesCheckPolicy", this.LastOperationInstanceTypesCheckPolicy);
+        this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
 
     }
 }

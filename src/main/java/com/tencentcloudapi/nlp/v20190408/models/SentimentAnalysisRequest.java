@@ -31,10 +31,10 @@ public class SentimentAnalysisRequest  extends AbstractModel{
 
     /**
     * 文本所属类型（默认取4值）：
-1、电商
-2、APP
-3、美食
-4、酒店和其他
+1、商品评论类
+2、社交类
+3、美食酒店类
+4、通用领域类
     */
     @SerializedName("Flag")
     @Expose
@@ -58,15 +58,15 @@ public class SentimentAnalysisRequest  extends AbstractModel{
 
     /**
      * 获取文本所属类型（默认取4值）：
-1、电商
-2、APP
-3、美食
-4、酒店和其他
+1、商品评论类
+2、社交类
+3、美食酒店类
+4、通用领域类
      * @return Flag 文本所属类型（默认取4值）：
-1、电商
-2、APP
-3、美食
-4、酒店和其他
+1、商品评论类
+2、社交类
+3、美食酒店类
+4、通用领域类
      */
     public Long getFlag() {
         return this.Flag;
@@ -74,15 +74,15 @@ public class SentimentAnalysisRequest  extends AbstractModel{
 
     /**
      * 设置文本所属类型（默认取4值）：
-1、电商
-2、APP
-3、美食
-4、酒店和其他
+1、商品评论类
+2、社交类
+3、美食酒店类
+4、通用领域类
      * @param Flag 文本所属类型（默认取4值）：
-1、电商
-2、APP
-3、美食
-4、酒店和其他
+1、商品评论类
+2、社交类
+3、美食酒店类
+4、通用领域类
      */
     public void setFlag(Long Flag) {
         this.Flag = Flag;

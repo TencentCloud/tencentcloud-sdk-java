@@ -34,7 +34,7 @@ public class DescribeTasksResponse  extends AbstractModel{
     */
     @SerializedName("Items")
     @Expose
-    private String [] Items;
+    private TaskDetail [] Items;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeTasksResponse  extends AbstractModel{
      * 获取返回的实例任务信息。
      * @return Items 返回的实例任务信息。
      */
-    public String [] getItems() {
+    public TaskDetail [] getItems() {
         return this.Items;
     }
 
@@ -71,7 +71,7 @@ public class DescribeTasksResponse  extends AbstractModel{
      * 设置返回的实例任务信息。
      * @param Items 返回的实例任务信息。
      */
-    public void setItems(String [] Items) {
+    public void setItems(TaskDetail [] Items) {
         this.Items = Items;
     }
 
@@ -96,7 +96,7 @@ public class DescribeTasksResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArraySimple(map, prefix + "Items.", this.Items);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

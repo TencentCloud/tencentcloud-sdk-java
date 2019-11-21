@@ -49,7 +49,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *创建权限组
+     *创建权限组。
      * @param req CreateAccessGroupRequest
      * @return CreateAccessGroupResponse
      * @throws TencentCloudSDKException
@@ -67,7 +67,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *批量创建权限规则
+     *批量创建权限规则，权限规则ID和创建时间无需填写。
      * @param req CreateAccessRulesRequest
      * @return CreateAccessRulesResponse
      * @throws TencentCloudSDKException
@@ -85,7 +85,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *创建文件系统（异步创建）
+     *创建文件系统（异步）。
      * @param req CreateFileSystemRequest
      * @return CreateFileSystemResponse
      * @throws TencentCloudSDKException
@@ -103,7 +103,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *创建挂载点
+     *创建文件系统挂载点，仅限于创建成功的文件系统。
      * @param req CreateMountPointRequest
      * @return CreateMountPointResponse
      * @throws TencentCloudSDKException
@@ -121,7 +121,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *删除权限组
+     *删除权限组。
      * @param req DeleteAccessGroupRequest
      * @return DeleteAccessGroupResponse
      * @throws TencentCloudSDKException
@@ -139,7 +139,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *批量删除权限规则
+     *批量删除权限规则。
      * @param req DeleteAccessRulesRequest
      * @return DeleteAccessRulesResponse
      * @throws TencentCloudSDKException
@@ -157,7 +157,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *删除文件系统
+     *删除文件系统，不允许删除非空文件系统。
      * @param req DeleteFileSystemRequest
      * @return DeleteFileSystemResponse
      * @throws TencentCloudSDKException
@@ -175,7 +175,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *删除挂载点
+     *删除挂载点。
      * @param req DeleteMountPointRequest
      * @return DeleteMountPointResponse
      * @throws TencentCloudSDKException
@@ -193,7 +193,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *查看权限组列表
+     *查看权限组列表。
      * @param req DescribeAccessGroupsRequest
      * @return DescribeAccessGroupsResponse
      * @throws TencentCloudSDKException
@@ -211,7 +211,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *查看权限规则列表
+     *通过权限组ID查看权限规则列表。
      * @param req DescribeAccessRulesRequest
      * @return DescribeAccessRulesResponse
      * @throws TencentCloudSDKException
@@ -229,7 +229,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *查看文件系统详细信息
+     *查看文件系统详细信息。
      * @param req DescribeFileSystemRequest
      * @return DescribeFileSystemResponse
      * @throws TencentCloudSDKException
@@ -247,7 +247,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *查看文件系统列表
+     *查看文件系统列表。
      * @param req DescribeFileSystemsRequest
      * @return DescribeFileSystemsResponse
      * @throws TencentCloudSDKException
@@ -265,7 +265,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *查看挂载点详细信息
+     *查看挂载点详细信息。
      * @param req DescribeMountPointRequest
      * @return DescribeMountPointResponse
      * @throws TencentCloudSDKException
@@ -283,7 +283,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *查看挂载点列表
+     *通过文件系统ID或者权限组ID查看挂载点列表。
      * @param req DescribeMountPointsRequest
      * @return DescribeMountPointsResponse
      * @throws TencentCloudSDKException
@@ -301,7 +301,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *修改权限组属性
+     *修改权限组属性。
      * @param req ModifyAccessGroupRequest
      * @return ModifyAccessGroupResponse
      * @throws TencentCloudSDKException
@@ -319,7 +319,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *批量修改权限规则属性
+     *批量修改权限规则属性，需要指定权限规则ID。
      * @param req ModifyAccessRulesRequest
      * @return ModifyAccessRulesResponse
      * @throws TencentCloudSDKException
@@ -337,7 +337,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *修改文件系统属性
+     *修改文件系统属性，仅限于创建成功的文件系统。
      * @param req ModifyFileSystemRequest
      * @return ModifyFileSystemResponse
      * @throws TencentCloudSDKException
@@ -355,7 +355,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *修改挂载点属性
+     *修改挂载点属性。
      * @param req ModifyMountPointRequest
      * @return ModifyMountPointResponse
      * @throws TencentCloudSDKException

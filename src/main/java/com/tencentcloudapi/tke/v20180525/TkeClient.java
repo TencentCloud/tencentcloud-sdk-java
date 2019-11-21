@@ -103,6 +103,42 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
+     * @param req CreateClusterEndpointRequest
+     * @return CreateClusterEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterEndpointResponse CreateClusterEndpoint(CreateClusterEndpointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterEndpointResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterEndpointResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClusterEndpoint"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
+     * @param req CreateClusterEndpointVipRequest
+     * @return CreateClusterEndpointVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterEndpointVipResponse CreateClusterEndpointVip(CreateClusterEndpointVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterEndpointVipResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterEndpointVipResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClusterEndpointVip"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *扩展(新建)集群节点
      * @param req CreateClusterInstancesRequest
      * @return CreateClusterInstancesResponse
@@ -193,6 +229,42 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *删除集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
+     * @param req DeleteClusterEndpointRequest
+     * @return DeleteClusterEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterEndpointResponse DeleteClusterEndpoint(DeleteClusterEndpointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterEndpointResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterEndpointResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteClusterEndpoint"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
+     * @param req DeleteClusterEndpointVipRequest
+     * @return DeleteClusterEndpointVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterEndpointVipResponse DeleteClusterEndpointVip(DeleteClusterEndpointVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterEndpointVipResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterEndpointVipResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteClusterEndpointVip"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除集群中的实例
      * @param req DeleteClusterInstancesRequest
      * @return DeleteClusterInstancesResponse
@@ -240,6 +312,42 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterRouteTableResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteClusterRouteTable"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
+     * @param req DescribeClusterEndpointStatusRequest
+     * @return DescribeClusterEndpointStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterEndpointStatusResponse DescribeClusterEndpointStatus(DescribeClusterEndpointStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterEndpointStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterEndpointStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterEndpointStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询集群开启端口流程状态(仅支持托管集群外网端口)
+     * @param req DescribeClusterEndpointVipStatusRequest
+     * @return DescribeClusterEndpointVipStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterEndpointVipStatusResponse DescribeClusterEndpointVipStatus(DescribeClusterEndpointVipStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterEndpointVipStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterEndpointVipStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterEndpointVipStatus"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -366,6 +474,24 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRouteTableConflictsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeRouteTableConflicts"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改托管集群外网端口的安全策略（老的方式，仅支持托管集群外网端口）
+     * @param req ModifyClusterEndpointSPRequest
+     * @return ModifyClusterEndpointSPResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterEndpointSPResponse ModifyClusterEndpointSP(ModifyClusterEndpointSPRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterEndpointSPResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterEndpointSPResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyClusterEndpointSP"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

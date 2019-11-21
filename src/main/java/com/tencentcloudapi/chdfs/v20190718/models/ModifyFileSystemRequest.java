@@ -45,6 +45,7 @@ public class ModifyFileSystemRequest  extends AbstractModel{
 
     /**
     * 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+注意：修改的文件系统容量不能小于当前使用量
     */
     @SerializedName("CapacityQuota")
     @Expose
@@ -100,7 +101,9 @@ public class ModifyFileSystemRequest  extends AbstractModel{
 
     /**
      * 获取文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+注意：修改的文件系统容量不能小于当前使用量
      * @return CapacityQuota 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+注意：修改的文件系统容量不能小于当前使用量
      */
     public Long getCapacityQuota() {
         return this.CapacityQuota;
@@ -108,7 +111,9 @@ public class ModifyFileSystemRequest  extends AbstractModel{
 
     /**
      * 设置文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+注意：修改的文件系统容量不能小于当前使用量
      * @param CapacityQuota 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+注意：修改的文件系统容量不能小于当前使用量
      */
     public void setCapacityQuota(Long CapacityQuota) {
         this.CapacityQuota = CapacityQuota;

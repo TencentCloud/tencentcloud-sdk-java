@@ -23,7 +23,14 @@ import java.util.HashMap;
 public class DescribeCDNUsageDataResponse  extends AbstractModel{
 
     /**
-    * CDN 统计数据，每天一条数据。
+    * 时间粒度，单位：分钟。
+    */
+    @SerializedName("DataInterval")
+    @Expose
+    private Long DataInterval;
+
+    /**
+    * CDN 统计数据。
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +44,32 @@ public class DescribeCDNUsageDataResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取CDN 统计数据，每天一条数据。
-     * @return Data CDN 统计数据，每天一条数据。
+     * 获取时间粒度，单位：分钟。
+     * @return DataInterval 时间粒度，单位：分钟。
+     */
+    public Long getDataInterval() {
+        return this.DataInterval;
+    }
+
+    /**
+     * 设置时间粒度，单位：分钟。
+     * @param DataInterval 时间粒度，单位：分钟。
+     */
+    public void setDataInterval(Long DataInterval) {
+        this.DataInterval = DataInterval;
+    }
+
+    /**
+     * 获取CDN 统计数据。
+     * @return Data CDN 统计数据。
      */
     public StatDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * 设置CDN 统计数据，每天一条数据。
-     * @param Data CDN 统计数据，每天一条数据。
+     * 设置CDN 统计数据。
+     * @param Data CDN 统计数据。
      */
     public void setData(StatDataItem [] Data) {
         this.Data = Data;
@@ -72,6 +95,7 @@ public class DescribeCDNUsageDataResponse  extends AbstractModel{
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DataInterval", this.DataInterval);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

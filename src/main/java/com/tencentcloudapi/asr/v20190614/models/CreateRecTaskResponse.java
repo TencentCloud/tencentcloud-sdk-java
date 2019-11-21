@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateRecTaskResponse  extends AbstractModel{
 
     /**
-    * 录音文件识别的请求返回结果。
+    * 录音文件识别的请求返回结果，包含结果查询需要的TaskId
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class CreateRecTaskResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取录音文件识别的请求返回结果。
-     * @return Data 录音文件识别的请求返回结果。
+     * 获取录音文件识别的请求返回结果，包含结果查询需要的TaskId
+     * @return Data 录音文件识别的请求返回结果，包含结果查询需要的TaskId
      */
     public Task getData() {
         return this.Data;
     }
 
     /**
-     * 设置录音文件识别的请求返回结果。
-     * @param Data 录音文件识别的请求返回结果。
+     * 设置录音文件识别的请求返回结果，包含结果查询需要的TaskId
+     * @param Data 录音文件识别的请求返回结果，包含结果查询需要的TaskId
      */
     public void setData(Task Data) {
         this.Data = Data;

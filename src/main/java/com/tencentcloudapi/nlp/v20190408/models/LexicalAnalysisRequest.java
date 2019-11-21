@@ -30,9 +30,9 @@ public class LexicalAnalysisRequest  extends AbstractModel{
     private String Text;
 
     /**
-    * 词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
+    * 词法分析模式（默认取2值）：
+1、高精度（混合粒度分词能力）；
+2、高性能（单粒度分词能力）；
     */
     @SerializedName("Flag")
     @Expose
@@ -55,24 +55,24 @@ public class LexicalAnalysisRequest  extends AbstractModel{
     }
 
     /**
-     * 获取词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
-     * @return Flag 词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
+     * 获取词法分析模式（默认取2值）：
+1、高精度（混合粒度分词能力）；
+2、高性能（单粒度分词能力）；
+     * @return Flag 词法分析模式（默认取2值）：
+1、高精度（混合粒度分词能力）；
+2、高性能（单粒度分词能力）；
      */
     public Long getFlag() {
         return this.Flag;
     }
 
     /**
-     * 设置词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
-     * @param Flag 词法分析模式（默认取1值）：
-1、高精度（具备混合粒度分词能力）；
-2、高性能；
+     * 设置词法分析模式（默认取2值）：
+1、高精度（混合粒度分词能力）；
+2、高性能（单粒度分词能力）；
+     * @param Flag 词法分析模式（默认取2值）：
+1、高精度（混合粒度分词能力）；
+2、高性能（单粒度分词能力）；
      */
     public void setFlag(Long Flag) {
         this.Flag = Flag;

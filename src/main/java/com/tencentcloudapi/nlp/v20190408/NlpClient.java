@@ -67,6 +67,26 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
+     *闲聊服务基于腾讯领先的NLP引擎能力、数据运算能力和千亿级互联网语料数据的支持，同时集成了广泛的知识问答能力，可实现上百种自定义属性配置，以及儿童语言风格及说话方式，从而让聊天变得更睿智、简单和有趣。
+
+
+     * @param req ChatBotRequest
+     * @return ChatBotResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChatBotResponse ChatBot(ChatBotRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChatBotResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChatBotResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ChatBot"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *（该接口即将下线，请使用升级接口：文本审核）
 
 文本审核接口能够识别文本信息中的色情、政治等有害内容，帮助用户及时、精准地防范违规风险，可用于内容审核、敏感信息过滤、舆情监控等场景。
@@ -115,6 +135,60 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
+     *输入实体名称，返回实体相关的信息如实体别名、实体英文名、实体详细信息、相关实体等。
+     * @param req DescribeEntityRequest
+     * @return DescribeEntityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEntityResponse DescribeEntity(DescribeEntityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEntityResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEntityResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeEntity"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *输入两个实体，返回两个实体间的关系，例如马化腾与腾讯公司不仅是相关实体，二者还存在隶属关系（马化腾属于腾讯公司）。
+     * @param req DescribeRelationRequest
+     * @return DescribeRelationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRelationResponse DescribeRelation(DescribeRelationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRelationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRelationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRelation"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *三元组查询，主要分为两类，SP查询和PO查询。SP查询表示已知主语和谓语查询宾语，PO查询表示已知宾语和谓语查询主语。每一个SP或PO查询都是一个可独立执行的查询，TQL支持SP查询的嵌套查询，即主语可以是一个嵌套的子查询。其他复杂的三元组查询方法，请参考官网API文档示例。
+     * @param req DescribeTripleRequest
+     * @return DescribeTripleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTripleResponse DescribeTriple(DescribeTripleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTripleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTripleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTriple"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *基于关键词提取平台，通过对文本内容进行深度分析，提取出文本内容中的关键信息，为用户实现诸如新闻内容关键词自动提取、评论关键词提取等提供基础服务。
      * @param req KeywordsExtractionRequest
      * @return KeywordsExtractionResponse
@@ -139,7 +213,7 @@ public class NlpClient extends AbstractClient{
 
 2、词性标注：为每一个词附上对应的词性，例如名词、代词、形容词、动词等；
 
-3、命名实体识别：快速识别文本中的实体，例如人名、地名、机构名、时间日期等。
+3、命名实体识别：快速识别文本中的实体，例如人名、地名、机构名等。
 
 所有的功能均基于千亿级大规模互联网语料进行持续迭代更新，以保证效果不断提升，用户无需担心新词发现、歧义消除、调用性能等问题。目前词法分析已经在泛互联网、金融、政务等不同垂直领域提供业务支持，并取得良好的效果。
      * @param req LexicalAnalysisRequest
@@ -267,7 +341,7 @@ public class NlpClient extends AbstractClient{
 
 1、文本恶意级别：将文本分为3个级别，包括正常、恶意、可疑送审；
 
-2、文本恶意类型：把文本分为9个类别，包括正常、政治、色情、辱骂/低俗、暴恐/毒品、广告/灌水、迷信/邪教、其他违法、综合；
+2、文本恶意类型：把文本分为10个类别，包括正常、政治、色情、辱骂/低俗、暴恐/毒品、广告/灌水、迷信/邪教、其他违法、综合、联系方式/链接；
 
 3、恶意关键词：文本中所有涉嫌恶意的关键词。
      * @param req TextApprovalRequest

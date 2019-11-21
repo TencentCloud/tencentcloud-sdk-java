@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SearchMediaRequest  extends AbstractModel{
 
     /**
-    * 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+    * 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
     */
     @SerializedName("Text")
     @Expose
@@ -31,7 +31,7 @@ public class SearchMediaRequest  extends AbstractModel{
 
     /**
     * 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8 个字符。</li>
+<li>单个标签长度限制：8个字符。</li>
 <li>数组长度限制：10。</li>
     */
     @SerializedName("Tags")
@@ -48,7 +48,7 @@ public class SearchMediaRequest  extends AbstractModel{
     /**
     * 创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
     */
     @SerializedName("StartTime")
     @Expose
@@ -57,7 +57,7 @@ public class SearchMediaRequest  extends AbstractModel{
     /**
     * 创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
     */
     @SerializedName("EndTime")
     @Expose
@@ -71,7 +71,7 @@ public class SearchMediaRequest  extends AbstractModel{
     private String SourceType;
 
     /**
-    * 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+    * 推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
     */
     @SerializedName("StreamId")
     @Expose
@@ -94,16 +94,16 @@ public class SearchMediaRequest  extends AbstractModel{
     private SortBy Sort;
 
     /**
-    * 偏移量。
-<li>默认值：0。</li>
-<li>取值范围：Offset + Limit 不超过 5000。</li>
+    * 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。</li>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回记录条数，默认值：10。
+    * 分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。</li>
     */
     @SerializedName("Limit")
     @Expose
@@ -117,16 +117,16 @@ public class SearchMediaRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
-     * @return Text 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+     * 获取搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
+     * @return Text 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * 设置搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
-     * @param Text 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+     * 设置搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
+     * @param Text 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
      */
     public void setText(String Text) {
         this.Text = Text;
@@ -134,10 +134,10 @@ public class SearchMediaRequest  extends AbstractModel{
 
     /**
      * 获取标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8 个字符。</li>
+<li>单个标签长度限制：8个字符。</li>
 <li>数组长度限制：10。</li>
      * @return Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8 个字符。</li>
+<li>单个标签长度限制：8个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public String [] getTags() {
@@ -146,10 +146,10 @@ public class SearchMediaRequest  extends AbstractModel{
 
     /**
      * 设置标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8 个字符。</li>
+<li>单个标签长度限制：8个字符。</li>
 <li>数组长度限制：10。</li>
      * @param Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8 个字符。</li>
+<li>单个标签长度限制：8个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public void setTags(String [] Tags) {
@@ -175,10 +175,10 @@ public class SearchMediaRequest  extends AbstractModel{
     /**
      * 获取创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      * @return StartTime 创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      */
     public String getStartTime() {
         return this.StartTime;
@@ -187,10 +187,10 @@ public class SearchMediaRequest  extends AbstractModel{
     /**
      * 设置创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      * @param StartTime 创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -199,10 +199,10 @@ public class SearchMediaRequest  extends AbstractModel{
     /**
      * 获取创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      * @return EndTime 创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      */
     public String getEndTime() {
         return this.EndTime;
@@ -211,10 +211,10 @@ public class SearchMediaRequest  extends AbstractModel{
     /**
      * 设置创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      * @param EndTime 创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -237,16 +237,16 @@ public class SearchMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
-     * @return StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * 获取推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * @return StreamId 推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * 设置推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
-     * @param StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * 设置推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * @param StreamId 推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
@@ -293,40 +293,40 @@ public class SearchMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量。
-<li>默认值：0。</li>
-<li>取值范围：Offset + Limit 不超过 5000。</li>
-     * @return Offset 偏移量。
-<li>默认值：0。</li>
-<li>取值范围：Offset + Limit 不超过 5000。</li>
+     * 获取分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。</li>
+     * @return Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。</li>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量。
-<li>默认值：0。</li>
-<li>取值范围：Offset + Limit 不超过 5000。</li>
-     * @param Offset 偏移量。
-<li>默认值：0。</li>
-<li>取值范围：Offset + Limit 不超过 5000。</li>
+     * 设置分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。</li>
+     * @param Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。</li>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取返回记录条数，默认值：10。
-     * @return Limit 返回记录条数，默认值：10。
+     * 获取分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。</li>
+     * @return Limit 分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。</li>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置返回记录条数，默认值：10。
-     * @param Limit 返回记录条数，默认值：10。
+     * 设置分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。</li>
+     * @param Limit 分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。</li>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

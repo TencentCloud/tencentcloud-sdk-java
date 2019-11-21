@@ -211,6 +211,24 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建Serverless部署组
+     * @param req CreateServerlessGroupRequest
+     * @return CreateServerlessGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateServerlessGroupResponse CreateServerlessGroup(CreateServerlessGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateServerlessGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateServerlessGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateServerlessGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除应用
      * @param req DeleteApplicationRequest
      * @return DeleteApplicationResponse
@@ -367,6 +385,24 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeletePublicConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeletePublicConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除Serverless部署组
+     * @param req DeleteServerlessGroupRequest
+     * @return DeleteServerlessGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteServerlessGroupResponse DeleteServerlessGroup(DeleteServerlessGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteServerlessGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteServerlessGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteServerlessGroup"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -854,6 +890,42 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeReleasedConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeReleasedConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Serverless部署组明细
+     * @param req DescribeServerlessGroupRequest
+     * @return DescribeServerlessGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerlessGroupResponse DescribeServerlessGroup(DescribeServerlessGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServerlessGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServerlessGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeServerlessGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Serverless部署组列表
+     * @param req DescribeServerlessGroupsRequest
+     * @return DescribeServerlessGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerlessGroupsResponse DescribeServerlessGroups(DescribeServerlessGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServerlessGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServerlessGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeServerlessGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

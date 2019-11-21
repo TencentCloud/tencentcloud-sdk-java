@@ -44,6 +44,26 @@ public class WatermarkInput  extends AbstractModel{
     private String SvgContent;
 
     /**
+    * 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+<li>不填或填0，表示水印从画面开始就出现；</li>
+<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
+<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+    */
+    @SerializedName("StartTimeOffset")
+    @Expose
+    private Float StartTimeOffset;
+
+    /**
+    * 水印的结束时间偏移，单位：秒。
+<li>不填或填0，表示水印持续到画面结束；</li>
+<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
+<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
+    */
+    @SerializedName("EndTimeOffset")
+    @Expose
+    private Float EndTimeOffset;
+
+    /**
      * 获取水印模板 ID。
      * @return Definition 水印模板 ID。
      */
@@ -92,12 +112,70 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
+     * 获取水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+<li>不填或填0，表示水印从画面开始就出现；</li>
+<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
+<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+     * @return StartTimeOffset 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+<li>不填或填0，表示水印从画面开始就出现；</li>
+<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
+<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+     */
+    public Float getStartTimeOffset() {
+        return this.StartTimeOffset;
+    }
+
+    /**
+     * 设置水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+<li>不填或填0，表示水印从画面开始就出现；</li>
+<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
+<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+     * @param StartTimeOffset 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+<li>不填或填0，表示水印从画面开始就出现；</li>
+<li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
+<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+     */
+    public void setStartTimeOffset(Float StartTimeOffset) {
+        this.StartTimeOffset = StartTimeOffset;
+    }
+
+    /**
+     * 获取水印的结束时间偏移，单位：秒。
+<li>不填或填0，表示水印持续到画面结束；</li>
+<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
+<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
+     * @return EndTimeOffset 水印的结束时间偏移，单位：秒。
+<li>不填或填0，表示水印持续到画面结束；</li>
+<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
+<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
+     */
+    public Float getEndTimeOffset() {
+        return this.EndTimeOffset;
+    }
+
+    /**
+     * 设置水印的结束时间偏移，单位：秒。
+<li>不填或填0，表示水印持续到画面结束；</li>
+<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
+<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
+     * @param EndTimeOffset 水印的结束时间偏移，单位：秒。
+<li>不填或填0，表示水印持续到画面结束；</li>
+<li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
+<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
+     */
+    public void setEndTimeOffset(Float EndTimeOffset) {
+        this.EndTimeOffset = EndTimeOffset;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
         this.setParamSimple(map, prefix + "SvgContent", this.SvgContent);
+        this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+        this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
 
     }
 }

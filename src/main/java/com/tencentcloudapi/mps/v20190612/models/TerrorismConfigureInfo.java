@@ -20,36 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiAnalysisTaskInput  extends AbstractModel{
+public class TerrorismConfigureInfo  extends AbstractModel{
 
     /**
-    * 视频内容分析模板 ID。
+    * 画面鉴恐任务控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Definition")
+    @SerializedName("ImgReviewInfo")
     @Expose
-    private Long Definition;
+    private TerrorismImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-     * 获取视频内容分析模板 ID。
-     * @return Definition 视频内容分析模板 ID。
+     * 获取画面鉴恐任务控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ImgReviewInfo 画面鉴恐任务控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDefinition() {
-        return this.Definition;
+    public TerrorismImgReviewTemplateInfo getImgReviewInfo() {
+        return this.ImgReviewInfo;
     }
 
     /**
-     * 设置视频内容分析模板 ID。
-     * @param Definition 视频内容分析模板 ID。
+     * 设置画面鉴恐任务控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImgReviewInfo 画面鉴恐任务控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
+    public void setImgReviewInfo(TerrorismImgReviewTemplateInfo ImgReviewInfo) {
+        this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
 
     }
 }

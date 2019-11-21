@@ -51,11 +51,18 @@ public class ExistedInstancesPara  extends AbstractModel{
     private LoginSettings LoginSettings;
 
     /**
-    * 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+    * 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
+
+    /**
+    * 重装系统时，可以指定修改实例的HostName。
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
 
     /**
      * 获取集群ID
@@ -122,19 +129,35 @@ public class ExistedInstancesPara  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
-     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+     * 获取实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * 设置实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
-     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+     * 设置实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * 获取重装系统时，可以指定修改实例的HostName。
+     * @return HostName 重装系统时，可以指定修改实例的HostName。
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * 设置重装系统时，可以指定修改实例的HostName。
+     * @param HostName 重装系统时，可以指定修改实例的HostName。
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
     }
 
     /**
@@ -146,6 +169,7 @@ public class ExistedInstancesPara  extends AbstractModel{
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
 
     }
 }

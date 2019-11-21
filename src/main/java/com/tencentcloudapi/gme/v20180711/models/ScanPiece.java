@@ -77,6 +77,22 @@ public class ScanPiece  extends AbstractModel{
     private String Info;
 
     /**
+    * 流检测时分片在流中的偏移时间，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 流检测时分片时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Duration")
+    @Expose
+    private Long Duration;
+
+    /**
      * 获取流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
      * @return DumpUrl 流检测时返回，音频转存地址，保留30min
@@ -209,6 +225,46 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
+     * 获取流检测时分片在流中的偏移时间，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Offset 流检测时分片在流中的偏移时间，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * 设置流检测时分片在流中的偏移时间，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Offset 流检测时分片在流中的偏移时间，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * 获取流检测时分片时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Duration 流检测时分片时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * 设置流检测时分片时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Duration 流检测时分片时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDuration(Long Duration) {
+        this.Duration = Duration;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -219,6 +275,8 @@ public class ScanPiece  extends AbstractModel{
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "Info", this.Info);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
 
     }
 }

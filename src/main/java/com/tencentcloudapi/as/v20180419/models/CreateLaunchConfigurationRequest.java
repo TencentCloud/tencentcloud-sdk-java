@@ -151,6 +151,13 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     private String CamRoleName;
 
     /**
+    * 云服务器主机名（HostName）的相关设置。
+    */
+    @SerializedName("HostNameSettings")
+    @Expose
+    private HostNameSettings HostNameSettings;
+
+    /**
      * 获取启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      * @return LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      */
@@ -459,6 +466,22 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取云服务器主机名（HostName）的相关设置。
+     * @return HostNameSettings 云服务器主机名（HostName）的相关设置。
+     */
+    public HostNameSettings getHostNameSettings() {
+        return this.HostNameSettings;
+    }
+
+    /**
+     * 设置云服务器主机名（HostName）的相关设置。
+     * @param HostNameSettings 云服务器主机名（HostName）的相关设置。
+     */
+    public void setHostNameSettings(HostNameSettings HostNameSettings) {
+        this.HostNameSettings = HostNameSettings;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -479,6 +502,7 @@ public class CreateLaunchConfigurationRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+        this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
 
     }
 }

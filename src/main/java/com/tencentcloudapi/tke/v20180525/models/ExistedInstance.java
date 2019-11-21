@@ -72,6 +72,7 @@ public class ExistedInstance  extends AbstractModel{
     /**
     * 实例主网卡的公网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -247,7 +248,9 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     /**
      * 获取实例主网卡的公网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @return PublicIpAddresses 实例主网卡的公网IP列表。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPublicIpAddresses() {
@@ -257,7 +260,9 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     /**
      * 设置实例主网卡的公网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 实例主网卡的公网IP列表。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {

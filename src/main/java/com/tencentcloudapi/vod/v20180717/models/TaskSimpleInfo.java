@@ -48,9 +48,9 @@ public class TaskSimpleInfo  extends AbstractModel{
     /**
     * 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
     */
-    @SerializedName("CreatTime")
+    @SerializedName("CreateTime")
     @Expose
-    private String CreatTime;
+    private String CreateTime;
 
     /**
     * 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未开始，该字段为空。
@@ -138,18 +138,18 @@ public class TaskSimpleInfo  extends AbstractModel{
 
     /**
      * 获取任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @return CreatTime 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @return CreateTime 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
-    public String getCreatTime() {
-        return this.CreatTime;
+    public String getCreateTime() {
+        return this.CreateTime;
     }
 
     /**
      * 设置任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param CreatTime 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param CreateTime 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
-    public void setCreatTime(String CreatTime) {
-        this.CreatTime = CreatTime;
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     /**
@@ -198,7 +198,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
-        this.setParamSimple(map, prefix + "CreatTime", this.CreatTime);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 

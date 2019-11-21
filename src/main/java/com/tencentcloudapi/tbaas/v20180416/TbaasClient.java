@@ -229,6 +229,24 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
+     *获取交易详情
+     * @param req GetTransactionDetailForUserRequest
+     * @return GetTransactionDetailForUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTransactionDetailForUserResponse GetTransactionDetailForUser(GetTransactionDetailForUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetTransactionDetailForUserResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetTransactionDetailForUserResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetTransactionDetailForUser"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新增交易
      * @param req InvokeRequest
      * @return InvokeResponse

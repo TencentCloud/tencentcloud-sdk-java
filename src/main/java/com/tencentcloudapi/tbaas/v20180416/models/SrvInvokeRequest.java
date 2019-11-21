@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SrvInvokeRequest  extends AbstractModel{
 
     /**
-    * 服务类型，ss或者dam
+    * 服务类型，iss或者dam
     */
     @SerializedName("Service")
     @Expose
@@ -44,16 +44,16 @@ public class SrvInvokeRequest  extends AbstractModel{
     private String Param;
 
     /**
-     * 获取服务类型，ss或者dam
-     * @return Service 服务类型，ss或者dam
+     * 获取服务类型，iss或者dam
+     * @return Service 服务类型，iss或者dam
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * 设置服务类型，ss或者dam
-     * @param Service 服务类型，ss或者dam
+     * 设置服务类型，iss或者dam
+     * @param Service 服务类型，iss或者dam
      */
     public void setService(String Service) {
         this.Service = Service;

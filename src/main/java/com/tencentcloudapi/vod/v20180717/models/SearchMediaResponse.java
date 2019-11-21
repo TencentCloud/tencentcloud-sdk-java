@@ -23,15 +23,15 @@ import java.util.HashMap;
 public class SearchMediaResponse  extends AbstractModel{
 
     /**
-    * 符合搜索条件的记录总数
-<li>最大值：5000，即，当命中记录数超过 5000，该字段将返回 5000，而非实际命中总数。</li>
+    * 符合搜索条件的记录总数。
+<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 媒体文件信息列表，只包含基础信息（BasicInfo）
+    * 媒体文件信息列表，只包含基础信息（BasicInfo）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaInfoSet")
@@ -46,29 +46,29 @@ public class SearchMediaResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合搜索条件的记录总数
-<li>最大值：5000，即，当命中记录数超过 5000，该字段将返回 5000，而非实际命中总数。</li>
-     * @return TotalCount 符合搜索条件的记录总数
-<li>最大值：5000，即，当命中记录数超过 5000，该字段将返回 5000，而非实际命中总数。</li>
+     * 获取符合搜索条件的记录总数。
+<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
+     * @return TotalCount 符合搜索条件的记录总数。
+<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置符合搜索条件的记录总数
-<li>最大值：5000，即，当命中记录数超过 5000，该字段将返回 5000，而非实际命中总数。</li>
-     * @param TotalCount 符合搜索条件的记录总数
-<li>最大值：5000，即，当命中记录数超过 5000，该字段将返回 5000，而非实际命中总数。</li>
+     * 设置符合搜索条件的记录总数。
+<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
+     * @param TotalCount 符合搜索条件的记录总数。
+<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取媒体文件信息列表，只包含基础信息（BasicInfo）
+     * 获取媒体文件信息列表，只包含基础信息（BasicInfo）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return MediaInfoSet 媒体文件信息列表，只包含基础信息（BasicInfo）
+     * @return MediaInfoSet 媒体文件信息列表，只包含基础信息（BasicInfo）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInfo [] getMediaInfoSet() {
@@ -76,9 +76,9 @@ public class SearchMediaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件信息列表，只包含基础信息（BasicInfo）
+     * 设置媒体文件信息列表，只包含基础信息（BasicInfo）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaInfoSet 媒体文件信息列表，只包含基础信息（BasicInfo）
+     * @param MediaInfoSet 媒体文件信息列表，只包含基础信息（BasicInfo）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {

@@ -823,6 +823,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *实例解隔离
+     * @param req StartupInstanceRequest
+     * @return StartupInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartupInstanceResponse StartupInstance(StartupInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartupInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartupInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StartupInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在通过DTS支持跨可用区灾备的场景中，通过该接口交换实例VIP完成实例灾备切换。交换VIP后目标实例可写，源和目标实例VIP互换，同时源与目标实例间DTS同步任务断开
      * @param req SwitchInstanceVipRequest
      * @return SwitchInstanceVipResponse

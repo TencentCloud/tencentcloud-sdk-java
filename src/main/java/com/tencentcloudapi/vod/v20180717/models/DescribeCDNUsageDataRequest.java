@@ -38,16 +38,35 @@ public class DescribeCDNUsageDataRequest  extends AbstractModel{
 
     /**
     * CDN 统计数据类型，有效值：
-<li>Flux：流量，单位为byte。</li>
-<li>Bandwidth：带宽，单位为bps。</li>
+<li>Flux：流量，单位为 byte。</li>
+<li>Bandwidth：带宽，单位为 bps。</li>
     */
     @SerializedName("DataType")
     @Expose
     private String DataType;
 
     /**
-    * 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+    * 用量数据的时间粒度，单位：分钟，取值有：
+<li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
+<li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
+<li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
+默认值为1440，返回天粒度的数据。
 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+    */
+    @SerializedName("DataInterval")
+    @Expose
+    private Long DataInterval;
+
+    /**
+    * 域名列表。一次最多查询20个域名的用量数据。可以指定多个域名，查询这些域名叠加的用量数据。默认返回所有域名叠加的用量数据。
+    */
+    @SerializedName("DomainNames")
+    @Expose
+    private String [] DomainNames;
+
+    /**
+    * 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。
     */
     @SerializedName("SubAppId")
     @Expose
@@ -87,11 +106,11 @@ public class DescribeCDNUsageDataRequest  extends AbstractModel{
 
     /**
      * 获取CDN 统计数据类型，有效值：
-<li>Flux：流量，单位为byte。</li>
-<li>Bandwidth：带宽，单位为bps。</li>
+<li>Flux：流量，单位为 byte。</li>
+<li>Bandwidth：带宽，单位为 bps。</li>
      * @return DataType CDN 统计数据类型，有效值：
-<li>Flux：流量，单位为byte。</li>
-<li>Bandwidth：带宽，单位为bps。</li>
+<li>Flux：流量，单位为 byte。</li>
+<li>Bandwidth：带宽，单位为 bps。</li>
      */
     public String getDataType() {
         return this.DataType;
@@ -99,21 +118,73 @@ public class DescribeCDNUsageDataRequest  extends AbstractModel{
 
     /**
      * 设置CDN 统计数据类型，有效值：
-<li>Flux：流量，单位为byte。</li>
-<li>Bandwidth：带宽，单位为bps。</li>
+<li>Flux：流量，单位为 byte。</li>
+<li>Bandwidth：带宽，单位为 bps。</li>
      * @param DataType CDN 统计数据类型，有效值：
-<li>Flux：流量，单位为byte。</li>
-<li>Bandwidth：带宽，单位为bps。</li>
+<li>Flux：流量，单位为 byte。</li>
+<li>Bandwidth：带宽，单位为 bps。</li>
      */
     public void setDataType(String DataType) {
         this.DataType = DataType;
     }
 
     /**
+     * 获取用量数据的时间粒度，单位：分钟，取值有：
+<li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
+<li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
+<li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
+默认值为1440，返回天粒度的数据。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+     * @return DataInterval 用量数据的时间粒度，单位：分钟，取值有：
+<li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
+<li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
+<li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
+默认值为1440，返回天粒度的数据。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+     */
+    public Long getDataInterval() {
+        return this.DataInterval;
+    }
+
+    /**
+     * 设置用量数据的时间粒度，单位：分钟，取值有：
+<li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
+<li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
+<li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
+默认值为1440，返回天粒度的数据。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+     * @param DataInterval 用量数据的时间粒度，单位：分钟，取值有：
+<li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
+<li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
+<li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
+默认值为1440，返回天粒度的数据。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+     */
+    public void setDataInterval(Long DataInterval) {
+        this.DataInterval = DataInterval;
+    }
+
+    /**
+     * 获取域名列表。一次最多查询20个域名的用量数据。可以指定多个域名，查询这些域名叠加的用量数据。默认返回所有域名叠加的用量数据。
+     * @return DomainNames 域名列表。一次最多查询20个域名的用量数据。可以指定多个域名，查询这些域名叠加的用量数据。默认返回所有域名叠加的用量数据。
+     */
+    public String [] getDomainNames() {
+        return this.DomainNames;
+    }
+
+    /**
+     * 设置域名列表。一次最多查询20个域名的用量数据。可以指定多个域名，查询这些域名叠加的用量数据。默认返回所有域名叠加的用量数据。
+     * @param DomainNames 域名列表。一次最多查询20个域名的用量数据。可以指定多个域名，查询这些域名叠加的用量数据。默认返回所有域名叠加的用量数据。
+     */
+    public void setDomainNames(String [] DomainNames) {
+        this.DomainNames = DomainNames;
+    }
+
+    /**
      * 获取点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。
      * @return SubAppId 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。
      */
     public Long getSubAppId() {
         return this.SubAppId;
@@ -121,9 +192,9 @@ public class DescribeCDNUsageDataRequest  extends AbstractModel{
 
     /**
      * 设置点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。
      * @param SubAppId 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -136,6 +207,8 @@ public class DescribeCDNUsageDataRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "DataType", this.DataType);
+        this.setParamSimple(map, prefix + "DataInterval", this.DataInterval);
+        this.setParamArraySimple(map, prefix + "DomainNames.", this.DomainNames);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

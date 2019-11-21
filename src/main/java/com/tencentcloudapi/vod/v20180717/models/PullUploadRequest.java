@@ -87,6 +87,13 @@ public class PullUploadRequest  extends AbstractModel{
     private String SessionId;
 
     /**
+    * 保留字段，特殊用途时使用。
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
@@ -242,6 +249,22 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
+     * 获取保留字段，特殊用途时使用。
+     * @return ExtInfo 保留字段，特殊用途时使用。
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * 设置保留字段，特殊用途时使用。
+     * @param ExtInfo 保留字段，特殊用途时使用。
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
+    /**
      * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
@@ -270,6 +293,7 @@ public class PullUploadRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

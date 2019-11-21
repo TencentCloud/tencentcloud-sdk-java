@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TextClassificationRequest  extends AbstractModel{
 
     /**
-    * 待分类的文本（仅支持UTF-8格式，不超过2000字）
+    * 待分类的文本（仅支持UTF-8格式，不超过10000字）
     */
     @SerializedName("Text")
     @Expose
@@ -39,16 +39,16 @@ public class TextClassificationRequest  extends AbstractModel{
     private Long Flag;
 
     /**
-     * 获取待分类的文本（仅支持UTF-8格式，不超过2000字）
-     * @return Text 待分类的文本（仅支持UTF-8格式，不超过2000字）
+     * 获取待分类的文本（仅支持UTF-8格式，不超过10000字）
+     * @return Text 待分类的文本（仅支持UTF-8格式，不超过10000字）
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * 设置待分类的文本（仅支持UTF-8格式，不超过2000字）
-     * @param Text 待分类的文本（仅支持UTF-8格式，不超过2000字）
+     * 设置待分类的文本（仅支持UTF-8格式，不超过10000字）
+     * @param Text 待分类的文本（仅支持UTF-8格式，不超过10000字）
      */
     public void setText(String Text) {
         this.Text = Text;

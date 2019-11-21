@@ -58,6 +58,13 @@ public class CreateMountPointRequest  extends AbstractModel{
     private Long MountPointStatus;
 
     /**
+    * VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
+    */
+    @SerializedName("VpcType")
+    @Expose
+    private Long VpcType;
+
+    /**
      * 获取挂载点名称
      * @return MountPointName 挂载点名称
      */
@@ -138,6 +145,22 @@ public class CreateMountPointRequest  extends AbstractModel{
     }
 
     /**
+     * 获取VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
+     * @return VpcType VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
+     */
+    public Long getVpcType() {
+        return this.VpcType;
+    }
+
+    /**
+     * 设置VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
+     * @param VpcType VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
+     */
+    public void setVpcType(Long VpcType) {
+        this.VpcType = VpcType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateMountPointRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "AccessGroupId", this.AccessGroupId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "MountPointStatus", this.MountPointStatus);
+        this.setParamSimple(map, prefix + "VpcType", this.VpcType);
 
     }
 }
