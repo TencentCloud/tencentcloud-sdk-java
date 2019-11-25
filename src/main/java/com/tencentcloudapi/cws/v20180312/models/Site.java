@@ -23,76 +23,6 @@ import java.util.HashMap;
 public class Site  extends AbstractModel{
 
     /**
-    * 扫描进度，百分比整数
-    */
-    @SerializedName("Progress")
-    @Expose
-    private Integer Progress;
-
-    /**
-    * 云用户appid。
-    */
-    @SerializedName("Appid")
-    @Expose
-    private Integer Appid;
-
-    /**
-    * 云用户标识。
-    */
-    @SerializedName("Uin")
-    @Expose
-    private String Uin;
-
-    /**
-    * 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
-    */
-    @SerializedName("NeedLogin")
-    @Expose
-    private Integer NeedLogin;
-
-    /**
-    * 登录后的cookie。
-    */
-    @SerializedName("LoginCookie")
-    @Expose
-    private String LoginCookie;
-
-    /**
-    * 登录后的cookie是否有效：0-无效；1-有效。
-    */
-    @SerializedName("LoginCookieValid")
-    @Expose
-    private Integer LoginCookieValid;
-
-    /**
-    * 用于测试cookie是否有效的URL。
-    */
-    @SerializedName("LoginCheckUrl")
-    @Expose
-    private String LoginCheckUrl;
-
-    /**
-    * 用于测试cookie是否有效的关键字。
-    */
-    @SerializedName("LoginCheckKw")
-    @Expose
-    private String LoginCheckKw;
-
-    /**
-    * 禁止扫描器扫描的目录关键字。
-    */
-    @SerializedName("ScanDisallow")
-    @Expose
-    private String ScanDisallow;
-
-    /**
-    * 访问网站的客户端标识。
-    */
-    @SerializedName("UserAgent")
-    @Expose
-    private String UserAgent;
-
-    /**
     * 站点ID。
     */
     @SerializedName("Id")
@@ -247,164 +177,88 @@ public class Site  extends AbstractModel{
     private Integer LastScanNoticeNum;
 
     /**
-     * 获取扫描进度，百分比整数
-     * @return Progress 扫描进度，百分比整数
-     */
-    public Integer getProgress() {
-        return this.Progress;
-    }
+    * 扫描进度，百分比整数
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Integer Progress;
 
     /**
-     * 设置扫描进度，百分比整数
-     * @param Progress 扫描进度，百分比整数
-     */
-    public void setProgress(Integer Progress) {
-        this.Progress = Progress;
-    }
+    * 云用户appid。
+    */
+    @SerializedName("Appid")
+    @Expose
+    private Integer Appid;
 
     /**
-     * 获取云用户appid。
-     * @return Appid 云用户appid。
-     */
-    public Integer getAppid() {
-        return this.Appid;
-    }
+    * 云用户标识。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
 
     /**
-     * 设置云用户appid。
-     * @param Appid 云用户appid。
-     */
-    public void setAppid(Integer Appid) {
-        this.Appid = Appid;
-    }
+    * 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+    */
+    @SerializedName("NeedLogin")
+    @Expose
+    private Integer NeedLogin;
 
     /**
-     * 获取云用户标识。
-     * @return Uin 云用户标识。
-     */
-    public String getUin() {
-        return this.Uin;
-    }
+    * 登录后的cookie。
+    */
+    @SerializedName("LoginCookie")
+    @Expose
+    private String LoginCookie;
 
     /**
-     * 设置云用户标识。
-     * @param Uin 云用户标识。
-     */
-    public void setUin(String Uin) {
-        this.Uin = Uin;
-    }
+    * 登录后的cookie是否有效：0-无效；1-有效。
+    */
+    @SerializedName("LoginCookieValid")
+    @Expose
+    private Integer LoginCookieValid;
 
     /**
-     * 获取网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
-     * @return NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
-     */
-    public Integer getNeedLogin() {
-        return this.NeedLogin;
-    }
+    * 用于测试cookie是否有效的URL。
+    */
+    @SerializedName("LoginCheckUrl")
+    @Expose
+    private String LoginCheckUrl;
 
     /**
-     * 设置网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
-     * @param NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
-     */
-    public void setNeedLogin(Integer NeedLogin) {
-        this.NeedLogin = NeedLogin;
-    }
+    * 用于测试cookie是否有效的关键字。
+    */
+    @SerializedName("LoginCheckKw")
+    @Expose
+    private String LoginCheckKw;
 
     /**
-     * 获取登录后的cookie。
-     * @return LoginCookie 登录后的cookie。
-     */
-    public String getLoginCookie() {
-        return this.LoginCookie;
-    }
+    * 禁止扫描器扫描的目录关键字。
+    */
+    @SerializedName("ScanDisallow")
+    @Expose
+    private String ScanDisallow;
 
     /**
-     * 设置登录后的cookie。
-     * @param LoginCookie 登录后的cookie。
-     */
-    public void setLoginCookie(String LoginCookie) {
-        this.LoginCookie = LoginCookie;
-    }
+    * 访问网站的客户端标识。
+    */
+    @SerializedName("UserAgent")
+    @Expose
+    private String UserAgent;
 
     /**
-     * 获取登录后的cookie是否有效：0-无效；1-有效。
-     * @return LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
-     */
-    public Integer getLoginCookieValid() {
-        return this.LoginCookieValid;
-    }
+    * 内容检测状态：0-未检测；1-已检测；
+    */
+    @SerializedName("ContentStatus")
+    @Expose
+    private Integer ContentStatus;
 
     /**
-     * 设置登录后的cookie是否有效：0-无效；1-有效。
-     * @param LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
-     */
-    public void setLoginCookieValid(Integer LoginCookieValid) {
-        this.LoginCookieValid = LoginCookieValid;
-    }
-
-    /**
-     * 获取用于测试cookie是否有效的URL。
-     * @return LoginCheckUrl 用于测试cookie是否有效的URL。
-     */
-    public String getLoginCheckUrl() {
-        return this.LoginCheckUrl;
-    }
-
-    /**
-     * 设置用于测试cookie是否有效的URL。
-     * @param LoginCheckUrl 用于测试cookie是否有效的URL。
-     */
-    public void setLoginCheckUrl(String LoginCheckUrl) {
-        this.LoginCheckUrl = LoginCheckUrl;
-    }
-
-    /**
-     * 获取用于测试cookie是否有效的关键字。
-     * @return LoginCheckKw 用于测试cookie是否有效的关键字。
-     */
-    public String getLoginCheckKw() {
-        return this.LoginCheckKw;
-    }
-
-    /**
-     * 设置用于测试cookie是否有效的关键字。
-     * @param LoginCheckKw 用于测试cookie是否有效的关键字。
-     */
-    public void setLoginCheckKw(String LoginCheckKw) {
-        this.LoginCheckKw = LoginCheckKw;
-    }
-
-    /**
-     * 获取禁止扫描器扫描的目录关键字。
-     * @return ScanDisallow 禁止扫描器扫描的目录关键字。
-     */
-    public String getScanDisallow() {
-        return this.ScanDisallow;
-    }
-
-    /**
-     * 设置禁止扫描器扫描的目录关键字。
-     * @param ScanDisallow 禁止扫描器扫描的目录关键字。
-     */
-    public void setScanDisallow(String ScanDisallow) {
-        this.ScanDisallow = ScanDisallow;
-    }
-
-    /**
-     * 获取访问网站的客户端标识。
-     * @return UserAgent 访问网站的客户端标识。
-     */
-    public String getUserAgent() {
-        return this.UserAgent;
-    }
-
-    /**
-     * 设置访问网站的客户端标识。
-     * @param UserAgent 访问网站的客户端标识。
-     */
-    public void setUserAgent(String UserAgent) {
-        this.UserAgent = UserAgent;
-    }
+    * 最近一次扫描内容检测数量
+    */
+    @SerializedName("LastScanContentNum")
+    @Expose
+    private Integer LastScanContentNum;
 
     /**
      * 获取站点ID。
@@ -759,19 +613,201 @@ public class Site  extends AbstractModel{
     }
 
     /**
+     * 获取扫描进度，百分比整数
+     * @return Progress 扫描进度，百分比整数
+     */
+    public Integer getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * 设置扫描进度，百分比整数
+     * @param Progress 扫描进度，百分比整数
+     */
+    public void setProgress(Integer Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
+     * 获取云用户appid。
+     * @return Appid 云用户appid。
+     */
+    public Integer getAppid() {
+        return this.Appid;
+    }
+
+    /**
+     * 设置云用户appid。
+     * @param Appid 云用户appid。
+     */
+    public void setAppid(Integer Appid) {
+        this.Appid = Appid;
+    }
+
+    /**
+     * 获取云用户标识。
+     * @return Uin 云用户标识。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * 设置云用户标识。
+     * @param Uin 云用户标识。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * 获取网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     * @return NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     */
+    public Integer getNeedLogin() {
+        return this.NeedLogin;
+    }
+
+    /**
+     * 设置网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     * @param NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     */
+    public void setNeedLogin(Integer NeedLogin) {
+        this.NeedLogin = NeedLogin;
+    }
+
+    /**
+     * 获取登录后的cookie。
+     * @return LoginCookie 登录后的cookie。
+     */
+    public String getLoginCookie() {
+        return this.LoginCookie;
+    }
+
+    /**
+     * 设置登录后的cookie。
+     * @param LoginCookie 登录后的cookie。
+     */
+    public void setLoginCookie(String LoginCookie) {
+        this.LoginCookie = LoginCookie;
+    }
+
+    /**
+     * 获取登录后的cookie是否有效：0-无效；1-有效。
+     * @return LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
+     */
+    public Integer getLoginCookieValid() {
+        return this.LoginCookieValid;
+    }
+
+    /**
+     * 设置登录后的cookie是否有效：0-无效；1-有效。
+     * @param LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
+     */
+    public void setLoginCookieValid(Integer LoginCookieValid) {
+        this.LoginCookieValid = LoginCookieValid;
+    }
+
+    /**
+     * 获取用于测试cookie是否有效的URL。
+     * @return LoginCheckUrl 用于测试cookie是否有效的URL。
+     */
+    public String getLoginCheckUrl() {
+        return this.LoginCheckUrl;
+    }
+
+    /**
+     * 设置用于测试cookie是否有效的URL。
+     * @param LoginCheckUrl 用于测试cookie是否有效的URL。
+     */
+    public void setLoginCheckUrl(String LoginCheckUrl) {
+        this.LoginCheckUrl = LoginCheckUrl;
+    }
+
+    /**
+     * 获取用于测试cookie是否有效的关键字。
+     * @return LoginCheckKw 用于测试cookie是否有效的关键字。
+     */
+    public String getLoginCheckKw() {
+        return this.LoginCheckKw;
+    }
+
+    /**
+     * 设置用于测试cookie是否有效的关键字。
+     * @param LoginCheckKw 用于测试cookie是否有效的关键字。
+     */
+    public void setLoginCheckKw(String LoginCheckKw) {
+        this.LoginCheckKw = LoginCheckKw;
+    }
+
+    /**
+     * 获取禁止扫描器扫描的目录关键字。
+     * @return ScanDisallow 禁止扫描器扫描的目录关键字。
+     */
+    public String getScanDisallow() {
+        return this.ScanDisallow;
+    }
+
+    /**
+     * 设置禁止扫描器扫描的目录关键字。
+     * @param ScanDisallow 禁止扫描器扫描的目录关键字。
+     */
+    public void setScanDisallow(String ScanDisallow) {
+        this.ScanDisallow = ScanDisallow;
+    }
+
+    /**
+     * 获取访问网站的客户端标识。
+     * @return UserAgent 访问网站的客户端标识。
+     */
+    public String getUserAgent() {
+        return this.UserAgent;
+    }
+
+    /**
+     * 设置访问网站的客户端标识。
+     * @param UserAgent 访问网站的客户端标识。
+     */
+    public void setUserAgent(String UserAgent) {
+        this.UserAgent = UserAgent;
+    }
+
+    /**
+     * 获取内容检测状态：0-未检测；1-已检测；
+     * @return ContentStatus 内容检测状态：0-未检测；1-已检测；
+     */
+    public Integer getContentStatus() {
+        return this.ContentStatus;
+    }
+
+    /**
+     * 设置内容检测状态：0-未检测；1-已检测；
+     * @param ContentStatus 内容检测状态：0-未检测；1-已检测；
+     */
+    public void setContentStatus(Integer ContentStatus) {
+        this.ContentStatus = ContentStatus;
+    }
+
+    /**
+     * 获取最近一次扫描内容检测数量
+     * @return LastScanContentNum 最近一次扫描内容检测数量
+     */
+    public Integer getLastScanContentNum() {
+        return this.LastScanContentNum;
+    }
+
+    /**
+     * 设置最近一次扫描内容检测数量
+     * @param LastScanContentNum 最近一次扫描内容检测数量
+     */
+    public void setLastScanContentNum(Integer LastScanContentNum) {
+        this.LastScanContentNum = LastScanContentNum;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Progress", this.Progress);
-        this.setParamSimple(map, prefix + "Appid", this.Appid);
-        this.setParamSimple(map, prefix + "Uin", this.Uin);
-        this.setParamSimple(map, prefix + "NeedLogin", this.NeedLogin);
-        this.setParamSimple(map, prefix + "LoginCookie", this.LoginCookie);
-        this.setParamSimple(map, prefix + "LoginCookieValid", this.LoginCookieValid);
-        this.setParamSimple(map, prefix + "LoginCheckUrl", this.LoginCheckUrl);
-        this.setParamSimple(map, prefix + "LoginCheckKw", this.LoginCheckKw);
-        this.setParamSimple(map, prefix + "ScanDisallow", this.ScanDisallow);
-        this.setParamSimple(map, prefix + "UserAgent", this.UserAgent);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "MonitorId", this.MonitorId);
         this.setParamSimple(map, prefix + "Url", this.Url);
@@ -794,6 +830,18 @@ public class Site  extends AbstractModel{
         this.setParamSimple(map, prefix + "LastScanRateLimit", this.LastScanRateLimit);
         this.setParamSimple(map, prefix + "LastScanVulsNum", this.LastScanVulsNum);
         this.setParamSimple(map, prefix + "LastScanNoticeNum", this.LastScanNoticeNum);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "Appid", this.Appid);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "NeedLogin", this.NeedLogin);
+        this.setParamSimple(map, prefix + "LoginCookie", this.LoginCookie);
+        this.setParamSimple(map, prefix + "LoginCookieValid", this.LoginCookieValid);
+        this.setParamSimple(map, prefix + "LoginCheckUrl", this.LoginCheckUrl);
+        this.setParamSimple(map, prefix + "LoginCheckKw", this.LoginCheckKw);
+        this.setParamSimple(map, prefix + "ScanDisallow", this.ScanDisallow);
+        this.setParamSimple(map, prefix + "UserAgent", this.UserAgent);
+        this.setParamSimple(map, prefix + "ContentStatus", this.ContentStatus);
+        this.setParamSimple(map, prefix + "LastScanContentNum", this.LastScanContentNum);
 
     }
 }

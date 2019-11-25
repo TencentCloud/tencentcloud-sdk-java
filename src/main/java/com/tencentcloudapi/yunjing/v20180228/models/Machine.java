@@ -60,7 +60,7 @@ public class Machine  extends AbstractModel{
     private String Quuid;
 
     /**
-    * 漏洞数，非专业版将返回：0。
+    * 漏洞数。
     */
     @SerializedName("VulNum")
     @Expose
@@ -97,6 +97,20 @@ public class Machine  extends AbstractModel{
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
+
+    /**
+    * 木马数。
+    */
+    @SerializedName("MalwareNum")
+    @Expose
+    private Integer MalwareNum;
+
+    /**
+    * 标签信息
+    */
+    @SerializedName("Tag")
+    @Expose
+    private MachineTag [] Tag;
 
     /**
      * 获取主机名称。
@@ -187,16 +201,16 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞数，非专业版将返回：0。
-     * @return VulNum 漏洞数，非专业版将返回：0。
+     * 获取漏洞数。
+     * @return VulNum 漏洞数。
      */
     public Integer getVulNum() {
         return this.VulNum;
     }
 
     /**
-     * 设置漏洞数，非专业版将返回：0。
-     * @param VulNum 漏洞数，非专业版将返回：0。
+     * 设置漏洞数。
+     * @param VulNum 漏洞数。
      */
     public void setVulNum(Integer VulNum) {
         this.VulNum = VulNum;
@@ -283,6 +297,38 @@ public class Machine  extends AbstractModel{
     }
 
     /**
+     * 获取木马数。
+     * @return MalwareNum 木马数。
+     */
+    public Integer getMalwareNum() {
+        return this.MalwareNum;
+    }
+
+    /**
+     * 设置木马数。
+     * @param MalwareNum 木马数。
+     */
+    public void setMalwareNum(Integer MalwareNum) {
+        this.MalwareNum = MalwareNum;
+    }
+
+    /**
+     * 获取标签信息
+     * @return Tag 标签信息
+     */
+    public MachineTag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * 设置标签信息
+     * @param Tag 标签信息
+     */
+    public void setTag(MachineTag [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -296,6 +342,8 @@ public class Machine  extends AbstractModel{
         this.setParamSimple(map, prefix + "IsProVersion", this.IsProVersion);
         this.setParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "MalwareNum", this.MalwareNum);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

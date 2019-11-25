@@ -30,7 +30,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     private String TaskResult;
 
     /**
-    * <p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+    * <p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
-     * @return TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
+     * @return TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
-     * @param TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+     * 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
+     * @param TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

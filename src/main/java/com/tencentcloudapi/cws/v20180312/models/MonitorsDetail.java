@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class MonitorsDetail  extends AbstractModel{
 
     /**
-    * 监控任务包含的站点列表的平均扫描进度。
-    */
-    @SerializedName("Progress")
-    @Expose
-    private Integer Progress;
-
-    /**
-    * 扫描页面总数。
-    */
-    @SerializedName("PageCount")
-    @Expose
-    private Integer PageCount;
-
-    /**
     * 监控任务基础信息。
     */
     @SerializedName("Basic")
@@ -100,36 +86,25 @@ public class MonitorsDetail  extends AbstractModel{
     private Integer VulsNoticeNumber;
 
     /**
-     * 获取监控任务包含的站点列表的平均扫描进度。
-     * @return Progress 监控任务包含的站点列表的平均扫描进度。
-     */
-    public Integer getProgress() {
-        return this.Progress;
-    }
+    * 监控任务包含的站点列表的平均扫描进度。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Integer Progress;
 
     /**
-     * 设置监控任务包含的站点列表的平均扫描进度。
-     * @param Progress 监控任务包含的站点列表的平均扫描进度。
-     */
-    public void setProgress(Integer Progress) {
-        this.Progress = Progress;
-    }
+    * 扫描页面总数。
+    */
+    @SerializedName("PageCount")
+    @Expose
+    private Integer PageCount;
 
     /**
-     * 获取扫描页面总数。
-     * @return PageCount 扫描页面总数。
-     */
-    public Integer getPageCount() {
-        return this.PageCount;
-    }
-
-    /**
-     * 设置扫描页面总数。
-     * @param PageCount 扫描页面总数。
-     */
-    public void setPageCount(Integer PageCount) {
-        this.PageCount = PageCount;
-    }
+    * 内容检测数量。
+    */
+    @SerializedName("ContentNumber")
+    @Expose
+    private Integer ContentNumber;
 
     /**
      * 获取监控任务基础信息。
@@ -276,11 +251,57 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
+     * 获取监控任务包含的站点列表的平均扫描进度。
+     * @return Progress 监控任务包含的站点列表的平均扫描进度。
+     */
+    public Integer getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * 设置监控任务包含的站点列表的平均扫描进度。
+     * @param Progress 监控任务包含的站点列表的平均扫描进度。
+     */
+    public void setProgress(Integer Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
+     * 获取扫描页面总数。
+     * @return PageCount 扫描页面总数。
+     */
+    public Integer getPageCount() {
+        return this.PageCount;
+    }
+
+    /**
+     * 设置扫描页面总数。
+     * @param PageCount 扫描页面总数。
+     */
+    public void setPageCount(Integer PageCount) {
+        this.PageCount = PageCount;
+    }
+
+    /**
+     * 获取内容检测数量。
+     * @return ContentNumber 内容检测数量。
+     */
+    public Integer getContentNumber() {
+        return this.ContentNumber;
+    }
+
+    /**
+     * 设置内容检测数量。
+     * @param ContentNumber 内容检测数量。
+     */
+    public void setContentNumber(Integer ContentNumber) {
+        this.ContentNumber = ContentNumber;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Progress", this.Progress);
-        this.setParamSimple(map, prefix + "PageCount", this.PageCount);
         this.setParamObj(map, prefix + "Basic.", this.Basic);
         this.setParamArrayObj(map, prefix + "Sites.", this.Sites);
         this.setParamSimple(map, prefix + "SiteNumber", this.SiteNumber);
@@ -290,6 +311,9 @@ public class MonitorsDetail  extends AbstractModel{
         this.setParamSimple(map, prefix + "VulsMiddleNumber", this.VulsMiddleNumber);
         this.setParamSimple(map, prefix + "VulsLowNumber", this.VulsLowNumber);
         this.setParamSimple(map, prefix + "VulsNoticeNumber", this.VulsNoticeNumber);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "PageCount", this.PageCount);
+        this.setParamSimple(map, prefix + "ContentNumber", this.ContentNumber);
 
     }
 }

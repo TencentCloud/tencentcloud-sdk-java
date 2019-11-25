@@ -129,6 +129,20 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     private String PayMode;
 
     /**
+    * 免费木马剩余检测数量。
+    */
+    @SerializedName("FreeMalwaresLeft")
+    @Expose
+    private Integer FreeMalwaresLeft;
+
+    /**
+    * 免费漏洞剩余检测数量。
+    */
+    @SerializedName("FreeVulsLeft")
+    @Expose
+    private Integer FreeVulsLeft;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -392,6 +406,38 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
+     * 获取免费木马剩余检测数量。
+     * @return FreeMalwaresLeft 免费木马剩余检测数量。
+     */
+    public Integer getFreeMalwaresLeft() {
+        return this.FreeMalwaresLeft;
+    }
+
+    /**
+     * 设置免费木马剩余检测数量。
+     * @param FreeMalwaresLeft 免费木马剩余检测数量。
+     */
+    public void setFreeMalwaresLeft(Integer FreeMalwaresLeft) {
+        this.FreeMalwaresLeft = FreeMalwaresLeft;
+    }
+
+    /**
+     * 获取免费漏洞剩余检测数量。
+     * @return FreeVulsLeft 免费漏洞剩余检测数量。
+     */
+    public Integer getFreeVulsLeft() {
+        return this.FreeVulsLeft;
+    }
+
+    /**
+     * 设置免费漏洞剩余检测数量。
+     * @param FreeVulsLeft 免费漏洞剩余检测数量。
+     */
+    public void setFreeVulsLeft(Integer FreeVulsLeft) {
+        this.FreeVulsLeft = FreeVulsLeft;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -425,6 +471,8 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "MachineRegion", this.MachineRegion);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "FreeMalwaresLeft", this.FreeMalwaresLeft);
+        this.setParamSimple(map, prefix + "FreeVulsLeft", this.FreeVulsLeft);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

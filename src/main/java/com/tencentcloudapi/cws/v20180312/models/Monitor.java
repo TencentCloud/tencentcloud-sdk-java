@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class Monitor  extends AbstractModel{
 
     /**
-    * 云用户appid。
-    */
-    @SerializedName("Appid")
-    @Expose
-    private Integer Appid;
-
-    /**
     * 监控任务ID。
     */
     @SerializedName("Id")
@@ -121,20 +114,18 @@ public class Monitor  extends AbstractModel{
     private String UpdatedAt;
 
     /**
-     * 获取云用户appid。
-     * @return Appid 云用户appid。
-     */
-    public Integer getAppid() {
-        return this.Appid;
-    }
+    * 云用户appid。
+    */
+    @SerializedName("Appid")
+    @Expose
+    private Integer Appid;
 
     /**
-     * 设置云用户appid。
-     * @param Appid 云用户appid。
-     */
-    public void setAppid(Integer Appid) {
-        this.Appid = Appid;
-    }
+    * 扫描状态：0-待检测；1-检测完成
+    */
+    @SerializedName("ContentScanStatus")
+    @Expose
+    private Integer ContentScanStatus;
 
     /**
      * 获取监控任务ID。
@@ -345,10 +336,41 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
+     * 获取云用户appid。
+     * @return Appid 云用户appid。
+     */
+    public Integer getAppid() {
+        return this.Appid;
+    }
+
+    /**
+     * 设置云用户appid。
+     * @param Appid 云用户appid。
+     */
+    public void setAppid(Integer Appid) {
+        this.Appid = Appid;
+    }
+
+    /**
+     * 获取扫描状态：0-待检测；1-检测完成
+     * @return ContentScanStatus 扫描状态：0-待检测；1-检测完成
+     */
+    public Integer getContentScanStatus() {
+        return this.ContentScanStatus;
+    }
+
+    /**
+     * 设置扫描状态：0-待检测；1-检测完成
+     * @param ContentScanStatus 扫描状态：0-待检测；1-检测完成
+     */
+    public void setContentScanStatus(Integer ContentScanStatus) {
+        this.ContentScanStatus = ContentScanStatus;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Appid", this.Appid);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
@@ -362,6 +384,8 @@ public class Monitor  extends AbstractModel{
         this.setParamSimple(map, prefix + "CurrentScanStartTime", this.CurrentScanStartTime);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "Appid", this.Appid);
+        this.setParamSimple(map, prefix + "ContentScanStatus", this.ContentScanStatus);
 
     }
 }

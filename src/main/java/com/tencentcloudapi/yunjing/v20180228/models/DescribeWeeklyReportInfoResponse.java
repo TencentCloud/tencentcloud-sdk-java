@@ -110,6 +110,13 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     private Integer VulNum;
 
     /**
+    * 导出文件下载地址。
+    */
+    @SerializedName("DownloadUrl")
+    @Expose
+    private String DownloadUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -321,6 +328,22 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
+     * 获取导出文件下载地址。
+     * @return DownloadUrl 导出文件下载地址。
+     */
+    public String getDownloadUrl() {
+        return this.DownloadUrl;
+    }
+
+    /**
+     * 设置导出文件下载地址。
+     * @param DownloadUrl 导出文件下载地址。
+     */
+    public void setDownloadUrl(String DownloadUrl) {
+        this.DownloadUrl = DownloadUrl;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -352,6 +375,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "NonlocalLoginNum", this.NonlocalLoginNum);
         this.setParamSimple(map, prefix + "BruteAttackSuccessNum", this.BruteAttackSuccessNum);
         this.setParamSimple(map, prefix + "VulNum", this.VulNum);
+        this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

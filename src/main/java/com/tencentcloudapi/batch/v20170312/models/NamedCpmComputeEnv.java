@@ -51,7 +51,7 @@ public class NamedCpmComputeEnv  extends AbstractModel{
     private String EnvDescription;
 
     /**
-    * 计算环境管理类型
+    * 计算环境管理类型， 取值MANAGED。
     */
     @SerializedName("EnvType")
     @Expose
@@ -150,16 +150,16 @@ public class NamedCpmComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境管理类型
-     * @return EnvType 计算环境管理类型
+     * 获取计算环境管理类型， 取值MANAGED。
+     * @return EnvType 计算环境管理类型， 取值MANAGED。
      */
     public String getEnvType() {
         return this.EnvType;
     }
 
     /**
-     * 设置计算环境管理类型
-     * @param EnvType 计算环境管理类型
+     * 设置计算环境管理类型， 取值MANAGED。
+     * @param EnvType 计算环境管理类型， 取值MANAGED。
      */
     public void setEnvType(String EnvType) {
         this.EnvType = EnvType;

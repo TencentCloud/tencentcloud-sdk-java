@@ -82,6 +82,13 @@ public class ImpactedHost  extends AbstractModel{
     private Integer VulId;
 
     /**
+    * 是否为专业版。
+    */
+    @SerializedName("IsProVersion")
+    @Expose
+    private Boolean IsProVersion;
+
+    /**
      * 获取漏洞ID。
      * @return Id 漏洞ID。
      */
@@ -222,6 +229,22 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
+     * 获取是否为专业版。
+     * @return IsProVersion 是否为专业版。
+     */
+    public Boolean getIsProVersion() {
+        return this.IsProVersion;
+    }
+
+    /**
+     * 设置是否为专业版。
+     * @param IsProVersion 是否为专业版。
+     */
+    public void setIsProVersion(Boolean IsProVersion) {
+        this.IsProVersion = IsProVersion;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -233,6 +256,7 @@ public class ImpactedHost  extends AbstractModel{
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "VulId", this.VulId);
+        this.setParamSimple(map, prefix + "IsProVersion", this.IsProVersion);
 
     }
 }

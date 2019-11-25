@@ -30,7 +30,14 @@ public class CreateSitesResponse  extends AbstractModel{
     private Integer Number;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 站点数组
+    */
+    @SerializedName("Sites")
+    @Expose
+    private MiniSite [] Sites;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -53,16 +60,32 @@ public class CreateSitesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取站点数组
+     * @return Sites 站点数组
+     */
+    public MiniSite [] getSites() {
+        return this.Sites;
+    }
+
+    /**
+     * 设置站点数组
+     * @param Sites 站点数组
+     */
+    public void setSites(MiniSite [] Sites) {
+        this.Sites = Sites;
+    }
+
+    /**
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -73,6 +96,7 @@ public class CreateSitesResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Number", this.Number);
+        this.setParamArrayObj(map, prefix + "Sites.", this.Sites);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -49,6 +49,24 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
+     *统计用户回执的数据
+     * @param req CallbackStatusStatisticsRequest
+     * @return CallbackStatusStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CallbackStatusStatisticsResponse CallbackStatusStatistics(CallbackStatusStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CallbackStatusStatisticsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CallbackStatusStatisticsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CallbackStatusStatistics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *拉取短信回复状态
      * @param req PullSmsReplyStatusRequest
      * @return PullSmsReplyStatusResponse
@@ -134,6 +152,42 @@ public class SmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SendSmsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SendSms"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *统计用户发送短信的数据
+     * @param req SendStatusStatisticsRequest
+     * @return SendStatusStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendStatusStatisticsResponse SendStatusStatistics(SendStatusStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendStatusStatisticsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendStatusStatisticsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SendStatusStatistics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户套餐包信息统计
+     * @param req SmsPackagesStatisticsRequest
+     * @return SmsPackagesStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SmsPackagesStatisticsResponse SmsPackagesStatistics(SmsPackagesStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SmsPackagesStatisticsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SmsPackagesStatisticsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SmsPackagesStatistics"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

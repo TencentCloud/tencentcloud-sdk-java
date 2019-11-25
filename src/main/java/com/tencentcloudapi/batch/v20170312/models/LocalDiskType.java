@@ -51,6 +51,13 @@ public class LocalDiskType  extends AbstractModel{
     private Integer MaxSize;
 
     /**
+    * 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
+    */
+    @SerializedName("Required")
+    @Expose
+    private String Required;
+
+    /**
      * 获取本地磁盘类型。
      * @return Type 本地磁盘类型。
      */
@@ -115,6 +122,22 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
+     * 获取购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
+     * @return Required 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
+     */
+    public String getRequired() {
+        return this.Required;
+    }
+
+    /**
+     * 设置购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
+     * @param Required 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
+     */
+    public void setRequired(String Required) {
+        this.Required = Required;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class LocalDiskType  extends AbstractModel{
         this.setParamSimple(map, prefix + "PartitionType", this.PartitionType);
         this.setParamSimple(map, prefix + "MinSize", this.MinSize);
         this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
+        this.setParamSimple(map, prefix + "Required", this.Required);
 
     }
 }

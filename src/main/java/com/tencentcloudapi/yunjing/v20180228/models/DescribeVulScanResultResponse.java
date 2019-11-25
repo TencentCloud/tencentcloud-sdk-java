@@ -44,6 +44,20 @@ public class DescribeVulScanResultResponse  extends AbstractModel{
     private Integer ImpactedHostNum;
 
     /**
+    * 主机总数。
+    */
+    @SerializedName("HostNum")
+    @Expose
+    private Integer HostNum;
+
+    /**
+    * 基础版机器数。
+    */
+    @SerializedName("BasicVersionNum")
+    @Expose
+    private Integer BasicVersionNum;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +113,38 @@ public class DescribeVulScanResultResponse  extends AbstractModel{
     }
 
     /**
+     * 获取主机总数。
+     * @return HostNum 主机总数。
+     */
+    public Integer getHostNum() {
+        return this.HostNum;
+    }
+
+    /**
+     * 设置主机总数。
+     * @param HostNum 主机总数。
+     */
+    public void setHostNum(Integer HostNum) {
+        this.HostNum = HostNum;
+    }
+
+    /**
+     * 获取基础版机器数。
+     * @return BasicVersionNum 基础版机器数。
+     */
+    public Integer getBasicVersionNum() {
+        return this.BasicVersionNum;
+    }
+
+    /**
+     * 设置基础版机器数。
+     * @param BasicVersionNum 基础版机器数。
+     */
+    public void setBasicVersionNum(Integer BasicVersionNum) {
+        this.BasicVersionNum = BasicVersionNum;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -121,6 +167,8 @@ public class DescribeVulScanResultResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "VulNum", this.VulNum);
         this.setParamSimple(map, prefix + "ProVersionNum", this.ProVersionNum);
         this.setParamSimple(map, prefix + "ImpactedHostNum", this.ImpactedHostNum);
+        this.setParamSimple(map, prefix + "HostNum", this.HostNum);
+        this.setParamSimple(map, prefix + "BasicVersionNum", this.BasicVersionNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

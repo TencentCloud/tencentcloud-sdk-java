@@ -58,7 +58,14 @@ public class DescribeConfigResponse  extends AbstractModel{
     private Integer Appid;
 
     /**
-    * 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+    * 内容检测通知等级-1:通知,0-不通知
+    */
+    @SerializedName("ContentLevel")
+    @Expose
+    private Integer ContentLevel;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -145,16 +152,32 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 获取内容检测通知等级-1:通知,0-不通知
+     * @return ContentLevel 内容检测通知等级-1:通知,0-不通知
+     */
+    public Integer getContentLevel() {
+        return this.ContentLevel;
+    }
+
+    /**
+     * 设置内容检测通知等级-1:通知,0-不通知
+     * @param ContentLevel 内容检测通知等级-1:通知,0-不通知
+     */
+    public void setContentLevel(Integer ContentLevel) {
+        this.ContentLevel = ContentLevel;
+    }
+
+    /**
+     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
-     * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -169,6 +192,7 @@ public class DescribeConfigResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamSimple(map, prefix + "Appid", this.Appid);
+        this.setParamSimple(map, prefix + "ContentLevel", this.ContentLevel);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

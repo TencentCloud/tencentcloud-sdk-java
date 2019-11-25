@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DownloadReportResponse  extends AbstractModel{
 
     /**
-    * 催收日报下载地址
+    * 到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DailyReportUrl")
@@ -31,7 +31,7 @@ public class DownloadReportResponse  extends AbstractModel{
     private String DailyReportUrl;
 
     /**
-    * 催收结果下载地址
+    * 到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultReportUrl")
@@ -39,7 +39,7 @@ public class DownloadReportResponse  extends AbstractModel{
     private String ResultReportUrl;
 
     /**
-    * 催收明细下载地址
+    * 到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetailReportUrl")
@@ -78,9 +78,9 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取催收日报下载地址
+     * 获取到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return DailyReportUrl 催收日报下载地址
+     * @return DailyReportUrl 到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDailyReportUrl() {
@@ -88,9 +88,9 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置催收日报下载地址
+     * 设置到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DailyReportUrl 催收日报下载地址
+     * @param DailyReportUrl 到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDailyReportUrl(String DailyReportUrl) {
@@ -98,9 +98,9 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取催收结果下载地址
+     * 获取到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return ResultReportUrl 催收结果下载地址
+     * @return ResultReportUrl 到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultReportUrl() {
@@ -108,9 +108,9 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置催收结果下载地址
+     * 设置到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultReportUrl 催收结果下载地址
+     * @param ResultReportUrl 到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultReportUrl(String ResultReportUrl) {
@@ -118,9 +118,9 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取催收明细下载地址
+     * 获取到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return DetailReportUrl 催收明细下载地址
+     * @return DetailReportUrl 到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetailReportUrl() {
@@ -128,9 +128,9 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置催收明细下载地址
+     * 设置到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DetailReportUrl 催收明细下载地址
+     * @param DetailReportUrl 到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetailReportUrl(String DetailReportUrl) {
