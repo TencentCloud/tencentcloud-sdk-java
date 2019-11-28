@@ -37,7 +37,7 @@ public class ImageRecognitionResponse  extends AbstractModel{
     private String Result;
 
     /**
-    * 业务错误描述
+    * 业务结果描述。
     */
     @SerializedName("Description")
     @Expose
@@ -83,16 +83,16 @@ public class ImageRecognitionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取业务错误描述
-     * @return Description 业务错误描述
+     * 获取业务结果描述。
+     * @return Description 业务结果描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * 设置业务错误描述
-     * @param Description 业务错误描述
+     * 设置业务结果描述。
+     * @param Description 业务结果描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;

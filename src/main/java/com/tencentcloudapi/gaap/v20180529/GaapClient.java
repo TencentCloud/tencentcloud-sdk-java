@@ -1041,6 +1041,24 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeRulesByRuleIds）用于根据规则ID拉取规则信息列表。支持一个或者多个规则信息的拉取。一次最多支持10个规则信息的拉取。
+     * @param req DescribeRulesByRuleIdsRequest
+     * @return DescribeRulesByRuleIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRulesByRuleIdsResponse DescribeRulesByRuleIds(DescribeRulesByRuleIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRulesByRuleIdsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRulesByRuleIdsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRulesByRuleIds"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取安全策略详情
      * @param req DescribeSecurityPolicyDetailRequest
      * @return DescribeSecurityPolicyDetailResponse
@@ -1052,6 +1070,24 @@ public class GaapClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityPolicyDetailResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSecurityPolicyDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeSecurityRules）用于根据安全规则ID查询安全规则详情列表。支持一个或多个安全规则的查询。一次最多支持20个安全规则的查询。
+     * @param req DescribeSecurityRulesRequest
+     * @return DescribeSecurityRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityRulesResponse DescribeSecurityRules(DescribeSecurityRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSecurityRules"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

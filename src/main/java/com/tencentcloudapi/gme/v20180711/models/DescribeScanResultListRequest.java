@@ -37,6 +37,13 @@ public class DescribeScanResultListRequest  extends AbstractModel{
     private String [] TaskIdList;
 
     /**
+    * 任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * 获取应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      * @return BizId 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
@@ -69,11 +76,28 @@ public class DescribeScanResultListRequest  extends AbstractModel{
     }
 
     /**
+     * 获取任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
+     * @return Limit 任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * 设置任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
+     * @param Limit 任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);
         this.setParamArraySimple(map, prefix + "TaskIdList.", this.TaskIdList);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

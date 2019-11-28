@@ -95,6 +95,14 @@ public class ApplicationForPage  extends AbstractModel{
     private String ApplicationResourceType;
 
     /**
+    * 应用runtime类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationRuntimeType")
+    @Expose
+    private String ApplicationRuntimeType;
+
+    /**
      * 获取应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @return ApplicationId 应用ID
@@ -275,6 +283,26 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
+     * 获取应用runtime类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ApplicationRuntimeType 应用runtime类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationRuntimeType() {
+        return this.ApplicationRuntimeType;
+    }
+
+    /**
+     * 设置应用runtime类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationRuntimeType 应用runtime类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationRuntimeType(String ApplicationRuntimeType) {
+        this.ApplicationRuntimeType = ApplicationRuntimeType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -287,6 +315,7 @@ public class ApplicationForPage  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
+        this.setParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
 
     }
 }

@@ -93,6 +93,14 @@ public class ScanPiece  extends AbstractModel{
     private Long Duration;
 
     /**
+    * 分片开始检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PieceStartTime")
+    @Expose
+    private Long PieceStartTime;
+
+    /**
      * 获取流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
      * @return DumpUrl 流检测时返回，音频转存地址，保留30min
@@ -265,6 +273,26 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
+     * 获取分片开始检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return PieceStartTime 分片开始检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPieceStartTime() {
+        return this.PieceStartTime;
+    }
+
+    /**
+     * 设置分片开始检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PieceStartTime 分片开始检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPieceStartTime(Long PieceStartTime) {
+        this.PieceStartTime = PieceStartTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -277,6 +305,7 @@ public class ScanPiece  extends AbstractModel{
         this.setParamSimple(map, prefix + "Info", this.Info);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "PieceStartTime", this.PieceStartTime);
 
     }
 }

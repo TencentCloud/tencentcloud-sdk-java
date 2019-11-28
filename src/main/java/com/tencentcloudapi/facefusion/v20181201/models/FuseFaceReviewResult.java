@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class FuseFaceReviewResult  extends AbstractModel{
 
     /**
-    * 对应的类别名称 porn, politics, terror
+    * 保留字段
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * 对应子类别状态码
+    * 状态码， 0为处理成功，其他值为处理失败
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 对应子类别状态码信息描述
+    * 对应状态码信息描述
     */
     @SerializedName("CodeDescription")
     @Expose
     private String CodeDescription;
 
     /**
-    * 对应识别种类的置信度
+    * 保留字段
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 此字段为保留字段，目前统一返回pass。
+    * 保留字段
     */
     @SerializedName("Suggestion")
     @Expose
@@ -65,80 +65,80 @@ public class FuseFaceReviewResult  extends AbstractModel{
     private FuseFaceReviewDetail [] DetailSet;
 
     /**
-     * 获取对应的类别名称 porn, politics, terror
-     * @return Category 对应的类别名称 porn, politics, terror
+     * 获取保留字段
+     * @return Category 保留字段
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * 设置对应的类别名称 porn, politics, terror
-     * @param Category 对应的类别名称 porn, politics, terror
+     * 设置保留字段
+     * @param Category 保留字段
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * 获取对应子类别状态码
-     * @return Code 对应子类别状态码
+     * 获取状态码， 0为处理成功，其他值为处理失败
+     * @return Code 状态码， 0为处理成功，其他值为处理失败
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * 设置对应子类别状态码
-     * @param Code 对应子类别状态码
+     * 设置状态码， 0为处理成功，其他值为处理失败
+     * @param Code 状态码， 0为处理成功，其他值为处理失败
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * 获取对应子类别状态码信息描述
-     * @return CodeDescription 对应子类别状态码信息描述
+     * 获取对应状态码信息描述
+     * @return CodeDescription 对应状态码信息描述
      */
     public String getCodeDescription() {
         return this.CodeDescription;
     }
 
     /**
-     * 设置对应子类别状态码信息描述
-     * @param CodeDescription 对应子类别状态码信息描述
+     * 设置对应状态码信息描述
+     * @param CodeDescription 对应状态码信息描述
      */
     public void setCodeDescription(String CodeDescription) {
         this.CodeDescription = CodeDescription;
     }
 
     /**
-     * 获取对应识别种类的置信度
-     * @return Confidence 对应识别种类的置信度
+     * 获取保留字段
+     * @return Confidence 保留字段
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * 设置对应识别种类的置信度
-     * @param Confidence 对应识别种类的置信度
+     * 设置保留字段
+     * @param Confidence 保留字段
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * 获取此字段为保留字段，目前统一返回pass。
-     * @return Suggestion 此字段为保留字段，目前统一返回pass。
+     * 获取保留字段
+     * @return Suggestion 保留字段
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * 设置此字段为保留字段，目前统一返回pass。
-     * @param Suggestion 此字段为保留字段，目前统一返回pass。
+     * 设置保留字段
+     * @param Suggestion 保留字段
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;

@@ -58,7 +58,7 @@ public class ExistedInstancesPara  extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-    * 重装系统时，可以指定修改实例的HostName。
+    * 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
     */
     @SerializedName("HostName")
     @Expose
@@ -145,16 +145,16 @@ public class ExistedInstancesPara  extends AbstractModel{
     }
 
     /**
-     * 获取重装系统时，可以指定修改实例的HostName。
-     * @return HostName 重装系统时，可以指定修改实例的HostName。
+     * 获取重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
+     * @return HostName 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * 设置重装系统时，可以指定修改实例的HostName。
-     * @param HostName 重装系统时，可以指定修改实例的HostName。
+     * 设置重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
+     * @param HostName 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;

@@ -23,14 +23,16 @@ import java.util.HashMap;
 public class DescribeTCPListenersRequest  extends AbstractModel{
 
     /**
-    * 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+    * 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * 过滤条件，根据监听器ID精确查询
+    * 过滤条件，根据监听器ID精确查询。
+当设置了ProxyId时，会检查该监听器是否归属于该通道。
+当设置了GroupId时，会检查该监听器是否归属于该通道组。
     */
     @SerializedName("ListenerId")
     @Expose
@@ -65,7 +67,7 @@ public class DescribeTCPListenersRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-    * 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+    * 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
     */
     @SerializedName("GroupId")
     @Expose
@@ -79,32 +81,40 @@ public class DescribeTCPListenersRequest  extends AbstractModel{
     private String SearchValue;
 
     /**
-     * 获取通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
-     * @return ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * 获取过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+     * @return ProxyId 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * 设置通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
-     * @param ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * 设置过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+     * @param ProxyId 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * 获取过滤条件，根据监听器ID精确查询
-     * @return ListenerId 过滤条件，根据监听器ID精确查询
+     * 获取过滤条件，根据监听器ID精确查询。
+当设置了ProxyId时，会检查该监听器是否归属于该通道。
+当设置了GroupId时，会检查该监听器是否归属于该通道组。
+     * @return ListenerId 过滤条件，根据监听器ID精确查询。
+当设置了ProxyId时，会检查该监听器是否归属于该通道。
+当设置了GroupId时，会检查该监听器是否归属于该通道组。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * 设置过滤条件，根据监听器ID精确查询
-     * @param ListenerId 过滤条件，根据监听器ID精确查询
+     * 设置过滤条件，根据监听器ID精确查询。
+当设置了ProxyId时，会检查该监听器是否归属于该通道。
+当设置了GroupId时，会检查该监听器是否归属于该通道组。
+     * @param ListenerId 过滤条件，根据监听器ID精确查询。
+当设置了ProxyId时，会检查该监听器是否归属于该通道。
+当设置了GroupId时，会检查该监听器是否归属于该通道组。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
@@ -175,16 +185,16 @@ public class DescribeTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
-     * @return GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * 获取过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+     * @return GroupId 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * 设置通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
-     * @param GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * 设置过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+     * @param GroupId 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

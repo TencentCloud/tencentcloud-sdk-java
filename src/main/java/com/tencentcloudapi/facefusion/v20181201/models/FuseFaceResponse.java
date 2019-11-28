@@ -30,6 +30,14 @@ public class FuseFaceResponse  extends AbstractModel{
     private String FusedImage;
 
     /**
+    * 鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReviewResultSet")
+    @Expose
+    private FuseFaceReviewResult [] ReviewResultSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +61,26 @@ public class FuseFaceResponse  extends AbstractModel{
     }
 
     /**
+     * 获取鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ReviewResultSet 鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FuseFaceReviewResult [] getReviewResultSet() {
+        return this.ReviewResultSet;
+    }
+
+    /**
+     * 设置鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReviewResultSet 鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReviewResultSet(FuseFaceReviewResult [] ReviewResultSet) {
+        this.ReviewResultSet = ReviewResultSet;
+    }
+
+    /**
      * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +101,7 @@ public class FuseFaceResponse  extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FusedImage", this.FusedImage);
+        this.setParamArrayObj(map, prefix + "ReviewResultSet.", this.ReviewResultSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

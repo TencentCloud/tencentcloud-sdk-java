@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyCCLevelRequest  extends AbstractModel{
 
     /**
-    * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+    * 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
     */
     @SerializedName("Business")
     @Expose
@@ -44,31 +44,30 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     private String Level;
 
     /**
-    * 可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写RuleId字段；
+    * 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-当Protocol=https时必须填写；
+    * 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
-     * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * @return Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
-     * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * @param Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
         this.Business = Business;
@@ -107,36 +106,32 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写RuleId字段；
-     * @return Protocol 可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写RuleId字段；
+     * 获取可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
+     * @return Protocol 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * 设置可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写RuleId字段；
-     * @param Protocol 可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写RuleId字段；
+     * 设置可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
+     * @param Protocol 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * 获取可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-当Protocol=https时必须填写；
-     * @return RuleId 可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-当Protocol=https时必须填写；
+     * 获取表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
+     * @return RuleId 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * 设置可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-当Protocol=https时必须填写；
-     * @param RuleId 可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-当Protocol=https时必须填写；
+     * 设置表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
+     * @param RuleId 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

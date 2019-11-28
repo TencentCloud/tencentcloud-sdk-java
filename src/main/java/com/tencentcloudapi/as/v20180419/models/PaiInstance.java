@@ -37,6 +37,13 @@ public class PaiInstance  extends AbstractModel{
     private String DomainName;
 
     /**
+    * PAI管理页面URL
+    */
+    @SerializedName("PaiMateUrl")
+    @Expose
+    private String PaiMateUrl;
+
+    /**
      * 获取实例ID
      * @return InstanceId 实例ID
      */
@@ -69,11 +76,28 @@ public class PaiInstance  extends AbstractModel{
     }
 
     /**
+     * 获取PAI管理页面URL
+     * @return PaiMateUrl PAI管理页面URL
+     */
+    public String getPaiMateUrl() {
+        return this.PaiMateUrl;
+    }
+
+    /**
+     * 设置PAI管理页面URL
+     * @param PaiMateUrl PAI管理页面URL
+     */
+    public void setPaiMateUrl(String PaiMateUrl) {
+        this.PaiMateUrl = PaiMateUrl;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "PaiMateUrl", this.PaiMateUrl);
 
     }
 }

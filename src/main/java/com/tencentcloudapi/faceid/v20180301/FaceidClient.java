@@ -49,7 +49,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *输入银行卡号、姓名，校验信息的真实性和一致性。
+     *本接口用于校验姓名和银行卡号的真实性和一致性。
      * @param req BankCard2EVerificationRequest
      * @return BankCard2EVerificationResponse
      * @throws TencentCloudSDKException
@@ -67,7 +67,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *输入银行卡号、姓名、开户证件号、开户手机号，校验信息的真实性和一致性。
+     *本接口用于输入银行卡号、姓名、开户证件号、开户手机号，校验信息的真实性和一致性。
      * @param req BankCard4EVerificationRequest
      * @return BankCard4EVerificationResponse
      * @throws TencentCloudSDKException
@@ -85,7 +85,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *银行卡三要素核验，输入银行卡号、姓名、开户证件号，校验信息的真实性和一致性。
+     *本接口用于银行卡号、姓名、开户证件号信息的真实性和一致性。
      * @param req BankCardVerificationRequest
      * @return BankCardVerificationResponse
      * @throws TencentCloudSDKException
@@ -276,6 +276,42 @@ public class FaceidClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<LivenessRecognitionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "LivenessRecognition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *传入手机号或者姓名和身份证号，判断该信息是否已实名认证且年满18周岁。
+     * @param req MinorsVerificationRequest
+     * @return MinorsVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public MinorsVerificationResponse MinorsVerification(MinorsVerificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MinorsVerificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<MinorsVerificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "MinorsVerification"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于校验手机号、姓名和身份证号的真实性和一致性。
+     * @param req PhoneVerificationRequest
+     * @return PhoneVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public PhoneVerificationResponse PhoneVerification(PhoneVerificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PhoneVerificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PhoneVerificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PhoneVerification"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

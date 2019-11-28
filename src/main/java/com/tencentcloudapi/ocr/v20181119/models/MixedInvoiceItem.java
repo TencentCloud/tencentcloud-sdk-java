@@ -25,7 +25,7 @@ public class MixedInvoiceItem  extends AbstractModel{
     /**
     * 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
-FailedOperation.UnKnowError： 表示识别失败；
+FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
     */
     @SerializedName("Code")
@@ -39,17 +39,13 @@ FailedOperation.UnKnowError： 表示识别失败；
 1：定额发票
 2：火车票
 3：增值税发票
-4：客运限额发票（仅支持类型检测，不支持识别）
 5：机票行程单
-6：酒店账单（仅支持类型检测，不支持识别）
-7：完税证明
 8：通用机打发票
 9：汽车票
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-14：购物小票（仅支持类型检测，不支持识别）
     */
     @SerializedName("Type")
     @Expose
@@ -79,11 +75,11 @@ FailedOperation.UnKnowError： 表示识别失败；
     /**
      * 获取识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
-FailedOperation.UnKnowError： 表示识别失败；
+FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
      * @return Code 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
-FailedOperation.UnKnowError： 表示识别失败；
+FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
      */
     public String getCode() {
@@ -93,11 +89,11 @@ FailedOperation.UnKnowError： 表示识别失败；
     /**
      * 设置识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
-FailedOperation.UnKnowError： 表示识别失败；
+FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
      * @param Code 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
-FailedOperation.UnKnowError： 表示识别失败；
+FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
      */
     public void setCode(String Code) {
@@ -111,34 +107,26 @@ FailedOperation.UnKnowError： 表示识别失败；
 1：定额发票
 2：火车票
 3：增值税发票
-4：客运限额发票（仅支持类型检测，不支持识别）
 5：机票行程单
-6：酒店账单（仅支持类型检测，不支持识别）
-7：完税证明
 8：通用机打发票
 9：汽车票
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-14：购物小票（仅支持类型检测，不支持识别）
      * @return Type 识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
 1：定额发票
 2：火车票
 3：增值税发票
-4：客运限额发票（仅支持类型检测，不支持识别）
 5：机票行程单
-6：酒店账单（仅支持类型检测，不支持识别）
-7：完税证明
 8：通用机打发票
 9：汽车票
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-14：购物小票（仅支持类型检测，不支持识别）
      */
     public Integer getType() {
         return this.Type;
@@ -151,34 +139,26 @@ FailedOperation.UnKnowError： 表示识别失败；
 1：定额发票
 2：火车票
 3：增值税发票
-4：客运限额发票（仅支持类型检测，不支持识别）
 5：机票行程单
-6：酒店账单（仅支持类型检测，不支持识别）
-7：完税证明
 8：通用机打发票
 9：汽车票
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-14：购物小票（仅支持类型检测，不支持识别）
      * @param Type 识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
 1：定额发票
 2：火车票
 3：增值税发票
-4：客运限额发票（仅支持类型检测，不支持识别）
 5：机票行程单
-6：酒店账单（仅支持类型检测，不支持识别）
-7：完税证明
 8：通用机打发票
 9：汽车票
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-14：购物小票（仅支持类型检测，不支持识别）
      */
     public void setType(Integer Type) {
         this.Type = Type;

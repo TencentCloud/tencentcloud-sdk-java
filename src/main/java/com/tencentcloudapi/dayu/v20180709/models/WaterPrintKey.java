@@ -51,7 +51,7 @@ public class WaterPrintKey  extends AbstractModel{
     private Long OpenStatus;
 
     /**
-    * 秘钥生成时间
+    * 密钥生成时间
     */
     @SerializedName("CreateTime")
     @Expose
@@ -122,16 +122,16 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 获取秘钥生成时间
-     * @return CreateTime 秘钥生成时间
+     * 获取密钥生成时间
+     * @return CreateTime 密钥生成时间
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * 设置秘钥生成时间
-     * @param CreateTime 秘钥生成时间
+     * 设置密钥生成时间
+     * @param CreateTime 密钥生成时间
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

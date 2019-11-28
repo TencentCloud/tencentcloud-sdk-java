@@ -44,6 +44,24 @@ public class MixedInvoiceOCRRequest  extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * 需要识别的票据类型列表，为空或不填表示识别全部类型。
+0：出租车发票
+1：定额发票
+2：火车票
+3：增值税发票
+5：机票行程单
+8：通用机打发票
+9：汽车票
+10：轮船票
+11：增值税发票（卷票 ）
+12：购车发票
+13：过路过桥费发票
+    */
+    @SerializedName("Types")
+    @Expose
+    private Integer [] Types;
+
+    /**
      * 获取图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -104,11 +122,72 @@ public class MixedInvoiceOCRRequest  extends AbstractModel{
     }
 
     /**
+     * 获取需要识别的票据类型列表，为空或不填表示识别全部类型。
+0：出租车发票
+1：定额发票
+2：火车票
+3：增值税发票
+5：机票行程单
+8：通用机打发票
+9：汽车票
+10：轮船票
+11：增值税发票（卷票 ）
+12：购车发票
+13：过路过桥费发票
+     * @return Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
+0：出租车发票
+1：定额发票
+2：火车票
+3：增值税发票
+5：机票行程单
+8：通用机打发票
+9：汽车票
+10：轮船票
+11：增值税发票（卷票 ）
+12：购车发票
+13：过路过桥费发票
+     */
+    public Integer [] getTypes() {
+        return this.Types;
+    }
+
+    /**
+     * 设置需要识别的票据类型列表，为空或不填表示识别全部类型。
+0：出租车发票
+1：定额发票
+2：火车票
+3：增值税发票
+5：机票行程单
+8：通用机打发票
+9：汽车票
+10：轮船票
+11：增值税发票（卷票 ）
+12：购车发票
+13：过路过桥费发票
+     * @param Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
+0：出租车发票
+1：定额发票
+2：火车票
+3：增值税发票
+5：机票行程单
+8：通用机打发票
+9：汽车票
+10：轮船票
+11：增值税发票（卷票 ）
+12：购车发票
+13：过路过桥费发票
+     */
+    public void setTypes(Integer [] Types) {
+        this.Types = Types;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamArraySimple(map, prefix + "Types.", this.Types);
 
     }
 }

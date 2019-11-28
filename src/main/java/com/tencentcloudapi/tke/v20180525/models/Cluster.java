@@ -101,6 +101,14 @@ public class Cluster  extends AbstractModel{
     private String ClusterStatus;
 
     /**
+    * 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Property")
+    @Expose
+    private String Property;
+
+    /**
      * 获取集群ID
      * @return ClusterId 集群ID
      */
@@ -281,6 +289,26 @@ public class Cluster  extends AbstractModel{
     }
 
     /**
+     * 获取集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProperty() {
+        return this.Property;
+    }
+
+    /**
+     * 设置集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProperty(String Property) {
+        this.Property = Property;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -295,6 +323,7 @@ public class Cluster  extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+        this.setParamSimple(map, prefix + "Property", this.Property);
 
     }
 }

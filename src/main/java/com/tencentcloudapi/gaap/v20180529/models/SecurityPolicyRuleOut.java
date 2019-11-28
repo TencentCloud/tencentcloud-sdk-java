@@ -67,6 +67,14 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     private String Protocol;
 
     /**
+    * 安全策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
      * 获取策略：允许（ACCEPT）或拒绝（DROP）
      * @return Action 策略：允许（ACCEPT）或拒绝（DROP）
      */
@@ -171,6 +179,26 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
+     * 获取安全策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return PolicyId 安全策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * 设置安全策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyId 安全策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -180,6 +208,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
         this.setParamSimple(map, prefix + "DestPortRange", this.DestPortRange);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

@@ -67,6 +67,13 @@ public class FuseFaceRequest  extends AbstractModel{
     private Integer FuseFaceDegree;
 
     /**
+    * 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+    */
+    @SerializedName("CelebrityIdentify")
+    @Expose
+    private Integer CelebrityIdentify;
+
+    /**
      * 获取活动 ID，请在人脸融合控制台查看。
      * @return ProjectId 活动 ID，请在人脸融合控制台查看。
      */
@@ -171,6 +178,22 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取0表示不需要鉴政，1表示需要鉴政。默认值为0。
+     * @return CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+     */
+    public Integer getCelebrityIdentify() {
+        return this.CelebrityIdentify;
+    }
+
+    /**
+     * 设置0表示不需要鉴政，1表示需要鉴政。默认值为0。
+     * @param CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+     */
+    public void setCelebrityIdentify(Integer CelebrityIdentify) {
+        this.CelebrityIdentify = CelebrityIdentify;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -180,6 +203,7 @@ public class FuseFaceRequest  extends AbstractModel{
         this.setParamArrayObj(map, prefix + "MergeInfos.", this.MergeInfos);
         this.setParamSimple(map, prefix + "FuseProfileDegree", this.FuseProfileDegree);
         this.setParamSimple(map, prefix + "FuseFaceDegree", this.FuseFaceDegree);
+        this.setParamSimple(map, prefix + "CelebrityIdentify", this.CelebrityIdentify);
 
     }
 }

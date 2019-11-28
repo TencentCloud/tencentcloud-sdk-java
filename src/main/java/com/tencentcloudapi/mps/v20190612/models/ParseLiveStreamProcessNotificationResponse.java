@@ -25,6 +25,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     /**
     * 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
+<li>AiRecognitionResult：内容识别结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
     */
     @SerializedName("NotificationType")
@@ -55,6 +56,14 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     private LiveStreamAiReviewResultInfo AiReviewResultInfo;
 
     /**
+    * 内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AiRecognitionResultInfo")
+    @Expose
+    private LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo;
+
+    /**
     * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
     */
     @SerializedName("SessionId")
@@ -78,9 +87,11 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     /**
      * 获取直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
+<li>AiRecognitionResult：内容识别结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      * @return NotificationType 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
+<li>AiRecognitionResult：内容识别结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      */
     public String getNotificationType() {
@@ -90,9 +101,11 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     /**
      * 设置直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
+<li>AiRecognitionResult：内容识别结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      * @param NotificationType 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
+<li>AiRecognitionResult：内容识别结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      */
     public void setNotificationType(String NotificationType) {
@@ -156,6 +169,26 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
+     * 获取内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AiRecognitionResultInfo 内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LiveStreamAiRecognitionResultInfo getAiRecognitionResultInfo() {
+        return this.AiRecognitionResultInfo;
+    }
+
+    /**
+     * 设置内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiRecognitionResultInfo 内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAiRecognitionResultInfo(LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo) {
+        this.AiRecognitionResultInfo = AiRecognitionResultInfo;
+    }
+
+    /**
      * 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      */
@@ -211,6 +244,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamObj(map, prefix + "ProcessEofInfo.", this.ProcessEofInfo);
         this.setParamObj(map, prefix + "AiReviewResultInfo.", this.AiReviewResultInfo);
+        this.setParamObj(map, prefix + "AiRecognitionResultInfo.", this.AiRecognitionResultInfo);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

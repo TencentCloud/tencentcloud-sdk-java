@@ -44,7 +44,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     private String ContainerRuntime;
 
     /**
-    * 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+    * 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
     */
     @SerializedName("NodeNameType")
     @Expose
@@ -99,16 +99,16 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 获取集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
-     * @return NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+     * 获取集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
+     * @return NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
      */
     public String getNodeNameType() {
         return this.NodeNameType;
     }
 
     /**
-     * 设置集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
-     * @param NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+     * 设置集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
+     * @param NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
      */
     public void setNodeNameType(String NodeNameType) {
         this.NodeNameType = NodeNameType;

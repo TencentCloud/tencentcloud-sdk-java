@@ -59,7 +59,7 @@ public class TextArithmetic  extends AbstractModel{
     private String AdvancedInfo;
 
     /**
-    * 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+    * 文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
     */
     @SerializedName("ItemCoord")
     @Expose
@@ -168,16 +168,16 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
-     * @return ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * 获取文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @return ItemCoord 文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      */
     public ItemCoord getItemCoord() {
         return this.ItemCoord;
     }
 
     /**
-     * 设置文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
-     * @param ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * 设置文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @param ItemCoord 文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      */
     public void setItemCoord(ItemCoord ItemCoord) {
         this.ItemCoord = ItemCoord;

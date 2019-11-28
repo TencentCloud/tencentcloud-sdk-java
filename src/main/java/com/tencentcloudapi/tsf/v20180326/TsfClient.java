@@ -446,6 +446,24 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *部署Serverless应用
+     * @param req DeployServerlessGroupRequest
+     * @return DeployServerlessGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployServerlessGroupResponse DeployServerlessGroup(DeployServerlessGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeployServerlessGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeployServerlessGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeployServerlessGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取应用详情
      * @param req DescribeApplicationRequest
      * @return DescribeApplicationResponse

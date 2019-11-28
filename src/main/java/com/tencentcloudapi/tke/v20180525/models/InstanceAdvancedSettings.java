@@ -58,6 +58,13 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     private Label [] Labels;
 
     /**
+    * 数据盘相关信息
+    */
+    @SerializedName("DataDisks")
+    @Expose
+    private DataDisk [] DataDisks;
+
+    /**
      * 获取数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
      * @return MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
      */
@@ -138,6 +145,22 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
+     * 获取数据盘相关信息
+     * @return DataDisks 数据盘相关信息
+     */
+    public DataDisk [] getDataDisks() {
+        return this.DataDisks;
+    }
+
+    /**
+     * 设置数据盘相关信息
+     * @param DataDisks 数据盘相关信息
+     */
+    public void setDataDisks(DataDisk [] DataDisks) {
+        this.DataDisks = DataDisks;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
         this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
+        this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
 
     }
 }

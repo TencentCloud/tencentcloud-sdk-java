@@ -49,7 +49,7 @@ public class BankCard2EVerificationResponse  extends AbstractModel{
     private String Result;
 
     /**
-    * 认证结果信息。
+    * 业务结果描述。
     */
     @SerializedName("Description")
     @Expose
@@ -155,16 +155,16 @@ public class BankCard2EVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取认证结果信息。
-     * @return Description 认证结果信息。
+     * 获取业务结果描述。
+     * @return Description 业务结果描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * 设置认证结果信息。
-     * @param Description 认证结果信息。
+     * 设置业务结果描述。
+     * @param Description 业务结果描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;

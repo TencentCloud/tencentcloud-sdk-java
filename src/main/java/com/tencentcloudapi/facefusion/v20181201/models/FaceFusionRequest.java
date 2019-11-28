@@ -59,7 +59,6 @@ public class FaceFusionRequest  extends AbstractModel{
 
     /**
     * 0表示不需要鉴政，1表示需要鉴政。默认值为0。
-鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
     */
     @SerializedName("CelebrityIdentify")
     @Expose
@@ -147,9 +146,7 @@ public class FaceFusionRequest  extends AbstractModel{
 
     /**
      * 获取0表示不需要鉴政，1表示需要鉴政。默认值为0。
-鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
      * @return CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
-鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
      */
     public Integer getCelebrityIdentify() {
         return this.CelebrityIdentify;
@@ -157,9 +154,7 @@ public class FaceFusionRequest  extends AbstractModel{
 
     /**
      * 设置0表示不需要鉴政，1表示需要鉴政。默认值为0。
-鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
      * @param CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
-鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
      */
     public void setCelebrityIdentify(Integer CelebrityIdentify) {
         this.CelebrityIdentify = CelebrityIdentify;

@@ -733,6 +733,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *获取IP解封记录
+     * @param req DescribeIpUnBlockListRequest
+     * @return DescribeIpUnBlockListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpUnBlockListResponse DescribeIpUnBlockList(DescribeIpUnBlockListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIpUnBlockListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIpUnBlockListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeIpUnBlockList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *导出四层健康检查配置
      * @param req DescribeL4HealthConfigRequest
      * @return DescribeL4HealthConfigResponse

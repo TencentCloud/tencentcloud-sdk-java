@@ -107,6 +107,26 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateAutoScalingGroupFromInstance）用于根据实例创建启动配置及伸缩组。
+
+说明：根据按包年包月计费的实例所创建的伸缩组，其扩容的实例为按量计费实例。
+     * @param req CreateAutoScalingGroupFromInstanceRequest
+     * @return CreateAutoScalingGroupFromInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAutoScalingGroupFromInstanceResponse CreateAutoScalingGroupFromInstance(CreateAutoScalingGroupFromInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAutoScalingGroupFromInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateLaunchConfiguration）用于创建新的启动配置。
 
 * 启动配置，可以通过 `ModifyLaunchConfigurationAttributes` 修改少量字段。如需使用新的启动配置，建议重新创建启动配置。
