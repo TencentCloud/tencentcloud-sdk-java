@@ -27,7 +27,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     */
     @SerializedName("ExtendCode")
     @Expose
-    private Long ExtendCode;
+    private String ExtendCode;
 
     /**
     * 国家（或地区）码
@@ -68,7 +68,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
      * 获取短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
      * @return ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
      */
-    public Long getExtendCode() {
+    public String getExtendCode() {
         return this.ExtendCode;
     }
 
@@ -76,7 +76,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
      * 设置短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
      * @param ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
      */
-    public void setExtendCode(Long ExtendCode) {
+    public void setExtendCode(String ExtendCode) {
         this.ExtendCode = ExtendCode;
     }
 

@@ -49,6 +49,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *设置基础防护的DDoS告警阈值，只支持基础防护产品
+     * @param req CreateBasicDDoSAlarmThresholdRequest
+     * @return CreateBasicDDoSAlarmThresholdResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBasicDDoSAlarmThresholdResponse CreateBasicDDoSAlarmThreshold(CreateBasicDDoSAlarmThresholdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBasicDDoSAlarmThresholdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBasicDDoSAlarmThresholdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateBasicDDoSAlarmThreshold"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建CC自定义策略
      * @param req CreateCCSelfDefinePolicyRequest
      * @return CreateCCSelfDefinePolicyResponse
@@ -391,6 +409,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *获取基础防护黑洞阈值
+     * @param req DescribeBasicDeviceThresholdRequest
+     * @return DescribeBasicDeviceThresholdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBasicDeviceThresholdResponse DescribeBasicDeviceThreshold(DescribeBasicDeviceThresholdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBasicDeviceThresholdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBasicDeviceThresholdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBasicDeviceThreshold"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取CC攻击事件列表
      * @param req DescribeCCEvListRequest
      * @return DescribeCCEvListResponse
@@ -481,7 +517,7 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
-     *获取DDoS防护状态，支持产品：基础防护，独享包，共享包，高防IP，高防IP专业版；
+     *获取DDoS防护状态（临时关闭状态），支持产品：基础防护，独享包，共享包，高防IP，高防IP专业版；调用此接口是获取当前是否有设置临时关闭DDoS防护状态，如果有设置会返回临时关闭的时长等参数。
      * @param req DescribeDDoSDefendStatusRequest
      * @return DescribeDDoSDefendStatusResponse
      * @throws TencentCloudSDKException
@@ -690,6 +726,24 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSUsedStatisResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDDoSUsedStatis"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取独享包或共享包IP对应的云资产信息，只支持独享包和共享包的IP
+     * @param req DescribeIPProductInfoRequest
+     * @return DescribeIPProductInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPProductInfoResponse DescribeIPProductInfo(DescribeIPProductInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIPProductInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIPProductInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeIPProductInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1183,7 +1237,7 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
-     *开启或关闭DDoS防护状态
+     *开启或关闭DDoS防护状态，调用此接口允许临时关闭DDoS防护一段时间，等时间到了会自动开启DDoS防护；
      * @param req ModifyDDoSDefendStatusRequest
      * @return ModifyDDoSDefendStatusResponse
      * @throws TencentCloudSDKException
@@ -1428,6 +1482,24 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyResBindDDoSPolicyResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyResBindDDoSPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改资源自动续费标记
+     * @param req ModifyResourceRenewFlagRequest
+     * @return ModifyResourceRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceRenewFlagResponse ModifyResourceRenewFlag(ModifyResourceRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyResourceRenewFlagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyResourceRenewFlagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyResourceRenewFlag"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

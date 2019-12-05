@@ -88,6 +88,20 @@ public class DomainInfo  extends AbstractModel{
     private String CurrentCName;
 
     /**
+    * 是否租用域名
+    */
+    @SerializedName("RentTag")
+    @Expose
+    private Integer RentTag;
+
+    /**
+    * 租用域名过期时间
+    */
+    @SerializedName("RentExpireTime")
+    @Expose
+    private String RentExpireTime;
+
+    /**
      * 获取直播域名
      * @return Name 直播域名
      */
@@ -240,6 +254,38 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
+     * 获取是否租用域名
+     * @return RentTag 是否租用域名
+     */
+    public Integer getRentTag() {
+        return this.RentTag;
+    }
+
+    /**
+     * 设置是否租用域名
+     * @param RentTag 是否租用域名
+     */
+    public void setRentTag(Integer RentTag) {
+        this.RentTag = RentTag;
+    }
+
+    /**
+     * 获取租用域名过期时间
+     * @return RentExpireTime 租用域名过期时间
+     */
+    public String getRentExpireTime() {
+        return this.RentExpireTime;
+    }
+
+    /**
+     * 设置租用域名过期时间
+     * @param RentExpireTime 租用域名过期时间
+     */
+    public void setRentExpireTime(String RentExpireTime) {
+        this.RentExpireTime = RentExpireTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -252,6 +298,8 @@ public class DomainInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "PlayType", this.PlayType);
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         this.setParamSimple(map, prefix + "CurrentCName", this.CurrentCName);
+        this.setParamSimple(map, prefix + "RentTag", this.RentTag);
+        this.setParamSimple(map, prefix + "RentExpireTime", this.RentExpireTime);
 
     }
 }

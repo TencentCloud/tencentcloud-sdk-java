@@ -37,6 +37,13 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     private SecurityGroupPolicySet SecurityGroupPolicySet;
 
     /**
+    * 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
+    */
+    @SerializedName("SortPolicys")
+    @Expose
+    private Boolean SortPolicys;
+
+    /**
      * 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      * @return SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
@@ -69,11 +76,28 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
+     * 获取排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
+     * @return SortPolicys 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
+     */
+    public Boolean getSortPolicys() {
+        return this.SortPolicys;
+    }
+
+    /**
+     * 设置排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
+     * @param SortPolicys 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
+     */
+    public void setSortPolicys(Boolean SortPolicys) {
+        this.SortPolicys = SortPolicys;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         this.setParamObj(map, prefix + "SecurityGroupPolicySet.", this.SecurityGroupPolicySet);
+        this.setParamSimple(map, prefix + "SortPolicys", this.SortPolicys);
 
     }
 }

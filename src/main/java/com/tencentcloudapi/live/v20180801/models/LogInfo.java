@@ -44,6 +44,13 @@ public class LogInfo  extends AbstractModel{
     private String LogTime;
 
     /**
+    * 文件大小
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private Integer FileSize;
+
+    /**
      * 获取日志名称。
      * @return LogName 日志名称。
      */
@@ -92,12 +99,29 @@ public class LogInfo  extends AbstractModel{
     }
 
     /**
+     * 获取文件大小
+     * @return FileSize 文件大小
+     */
+    public Integer getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * 设置文件大小
+     * @param FileSize 文件大小
+     */
+    public void setFileSize(Integer FileSize) {
+        this.FileSize = FileSize;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LogName", this.LogName);
         this.setParamSimple(map, prefix + "LogUrl", this.LogUrl);
         this.setParamSimple(map, prefix + "LogTime", this.LogTime);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
 
     }
 }

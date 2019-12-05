@@ -142,6 +142,14 @@ public class SlowLogData  extends AbstractModel{
     private String User;
 
     /**
+    * 样例Sql
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExampleSql")
+    @Expose
+    private String ExampleSql;
+
+    /**
      * 获取语句校验和，用于查询详情
      * @return CheckSum 语句校验和，用于查询详情
      */
@@ -414,6 +422,26 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
+     * 获取样例Sql
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return ExampleSql 样例Sql
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExampleSql() {
+        return this.ExampleSql;
+    }
+
+    /**
+     * 设置样例Sql
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExampleSql 样例Sql
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExampleSql(String ExampleSql) {
+        this.ExampleSql = ExampleSql;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +462,7 @@ public class SlowLogData  extends AbstractModel{
         this.setParamSimple(map, prefix + "TsMax", this.TsMax);
         this.setParamSimple(map, prefix + "TsMin", this.TsMin);
         this.setParamSimple(map, prefix + "User", this.User);
+        this.setParamSimple(map, prefix + "ExampleSql", this.ExampleSql);
 
     }
 }

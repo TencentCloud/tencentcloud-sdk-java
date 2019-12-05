@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class CreateStudioProductRequest  extends AbstractModel{
 
     /**
-    * 产品名称
+    * 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 产品分组模板ID
+    * 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
     */
     @SerializedName("CategoryId")
     @Expose
     private Long CategoryId;
 
     /**
-    * 产品类型
+    * 产品类型 填写 ( 0 普通产品 )
     */
     @SerializedName("ProductType")
     @Expose
     private Long ProductType;
 
     /**
-    * 加密类型
+    * 加密类型 加密类型，1表示证书认证，2表示签名认证。
     */
     @SerializedName("EncryptionType")
     @Expose
     private String EncryptionType;
 
     /**
-    * 连接类型
+    * 连接类型 可以填写 wifi cellular else
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-    * 数据协议
+    * 数据协议 (1 使用物模型)
     */
     @SerializedName("DataProtocol")
     @Expose
@@ -79,96 +79,96 @@ public class CreateStudioProductRequest  extends AbstractModel{
     private String ProjectId;
 
     /**
-     * 获取产品名称
-     * @return ProductName 产品名称
+     * 获取产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+     * @return ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * 设置产品名称
-     * @param ProductName 产品名称
+     * 设置产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+     * @param ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * 获取产品分组模板ID
-     * @return CategoryId 产品分组模板ID
+     * 获取产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+     * @return CategoryId 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
      */
     public Long getCategoryId() {
         return this.CategoryId;
     }
 
     /**
-     * 设置产品分组模板ID
-     * @param CategoryId 产品分组模板ID
+     * 设置产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+     * @param CategoryId 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * 获取产品类型
-     * @return ProductType 产品类型
+     * 获取产品类型 填写 ( 0 普通产品 )
+     * @return ProductType 产品类型 填写 ( 0 普通产品 )
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * 设置产品类型
-     * @param ProductType 产品类型
+     * 设置产品类型 填写 ( 0 普通产品 )
+     * @param ProductType 产品类型 填写 ( 0 普通产品 )
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * 获取加密类型
-     * @return EncryptionType 加密类型
+     * 获取加密类型 加密类型，1表示证书认证，2表示签名认证。
+     * @return EncryptionType 加密类型 加密类型，1表示证书认证，2表示签名认证。
      */
     public String getEncryptionType() {
         return this.EncryptionType;
     }
 
     /**
-     * 设置加密类型
-     * @param EncryptionType 加密类型
+     * 设置加密类型 加密类型，1表示证书认证，2表示签名认证。
+     * @param EncryptionType 加密类型 加密类型，1表示证书认证，2表示签名认证。
      */
     public void setEncryptionType(String EncryptionType) {
         this.EncryptionType = EncryptionType;
     }
 
     /**
-     * 获取连接类型
-     * @return NetType 连接类型
+     * 获取连接类型 可以填写 wifi cellular else
+     * @return NetType 连接类型 可以填写 wifi cellular else
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * 设置连接类型
-     * @param NetType 连接类型
+     * 设置连接类型 可以填写 wifi cellular else
+     * @param NetType 连接类型 可以填写 wifi cellular else
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * 获取数据协议
-     * @return DataProtocol 数据协议
+     * 获取数据协议 (1 使用物模型)
+     * @return DataProtocol 数据协议 (1 使用物模型)
      */
     public Long getDataProtocol() {
         return this.DataProtocol;
     }
 
     /**
-     * 设置数据协议
-     * @param DataProtocol 数据协议
+     * 设置数据协议 (1 使用物模型)
+     * @param DataProtocol 数据协议 (1 使用物模型)
      */
     public void setDataProtocol(Long DataProtocol) {
         this.DataProtocol = DataProtocol;

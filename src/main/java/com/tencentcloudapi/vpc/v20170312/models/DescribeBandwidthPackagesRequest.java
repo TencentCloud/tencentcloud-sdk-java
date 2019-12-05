@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeBandwidthPackagesRequest  extends AbstractModel{
 
     /**
-    * 带宽包Id，支持批量
+    * 带宽包唯一ID列表
     */
     @SerializedName("BandwidthPackageIds")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeBandwidthPackagesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取带宽包Id，支持批量
-     * @return BandwidthPackageIds 带宽包Id，支持批量
+     * 获取带宽包唯一ID列表
+     * @return BandwidthPackageIds 带宽包唯一ID列表
      */
     public String [] getBandwidthPackageIds() {
         return this.BandwidthPackageIds;
     }
 
     /**
-     * 设置带宽包Id，支持批量
-     * @param BandwidthPackageIds 带宽包Id，支持批量
+     * 设置带宽包唯一ID列表
+     * @param BandwidthPackageIds 带宽包唯一ID列表
      */
     public void setBandwidthPackageIds(String [] BandwidthPackageIds) {
         this.BandwidthPackageIds = BandwidthPackageIds;

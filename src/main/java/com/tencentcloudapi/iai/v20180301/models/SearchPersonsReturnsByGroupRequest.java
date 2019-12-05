@@ -94,6 +94,13 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     private Float FaceMatchThreshold;
 
     /**
+    * 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+    */
+    @SerializedName("NeedPersonInfo")
+    @Expose
+    private Long NeedPersonInfo;
+
+    /**
      * 获取希望搜索的人员库列表，上限10个。
      * @return GroupIds 希望搜索的人员库列表，上限10个。
      */
@@ -282,6 +289,22 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
+     * 获取是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     * @return NeedPersonInfo 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     */
+    public Long getNeedPersonInfo() {
+        return this.NeedPersonInfo;
+    }
+
+    /**
+     * 设置是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     * @param NeedPersonInfo 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     */
+    public void setNeedPersonInfo(Long NeedPersonInfo) {
+        this.NeedPersonInfo = NeedPersonInfo;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -293,6 +316,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
         this.setParamSimple(map, prefix + "MaxPersonNumPerGroup", this.MaxPersonNumPerGroup);
         this.setParamSimple(map, prefix + "QualityControl", this.QualityControl);
         this.setParamSimple(map, prefix + "FaceMatchThreshold", this.FaceMatchThreshold);
+        this.setParamSimple(map, prefix + "NeedPersonInfo", this.NeedPersonInfo);
 
     }
 }

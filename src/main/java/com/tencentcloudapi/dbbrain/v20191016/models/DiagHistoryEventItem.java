@@ -51,7 +51,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     private Long EventId;
 
     /**
-    * 严重程度。
+    * 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
     */
     @SerializedName("Severity")
     @Expose
@@ -160,16 +160,16 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 获取严重程度。
-     * @return Severity 严重程度。
+     * 获取严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
+     * @return Severity 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
      */
     public Long getSeverity() {
         return this.Severity;
     }
 
     /**
-     * 设置严重程度。
-     * @param Severity 严重程度。
+     * 设置严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
+     * @param Severity 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
      */
     public void setSeverity(Long Severity) {
         this.Severity = Severity;

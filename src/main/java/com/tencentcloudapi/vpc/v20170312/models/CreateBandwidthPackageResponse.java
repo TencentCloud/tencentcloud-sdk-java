@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateBandwidthPackageResponse  extends AbstractModel{
 
     /**
-    * 带宽包Id
+    * 带宽包唯一ID
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-    * 带宽包Ids(申请数量大于1时有效)
+    * 带宽包唯一ID列表(申请数量大于1时有效)
     */
     @SerializedName("BandwidthPackageIds")
     @Expose
@@ -44,32 +44,32 @@ public class CreateBandwidthPackageResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取带宽包Id
-     * @return BandwidthPackageId 带宽包Id
+     * 获取带宽包唯一ID
+     * @return BandwidthPackageId 带宽包唯一ID
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * 设置带宽包Id
-     * @param BandwidthPackageId 带宽包Id
+     * 设置带宽包唯一ID
+     * @param BandwidthPackageId 带宽包唯一ID
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
-     * 获取带宽包Ids(申请数量大于1时有效)
-     * @return BandwidthPackageIds 带宽包Ids(申请数量大于1时有效)
+     * 获取带宽包唯一ID列表(申请数量大于1时有效)
+     * @return BandwidthPackageIds 带宽包唯一ID列表(申请数量大于1时有效)
      */
     public String [] getBandwidthPackageIds() {
         return this.BandwidthPackageIds;
     }
 
     /**
-     * 设置带宽包Ids(申请数量大于1时有效)
-     * @param BandwidthPackageIds 带宽包Ids(申请数量大于1时有效)
+     * 设置带宽包唯一ID列表(申请数量大于1时有效)
+     * @param BandwidthPackageIds 带宽包唯一ID列表(申请数量大于1时有效)
      */
     public void setBandwidthPackageIds(String [] BandwidthPackageIds) {
         this.BandwidthPackageIds = BandwidthPackageIds;

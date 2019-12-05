@@ -58,6 +58,20 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     private Integer InternetMaxBandwidth;
 
     /**
+    * 需要关联的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
      * 获取带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      * @return NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      */
@@ -138,6 +152,38 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
+     * 获取需要关联的标签列表。
+     * @return Tags 需要关联的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置需要关联的标签列表。
+     * @param Tags 需要关联的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * 获取带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+     * @return Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * 设置带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+     * @param Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
         this.setParamSimple(map, prefix + "BandwidthPackageCount", this.BandwidthPackageCount);
         this.setParamSimple(map, prefix + "InternetMaxBandwidth", this.InternetMaxBandwidth);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

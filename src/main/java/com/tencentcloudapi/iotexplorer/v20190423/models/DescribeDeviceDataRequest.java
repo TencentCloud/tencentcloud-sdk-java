@@ -37,6 +37,13 @@ public class DescribeDeviceDataRequest  extends AbstractModel{
     private String DeviceName;
 
     /**
+    * 设备ID，该字段有值将代替 ProductId/DeviceName
+    */
+    @SerializedName("DeviceId")
+    @Expose
+    private String DeviceId;
+
+    /**
      * 获取产品ID
      * @return ProductId 产品ID
      */
@@ -69,11 +76,28 @@ public class DescribeDeviceDataRequest  extends AbstractModel{
     }
 
     /**
+     * 获取设备ID，该字段有值将代替 ProductId/DeviceName
+     * @return DeviceId 设备ID，该字段有值将代替 ProductId/DeviceName
+     */
+    public String getDeviceId() {
+        return this.DeviceId;
+    }
+
+    /**
+     * 设置设备ID，该字段有值将代替 ProductId/DeviceName
+     * @param DeviceId 设备ID，该字段有值将代替 ProductId/DeviceName
+     */
+    public void setDeviceId(String DeviceId) {
+        this.DeviceId = DeviceId;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
 
     }
 }

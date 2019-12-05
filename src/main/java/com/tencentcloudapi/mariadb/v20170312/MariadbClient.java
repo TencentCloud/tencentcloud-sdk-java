@@ -376,6 +376,24 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
+     * @param req DescribeDatabasesRequest
+     * @return DescribeDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatabasesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDatabases"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeFlow）用于查询流程状态。
      * @param req DescribeFlowRequest
      * @return DescribeFlowResponse
@@ -714,6 +732,24 @@ public class MariadbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ResetAccountPassword"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（RestartDBInstances）用于重启数据库实例
+     * @param req RestartDBInstancesRequest
+     * @return RestartDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartDBInstancesResponse RestartDBInstances(RestartDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RestartDBInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

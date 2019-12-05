@@ -27,7 +27,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     */
     @SerializedName("SendDateTime")
     @Expose
-    private String SendDateTime;
+    private Long SendDateTime;
 
     /**
     * 偏移量
@@ -62,7 +62,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
      * 获取拉取起始时间，UNIX 时间戳（时间：秒）
      * @return SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）
      */
-    public String getSendDateTime() {
+    public Long getSendDateTime() {
         return this.SendDateTime;
     }
 
@@ -70,7 +70,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
      * 设置拉取起始时间，UNIX 时间戳（时间：秒）
      * @param SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）
      */
-    public void setSendDateTime(String SendDateTime) {
+    public void setSendDateTime(Long SendDateTime) {
         this.SendDateTime = SendDateTime;
     }
 

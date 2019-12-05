@@ -49,7 +49,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *输入参数可以是事件Id, 若没有给定事件Id,则通过时间点查询。
+     *获取实例异常诊断事件的详情信息。
      * @param req DescribeDBDiagEventRequest
      * @return DescribeDBDiagEventResponse
      * @throws TencentCloudSDKException
@@ -67,7 +67,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *获取实例诊断历史。
+     *获取实例诊断事件的列表。
      * @param req DescribeDBDiagHistoryRequest
      * @return DescribeDBDiagHistoryResponse
      * @throws TencentCloudSDKException

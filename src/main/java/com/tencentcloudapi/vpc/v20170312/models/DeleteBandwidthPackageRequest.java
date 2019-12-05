@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteBandwidthPackageRequest  extends AbstractModel{
 
     /**
-    * 待删除带宽包bwpId
+    * 待删除带宽包唯一ID
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-     * 获取待删除带宽包bwpId
-     * @return BandwidthPackageId 待删除带宽包bwpId
+     * 获取待删除带宽包唯一ID
+     * @return BandwidthPackageId 待删除带宽包唯一ID
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * 设置待删除带宽包bwpId
-     * @param BandwidthPackageId 待删除带宽包bwpId
+     * 设置待删除带宽包唯一ID
+     * @param BandwidthPackageId 待删除带宽包唯一ID
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;

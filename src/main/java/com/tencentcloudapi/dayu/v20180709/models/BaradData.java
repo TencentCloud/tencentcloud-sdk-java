@@ -23,7 +23,14 @@ import java.util.HashMap;
 public class BaradData  extends AbstractModel{
 
     /**
-    * 指标名（connum表示TCP连接数；new_conn表示新增TCP连接数；intraffic表示入流量；outtraffic表示出流量）
+    * 指标名（connum表示TCP活跃连接数；
+new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
+intraffic表示入流量；
+outtraffic表示出流量；
+alltraffic表示出流量和入流量之和；
+inpkg表示入包速率；
+outpkg表示出包速率；）
     */
     @SerializedName("MetricName")
     @Expose
@@ -44,16 +51,44 @@ public class BaradData  extends AbstractModel{
     private Long Count;
 
     /**
-     * 获取指标名（connum表示TCP连接数；new_conn表示新增TCP连接数；intraffic表示入流量；outtraffic表示出流量）
-     * @return MetricName 指标名（connum表示TCP连接数；new_conn表示新增TCP连接数；intraffic表示入流量；outtraffic表示出流量）
+     * 获取指标名（connum表示TCP活跃连接数；
+new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
+intraffic表示入流量；
+outtraffic表示出流量；
+alltraffic表示出流量和入流量之和；
+inpkg表示入包速率；
+outpkg表示出包速率；）
+     * @return MetricName 指标名（connum表示TCP活跃连接数；
+new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
+intraffic表示入流量；
+outtraffic表示出流量；
+alltraffic表示出流量和入流量之和；
+inpkg表示入包速率；
+outpkg表示出包速率；）
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * 设置指标名（connum表示TCP连接数；new_conn表示新增TCP连接数；intraffic表示入流量；outtraffic表示出流量）
-     * @param MetricName 指标名（connum表示TCP连接数；new_conn表示新增TCP连接数；intraffic表示入流量；outtraffic表示出流量）
+     * 设置指标名（connum表示TCP活跃连接数；
+new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
+intraffic表示入流量；
+outtraffic表示出流量；
+alltraffic表示出流量和入流量之和；
+inpkg表示入包速率；
+outpkg表示出包速率；）
+     * @param MetricName 指标名（connum表示TCP活跃连接数；
+new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
+intraffic表示入流量；
+outtraffic表示出流量；
+alltraffic表示出流量和入流量之和；
+inpkg表示入包速率；
+outpkg表示出包速率；）
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

@@ -72,6 +72,13 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
 
     /**
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
@@ -184,6 +191,22 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
+     * 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "SecondaryPrivateIpAddressCount", this.SecondaryPrivateIpAddressCount);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

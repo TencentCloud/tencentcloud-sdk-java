@@ -128,6 +128,13 @@ public class VpnGateway  extends AbstractModel{
     private String Zone;
 
     /**
+    * 网关带宽配额信息
+    */
+    @SerializedName("VpnGatewayQuotaSet")
+    @Expose
+    private VpnGatewayQuota [] VpnGatewayQuotaSet;
+
+    /**
      * 获取网关实例ID。
      * @return VpnGatewayId 网关实例ID。
      */
@@ -368,6 +375,22 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
+     * 获取网关带宽配额信息
+     * @return VpnGatewayQuotaSet 网关带宽配额信息
+     */
+    public VpnGatewayQuota [] getVpnGatewayQuotaSet() {
+        return this.VpnGatewayQuotaSet;
+    }
+
+    /**
+     * 设置网关带宽配额信息
+     * @param VpnGatewayQuotaSet 网关带宽配额信息
+     */
+    public void setVpnGatewayQuotaSet(VpnGatewayQuota [] VpnGatewayQuotaSet) {
+        this.VpnGatewayQuotaSet = VpnGatewayQuotaSet;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +409,7 @@ public class VpnGateway  extends AbstractModel{
         this.setParamSimple(map, prefix + "NewPurchasePlan", this.NewPurchasePlan);
         this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamArrayObj(map, prefix + "VpnGatewayQuotaSet.", this.VpnGatewayQuotaSet);
 
     }
 }

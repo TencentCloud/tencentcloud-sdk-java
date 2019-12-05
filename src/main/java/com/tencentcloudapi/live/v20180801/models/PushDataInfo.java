@@ -116,6 +116,13 @@ public class PushDataInfo  extends AbstractModel{
     private String Resolution;
 
     /**
+    * 采样率。
+    */
+    @SerializedName("AsampleRate")
+    @Expose
+    private Integer AsampleRate;
+
+    /**
      * 获取流名称。
      * @return StreamName 流名称。
      */
@@ -332,6 +339,22 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
+     * 获取采样率。
+     * @return AsampleRate 采样率。
+     */
+    public Integer getAsampleRate() {
+        return this.AsampleRate;
+    }
+
+    /**
+     * 设置采样率。
+     * @param AsampleRate 采样率。
+     */
+    public void setAsampleRate(Integer AsampleRate) {
+        this.AsampleRate = AsampleRate;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -348,6 +371,7 @@ public class PushDataInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "Acodec", this.Acodec);
         this.setParamSimple(map, prefix + "Vcodec", this.Vcodec);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
+        this.setParamSimple(map, prefix + "AsampleRate", this.AsampleRate);
 
     }
 }

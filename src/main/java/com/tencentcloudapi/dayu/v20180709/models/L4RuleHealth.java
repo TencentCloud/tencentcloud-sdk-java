@@ -44,7 +44,7 @@ public class L4RuleHealth  extends AbstractModel{
     private Long TimeOut;
 
     /**
-    * 检测间隔时间，单位秒
+    * 检测间隔时间，单位秒，必须要大于响应超时时间
     */
     @SerializedName("Interval")
     @Expose
@@ -113,16 +113,16 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取检测间隔时间，单位秒
-     * @return Interval 检测间隔时间，单位秒
+     * 获取检测间隔时间，单位秒，必须要大于响应超时时间
+     * @return Interval 检测间隔时间，单位秒，必须要大于响应超时时间
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * 设置检测间隔时间，单位秒
-     * @param Interval 检测间隔时间，单位秒
+     * 设置检测间隔时间，单位秒，必须要大于响应超时时间
+     * @param Interval 检测间隔时间，单位秒，必须要大于响应超时时间
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;

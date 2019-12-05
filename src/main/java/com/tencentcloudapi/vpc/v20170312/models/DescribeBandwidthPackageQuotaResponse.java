@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeBandwidthPackageQuotaResponse  extends AbstractModel{
 
     /**
-    * 带宽包配额数据结构
+    * 带宽包配额详细信息
     */
     @SerializedName("QuotaSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeBandwidthPackageQuotaResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取带宽包配额数据结构
-     * @return QuotaSet 带宽包配额数据结构
+     * 获取带宽包配额详细信息
+     * @return QuotaSet 带宽包配额详细信息
      */
     public Quota [] getQuotaSet() {
         return this.QuotaSet;
     }
 
     /**
-     * 设置带宽包配额数据结构
-     * @param QuotaSet 带宽包配额数据结构
+     * 设置带宽包配额详细信息
+     * @param QuotaSet 带宽包配额详细信息
      */
     public void setQuotaSet(Quota [] QuotaSet) {
         this.QuotaSet = QuotaSet;

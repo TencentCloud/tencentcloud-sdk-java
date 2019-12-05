@@ -155,12 +155,20 @@ public class DomainRuleSet  extends AbstractModel{
     private String RealServerCertificateDomain;
 
     /**
-    * 多客户端证书时，返回多个证书的id和列表
+    * 多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolyClientCertificateAliasInfo")
     @Expose
     private CertificateAliasInfo [] PolyClientCertificateAliasInfo;
+
+    /**
+    * 多源站证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolyRealServerCertificateAliasInfo")
+    @Expose
+    private CertificateAliasInfo [] PolyRealServerCertificateAliasInfo;
 
     /**
      * 获取转发规则域名。
@@ -499,9 +507,9 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取多客户端证书时，返回多个证书的id和列表
+     * 获取多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和列表
+     * @return PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CertificateAliasInfo [] getPolyClientCertificateAliasInfo() {
@@ -509,13 +517,33 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置多客户端证书时，返回多个证书的id和列表
+     * 设置多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和列表
+     * @param PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolyClientCertificateAliasInfo(CertificateAliasInfo [] PolyClientCertificateAliasInfo) {
         this.PolyClientCertificateAliasInfo = PolyClientCertificateAliasInfo;
+    }
+
+    /**
+     * 获取多源站证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return PolyRealServerCertificateAliasInfo 多源站证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CertificateAliasInfo [] getPolyRealServerCertificateAliasInfo() {
+        return this.PolyRealServerCertificateAliasInfo;
+    }
+
+    /**
+     * 设置多源站证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolyRealServerCertificateAliasInfo 多源站证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolyRealServerCertificateAliasInfo(CertificateAliasInfo [] PolyRealServerCertificateAliasInfo) {
+        this.PolyRealServerCertificateAliasInfo = PolyRealServerCertificateAliasInfo;
     }
 
     /**
@@ -539,6 +567,7 @@ public class DomainRuleSet  extends AbstractModel{
         this.setParamSimple(map, prefix + "GaapCertificateAlias", this.GaapCertificateAlias);
         this.setParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
         this.setParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
+        this.setParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
 
     }
 }

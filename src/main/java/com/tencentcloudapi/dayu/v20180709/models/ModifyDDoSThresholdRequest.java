@@ -38,6 +38,7 @@ public class ModifyDDoSThresholdRequest  extends AbstractModel{
 
     /**
     * DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+当设置值为0时，表示采用默认值；
     */
     @SerializedName("Threshold")
     @Expose
@@ -77,7 +78,9 @@ public class ModifyDDoSThresholdRequest  extends AbstractModel{
 
     /**
      * 获取DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+当设置值为0时，表示采用默认值；
      * @return Threshold DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+当设置值为0时，表示采用默认值；
      */
     public Long getThreshold() {
         return this.Threshold;
@@ -85,7 +88,9 @@ public class ModifyDDoSThresholdRequest  extends AbstractModel{
 
     /**
      * 设置DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+当设置值为0时，表示采用默认值；
      * @param Threshold DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+当设置值为0时，表示采用默认值；
      */
     public void setThreshold(Long Threshold) {
         this.Threshold = Threshold;

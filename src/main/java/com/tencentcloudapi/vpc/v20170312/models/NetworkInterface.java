@@ -134,6 +134,13 @@ public class NetworkInterface  extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+    */
+    @SerializedName("EniType")
+    @Expose
+    private Integer EniType;
+
+    /**
      * 获取弹性网卡实例ID，例如：eni-f1xjkw1b。
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
@@ -398,6 +405,22 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
+     * 获取网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     * @return EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     */
+    public Integer getEniType() {
+        return this.EniType;
+    }
+
+    /**
+     * 设置网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     * @param EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     */
+    public void setEniType(Integer EniType) {
+        this.EniType = EniType;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -416,6 +439,7 @@ public class NetworkInterface  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "EniType", this.EniType);
 
     }
 }

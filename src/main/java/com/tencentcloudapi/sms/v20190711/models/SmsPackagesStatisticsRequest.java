@@ -23,8 +23,14 @@ import java.util.HashMap;
 public class SmsPackagesStatisticsRequest  extends AbstractModel{
 
     /**
-    * 最大上限
-注：目前固定设置为0
+    * 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+    */
+    @SerializedName("SmsSdkAppid")
+    @Expose
+    private String SmsSdkAppid;
+
+    /**
+    * 最大上限(需要拉取的套餐包个数)
     */
     @SerializedName("Limit")
     @Expose
@@ -39,34 +45,32 @@ public class SmsPackagesStatisticsRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-    * 需要拉取的套餐包个数
-    */
-    @SerializedName("NumberOfPullPackages")
-    @Expose
-    private Long NumberOfPullPackages;
+     * 获取短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * @return SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     */
+    public String getSmsSdkAppid() {
+        return this.SmsSdkAppid;
+    }
 
     /**
-    * 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
-    */
-    @SerializedName("SmsSdkAppid")
-    @Expose
-    private String SmsSdkAppid;
+     * 设置短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * @param SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     */
+    public void setSmsSdkAppid(String SmsSdkAppid) {
+        this.SmsSdkAppid = SmsSdkAppid;
+    }
 
     /**
-     * 获取最大上限
-注：目前固定设置为0
-     * @return Limit 最大上限
-注：目前固定设置为0
+     * 获取最大上限(需要拉取的套餐包个数)
+     * @return Limit 最大上限(需要拉取的套餐包个数)
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置最大上限
-注：目前固定设置为0
-     * @param Limit 最大上限
-注：目前固定设置为0
+     * 设置最大上限(需要拉取的套餐包个数)
+     * @param Limit 最大上限(需要拉取的套餐包个数)
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -93,45 +97,12 @@ public class SmsPackagesStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要拉取的套餐包个数
-     * @return NumberOfPullPackages 需要拉取的套餐包个数
-     */
-    public Long getNumberOfPullPackages() {
-        return this.NumberOfPullPackages;
-    }
-
-    /**
-     * 设置需要拉取的套餐包个数
-     * @param NumberOfPullPackages 需要拉取的套餐包个数
-     */
-    public void setNumberOfPullPackages(Long NumberOfPullPackages) {
-        this.NumberOfPullPackages = NumberOfPullPackages;
-    }
-
-    /**
-     * 获取短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
-     * @return SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
-     */
-    public String getSmsSdkAppid() {
-        return this.SmsSdkAppid;
-    }
-
-    /**
-     * 设置短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
-     * @param SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
-     */
-    public void setSmsSdkAppid(String SmsSdkAppid) {
-        this.SmsSdkAppid = SmsSdkAppid;
-    }
-
-    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "NumberOfPullPackages", this.NumberOfPullPackages);
-        this.setParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
 
     }
 }

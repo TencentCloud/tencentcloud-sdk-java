@@ -25,79 +25,79 @@ public class SendStatusStatistics  extends AbstractModel{
     /**
     * 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
     */
-    @SerializedName("BillingStatistics")
+    @SerializedName("FeeCount")
     @Expose
-    private Long BillingStatistics;
+    private Long FeeCount;
 
     /**
     * 短信提交量统计
     */
-    @SerializedName("RequestStatistics")
+    @SerializedName("RequestCount")
     @Expose
-    private Long RequestStatistics;
+    private Long RequestCount;
 
     /**
     * 短信提交成功量统计
     */
-    @SerializedName("RequestSuccessStatistics")
+    @SerializedName("RequestSuccessCount")
     @Expose
-    private Long RequestSuccessStatistics;
+    private Long RequestSuccessCount;
 
     /**
      * 获取短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
-     * @return BillingStatistics 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+     * @return FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
      */
-    public Long getBillingStatistics() {
-        return this.BillingStatistics;
+    public Long getFeeCount() {
+        return this.FeeCount;
     }
 
     /**
      * 设置短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
-     * @param BillingStatistics 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+     * @param FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
      */
-    public void setBillingStatistics(Long BillingStatistics) {
-        this.BillingStatistics = BillingStatistics;
+    public void setFeeCount(Long FeeCount) {
+        this.FeeCount = FeeCount;
     }
 
     /**
      * 获取短信提交量统计
-     * @return RequestStatistics 短信提交量统计
+     * @return RequestCount 短信提交量统计
      */
-    public Long getRequestStatistics() {
-        return this.RequestStatistics;
+    public Long getRequestCount() {
+        return this.RequestCount;
     }
 
     /**
      * 设置短信提交量统计
-     * @param RequestStatistics 短信提交量统计
+     * @param RequestCount 短信提交量统计
      */
-    public void setRequestStatistics(Long RequestStatistics) {
-        this.RequestStatistics = RequestStatistics;
+    public void setRequestCount(Long RequestCount) {
+        this.RequestCount = RequestCount;
     }
 
     /**
      * 获取短信提交成功量统计
-     * @return RequestSuccessStatistics 短信提交成功量统计
+     * @return RequestSuccessCount 短信提交成功量统计
      */
-    public Long getRequestSuccessStatistics() {
-        return this.RequestSuccessStatistics;
+    public Long getRequestSuccessCount() {
+        return this.RequestSuccessCount;
     }
 
     /**
      * 设置短信提交成功量统计
-     * @param RequestSuccessStatistics 短信提交成功量统计
+     * @param RequestSuccessCount 短信提交成功量统计
      */
-    public void setRequestSuccessStatistics(Long RequestSuccessStatistics) {
-        this.RequestSuccessStatistics = RequestSuccessStatistics;
+    public void setRequestSuccessCount(Long RequestSuccessCount) {
+        this.RequestSuccessCount = RequestSuccessCount;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BillingStatistics", this.BillingStatistics);
-        this.setParamSimple(map, prefix + "RequestStatistics", this.RequestStatistics);
-        this.setParamSimple(map, prefix + "RequestSuccessStatistics", this.RequestSuccessStatistics);
+        this.setParamSimple(map, prefix + "FeeCount", this.FeeCount);
+        this.setParamSimple(map, prefix + "RequestCount", this.RequestCount);
+        this.setParamSimple(map, prefix + "RequestSuccessCount", this.RequestSuccessCount);
 
     }
 }

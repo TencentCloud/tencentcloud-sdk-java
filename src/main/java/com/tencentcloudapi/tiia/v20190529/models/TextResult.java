@@ -83,6 +83,8 @@ DRUGS：涉毒
 CURSE：谩骂
 TERRORISM：暴恐
 OTHERS：其他
+
+本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
     */
     @SerializedName("Type")
     @Expose
@@ -243,6 +245,8 @@ DRUGS：涉毒
 CURSE：谩骂
 TERRORISM：暴恐
 OTHERS：其他
+
+本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
      * @return Type 图片中是否包含敏感文本内容。
 包含：
 NOTEXT：无文本
@@ -254,6 +258,8 @@ DRUGS：涉毒
 CURSE：谩骂
 TERRORISM：暴恐
 OTHERS：其他
+
+本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
      */
     public String getType() {
         return this.Type;
@@ -271,6 +277,8 @@ DRUGS：涉毒
 CURSE：谩骂
 TERRORISM：暴恐
 OTHERS：其他
+
+本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
      * @param Type 图片中是否包含敏感文本内容。
 包含：
 NOTEXT：无文本
@@ -282,6 +290,8 @@ DRUGS：涉毒
 CURSE：谩骂
 TERRORISM：暴恐
 OTHERS：其他
+
+本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
      */
     public void setType(String Type) {
         this.Type = Type;

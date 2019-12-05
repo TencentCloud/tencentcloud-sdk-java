@@ -30,14 +30,14 @@ public class DescribeDBDiagHistoryRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 开始时间。
+    * 开始时间。如“2019-09-10 12:13:14”。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间。
+    * 结束时间。如“2019-09-11 12:13:14”。
     */
     @SerializedName("EndTime")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeDBDiagHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间。
-     * @return StartTime 开始时间。
+     * 获取开始时间。如“2019-09-10 12:13:14”。
+     * @return StartTime 开始时间。如“2019-09-10 12:13:14”。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * 设置开始时间。
-     * @param StartTime 开始时间。
+     * 设置开始时间。如“2019-09-10 12:13:14”。
+     * @param StartTime 开始时间。如“2019-09-10 12:13:14”。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * 获取结束时间。
-     * @return EndTime 结束时间。
+     * 获取结束时间。如“2019-09-11 12:13:14”。
+     * @return EndTime 结束时间。如“2019-09-11 12:13:14”。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * 设置结束时间。
-     * @param EndTime 结束时间。
+     * 设置结束时间。如“2019-09-11 12:13:14”。
+     * @param EndTime 结束时间。如“2019-09-11 12:13:14”。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

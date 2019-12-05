@@ -38,8 +38,9 @@ public class DescribeBaradDataRequest  extends AbstractModel{
 
     /**
     * 指标名，取值：
-connum表示总TCP连接数（新建TCP连接数与活跃TCP连接数的和）；
+connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
 intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；
@@ -129,16 +130,18 @@ avg表示均值；
 
     /**
      * 获取指标名，取值：
-connum表示总TCP连接数（新建TCP连接数与活跃TCP连接数的和）；
+connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
 intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；
 inpkg表示入包速率；
 outpkg表示出包速率；
      * @return MetricName 指标名，取值：
-connum表示总TCP连接数（新建TCP连接数与活跃TCP连接数的和）；
+connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
 intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；
@@ -151,16 +154,18 @@ outpkg表示出包速率；
 
     /**
      * 设置指标名，取值：
-connum表示总TCP连接数（新建TCP连接数与活跃TCP连接数的和）；
+connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
 intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；
 inpkg表示入包速率；
 outpkg表示出包速率；
      * @param MetricName 指标名，取值：
-connum表示总TCP连接数（新建TCP连接数与活跃TCP连接数的和）；
+connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
+inactive_conn表示非活跃连接数;
 intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；

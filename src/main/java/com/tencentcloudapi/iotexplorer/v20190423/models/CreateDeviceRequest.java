@@ -30,7 +30,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     private String ProductId;
 
     /**
-    * 设备名称。
+    * 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -53,16 +53,16 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称。
-     * @return DeviceName 设备名称。
+     * 获取设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+     * @return DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * 设置设备名称。
-     * @param DeviceName 设备名称。
+     * 设置设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+     * @param DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;

@@ -38,6 +38,7 @@ public class DetectDisgustRequest  extends AbstractModel{
 
     /**
     * 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
     */
     @SerializedName("ImageBase64")
     @Expose
@@ -89,7 +90,9 @@ public class DetectDisgustRequest  extends AbstractModel{
 
     /**
      * 获取图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
      * @return ImageBase64 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
      */
     public String getImageBase64() {
         return this.ImageBase64;
@@ -97,7 +100,9 @@ public class DetectDisgustRequest  extends AbstractModel{
 
     /**
      * 设置图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
      * @param ImageBase64 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+**注意：图片需要base64编码，并且要去掉编码头部。**
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;

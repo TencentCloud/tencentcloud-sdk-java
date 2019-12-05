@@ -30,7 +30,7 @@ public class DescribeDBDiagEventRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 事件 ID 。
+    * 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
     */
     @SerializedName("EventId")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeDBDiagEventRequest  extends AbstractModel{
     }
 
     /**
-     * 获取事件 ID 。
-     * @return EventId 事件 ID 。
+     * 获取事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
+     * @return EventId 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * 设置事件 ID 。
-     * @param EventId 事件 ID 。
+     * 设置事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
+     * @param EventId 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;

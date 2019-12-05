@@ -30,7 +30,7 @@ public class CreateAccountRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
+    * 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
     */
     @SerializedName("UserName")
     @Expose
@@ -88,16 +88,16 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
-     * @return UserName 登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
+     * 获取登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
+     * @return UserName 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * 设置登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
-     * @param UserName 登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
+     * 设置登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
+     * @param UserName 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

@@ -23,22 +23,6 @@ import java.util.HashMap;
 public class CallbackStatusStatisticsRequest  extends AbstractModel{
 
     /**
-    * 最大上限
-注：目前固定设置为0
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
-    * 偏移量
-注：目前固定设置为0
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
     * 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
     */
     @SerializedName("StartDateTime")
@@ -61,44 +45,20 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     private String SmsSdkAppid;
 
     /**
-     * 获取最大上限
+    * 最大上限
 注：目前固定设置为0
-     * @return Limit 最大上限
-注：目前固定设置为0
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
 
     /**
-     * 设置最大上限
+    * 偏移量
 注：目前固定设置为0
-     * @param Limit 最大上限
-注：目前固定设置为0
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * 获取偏移量
-注：目前固定设置为0
-     * @return Offset 偏移量
-注：目前固定设置为0
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * 设置偏移量
-注：目前固定设置为0
-     * @param Offset 偏移量
-注：目前固定设置为0
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * 获取开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
@@ -153,14 +113,54 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取最大上限
+注：目前固定设置为0
+     * @return Limit 最大上限
+注：目前固定设置为0
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * 设置最大上限
+注：目前固定设置为0
+     * @param Limit 最大上限
+注：目前固定设置为0
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * 获取偏移量
+注：目前固定设置为0
+     * @return Offset 偏移量
+注：目前固定设置为0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * 设置偏移量
+注：目前固定设置为0
+     * @param Offset 偏移量
+注：目前固定设置为0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "StartDateTime", this.StartDateTime);
         this.setParamSimple(map, prefix + "EndDataTime", this.EndDataTime);
         this.setParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

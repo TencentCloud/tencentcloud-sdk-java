@@ -37,7 +37,7 @@ public class RemoveBandwidthPackageResourcesRequest  extends AbstractModel{
     private String ResourceType;
 
     /**
-    * 资源Id，形如'eip-xxxx', 'lb-xxxx'
+    * 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
     */
     @SerializedName("ResourceIds")
     @Expose
@@ -76,16 +76,16 @@ public class RemoveBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源Id，形如'eip-xxxx', 'lb-xxxx'
-     * @return ResourceIds 资源Id，形如'eip-xxxx', 'lb-xxxx'
+     * 获取资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+     * @return ResourceIds 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * 设置资源Id，形如'eip-xxxx', 'lb-xxxx'
-     * @param ResourceIds 资源Id，形如'eip-xxxx', 'lb-xxxx'
+     * 设置资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+     * @param ResourceIds 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;

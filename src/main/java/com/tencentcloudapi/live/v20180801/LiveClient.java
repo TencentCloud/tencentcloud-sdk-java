@@ -1343,7 +1343,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *查询拉流配置
+     *查询直播拉流配置。
      * @param req DescribePullStreamConfigsRequest
      * @return DescribePullStreamConfigsResponse
      * @throws TencentCloudSDKException
@@ -1686,7 +1686,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *更新拉流配置
+     *更新拉流配置。
      * @param req ModifyPullStreamConfigRequest
      * @return ModifyPullStreamConfigResponse
      * @throws TencentCloudSDKException
@@ -1704,7 +1704,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *修改直播拉流配置状态
+     *修改直播拉流配置的状态。
      * @param req ModifyPullStreamStatusRequest
      * @return ModifyPullStreamStatusResponse
      * @throws TencentCloudSDKException
@@ -1740,7 +1740,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *恢复某条流的推送。
+     *恢复某条流的推流。
      * @param req ResumeLiveStreamRequest
      * @return ResumeLiveStreamResponse
      * @throws TencentCloudSDKException

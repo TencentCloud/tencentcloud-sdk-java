@@ -85,6 +85,14 @@ public class DeviceInfo  extends AbstractModel{
     private String DeviceCert;
 
     /**
+    * 日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogLevel")
+    @Expose
+    private Long LogLevel;
+
+    /**
      * 获取设备名
      * @return DeviceName 设备名
      */
@@ -237,6 +245,26 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
+     * 获取日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return LogLevel 日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLogLevel() {
+        return this.LogLevel;
+    }
+
+    /**
+     * 设置日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogLevel 日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogLevel(Long LogLevel) {
+        this.LogLevel = LogLevel;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -248,6 +276,7 @@ public class DeviceInfo  extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "DeviceCert", this.DeviceCert);
+        this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
 
     }
 }
