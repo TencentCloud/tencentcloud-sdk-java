@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAppStatusResponse  extends AbstractModel{
 
     /**
-    * GME应用id
+    * GME应用ID
     */
     @SerializedName("BizId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyAppStatusResponse  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取GME应用id
-     * @return BizId GME应用id
+     * 获取GME应用ID
+     * @return BizId GME应用ID
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * 设置GME应用id
-     * @param BizId GME应用id
+     * 设置GME应用ID
+     * @param BizId GME应用ID
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;

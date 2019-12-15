@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FaceFusionResponse  extends AbstractModel{
 
     /**
-    * RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。当前仅支持 url 方式，base64 方式后期开放。
+    * RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
     */
     @SerializedName("Image")
     @Expose
@@ -44,16 +44,16 @@ public class FaceFusionResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。当前仅支持 url 方式，base64 方式后期开放。
-     * @return Image RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。当前仅支持 url 方式，base64 方式后期开放。
+     * 获取RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * @return Image RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * 设置RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。当前仅支持 url 方式，base64 方式后期开放。
-     * @param Image RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。当前仅支持 url 方式，base64 方式后期开放。
+     * 设置RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * @param Image RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
      */
     public void setImage(String Image) {
         this.Image = Image;

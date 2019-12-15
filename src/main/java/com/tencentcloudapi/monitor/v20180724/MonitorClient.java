@@ -86,4 +86,28 @@ public class MonitorClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *默认接口请求频率限制：50次/秒。
+默认单租户指标上限：100个。
+单次上报最多 30 个指标/值对，请求返回错误时，请求中所有的指标/值均不会被保存。
+
+上报的时间戳为期望保存的时间戳，建议构造整数分钟时刻的时间戳。
+时间戳时间范围必须为当前时间到 300 秒前之间。
+同一 IP 指标对的数据需按分钟先后顺序上报。
+     * @param req PutMonitorDataRequest
+     * @return PutMonitorDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutMonitorDataResponse PutMonitorData(PutMonitorDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutMonitorDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutMonitorDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PutMonitorData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

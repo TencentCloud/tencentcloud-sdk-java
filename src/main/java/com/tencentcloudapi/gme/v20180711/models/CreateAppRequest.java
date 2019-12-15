@@ -30,21 +30,21 @@ public class CreateAppRequest  extends AbstractModel{
     private String AppName;
 
     /**
-    * 腾讯云项目id，默认为0，表示默认项目
+    * 腾讯云项目ID，默认为0，表示默认项目
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
+    * 需要支持的引擎列表，默认全选。
     */
     @SerializedName("EngineList")
     @Expose
     private String [] EngineList;
 
     /**
-    * 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
+    * 服务区域列表，默认全选。
     */
     @SerializedName("RegionList")
     @Expose
@@ -95,48 +95,48 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取腾讯云项目id，默认为0，表示默认项目
-     * @return ProjectId 腾讯云项目id，默认为0，表示默认项目
+     * 获取腾讯云项目ID，默认为0，表示默认项目
+     * @return ProjectId 腾讯云项目ID，默认为0，表示默认项目
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置腾讯云项目id，默认为0，表示默认项目
-     * @param ProjectId 腾讯云项目id，默认为0，表示默认项目
+     * 设置腾讯云项目ID，默认为0，表示默认项目
+     * @param ProjectId 腾讯云项目ID，默认为0，表示默认项目
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * 获取需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
-     * @return EngineList 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
+     * 获取需要支持的引擎列表，默认全选。
+     * @return EngineList 需要支持的引擎列表，默认全选。
      */
     public String [] getEngineList() {
         return this.EngineList;
     }
 
     /**
-     * 设置需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
-     * @param EngineList 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
+     * 设置需要支持的引擎列表，默认全选。
+     * @param EngineList 需要支持的引擎列表，默认全选。
      */
     public void setEngineList(String [] EngineList) {
         this.EngineList = EngineList;
     }
 
     /**
-     * 获取服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
-     * @return RegionList 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
+     * 获取服务区域列表，默认全选。
+     * @return RegionList 服务区域列表，默认全选。
      */
     public String [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * 设置服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
-     * @param RegionList 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
+     * 设置服务区域列表，默认全选。
+     * @param RegionList 服务区域列表，默认全选。
      */
     public void setRegionList(String [] RegionList) {
         this.RegionList = RegionList;

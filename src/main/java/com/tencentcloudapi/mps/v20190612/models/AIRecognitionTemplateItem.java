@@ -45,7 +45,6 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
     * 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceConfigure")
     @Expose
@@ -53,7 +52,6 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
     * 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrFullTextConfigure")
     @Expose
@@ -61,7 +59,6 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
     * 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrWordsConfigure")
     @Expose
@@ -69,7 +66,6 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
     * 语音全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrFullTextConfigure")
     @Expose
@@ -77,7 +73,6 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
     * 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrWordsConfigure")
     @Expose
@@ -147,9 +142,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
      * 获取人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return FaceConfigure 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FaceConfigureInfo getFaceConfigure() {
         return this.FaceConfigure;
@@ -157,9 +150,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
      * 设置人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceConfigure 人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceConfigure(FaceConfigureInfo FaceConfigure) {
         this.FaceConfigure = FaceConfigure;
@@ -167,9 +158,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
      * 获取文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return OcrFullTextConfigure 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OcrFullTextConfigureInfo getOcrFullTextConfigure() {
         return this.OcrFullTextConfigure;
@@ -177,9 +166,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
      * 设置文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrFullTextConfigure 文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrFullTextConfigure(OcrFullTextConfigureInfo OcrFullTextConfigure) {
         this.OcrFullTextConfigure = OcrFullTextConfigure;
@@ -187,9 +174,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
      * 获取文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return OcrWordsConfigure 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OcrWordsConfigureInfo getOcrWordsConfigure() {
         return this.OcrWordsConfigure;
@@ -197,9 +182,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
      * 设置文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrWordsConfigure 文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrWordsConfigure(OcrWordsConfigureInfo OcrWordsConfigure) {
         this.OcrWordsConfigure = OcrWordsConfigure;
@@ -207,9 +190,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
      * 获取语音全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return AsrFullTextConfigure 语音全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AsrFullTextConfigureInfo getAsrFullTextConfigure() {
         return this.AsrFullTextConfigure;
@@ -217,9 +198,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
      * 设置语音全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrFullTextConfigure 语音全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfo AsrFullTextConfigure) {
         this.AsrFullTextConfigure = AsrFullTextConfigure;
@@ -227,9 +206,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
      * 获取语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return AsrWordsConfigure 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AsrWordsConfigureInfo getAsrWordsConfigure() {
         return this.AsrWordsConfigure;
@@ -237,9 +214,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
 
     /**
      * 设置语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrWordsConfigure 语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrWordsConfigure(AsrWordsConfigureInfo AsrWordsConfigure) {
         this.AsrWordsConfigure = AsrWordsConfigure;

@@ -77,6 +77,14 @@ public class WorkflowInfo  extends AbstractModel{
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
+    * 视频内容分析类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AiAnalysisTask")
+    @Expose
+    private AiAnalysisTaskInput AiAnalysisTask;
+
+    /**
     * 视频内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -253,6 +261,26 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
+     * 获取视频内容分析类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @return AiAnalysisTask 视频内容分析类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskInput getAiAnalysisTask() {
+        return this.AiAnalysisTask;
+    }
+
+    /**
+     * 设置视频内容分析类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTask 视频内容分析类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
+        this.AiAnalysisTask = AiAnalysisTask;
+    }
+
+    /**
      * 获取视频内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @return AiRecognitionTask 视频内容识别类型任务参数。
@@ -367,6 +395,7 @@ public class WorkflowInfo  extends AbstractModel{
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
+        this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TaskPriority", this.TaskPriority);

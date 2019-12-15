@@ -49,7 +49,7 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
-     *本接口(CreateApp)用于创建一个GME应用
+     *本接口(CreateApp)用于创建一个GME应用。
      * @param req CreateAppRequest
      * @return CreateAppResponse
      * @throws TencentCloudSDKException
@@ -67,7 +67,7 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，离线语音，语音过滤等。最长查询周期为最近30天。
+     *本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近30天。
      * @param req DescribeAppStatisticsRequest
      * @return DescribeAppStatisticsResponse
      * @throws TencentCloudSDKException

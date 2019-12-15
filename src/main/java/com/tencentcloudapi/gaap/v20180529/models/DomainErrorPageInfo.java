@@ -75,7 +75,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     private HttpHeaderParam [] SetHeaders;
 
     /**
-    * 设置的响应体(不包括 http头)
+    * 设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Body")
@@ -207,9 +207,9 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设置的响应体(不包括 http头)
+     * 获取设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return Body 设置的响应体(不包括 http头)
+     * @return Body 设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBody() {
@@ -217,9 +217,9 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设置的响应体(不包括 http头)
+     * 设置设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Body 设置的响应体(不包括 http头)
+     * @param Body 设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBody(String Body) {

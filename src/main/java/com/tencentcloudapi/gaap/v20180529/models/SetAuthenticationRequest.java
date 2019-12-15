@@ -81,7 +81,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     private String GaapCertificateId;
 
     /**
-    * 源站CA证书ID，从证书管理页获取。
+    * 源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
     */
     @SerializedName("RealServerCertificateId")
     @Expose
@@ -93,6 +93,13 @@ public class SetAuthenticationRequest  extends AbstractModel{
     @SerializedName("RealServerCertificateDomain")
     @Expose
     private String RealServerCertificateDomain;
+
+    /**
+    * 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+    */
+    @SerializedName("PolyRealServerCertificateIds")
+    @Expose
+    private String [] PolyRealServerCertificateIds;
 
     /**
      * 获取监听器ID。
@@ -243,16 +250,16 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站CA证书ID，从证书管理页获取。
-     * @return RealServerCertificateId 源站CA证书ID，从证书管理页获取。
+     * 获取源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+     * @return RealServerCertificateId 源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
      */
     public String getRealServerCertificateId() {
         return this.RealServerCertificateId;
     }
 
     /**
-     * 设置源站CA证书ID，从证书管理页获取。
-     * @param RealServerCertificateId 源站CA证书ID，从证书管理页获取。
+     * 设置源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+     * @param RealServerCertificateId 源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
      */
     public void setRealServerCertificateId(String RealServerCertificateId) {
         this.RealServerCertificateId = RealServerCertificateId;
@@ -275,6 +282,22 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
+     * 获取多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+     * @return PolyRealServerCertificateIds 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+     */
+    public String [] getPolyRealServerCertificateIds() {
+        return this.PolyRealServerCertificateIds;
+    }
+
+    /**
+     * 设置多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+     * @param PolyRealServerCertificateIds 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+     */
+    public void setPolyRealServerCertificateIds(String [] PolyRealServerCertificateIds) {
+        this.PolyRealServerCertificateIds = PolyRealServerCertificateIds;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -287,6 +310,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "GaapCertificateId", this.GaapCertificateId);
         this.setParamSimple(map, prefix + "RealServerCertificateId", this.RealServerCertificateId);
         this.setParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
+        this.setParamArraySimple(map, prefix + "PolyRealServerCertificateIds.", this.PolyRealServerCertificateIds);
 
     }
 }

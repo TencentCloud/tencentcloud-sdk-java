@@ -24,7 +24,6 @@ public class UserDefineConfigureInfo  extends AbstractModel{
 
     /**
     * 用户自定义人物审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceReviewInfo")
     @Expose
@@ -32,7 +31,6 @@ public class UserDefineConfigureInfo  extends AbstractModel{
 
     /**
     * 用户自定义语音审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrReviewInfo")
     @Expose
@@ -40,7 +38,6 @@ public class UserDefineConfigureInfo  extends AbstractModel{
 
     /**
     * 用户自定义文本审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrReviewInfo")
     @Expose
@@ -48,9 +45,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
 
     /**
      * 获取用户自定义人物审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return FaceReviewInfo 用户自定义人物审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineFaceReviewTemplateInfo getFaceReviewInfo() {
         return this.FaceReviewInfo;
@@ -58,9 +53,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
 
     /**
      * 设置用户自定义人物审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceReviewInfo 用户自定义人物审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo FaceReviewInfo) {
         this.FaceReviewInfo = FaceReviewInfo;
@@ -68,9 +61,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
 
     /**
      * 获取用户自定义语音审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return AsrReviewInfo 用户自定义语音审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
@@ -78,9 +69,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
 
     /**
      * 设置用户自定义语音审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrReviewInfo 用户自定义语音审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
@@ -88,9 +77,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
 
     /**
      * 获取用户自定义文本审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return OcrReviewInfo 用户自定义文本审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
@@ -98,9 +85,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
 
     /**
      * 设置用户自定义文本审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrReviewInfo 用户自定义文本审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

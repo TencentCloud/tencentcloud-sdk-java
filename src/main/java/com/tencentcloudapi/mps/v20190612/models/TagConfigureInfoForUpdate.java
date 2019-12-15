@@ -20,36 +20,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiClassificationTaskInput  extends AbstractModel{
+public class TagConfigureInfoForUpdate  extends AbstractModel{
 
     /**
-    * 智能分类模板 ID。
+    * 智能标签任务开关，可选值：
+<li>ON：开启智能标签任务；</li>
+<li>OFF：关闭智能标签任务。</li>
     */
-    @SerializedName("Definition")
+    @SerializedName("Switch")
     @Expose
-    private Long Definition;
+    private String Switch;
 
     /**
-     * 获取智能分类模板 ID。
-     * @return Definition 智能分类模板 ID。
+     * 获取智能标签任务开关，可选值：
+<li>ON：开启智能标签任务；</li>
+<li>OFF：关闭智能标签任务。</li>
+     * @return Switch 智能标签任务开关，可选值：
+<li>ON：开启智能标签任务；</li>
+<li>OFF：关闭智能标签任务。</li>
      */
-    public Long getDefinition() {
-        return this.Definition;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * 设置智能分类模板 ID。
-     * @param Definition 智能分类模板 ID。
+     * 设置智能标签任务开关，可选值：
+<li>ON：开启智能标签任务；</li>
+<li>OFF：关闭智能标签任务。</li>
+     * @param Switch 智能标签任务开关，可选值：
+<li>ON：开启智能标签任务；</li>
+<li>OFF：关闭智能标签任务。</li>
      */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
     /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

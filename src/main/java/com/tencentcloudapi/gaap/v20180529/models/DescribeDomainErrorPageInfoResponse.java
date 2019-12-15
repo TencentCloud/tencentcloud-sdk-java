@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDomainErrorPageInfoResponse  extends AbstractModel{
 
     /**
-    * 订制错误响应配置集
+    * 定制错误响应配置集
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorPageSet")
@@ -38,9 +38,9 @@ public class DescribeDomainErrorPageInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取订制错误响应配置集
+     * 获取定制错误响应配置集
 注意：此字段可能返回 null，表示取不到有效值。
-     * @return ErrorPageSet 订制错误响应配置集
+     * @return ErrorPageSet 定制错误响应配置集
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainErrorPageInfo [] getErrorPageSet() {
@@ -48,9 +48,9 @@ public class DescribeDomainErrorPageInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置订制错误响应配置集
+     * 设置定制错误响应配置集
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorPageSet 订制错误响应配置集
+     * @param ErrorPageSet 定制错误响应配置集
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorPageSet(DomainErrorPageInfo [] ErrorPageSet) {

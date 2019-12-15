@@ -58,6 +58,13 @@ public class ProcessMediaRequest  extends AbstractModel{
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
+    * 视频内容分析类型任务参数。
+    */
+    @SerializedName("AiAnalysisTask")
+    @Expose
+    private AiAnalysisTaskInput AiAnalysisTask;
+
+    /**
     * 视频内容识别类型任务参数。
     */
     @SerializedName("AiRecognitionTask")
@@ -173,6 +180,22 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
+     * 获取视频内容分析类型任务参数。
+     * @return AiAnalysisTask 视频内容分析类型任务参数。
+     */
+    public AiAnalysisTaskInput getAiAnalysisTask() {
+        return this.AiAnalysisTask;
+    }
+
+    /**
+     * 设置视频内容分析类型任务参数。
+     * @param AiAnalysisTask 视频内容分析类型任务参数。
+     */
+    public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
+        this.AiAnalysisTask = AiAnalysisTask;
+    }
+
+    /**
      * 获取视频内容识别类型任务参数。
      * @return AiRecognitionTask 视频内容识别类型任务参数。
      */
@@ -261,6 +284,7 @@ public class ProcessMediaRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "OutputDir", this.OutputDir);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
+        this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

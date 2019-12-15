@@ -24,7 +24,6 @@ public class PoliticalConfigureInfo  extends AbstractModel{
 
     /**
     * 画面鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImgReviewInfo")
     @Expose
@@ -32,7 +31,6 @@ public class PoliticalConfigureInfo  extends AbstractModel{
 
     /**
     * 语音鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrReviewInfo")
     @Expose
@@ -40,7 +38,6 @@ public class PoliticalConfigureInfo  extends AbstractModel{
 
     /**
     * 文本鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrReviewInfo")
     @Expose
@@ -48,9 +45,7 @@ public class PoliticalConfigureInfo  extends AbstractModel{
 
     /**
      * 获取画面鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return ImgReviewInfo 画面鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
@@ -58,9 +53,7 @@ public class PoliticalConfigureInfo  extends AbstractModel{
 
     /**
      * 设置画面鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImgReviewInfo 画面鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImgReviewInfo(PoliticalImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
@@ -68,9 +61,7 @@ public class PoliticalConfigureInfo  extends AbstractModel{
 
     /**
      * 获取语音鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return AsrReviewInfo 语音鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
@@ -78,9 +69,7 @@ public class PoliticalConfigureInfo  extends AbstractModel{
 
     /**
      * 设置语音鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrReviewInfo 语音鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
@@ -88,9 +77,7 @@ public class PoliticalConfigureInfo  extends AbstractModel{
 
     /**
      * 获取文本鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return OcrReviewInfo 文本鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
@@ -98,9 +85,7 @@ public class PoliticalConfigureInfo  extends AbstractModel{
 
     /**
      * 设置文本鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrReviewInfo 文本鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

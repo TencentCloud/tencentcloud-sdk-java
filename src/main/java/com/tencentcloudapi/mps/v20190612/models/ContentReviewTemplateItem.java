@@ -45,7 +45,6 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
     * 鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PornConfigure")
     @Expose
@@ -53,7 +52,6 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
     * 鉴恐控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TerrorismConfigure")
     @Expose
@@ -61,7 +59,6 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
     * 鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -69,7 +66,6 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
     * 用户自定义内容审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDefineConfigure")
     @Expose
@@ -139,9 +135,7 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
      * 获取鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return PornConfigure 鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PornConfigureInfo getPornConfigure() {
         return this.PornConfigure;
@@ -149,9 +143,7 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
      * 设置鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PornConfigure 鉴黄控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
         this.PornConfigure = PornConfigure;
@@ -159,9 +151,7 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
      * 获取鉴恐控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return TerrorismConfigure 鉴恐控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
@@ -169,9 +159,7 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
      * 设置鉴恐控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TerrorismConfigure 鉴恐控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
@@ -179,9 +167,7 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
      * 获取鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return PoliticalConfigure 鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
@@ -189,9 +175,7 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
      * 设置鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoliticalConfigure 鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
@@ -199,9 +183,7 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
      * 获取用户自定义内容审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return UserDefineConfigure 用户自定义内容审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
         return this.UserDefineConfigure;
@@ -209,9 +191,7 @@ public class ContentReviewTemplateItem  extends AbstractModel{
 
     /**
      * 设置用户自定义内容审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDefineConfigure 用户自定义内容审核控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;

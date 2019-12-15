@@ -24,7 +24,6 @@ public class MediaAudioStreamItem  extends AbstractModel{
 
     /**
     * 音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bitrate")
     @Expose
@@ -32,7 +31,6 @@ public class MediaAudioStreamItem  extends AbstractModel{
 
     /**
     * 音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SamplingRate")
     @Expose
@@ -40,7 +38,6 @@ public class MediaAudioStreamItem  extends AbstractModel{
 
     /**
     * 音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Codec")
     @Expose
@@ -48,9 +45,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
 
     /**
      * 获取音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return Bitrate 音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBitrate() {
         return this.Bitrate;
@@ -58,9 +53,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
 
     /**
      * 设置音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
@@ -68,9 +61,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
 
     /**
      * 获取音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return SamplingRate 音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSamplingRate() {
         return this.SamplingRate;
@@ -78,9 +69,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
 
     /**
      * 设置音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SamplingRate 音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSamplingRate(Long SamplingRate) {
         this.SamplingRate = SamplingRate;
@@ -88,9 +77,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
 
     /**
      * 获取音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return Codec 音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodec() {
         return this.Codec;
@@ -98,9 +85,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
 
     /**
      * 设置音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Codec 音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;

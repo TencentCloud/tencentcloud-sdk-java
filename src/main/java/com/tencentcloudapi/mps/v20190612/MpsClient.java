@@ -49,6 +49,24 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建用户自定义内容分析模板，数量上限：50。
+     * @param req CreateAIAnalysisTemplateRequest
+     * @return CreateAIAnalysisTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(CreateAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAIAnalysisTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAIAnalysisTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAIAnalysisTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户自定义内容识别模板，数量上限：50。
      * @param req CreateAIRecognitionTemplateRequest
      * @return CreateAIRecognitionTemplateResponse
@@ -237,7 +255,8 @@ public class MpsClient extends AbstractClient{
 5. 对视频截图雪碧图；
 6. 对视频转自适应码流；
 7. 智能内容审核（鉴黄、鉴恐、鉴政）；
-8. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
+8. 智能内容分析（标签、分类、封面、按帧标签）；
+9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
 
 注意：创建工作流成功后是禁用状态，需要手动启用。
      * @param req CreateWorkflowRequest
@@ -250,6 +269,26 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateWorkflowResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateWorkflow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户自定义内容分析模板。
+
+注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
+     * @param req DeleteAIAnalysisTemplateRequest
+     * @return DeleteAIAnalysisTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAIAnalysisTemplateResponse DeleteAIAnalysisTemplate(DeleteAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAIAnalysisTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAIAnalysisTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAIAnalysisTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -448,6 +487,24 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteWorkflowResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteWorkflow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据内容分析模板唯一标识，获取内容分析模板详情列表。返回结果包含符合条件的所有用户自定义内容分析模板及系统预置视频内容分析模板
+     * @param req DescribeAIAnalysisTemplatesRequest
+     * @return DescribeAIAnalysisTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIAnalysisTemplatesResponse DescribeAIAnalysisTemplates(DescribeAIAnalysisTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAIAnalysisTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAIAnalysisTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAIAnalysisTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -727,6 +784,26 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *修改用户自定义内容分析模板。
+
+注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
+     * @param req ModifyAIAnalysisTemplateRequest
+     * @return ModifyAIAnalysisTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(ModifyAIAnalysisTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAIAnalysisTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAIAnalysisTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAIAnalysisTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改用户自定义内容识别模板。
      * @param req ModifyAIRecognitionTemplateRequest
      * @return ModifyAIRecognitionTemplateResponse
@@ -975,7 +1052,8 @@ public class MpsClient extends AbstractClient{
 5. 对视频截图雪碧图；
 6. 对视频转自适应码流；
 7. 智能内容审核（鉴黄、鉴恐、鉴政）；
-8. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
+8. 智能内容分析（标签、分类、封面、按帧标签）；
+9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
      * @param req ProcessMediaRequest
      * @return ProcessMediaResponse
      * @throws TencentCloudSDKException

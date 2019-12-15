@@ -83,6 +83,13 @@ public class WorkflowTask  extends AbstractModel{
     private AiContentReviewResult [] AiContentReviewResultSet;
 
     /**
+    * 视频内容分析任务的执行状态与结果。
+    */
+    @SerializedName("AiAnalysisResultSet")
+    @Expose
+    private AiAnalysisResult [] AiAnalysisResultSet;
+
+    /**
     * 视频内容识别任务的执行状态与结果。
     */
     @SerializedName("AiRecognitionResultSet")
@@ -234,6 +241,22 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
+     * 获取视频内容分析任务的执行状态与结果。
+     * @return AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
+     */
+    public AiAnalysisResult [] getAiAnalysisResultSet() {
+        return this.AiAnalysisResultSet;
+    }
+
+    /**
+     * 设置视频内容分析任务的执行状态与结果。
+     * @param AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
+     */
+    public void setAiAnalysisResultSet(AiAnalysisResult [] AiAnalysisResultSet) {
+        this.AiAnalysisResultSet = AiAnalysisResultSet;
+    }
+
+    /**
      * 获取视频内容识别任务的执行状态与结果。
      * @return AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
      */
@@ -261,6 +284,7 @@ public class WorkflowTask  extends AbstractModel{
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamArrayObj(map, prefix + "MediaProcessResultSet.", this.MediaProcessResultSet);
         this.setParamArrayObj(map, prefix + "AiContentReviewResultSet.", this.AiContentReviewResultSet);
+        this.setParamArrayObj(map, prefix + "AiAnalysisResultSet.", this.AiAnalysisResultSet);
         this.setParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
 
     }

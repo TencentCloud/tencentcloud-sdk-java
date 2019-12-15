@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAppStatusRequest  extends AbstractModel{
 
     /**
-    * 应用id，创建应用后由后台生成并返回。
+    * 应用ID，创建应用后由后台生成并返回。
     */
     @SerializedName("BizId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyAppStatusRequest  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取应用id，创建应用后由后台生成并返回。
-     * @return BizId 应用id，创建应用后由后台生成并返回。
+     * 获取应用ID，创建应用后由后台生成并返回。
+     * @return BizId 应用ID，创建应用后由后台生成并返回。
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * 设置应用id，创建应用后由后台生成并返回。
-     * @param BizId 应用id，创建应用后由后台生成并返回。
+     * 设置应用ID，创建应用后由后台生成并返回。
+     * @param BizId 应用ID，创建应用后由后台生成并返回。
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;

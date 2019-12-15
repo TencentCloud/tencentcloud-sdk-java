@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAppResponse  extends AbstractModel{
 
     /**
-    * 应用id，由后台自动生成。
+    * 应用ID，由后台自动生成。
     */
     @SerializedName("BizId")
     @Expose
@@ -37,7 +37,7 @@ public class CreateAppResponse  extends AbstractModel{
     private String AppName;
 
     /**
-    * 项目id，透传输入的ProjectId
+    * 项目ID，透传输入的ProjectId
     */
     @SerializedName("ProjectId")
     @Expose
@@ -79,16 +79,16 @@ public class CreateAppResponse  extends AbstractModel{
     private VoiceFilterConf VoiceFilterConf;
 
     /**
-     * 获取应用id，由后台自动生成。
-     * @return BizId 应用id，由后台自动生成。
+     * 获取应用ID，由后台自动生成。
+     * @return BizId 应用ID，由后台自动生成。
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * 设置应用id，由后台自动生成。
-     * @param BizId 应用id，由后台自动生成。
+     * 设置应用ID，由后台自动生成。
+     * @param BizId 应用ID，由后台自动生成。
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
@@ -111,16 +111,16 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 获取项目id，透传输入的ProjectId
-     * @return ProjectId 项目id，透传输入的ProjectId
+     * 获取项目ID，透传输入的ProjectId
+     * @return ProjectId 项目ID，透传输入的ProjectId
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置项目id，透传输入的ProjectId
-     * @param ProjectId 项目id，透传输入的ProjectId
+     * 设置项目ID，透传输入的ProjectId
+     * @param ProjectId 项目ID，透传输入的ProjectId
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

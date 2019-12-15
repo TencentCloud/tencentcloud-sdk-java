@@ -69,7 +69,14 @@ public class ResetWorkflowRequest  extends AbstractModel{
     */
     @SerializedName("AiContentReviewTask")
     @Expose
-    private AiClassificationTaskInput AiContentReviewTask;
+    private AiContentReviewTaskInput AiContentReviewTask;
+
+    /**
+    * 视频内容分析类型任务参数。
+    */
+    @SerializedName("AiAnalysisTask")
+    @Expose
+    private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
     * 视频内容识别类型任务参数。
@@ -192,7 +199,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
      * 获取视频内容审核类型任务参数。
      * @return AiContentReviewTask 视频内容审核类型任务参数。
      */
-    public AiClassificationTaskInput getAiContentReviewTask() {
+    public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
@@ -200,8 +207,24 @@ public class ResetWorkflowRequest  extends AbstractModel{
      * 设置视频内容审核类型任务参数。
      * @param AiContentReviewTask 视频内容审核类型任务参数。
      */
-    public void setAiContentReviewTask(AiClassificationTaskInput AiContentReviewTask) {
+    public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
+    }
+
+    /**
+     * 获取视频内容分析类型任务参数。
+     * @return AiAnalysisTask 视频内容分析类型任务参数。
+     */
+    public AiAnalysisTaskInput getAiAnalysisTask() {
+        return this.AiAnalysisTask;
+    }
+
+    /**
+     * 设置视频内容分析类型任务参数。
+     * @param AiAnalysisTask 视频内容分析类型任务参数。
+     */
+    public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
+        this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
@@ -263,6 +286,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
         this.setParamSimple(map, prefix + "OutputDir", this.OutputDir);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
+        this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamSimple(map, prefix + "TaskPriority", this.TaskPriority);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);

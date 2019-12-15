@@ -31,6 +31,20 @@ public class DescribeDiskOperationLogsRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
+    */
+    @SerializedName("BeginTime")
+    @Expose
+    private String BeginTime;
+
+    /**
+    * 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * 获取过滤条件。支持以下条件：
 <li>disk-id - Array of String - 是否必填：是 - 按云盘ID过滤，每个请求最多可指定10个云盘ID。
      * @return Filters 过滤条件。支持以下条件：
@@ -51,10 +65,44 @@ public class DescribeDiskOperationLogsRequest  extends AbstractModel{
     }
 
     /**
+     * 获取要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
+     * @return BeginTime 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
+     */
+    public String getBeginTime() {
+        return this.BeginTime;
+    }
+
+    /**
+     * 设置要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
+     * @param BeginTime 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
+     */
+    public void setBeginTime(String BeginTime) {
+        this.BeginTime = BeginTime;
+    }
+
+    /**
+     * 获取要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
+     * @return EndTime 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * 设置要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
+     * @param EndTime 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
      * 内部实现，用户禁止调用
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

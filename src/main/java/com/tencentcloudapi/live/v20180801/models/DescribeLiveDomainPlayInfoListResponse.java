@@ -44,7 +44,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     private Float TotalFlux;
 
     /**
-    * TotalRequest。
+    * 总请求数。
     */
     @SerializedName("TotalRequest")
     @Expose
@@ -120,16 +120,16 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取TotalRequest。
-     * @return TotalRequest TotalRequest。
+     * 获取总请求数。
+     * @return TotalRequest 总请求数。
      */
     public Integer getTotalRequest() {
         return this.TotalRequest;
     }
 
     /**
-     * 设置TotalRequest。
-     * @param TotalRequest TotalRequest。
+     * 设置总请求数。
+     * @param TotalRequest 总请求数。
      */
     public void setTotalRequest(Integer TotalRequest) {
         this.TotalRequest = TotalRequest;

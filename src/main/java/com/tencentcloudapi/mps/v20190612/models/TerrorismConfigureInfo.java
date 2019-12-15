@@ -24,7 +24,6 @@ public class TerrorismConfigureInfo  extends AbstractModel{
 
     /**
     * 画面鉴恐任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImgReviewInfo")
     @Expose
@@ -32,9 +31,7 @@ public class TerrorismConfigureInfo  extends AbstractModel{
 
     /**
      * 获取画面鉴恐任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @return ImgReviewInfo 画面鉴恐任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TerrorismImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
@@ -42,9 +39,7 @@ public class TerrorismConfigureInfo  extends AbstractModel{
 
     /**
      * 设置画面鉴恐任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImgReviewInfo 画面鉴恐任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
